@@ -1,0 +1,46 @@
+---
+description: Maintain day-wise session memories + project backups on request
+alwaysApply: true
+---
+
+# Daily memories (Docs/Memories)
+
+- Maintain a **single daily work log file** at `Docs/Memories/DD-MM-YYYY-work.md`.
+- On every session end (or before responding when significant work was completed), **append** a new section:
+  - `### Session N`
+  - **Time**
+  - **Goal**
+  - **Work completed** (bullets)
+  - **Files changed / added** (paths)
+  - **Commands run** (if any)
+  - **Notes / follow-ups**
+- If the daily file doesn’t exist yet, create it using the convention above.
+- If the user provides an agent transcript path/uuid, include it as a source link like:
+  - `[<short title>](<uuid>)`
+
+# Backup workflow (“BACKUPZ”)
+
+When the user says **exactly** “BACKUPZ” (or clearly requests a backup):
+
+## 1) Record it in today’s memory
+
+- Add a **Commands run** entry noting that a backup was created and include:
+  - destination root: `D:\Rudra\MSPL-044\BACKUPS\wan-buffer-website-backup`
+  - the created folder name
+
+## 2) Create the backup on disk
+
+- Destination root (Windows): `D:\Rudra\MSPL-044\BACKUPS\wan-buffer-website-backup`
+- Create a new folder inside it named:
+  - `{DD-MM-YYYY}-backup-{important-title-info}`
+  - Example: `09-04-2026-backup-converted-HTML-into-NEXTJS`
+- Copy the project **from repo root** into that folder excluding heavy/generated directories:
+  - `node_modules`
+  - build outputs (at least): `.next`, `dist`, `build`, `out`
+  - also exclude common caches: `.turbo`, `.vercel`, `.cache`, `coverage`
+- Ensure `Docs/` is included in the backup.
+
+## 3) Implementation detail
+
+- Prefer using the repo script `scripts/take-backup.ps1` to perform the copy so behavior stays consistent.
+
