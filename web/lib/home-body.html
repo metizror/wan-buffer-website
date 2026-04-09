@@ -1,0 +1,1793 @@
+<!-- ══ POPUP (scroll-triggered after ~2–3 sections; dismiss persisted in localStorage) ══ -->
+<div class="popup-overlay" id="leadPopup">
+  <div class="popup-box">
+    <div class="popup-topbar"></div>
+    <div class="popup-inner" id="popupMain">
+      <div class="popup-left">
+        <div>
+          <div class="popup-badge">AI-Powered ERP</div>
+          <div class="popup-left-title">Free AI + ERP Readiness Assessment</div>
+          <p class="popup-left-body">Discover exactly where AI can automate your ERP workflows and accelerate operations — delivered in 5 business days.</p>
+        </div>
+        <div class="popup-perks">
+          <div class="popup-perk">60-min session with an AI + ERP specialist</div>
+          <div class="popup-perk">Automation opportunity mapping report</div>
+          <div class="popup-perk">ROI estimate with real benchmarks</div>
+          <div class="popup-perk">NDA signed before any data is shared</div>
+        </div>
+      </div>
+      <div class="popup-right">
+        <button class="popup-close" onclick="closePopup()">✕</button>
+        <div class="popup-right-title">Get Your Free Assessment</div>
+        <p class="popup-right-sub">30 seconds to fill. Response within 4 hours.</p>
+        <div class="popup-form">
+          <div class="pfi-row">
+            <input class="pfi" type="text" placeholder="Your Name *" id="pName">
+            <input class="pfi" type="text" placeholder="Company *" id="pCompany">
+          </div>
+          <input class="pfi" type="email" placeholder="Business Email *" id="pEmail">
+          <select class="pfi" id="pService">
+            <option value="" disabled selected>Primary interest</option>
+            <option>AI Agent Implementation</option>
+            <option>ERP + AI Integration</option>
+            <option>Odoo Implementation</option>
+            <option>Workflow Automation</option>
+            <option>Dedicated Dev Team</option>
+            <option>Not sure — need advice</option>
+          </select>
+          <button type="button" class="popup-submit" onclick="submitPopup()"><span>Get my free assessment →</span></button>
+          <p class="popup-disclaimer">No spam. No sales pressure.</p>
+        </div>
+      </div>
+    </div>
+    <div class="popup-success" id="popupSuccess">
+      <div class="popup-success-icon">🎉</div>
+      <div class="popup-success-title">You're All Set!</div>
+      <p class="popup-success-body">We'll reach out within 4 business hours with your assessment schedule.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MOBILE NAV ══ -->
+<div class="mob-nav" id="mobNav">
+  <button class="mob-close" onclick="closeNav()">✕</button>
+  <a class="mob-a ai-mob" href="/#ai-services" onclick="closeNav()">⚡ AI & Automation</a>
+  <div class="mob-section">AI Services</div>
+  <a class="mob-sub" href="/#ai-services" onclick="closeNav()">AI Agents for ERP</a>
+  <a class="mob-sub" href="/#ai-services" onclick="closeNav()">Workflow Automation</a>
+  <a class="mob-sub" href="/#ai-services" onclick="closeNav()">Intelligent Analytics</a>
+  <a class="mob-a" href="/#industries" onclick="closeNav()">Industries</a>
+  <a class="mob-a" href="/#models" onclick="closeNav()">Engagement</a>
+  <a class="mob-a" href="/#insights" onclick="closeNav()">Insights</a>
+  <a class="mob-a" href="/#contact" onclick="closeNav()">Contact</a>
+  <div class="mob-btns">
+    <a class="mob-btn-ai" href="/#ai-services" onclick="closeNav()">Explore AI Services ⚡</a>
+    <a class="mob-btn-r" href="/#contact" onclick="closeNav()">Book a Discovery Call</a>
+  </div>
+</div>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-t">
+    <span class="t-item">AI-Powered ERP Solutions <span class="t-dot">●</span> USA · Canada · UAE · Germany · Morocco · India</span>
+    <span class="t-item">Odoo <span class="t-dot-r">●</span> Zoho <span class="t-dot-r">●</span> Salesforce <span class="t-dot-r">●</span> Magento <span class="t-dot-r">●</span> Shopify <span class="t-dot">●</span> Razorpay Partner</span>
+    <span class="t-item">7+ Years <span class="t-dot-r">●</span> 254+ Projects <span class="t-dot">●</span> 20+ Nations</span>
+    <span class="t-item">New: AI Agent + Human Team Engagement Model <span class="t-dot">●</span> ERP. Intelligent. At Scale.</span>
+    <span class="t-item">AI-Powered ERP Solutions <span class="t-dot">●</span> USA · Canada · UAE · Germany · Morocco · India</span>
+    <span class="t-item">Odoo <span class="t-dot-r">●</span> Zoho <span class="t-dot-r">●</span> Salesforce <span class="t-dot-r">●</span> Magento <span class="t-dot-r">●</span> Shopify <span class="t-dot">●</span> Razorpay Partner</span>
+    <span class="t-item">7+ Years <span class="t-dot-r">●</span> 254+ Projects <span class="t-dot">●</span> 20+ Nations</span>
+    <span class="t-item">New: AI Agent + Human Team Engagement Model <span class="t-dot">●</span> ERP. Intelligent. At Scale.</span>
+  </div>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav id="mainNav">
+  <a class="n-logo" href="/">
+    <img class="n-logo-img" src="https://res.cloudinary.com/dghplu26l/image/upload/v1719489724/logo-black_fxcdpr.png" alt="Wan Buffer — Odoo AI Integration Services">
+    <div class="n-logo-badges">
+      <span class="n-badge erp">ERP</span>
+      <span class="n-badge ai-b">AI</span>
+    </div>
+  </a>
+  <ul class="n-links">
+    <!-- AI Mega-menu item -->
+    <li>
+      <a href="/#ai-services" class="n-ai-link">AI &amp; Automation</a>
+      <div class="n-mega-wrap">
+        <div class="n-mega">
+          <div class="mega-top">
+            <div class="mega-tag">Wan Buffer AI Division</div>
+            <div class="mega-title">AI &amp; Automation for ERP</div>
+            <div class="mega-sub">Purpose-built AI agents, intelligent automation, and ML-powered analytics embedded directly into your ERP workflows.</div>
+          </div>
+          <div class="mega-body">
+            <div class="mega-col">
+              <div class="mega-col-title">AI Services</div>
+              <div class="mega-item"><div class="mega-icon">🤖</div><div><div class="mega-item-t">AI Agents for ERP</div><div class="mega-item-s">Autonomous agents that execute ERP tasks</div></div></div>
+              <div class="mega-item"><div class="mega-icon">⚡</div><div><div class="mega-item-t">Workflow Automation</div><div class="mega-item-s">End-to-end process automation</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🧠</div><div><div class="mega-item-t">Predictive Analytics</div><div class="mega-item-s">Demand forecasting &amp; anomaly detection</div></div></div>
+              <div class="mega-item"><div class="mega-icon">💬</div><div><div class="mega-item-t">AI Chatbots &amp; Copilots</div><div class="mega-item-s">Natural language ERP interaction</div></div></div>
+            </div>
+            <div class="mega-col">
+              <div class="mega-col-title">Capabilities</div>
+              <div class="mega-item"><div class="mega-icon">🔗</div><div><div class="mega-item-t">LangChain &amp; LLM Integration</div><div class="mega-item-s">GPT-4, Claude &amp; open-source LLMs</div></div></div>
+              <div class="mega-item"><div class="mega-icon">📊</div><div><div class="mega-item-t">ML-Powered Insights</div><div class="mega-item-s">Real-time operational intelligence</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🔄</div><div><div class="mega-item-t">RPA &amp; Process Mining</div><div class="mega-item-s">Automate repetitive ERP tasks</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🛡️</div><div><div class="mega-item-t">AI Governance &amp; Ethics</div><div class="mega-item-s">Responsible AI deployment</div></div></div>
+            </div>
+            <div class="mega-col">
+              <div class="mega-col-title">Use Cases</div>
+              <div class="mega-item"><div class="mega-icon">📦</div><div><div class="mega-item-t">Smart Inventory Management</div><div class="mega-item-s">AI-driven stock optimisation</div></div></div>
+              <div class="mega-item"><div class="mega-icon">💰</div><div><div class="mega-item-t">Automated Invoice Processing</div><div class="mega-item-s">OCR + AI validation</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🏭</div><div><div class="mega-item-t">Predictive Maintenance</div><div class="mega-item-s">AI-triggered work orders</div></div></div>
+              <div class="mega-item"><div class="mega-icon">👥</div><div><div class="mega-item-t">AI-Assisted HR &amp; Payroll</div><div class="mega-item-s">Intelligent onboarding flows</div></div></div>
+            </div>
+          </div>
+          <div class="mega-footer">
+            <span class="mega-footer-t">Powered by OpenAI · LangChain · Python · Odoo</span>
+            <a class="mega-footer-a" href="/#ai-services">Explore All AI Services →</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <!-- ── ERP Mega Menu ── -->
+    <li>
+      <a href="/#platforms" class="n-erp-link">ERP</a>
+      <div class="n-mega-wrap">
+        <div class="n-mega n-mega-erp">
+          <div class="mega-top erp-top">
+            <div class="mega-tag">ERP Solutions</div>
+            <div class="mega-title">Odoo · Zoho · Salesforce</div>
+            <div class="mega-sub">Full-cycle ERP implementation, migration, customisation, and AI integration across the world's leading platforms.</div>
+          </div>
+          <div class="mega-body mega-4col">
+
+            <!-- Col 1: Odoo -->
+            <div class="mega-col erp-col">
+              <div class="mega-col-title">Odoo</div>
+              <div class="mega-item"><div class="mega-icon">⚙️</div><div><div class="mega-item-t">Odoo Implementation</div><div class="mega-item-s">End-to-end Odoo 16/17/18 setup</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🔧</div><div><div class="mega-item-t">Odoo Customisation</div><div class="mega-item-s">Custom modules &amp; workflows</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🔄</div><div><div class="mega-item-t">Odoo Migration</div><div class="mega-item-s">v12–v15 → Odoo 17/18</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🔗</div><div><div class="mega-item-t">Odoo Integration</div><div class="mega-item-s">API, Shopify, Salesforce &amp; more</div></div></div>
+              <div class="mega-cs">
+                <div class="mega-cs-tag">Case Study</div>
+                <div class="mega-cs-t">Fabric Mill cuts lead time 40% with Odoo MRP + AI</div>
+                <div class="mega-cs-s">Manufacturing · India · Odoo 17</div>
+              </div>
+            </div>
+
+            <!-- Col 2: Zoho & Salesforce -->
+            <div class="mega-col erp-col">
+              <div class="mega-col-title">Zoho &amp; Salesforce</div>
+              <div class="mega-item"><div class="mega-icon">☁️</div><div><div class="mega-item-t">Zoho CRM Implementation</div><div class="mega-item-s">Sales pipeline &amp; automation</div></div></div>
+              <div class="mega-item"><div class="mega-icon">📋</div><div><div class="mega-item-t">Zoho Books &amp; Finance</div><div class="mega-item-s">Accounting, invoicing, GST</div></div></div>
+              <div class="mega-item"><div class="mega-icon">💼</div><div><div class="mega-item-t">Salesforce CRM Setup</div><div class="mega-item-s">B2B sales &amp; lead management</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🔀</div><div><div class="mega-item-t">Odoo ↔ Salesforce Sync</div><div class="mega-item-s">Bi-directional CRM + ERP bridge</div></div></div>
+              <div class="mega-cs">
+                <div class="mega-cs-tag">Case Study</div>
+                <div class="mega-cs-t">Gulf Logistics automates 3PL ops with Zoho + AI agents</div>
+                <div class="mega-cs-s">Logistics · Kuwait · Zoho One</div>
+              </div>
+            </div>
+
+            <!-- Col 3: All ERP Services -->
+            <div class="mega-col erp-col">
+              <div class="mega-col-title">All ERP Services</div>
+              <div class="mega-item"><div class="mega-icon">🏗️</div><div><div class="mega-item-t">ERP Consulting</div><div class="mega-item-s">Scope, roadmap &amp; vendor selection</div></div></div>
+              <div class="mega-item"><div class="mega-icon">📦</div><div><div class="mega-item-t">Inventory &amp; WMS</div><div class="mega-item-s">Multi-warehouse, lot &amp; serial tracking</div></div></div>
+              <div class="mega-item"><div class="mega-icon">💳</div><div><div class="mega-item-t">Finance &amp; Accounting</div><div class="mega-item-s">Multi-currency, GCC VAT, GST e-invoicing</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🧑‍💼</div><div><div class="mega-item-t">HR &amp; Payroll</div><div class="mega-item-s">Leave, attendance, WPS payroll</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🛠️</div><div><div class="mega-item-t">ERP Support &amp; AMC</div><div class="mega-item-s">SLA-based maintenance plans</div></div></div>
+            </div>
+
+            <!-- Col 4: Business Generation CTA -->
+            <div class="mega-col mega-cta-col">
+              <div class="mega-cta-label">Why Wan Buffer</div>
+              <div class="mega-cta-h">ERP that pays for itself</div>
+              <p class="mega-cta-body">We map measurable ROI outcomes before writing a single line of code. Every ERP project has pre-agreed KPIs — and we track them with you weekly.</p>
+              <div class="mega-cta-stat">
+                <div class="mega-cta-stat-n">40%</div>
+                <div class="mega-cta-stat-l">Faster implementation vs industry average</div>
+              </div>
+              <div class="mega-cta-stat">
+                <div class="mega-cta-stat-n">84%</div>
+                <div class="mega-cta-stat-l">Client retention rate</div>
+              </div>
+              <a class="mega-cta-btn" href="/#contact">Free ERP Audit →</a>
+            </div>
+
+          </div>
+          <div class="mega-footer">
+            <span class="mega-footer-t">Odoo Partner · Zoho · Salesforce · Razorpay Official Partner</span>
+            <a class="mega-footer-a" href="/#platforms">Explore All ERP Services →</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <!-- ── eCommerce Mega Menu ── -->
+    <li>
+      <a href="/#platforms" class="n-ecom-link">eCommerce</a>
+      <div class="n-mega-wrap">
+        <div class="n-mega n-mega-ecom">
+          <div class="mega-top ecom-top">
+            <div class="mega-tag">eCommerce Solutions</div>
+            <div class="mega-title">Magento · Shopify</div>
+            <div class="mega-sub">End-to-end eCommerce development, ERP integration, AI-powered personalisation, and performance optimisation for growing brands.</div>
+          </div>
+          <div class="mega-body mega-4col">
+
+            <!-- Col 1: Magento -->
+            <div class="mega-col ecom-col">
+              <div class="mega-col-title">Magento</div>
+              <div class="mega-item"><div class="mega-icon">🏪</div><div><div class="mega-item-t">Magento Development</div><div class="mega-item-s">Custom themes &amp; module dev</div></div></div>
+              <div class="mega-item"><div class="mega-icon">⚙️</div><div><div class="mega-item-t">Magento → Odoo Integration</div><div class="mega-item-s">Real-time inventory &amp; order sync</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🚀</div><div><div class="mega-item-t">Performance Optimisation</div><div class="mega-item-s">Core Web Vitals &amp; speed tuning</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🔐</div><div><div class="mega-item-t">Magento Security &amp; AMC</div><div class="mega-item-s">Patches, SSL, PCI compliance</div></div></div>
+              <div class="mega-cs ecom-cs">
+                <div class="mega-cs-tag">Case Study</div>
+                <div class="mega-cs-t">Fashion brand scales to 10k orders/day via Magento + Odoo</div>
+                <div class="mega-cs-s">Retail · UAE · Magento 2</div>
+              </div>
+            </div>
+
+            <!-- Col 2: Shopify -->
+            <div class="mega-col ecom-col">
+              <div class="mega-col-title">Shopify</div>
+              <div class="mega-item"><div class="mega-icon">🛍️</div><div><div class="mega-item-t">Shopify Store Setup</div><div class="mega-item-s">Theme dev, apps &amp; launch</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🔗</div><div><div class="mega-item-t">Shopify → Odoo Integration</div><div class="mega-item-s">Inventory, orders &amp; customers</div></div></div>
+              <div class="mega-item"><div class="mega-icon">💳</div><div><div class="mega-item-t">Payment &amp; Razorpay Setup</div><div class="mega-item-s">Checkout flows &amp; subscriptions</div></div></div>
+              <div class="mega-item"><div class="mega-icon">📊</div><div><div class="mega-item-t">Shopify Analytics + AI</div><div class="mega-item-s">AI demand forecasting &amp; LTV</div></div></div>
+              <div class="mega-cs ecom-cs">
+                <div class="mega-cs-tag">Case Study</div>
+                <div class="mega-cs-t">D2C brand grows 3× revenue with Shopify + Odoo + AI agents</div>
+                <div class="mega-cs-s">Retail · India · Shopify Plus</div>
+              </div>
+            </div>
+
+            <!-- Col 3: More Services -->
+            <div class="mega-col ecom-col">
+              <div class="mega-col-title">More Services</div>
+              <div class="mega-item"><div class="mega-icon">🤖</div><div><div class="mega-item-t">AI Product Recommendations</div><div class="mega-item-s">Personalisation engine</div></div></div>
+              <div class="mega-item"><div class="mega-icon">📦</div><div><div class="mega-item-t">Multi-Warehouse + 3PL Sync</div><div class="mega-item-s">Real-time fulfilment routing</div></div></div>
+              <div class="mega-item"><div class="mega-icon">💬</div><div><div class="mega-item-t">AI Customer Support Bot</div><div class="mega-item-s">Returns, FAQs, order tracking</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🌍</div><div><div class="mega-item-t">Multi-Currency &amp; Multi-Region</div><div class="mega-item-s">UAE, India, GCC, EU localisation</div></div></div>
+              <div class="mega-item"><div class="mega-icon">📈</div><div><div class="mega-item-t">eCommerce SEO &amp; CRO</div><div class="mega-item-s">GTM, schema, conversion rate</div></div></div>
+            </div>
+
+            <!-- Col 4: Business Generation CTA -->
+            <div class="mega-col mega-cta-col ecom-cta">
+              <div class="mega-cta-label">Business Impact</div>
+              <div class="mega-cta-h">Sell more. Fulfil faster. Return less.</div>
+              <p class="mega-cta-body">We connect your storefront to your ERP so inventory, orders, and customer data stay in perfect sync — powered by AI that predicts demand before you run out.</p>
+              <div class="mega-cta-stat">
+                <div class="mega-cta-stat-n">3×</div>
+                <div class="mega-cta-stat-l">Average revenue growth post-integration</div>
+              </div>
+              <div class="mega-cta-stat">
+                <div class="mega-cta-stat-n">60%</div>
+                <div class="mega-cta-stat-l">Reduction in stockouts with AI forecasting</div>
+              </div>
+              <a class="mega-cta-btn" href="/#contact">Free eCommerce Audit →</a>
+            </div>
+
+          </div>
+          <div class="mega-footer">
+            <span class="mega-footer-t">Shopify Plus · Magento 2 · Odoo · Razorpay · AI-Powered</span>
+            <a class="mega-footer-a" href="/#platforms">Explore All eCommerce Services →</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+
+    <!-- ── Industries Mega Menu ── -->
+    <li>
+      <a href="/#industries">Industries</a>
+      <div class="n-mega-wrap">
+        <div class="n-mega n-mega-erp" style="width:860px">
+          <div class="mega-top" style="border-bottom-color:rgba(0,194,255,.15)">
+            <div class="mega-tag">Industry Solutions</div>
+            <div class="mega-title">ERP + AI for Every Vertical</div>
+            <div class="mega-sub">Purpose-built Odoo modules, industry-specific AI models, and compliance configurations — mapped to measurable outcomes before a single line of code is written.</div>
+          </div>
+          <div class="mega-body mega-4col">
+
+            <!-- Col 1: Manufacturing & Retail -->
+            <div class="mega-col">
+              <div class="mega-col-title">Products &amp; Goods</div>
+              <div class="mega-item"><div class="mega-icon">🏭</div><div><div class="mega-item-t">Manufacturing</div><div class="mega-item-s">MRP, AI quality gates, predictive maintenance</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🛒</div><div><div class="mega-item-t">Retail &amp; eCommerce</div><div class="mega-item-s">Omnichannel ERP, AI demand forecasting</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🔩</div><div><div class="mega-item-t">Steel &amp; Metal Fabrication</div><div class="mega-item-s">Heat tracking, BOM, production scheduling</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🧵</div><div><div class="mega-item-t">Textile &amp; Apparel</div><div class="mega-item-s">Style-level BOM, season planning, AI reorder</div></div></div>
+            </div>
+
+            <!-- Col 2: Logistics & Services -->
+            <div class="mega-col">
+              <div class="mega-col-title">Operations &amp; Services</div>
+              <div class="mega-item"><div class="mega-icon">🚚</div><div><div class="mega-item-t">Logistics &amp; 3PL</div><div class="mega-item-s">Smart WMS, route AI, SLA monitoring</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🏥</div><div><div class="mega-item-t">Healthcare</div><div class="mega-item-s">Patient flow, billing automation, scheduling AI</div></div></div>
+              <div class="mega-item"><div class="mega-icon">💼</div><div><div class="mega-item-t">Finance &amp; Services</div><div class="mega-item-s">Auto-reconcile, fraud detection, lead scoring</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🏗️</div><div><div class="mega-item-t">Construction &amp; Projects</div><div class="mega-item-s">Project ERP, BOQ, subcontractor management</div></div></div>
+            </div>
+
+            <!-- Col 3: Real Estate + Markets -->
+            <div class="mega-col">
+              <div class="mega-col-title">Property &amp; Markets</div>
+              <div class="mega-item"><div class="mega-icon">🏢</div><div><div class="mega-item-t">Real Estate</div><div class="mega-item-s">CRM, AI lead scoring, lease lifecycle</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🌍</div><div><div class="mega-item-t">GCC &amp; Middle East</div><div class="mega-item-s">Arabic UI, GCC VAT, multi-currency</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🇮🇳</div><div><div class="mega-item-t">India Market</div><div class="mega-item-s">GST e-invoicing, Razorpay, MRP/manufacturing</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🇺🇸</div><div><div class="mega-item-t">USA &amp; Europe</div><div class="mega-item-s">Salesforce sync, GDPR, EU VAT, tax compliance</div></div></div>
+            </div>
+
+            <!-- Col 4: CTA -->
+            <div class="mega-col mega-cta-col" style="background:linear-gradient(160deg,rgba(0,194,255,.07),rgba(11,22,39,.95));border-left-color:rgba(0,194,255,.15)">
+              <div class="mega-cta-label" style="color:var(--ai)">Industry Expertise</div>
+              <div class="mega-cta-h">We speak your industry's language</div>
+              <p class="mega-cta-body">No generic templates. Every vertical gets domain-specific ERP configurations, pre-built AI models, and a consultant who has solved the exact same problems before.</p>
+              <div class="mega-cta-stat">
+                <div class="mega-cta-stat-n" style="color:var(--ai)">10+</div>
+                <div class="mega-cta-stat-l">Industries served globally</div>
+              </div>
+              <div class="mega-cta-stat">
+                <div class="mega-cta-stat-n" style="color:var(--ai)">20+</div>
+                <div class="mega-cta-stat-l">Countries with active deployments</div>
+              </div>
+              <a class="mega-cta-btn" href="/#contact" style="background:var(--ai);color:var(--navy) !important">Discuss Your Industry →</a>
+            </div>
+
+          </div>
+          <div class="mega-footer">
+            <span class="mega-footer-t">Manufacturing · Retail · Logistics · Healthcare · Finance · Real Estate</span>
+            <a class="mega-footer-a" href="/#industries">Explore All Industries →</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+
+    <!-- ── Engagement Mega Menu ── -->
+    <li>
+      <a href="/#models">Engagement</a>
+      <div class="n-mega-wrap">
+        <div class="n-mega n-mega-erp" style="width:900px">
+          <div class="mega-top erp-top">
+            <div class="mega-tag">How We Work</div>
+            <div class="mega-title">4 Ways to Engage With Wan Buffer</div>
+            <div class="mega-sub">Choose the model that fits your stage, budget, and goals — or mix them as your needs evolve. Every model includes a dedicated point of contact and pre-agreed KPIs.</div>
+          </div>
+          <div class="mega-body mega-4col">
+
+            <!-- Model 01: Project-Based -->
+            <div class="mega-col erp-col">
+              <div class="mega-col-title" style="display:flex;align-items:center;justify-content:space-between">Model 01 <span style="font-size:9px;color:rgba(255,255,255,.25);letter-spacing:0;text-transform:none;font-family:var(--B)">Fixed Price</span></div>
+              <div style="font-size:22px;margin-bottom:10px">🎯</div>
+              <div class="mega-item-t" style="font-size:13px;margin-bottom:6px">Project-Based</div>
+              <p style="font-family:var(--B);font-size:11px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.65;margin-bottom:14px">Fixed scope, fixed price, defined delivery — ideal for one-time ERP implementations or AI module builds.</p>
+              <div class="mega-item" style="padding:6px 0"><div class="mega-icon" style="background:rgba(216,28,85,.1);border-color:rgba(216,28,85,.2)">📋</div><div><div class="mega-item-t">Defined scope &amp; milestones</div><div class="mega-item-s">Transparent fixed-price contract</div></div></div>
+              <div class="mega-item" style="padding:6px 0"><div class="mega-icon" style="background:rgba(216,28,85,.1);border-color:rgba(216,28,85,.2)">🛡️</div><div><div class="mega-item-t">3-month post-launch support</div><div class="mega-item-s">Included at no extra cost</div></div></div>
+              <a class="mega-footer-a" href="/#contact" style="margin-top:14px;font-size:10px;color:var(--red) !important">Start a Project →</a>
+            </div>
+
+            <!-- Model 02: AI Agent + Human Team — FEATURED -->
+            <div class="mega-col" style="background:linear-gradient(160deg,rgba(0,194,255,.07),var(--navy2));border-left:1px solid rgba(0,194,255,.2);position:relative">
+              <div style="position:absolute;top:14px;right:14px;font-family:var(--H);font-size:7px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;background:var(--ai);color:var(--navy);padding:3px 8px;border-radius:100px">⚡ New</div>
+              <div class="mega-col-title" style="color:var(--ai)">Model 02</div>
+              <div style="font-size:22px;margin-bottom:10px">🤖</div>
+              <div class="mega-item-t" style="font-size:13px;margin-bottom:6px;color:var(--ai)">AI Agent + Human Team</div>
+              <p style="font-family:var(--B);font-size:11px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.65;margin-bottom:14px">Our most innovative model — AI agents handle repetitive ERP execution while senior engineers focus on strategy and custom logic.</p>
+              <div class="mega-item" style="padding:6px 0"><div class="mega-icon">⚡</div><div><div class="mega-item-t">50–70% lower cost</div><div class="mega-item-s">vs. fully human teams</div></div></div>
+              <div class="mega-item" style="padding:6px 0"><div class="mega-icon">📊</div><div><div class="mega-item-t">Full transparency dashboard</div><div class="mega-item-s">Audit logs &amp; agent activity</div></div></div>
+              <a class="mega-footer-a" href="/#contact" style="margin-top:14px;font-size:10px;color:var(--ai) !important">Explore This Model →</a>
+            </div>
+
+            <!-- Model 03: Dedicated Team -->
+            <div class="mega-col erp-col" style="position:relative">
+              <div style="position:absolute;top:14px;right:14px;font-family:var(--H);font-size:7px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);padding:3px 8px;border-radius:100px">Most Popular</div>
+              <div class="mega-col-title">Model 03</div>
+              <div style="font-size:22px;margin-bottom:10px">👥</div>
+              <div class="mega-item-t" style="font-size:13px;margin-bottom:6px">Dedicated Team</div>
+              <p style="font-family:var(--B);font-size:11px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.65;margin-bottom:14px">Your offshore ERP + AI engineering squad — 2–15 engineers, fully dedicated, scale up or down monthly.</p>
+              <div class="mega-item" style="padding:6px 0"><div class="mega-icon" style="background:rgba(216,28,85,.1);border-color:rgba(216,28,85,.2)">👥</div><div><div class="mega-item-t">Direct Slack / Jira standups</div><div class="mega-item-s">Senior tech lead + AI specialist</div></div></div>
+              <div class="mega-item" style="padding:6px 0"><div class="mega-icon" style="background:rgba(216,28,85,.1);border-color:rgba(216,28,85,.2)">📈</div><div><div class="mega-item-t">Flexible team scaling</div><div class="mega-item-s">Month-to-month adjustments</div></div></div>
+              <a class="mega-footer-a" href="/#contact" style="margin-top:14px;font-size:10px;color:var(--red) !important">Build My Team →</a>
+            </div>
+
+            <!-- Model 04: Retainer — CTA style -->
+            <div class="mega-col mega-cta-col">
+              <div class="mega-cta-label">Model 04</div>
+              <div style="font-size:22px;margin-bottom:8px">🔄</div>
+              <div class="mega-cta-h">Retainer Model</div>
+              <p class="mega-cta-body">Ongoing ERP support, AI optimisation, and managed platform evolution — a long-term strategic partnership with SLA guarantees.</p>
+              <div class="mega-cta-stat">
+                <div class="mega-cta-stat-n">24h</div>
+                <div class="mega-cta-stat-l">Priority bug fix SLA</div>
+              </div>
+              <div class="mega-cta-stat">
+                <div class="mega-cta-stat-n">4×</div>
+                <div class="mega-cta-stat-l">Quarterly AI + ERP health audits/yr</div>
+              </div>
+              <a class="mega-cta-btn" href="/#contact">Get a Retainer →</a>
+            </div>
+
+          </div>
+          <div class="mega-footer">
+            <span class="mega-footer-t">Project-Based · AI Agent + Human · Dedicated Team · Retainer</span>
+            <a class="mega-footer-a" href="/#models">Compare All Models →</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+
+    <!-- ── Insights Mega Menu ── -->
+    <li>
+      <a href="/#insights">Insights</a>
+      <div class="n-mega-wrap">
+        <div class="n-mega n-mega-erp" style="width:860px">
+          <div class="mega-top" style="border-bottom-color:rgba(255,255,255,.08)">
+            <div class="mega-tag" style="color:rgba(255,255,255,.5)">Knowledge &amp; Resources</div>
+            <div class="mega-title">Insights, Guides &amp; More</div>
+            <div class="mega-sub">Technical articles, case studies, career opportunities, and downloadable resources from the Wan Buffer team.</div>
+          </div>
+          <div class="mega-body mega-4col">
+
+            <!-- Col 1: Blog & Articles -->
+            <div class="mega-col">
+              <div class="mega-col-title">Blog &amp; Articles</div>
+              <div class="mega-item"><div class="mega-icon">🤖</div><div><div class="mega-item-t">AI Agents in Odoo 17</div><div class="mega-item-s">Practical build guide · Feb 2026</div></div></div>
+              <div class="mega-item"><div class="mega-icon">📊</div><div><div class="mega-item-t">AI-Enabled vs Traditional ERP</div><div class="mega-item-s">100 implementation data points</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🏭</div><div><div class="mega-item-t">AI Replacing Manual ERP Entry</div><div class="mega-item-s">Manufacturing deep-dive · Feb 2026</div></div></div>
+              <div class="mega-item"><div class="mega-icon">📝</div><div><div class="mega-item-t">Odoo vs SAP for AI Automation</div><div class="mega-item-s">Comparison guide for mid-market</div></div></div>
+              <a class="mega-footer-a" href="/#insights" style="margin-top:12px;font-size:10px">All Articles →</a>
+            </div>
+
+            <!-- Col 2: Case Studies -->
+            <div class="mega-col">
+              <div class="mega-col-title">Case Studies</div>
+              <div class="mega-item"><div class="mega-icon">🧵</div><div><div class="mega-item-t">Fabric Mill — 40% Lead Time Cut</div><div class="mega-item-s">Manufacturing · Odoo MRP + AI · India</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🚚</div><div><div class="mega-item-t">Gulf Logistics — 3PL Automation</div><div class="mega-item-s">Logistics · Zoho + AI Agents · Kuwait</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🏢</div><div><div class="mega-item-t">Arabian Properties — AI CRM</div><div class="mega-item-s">Real Estate · Odoo · Dubai UAE</div></div></div>
+              <div class="mega-item"><div class="mega-icon">💊</div><div><div class="mega-item-t">PharmaCore — Compliance ERP</div><div class="mega-item-s">Healthcare · Odoo 17 · Hyderabad</div></div></div>
+              <a class="mega-footer-a" href="/#case-studies" style="margin-top:12px;font-size:10px">All Case Studies →</a>
+            </div>
+
+            <!-- Col 3: Corporate & Careers -->
+            <div class="mega-col">
+              <div class="mega-col-title">Company &amp; Careers</div>
+              <div class="mega-item"><div class="mega-icon">🏢</div><div><div class="mega-item-t">About Wan Buffer</div><div class="mega-item-s">Our story, mission &amp; team</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🤝</div><div><div class="mega-item-t">Partner With Us</div><div class="mega-item-s">Reseller &amp; referral programmes</div></div></div>
+              <div class="mega-item"><div class="mega-icon">💼</div><div><div class="mega-item-t">Careers &amp; Recruitment</div><div class="mega-item-s">Open roles in AI, ERP &amp; dev</div></div></div>
+              <div class="mega-item"><div class="mega-icon">🎓</div><div><div class="mega-item-t">Wanbufferians</div><div class="mega-item-s">Culture, team &amp; life at WB</div></div></div>
+              <div class="mega-item"><div class="mega-icon">📅</div><div><div class="mega-item-t">Events &amp; Webinars</div><div class="mega-item-s">Odoo community days &amp; expos</div></div></div>
+            </div>
+
+            <!-- Col 4: Resources CTA -->
+            <div class="mega-col mega-cta-col" style="background:linear-gradient(160deg,rgba(255,255,255,.04),rgba(11,22,39,.95));border-left-color:rgba(255,255,255,.08)">
+              <div class="mega-cta-label" style="color:rgba(255,255,255,.4)">Free Resources</div>
+              <div class="mega-cta-h">Downloadable Guides</div>
+              <p class="mega-cta-body">Practical tools to help you plan your ERP and AI transformation — no fluff, no sales pitch.</p>
+              <div class="mega-cta-stat" style="cursor:pointer">
+                <div class="mega-cta-stat-n" style="color:var(--ai);font-size:13px;font-weight:700">📋 AI ERP Readiness Checklist</div>
+                <div class="mega-cta-stat-l">Is your business ready for AI + ERP? Free PDF</div>
+              </div>
+              <div class="mega-cta-stat" style="cursor:pointer">
+                <div class="mega-cta-stat-n" style="color:var(--ai);font-size:13px;font-weight:700">📊 ROI Calculator Template</div>
+                <div class="mega-cta-stat-l">Estimate your ERP automation ROI in 5 mins</div>
+              </div>
+              <div class="mega-cta-stat" style="cursor:pointer">
+                <div class="mega-cta-stat-n" style="color:var(--ai);font-size:13px;font-weight:700">🆚 Odoo vs SAP Comparison</div>
+                <div class="mega-cta-stat-l">Feature-by-feature breakdown for mid-market</div>
+              </div>
+              <a class="mega-cta-btn" href="/#contact" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:var(--white) !important">Get Free Resources →</a>
+            </div>
+
+          </div>
+          <div class="mega-footer">
+            <span class="mega-footer-t">Blog · Case Studies · Careers · Events · Downloads</span>
+            <a class="mega-footer-a" href="/#insights">All Insights →</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <div class="n-end">
+    <a class="n-ai-cta" href="/#ai-services">AI Services ⚡</a>
+    <a class="n-cta" href="/#contact">Book a Call</a>
+    <button class="ham" onclick="openNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ══ ① HERO ══ -->
+<section class="hero">
+  <div class="hero-l">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-circuit" aria-hidden="true"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <div class="hero-l-c">
+      <div class="hero-dualb">
+        <span class="hb hb-erp">ERP Solutions</span>
+        <div class="hb-sep"></div>
+        <span class="hb hb-ai">⚡ AI-Enabled</span>
+      </div>
+      <h1 class="hero-h1">
+        <span class="w w1">ERP.</span><br>
+        <span class="w w2">Intelligent.</span><br>
+        <span class="w w3">At</span> <span class="w w4">Scale.</span>
+      </h1>
+      <p class="hero-sub">The specialist <strong style="color:rgba(255,255,255,.85);font-weight:600">Odoo AI implementation partner</strong> for mid-market enterprises — embedding AI agents, predictive analytics, and ERP automation services directly into Odoo 17 so your operations run themselves.</p>
+      <div class="hero-caps">
+        <span class="h-cap erp-c">Odoo ERP</span>
+        <span class="h-cap ai-c">AI Agents</span>
+        <span class="h-cap erp-c">ERP Implementation</span>
+        <span class="h-cap ai-c">Workflow Automation</span>
+        <span class="h-cap ai-c">Predictive Analytics</span>
+        <span class="h-cap erp-c">Mobile &amp; Web Apps</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn-ai" href="/#ai-services"><span>Explore AI Services ⚡</span></a>
+        <a class="btn-r" href="/#contact"><span>Book a Call</span></a>
+        <a class="btn-o" href="/#models">Engagement Models</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-r">
+    <div class="hero-r-c">
+      <div class="hero-badge">
+        <div class="odoo-o">O</div>
+        <div class="odoo-t">Odoo Partner<span>Globally Accredited · Since 2018</span></div>
+      </div>
+      <div class="ai-indicator">
+        <div class="ai-pulse"></div>
+        <span class="ai-ind-t">AI Capabilities Active — Agents · Automation · Analytics</span>
+      </div>
+      <div class="stats-grid">
+        <div class="s-cell"><div class="s-num"><span id="c1">0</span><sup>+</sup></div><div class="s-lbl">Years of Execution</div></div>
+        <div class="s-cell"><div class="s-num"><span id="c2">0</span><sup>+</sup></div><div class="s-lbl">Projects Delivered</div></div>
+        <div class="s-cell"><div class="s-num"><span id="c3">0</span><sup>%</sup></div><div class="s-lbl">Client Retention</div></div>
+        <div class="s-cell"><div class="s-num"><span id="c4">0</span><sup>+</sup></div><div class="s-lbl">Certified Engineers</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLIENT LOGO CAROUSEL — immediately after hero for credibility ══ -->
+<section class="logo-bar">
+  <div class="logo-bar-label">Trusted by businesses in 20+ nations</div>
+  <div class="logo-marquee-outer">
+    <div class="logo-fade-l"></div>
+    <div class="logo-fade-r"></div>
+    <div class="logo-track-wrap">
+      <div class="logo-track" id="logoTrack">
+        <!-- Set 1 -->
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377608/wonder-cement_hymenz.webp" alt="Wonder Cement — Odoo ERP implementation client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377575/emirates_npvct2.webp" alt="Emirates — AI-powered ERP automation client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377575/ficci_nqgcsc.webp" alt="FICCI — ERP automation services client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377576/gujarat-tourism_njjjkh.webp" alt="Gujarat Tourism — Odoo implementation client India" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377575/acc_ichedk.webp" alt="Arabian Construction Company ACC — Odoo ERP UAE client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377577/kuwait-airways_izbgnd.webp" alt="Kuwait Airways — Odoo AI integration client Kuwait" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377576/doosan_weq7cz.webp" alt="Doosan — manufacturing ERP AI automation client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377577/ministry-of-public-work_gwvfjr.webp" alt="Ministry of Public Works — Odoo ERP implementation client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377576/crdf_hbwvl5.webp" alt="CRDF — ERP automation services client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://leemboodi.com/cdn/shop/files/000_logo.png?height=628&pad_color=fffef7&v=1678164525&width=1200" alt="Leemboodi — Odoo e-commerce ERP integration client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://www.rcg.ae/wp-content/uploads/2020/01/RCG-Logo-New-File_1-1-1.gif" alt="RCG Real Estate — Odoo AI CRM implementation UAE" loading="lazy"></div></div>
+        <!-- Set 2 — duplicate for seamless infinite loop -->
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377608/wonder-cement_hymenz.webp" alt="Wonder Cement — Odoo ERP implementation client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377575/emirates_npvct2.webp" alt="Emirates — AI-powered ERP automation client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377575/ficci_nqgcsc.webp" alt="FICCI — ERP automation services client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377576/gujarat-tourism_njjjkh.webp" alt="Gujarat Tourism — Odoo implementation client India" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377575/acc_ichedk.webp" alt="Arabian Construction Company ACC — Odoo ERP UAE client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377577/kuwait-airways_izbgnd.webp" alt="Kuwait Airways — Odoo AI integration client Kuwait" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377576/doosan_weq7cz.webp" alt="Doosan — manufacturing ERP AI automation client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377577/ministry-of-public-work_gwvfjr.webp" alt="Ministry of Public Works — Odoo ERP implementation client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377576/crdf_hbwvl5.webp" alt="CRDF — ERP automation services client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://leemboodi.com/cdn/shop/files/000_logo.png?height=628&pad_color=fffef7&v=1678164525&width=1200" alt="Leemboodi — Odoo e-commerce ERP integration client" loading="lazy"></div></div>
+        <div class="logo-box"><div class="lb-inner"><img src="https://www.rcg.ae/wp-content/uploads/2020/01/RCG-Logo-New-File_1-1-1.gif" alt="RCG Real Estate — Odoo AI CRM implementation UAE" loading="lazy"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="logo-bar-badges">
+    <span class="lbb"><span class="lbb-dot red-d"></span>Odoo Official Partner</span>
+    <span class="lbb"><span class="lbb-dot blue-d"></span>Razorpay Official Partner</span>
+    <span class="lbb"><span class="lbb-dot"></span>Odoo Partner</span>
+    <span class="lbb"><span class="lbb-dot"></span>GDPR Compliant</span>
+    <span class="lbb"><span class="lbb-dot"></span>NDA Guaranteed</span>
+  </div>
+  <div class="why-logos-row" style="justify-content:center;border-top:1px solid var(--silver);margin-top:clamp(18px,2.5vw,28px);padding-top:clamp(14px,2vw,20px);padding-left:var(--pad);padding-right:var(--pad)">
+    <span class="why-logos-label">Trusted across</span>
+    <span class="why-logo-pill">🇮🇳 India</span>
+    <span class="why-logo-pill">🇺🇸 USA</span>
+    <span class="why-logo-pill">🇨🇦 Canada</span>
+    <span class="why-logo-pill">🇩🇪 Germany</span>
+    <span class="why-logo-pill">🇦🇪 UAE</span>
+    <span class="why-logo-pill">🇲🇦 Morocco</span>
+  </div>
+</section>
+
+<!-- ══ AI POSITIONING STRIP ══ -->
+<div class="ai-strip">
+  <div class="ai-strip-inner rev">
+
+    <!-- Col 1: Heading -->
+    <div class="ai-strip-left">
+      <div class="ai-strip-label">Our Positioning</div>
+      <h2 class="ai-strip-h">We Bring <span class="ai">AI Intelligence</span><br>to Every <span class="red">ERP Workflow</span></h2>
+    </div>
+
+    <!-- Col 2: 3-col AI pillars -->
+    <div class="ai-strip-right">
+      <div class="ai-pillar" data-n="01">
+        <div class="ai-pillar-icon">🤖</div>
+        <div class="ai-pillar-t">AI Agents Inside ERP</div>
+        <div class="ai-pillar-s">Autonomous agents that monitor, decide, and act inside your Odoo modules — from auto-generating POs to resolving invoice discrepancies without human touch.</div>
+      </div>
+      <div class="ai-pillar" data-n="02">
+        <div class="ai-pillar-icon">⚡</div>
+        <div class="ai-pillar-t">Process Automation</div>
+        <div class="ai-pillar-s">Zero-touch workflows across every department. Map, analyse, and automate your most time-consuming ERP processes — approvals, syncs, alerts and more.</div>
+      </div>
+      <div class="ai-pillar" data-n="03">
+        <div class="ai-pillar-icon">📊</div>
+        <div class="ai-pillar-t">Predictive Decision Support</div>
+        <div class="ai-pillar-s">Custom ML models trained on your ERP data — demand forecasting, anomaly detection, yield optimisation — surfacing insights before problems occur.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ ② WHY CHOOSE WAN BUFFER ══ -->
+<section class="whyus" id="whyus">
+  <div class="why-hdr rev">
+    <div>
+      <div class="eyebrow">Why Wan Buffer</div>
+      <h2 class="sec-h">The AI-First ERP Partner<br><span class="acc">That Delivers</span></h2>
+    </div>
+    <div class="why-hdr-r">
+      <p class="sec-p">84% of our clients return for second engagements — because we combine deep Odoo expertise with genuine AI and automation capabilities that drive measurable operational change.</p>
+      <div class="why-cta-row">
+        <a class="btn-r" href="/#contact"><span>Work With Us</span></a>
+        <span class="why-proof">84% Client Retention Rate</span>
+      </div>
+    </div>
+  </div>
+  <div class="why-grid rev">
+    <div class="why-card ai-card">
+      <div class="why-icon">🤖</div>
+      <div class="why-num">01</div>
+      <div class="why-title">AI-Native, Not AI-Retrofitted</div>
+      <p class="why-body">We design AI capabilities into ERP architecture from day one — not bolted on afterward. Agents, automation, and analytics are core to our solution design, not extras.</p>
+      <span class="why-stat">⚡ AI-First Architecture</span>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">⚡</div>
+      <div class="why-num">02</div>
+      <div class="why-title">Speed Without Compromise</div>
+      <p class="why-body">Pre-built Odoo accelerators and AI automation templates cut average implementation time by 40%. Go-live in weeks, not quarters.</p>
+      <span class="why-stat">↓ 40% Faster Delivery</span>
+    </div>
+    <div class="why-card ai-card">
+      <div class="why-icon">🧠</div>
+      <div class="why-num">03</div>
+      <div class="why-title">Real AI Engineers on Your Project</div>
+      <p class="why-body">Not just Odoo developers who "know Python." Our team includes ML engineers, LLM specialists, and automation architects who build production-grade AI systems.</p>
+      <span class="why-stat">ML + ERP Combined Expertise</span>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🌍</div>
+      <div class="why-num">04</div>
+      <div class="why-title">Truly Global, Genuinely Local</div>
+      <p class="why-body">Offices in India, Kuwait and France. Teams who understand VAT in GCC, GDPR in Europe, and GST in India — without needing it explained twice.</p>
+      <span class="why-stat">20+ Countries Served</span>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📊</div>
+      <div class="why-num">05</div>
+      <div class="why-title">Outcomes, Not Outputs</div>
+      <p class="why-body">Every engagement starts with measurable success KPIs — production throughput, invoice cycle time, stock accuracy — tracked and reported throughout.</p>
+      <span class="why-stat">ROI-Driven Engagement</span>
+    </div>
+    <div class="why-card ai-card">
+      <div class="why-icon">🔄</div>
+      <div class="why-num">06</div>
+      <div class="why-title">Future-Proof Architecture</div>
+      <p class="why-body">Native Odoo framework + modular AI services. When Odoo 19 launches or GPT-5 arrives, your system evolves cleanly without rebuilds.</p>
+      <span class="why-stat">Odoo 17 &amp; 18 + AI Ready</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ③ AI & AUTOMATION SERVICES ══ -->
+<section class="ai-services" id="ai-services">
+  <div class="ai-mesh"></div>
+  <div class="ai-serv-inner">
+    <div class="ai-serv-hdr rev">
+      <div>
+        <div class="eyebrow ai">AI &amp; Automation</div>
+        <h2 class="sec-h light">Intelligent Services<br><span class="ai">Built for ERP</span></h2>
+      </div>
+      <div class="ai-serv-hdr-r">
+        <p class="sec-p light">We design, build, and deploy AI agents, automation workflows, and predictive analytics — integrating natively with your ERP to eliminate manual work, surface real-time intelligence, and drive measurable operational outcomes across every business function.</p>
+        <a class="btn-ai" href="/#contact" style="width:fit-content;margin-top:16px"><span>Discuss Your AI Needs →</span></a>
+      </div>
+    </div>
+
+    <div class="ai-serv-grid rev">
+      <div class="ai-serv-card">
+        <span class="as-icon">🤖</span>
+        <div class="as-cat">Core Service</div>
+        <div class="as-title">AI Agents for ERP</div>
+        <p class="as-body">Autonomous agents that monitor, decide, and act inside your Odoo modules — from auto-generating purchase orders when stock hits reorder points, to resolving invoice discrepancies without human intervention.</p>
+        <div class="as-tags"><span class="as-tag">LangChain</span><span class="as-tag">OpenAI</span><span class="as-tag">Odoo API</span><span class="as-tag">Python</span></div>
+      </div>
+      <div class="ai-serv-card">
+        <span class="as-icon">⚡</span>
+        <div class="as-cat">Core Service</div>
+        <div class="as-title">Workflow Automation</div>
+        <p class="as-body">Map, analyse, and automate your most time-consuming ERP processes. From multi-step approval chains to cross-module data synchronisation — zero-touch, zero-error.</p>
+        <div class="as-tags"><span class="as-tag">RPA</span><span class="as-tag">Odoo Automation</span><span class="as-tag">Python</span><span class="as-tag">Zapier/Make</span></div>
+      </div>
+      <div class="ai-serv-card">
+        <span class="as-icon">📊</span>
+        <div class="as-cat">Core Service</div>
+        <div class="as-title">Predictive Analytics &amp; ML</div>
+        <p class="as-body">Custom ML models trained on your ERP data — demand forecasting, churn prediction, production yield optimisation, and anomaly detection that surface insights before issues occur.</p>
+        <div class="as-tags"><span class="as-tag">TensorFlow</span><span class="as-tag">Scikit-learn</span><span class="as-tag">FastAPI</span><span class="as-tag">Odoo BI</span></div>
+      </div>
+      <div class="ai-serv-card">
+        <span class="as-icon">💬</span>
+        <div class="as-cat">Advanced Service</div>
+        <div class="as-title">AI Copilots &amp; Chatbots</div>
+        <p class="as-body">Natural language interfaces for ERP — let your team query inventory, create sales orders, or check financials using plain English. Embedded inside Odoo or as standalone assistants.</p>
+        <div class="as-tags"><span class="as-tag">GPT-4o</span><span class="as-tag">RAG</span><span class="as-tag">Vector DB</span><span class="as-tag">Odoo Chat</span></div>
+      </div>
+      <div class="ai-serv-card">
+        <span class="as-icon">📄</span>
+        <div class="as-cat">Advanced Service</div>
+        <div class="as-title">Intelligent Document Processing</div>
+        <p class="as-body">AI-powered OCR that reads, validates, and processes invoices, POs, delivery notes, and contracts — automatically pushing structured data into the right Odoo fields.</p>
+        <div class="as-tags"><span class="as-tag">OCR</span><span class="as-tag">NLP</span><span class="as-tag">Document AI</span><span class="as-tag">Odoo</span></div>
+      </div>
+      <div class="ai-serv-card">
+        <span class="as-icon">🔗</span>
+        <div class="as-cat">Integration</div>
+        <div class="as-title">ERP &amp; AI Integration Architecture</div>
+        <p class="as-body">Design and build the data pipelines, APIs, and middleware that connect your ERP to AI services, third-party platforms, IoT sensors, and external intelligence sources.</p>
+        <div class="as-tags"><span class="as-tag">REST API</span><span class="as-tag">Kafka</span><span class="as-tag">AWS</span><span class="as-tag">Docker</span></div>
+      </div>
+    </div>
+
+    <!-- Use Cases — Creative Grid -->
+    <div class="ai-use-wrap rev">
+      <div class="ai-use-header">
+        <div class="ai-use-label">AI Use Cases Across Industries</div>
+        <div class="ai-use-count">08 Proven Applications</div>
+      </div>
+      <div class="ai-use-grid">
+        <div class="ai-use-card">
+          <div class="auc-num">01</div>
+          <div class="auc-icon-box">📦</div>
+          <div class="auc-title">Smart Inventory Replenishment</div>
+          <p class="auc-body">AI agent monitors stock levels, predicts demand, and raises purchase orders autonomously — zero manual intervention.</p>
+          <span class="auc-module">Odoo Purchase · Inventory</span>
+        </div>
+        <div class="ai-use-card">
+          <div class="auc-num">02</div>
+          <div class="auc-icon-box">💰</div>
+          <div class="auc-title">Automated Invoice Processing</div>
+          <p class="auc-body">OCR + AI validates vendor invoices, flags anomalies, and posts to accounting without human touch. 300+ invoices/day.</p>
+          <span class="auc-module">Odoo Accounting</span>
+        </div>
+        <div class="ai-use-card">
+          <div class="auc-num">03</div>
+          <div class="auc-icon-box">🏭</div>
+          <div class="auc-title">Predictive Maintenance</div>
+          <p class="auc-body">ML models analyse equipment sensor data and auto-create maintenance work orders before breakdowns occur.</p>
+          <span class="auc-module">Odoo Maintenance · MRP</span>
+        </div>
+        <div class="ai-use-card">
+          <div class="auc-num">04</div>
+          <div class="auc-icon-box">🚛</div>
+          <div class="auc-title">AI Route Optimisation</div>
+          <p class="auc-body">Real-time delivery route optimisation integrated with Odoo logistics — reducing fuel costs and improving SLA compliance.</p>
+          <span class="auc-module">Odoo Inventory · Delivery</span>
+        </div>
+        <div class="ai-use-card">
+          <div class="auc-num">05</div>
+          <div class="auc-icon-box">👥</div>
+          <div class="auc-title">Intelligent HR Automation</div>
+          <p class="auc-body">AI-driven onboarding flows, leave approval bots, and payroll anomaly detection inside Odoo HR modules.</p>
+          <span class="auc-module">Odoo HR · Payroll</span>
+        </div>
+        <div class="ai-use-card">
+          <div class="auc-num">06</div>
+          <div class="auc-icon-box">📈</div>
+          <div class="auc-title">Sales Forecasting &amp; CRM AI</div>
+          <p class="auc-body">Predictive lead scoring, churn risk alerts, and AI-generated follow-up recommendations in Odoo CRM.</p>
+          <span class="auc-module">Odoo CRM · Sales</span>
+        </div>
+        <div class="ai-use-card">
+          <div class="auc-num">07</div>
+          <div class="auc-icon-box">🔍</div>
+          <div class="auc-title">Quality Control Automation</div>
+          <p class="auc-body">Computer vision + AI flags defects on production lines and updates Odoo quality checks in real time.</p>
+          <span class="auc-module">Odoo Quality · MRP</span>
+        </div>
+        <div class="ai-use-card">
+          <div class="auc-num">08</div>
+          <div class="auc-icon-box">📊</div>
+          <div class="auc-title">Executive AI Dashboard</div>
+          <p class="auc-body">Ask your ERP questions in plain English and receive instant AI-generated insights — no SQL, no waiting.</p>
+          <span class="auc-module">Odoo BI · Reporting</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ④ INDUSTRIES ══ -->
+<section class="industries" id="industries">
+  <div class="ind-hdr rev">
+    <div>
+      <div class="eyebrow">Industry Verticals</div>
+      <h2 class="sec-h">ERP + AI Solutions<br><span class="acc">For Your Industry</span></h2>
+    </div>
+    <div class="ind-hdr-r">
+      <p class="sec-p">We don't apply generic ERP templates. Each vertical gets purpose-built Odoo modules, industry-specific AI models, compliance configurations tailored to their market, and measurable outcomes mapped before a single line of code is written.</p>
+      <a class="btn-r" href="/#contact"><span>Discuss Your Industry →</span></a>
+    </div>
+  </div>
+
+  <div class="ind-grid rev">
+
+    <div class="ind-card" data-icon="🏭">
+      <div class="ind-card-top">
+        <div class="ind-card-icon" style="background:rgba(232,57,42,.08);border:1px solid rgba(232,57,42,.15)">🏭</div>
+        <span class="ind-card-num">01</span>
+      </div>
+      <div class="ind-card-name">Manufacturing</div>
+      <div class="ind-card-body">Odoo MRP + AI shop floor intelligence — predictive maintenance, autonomous procurement agents, and AI quality control.</div>
+      <div class="ind-card-feats">
+        <div class="ind-card-feat">MRP &amp; Production Planning</div>
+        <div class="ind-card-feat">AI Quality Control (Vision)</div>
+        <div class="ind-card-feat">Predictive Maintenance ML</div>
+        <div class="ind-card-feat">Automated PO Generation</div>
+      </div>
+      <div class="ind-card-pills">
+        <span class="ind-card-pill">⚡ AI Agents</span>
+        <span class="ind-card-pill">📊 Demand Forecast</span>
+        <span class="ind-card-pill">🔍 Defect Detection</span>
+      </div>
+    </div>
+
+    <div class="ind-card" data-icon="🛍️">
+      <div class="ind-card-top">
+        <div class="ind-card-icon" style="background:rgba(0,194,255,.08);border:1px solid rgba(0,194,255,.15)">🛍️</div>
+        <span class="ind-card-num">02</span>
+      </div>
+      <div class="ind-card-name">Retail &amp; eCommerce</div>
+      <div class="ind-card-body">Unified commerce with AI personalisation, smart replenishment, and automated customer journey workflows on Odoo.</div>
+      <div class="ind-card-feats">
+        <div class="ind-card-feat">Odoo POS &amp; eCommerce</div>
+        <div class="ind-card-feat">Magento &amp; Shopify Bridge</div>
+        <div class="ind-card-feat">AI Demand Forecasting</div>
+        <div class="ind-card-feat">Multi-Warehouse Automation</div>
+      </div>
+      <div class="ind-card-pills">
+        <span class="ind-card-pill">⚡ Auto-Replenishment</span>
+        <span class="ind-card-pill">🤖 CX AI Agents</span>
+        <span class="ind-card-pill">📈 Price AI</span>
+      </div>
+    </div>
+
+    <div class="ind-card" data-icon="🚛">
+      <div class="ind-card-top">
+        <div class="ind-card-icon" style="background:rgba(113,75,103,.1);border:1px solid rgba(113,75,103,.2)">🚛</div>
+        <span class="ind-card-num">03</span>
+      </div>
+      <div class="ind-card-name">Logistics &amp; 3PL</div>
+      <div class="ind-card-body">AI route optimisation, autonomous shipment tracking, and intelligent 3PL billing — fully integrated with Odoo.</div>
+      <div class="ind-card-feats">
+        <div class="ind-card-feat">Multi-Client WMS</div>
+        <div class="ind-card-feat">AI Route Optimisation</div>
+        <div class="ind-card-feat">Freight &amp; Carrier Integration</div>
+        <div class="ind-card-feat">Real-Time SLA Monitoring</div>
+      </div>
+      <div class="ind-card-pills">
+        <span class="ind-card-pill">⚡ Route AI</span>
+        <span class="ind-card-pill">📦 Smart WMS</span>
+        <span class="ind-card-pill">🔔 SLA Alerts</span>
+      </div>
+    </div>
+
+    <div class="ind-card" data-icon="🏥">
+      <div class="ind-card-top">
+        <div class="ind-card-icon" style="background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.2)">🏥</div>
+        <span class="ind-card-num">04</span>
+      </div>
+      <div class="ind-card-name">Healthcare</div>
+      <div class="ind-card-body">AI-assisted scheduling, automated patient workflows, and intelligent pharmacy inventory on HIPAA-aligned Odoo architecture.</div>
+      <div class="ind-card-feats">
+        <div class="ind-card-feat">Patient Management</div>
+        <div class="ind-card-feat">AI Appointment Scheduling</div>
+        <div class="ind-card-feat">Smart Pharmacy Inventory</div>
+        <div class="ind-card-feat">Insurance &amp; Billing Automation</div>
+      </div>
+      <div class="ind-card-pills">
+        <span class="ind-card-pill">🤖 Scheduling AI</span>
+        <span class="ind-card-pill">📊 Analytics</span>
+        <span class="ind-card-pill">⚡ Billing Auto</span>
+      </div>
+    </div>
+
+    <div class="ind-card" data-icon="💼">
+      <div class="ind-card-top">
+        <div class="ind-card-icon" style="background:rgba(255,184,0,.08);border:1px solid rgba(255,184,0,.2)">💼</div>
+        <span class="ind-card-num">05</span>
+      </div>
+      <div class="ind-card-name">Finance &amp; Services</div>
+      <div class="ind-card-body">AI compliance monitoring, automated reconciliation, and intelligent CRM for financial institutions across GCC and Europe.</div>
+      <div class="ind-card-feats">
+        <div class="ind-card-feat">Multi-Currency Accounting</div>
+        <div class="ind-card-feat">AI Reconciliation</div>
+        <div class="ind-card-feat">Tax &amp; VAT Compliance</div>
+        <div class="ind-card-feat">KYC &amp; Document Automation</div>
+      </div>
+      <div class="ind-card-pills">
+        <span class="ind-card-pill">⚡ Auto-Reconcile</span>
+        <span class="ind-card-pill">🧠 Fraud Detection</span>
+        <span class="ind-card-pill">📈 Lead Scoring</span>
+      </div>
+    </div>
+
+    <div class="ind-card" data-icon="🏢">
+      <div class="ind-card-top">
+        <div class="ind-card-icon" style="background:rgba(11,22,39,.06);border:1px solid rgba(11,22,39,.12)">🏢</div>
+        <span class="ind-card-num">06</span>
+      </div>
+      <div class="ind-card-name">Real Estate</div>
+      <div class="ind-card-body">AI-powered broker CRM, automated lease workflows, and predictive occupancy analytics for developers and property managers.</div>
+      <div class="ind-card-feats">
+        <div class="ind-card-feat">Property Listing Portal</div>
+        <div class="ind-card-feat">AI Lead Qualification</div>
+        <div class="ind-card-feat">Automated Lease Contracts</div>
+        <div class="ind-card-feat">Investor Reporting AI</div>
+      </div>
+      <div class="ind-card-pills">
+        <span class="ind-card-pill">🤖 Lead AI</span>
+        <span class="ind-card-pill">📊 Occupancy Forecast</span>
+        <span class="ind-card-pill">⚡ Contract Auto</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ ⑤ CASE STUDY ══ -->
+<section class="casestudy" id="case-studies">
+  <div class="cs-hdr rev">
+    <div><div class="eyebrow">Client Impact</div><h2 class="sec-h">AI + ERP <span class="acc">in Action</span></h2></div>
+    <a class="link-r" href="#">All Case Studies →</a>
+  </div>
+  <div class="cs-card rev">
+    <div class="cs-l">
+      <div>
+        <div class="cs-tag">Case Study · Manufacturing · Odoo 17 + AI Automation</div>
+        <h3 class="cs-title">How AI Agents Cut a Fabric Mill's Lead Time by 40% While Reducing Manual Data Entry by 80%</h3>
+        <p class="cs-desc">A Gujarat textile manufacturer with 3 production lines deployed our AI Agent + Odoo MRP solution — autonomous procurement agents, predictive quality checks, and real-time shop floor intelligence — going live in 14 weeks.</p>
+      </div>
+      <div>
+        <div class="cs-metrics">
+          <div><div class="cs-mv">40<span>%</span></div><div class="cs-ml">Lead Time Reduction</div></div>
+          <div><div class="cs-mv ai-met">80<span>%</span></div><div class="cs-ml">Less Manual Data Entry</div></div>
+          <div><div class="cs-mv">2.1<span>x</span></div><div class="cs-ml">Production Throughput</div></div>
+          <div><div class="cs-mv">14<span>W</span></div><div class="cs-ml">Weeks to Go-Live</div></div>
+        </div>
+        <br><a class="link-r" href="#">Read Full Case Study →</a>
+      </div>
+    </div>
+    <div class="cs-r">
+      <div class="cs-d"><div class="cs-dl">Industry</div><div class="cs-dv">Textile Manufacturing</div></div>
+      <div class="cs-d"><div class="cs-dl">Odoo Modules</div><div class="cs-dv">MRP · Inventory · Purchase · Accounting · Quality</div></div>
+      <div class="cs-d"><div class="cs-dl">AI Services</div><div class="cs-dv">AI Agents · Predictive Quality · Auto-PO</div></div>
+      <div class="cs-d"><div class="cs-dl">Engagement Model</div><div class="cs-dv">AI Agent + Human Team</div></div>
+      <div class="cs-d"><div class="cs-dl">Region</div><div class="cs-dv">Gujarat, India</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ⑥ TECH STACK ══ -->
+<section class="techstack">
+  <div class="ts-hdr rev">
+    <div class="eyebrow">Technology Expertise</div>
+    <h2 class="sec-h">Our <span class="acc">ERP</span> + <span class="ai">AI</span> Arsenal</h2>
+  </div>
+  <div class="ts-grid rev" id="tsGrid">
+    <div class="ts-grp">
+      <div class="ts-glabel">ERP &amp; CRM</div>
+      <div class="ts-pills">
+        <span class="ts-pill">Odoo 16</span><span class="ts-pill">Odoo 17</span><span class="ts-pill">Odoo 18</span>
+        <span class="ts-pill">Odoo SaaS</span><span class="ts-pill">Zoho CRM</span><span class="ts-pill">Salesforce</span>
+      </div>
+    </div>
+    <div class="ts-grp ai-grp">
+      <div class="ts-glabel">AI &amp; Automation ⚡</div>
+      <div class="ts-pills">
+        <span class="ts-pill">LangChain</span><span class="ts-pill">OpenAI GPT-4o</span><span class="ts-pill">Claude API</span>
+        <span class="ts-pill">TensorFlow</span><span class="ts-pill">Scikit-learn</span><span class="ts-pill">FastAPI</span>
+        <span class="ts-pill">Zapier / Make</span><span class="ts-pill">LlamaIndex</span>
+      </div>
+    </div>
+    <div class="ts-grp">
+      <div class="ts-glabel">Mobile &amp; Frontend</div>
+      <div class="ts-pills">
+        <span class="ts-pill">Flutter</span><span class="ts-pill">React Native</span><span class="ts-pill">ReactJS</span>
+        <span class="ts-pill">Next.js</span><span class="ts-pill">Vue.js</span><span class="ts-pill">Swift iOS</span>
+      </div>
+    </div>
+    <div class="ts-grp">
+      <div class="ts-glabel">Cloud &amp; Backend</div>
+      <div class="ts-pills">
+        <span class="ts-pill">Python</span><span class="ts-pill">Django</span><span class="ts-pill">Node.js</span>
+        <span class="ts-pill">AWS</span><span class="ts-pill">GCP</span><span class="ts-pill">Docker</span>
+        <span class="ts-pill">Kafka</span><span class="ts-pill">PostgreSQL</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ⑦ ENGAGEMENT MODELS ══ -->
+<section class="models" id="models">
+  <div class="m-hdr rev">
+    <div class="eyebrow">How to Work With Us</div>
+    <h2 class="sec-h">Four Ways to <span class="acc">Engage</span></h2>
+    <p class="sec-p">Choose the model that fits your challenge — from fixed-scope projects to our breakthrough AI Agent + Human Team hybrid model.</p>
+  </div>
+  <div class="m-grid rev">
+
+    <!-- 1. Project-Based -->
+    <div class="m-card" id="mc0">
+      <div class="m-num">Model 01</div>
+      <span class="m-icon">🎯</span>
+      <div class="m-name">Project-Based Engagement</div>
+      <p class="m-sub">Fixed scope, fixed price, defined delivery — ERP or AI projects with clear boundaries.</p>
+      <div class="m-div"></div>
+      <ul class="m-feats">
+        <li class="m-feat">Defined scope, timeline &amp; milestones</li>
+        <li class="m-feat">Fixed-price transparent contract</li>
+        <li class="m-feat">Dedicated Project Manager from Day 1</li>
+        <li class="m-feat">ERP implementation or AI module delivery</li>
+        <li class="m-feat">3-month post-launch support included</li>
+      </ul>
+      <a class="m-btn" href="/#contact"><span>Start a Project</span></a>
+    </div>
+
+    <!-- 2. AI Agent + Human Team — FEATURED -->
+    <div class="m-card ai-feat" id="mc1">
+      <span class="m-badge new">⚡ New Model</span>
+      <div class="m-num">Model 02</div>
+      <span class="m-icon">🤖</span>
+      <div class="m-name">AI Agent + Human Team</div>
+      <p class="m-sub">Our most innovative model — AI agents handle repetitive execution while our engineers focus on strategy, custom logic, and continuous improvement.</p>
+      <div class="m-div"></div>
+      <ul class="m-feats">
+        <li class="m-feat">AI agents execute routine ERP tasks autonomously</li>
+        <li class="m-feat">Senior engineers manage exceptions &amp; custom logic</li>
+        <li class="m-feat">50–70% lower cost vs. fully human teams</li>
+        <li class="m-feat">Continuous learning — agents improve over time</li>
+        <li class="m-feat">Full transparency dashboard &amp; audit logs</li>
+        <li class="m-feat">Ideal for ongoing ERP operations &amp; automation</li>
+      </ul>
+      <a class="m-btn" href="/#contact"><span>Explore This Model →</span></a>
+    </div>
+
+    <!-- 3. Dedicated Team -->
+    <div class="m-card feat" id="mc2">
+      <span class="m-badge popular">Most Popular</span>
+      <div class="m-num">Model 03</div>
+      <span class="m-icon">👥</span>
+      <div class="m-name">Dedicated Team</div>
+      <p class="m-sub">Your offshore ERP + AI engineering squad — fully dedicated, deeply embedded in your workflows.</p>
+      <div class="m-div"></div>
+      <ul class="m-feats">
+        <li class="m-feat">2–15 engineers, 100% dedicated to you</li>
+        <li class="m-feat">Mix of ERP, AI, and mobile engineers</li>
+        <li class="m-feat">Direct Slack / Jira / daily standups</li>
+        <li class="m-feat">Scale up or down month-to-month</li>
+        <li class="m-feat">Senior tech lead + AI specialist included</li>
+      </ul>
+      <a class="m-btn" href="/#contact"><span>Build My Team</span></a>
+    </div>
+
+    <!-- 4. Retainer -->
+    <div class="m-card" id="mc3">
+      <div class="m-num">Model 04</div>
+      <span class="m-icon">🔄</span>
+      <div class="m-name">Retainer Model</div>
+      <p class="m-sub">Ongoing ERP support, AI optimisation, and managed platform evolution — a strategic long-term partnership.</p>
+      <div class="m-div"></div>
+      <ul class="m-feats">
+        <li class="m-feat">Monthly sprint-based development</li>
+        <li class="m-feat">Priority SLA — bug fixes within 24h</li>
+        <li class="m-feat">Quarterly AI + ERP system health audits</li>
+        <li class="m-feat">Proactive Odoo upgrade planning</li>
+        <li class="m-feat">Flexible hours pool each month</li>
+      </ul>
+      <a class="m-btn" href="/#contact"><span>Get a Retainer</span></a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ ⑧ PHILOSOPHY + STATS MERGED ══ -->
+<section class="phil-stats">
+
+  <!-- LEFT: Philosophy panel (red) -->
+  <div class="phil-left">
+    <div class="phil-ring phil-ring1"></div>
+    <div class="phil-ring phil-ring2"></div>
+    <div class="phil-eyebrow rev">Our Founding Principle</div>
+    <div class="phil-quote rev" id="philQuote">
+      <span class="ph-line"><span class="ph-inner">A Deed Is a</span></span>
+      <span class="ph-line"><span class="ph-inner"><span class="hollow">Speakable</span></span></span>
+      <span class="ph-line"><span class="ph-inner">Act.</span></span>
+    </div>
+    <div class="phil-attr rev">
+      <div class="phil-line"></div>
+      <div class="phil-t">
+        <strong>सर्वे कर्मवशा वयम् — We are all under the power of our actions.</strong>
+        This is why we measure ourselves by results alone — whether that result is a faster production cycle, an AI agent that saves 200 hours a month, or a system that never breaks at 2 AM.
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Stats panel (navy) -->
+  <div class="phil-right">
+    <div class="rec-header rev">
+      <div class="rec-eyebrow">By the Numbers</div>
+      <h2 class="rec-h">Proven at <span class="acc">Scale</span></h2>
+      <p class="rec-sub-txt">7 years of consistent ERP + AI delivery across 20+ countries — measured in real client outcomes.</p>
+    </div>
+    <div class="rec-stats" id="recStats">
+      <div class="rec-stat">
+        <div class="rec-num"><span id="r1">0</span><sup>+</sup></div>
+        <div class="rec-lbl">Projects Delivered</div>
+      </div>
+      <div class="rec-stat">
+        <div class="rec-num"><span id="r2">0</span><sup>+</sup></div>
+        <div class="rec-lbl">Nations Served</div>
+      </div>
+      <div class="rec-stat">
+        <div class="rec-num"><span id="r3">0</span><sup>%</sup></div>
+        <div class="rec-lbl">On-Time Delivery</div>
+      </div>
+      <div class="rec-stat">
+        <div class="rec-num"><span id="r4">0</span><sup>+</sup></div>
+        <div class="rec-lbl">Certified Engineers</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══ PLATFORMS ══ -->
+<section class="platforms" id="platforms">
+  <div class="plat-hdr rev">
+    <div>
+      <div class="eyebrow">Multi-Platform Expertise</div>
+      <h2 class="sec-h">Beyond Odoo — Comprehensive <span class="acc">Platform Coverage</span></h2>
+    </div>
+    <div>
+      <div class="plat-note">★ Primary Platform: Odoo ERP</div>
+      <p class="sec-p" style="margin:0">We also implement, customise, and integrate Zoho, Salesforce, Magento, Shopify, and Razorpay — giving you a complete digital operations stack.</p>
+    </div>
+  </div>
+
+  <div class="plat-grid rev">
+
+    <!-- ROW 1 -->
+
+    <!-- Odoo — Primary -->
+    <div class="plat-card p-odoo">
+      <div class="plat-primary-badge">Primary Platform</div>
+      <div class="plat-logo-mark" style="background:rgba(113,75,103,.12);color:#714B67;font-size:15px">OD</div>
+      <div class="plat-name">Odoo ERP</div>
+      <div class="plat-body">Our core expertise. Odoo 16, 17 &amp; 18 implementation, customisation, migration, AI integration, and ongoing support.</div>
+      <div class="plat-services">
+        <span class="plat-svc">Implementation</span>
+        <span class="plat-svc">AI Integration</span>
+        <span class="plat-svc">Migration</span>
+        <span class="plat-svc">Custom Modules</span>
+      </div>
+    </div>
+
+    <!-- Zoho -->
+    <div class="plat-card p-zoho">
+      <div class="plat-logo-mark" style="background:rgba(228,37,39,.1);color:#E42527;font-size:13px">Zo</div>
+      <div class="plat-name">Zoho Suite</div>
+      <div class="plat-body">Zoho CRM, Books, Inventory, and the full Zoho One ecosystem — implementation and integration with existing systems.</div>
+      <div class="plat-services">
+        <span class="plat-svc">CRM Setup</span>
+        <span class="plat-svc">Zoho Books</span>
+        <span class="plat-svc">Integration</span>
+      </div>
+    </div>
+
+    <!-- Razorpay -->
+    <div class="plat-card p-rp">
+      <div class="razorpay-badge">Official Partner</div>
+      <div class="plat-logo-mark" style="background:rgba(7,38,84,.08);color:#072654;font-size:12px">RP</div>
+      <div class="plat-name">Razorpay</div>
+      <div class="plat-body">As an Official Razorpay Partner, we integrate secure, scalable payment solutions into Odoo, custom apps, and any web platform — supporting all major payment methods across India.</div>
+      <div class="plat-services">
+        <span class="plat-svc">Odoo Integration</span>
+        <span class="plat-svc">Subscriptions</span>
+        <span class="plat-svc">POS Integration</span>
+        <span class="plat-svc">Auto-reconciliation</span>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+
+    <!-- Shopify -->
+    <div class="plat-card p-sp">
+      <div class="plat-logo-mark" style="background:rgba(150,191,72,.12);color:#5a8a1c;font-size:13px">Sh</div>
+      <div class="plat-name">Shopify</div>
+      <div class="plat-body">Shopify Plus store setup and native Shopify–Odoo connector for real-time product, stock, and order synchronisation.</div>
+      <div class="plat-services">
+        <span class="plat-svc">Shopify Plus</span>
+        <span class="plat-svc">Odoo Sync</span>
+        <span class="plat-svc">Theme Dev</span>
+      </div>
+    </div>
+
+    <!-- Magento -->
+    <div class="plat-card p-mg">
+      <div class="plat-logo-mark" style="background:rgba(242,99,34,.1);color:#F26322;font-size:13px">Mg</div>
+      <div class="plat-name">Magento</div>
+      <div class="plat-body">Magento 2 store development and Magento–Odoo integration for unified inventory, orders, and customer data.</div>
+      <div class="plat-services">
+        <span class="plat-svc">Magento 2</span>
+        <span class="plat-svc">Odoo Bridge</span>
+        <span class="plat-svc">Customisation</span>
+      </div>
+    </div>
+
+    <!-- Salesforce -->
+    <div class="plat-card p-sf">
+      <div class="plat-logo-mark" style="background:rgba(0,161,224,.1);color:#00A1E0;font-size:18px">☁</div>
+      <div class="plat-name">Salesforce</div>
+      <div class="plat-body">Sales Cloud, Service Cloud, and custom Salesforce development — including bi-directional Odoo ↔ Salesforce sync.</div>
+      <div class="plat-services">
+        <span class="plat-svc">Sales Cloud</span>
+        <span class="plat-svc">Odoo Sync</span>
+        <span class="plat-svc">Automation</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ GLOBAL COVERAGE ══ -->
+<section class="global" id="global">
+  <div class="global-inner rev">
+    <div class="global-l">
+      <div class="eyebrow lt">Global Service Coverage</div>
+      <h2 class="sec-h light">Built for <span class="ai">Your Market,</span><br>Wherever You Are</h2>
+      <p class="sec-p" style="color:rgba(255,255,255,.5);margin:14px 0 24px">Our solutions are tailored to meet regional compliance standards, market demands, and business environments. Whether you're a startup, growing enterprise, or established organisation — we help you scale in your local and international markets.</p>
+      <div class="global-ctas">
+        <a class="btn-r" href="/#contact"><span>Discuss Your Region →</span></a>
+      </div>
+    </div>
+    <div class="global-r">
+      <div class="g-country">
+        <span class="g-flag">🇺🇸</span>
+        <div class="g-name">United States</div>
+        <div class="g-region">North America</div>
+        <div class="g-services">
+          <span class="g-svc">Odoo ERP</span>
+          <span class="g-svc">AI Automation</span>
+          <span class="g-svc">Salesforce Sync</span>
+          <span class="g-svc">Tax Compliance</span>
+          <span class="g-svc">Workflow Automation</span>
+        </div>
+      </div>
+      <div class="g-country">
+        <span class="g-flag">🇨🇦</span>
+        <div class="g-name">Canada</div>
+        <div class="g-region">North America</div>
+        <div class="g-services">
+          <span class="g-svc">Odoo ERP</span>
+          <span class="g-svc">AI Agents</span>
+          <span class="g-svc">GST / HST</span>
+          <span class="g-svc">Bilingual UI</span>
+          <span class="g-svc">Workflow Automation</span>
+        </div>
+      </div>
+      <div class="g-country">
+        <span class="g-flag">🇩🇪</span>
+        <div class="g-name">Germany</div>
+        <div class="g-region">Europe</div>
+        <div class="g-services">
+          <span class="g-svc">Odoo ERP</span>
+          <span class="g-svc">GDPR Compliance</span>
+          <span class="g-svc">EU VAT</span>
+          <span class="g-svc">AI Integration</span>
+          <span class="g-svc">Predictive Analytics</span>
+        </div>
+      </div>
+      <div class="g-country">
+        <span class="g-flag">🇦🇪</span>
+        <div class="g-name">UAE</div>
+        <div class="g-region">Middle East</div>
+        <div class="g-services">
+          <span class="g-svc">Odoo ERP</span>
+          <span class="g-svc">GCC VAT</span>
+          <span class="g-svc">Arabic UI</span>
+          <span class="g-svc">AI Agents</span>
+          <span class="g-svc">Razorpay</span>
+          <span class="g-svc">Inventory Management</span>
+        </div>
+      </div>
+      <div class="g-country">
+        <span class="g-flag">🇲🇦</span>
+        <div class="g-name">Morocco</div>
+        <div class="g-region">Africa / MENA</div>
+        <div class="g-services">
+          <span class="g-svc">Odoo ERP</span>
+          <span class="g-svc">French UI</span>
+          <span class="g-svc">Local Tax</span>
+          <span class="g-svc">Workflow Automation</span>
+          <span class="g-svc">Document Processing</span>
+        </div>
+      </div>
+      <div class="g-country">
+        <span class="g-flag">🇮🇳</span>
+        <div class="g-name">India</div>
+        <div class="g-region">South Asia</div>
+        <div class="g-services">
+          <span class="g-svc">Odoo ERP</span>
+          <span class="g-svc">GST e-Invoicing</span>
+          <span class="g-svc">Razorpay</span>
+          <span class="g-svc">AI Agents</span>
+          <span class="g-svc">MRP / Manufacturing</span>
+          <span class="g-svc">Predictive Analytics</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRUSTED BRANDS & CERTIFICATIONS ══ -->
+<section class="brands">
+  <div class="brands-inner rev">
+    <div class="brand-badge"><span class="brand-badge-icon">🏆</span>Odoo Partner</div>
+    <div class="brand-badge"><span class="brand-badge-icon">💳</span>Razorpay Official Partner</div>
+    <div class="brand-badge"><span class="brand-badge-icon">⭐</span>Clutch Top Developer</div>
+    <div class="brand-badge"><span class="brand-badge-icon">🔒</span>GDPR Compliant</div>
+    <div class="brand-badge"><span class="brand-badge-icon">☁️</span>AWS Certified</div>
+    <div class="brand-badge"><span class="brand-badge-icon">🤖</span>OpenAI Ecosystem</div>
+    <div class="brand-badge"><span class="brand-badge-icon">🌍</span>20+ Countries</div>
+    <div class="brand-badge"><span class="brand-badge-icon">🛡️</span>NDA Guaranteed</div>
+  </div>
+</section>
+
+<!-- ══ CLIENT TESTIMONIALS — Premium ══ -->
+<section class="testimonials" id="testimonials">
+
+  <!-- Header -->
+  <div class="test-hdr rev">
+    <div>
+      <div class="eyebrow lt">Client Testimonials &amp; Reviews</div>
+      <h2 class="sec-h light">What Our <span class="ai">Clients Say</span></h2>
+      <p style="font-family:var(--B);font-size:clamp(13px,1.4vw,15px);font-weight:300;color:rgba(255,255,255,.45);margin-top:10px;max-width:520px">Real results, real businesses. Our client reviews reflect the impact of ERP implementation and AI automation done right.</p>
+    </div>
+  </div>
+
+  <!-- Platform trust bar -->
+  <div class="test-trust-bar rev">
+    <div class="ttb-badge"><span class="ttb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="ttb-score">5.0</span><span class="ttb-label">Clutch</span></div>
+    <div class="ttb-badge"><span class="ttb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="ttb-score">4.9</span><span class="ttb-label">GoodFirms</span></div>
+    <div class="ttb-badge"><span class="ttb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="ttb-score">4.9</span><span class="ttb-label">Google</span></div>
+    <div class="ttb-sep"></div>
+    <div class="ttb-stat"><span class="ttb-stat-num">254+</span><span class="ttb-stat-label">Projects Delivered</span></div>
+    <div class="ttb-stat"><span class="ttb-stat-num">84%</span><span class="ttb-stat-label">Client Retention</span></div>
+    <div class="ttb-stat"><span class="ttb-stat-num">20+</span><span class="ttb-stat-label">Nations Served</span></div>
+    <div class="ttb-stat"><span class="ttb-stat-num">7+</span><span class="ttb-stat-label">Years Experience</span></div>
+  </div>
+
+  <!-- Featured hero testimonial -->
+  <div class="test-hero rev" id="testHero">
+
+    <div class="test-hero-q">
+      <p class="test-hero-text" id="heroText">Wan Buffer didn&rsquo;t just implement Odoo &mdash; they embedded <strong>AI agents into our procurement workflow</strong> that now raise purchase orders automatically. Before go-live they mapped our ROI with real numbers, then delivered on every metric. That level of accountability is <strong>extremely rare in technology</strong>. We cut manual data entry by 80% in our first quarter and haven&rsquo;t looked back.</p>
+      <div class="test-hero-author">
+        <div class="test-hero-avatar" id="heroAv" style="background:linear-gradient(135deg,#D81C55,#A8143F)">RM</div>
+        <div class="test-hero-info">
+          <div class="test-hero-name" id="heroName">Rajesh Mehta</div>
+          <div class="test-hero-role" id="heroRole">Chief Operating Officer &middot; Paramount Textiles, Ahmedabad India</div>
+        </div>
+        <span class="test-hero-tag" id="heroTag">AI Agent + Human Team</span>
+      </div>
+    </div>
+
+    <div class="test-hero-side">
+
+      <div class="test-mini active" data-name="Fatima Al-Rashidi" data-role="Operations Director &middot; Gulf Logistics Co, Kuwait" data-av="FA" data-bg="linear-gradient(135deg,#00C2FF,#008FCC)" data-tag="Dedicated Team" data-text="Wan Buffer&rsquo;s predictive replenishment AI on top of Odoo transformed our supply chain. They understood our regional compliance needs in Kuwait &mdash; VAT, Arabic UI, GCC regulations &mdash; without us even asking. &lt;strong&gt;34% less overstock, 60% fewer stockouts&lt;/strong&gt; across 4 warehouses in under 3 months." onclick="swapHeroTest(this)">
+        <div class="test-mini-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="test-mini-text">&ldquo;34% less overstock and 60% fewer stockouts across 4 warehouses. They understood our Kuwait compliance needs without us asking.&rdquo;</p>
+        <div class="test-mini-author">
+          <div class="test-mini-av" style="background:linear-gradient(135deg,#00C2FF,#008FCC)">FA</div>
+          <div><div class="test-mini-name">Fatima Al-Rashidi</div><div class="test-mini-co">Gulf Logistics Co. &middot; Kuwait</div></div>
+        </div>
+      </div>
+
+      <div class="test-mini" data-name="Mohammed Al-Sabah" data-role="Chief Executive Officer &middot; Arabian Properties Group, Dubai UAE" data-av="MS" data-bg="linear-gradient(135deg,#1a237e,#283593)" data-tag="Dedicated Team" data-text="Wan Buffer built our entire real estate CRM and property management system on Odoo from scratch &mdash; property portal, broker commission tracking, investor reporting, and lease management. The &lt;strong&gt;AI lead scoring module increased broker conversions by 28%&lt;/strong&gt;. Best technology investment we&rsquo;ve made in a decade." onclick="swapHeroTest(this)">
+        <div class="test-mini-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="test-mini-text">&ldquo;AI lead scoring module increased broker conversion rate by 28%. Best technology investment we&rsquo;ve made in a decade.&rdquo;</p>
+        <div class="test-mini-author">
+          <div class="test-mini-av" style="background:linear-gradient(135deg,#1a237e,#283593)">MS</div>
+          <div><div class="test-mini-name">Mohammed Al-Sabah</div><div class="test-mini-co">Arabian Properties &middot; Dubai, UAE</div></div>
+        </div>
+      </div>
+
+      <div class="test-mini" data-name="Pierre Dubois" data-role="Chief Technology Officer &middot; MedTech Solutions SAS, Paris France" data-av="PD" data-bg="linear-gradient(135deg,#6c757d,#495057)" data-tag="Retainer Model" data-text="We&rsquo;ve been on retainer with Wan Buffer for 2 years. Every quarter they audit our Odoo system, identify AI enhancements, and ship them. The proactive approach means we&rsquo;re always ahead of bottlenecks. <strong>They know our system better than we do</strong> &mdash; it feels less like a vendor, more like an in-house tech team." onclick="swapHeroTest(this)">
+        <div class="test-mini-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="test-mini-text">&ldquo;Feels less like a vendor, more like an in-house tech team. On retainer 2 years &mdash; they audit and enhance our Odoo every quarter.&rdquo;</p>
+        <div class="test-mini-author">
+          <div class="test-mini-av" style="background:linear-gradient(135deg,#6c757d,#495057)">PD</div>
+          <div><div class="test-mini-name">Pierre Dubois</div><div class="test-mini-co">MedTech Solutions SAS &middot; Paris</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</section>
+
+<!-- ══ ⑪ FAQ ══ -->
+<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+  <div class="faq-inner">
+
+    <!-- LEFT sticky col -->
+    <div class="faq-left rev">
+      <div class="eyebrow">Questions &amp; Answers</div>
+      <h2 class="sec-h">Answers to Your <span class="acc">FAQs</span></h2>
+      <p class="sec-p">Everything you need to know about our AI-powered ERP services, engagement models, and how we work.</p>
+      <div class="faq-cats">
+        <button class="faq-cat active" onclick="filterFaq('all',this)">All Questions</button>
+        <button class="faq-cat" onclick="filterFaq('ai',this)">AI &amp; Automation</button>
+        <button class="faq-cat" onclick="filterFaq('erp',this)">ERP &amp; Odoo</button>
+        <button class="faq-cat" onclick="filterFaq('engage',this)">Engagement</button>
+      </div>
+    </div>
+
+    <!-- RIGHT accordion -->
+    <div class="faq-list rev" id="faqList">
+
+      <div class="faq-item open" data-cat="ai" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text" itemprop="name">What exactly is the "AI Agent + Human Team" engagement model?</span>
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            Our AI Agent + Human Team model pairs autonomous AI agents with senior Wan Buffer engineers. The AI agents handle repetitive, rule-based ERP tasks — generating purchase orders, processing invoices, updating stock levels, sending alerts — while our human engineers focus on custom logic, exceptions, system architecture, and continuous improvement. This typically reduces operational costs by 50–70% compared to a fully human team, while maintaining enterprise-grade quality and oversight.
+            <div><span class="faq-tag">⚡ New Model</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="ai">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text" itemprop="name">What AI technologies do you use — do you build custom models or use existing LLMs?</span>
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            Both. For most ERP automation use cases we integrate proven LLMs (OpenAI GPT-4o, Claude, Mistral) using LangChain or LlamaIndex — this is faster to deploy and more reliable. For industry-specific predictions like demand forecasting, quality defect detection, or churn risk we build custom ML models using TensorFlow and Scikit-learn, trained on your historical ERP data. We recommend the approach based on your data volume, latency requirements, and budget.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="erp">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text" itemprop="name">Which Odoo versions do you support, and can you migrate from older versions?</span>
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            We actively develop and support Odoo 16, 17, and 18. We also handle migrations from older versions (v12, v13, v14, v15) — including custom module migration, data migration, and post-migration validation. Our migration projects use a proven 4-phase framework: audit → rebuild → migrate → validate, with zero downtime for most configurations. We also support Odoo Community and Odoo Enterprise.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="erp">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text" itemprop="name">How long does a typical Odoo implementation take?</span>
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            It depends on scope and complexity. A standard Odoo implementation (5–8 modules, moderate customisation) typically takes 8–14 weeks. Complex multi-company, multi-warehouse projects with AI integrations take 16–24 weeks. Our pre-built accelerators and reusable AI module templates shorten timelines by approximately 40% compared to typical implementations. We always agree on a timeline at the start of the project and track it weekly with you.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="ai">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text" itemprop="name">Is my ERP data safe when you integrate AI? Where does data go?</span>
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            Data security is non-negotiable. We sign an NDA before any data is shared. For cloud AI integrations (OpenAI, etc.) we use API calls with no training data retention, and we can route data through private endpoints. For sensitive industries (healthcare, finance) we deploy local/on-premise AI models so your data never leaves your infrastructure. All our AI architectures comply with GDPR for EU clients and can be tailored to meet UAE PDPL, India DPDP, and GCC regulatory requirements.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="engage">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text" itemprop="name">How do I choose between Project-Based, Dedicated Team, and Retainer models?</span>
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <strong>Project-Based</strong> works best when you have a clearly defined deliverable — an Odoo implementation, a specific AI module, or a migration — with a fixed budget. <strong>Dedicated Team</strong> is ideal when you have ongoing development needs, need direct control over engineers, or want to scale a tech team without hiring in-house. <strong>Retainer</strong> suits businesses that already have Odoo live and want continuous improvement, priority support, and quarterly AI audits. <strong>AI Agent + Human Team</strong> is our most innovative model for ongoing operations where cost efficiency and automation maturity are priorities.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="engage">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text" itemprop="name">Do you offer post-launch support and what does it include?</span>
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            Yes. All project-based engagements include 3 months of free post-launch support covering bug fixes, minor configuration changes, and user query resolution. After that, we offer SLA-based support plans with response times from 4 hours (critical) to 1 business day (standard). Our Retainer model includes proactive monitoring, quarterly ERP health audits, and AI model performance reviews. We maintain a dedicated support portal for all active clients.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="erp">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text" itemprop="name">Can you integrate Odoo with our existing tools like Salesforce, Shopify, or third-party APIs?</span>
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            Absolutely. Integration is one of our strongest capabilities. We build REST API, webhook, and middleware-based integrations between Odoo and virtually any external platform — Salesforce, HubSpot, Shopify, Magento, WooCommerce, payment gateways (Stripe, PayTabs), shipping providers (FedEx, DHL, Aramex), custom ERPs, and more. We also use Zapier, Make (Integromat), and Kafka for event-driven integrations. Every integration is thoroughly tested with automated test suites before go-live.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ ⑩ INSIGHTS ══ -->
+<section class="insights" id="insights">
+  <div class="ins-hdr rev">
+    <div><div class="eyebrow">Latest Thinking</div><h2 class="sec-h">AI + ERP <span class="acc">Insights</span></h2></div>
+    <a class="link-r" href="#">All Articles →</a>
+  </div>
+  <div class="ins-grid rev">
+    <div class="ins-main">
+      <div class="ins-c">
+        <span class="ins-cat">AI Agents · Manufacturing ERP</span>
+        <div class="ins-title">How AI Agents Are Replacing Manual ERP Data Entry in Manufacturing</div>
+        <div class="ins-meta">Feb 20, 2026 · Mit Mathukiya · 8 min read</div>
+      </div>
+    </div>
+    <div class="ins-card">
+      <div>
+        <span class="ins-cat">AI · Odoo</span>
+        <div class="ins-title">Building Your First AI Agent Inside Odoo 17: A Practical Guide</div>
+        <div class="ins-meta">Feb 10, 2026 · Kush Parmar</div>
+      </div>
+      <a class="ins-link" href="#">Read Article →</a>
+    </div>
+    <div class="ins-card">
+      <div>
+        <span class="ins-cat">Strategy · ERP</span>
+        <div class="ins-title">AI-Enabled vs. Traditional ERP: What the Data Says After 100 Implementations</div>
+        <div class="ins-meta">Jan 28, 2026 · Saloni Darji</div>
+      </div>
+      <a class="ins-link" href="#">Read Article →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ⑪ CONTACT ══ -->
+<section class="cta-wrap" id="contact">
+  <div class="cta-l rev">
+    <div class="eyebrow">Let's Build Together</div>
+    <h2 class="sec-h">Ready to Make Your<br>ERP <span class="acc">Intelligent?</span></h2>
+    <p class="sec-p">Talk to an AI + ERP specialist — not a sales rep — within 24 hours. We'll map your biggest automation opportunities in the first call.</p>
+    <div class="cta-promises">
+      <div class="cta-p">Free AI + ERP readiness assessment (60 min)</div>
+      <div class="cta-p">Automation opportunity map in 5 business days</div>
+      <div class="cta-p">Transparent ROI estimate with real benchmarks</div>
+      <div class="cta-p">NDA signed before any data is shared</div>
+    </div>
+  </div>
+  <div class="cta-r rev">
+    <div class="cta-form-title">Book a Discovery Call</div>
+    <div class="form-wrap">
+      <div class="form-inner">
+        <div class="form-row">
+          <input class="fi" type="text" placeholder="First Name *">
+          <input class="fi" type="text" placeholder="Last Name *">
+        </div>
+        <input class="fi" type="email" placeholder="Business Email *">
+        <input class="fi" type="text" placeholder="Company Name *">
+        <div class="form-row">
+          <select class="fi">
+            <option value="" disabled selected>I need...</option>
+            <option>AI Agent Implementation</option>
+            <option>ERP + AI Integration</option>
+            <option>Odoo Implementation</option>
+            <option>Odoo Customisation</option>
+            <option>Odoo Migration / Upgrade</option>
+            <option>Dedicated Dev Team</option>
+            <option>Workflow Automation</option>
+            <option>Mobile Application</option>
+          </select>
+          <select class="fi">
+            <option value="" disabled selected>Engagement Model</option>
+            <option>Project-Based</option>
+            <option>AI Agent + Human Team</option>
+            <option>Dedicated Team</option>
+            <option>Retainer Model</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <textarea class="fi" rows="3" placeholder="Describe your challenge or automation goal..."></textarea>
+        <button class="f-btn"><span>Request Discovery Call →</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="f-top">
+    <div>
+      <div class="f-logo-w">
+        <img class="f-logo-img" src="https://res.cloudinary.com/dghplu26l/image/upload/v1719489724/logo-white_eoxbqc.png" alt="Wan Buffer — Odoo AI Integration Services">
+        <div class="f-logo-badges">
+          <span class="f-badge erp">ERP</span>
+          <span class="f-badge ai-f">AI</span>
+        </div>
+      </div>
+      <p class="f-tag">AI-and-Automation-enabled ERP solutions company. Building intelligent enterprise systems across 20+ nations.</p>
+      <div class="f-offs">
+        <div class="f-off">Ahmedabad, India — HQ &amp; R&amp;D</div>
+        <div class="f-off">Kuwait City — Regional Office</div>
+        <div class="f-off">Paris, France — Sales Office</div>
+      </div>
+    </div>
+    <div>
+      <div class="f-colt ai-col">AI &amp; Automation ⚡</div>
+      <ul class="f-links">
+        <li><a href="#">AI Agents for ERP</a></li>
+        <li><a href="#">Workflow Automation</a></li>
+        <li><a href="#">Predictive Analytics</a></li>
+        <li><a href="#">AI Copilots</a></li>
+        <li><a href="#">Document AI</a></li>
+        <li><a href="#">ERP + AI Integration</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-colt">Odoo Services</div>
+      <ul class="f-links">
+        <li><a href="#">Implementation</a></li>
+        <li><a href="#">Customisation</a></li>
+        <li><a href="#">Migration &amp; Upgrade</a></li>
+        <li><a href="#">Training</a></li>
+        <li><a href="#">Hosting &amp; Support</a></li>
+        <li><a href="#">Odoo Consultancy</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-colt">Engagement</div>
+      <ul class="f-links">
+        <li><a href="#">Project-Based</a></li>
+        <li><a href="#">AI Agent + Human Team</a></li>
+        <li><a href="#">Dedicated Team</a></li>
+        <li><a href="#">Retainer Model</a></li>
+        <li><a href="#">Hire ERP Developers</a></li>
+        <li><a href="#">Hire AI Engineers</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-colt">Company</div>
+      <ul class="f-links">
+        <li><a href="#">About Wan Buffer</a></li>
+        <li><a href="#">Wanbufferians</a></li>
+        <li><a href="#">AI + ERP Blog</a></li>
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bot">
+    <span class="f-copy">© 2026 Wan Buffer Services Pvt. Ltd. All rights reserved. AI-Powered ERP Solutions.</span>
+    <div class="f-legal">
+      <a href="#">Privacy Policy</a><a href="#">Terms of Use</a>
+      <a href="#">Cookie Policy</a><a href="#">GDPR</a>
+    </div>
+  </div>
+</footer>
+<!-- ══ WANNY — AI Pre-Sales Assistant ══ -->
+<div id="wanny-dim" onclick="closeWanny()"></div>
+
+<!-- ── Floating Stack: Wanny + Book CTA ── -->
+<div id="float-stack">
+
+  <!-- Row 1: Wanny -->
+  <div id="wanny-trigger" onclick="openWanny()">
+    <div class="wanny-ava"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=104&h=104&fit=crop&crop=faces,top" alt="Wanny — AI ERP Consultant"></div>
+    <div class="wanny-trigger-text">
+      <span class="wanny-trigger-name">Wanny</span>
+      <span class="wanny-trigger-sub">AI ERP Consultant · Online</span>
+    </div>
+    <div class="wanny-trigger-close" onclick="event.stopPropagation();document.getElementById('float-stack').style.display='none'">✕</div>
+  </div>
+
+  <!-- Row 2: Book a Free Discovery Call -->
+  <a id="float-book-cta" href="/#contact">
+    <span class="fbc-pulse"></span>
+    <span class="fbc-label">Book a Free Discovery Call</span>
+    <span class="fbc-arrow">→</span>
+  </a>
+
+</div>
+
+<!-- Side panel -->
+<div id="wanny-panel">
+  <!-- Header -->
+  <div class="wp-top">
+    <div class="wp-ava"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=88&h=88&fit=crop&crop=face" alt="Wanny — Wan Buffer AI ERP Consultant"></div>
+    <div class="wp-info">
+      <div class="wp-name">Wanny</div>
+      <div class="wp-status">AI ERP Consultant · Wan Buffer</div>
+    </div>
+    <button class="wp-close" onclick="closeWanny()" aria-label="Close">✕</button>
+  </div>
+
+  <!-- Proof ticker inside panel -->
+  <div class="wp-proof-bar">
+    <div class="wp-proof-track">
+      <span class="wp-proof-item">254+ Projects Delivered</span>
+      <span class="wp-proof-item">40% Faster Implementation</span>
+      <span class="wp-proof-item">84% Client Retention</span>
+      <span class="wp-proof-item">80% Less Manual Entry</span>
+      <span class="wp-proof-item">20+ Countries Served</span>
+      <span class="wp-proof-item">Odoo Partner</span>
+      <span class="wp-proof-item">254+ Projects Delivered</span>
+      <span class="wp-proof-item">40% Faster Implementation</span>
+    </div>
+  </div>
+
+  <!-- Messages -->
+  <div class="wp-msgs" id="wannyMsgs"></div>
+
+  <!-- Quick-reply chips -->
+  <div class="w-chips" id="wannyChips"></div>
+
+  <!-- Input -->
+  <div class="wp-input-row">
+    <input class="wp-input" id="wannyInput" type="text" placeholder="Type your message…" onkeydown="if(event.key==='Enter')wannySend()">
+    <button class="wp-send" onclick="wannySend()" aria-label="Send">→</button>
+  </div>
+  <div class="wp-branding">Powered by Wanny · Wan Buffer AI</div>
+</div>
