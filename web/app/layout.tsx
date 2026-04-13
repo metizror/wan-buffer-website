@@ -53,8 +53,9 @@ export default function RootLayout({
       className={`${montserrat.variable} ${poppins.variable}`}
       itemScope
       itemType="https://schema.org/WebPage"
+      suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

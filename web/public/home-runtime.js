@@ -1,15 +1,16 @@
 /* NAV scroll */
-window.addEventListener('scroll',()=>{ document.getElementById('mainNav').classList.toggle('scrolled',scrollY>20) });
+window.addEventListener('scroll',()=>{ const n=document.getElementById('mainNav'); if(!n) return; n.classList.toggle('scrolled',scrollY>20) });
 
 /* Mobile nav */
-function openNav(){document.getElementById('mobNav').classList.add('open');document.body.style.overflow='hidden'}
-function closeNav(){document.getElementById('mobNav').classList.remove('open');document.body.style.overflow=''}
+window.openNav = function openNav(){document.getElementById('mobNav')?.classList.add('open');document.body.style.overflow='hidden'};
+window.closeNav = function closeNav(){document.getElementById('mobNav')?.classList.remove('open');document.body.style.overflow=''};
 
 /* Hero canvas — particle network */
-(function(){
+;(function(){
   const canvas=document.getElementById('heroCanvas');
   if(!canvas)return;
   const ctx=canvas.getContext('2d');
+  if(!ctx)return;
   let W,H,pts=[];
   function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight}
   resize();window.addEventListener('resize',resize);
@@ -163,7 +164,7 @@ document.addEventListener('keydown',e=>{
   if(document.getElementById('leadPopup')?.classList.contains('show')) closePopup();
 });
 
-(function setupLeadPopupScrollTrigger(){
+;(function setupLeadPopupScrollTrigger(){
   if(hasLeadPopupDismissed()) return;
   const aiStrip=document.querySelector('.ai-strip');
   if(!aiStrip) return;
@@ -266,6 +267,29 @@ function toggleFaq(btn){
   const wasOpen = item.classList.contains('open');
   document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
   if(!wasOpen) item.classList.add('open');
+}
+
+function filterFaq(cat, btn){
+  // toggle active state on category buttons
+  if(btn){
+    document.querySelectorAll('.faq-cat').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  // show/hide items by data-cat
+  const list = document.getElementById('faqList');
+  if(!list) return;
+  list.querySelectorAll('.faq-item').forEach(item => {
+    const c = item.getAttribute('data-cat');
+    const show = cat === 'all' ? true : c === cat;
+    item.style.display = show ? '' : 'none';
+    if(!show) item.classList.remove('open');
+  });
+  // ensure one open item in the filtered set (nice UX)
+  const firstVisible = Array.from(list.querySelectorAll('.faq-item')).find(i => i.style.display !== 'none');
+  if(firstVisible){
+    list.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    firstVisible.classList.add('open');
+  }
 }
 
 /* ══════════════════════════════════════════════════════
@@ -1004,7 +1028,7 @@ Section currently viewing: ${currentSection || 'homepage'}
 
 window.openWanny = function(){ if (typeof WANNY !== 'undefined' && WANNY.open) WANNY.open(); };
 
-(function(){
+;(function(){
   var stack = document.getElementById('float-stack');
   if(!stack) return;
   window.addEventListener('scroll', function(){
