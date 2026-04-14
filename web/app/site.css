@@ -77,9 +77,13 @@ img{display:block;max-width:100%}
 .link-r{font-family:var(--H);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px;transition:gap .25s}
 .link-r:hover{gap:14px}
 
-/* Reveal */
-.rev{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-.rev.go{opacity:1;transform:none}
+/* Reveal (progressive enhancement)
+   - Without JS: content should be visible (avoid blank pages)
+   - With JS: add `js` class to <html> to enable reveal animation
+*/
+.rev{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
+html.js .rev{opacity:0;transform:translateY(28px)}
+html.js .rev.go{opacity:1;transform:none}
 
 /* ══════════════════════════════════
    TICKER
@@ -98,7 +102,7 @@ nav{position:sticky;top:0;z-index:600;height:68px;background:rgba(255,255,255,.9
 nav.scrolled{box-shadow:0 2px 32px rgba(15,28,46,.1)}
 
 .n-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.n-logo-img{height:48px;width:auto;display:block;mix-blend-mode:multiply}
+.n-logo-img{height:clamp(56px,4vw,72px);width:auto;display:block;mix-blend-mode:multiply}
 .n-logo-badges{display:flex;gap:4px}
 .n-badge{font-family:var(--H);font-size:7px;font-weight:700;letter-spacing:.1em;padding:3px 7px;border-radius:2px;text-transform:uppercase}
 .n-badge.erp{background:var(--red);color:var(--white);animation:badgeP 3s ease-in-out infinite}
@@ -1269,7 +1273,17 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.05);padding
 
 /* Service: Odoo Implementation (and other inner service pages) */
 .svc-page{position:relative}
-a.mega-item{text-decoration:none;color:inherit}
+a.mega-item{
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  width:100%;
+  padding:9px 0;
+  border-radius:0;
+}
+a.mega-item::after{display:none}
 .svc-flow{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;position:relative;z-index:1}
 .svc-flow-step{
   font-family:var(--H);
