@@ -23,8 +23,8 @@ export function HomeWanny() {
             className="wanny-trigger-close"
             onClick={(e) => {
               e.stopPropagation();
-              const stack = document.getElementById("float-stack");
-              if (stack) stack.style.display = "none";
+              const trigger = document.getElementById("wanny-trigger");
+              if (trigger) trigger.style.display = "none";
             }}
           >
             ✕
@@ -32,7 +32,7 @@ export function HomeWanny() {
         </div>
 
         {/* Row 2: Book a Free Discovery Call */}
-        <a id="float-book-cta" href="/#contact">
+        <a id="float-book-cta" href="/contact-us">
           <span className="fbc-pulse"></span>
           <span className="fbc-label">Book a Free Discovery Call</span>
           <span className="fbc-arrow">→</span>

@@ -20,11 +20,8 @@ export function HomePlatforms() {
       <div className="plat-grid rev">
         <div className="plat-card p-odoo">
           <div className="plat-primary-badge">Primary Platform</div>
-          <div
-            className="plat-logo-mark"
-            style={{ background: "rgba(113,75,103,.12)", color: "#714B67", fontSize: 15 }}
-          >
-            OD
+          <div className="plat-logo-mark" aria-hidden="true">
+            <img className="plat-logo-img" src="/platform-logos/odoo.svg" alt="" loading="lazy" />
           </div>
           <div className="plat-name">Odoo ERP</div>
           <div className="plat-body">
@@ -40,11 +37,8 @@ export function HomePlatforms() {
         </div>
 
         <div className="plat-card p-zoho">
-          <div
-            className="plat-logo-mark"
-            style={{ background: "rgba(228,37,39,.1)", color: "#E42527", fontSize: 13 }}
-          >
-            Zo
+          <div className="plat-logo-mark" aria-hidden="true">
+            <img className="plat-logo-img" src="/platform-logos/zoho.svg" alt="" loading="lazy" />
           </div>
           <div className="plat-name">Zoho Suite</div>
           <div className="plat-body">
@@ -60,11 +54,8 @@ export function HomePlatforms() {
 
         <div className="plat-card p-rp">
           <div className="razorpay-badge">Official Partner</div>
-          <div
-            className="plat-logo-mark"
-            style={{ background: "rgba(7,38,84,.08)", color: "#072654", fontSize: 12 }}
-          >
-            RP
+          <div className="plat-logo-mark" aria-hidden="true">
+            <img className="plat-logo-img" src="/platform-logos/razorpay.svg" alt="" loading="lazy" />
           </div>
           <div className="plat-name">Razorpay</div>
           <div className="plat-body">
@@ -80,11 +71,8 @@ export function HomePlatforms() {
         </div>
 
         <div className="plat-card p-sp">
-          <div
-            className="plat-logo-mark"
-            style={{ background: "rgba(150,191,72,.12)", color: "#5a8a1c", fontSize: 13 }}
-          >
-            Sh
+          <div className="plat-logo-mark" aria-hidden="true">
+            <img className="plat-logo-img" src="/platform-logos/shopify.svg" alt="" loading="lazy" />
           </div>
           <div className="plat-name">Shopify</div>
           <div className="plat-body">
@@ -99,11 +87,8 @@ export function HomePlatforms() {
         </div>
 
         <div className="plat-card p-mg">
-          <div
-            className="plat-logo-mark"
-            style={{ background: "rgba(242,99,34,.1)", color: "#F26322", fontSize: 13 }}
-          >
-            Mg
+          <div className="plat-logo-mark" aria-hidden="true">
+            <img className="plat-logo-img" src="/platform-logos/magento.svg" alt="" loading="lazy" />
           </div>
           <div className="plat-name">Magento</div>
           <div className="plat-body">
@@ -117,11 +102,8 @@ export function HomePlatforms() {
         </div>
 
         <div className="plat-card p-sf">
-          <div
-            className="plat-logo-mark"
-            style={{ background: "rgba(0,161,224,.1)", color: "#00A1E0", fontSize: 18 }}
-          >
-            ☁
+          <div className="plat-logo-mark" aria-hidden="true">
+            <img className="plat-logo-img" src="/platform-logos/salesforce.svg" alt="" loading="lazy" />
           </div>
           <div className="plat-name">Salesforce</div>
           <div className="plat-body">

@@ -8,7 +8,7 @@ export function HomeCaseStudy() {
             AI + ERP <span className="acc">in Action</span>
           </h2>
         </div>
-        <a className="link-r" href="#">
+        <a className="link-r" href="/case-studies">
           All Case Studies →
         </a>
       </div>
@@ -54,8 +54,8 @@ export function HomeCaseStudy() {
               </div>
             </div>
             <br />
-            <a className="link-r" href="#">
-              Read Full Case Study →
+            <a className="link-r" href="/case-studies">
+              Explore Case Studies →
             </a>
           </div>
         </div>

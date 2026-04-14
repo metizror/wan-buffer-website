@@ -1,6 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
+import Link from "next/link";
 
 interface HomeHeaderProps {
   children?: ReactNode;
@@ -18,38 +19,42 @@ export function HomeHeader(_props: HomeHeaderProps) {
         >
           ✕
         </button>
-        <a className="mob-a ai-mob" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
+        <Link className="mob-a ai-mob" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
           ⚡ AI &amp; Automation
-        </a>
+        </Link>
         <div className="mob-section">AI Services</div>
-        <a className="mob-sub" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
+        <Link className="mob-sub" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
           AI Agents for ERP
-        </a>
-        <a className="mob-sub" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
+        </Link>
+        <Link className="mob-sub" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
           Workflow Automation
-        </a>
-        <a className="mob-sub" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
+        </Link>
+        <Link className="mob-sub" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
           Intelligent Analytics
-        </a>
-        <a className="mob-a" href="/#industries" onClick={() => (window as any).closeNav?.()}>
+        </Link>
+        <div className="mob-section">ERP</div>
+        <Link className="mob-sub" href="/odoo/implementation" onClick={() => (window as any).closeNav?.()}>
+          Odoo Implementation
+        </Link>
+        <Link className="mob-a" href="/#industries" onClick={() => (window as any).closeNav?.()}>
           Industries
-        </a>
-        <a className="mob-a" href="/#models" onClick={() => (window as any).closeNav?.()}>
+        </Link>
+        <Link className="mob-a" href="/#models" onClick={() => (window as any).closeNav?.()}>
           Engagement
-        </a>
-        <a className="mob-a" href="/#insights" onClick={() => (window as any).closeNav?.()}>
+        </Link>
+        <Link className="mob-a" href="/#insights" onClick={() => (window as any).closeNav?.()}>
           Insights
-        </a>
-        <a className="mob-a" href="/#contact" onClick={() => (window as any).closeNav?.()}>
+        </Link>
+        <Link className="mob-a" href="/contact-us" onClick={() => (window as any).closeNav?.()}>
           Contact
-        </a>
+        </Link>
         <div className="mob-btns">
-          <a className="mob-btn-ai" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
+          <Link className="mob-btn-ai" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
             Explore AI Services ⚡
-          </a>
-          <a className="mob-btn-r" href="/#contact" onClick={() => (window as any).closeNav?.()}>
+          </Link>
+          <Link className="mob-btn-r" href="/contact-us" onClick={() => (window as any).closeNav?.()}>
             Book a Discovery Call
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -92,7 +97,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
       {/* ══ NAV ══ */}
       {/* NOTE: markup intentionally kept identical to original for pixel-perfect UI */}
       <nav id="mainNav">
-        <a className="n-logo" href="/">
+        <Link className="n-logo" href="/">
           <img
             className="n-logo-img"
             src="https://res.cloudinary.com/dghplu26l/image/upload/v1719489724/logo-black_fxcdpr.png"
@@ -102,13 +107,13 @@ export function HomeHeader(_props: HomeHeaderProps) {
             <span className="n-badge erp">ERP</span>
             <span className="n-badge ai-b">AI</span>
           </div>
-        </a>
+        </Link>
         <ul className="n-links">
           {/* AI Mega-menu item */}
           <li>
-            <a href="/#ai-services" className="n-ai-link">
+            <Link href="/#ai-services" className="n-ai-link">
               AI &amp; Automation
-            </a>
+            </Link>
             <div className="n-mega-wrap">
               <div className="n-mega">
                 <div className="mega-top">
@@ -216,9 +221,9 @@ export function HomeHeader(_props: HomeHeaderProps) {
                 </div>
                 <div className="mega-footer">
                   <span className="mega-footer-t">Powered by OpenAI · LangChain · Python · Odoo</span>
-                  <a className="mega-footer-a" href="/#ai-services">
+                  <Link className="mega-footer-a" href="/#ai-services">
                     Explore All AI Services →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -226,9 +231,9 @@ export function HomeHeader(_props: HomeHeaderProps) {
 
           {/* ERP Mega Menu */}
           <li>
-            <a href="/#platforms" className="n-erp-link">
+            <Link href="/#platforms" className="n-erp-link">
               ERP
-            </a>
+            </Link>
             <div className="n-mega-wrap">
               <div className="n-mega n-mega-erp">
                 <div className="mega-top erp-top">
@@ -242,13 +247,13 @@ export function HomeHeader(_props: HomeHeaderProps) {
                 <div className="mega-body mega-4col">
                   <div className="mega-col erp-col">
                     <div className="mega-col-title">Odoo</div>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/odoo/implementation">
                       <div className="mega-icon">⚙️</div>
                       <div>
                         <div className="mega-item-t">Odoo Implementation</div>
                         <div className="mega-item-s">End-to-end Odoo 16/17/18 setup</div>
                       </div>
-                    </div>
+                    </Link>
                     <div className="mega-item">
                       <div className="mega-icon">🔧</div>
                       <div>
@@ -368,16 +373,16 @@ export function HomeHeader(_props: HomeHeaderProps) {
                       <div className="mega-cta-stat-n">84%</div>
                       <div className="mega-cta-stat-l">Client retention rate</div>
                     </div>
-                    <a className="mega-cta-btn" href="/#contact">
+                    <Link className="mega-cta-btn" href="/contact-us">
                       Free ERP Audit →
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="mega-footer">
                   <span className="mega-footer-t">Odoo Partner · Zoho · Salesforce · Razorpay Official Partner</span>
-                  <a className="mega-footer-a" href="/#platforms">
+                  <Link className="mega-footer-a" href="/#platforms">
                     Explore All ERP Services →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -385,9 +390,9 @@ export function HomeHeader(_props: HomeHeaderProps) {
 
           {/* eCommerce Mega Menu */}
           <li>
-            <a href="/#platforms" className="n-ecom-link">
+            <Link href="/#platforms" className="n-ecom-link">
               eCommerce
-            </a>
+            </Link>
             <div className="n-mega-wrap">
               <div className="n-mega n-mega-ecom">
                 <div className="mega-top ecom-top">
@@ -527,16 +532,16 @@ export function HomeHeader(_props: HomeHeaderProps) {
                       <div className="mega-cta-stat-n">60%</div>
                       <div className="mega-cta-stat-l">Reduction in stockouts with AI forecasting</div>
                     </div>
-                    <a className="mega-cta-btn" href="/#contact">
+                    <Link className="mega-cta-btn" href="/contact-us">
                       Free eCommerce Audit →
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="mega-footer">
                   <span className="mega-footer-t">Shopify Plus · Magento 2 · Odoo · Razorpay · AI-Powered</span>
-                  <a className="mega-footer-a" href="/#platforms">
+                  <Link className="mega-footer-a" href="/#platforms">
                     Explore All eCommerce Services →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -544,7 +549,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
 
           {/* Industries Mega Menu */}
           <li>
-            <a href="/#industries">Industries</a>
+            <Link href="/#industries">Industries</Link>
             <div className="n-mega-wrap">
               <div className="n-mega n-mega-erp" style={{ width: 860 }}>
                 <div className="mega-top" style={{ borderBottomColor: "rgba(0,194,255,.15)" }}>
@@ -679,22 +684,22 @@ export function HomeHeader(_props: HomeHeaderProps) {
                       </div>
                       <div className="mega-cta-stat-l">Countries with active deployments</div>
                     </div>
-                    <a
+                    <Link
                       className="mega-cta-btn"
-                      href="/#contact"
+                      href="/contact-us"
                       style={{ background: "var(--ai)", color: "var(--navy)" }}
                     >
                       Discuss Your Industry →
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="mega-footer">
                   <span className="mega-footer-t">
                     Manufacturing · Retail · Logistics · Healthcare · Finance · Real Estate
                   </span>
-                  <a className="mega-footer-a" href="/#industries">
+                  <Link className="mega-footer-a" href="/#industries">
                     Explore All Industries →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -702,24 +707,24 @@ export function HomeHeader(_props: HomeHeaderProps) {
 
           {/* Engagement Mega Menu (kept as link for now; mega content still in injected HTML sections later) */}
           <li>
-            <a href="/#models">Engagement</a>
+            <Link href="/#models">Engagement</Link>
           </li>
 
           <li>
-            <a href="/#insights">Insights</a>
+            <Link href="/#insights">Insights</Link>
           </li>
           <li>
-            <a href="/#contact">Contact</a>
+            <Link href="/contact-us">Contact</Link>
           </li>
         </ul>
 
         <div className="n-end">
-          <a className="n-ai-cta" href="/#ai-services">
+          <Link className="n-ai-cta" href="/#ai-services">
             AI Services ⚡
-          </a>
-          <a className="n-cta" href="/#contact">
+          </Link>
+          <Link className="n-cta" href="/contact-us">
             Book a Call
-          </a>
+          </Link>
           <button
             className="ham"
             type="button"

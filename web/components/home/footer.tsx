@@ -52,7 +52,7 @@ export function HomeFooter() {
           <div className="f-colt">Odoo Services</div>
           <ul className="f-links">
             <li>
-              <a href="#">Implementation</a>
+              <a href="/odoo/implementation">Implementation</a>
             </li>
             <li>
               <a href="#">Customisation</a>
@@ -115,7 +115,7 @@ export function HomeFooter() {
               <a href="#">Events</a>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <a href="/contact-us">Contact Us</a>
             </li>
           </ul>
         </div>
