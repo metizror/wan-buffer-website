@@ -36,7 +36,10 @@ export function HomeHeader(_props: HomeHeaderProps) {
         <Link className="mob-sub" href="/odoo/implementation" onClick={() => (window as any).closeNav?.()}>
           Odoo Implementation
         </Link>
-        <Link className="mob-a" href="/#industries" onClick={() => (window as any).closeNav?.()}>
+        <Link className="mob-sub" href="/odoo/migration" onClick={() => (window as any).closeNav?.()}>
+          Odoo Migration
+        </Link>
+        <Link className="mob-a" href="/industries" onClick={() => (window as any).closeNav?.()}>
           Industries
         </Link>
         <Link className="mob-a" href="/#models" onClick={() => (window as any).closeNav?.()}>
@@ -261,13 +264,13 @@ export function HomeHeader(_props: HomeHeaderProps) {
                         <div className="mega-item-s">Custom modules &amp; workflows</div>
                       </div>
                     </div>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/odoo/migration">
                       <div className="mega-icon">🔄</div>
                       <div>
                         <div className="mega-item-t">Odoo Migration</div>
                         <div className="mega-item-s">v12–v15 → Odoo 17/18</div>
                       </div>
-                    </div>
+                    </Link>
                     <div className="mega-item">
                       <div className="mega-icon">🔗</div>
                       <div>
@@ -549,7 +552,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
 
           {/* Industries Mega Menu */}
           <li>
-            <Link href="/#industries">Industries</Link>
+            <Link href="/industries">Industries</Link>
             <div className="n-mega-wrap">
               <div className="n-mega n-mega-erp" style={{ width: 860 }}>
                 <div className="mega-top" style={{ borderBottomColor: "rgba(0,194,255,.15)" }}>
@@ -697,7 +700,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                   <span className="mega-footer-t">
                     Manufacturing · Retail · Logistics · Healthcare · Finance · Real Estate
                   </span>
-                  <Link className="mega-footer-a" href="/#industries">
+                  <Link className="mega-footer-a" href="/industries">
                     Explore All Industries →
                   </Link>
                 </div>

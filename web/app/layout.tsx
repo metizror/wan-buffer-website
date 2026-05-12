@@ -1,20 +1,6 @@
 import type { Metadata } from "next";
-import { Montserrat, Poppins } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-montserrat",
-  display: "swap",
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-poppins",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title:
@@ -50,12 +36,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${poppins.variable}`}
       itemScope
       itemType="https://schema.org/WebPage"
       suppressHydrationWarning
     >
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <Script id="js-class" strategy="beforeInteractive">
+          {`document.documentElement.classList.add('js');`}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }
