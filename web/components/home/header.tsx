@@ -36,8 +36,20 @@ export function HomeHeader(_props: HomeHeaderProps) {
         <Link className="mob-sub" href="/odoo/implementation" onClick={() => (window as any).closeNav?.()}>
           Odoo Implementation
         </Link>
+        <Link className="mob-sub" href="/odoo/odoo-customization-and-installation" onClick={() => (window as any).closeNav?.()}>
+          Odoo Customisation
+        </Link>
         <Link className="mob-sub" href="/odoo/migration" onClick={() => (window as any).closeNav?.()}>
           Odoo Migration
+        </Link>
+        <Link className="mob-sub" href="/odoo/odoo-erp-integration" onClick={() => (window as any).closeNav?.()}>
+          Odoo Integration
+        </Link>
+        <Link className="mob-sub" href="/odoo/training" onClick={() => (window as any).closeNav?.()}>
+          Odoo Training
+        </Link>
+        <Link className="mob-sub" href="/odoo/hosting" onClick={() => (window as any).closeNav?.()}>
+          Odoo Hosting
         </Link>
         <Link className="mob-a" href="/industries" onClick={() => (window as any).closeNav?.()}>
           Industries
@@ -257,13 +269,13 @@ export function HomeHeader(_props: HomeHeaderProps) {
                         <div className="mega-item-s">End-to-end Odoo 16/17/18 setup</div>
                       </div>
                     </Link>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/odoo/odoo-customization-and-installation">
                       <div className="mega-icon">🔧</div>
                       <div>
                         <div className="mega-item-t">Odoo Customisation</div>
                         <div className="mega-item-s">Custom modules &amp; workflows</div>
                       </div>
-                    </div>
+                    </Link>
                     <Link className="mega-item" href="/odoo/migration">
                       <div className="mega-icon">🔄</div>
                       <div>
@@ -271,13 +283,27 @@ export function HomeHeader(_props: HomeHeaderProps) {
                         <div className="mega-item-s">v12–v15 → Odoo 17/18</div>
                       </div>
                     </Link>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/odoo/odoo-erp-integration">
                       <div className="mega-icon">🔗</div>
                       <div>
                         <div className="mega-item-t">Odoo Integration</div>
                         <div className="mega-item-s">API, Shopify, Salesforce &amp; more</div>
                       </div>
-                    </div>
+                    </Link>
+                    <Link className="mega-item" href="/odoo/training">
+                      <div className="mega-icon">🎓</div>
+                      <div>
+                        <div className="mega-item-t">Odoo Training</div>
+                        <div className="mega-item-s">Functional, technical &amp; corporate</div>
+                      </div>
+                    </Link>
+                    <Link className="mega-item" href="/odoo/hosting">
+                      <div className="mega-icon">☁️</div>
+                      <div>
+                        <div className="mega-item-t">Odoo Hosting</div>
+                        <div className="mega-item-s">Online, Odoo.sh, cloud &amp; on-prem</div>
+                      </div>
+                    </Link>
                     <div className="mega-cs">
                       <div className="mega-cs-tag">Case Study</div>
                       <div className="mega-cs-t">Fabric Mill cuts lead time 40% with Odoo MRP + AI</div>

@@ -55,19 +55,22 @@ export function HomeFooter() {
               <a href="/odoo/implementation">Implementation</a>
             </li>
             <li>
-              <a href="#">Customisation</a>
+              <a href="/odoo/odoo-customization-and-installation">Customisation</a>
             </li>
             <li>
               <a href="/odoo/migration">Migration &amp; Upgrade</a>
             </li>
             <li>
-              <a href="#">Training</a>
+              <a href="/odoo/odoo-erp-integration">ERP Integration</a>
             </li>
             <li>
-              <a href="#">Hosting &amp; Support</a>
+              <a href="/odoo/training">Training</a>
             </li>
             <li>
-              <a href="#">Odoo Consultancy</a>
+              <a href="/odoo/hosting">Hosting</a>
+            </li>
+            <li>
+              <a href="/odoo/odoo-consultant">Odoo Consultancy</a>
             </li>
           </ul>
         </div>

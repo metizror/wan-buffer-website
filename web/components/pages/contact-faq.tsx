@@ -1,5 +1,7 @@
 "use client";
 
+import { useFaqAccordionInit } from "@/lib/use-faq-accordion-init";
+
 const contactFaq = [
   {
     q: "How can I contact Wan Buffer?",
@@ -32,6 +34,8 @@ const contactFaq = [
 ] as const;
 
 export function ContactFaq() {
+  useFaqAccordionInit();
+
   return (
     <section className="faq-section" itemScope itemType="https://schema.org/FAQPage" id="contact-faq">
       <div className="faq-inner">

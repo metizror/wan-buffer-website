@@ -1,4 +1,9 @@
+/* ────────────────────────────────────────────────────────────────────────
+   INDUSTRIES — oi-* layout (matches /odoo/implementation), original page copy
+──────────────────────────────────────────────────────────────────────── */
+
 import Link from "next/link";
+import { ArrowRightIcon } from "@/components/services/odoo-service-icons";
 
 const industries = [
   {
@@ -66,97 +71,124 @@ const industries = [
   },
 ] as const;
 
+const STATS = [
+  { n: "10+", l: "Industries served globally", g: false },
+  { n: "20+", l: "Countries with active deployments", g: false },
+  { n: "84%", l: "Client retention rate", g: false },
+  { n: "7+", l: "Years of industry ERP experience", g: false },
+] as const;
+
 export function IndustriesContent() {
   return (
-    <main className="industries-page">
-      <nav className="breadcrumb" aria-label="Breadcrumb">
-        <Link href="/">Home</Link>
-        <span className="breadcrumb-sep">›</span>
-        <span className="breadcrumb-cur">Industries</span>
-      </nav>
+    <main className="svc-page">
 
-      <section className="page-hero">
-        <div className="ph-inner rev">
-          <div className="ph-tag">Industry Solutions</div>
-          <h1 className="ph-h">
-            ERP Built for <span className="acc">Your Industry</span>,<br />
-            Not a Template.
+      {/* HERO LUXE */}
+      <section className="oi-hero-lux">
+        <div className="oi-hero-lux-grid" aria-hidden="true" />
+        <div className="oi-hero-lux-mesh" aria-hidden="true" />
+        <span className="oi-hero-lux-orb oi-hero-lux-orb-1" aria-hidden="true" />
+        <span className="oi-hero-lux-orb oi-hero-lux-orb-2" aria-hidden="true" />
+        <div className="oi-hero-lux-mark" aria-hidden="true">
+          erp
+        </div>
+        <div className="oi-hero-lux-inner">
+          <div className="oi-hero-lux-top rev">
+            <div className="oi-hero-lux-eyebrow">Industry Solutions</div>
+          </div>
+          <h1 className="oi-hero-lux-h rev">
+            <span className="ln">ERP Built for</span>
+            <span className="ln">
+              <span className="ai">Your Industry</span>, Not a Template.
+            </span>
           </h1>
-          <p className="ph-p">
-            No generic ERP configurations. Every vertical gets purpose-built Odoo modules, industry-specific AI models,
-            compliance configurations tailored to their market, and measurable outcomes mapped before a single line of
-            code is written.
+          <p className="oi-hero-lux-sub rev">
+            No generic ERP configurations. Every vertical gets purpose-built Odoo modules, industry-specific AI
+            models, compliance configurations tailored to their market, and measurable outcomes mapped before a
+            single line of code is written.
           </p>
-          <div className="ph-btns">
-            <Link className="btn-r" href="/contact-us">
-              Discuss Your Industry
+          <div className="oi-hero-lux-cta rev">
+            <Link className="oi-hero-lux-primary" href="/contact-us">
+              <span>Discuss Your Industry</span>
+              <span className="oi-hero-lux-primary-circle">
+                <ArrowRightIcon />
+              </span>
             </Link>
-            <Link className="btn-o" href="/case-studies">
+            <Link className="oi-hero-lux-secondary" href="/case-studies">
               View Case Studies
             </Link>
-          </div>
-          <div className="ph-stats">
-            <div className="ph-stat">
-              <strong>10+</strong>
-              <span>Industries served globally</span>
-            </div>
-            <div className="ph-stat">
-              <strong>20+</strong>
-              <span>Countries with active deployments</span>
-            </div>
-            <div className="ph-stat">
-              <strong>84%</strong>
-              <span>Client retention rate</span>
-            </div>
-            <div className="ph-stat">
-              <strong>7+</strong>
-              <span>Years of industry ERP experience</span>
-            </div>
           </div>
         </div>
       </section>
 
-      <section className="section alt">
-        <div className="cards-grid g3 rev">
-          {industries.map((it) => (
-            <div key={it.title} className={`card${it.ai ? " ai-card" : ""}`}>
-              <div className="card-icon" style={{ fontSize: 26 }}>
-                {it.icon}
-              </div>
-              <div className="card-t">{it.title}</div>
-              <div className="card-s">{it.body}</div>
-              <div className="card-pills">
-                {it.pills.map((p) => (
-                  <span key={p} className={`pill ${it.ai ? "pill-ai" : "pill-red"}`}>
-                    {p}
-                  </span>
-                ))}
-              </div>
+      {/* Stats band */}
+      <section className="oi-stats-band">
+        <div className="oi-stats-band-inner">
+          {STATS.map((s) => (
+            <div key={s.l} className="oi-stats-band-item">
+              <div className={`oi-stats-band-n${s.g ? " gold" : ""}`}>{s.n}</div>
+              <div className="oi-stats-band-l">{s.l}</div>
             </div>
           ))}
         </div>
       </section>
 
-      <div className="cta-banner">
-        <div className="cta-banner-inner rev">
-          <h2>
-            We Speak <span style={{ color: "var(--ai)" }}>Your Industry&apos;s Language</span>
-          </h2>
-          <p>
-            Tell us your industry and your biggest operational pain. We&apos;ll map the ERP + AI solution in a free 60-minute
-            discovery call — with real ROI benchmarks from similar clients.
-          </p>
-          <div className="cta-banner-btns">
-            <Link className="btn-r" href="/contact-us">
-              Book Industry Discovery Call
-            </Link>
-            <Link className="btn-o" href="/#platforms">
-              Explore ERP Services
-            </Link>
+      {/* Industry verticals — original card content */}
+      <section className="oi-bento-sec" id="verticals">
+        <div className="oi-bento-inner">
+          <div className="oi-bento rev">
+            {industries.map((it, i) => (
+              <div key={it.title} className={`oi-bento-card${it.ai ? " ai" : ""}`}>
+                <div className="oi-bento-card-head">
+                  <div
+                    className="oi-bento-icon"
+                    style={{ fontSize: "1.75rem", lineHeight: 1 }}
+                    aria-hidden
+                  >
+                    {it.icon}
+                  </div>
+                </div>
+                <div className="oi-bento-card-t">{it.title}</div>
+                <p className="oi-bento-card-b">{it.body}</p>
+                <div className="card-pills" style={{ marginTop: "auto", paddingTop: 16 }}>
+                  {it.pills.map((p) => (
+                    <span key={p} className={`pill ${it.ai ? "pill-ai" : "pill-red"}`}>
+                      {p}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* CTA — original banner copy */}
+      <section className="oi-closer" id="contact">
+        <div className="oi-closer-inner">
+          <div className="oi-closer-cta rev">
+            <div className="oi-closer-cta-l">
+              <h4>
+                We Speak <span>Your Industry&apos;s Language</span>
+              </h4>
+              <p style={{ marginTop: 16, maxWidth: 520, opacity: 0.85, lineHeight: 1.65 }}>
+                Tell us your industry and your biggest operational pain. We&apos;ll map the ERP + AI solution in a
+                free 60-minute discovery call — with real ROI benchmarks from similar clients.
+              </p>
+            </div>
+            <div className="oi-closer-cta-r">
+              <Link className="oi-cta-big" href="/contact-us">
+                <span>Book Industry Discovery Call</span>
+                <span className="oi-cta-big-arrow">
+                  <ArrowRightIcon />
+                </span>
+              </Link>
+              <Link className="oi-closer-cta-link" href="/#platforms">
+                Explore ERP Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
-

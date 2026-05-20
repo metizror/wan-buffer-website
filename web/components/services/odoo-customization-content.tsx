@@ -1,13 +1,10 @@
-/* ────────────────────────────────────────────────────────────────────────
-   ODOO IMPLEMENTATION — full redesign
-   Hero luxe · Stats band · Methodology cards · Chaptered roadmap ·
-   Gold Partner spotlight + comparison · Bento · Closer · Clean support
-──────────────────────────────────────────────────────────────────────── */
+/* Odoo customization & installation — service page (single methodology + supporting sections). */
 
+import type { CSSProperties } from "react";
+
+import { OdooCustomizationFaq } from "./odoo-customization-faq";
 import {
-  ArrowsIcon,
   ArrowRightIcon,
-  BarChartIcon,
   BookOpenIcon,
   BriefcaseIcon,
   CheckCircleIcon,
@@ -17,101 +14,72 @@ import {
   CodeIcon,
   CpuIcon,
   CrossIcon,
-  DatabaseIcon,
   EyeIcon,
-  FlagIcon,
-  GraduationIcon,
   GridIcon,
   HeartIcon,
   MailIcon,
-  MilestoneIcon,
   MonitorIcon,
-  PackageIcon,
   PhoneCallIcon,
-  PhoneIcon,
   RefreshIcon,
   RocketIcon,
   SearchIcon,
-  SettingsIcon,
   ShieldIcon,
   SparklesIcon,
   StarIcon,
-  TargetIcon,
   TrendingUpIcon,
   TrophyIcon,
   UsersIcon,
   WalletIcon,
-  ZapIcon,
 } from "./odoo-service-icons";
 
 /* ── Data ── */
 const PHASES = [
-  { icon: <SearchIcon/>, title: "Analysis of requirements", body: "We first understand your company's requirements. It is extremely difficult to create the right solution without fully grasping your business needs.", tag: "Discovery", ai: false, outcome: "Signed-off scope", duration: "1–2 weeks", deliverables: ["Stakeholder interviews", "Process mapping", "Fit-gap analysis", "Risk register"] },
-  { icon: <CodeIcon/>, title: "Development & personalisation", body: "After understanding your needs, we proceed with Odoo ERP development. Modules are built to serve your business, following industry norms.", tag: "Build", ai: true, outcome: "Modules shipped", duration: "4–6 weeks", deliverables: ["Custom modules", "Peer code reviews", "API integrations", "Sprint demos"] },
-  { icon: <SettingsIcon/>, title: "Odoo installation & configuration", body: "Configuration flexibility aligned to your business. ERP functions and analysis tools are tuned for the highest practical level of customisation.", tag: "Configure", ai: false, outcome: "Fit-gap closed", duration: "2–3 weeks", deliverables: ["Master data setup", "Workflows & rules", "Permissions matrix", "Reports & KPIs"] },
-  { icon: <DatabaseIcon/>, title: "Data transfer", body: "Data transfer is vital. We move data from legacy software, spreadsheets, and older Odoo versions into your new Odoo ERP with care.", tag: "Migrate", ai: true, outcome: "Data reconciled", duration: "1–2 weeks", deliverables: ["Data cleansing", "Mapping rules", "Mock cutovers", "Reconciliation"] },
-  { icon: <GraduationIcon/>, title: "Assistance & training", body: "Odoo's breadth makes training essential. After go-live, we train end users through live sessions, recordings, and documentation.", tag: "Enable", ai: false, outcome: "Teams ready", duration: "1–2 weeks", deliverables: ["Role-based journeys", "Live training sessions", "Documentation pack", "Champions program"] },
-  { icon: <RocketIcon/>, title: "Going live", body: "We stay with you through launch and stabilisation so unclear edge cases are handled quickly from day one.", tag: "Launch", ai: true, outcome: "Live in production", duration: "1 week + 90 days hypercare", deliverables: ["Cutover plan", "Hypercare desk", "Defect tracking", "Stabilisation review"] },
-] as const;
-
-const ROADMAP_CHAPTERS = [
-  { chapter: "01", tag: "Foundation", title: "Plan & Decide", desc: "Lay the foundation. Define outcomes, budget, ERP fit, and the right partner — before a single module is touched.", accent: "ai" as const,
-    steps: [
-      { n: "01", icon: <TargetIcon/>, title: "Defining business objectives", body: "We align on the outcomes you need so recommendations map to measurable goals.", deliverable: "Outcome map" },
-      { n: "02", icon: <WalletIcon/>, title: "Allocation of finances", body: "Budget clarity early so scope, phases, and hosting choices stay realistic.", deliverable: "Phased budget" },
-      { n: "03", icon: <BarChartIcon/>, title: "Choosing the most appropriate ERP", body: "If Odoo is the fit, we document why and how each app supports your processes.", deliverable: "Fit assessment" },
-      { n: "04", icon: <UsersIcon/>, title: "Picking the right implementation partner", body: "Experience, methodology, and post-go-live support matter as much as technical skill.", deliverable: "Partner decision" },
-    ]},
-  { chapter: "02", tag: "Construction", title: "Build & Validate", desc: "Construct, configure, migrate, and test — every step gated, so nothing reaches users until it's ready.", accent: "r" as const,
-    steps: [
-      { n: "05", icon: <MilestoneIcon/>, title: "Specifying implementation stages", body: "Phased delivery with clear milestones reduces risk and keeps teams productive.", deliverable: "Delivery plan" },
-      { n: "06", icon: <CloudIcon/>, title: "Selecting the most suitable plan", body: "Hosting, integrations, and SLAs are chosen to match performance and compliance needs.", deliverable: "Hosting & SLAs" },
-      { n: "07", icon: <ArrowsIcon/>, title: "Transfer of data", body: "Legacy data is cleaned, mapped, and reconciled before cutover.", deliverable: "Clean dataset" },
-      { n: "08", icon: <CheckCircleIcon/>, title: "Testing", body: "Finance, inventory, and sales flows are thoroughly tested before go-live.", deliverable: "UAT sign-off" },
-    ]},
-  { chapter: "03", tag: "Operations", title: "Launch & Operate", desc: "Train, cut over, and stay. The rollout doesn't end at go-live — hypercare and upkeep keep Odoo aligned to the business.", accent: "gold" as const,
-    steps: [
-      { n: "09", icon: <BookOpenIcon/>, title: "Teaching", body: "Users learn the system in the context of their real jobs—not generic demos.", deliverable: "Trained users" },
-      { n: "10", icon: <ZapIcon/>, title: "Going live", body: "Controlled cutover with rollback thinking and hypercare when you need it.", deliverable: "Cutover complete" },
-      { n: "11", icon: <ShieldIcon/>, title: "Assistance & upkeep", body: "Ongoing support keeps Odoo aligned as your business and regulations evolve.", deliverable: "Ongoing partnership" },
-    ]},
+  { icon: <UsersIcon/>, title: "Requirement gathering", body: "We set up a meeting for you and our technical team so that we can get more information about your requirements and demands.", tag: "Gather", ai: false, outcome: "Requirements doc", duration: "2–3 days", deliverables: ["Stakeholder session", "Requirements log", "Priority list", "Open questions"] },
+  { icon: <SearchIcon/>, title: "Scope analysis", body: "We perform a gap analysis between the functionalities that are currently available in Odoo and the needs that you have outlined.", tag: "Scope", ai: false, outcome: "Gap analysis", duration: "3–5 days", deliverables: ["Fit-gap matrix", "Standard vs custom map", "Scope boundaries", "Risk notes"] },
+  { icon: <EyeIcon/>, title: "Feasibility study", body: "An investigation into whether the suggested changes can be made in Odoo without lowering its performance or removing any of the features that come standard with the platform.", tag: "Feasibility", ai: true, outcome: "Go / no-go", duration: "3–5 days", deliverables: ["Technical assessment", "Performance impact", "Standard feature check", "Recommendation"] },
+  { icon: <WalletIcon/>, title: "Estimation", body: "You will be provided with an estimate of the total cost, the length of time it will take, and the implementation approach.", tag: "Estimate", ai: false, outcome: "Signed estimate", duration: "2–4 days", deliverables: ["Cost breakdown", "Timeline", "Resource plan", "Assumptions"] },
+  { icon: <CheckCircleIcon/>, title: "Customer approval", body: "To move forward, we await your approval before doing so.", tag: "Approve", ai: false, outcome: "Approval received", duration: "Your pace", deliverables: ["SoW sign-off", "Phase kickoff", "Communication plan", "Project charter"] },
+  { icon: <CodeIcon/>, title: "Development", body: "Development of the platform will take place in accordance with the demands and specifications, as well as Odoo and partner standards.", tag: "Build", ai: true, outcome: "Modules built", duration: "2–8 weeks", deliverables: ["Custom modules", "Code reviews", "Standards compliance", "Sprint demos"] },
+  { icon: <ShieldIcon/>, title: "Testing", body: "To determine the level of reliability, we perform multiple integrated tests in addition to unit testing.", tag: "QA", ai: true, outcome: "QA passed", duration: "1–2 weeks", deliverables: ["Unit tests", "Integration tests", "UAT scripts", "Defect log"] },
+  { icon: <RocketIcon/>, title: "Delivery", body: "You receive the modules after they have been finished, tested, and evaluated.", tag: "Deliver", ai: false, outcome: "Modules live", duration: "2–5 days", deliverables: ["Deployment pack", "Release notes", "Handover session", "Support transition"] },
 ] as const;
 
 const GOLD_FEATURES = [
-  { icon: <CpuIcon/>, t: "Certified depth", b: "Functional and technical consultants who work in Odoo every day—not occasional freelancers." },
-  { icon: <EyeIcon/>, t: "Fewer blind spots", b: "Standard processes for upgrades, security, and performance so surprises are reduced before go-live." },
-  { icon: <TrendingUpIcon/>, t: "Economical long term", b: "Recommendations prioritise stable operations and clean upgrades over quick hacks." },
-  { icon: <PhoneIcon/>, t: "Direct escalation paths", b: "When issues are rare but critical, partner-level backing matters for your business continuity." },
+  { icon: <WalletIcon/>, t: "Reasonably priced methods", b: "Takes into account all variables and does not alter settings that are already in place." },
+  { icon: <CpuIcon/>, t: "Technical + functional depth", b: "Comprehensive understanding of both technical and functional aspects." },
+  { icon: <ShieldIcon/>, t: "Standards & conventions", b: "Strict adherence to established norms and protocols—with superior coding conventions." },
+  { icon: <RefreshIcon/>, t: "Long-term performance", b: "Facilitation of routine maintenance and consistent efficiency through operation." },
 ] as const;
 
 const COMPARE = [
-  { row: "Day-1 cost", g: "Lower upfront", p: "Higher upfront" },
-  { row: "Code quality", g: "Variable", p: "Reviewed & audited" },
-  { row: "Upgrade safety", g: "Risky for customised stacks", p: "Standard, repeatable process" },
-  { row: "Escalation path", g: "Limited routes", p: "Partner-level backing" },
-  { row: "Total lifecycle cost", g: "Often higher", p: "Predictable & lower" },
+  { row: "Pricing approach", g: "Poor quality, low-cost options", p: "Reasonably priced methods" },
+  { row: "Default functionality", g: "May cause default features to fail", p: "Does not alter existing settings" },
+  { row: "Platform knowledge", g: "Limited inner workings", p: "Deep technical & functional grasp" },
+  { row: "Development norms", g: "Possible detour from standards", p: "Strict adherence to protocols" },
+  { row: "Code quality", g: "Weakened coding requirements", p: "Superior coding conventions" },
+  { row: "Maintenance", g: "Challenges with upkeep", p: "Routine maintenance facilitated" },
+  { row: "Performance", g: "Long-term performance risk", p: "Consistent efficiency in operation" },
 ] as const;
 
 const BENTO_DATA = [
-  { icon: <CpuIcon/>, t: "Exceptional engineering discipline", b: "Clean, maintainable Odoo code that survives upgrades, audits, and growth.", tag: "Engineering", size: "feature", ai: true, variant: "", stat: { n: "100%", l: "Peer reviewed" } },
-  { icon: <PackageIcon/>, t: "Strong Odoo Apps footprint", b: "Deep experience shipping modules the community and enterprises actually use.", tag: "Apps", size: "", ai: false, variant: "glow-red", mini: { n: "40+", l: "Modules" } },
-  { icon: <RefreshIcon/>, t: "Skilled across Odoo versions", b: "From older instances to Odoo 17/18—we plan migrations with zero surprises.", tag: "Versions", size: "", ai: true, variant: "glow-ai", mini: { n: "v10–v18", l: "Coverage" } },
-  { icon: <SparklesIcon/>, t: "Uncompromised quality", b: "Reviews, automated checks, and partner-grade standards on every delivery.", tag: "Quality", size: "wide", ai: false, variant: "pattern", mini: { n: "0", l: "Critical regressions" } },
-  { icon: <ClockIcon/>, t: "Years of execution", b: "Long-running programmes across manufacturing, services, and distribution.", tag: "Execution", size: "", ai: true, variant: "glow-ai", mini: { n: "7+", l: "Years" } },
-  { icon: <TrophyIcon/>, t: "Thousands of success stories", b: "A track record you can verify through references and shipped projects.", tag: "Track record", size: "", ai: false, variant: "glow-red", mini: { n: "254+", l: "Live" } },
-  { icon: <GridIcon/>, t: "All major Odoo domains", b: "Accounting, inventory, MRP, CRM, HR, eCommerce, and custom verticals.", tag: "Domains", size: "wide", ai: false, variant: "pattern", mini: { n: "9", l: "Domains" } },
-  { icon: <MonitorIcon/>, t: "UI & UX depth", b: "Interfaces your teams enjoy using—not cluttered forms bolted together.", tag: "UI/UX", size: "", ai: true, variant: "glow-ai", mini: { n: "WCAG AA", l: "Standard" } },
+  { icon: <BookOpenIcon/>, t: "50+ Odoo blogs", b: "Odoo's potential is explored in more than 50 blogs from our team.", tag: "Knowledge", size: "", ai: false, variant: "glow-red", mini: { n: "50+", l: "Blogs" } },
+  { icon: <RefreshIcon/>, t: "All Odoo releases", b: "Skilled in using any and all Odoo releases.", tag: "Versions", size: "", ai: true, variant: "glow-ai", mini: { n: "All", l: "Releases" } },
+  { icon: <SparklesIcon/>, t: "Outstanding final products", b: "Quality deliverables backed by stringent rules for writing code.", tag: "Quality", size: "wide", ai: false, variant: "pattern", mini: { n: "4+", l: "Years exp." } },
+  { icon: <TrophyIcon/>, t: "100+ happy clients", b: "Across a hundred happy clients all over the world.", tag: "Clients", size: "", ai: false, variant: "glow-red", mini: { n: "100+", l: "Clients" } },
+  { icon: <GridIcon/>, t: "All Odoo modules", b: "Compatibility with all Odoo modules, both technically and functionally.", tag: "Modules", size: "", ai: true, variant: "glow-ai", mini: { n: "All", l: "Modules" } },
+  { icon: <CloudIcon/>, t: "Community & enterprise", b: "Service available in business and public versions.", tag: "Editions", size: "wide", ai: false, variant: "pattern", mini: { n: "2", l: "Editions" } },
+  { icon: <MonitorIcon/>, t: "UI & UX specialists", b: "Developers who specialize in user interface and user experience.", tag: "UI/UX", size: "", ai: true, variant: "glow-ai", mini: { n: "20+", l: "Free apps" } },
 ] as const;
 
 const STATS = [
-  { n: "7+", l: "Years active", g: false },
-  { n: "254+", l: "Projects delivered", g: false },
-  { n: "20+", l: "Nations served", g: false },
+  { n: "4+", l: "Years experience", g: false },
+  { n: "100+", l: "Happy clients", g: false },
+  { n: "20+", l: "Free Odoo apps", g: false },
   { n: "Gold", l: "Odoo partner", g: true },
 ] as const;
 
 /* ── Component ── */
-export function OdooImplementationContent() {
+export function OdooCustomizationContent() {
   return (
     <main className="svc-page">
 
@@ -132,31 +100,31 @@ export function OdooImplementationContent() {
             </div>
           </div>
           <h1 className="oi-hero-lux-h rev">
-            <span className="ln">Implementation,</span>
-            <span className="ln"><span className="ai">without the risk.</span></span>
+            <span className="ln">Odoo</span>
+            <span className="ln"><span className="ai">Customization</span></span>
           </h1>
           <p className="oi-hero-lux-sub rev">
-            Senior-led, sign-off gated Odoo rollouts. <strong>Discovery to hypercare in 12–16 weeks</strong> — with a method refined across 254+ go-lives.
+            Business applications must be tailored to individual users—with preferences and needs built in. <strong>Odoo offers a complete solution</strong>, and Wan Buffer evaluates what else is necessary, then designs a plan to implement those features.
           </p>
           <div className="oi-hero-lux-cta rev">
             <a className="oi-hero-lux-primary" href="#contact">
-              <span>Plan your rollout</span>
+              <span>Discuss customization</span>
               <span className="oi-hero-lux-primary-circle"><ArrowRightIcon /></span>
             </a>
-            <a className="oi-hero-lux-secondary" href="#phases">See the methodology</a>
+            <a className="oi-hero-lux-secondary" href="#phases">See the eight steps</a>
           </div>
           <div className="oi-hero-lux-foot rev">
-            <span className="oi-hero-lux-foot-l">Built for</span>
+            <span className="oi-hero-lux-foot-l">We deliver</span>
             <div className="oi-hero-lux-foot-items">
-              <span className="oi-hero-lux-foot-item">Manufacturing</span>
+              <span className="oi-hero-lux-foot-item">Custom modules</span>
               <span className="oi-hero-lux-foot-sep">/</span>
-              <span className="oi-hero-lux-foot-item">Retail &amp; Distribution</span>
+              <span className="oi-hero-lux-foot-item">Installation</span>
               <span className="oi-hero-lux-foot-sep">/</span>
-              <span className="oi-hero-lux-foot-item">Pharma</span>
+              <span className="oi-hero-lux-foot-item">Community &amp; Enterprise</span>
               <span className="oi-hero-lux-foot-sep">/</span>
-              <span className="oi-hero-lux-foot-item">Logistics</span>
+              <span className="oi-hero-lux-foot-item">Open HRMS</span>
               <span className="oi-hero-lux-foot-sep">/</span>
-              <span className="oi-hero-lux-foot-item">Services</span>
+              <span className="oi-hero-lux-foot-item">UI / UX</span>
             </div>
           </div>
         </div>
@@ -180,20 +148,20 @@ export function OdooImplementationContent() {
           <div className="oi-meth-intro rev">
             <div className="oi-meth-intro-l">
               <div className="eyebrow">Methodology</div>
-              <h2>From requirements<br /><span>to confident go-live.</span></h2>
+              <h2>Eight steps.<br /><span>From gather to delivery.</span></h2>
               <div className="oi-meth-intro-l-meta">
-                <span className="oi-meth-intro-l-meta-k">Last refined</span>
+                <span className="oi-meth-intro-l-meta-k">Process</span>
                 <span className="oi-meth-intro-l-meta-v">
                   <span className="oi-meth-intro-l-meta-dot" />
-                  After the 250th go-live · Q4 2025
+                  Odoo customization &amp; installation
                 </span>
               </div>
             </div>
             <div className="oi-meth-intro-r">
-              <p>Six gated phases. Each one staffed by senior consultants who have run comparable rollouts before — so you always know what is happening next, what you walk away with, and why it matters for your KPIs.</p>
+              <p>Our elevated customisation services help customers maximise the value of their application and progress toward organisational objectives. Expanding on Odoo&apos;s modularization, our tech support staff help you meet your specific requirements.</p>
               <div className="oi-meth-intro-mini">
                 <div className="oi-meth-mini">
-                  <div className="oi-meth-mini-row"><span className="oi-meth-mini-n">6</span><span className="oi-meth-mini-u">phases</span></div>
+                  <div className="oi-meth-mini-row"><span className="oi-meth-mini-n">8</span><span className="oi-meth-mini-u">steps</span></div>
                   <div className="oi-meth-mini-bar" />
                   <div className="oi-meth-mini-l">Sign-off gated</div>
                   <div className="oi-meth-mini-s">Each one ends in your acceptance.</div>
@@ -214,7 +182,11 @@ export function OdooImplementationContent() {
             </div>
           </div>
 
-          <div className="oi-meth-strip rev">
+          <div
+            className="oi-meth-strip rev"
+            data-cols={PHASES.length}
+            style={{ "--oi-meth-cols": PHASES.length } as CSSProperties}
+          >
             {PHASES.map((phase, i) => (
               <div key={phase.tag} className={`oi-meth-strip-step${phase.ai ? " ai" : ""}`}>
                 <div className="oi-meth-strip-num">{String(i + 1).padStart(2, "0")}</div>
@@ -223,7 +195,7 @@ export function OdooImplementationContent() {
             ))}
           </div>
 
-          <div className="oi-meth-grid rev">
+          <div className="oi-meth-grid rev" data-cols={PHASES.length}>
             {PHASES.map((phase, i) => (
               <div key={phase.title} className={`oi-meth-card${phase.ai ? " ai" : ""}`}>
                 <div className="oi-meth-card-head">
@@ -256,7 +228,7 @@ export function OdooImplementationContent() {
           <div className="oi-meth-footer rev">
             <div className="oi-meth-footer-l">
               <div className="oi-meth-footer-l-eyebrow">Ready when you are</div>
-              <h3>Want this methodology applied to <span>your operation?</span></h3>
+              <h3>Ready to tailor Odoo to <span>your business?</span></h3>
             </div>
             <div className="oi-meth-footer-r">
               <a className="oi-cta-big" href="#contact">
@@ -268,93 +240,12 @@ export function OdooImplementationContent() {
         </div>
       </section>
 
-      {/* ROADMAP — editorial light */}
-      <section className="oi-rmap" id="roadmap">
-        <div className="oi-rmap-inner">
-
-          {/* Section header */}
-          <div className="oi-rmap-hdr rev">
-            <div>
-              <div className="eyebrow">Implementation roadmap</div>
-              <h2>Eleven gates.<br /><span>Zero surprises.</span></h2>
-            </div>
-            <div className="oi-rmap-hdr-r">
-              <p>Every stage in your rollout is <strong>sign-off gated</strong> — a phase only begins once you&apos;ve accepted the one before it. No scope drift, no silent overruns, no go-live shock. Refined across <strong>254+ go-lives</strong> in 20+ countries.</p>
-              <div className="oi-rmap-overview-row">
-                <div className="oi-rmap-overview">
-                  <span className="oi-rmap-overview-dot" />
-                  <div>
-                    <div className="oi-rmap-overview-t">Sign-off gated</div>
-                    <div className="oi-rmap-overview-s">You decide what&apos;s done.</div>
-                  </div>
-                </div>
-                <div className="oi-rmap-overview">
-                  <span className="oi-rmap-overview-dot r" />
-                  <div>
-                    <div className="oi-rmap-overview-t">Battle-tested</div>
-                    <div className="oi-rmap-overview-s">254+ go-lives shipped.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* All-stages at-a-glance strip */}
-          <div className="oi-rmap-strip rev">
-            {ROADMAP_CHAPTERS.flatMap((c) =>
-              c.steps.map((step) => (
-                <span key={step.n} className="oi-rmap-strip-chip" data-accent={c.accent}>
-                  <span className="oi-rmap-strip-n">{step.n}</span>
-                  <span>{step.title.split(" ").slice(0, 2).join(" ")}</span>
-                </span>
-              ))
-            )}
-          </div>
-
-          {/* Chapter rows */}
-          {ROADMAP_CHAPTERS.map((c) => (
-            <div key={c.chapter} className={`oi-rmap-chapter ${c.accent}`} data-cols={c.steps.length === 3 ? "3" : "2"}>
-              {/* Info card */}
-              <div className="oi-rmap-info rev">
-                <div className="oi-rmap-info-top">
-                  <div className="oi-rmap-info-num">{c.chapter}</div>
-                  <span className="oi-rmap-info-tag">Chapter · {c.tag}</span>
-                  <h3 className="oi-rmap-info-title">{c.title}</h3>
-                  <p className="oi-rmap-info-desc">{c.desc}</p>
-                </div>
-                <div className="oi-rmap-info-foot">
-                  <span className="oi-rmap-info-foot-l">Stages {c.steps[0].n}–{c.steps[c.steps.length - 1].n}</span>
-                  <span className="oi-rmap-info-foot-pill">{c.steps.length} stages</span>
-                </div>
-              </div>
-
-              {/* Steps grid */}
-              <div className="oi-rmap-steps rev">
-                {c.steps.map((step) => (
-                  <div key={step.n} className="oi-rmap-step">
-                    <div className="oi-rmap-step-head">
-                      <div className="oi-rmap-step-icon">{step.icon}</div>
-                    </div>
-                    <div className="oi-rmap-step-title">{step.title}</div>
-                    <p className="oi-rmap-step-body">{step.body}</p>
-                    <span className="oi-rmap-step-deliv">
-                      <FlagIcon />
-                      {step.deliverable}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* GOLD PARTNER */}
       <section className="oi-gp" id="gold-partner">
         <div className="oi-gp-inner">
           <div className="oi-gp-hdr rev">
-            <div className="eyebrow">Why a gold partner</div>
-            <h2 className="sec-h">Odoo Gold Partner: <span className="acc">what you gain</span></h2>
+            <div className="eyebrow">Why experts matter</div>
+            <h2 className="sec-h">Why experts need <span className="acc">to do it</span></h2>
           </div>
 
           <div className="oi-gp-spotlight rev">
@@ -366,7 +257,7 @@ export function OdooImplementationContent() {
                     <span className="oi-gp-badge-lg-t">Odoo Gold Partner · Certified</span>
                   </div>
                 </div>
-                <h3>Trained, certified specialists who treat your stack as a <span>long-term asset</span>.</h3>
+                <h3>Expert partners deliver maintainable customization—<span>non-experts risk your defaults.</span></h3>
               </div>
               <div className="oi-gp-spotlight-stat">
                 <div className="oi-gp-spotlight-stat-n">Gold</div>
@@ -396,8 +287,8 @@ export function OdooImplementationContent() {
             <div className="oi-gp-compare">
               <div className="oi-gp-compare-hdr">
                 <div>Decision factor</div>
-                <div>Generalist shop</div>
-                <div><StarIcon /> Gold Partner</div>
+                <div>Non-expert partner</div>
+                <div><StarIcon /> Expert partner</div>
               </div>
               {COMPARE.map((c) => (
                 <div key={c.row} className="oi-gp-compare-row">
@@ -434,7 +325,7 @@ export function OdooImplementationContent() {
               <h2>What you get<br /><span>on the ground.</span></h2>
             </div>
             <div className="oi-bento-hdr-r">
-              <p>We help you trace technical issues to root cause, ship maintainable code, and keep UX in mind so adoption actually happens after go-live.</p>
+              <p>Finding the source of technical issues is something our staff can help with. We ship outstanding final products with stringent rules for writing code—and creators of the Open Human Resource Management System.</p>
               <div className="oi-bento-credit">
                 <div className="oi-bento-credit-cell">
                   <div className="oi-bento-credit-n r">254<span style={{ fontSize: ".7em" }}>+</span></div>
@@ -456,9 +347,9 @@ export function OdooImplementationContent() {
           <div className="oi-bento-hero rev">
             <div className="oi-bento-hero-icon"><CpuIcon /></div>
             <div className="oi-bento-hero-body">
-              <div className="oi-bento-hero-tag">Engineering discipline</div>
-              <div className="oi-bento-hero-t">Clean, maintainable Odoo code — built to survive upgrades, audits, and growth.</div>
-              <p className="oi-bento-hero-b">Every line shipped is peer-reviewed against partner-grade standards. We treat your stack as a long-term asset, not a one-time delivery.</p>
+              <div className="oi-bento-hero-tag">Why Wan Buffer Services</div>
+              <div className="oi-bento-hero-t">Odoo apps have contributed over 20 free modules—and UI/UX developers on every engagement.</div>
+              <p className="oi-bento-hero-b">Compatibility with all Odoo modules, technically and functionally. Service in community and enterprise editions. Skilled across any Odoo release.</p>
             </div>
             <div className="oi-bento-hero-stat">
               <div className="oi-bento-hero-stat-n">0</div>
@@ -468,7 +359,7 @@ export function OdooImplementationContent() {
 
           {/* 3-col card grid (7 supporting features) */}
           <div className="oi-bento rev">
-            {BENTO_DATA.filter((b) => b.size !== "feature").map((b, i) => (
+            {BENTO_DATA.map((b, i) => (
               <div key={b.t} className={`oi-bento-card${b.ai ? " ai" : ""}`}>
                 <div className="oi-bento-card-head">
                   <div className="oi-bento-card-num">{String(i + 1).padStart(2, "0")}</div>
@@ -500,17 +391,17 @@ export function OdooImplementationContent() {
           <div className="oi-closer-hdr rev">
             <div className="oi-closer-hdr-l">
               <div className="eyebrow">Choosing your partner</div>
-              <h3>The software rarely fails.<br /><span>The team behind it does.</span></h3>
+              <h3>Customization rarely fails on paper.<br /><span>It fails in execution.</span></h3>
             </div>
             <div className="oi-closer-hdr-r">
               <div className="oi-closer-insight">
                 <div className="oi-closer-insight-stat">1 in 3<span></span></div>
                 <div className="oi-closer-insight-body">
-                  <strong>ERP rollouts miss their go-live.</strong>
-                  Source: Panorama Consulting, 2023. The decisive factor isn&apos;t the software — it&apos;s the team that runs it. Methodology, seniority, and accountability matter more than license cost.
+                  <strong>low-cost customization breaks default Odoo behaviour.</strong>
+                  Non-expert partners may not account for all variables, weaken coding standards, and create long-term performance problems—while expert partners maintain efficiency and maintainability.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer engagement is built around four written commitments. None are optional, none get traded away under deadline pressure.</p>
+              <p>That&apos;s why Wan Buffer follows an eight-step customization process—with your approval at every gate.</p>
             </div>
           </div>
 
@@ -540,7 +431,7 @@ export function OdooImplementationContent() {
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><TrendingUpIcon /></div>
                 <div className="oi-closer-commit-t">Methodology, not theory</div>
-                <p className="oi-closer-commit-b">11-stage roadmap refined across 254+ go-lives. Each stage has its own acceptance criteria — and you sign off.</p>
+                <p className="oi-closer-commit-b">Eight-step methodology refined across 254+ go-lives. Each phase has acceptance criteria — and you sign off.</p>
               </div>
             </div>
           </div>
@@ -549,19 +440,21 @@ export function OdooImplementationContent() {
           <div className="oi-closer-cta rev">
             <div className="oi-closer-cta-l">
               <div className="oi-closer-cta-eyebrow">Last decision before the work begins</div>
-              <h4>Get a written proposal in <span>48 hours.</span></h4>
+              <h4>Get a customization estimate in <span>48 hours.</span></h4>
             </div>
             <div className="oi-closer-cta-r">
               <a className="oi-cta-big" href="#contact">
-                <span>Plan your rollout</span>
+                <span>Start customization</span>
                 <span className="oi-cta-big-arrow"><ArrowRightIcon /></span>
               </a>
-              <a className="oi-closer-cta-link" href="#support">Or talk to support first</a>
+              <a className="oi-closer-cta-link" href="#faq">Read FAQs first</a>
             </div>
           </div>
 
         </div>
       </section>
+
+      <OdooCustomizationFaq />
 
       {/* SUPPORT (clean) */}
       <section className="oi-supp" id="support">
@@ -569,7 +462,7 @@ export function OdooImplementationContent() {
           <div className="oi-supp-hdr rev">
             <div className="eyebrow lt">Odoo support</div>
             <h2>One team for <span>questions &amp; fixes.</span></h2>
-            <p>Three channels. Senior-led. SLA in writing.</p>
+            <p>Odoo Support is a central point of contact any time you have a business question. Customer support teams are available 24/7—we are here to help you whenever and wherever.</p>
           </div>
 
           <div className="oi-supp-grid rev">

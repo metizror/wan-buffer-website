@@ -1,6 +1,10 @@
 "use client";
 
+import { useFaqAccordionInit } from "@/lib/use-faq-accordion-init";
+
 export function HomeFaq() {
+  useFaqAccordionInit();
+
   return (
     <section className="faq-section" itemScope itemType="https://schema.org/FAQPage">
       <div className="faq-inner">

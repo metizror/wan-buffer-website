@@ -260,14 +260,102 @@ setInterval(() => {
 }, 5000);
 
 /* ══════════════════════════════════════
-   FAQ ACCORDION
+   FAQ ACCORDION (legacy PHP: slideUp/slideDown 800ms on .faqq_text)
 ══════════════════════════════════════ */
+const FAQ_MS = 800;
+const FAQ_EASE = 'cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+
+function faqPrefersReducedMotion(){
+  return typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+function setFaqPanelTransition(panel, on){
+  panel.style.transition = on ? ('max-height ' + FAQ_MS + 'ms ' + FAQ_EASE) : 'none';
+}
+
+/** Sync inline max-height with .open state (call after mount / filter / route change). */
+function initFaqAccordion(root){
+  const scope = root && root.querySelectorAll ? root : document;
+  const items = scope.querySelectorAll ? scope.querySelectorAll('.faq-item') : document.querySelectorAll('.faq-item');
+  items.forEach(item => {
+    const panel = item.querySelector('.faq-a');
+    if(!panel) return;
+    setFaqPanelTransition(panel, false);
+    if(item.classList.contains('open')){
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }else{
+      panel.style.maxHeight = '0px';
+    }
+    requestAnimationFrame(() => {
+      if(!faqPrefersReducedMotion()) setFaqPanelTransition(panel, true);
+    });
+  });
+}
+window.initFaqAccordion = initFaqAccordion;
+
 function toggleFaq(btn){
   const item = btn.closest('.faq-item');
+  const panel = item && item.querySelector('.faq-a');
+  if(!item || !panel) return;
+
+  if(faqPrefersReducedMotion()){
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if(!wasOpen) item.classList.add('open');
+    initFaqAccordion(document);
+    return;
+  }
+
   const wasOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-  if(!wasOpen) item.classList.add('open');
+
+  if(wasOpen){
+    setFaqPanelTransition(panel, true);
+    const h = panel.scrollHeight;
+    panel.style.maxHeight = h + 'px';
+    void panel.offsetHeight;
+    panel.style.maxHeight = '0px';
+    item.classList.remove('open');
+    const onEnd = e => {
+      if(e.propertyName !== 'max-height') return;
+      panel.removeEventListener('transitionend', onEnd);
+      panel.style.maxHeight = '0px';
+    };
+    panel.addEventListener('transitionend', onEnd);
+    return;
+  }
+
+  const others = Array.from(document.querySelectorAll('.faq-item.open')).filter(i => i !== item);
+  others.forEach(other => {
+    const p = other.querySelector('.faq-a');
+    if(!p) return;
+    setFaqPanelTransition(p, true);
+    const h = p.scrollHeight;
+    p.style.maxHeight = h + 'px';
+    void p.offsetHeight;
+    p.style.maxHeight = '0px';
+    other.classList.remove('open');
+    const onEnd = e => {
+      if(e.propertyName !== 'max-height') return;
+      p.removeEventListener('transitionend', onEnd);
+      p.style.maxHeight = '0px';
+    };
+    p.addEventListener('transitionend', onEnd);
+  });
+
+  item.classList.add('open');
+  setFaqPanelTransition(panel, true);
+  panel.style.maxHeight = '0px';
+  void panel.offsetHeight;
+  const targetH = panel.scrollHeight;
+  panel.style.maxHeight = targetH + 'px';
+  const onOpen = e => {
+    if(e.propertyName !== 'max-height') return;
+    panel.removeEventListener('transitionend', onOpen);
+    panel.style.maxHeight = targetH + 'px';
+  };
+  panel.addEventListener('transitionend', onOpen);
 }
+window.toggleFaq = toggleFaq;
 
 function filterFaq(cat, btn){
   // toggle active state on category buttons
@@ -290,7 +378,9 @@ function filterFaq(cat, btn){
     list.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
     firstVisible.classList.add('open');
   }
+  requestAnimationFrame(() => initFaqAccordion(list));
 }
+window.filterFaq = filterFaq;
 
 /* ══════════════════════════════════════════════════════
    WANNY — Intelligent AI Pre-Sales Consultant
@@ -1035,4 +1125,17 @@ window.openWanny = function(){ if (typeof WANNY !== 'undefined' && WANNY.open) W
     if(window.scrollY > 600) stack.classList.add('visible');
     else stack.classList.remove('visible');
   }, {passive:true});
+})();
+
+;(function(){
+  function bootFaq(){
+    if(typeof initFaqAccordion === 'function') initFaqAccordion(document);
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', function(){
+      requestAnimationFrame(function(){ requestAnimationFrame(bootFaq); });
+    });
+  }else{
+    requestAnimationFrame(function(){ requestAnimationFrame(bootFaq); });
+  }
 })();
