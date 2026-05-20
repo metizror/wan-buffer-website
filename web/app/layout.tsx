@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+
+import { ScrollRevealInit } from "@/components/providers/scroll-reveal-init";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -44,6 +46,8 @@ export default function RootLayout({
         <Script id="js-class" strategy="beforeInteractive">
           {`document.documentElement.classList.add('js');`}
         </Script>
+        <Script src="/home-runtime.js" strategy="afterInteractive" />
+        <ScrollRevealInit />
         {children}
       </body>
     </html>

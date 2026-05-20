@@ -1472,7 +1472,7 @@ a.mega-item::after{display:none}
 .oi-hero-lux-orb-2{background:radial-gradient(circle,var(--red),transparent 65%);bottom:-160px;left:-100px;animation:orbFloat 18s ease-in-out infinite alternate}
 @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-20px) scale(1.05)}}
 .oi-hero-lux-mark{position:absolute;right:-40px;bottom:-80px;font-family:var(--H);font-size:clamp(240px,32vw,520px);font-weight:900;color:rgba(255,255,255,.018);line-height:.82;letter-spacing:-.07em;pointer-events:none;user-select:none;font-style:italic}
-.oi-hero-lux-inner{position:relative;z-index:1;max-width:1180px;margin:0 auto;width:100%}
+.oi-hero-lux-inner{position:relative;z-index:1;max-width:1180px;margin:0 auto;width:100%;overflow:visible}
 .oi-hero-lux-top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:clamp(32px,4vw,52px)}
 .oi-hero-lux-eyebrow{font-family:var(--H);font-size:10.5px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.42);display:flex;align-items:center;gap:14px}
 .oi-hero-lux-eyebrow::before{content:'';width:36px;height:1px;background:rgba(0,194,255,.5)}
@@ -1482,9 +1482,9 @@ a.mega-item::after{display:none}
 .oi-hero-lux-pin svg{width:11px;height:11px;color:var(--gold)}
 .oi-hero-lux-pin-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold);animation:pulseDot 3s ease-in-out infinite}
 @keyframes pulseDot{0%,100%{opacity:1}50%{opacity:.4}}
-.oi-hero-lux-h{font-family:var(--H);font-weight:700;font-size:clamp(40px,6.5vw,96px);line-height:1;letter-spacing:-.04em;color:var(--white);max-width:1000px;margin-bottom:clamp(22px,2.6vw,32px)}
-.oi-hero-lux-h .ln{display:block}
-.oi-hero-lux-h .ai{background:linear-gradient(135deg,var(--ai) 0%,var(--ai-lt) 40%,#FFFFFF 80%);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;font-weight:800;letter-spacing:-.04em;display:inline-block}
+.oi-hero-lux-h{font-family:var(--H);font-weight:700;font-size:clamp(40px,6.5vw,96px);line-height:1.08;letter-spacing:-.04em;color:var(--white);max-width:1000px;margin-bottom:clamp(22px,2.6vw,32px);overflow:visible;padding-bottom:.06em}
+.oi-hero-lux-h .ln{display:block;overflow:visible;padding-inline-end:.05em}
+.oi-hero-lux-h .ai{background:linear-gradient(135deg,var(--ai) 0%,var(--ai-lt) 40%,#FFFFFF 80%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-style:italic;font-weight:800;letter-spacing:-.04em;display:inline-block;padding-inline-end:.12em;margin-inline-end:-.06em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .oi-hero-lux-sub{font-family:var(--B);font-size:clamp(14px,1.4vw,16px);font-weight:300;line-height:1.65;color:rgba(255,255,255,.55);max-width:620px;margin-bottom:clamp(28px,3.4vw,40px)}
 .oi-hero-lux-sub strong{font-weight:500;color:rgba(255,255,255,.85)}
 .oi-hero-lux-cta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,5vw,64px)}
