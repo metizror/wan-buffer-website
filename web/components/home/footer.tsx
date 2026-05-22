@@ -112,10 +112,10 @@ export function HomeFooter() {
               <a href="#">AI + ERP Blog</a>
             </li>
             <li>
-              <a href="#">Case Studies</a>
+              <a href="/case-study">Case Studies</a>
             </li>
             <li>
-              <a href="#">Events</a>
+              <a href="/event">Events</a>
             </li>
             <li>
               <a href="/contact-us">Contact Us</a>

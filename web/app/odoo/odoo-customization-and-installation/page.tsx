@@ -11,7 +11,7 @@ import { OdooCustomizationContent } from "@/components/services/odoo-customizati
 export const metadata: Metadata = {
   title: "Odoo ERP Customization & Installation | Wan Buffer",
   description:
-    "Odoo customization and installation by an Odoo Gold Partner: requirement gathering, scope and feasibility analysis, development, testing, and delivery—tailored to your business needs.",
+    "Odoo customization and installation: requirement gathering, scope and feasibility analysis, development, testing, and delivery—tailored to your business needs.",
   keywords: [
     "Odoo customization",
     "Odoo installation",

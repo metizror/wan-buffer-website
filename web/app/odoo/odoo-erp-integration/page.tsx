@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { OdooIntegrationContent } from "@/components/services/odoo-integration-content";
 
 export const metadata: Metadata = {
-  title: "Odoo Integrations Services | Odoo Gold Partners | Wanbuffer",
+  title: "Odoo Integrations Services | Wanbuffer",
   description:
     "Wanbuffer implemented a large number of integrations for Odoo with third-party applications like Payment Gateway Integrations, Social Media Integration(Facebook, messenger), Analytics(Docparser Integration) and Biometric Device(Zkteco)Integration.",
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    title: "Odoo Integrations Services | Odoo Gold Partners | Wanbuffer",
+    title: "Odoo Integrations Services | Wanbuffer",
     description:
       "Wanbuffer implemented a large number of integrations for Odoo with third-party applications like Payment Gateway Integrations, Social Media Integration(Facebook, messenger), Analytics(Docparser Integration) and Biometric Device(Zkteco)Integration.",
     siteName: "Wan Buffer",

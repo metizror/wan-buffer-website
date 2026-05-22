@@ -11,12 +11,11 @@ import { OdooImplementationContent } from "@/components/services/odoo-implementa
 export const metadata: Metadata = {
   title: "Odoo ERP Implementation Partner | Wan Buffer",
   description:
-    "Expert Odoo implementation: requirements analysis, configuration, custom development, data migration, training, go-live, and ongoing support. Odoo Gold Partner methodology tailored to your business.",
+    "Expert Odoo implementation: requirements analysis, configuration, custom development, data migration, training, go-live, and ongoing support. Methodology tailored to your business.",
   keywords: [
     "Odoo implementation",
     "Odoo ERP implementation company",
     "Odoo partner",
-    "Odoo Gold Partner",
     "Odoo migration",
     "Odoo training",
   ],

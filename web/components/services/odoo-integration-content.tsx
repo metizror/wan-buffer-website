@@ -11,7 +11,6 @@ import {
   MailIcon,
   PhoneCallIcon,
   ShieldIcon,
-  StarIcon,
 } from "./odoo-service-icons";
 
 const WHY_BOXES = [
@@ -34,11 +33,6 @@ export function OdooIntegrationContent() {
         <div className="oi-hero-lux-inner">
           <div className="oi-hero-lux-top rev">
             <div className="oi-hero-lux-eyebrow">Odoo ERP services</div>
-            <div className="oi-hero-lux-pin">
-              <span className="oi-hero-lux-pin-dot" />
-              <StarIcon />
-              <span>Odoo Gold Partner</span>
-            </div>
           </div>
           <h1 id="oi-int-hero-title" className="oi-hero-lux-h rev">
             <span className="ln">Odoo</span>
@@ -107,7 +101,7 @@ export function OdooIntegrationContent() {
               <div className="oi-int-svc-stack">
                 <p>Odoo integration allows you to use one-of-a-kind tools to help you run your business.</p>
                 <p>Odoo ERP integration, on the other hand, should be handled by professionals.</p>
-                <p>We are an Odoo Gold partner and a trusted expert, providing flawless Odoo solutions &amp; services.</p>
+                <p>We are a trusted expert, providing flawless Odoo solutions &amp; services.</p>
               </div>
             </div>
           </div>

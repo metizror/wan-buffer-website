@@ -9,7 +9,6 @@ import {
   CheckIcon,
   MailIcon,
   PhoneCallIcon,
-  StarIcon,
 } from "./odoo-service-icons";
 
 const CONSULTING_SERVICES = [
@@ -90,8 +89,6 @@ export function OdooConsultantContent() {
             <div className="oi-hero-lux-eyebrow">Odoo ERP services</div>
             <div className="oi-hero-lux-pin">
               <span className="oi-hero-lux-pin-dot" />
-              <StarIcon />
-              <span>Odoo Gold Partner</span>
             </div>
           </div>
           <h1 id="oi-consult-hero-title" className="oi-hero-lux-h rev">

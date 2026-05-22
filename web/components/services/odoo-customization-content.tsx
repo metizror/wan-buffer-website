@@ -13,7 +13,6 @@ import {
   CloudIcon,
   CodeIcon,
   CpuIcon,
-  CrossIcon,
   EyeIcon,
   GridIcon,
   HeartIcon,
@@ -25,7 +24,6 @@ import {
   SearchIcon,
   ShieldIcon,
   SparklesIcon,
-  StarIcon,
   TrendingUpIcon,
   TrophyIcon,
   UsersIcon,
@@ -44,23 +42,6 @@ const PHASES = [
   { icon: <RocketIcon/>, title: "Delivery", body: "You receive the modules after they have been finished, tested, and evaluated.", tag: "Deliver", ai: false, outcome: "Modules live", duration: "2–5 days", deliverables: ["Deployment pack", "Release notes", "Handover session", "Support transition"] },
 ] as const;
 
-const GOLD_FEATURES = [
-  { icon: <WalletIcon/>, t: "Reasonably priced methods", b: "Takes into account all variables and does not alter settings that are already in place." },
-  { icon: <CpuIcon/>, t: "Technical + functional depth", b: "Comprehensive understanding of both technical and functional aspects." },
-  { icon: <ShieldIcon/>, t: "Standards & conventions", b: "Strict adherence to established norms and protocols—with superior coding conventions." },
-  { icon: <RefreshIcon/>, t: "Long-term performance", b: "Facilitation of routine maintenance and consistent efficiency through operation." },
-] as const;
-
-const COMPARE = [
-  { row: "Pricing approach", g: "Poor quality, low-cost options", p: "Reasonably priced methods" },
-  { row: "Default functionality", g: "May cause default features to fail", p: "Does not alter existing settings" },
-  { row: "Platform knowledge", g: "Limited inner workings", p: "Deep technical & functional grasp" },
-  { row: "Development norms", g: "Possible detour from standards", p: "Strict adherence to protocols" },
-  { row: "Code quality", g: "Weakened coding requirements", p: "Superior coding conventions" },
-  { row: "Maintenance", g: "Challenges with upkeep", p: "Routine maintenance facilitated" },
-  { row: "Performance", g: "Long-term performance risk", p: "Consistent efficiency in operation" },
-] as const;
-
 const BENTO_DATA = [
   { icon: <BookOpenIcon/>, t: "50+ Odoo blogs", b: "Odoo's potential is explored in more than 50 blogs from our team.", tag: "Knowledge", size: "", ai: false, variant: "glow-red", mini: { n: "50+", l: "Blogs" } },
   { icon: <RefreshIcon/>, t: "All Odoo releases", b: "Skilled in using any and all Odoo releases.", tag: "Versions", size: "", ai: true, variant: "glow-ai", mini: { n: "All", l: "Releases" } },
@@ -72,10 +53,10 @@ const BENTO_DATA = [
 ] as const;
 
 const STATS = [
-  { n: "4+", l: "Years experience", g: false },
-  { n: "100+", l: "Happy clients", g: false },
-  { n: "20+", l: "Free Odoo apps", g: false },
-  { n: "Gold", l: "Odoo partner", g: true },
+  { n: "7+", l: "Years in the business", g: false },
+  { n: "254+", l: "Projects completed", g: false },
+  { n: "84%", l: "Repeated clients", g: true },
+  { n: "50+", l: "Proficient engineers", g: false },
 ] as const;
 
 /* ── Component ── */
@@ -93,11 +74,6 @@ export function OdooCustomizationContent() {
         <div className="oi-hero-lux-inner">
           <div className="oi-hero-lux-top rev">
             <div className="oi-hero-lux-eyebrow">Odoo ERP services</div>
-            <div className="oi-hero-lux-pin">
-              <span className="oi-hero-lux-pin-dot" />
-              <StarIcon />
-              <span>Odoo Gold Partner</span>
-            </div>
           </div>
           <h1 className="oi-hero-lux-h rev">
             <span className="ln">Odoo</span>
@@ -236,80 +212,6 @@ export function OdooCustomizationContent() {
                 <span className="oi-cta-big-arrow"><ArrowRightIcon /></span>
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* GOLD PARTNER */}
-      <section className="oi-gp" id="gold-partner">
-        <div className="oi-gp-inner">
-          <div className="oi-gp-hdr rev">
-            <div className="eyebrow">Why experts matter</div>
-            <h2 className="sec-h">Why experts need <span className="acc">to do it</span></h2>
-          </div>
-
-          <div className="oi-gp-spotlight rev">
-            <div className="oi-gp-spotlight-top">
-              <div className="oi-gp-spotlight-l">
-                <div className="oi-gp-spotlight-head">
-                  <div className="oi-gp-badge-lg">
-                    <StarIcon />
-                    <span className="oi-gp-badge-lg-t">Odoo Gold Partner · Certified</span>
-                  </div>
-                </div>
-                <h3>Expert partners deliver maintainable customization—<span>non-experts risk your defaults.</span></h3>
-              </div>
-              <div className="oi-gp-spotlight-stat">
-                <div className="oi-gp-spotlight-stat-n">Gold</div>
-                <div className="oi-gp-spotlight-stat-l">Tier-1<br />Partner Status</div>
-              </div>
-            </div>
-            <div className="oi-gp-features">
-              {GOLD_FEATURES.map((f) => (
-                <div key={f.t} className="oi-gp-feature">
-                  <div className="oi-gp-feature-icon">{f.icon}</div>
-                  <div>
-                    <div className="oi-gp-feature-t">{f.t}</div>
-                    <div className="oi-gp-feature-b">{f.b}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="oi-gp-spotlight-meta">
-              <div className="oi-gp-meta-item"><StarIcon /> Tier-1 Certified</div>
-              <div className="oi-gp-meta-item"><CheckCircleIcon /> Methodology audited</div>
-              <div className="oi-gp-meta-item"><HeartIcon /> 254+ verifiable references</div>
-            </div>
-          </div>
-
-          <div className="oi-gp-compare-wrap rev">
-            <div className="oi-gp-recommend"><StarIcon /> Recommended</div>
-            <div className="oi-gp-compare">
-              <div className="oi-gp-compare-hdr">
-                <div>Decision factor</div>
-                <div>Non-expert partner</div>
-                <div><StarIcon /> Expert partner</div>
-              </div>
-              {COMPARE.map((c) => (
-                <div key={c.row} className="oi-gp-compare-row">
-                  <div>{c.row}</div>
-                  <div><span className="oi-gp-cell-content"><span className="oi-gp-cross"><CrossIcon /></span>{c.g}</span></div>
-                  <div><span className="oi-gp-cell-content"><span className="oi-gp-check"><CheckIcon /></span>{c.p}</span></div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="oi-gp-cta rev">
-            <div className="oi-gp-cta-l">
-              <a className="oi-cta-big" href="#contact">
-                <span>Engage Wan Buffer</span>
-                <span className="oi-cta-big-arrow"><ArrowRightIcon /></span>
-              </a>
-            </div>
-            <span className="oi-gp-cta-note">
-              <strong>Day-1 cost is a number.</strong> Lifecycle cost is the truth.
-            </span>
           </div>
         </div>
       </section>

@@ -21,7 +21,6 @@ export const metadata: Metadata = {
     "odoo erp consultant",
     "best odoo erp consultant",
     "Wan Buffer",
-    "odoo gold partner",
   ],
   alternates: { canonical: "https://wanbuffer.com/odoo/odoo-consultant" },
   openGraph: {

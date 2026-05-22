@@ -113,7 +113,7 @@ export function IndustriesContent() {
                 <ArrowRightIcon />
               </span>
             </Link>
-            <Link className="oi-hero-lux-secondary" href="/case-studies">
+            <Link className="oi-hero-lux-secondary" href="/case-study">
               View Case Studies
             </Link>
           </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import type { ReactNode } from "react";
 import Link from "next/link";
 
@@ -7,67 +8,228 @@ interface HomeHeaderProps {
   children?: ReactNode;
 }
 
+/* ── Mobile menu data — mirrors desktop mega-menu exactly ── */
+const MOB_MENU = [
+  {
+    label: "AI & Automation",
+    href: "/#ai-services",
+    accent: "ai" as const,
+    sections: [
+      {
+        title: "AI Services",
+        subs: [
+          { label: "AI Agents for ERP", href: "/#ai-services" },
+          { label: "Workflow Automation", href: "/#ai-services" },
+          { label: "Predictive Analytics", href: "/#ai-services" },
+          { label: "AI Chatbots & Copilots", href: "/#ai-services" },
+        ],
+      },
+      {
+        title: "Capabilities",
+        subs: [
+          { label: "LangChain & LLM Integration", href: "/#ai-services" },
+          { label: "ML-Powered Insights", href: "/#ai-services" },
+          { label: "RPA & Process Mining", href: "/#ai-services" },
+          { label: "AI Governance & Ethics", href: "/#ai-services" },
+        ],
+      },
+      {
+        title: "Use Cases",
+        subs: [
+          { label: "Smart Inventory Management", href: "/#ai-services" },
+          { label: "Automated Invoice Processing", href: "/#ai-services" },
+          { label: "Predictive Maintenance", href: "/#ai-services" },
+          { label: "AI-Assisted HR & Payroll", href: "/#ai-services" },
+        ],
+      },
+    ],
+  },
+  {
+    label: "ERP",
+    href: "/#platforms",
+    accent: null,
+    sections: [
+      {
+        title: "Odoo",
+        subs: [
+          { label: "Odoo Implementation", href: "/odoo/implementation" },
+          { label: "Odoo Customisation", href: "/odoo/odoo-customization-and-installation" },
+          { label: "Odoo Migration", href: "/odoo/migration" },
+          { label: "Odoo Integration", href: "/odoo/odoo-erp-integration" },
+          { label: "Odoo Training", href: "/odoo/training" },
+          { label: "Odoo Hosting", href: "/odoo/hosting" },
+        ],
+      },
+      {
+        title: "Zoho & Salesforce",
+        subs: [
+          { label: "Zoho CRM Implementation", href: "/#platforms" },
+          { label: "Zoho Books & Finance", href: "/#platforms" },
+          { label: "Salesforce CRM Setup", href: "/#platforms" },
+          { label: "Odoo ↔ Salesforce Sync", href: "/#platforms" },
+        ],
+      },
+      {
+        title: "All ERP Services",
+        subs: [
+          { label: "ERP Consulting", href: "/#platforms" },
+          { label: "Inventory & WMS", href: "/#platforms" },
+          { label: "Finance & Accounting", href: "/#platforms" },
+          { label: "HR & Payroll", href: "/#platforms" },
+          { label: "ERP Support & AMC", href: "/#platforms" },
+        ],
+      },
+    ],
+  },
+  {
+    label: "eCommerce",
+    href: "/#platforms",
+    accent: null,
+    sections: [
+      {
+        title: "Magento",
+        subs: [
+          { label: "Magento Development", href: "/#platforms" },
+          { label: "Magento → Odoo Integration", href: "/#platforms" },
+          { label: "Performance Optimisation", href: "/#platforms" },
+          { label: "Magento Security & AMC", href: "/#platforms" },
+        ],
+      },
+      {
+        title: "Shopify",
+        subs: [
+          { label: "Shopify Store Setup", href: "/#platforms" },
+          { label: "Shopify → Odoo Integration", href: "/#platforms" },
+          { label: "Payment & Razorpay Setup", href: "/#platforms" },
+          { label: "Shopify Analytics + AI", href: "/#platforms" },
+        ],
+      },
+      {
+        title: "More Services",
+        subs: [
+          { label: "AI Product Recommendations", href: "/#platforms" },
+          { label: "Multi-Warehouse + 3PL Sync", href: "/#platforms" },
+          { label: "AI Customer Support Bot", href: "/#platforms" },
+          { label: "Multi-Currency & Multi-Region", href: "/#platforms" },
+          { label: "eCommerce SEO & CRO", href: "/#platforms" },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Industries",
+    href: "/industries",
+    accent: null,
+    sections: [
+      {
+        title: "Products & Goods",
+        subs: [
+          { label: "Manufacturing", href: "/industries" },
+          { label: "Retail & eCommerce", href: "/industries" },
+          { label: "Steel & Metal Fabrication", href: "/industries" },
+          { label: "Textile & Apparel", href: "/industries" },
+        ],
+      },
+      {
+        title: "Operations & Services",
+        subs: [
+          { label: "Logistics & 3PL", href: "/industries" },
+          { label: "Healthcare", href: "/industries" },
+          { label: "Finance & Services", href: "/industries" },
+          { label: "Construction & Projects", href: "/industries" },
+        ],
+      },
+      {
+        title: "Markets",
+        subs: [
+          { label: "Real Estate", href: "/industries" },
+          { label: "GCC & Middle East", href: "/industries" },
+          { label: "India Market", href: "/industries" },
+          { label: "USA & Europe", href: "/industries" },
+        ],
+      },
+    ],
+  },
+];
+
+const MOB_PLAIN = [
+  { label: "Engagement", href: "/#models" },
+  { label: "Events", href: "/event" },
+  { label: "Insights", href: "/#insights" },
+  { label: "Contact", href: "/contact-us" },
+];
+
 export function HomeHeader(_props: HomeHeaderProps) {
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
+
+  function toggle(idx: number) {
+    setOpenIdx((prev) => (prev === idx ? null : idx));
+  }
+
+  function closeNav() {
+    (window as any).closeNav?.();
+    setOpenIdx(null);
+  }
+
   return (
     <>
       {/* ══ MOBILE NAV ══ */}
       <div className="mob-nav" id="mobNav">
-        <button
-          className="mob-close"
-          type="button"
-          onClick={() => (window as any).closeNav?.()}
-        >
+        <button className="mob-close" type="button" onClick={closeNav}>
           ✕
         </button>
-        <Link className="mob-a ai-mob" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
-          ⚡ AI &amp; Automation
-        </Link>
-        <div className="mob-section">AI Services</div>
-        <Link className="mob-sub" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
-          AI Agents for ERP
-        </Link>
-        <Link className="mob-sub" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
-          Workflow Automation
-        </Link>
-        <Link className="mob-sub" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
-          Intelligent Analytics
-        </Link>
-        <div className="mob-section">ERP</div>
-        <Link className="mob-sub" href="/odoo/implementation" onClick={() => (window as any).closeNav?.()}>
-          Odoo Implementation
-        </Link>
-        <Link className="mob-sub" href="/odoo/odoo-customization-and-installation" onClick={() => (window as any).closeNav?.()}>
-          Odoo Customisation
-        </Link>
-        <Link className="mob-sub" href="/odoo/migration" onClick={() => (window as any).closeNav?.()}>
-          Odoo Migration
-        </Link>
-        <Link className="mob-sub" href="/odoo/odoo-erp-integration" onClick={() => (window as any).closeNav?.()}>
-          Odoo Integration
-        </Link>
-        <Link className="mob-sub" href="/odoo/training" onClick={() => (window as any).closeNav?.()}>
-          Odoo Training
-        </Link>
-        <Link className="mob-sub" href="/odoo/hosting" onClick={() => (window as any).closeNav?.()}>
-          Odoo Hosting
-        </Link>
-        <Link className="mob-a" href="/industries" onClick={() => (window as any).closeNav?.()}>
-          Industries
-        </Link>
-        <Link className="mob-a" href="/#models" onClick={() => (window as any).closeNav?.()}>
-          Engagement
-        </Link>
-        <Link className="mob-a" href="/#insights" onClick={() => (window as any).closeNav?.()}>
-          Insights
-        </Link>
-        <Link className="mob-a" href="/contact-us" onClick={() => (window as any).closeNav?.()}>
-          Contact
-        </Link>
+
+        {/* Accordion categories */}
+        {MOB_MENU.map((item, idx) => (
+          <div key={item.label}>
+            <div
+              className={`mob-cat${openIdx === idx ? " open" : ""}`}
+              onClick={() => toggle(idx)}
+            >
+              <span className={`mob-cat-label${item.accent === "ai" ? " ai" : ""}`}>
+                {item.accent === "ai" && "⚡ "}
+                {item.label}
+              </span>
+              <span className="mob-cat-arrow" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+            </div>
+
+            <div className={`mob-cat-subs${openIdx === idx ? " open" : ""}`}>
+              {item.sections.map((sec) => (
+                <div key={sec.title}>
+                  <span className="mob-cat-section-tag">{sec.title}</span>
+                  {sec.subs.map((sub) => (
+                    <Link
+                      key={sub.label}
+                      className="mob-cat-sub"
+                      href={sub.href}
+                      onClick={closeNav}
+                    >
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        {/* Plain links */}
+        {MOB_PLAIN.map((item) => (
+          <Link key={item.label} className="mob-cat-plain" href={item.href} onClick={closeNav}>
+            {item.label}
+          </Link>
+        ))}
+
+        {/* CTA buttons */}
         <div className="mob-btns">
-          <Link className="mob-btn-ai" href="/#ai-services" onClick={() => (window as any).closeNav?.()}>
+          <Link className="mob-btn-ai" href="/#ai-services" onClick={closeNav}>
             Explore AI Services ⚡
           </Link>
-          <Link className="mob-btn-r" href="/contact-us" onClick={() => (window as any).closeNav?.()}>
+          <Link className="mob-btn-r" href="/contact-us" onClick={closeNav}>
             Book a Discovery Call
           </Link>
         </div>
@@ -734,11 +896,12 @@ export function HomeHeader(_props: HomeHeaderProps) {
             </div>
           </li>
 
-          {/* Engagement Mega Menu (kept as link for now; mega content still in injected HTML sections later) */}
           <li>
             <Link href="/#models">Engagement</Link>
           </li>
-
+          <li>
+            <Link href="/event">Events</Link>
+          </li>
           <li>
             <Link href="/#insights">Insights</Link>
           </li>
@@ -769,4 +932,3 @@ export function HomeHeader(_props: HomeHeaderProps) {
     </>
   );
 }
-

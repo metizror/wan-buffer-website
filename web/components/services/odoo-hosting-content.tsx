@@ -12,7 +12,6 @@ import {
   MailIcon,
   PhoneCallIcon,
   ShieldIcon,
-  StarIcon,
 } from "./odoo-service-icons";
 
 const CHOOSING_POINTS = [
@@ -108,11 +107,6 @@ export function OdooHostingContent() {
         <div className="oi-hero-lux-inner">
           <div className="oi-hero-lux-top rev">
             <div className="oi-hero-lux-eyebrow">Odoo ERP services</div>
-            <div className="oi-hero-lux-pin">
-              <span className="oi-hero-lux-pin-dot" />
-              <StarIcon />
-              <span>Odoo Gold Partner</span>
-            </div>
           </div>
           <h1 id="oi-host-hero-title" className="oi-hero-lux-h rev">
             <span className="ln">Odoo</span>

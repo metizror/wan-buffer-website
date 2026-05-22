@@ -28,7 +28,6 @@ import {
   SearchIcon,
   SettingsIcon,
   ShieldIcon,
-  StarIcon,
   TrendingUpIcon,
   UsersIcon,
   ZapIcon,
@@ -68,10 +67,10 @@ const ROADMAP_CHAPTERS = [
 ] as const;
 
 const STATS = [
-  { n: "7+", l: "Years active", g: false },
+  { n: "7+", l: "Years in the business", g: false },
   { n: "180+", l: "Upgrades delivered", g: false },
-  { n: "20+", l: "Nations served", g: false },
-  { n: "Gold", l: "Odoo partner", g: true },
+  { n: "84%", l: "Repeated clients", g: true },
+  { n: "50+", l: "Proficient engineers", g: false },
 ] as const;
 
 /* ── Component ── */
@@ -89,11 +88,6 @@ export function OdooMigrationContent() {
         <div className="oi-hero-lux-inner">
           <div className="oi-hero-lux-top rev">
             <div className="oi-hero-lux-eyebrow">Odoo ERP services</div>
-            <div className="oi-hero-lux-pin">
-              <span className="oi-hero-lux-pin-dot" />
-              <StarIcon />
-              <span>Odoo Gold Partner</span>
-            </div>
           </div>
           <h1 className="oi-hero-lux-h rev">
             <span className="ln">Migration,</span>
