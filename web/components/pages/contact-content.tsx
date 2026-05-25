@@ -70,61 +70,76 @@ const hiringPlans = [
 export function ContactContent() {
   return (
     <main className="svc-page">
-      <section className="contact-hero">
-        <div className="contact-hero-inner rev">
-          <div className="contact-hero-pills left" aria-hidden="true">
-            <span className="ch-pill">Web Application</span>
-            <span className="ch-pill">Application Development</span>
-            <span className="ch-pill">AI Solutions</span>
-            <span className="ch-pill">Support and Maintenance</span>
+      {/* HERO — same design system as Case Studies hero */}
+      <section className="csh-hero">
+        <div className="csh-hero-inner">
+
+          {/* floating tags — left */}
+          <div className="csh-tags csh-tags-left">
+            <span className="csh-tag">Free Consultation</span>
+            <span className="csh-tag">Web & Mobile Projects</span>
+            <span className="csh-tag">ERP Implementation</span>
+            <span className="csh-tag">AI Automation</span>
           </div>
 
-          <div className="contact-hero-main">
-            <h1 className="contact-hero-h">Contact Us</h1>
+          {/* centre content */}
+          <div className="csh-centre rev">
+            <h1 className="csh-h1">
+              Get in<br />Touch<br />With Us
+            </h1>
 
-            <div className="contact-clutch" aria-label="Clutch rating">
-              <span className="cc-top">Reviewed on</span>
-              <span className="cc-brand">Clutch</span>
-              <span className="cc-stars" aria-hidden="true">
-                ★★★★★
-              </span>
-              <span className="cc-rating">5.0 rating</span>
+            {/* Clutch badge */}
+            <div className="csh-clutch">
+              <div className="csh-clutch-left">
+                <span className="csh-clutch-reviewed">REVIEWED ON</span>
+                <span className="csh-clutch-brand">Clutch</span>
+              </div>
+              <div className="csh-clutch-right">
+                <span className="csh-clutch-stars">★★★★★</span>
+                <span className="csh-clutch-rating">5.0 RATING</span>
+              </div>
             </div>
 
-            <p className="contact-hero-sub">
-              Get in touch with Wan Buffer, where innovation meets excellence. Connect with our global team to discuss
-              how we can empower your business through impactful software solutions.
+            <p className="csh-desc">
+              Connect with Wan Buffer&apos;s global team to discuss how we can empower your business. From ERP to AI
+              automation — we&apos;re ready to turn your ideas into impactful software solutions.
             </p>
 
-            <div className="contact-hero-actions">
-              <a
-                className="btn-r"
-                href="https://book-a-demo-wanbuffer-odoo-expert.odoo.com/book/WanBufferians"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>Book a Meeting</span>
-              </a>
-            </div>
+            <a
+              className="csh-cta-btn"
+              href="https://book-a-demo-wanbuffer-odoo-expert.odoo.com/book/WanBufferians"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Book a Meeting
+            </a>
           </div>
 
-          <div className="contact-hero-pills right" aria-hidden="true">
-            <span className="ch-pill">Odoo Solutions</span>
-            <span className="ch-pill">Odoo Implementation India</span>
-            <span className="ch-pill">Odoo Implementation USA</span>
-            <span className="ch-pill">Odoo Implementation UK</span>
+          {/* floating tags — right */}
+          <div className="csh-tags csh-tags-right">
+            <span className="csh-tag">Odoo Solutions</span>
+            <span className="csh-tag">Implementation India</span>
+            <span className="csh-tag">Implementation USA</span>
+            <span className="csh-tag">Implementation UK</span>
           </div>
-
-          <a
-            className="contact-hero-circle"
-            href="https://book-a-demo-wanbuffer-odoo-expert.odoo.com/book/WanBufferians"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="chc-ic">↗</span>
-            <span className="chc-t">Let&apos;s Discuss your Project</span>
-          </a>
         </div>
+
+        {/* circular badge */}
+        <a
+          className="csh-circle-badge"
+          href="https://book-a-demo-wanbuffer-odoo-expert.odoo.com/book/WanBufferians"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Let's Discuss your Project"
+        >
+          <svg viewBox="0 0 120 120" className="csh-circle-text-svg" aria-hidden="true">
+            <path id="cu-circle-path" d="M 60,60 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0" fill="none"/>
+            <text className="csh-circle-text">
+              <textPath href="#cu-circle-path" startOffset="0%">Get in Touch • Contact Us •&nbsp;</textPath>
+            </text>
+          </svg>
+          <span className="csh-circle-arrow" aria-hidden="true">↗</span>
+        </a>
       </section>
 
       {/* Legacy: logos strip directly below hero */}

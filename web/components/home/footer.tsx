@@ -106,7 +106,7 @@ export function HomeFooter() {
               <a href="#">About Wan Buffer</a>
             </li>
             <li>
-              <a href="#">Wanbufferians</a>
+              <a href="/wanbufferians">Wanbufferians</a>
             </li>
             <li>
               <a href="#">AI + ERP Blog</a>

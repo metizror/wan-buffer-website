@@ -87,9 +87,6 @@ export function OdooConsultantContent() {
         <div className="oi-hero-lux-inner">
           <div className="oi-hero-lux-top rev">
             <div className="oi-hero-lux-eyebrow">Odoo ERP services</div>
-            <div className="oi-hero-lux-pin">
-              <span className="oi-hero-lux-pin-dot" />
-            </div>
           </div>
           <h1 id="oi-consult-hero-title" className="oi-hero-lux-h rev">
             <span className="ln">Odoo</span>

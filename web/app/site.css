@@ -2613,3 +2613,232 @@ html.js .oi-cs-list>li{opacity:1;transform:none}
   .oi-cs-results-grid{grid-template-columns:1fr}
   .oi-cs-screenshots-grid{grid-template-columns:1fr}
 }
+
+/* ── WANBUFFERIANS ── */
+.wb-about-hero{position:relative;overflow:hidden;padding:clamp(100px,14vw,160px) var(--pad) clamp(60px,8vw,100px);background:var(--navy);color:#fff}
+.wb-about-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 30% 40%,rgba(0,194,255,.08),transparent 70%),radial-gradient(ellipse 60% 50% at 80% 60%,rgba(216,28,85,.06),transparent 60%);pointer-events:none}
+.wb-about-hero-inner{position:relative;max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center}
+.wb-about-hero-copy{display:flex;flex-direction:column;gap:18px}
+.wb-about-hero-h{font-family:var(--H);font-size:clamp(40px,6vw,72px);font-weight:800;line-height:1.05;letter-spacing:-.02em}
+.wb-about-hero-sub{font-family:var(--B);font-size:clamp(15px,1.5vw,18px);font-weight:300;line-height:1.7;color:rgba(255,255,255,.7);max-width:520px}
+.wb-about-hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+.wb-about-hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.wb-about-hero-stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:clamp(24px,3vw,36px);text-align:center;transition:border-color .3s}
+.wb-about-hero-stat:hover{border-color:var(--ai)}
+.wb-about-hero-stat-n{font-family:var(--H);font-size:clamp(28px,3.5vw,44px);font-weight:800;color:var(--ai);line-height:1.1}
+.wb-about-hero-stat-l{font-family:var(--B);font-size:13px;font-weight:400;color:rgba(255,255,255,.5);margin-top:6px;text-transform:uppercase;letter-spacing:.06em}
+
+.wb-about-values-inner{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.wb-about-values-hdr{text-align:center;margin-bottom:clamp(32px,4vw,56px)}
+.wb-about-values-body{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,4vw,56px);align-items:start}
+.wb-about-values-quotes{display:flex;flex-direction:column;gap:24px}
+.wb-about-sanskrit{background:var(--cream);border-left:4px solid var(--red);border-radius:12px;padding:clamp(20px,2.5vw,32px);display:flex;flex-direction:column;gap:8px}
+.wb-about-sanskrit-text{font-size:clamp(20px,2.5vw,28px);font-weight:700;font-family:var(--H);color:var(--navy);line-height:1.3}
+.wb-about-sanskrit cite{font-style:normal;font-size:14px;color:var(--stone);font-family:var(--B)}
+.wb-about-values-lead{font-family:var(--B);font-size:clamp(15px,1.4vw,17px);line-height:1.8;color:var(--stone);margin-bottom:24px}
+.wb-about-values-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:14px}
+.wb-about-values-list li{display:flex;align-items:center;gap:12px;font-family:var(--B);font-size:15px;color:var(--navy)}
+.wb-about-values-check{width:24px;height:24px;border-radius:50%;background:var(--ai);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+
+.wb-about-mv-inner{max-width:1320px;margin:0 auto;padding:0 var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,40px)}
+.wb-about-mv-card{background:#fff;border:1px solid var(--silver);border-top:3px solid var(--ai);border-radius:20px;padding:clamp(28px,3.5vw,48px);display:flex;flex-direction:column;gap:16px;transition:box-shadow .3s,border-color .3s}
+.wb-about-mv-card:hover{border-color:var(--ai);box-shadow:0 8px 32px rgba(0,194,255,.1),0 2px 8px rgba(0,0,0,.06)}
+.wb-about-mv-icon{font-size:36px;line-height:1}
+.wb-about-mv-h{font-family:var(--H);font-size:clamp(20px,2.2vw,26px);font-weight:700;color:var(--navy)}
+.wb-about-mv-card p{font-family:var(--B);font-size:clamp(14px,1.3vw,15px);line-height:1.8;color:var(--stone)}
+.wb-about-mv-icon-wrap{width:80px;height:80px;border-radius:16px;background:linear-gradient(135deg,rgba(0,194,255,.08),rgba(216,28,85,.06));border:1px solid rgba(0,194,255,.15);display:flex;align-items:center;justify-content:center;margin-bottom:4px;flex-shrink:0}
+.wb-about-mv-icon-img{width:56px;height:56px;object-fit:contain}
+.wb-about-mv-divider{width:40px;height:3px;background:linear-gradient(90deg,var(--red),var(--ai));border-radius:2px;margin:4px 0 8px}
+
+.wb-about-journey-inner{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.wb-about-journey-hdr{text-align:center;margin-bottom:clamp(40px,5vw,64px)}
+.wb-about-timeline{position:relative;display:flex;flex-direction:column;gap:clamp(40px,5vw,64px)}
+.wb-about-timeline-line{position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--ai),var(--red));transform:translateX(-50%);border-radius:2px}
+.wb-about-timeline-block{display:grid;grid-template-columns:1fr 40px 1fr;gap:0;align-items:start;position:relative}
+.wb-about-timeline-block .wb-about-timeline-card{grid-column:1}
+.wb-about-timeline-block.is-right .wb-about-timeline-card{grid-column:3}
+.wb-about-timeline-block .wb-about-timeline-marker{grid-column:2;display:flex;justify-content:center;padding-top:8px}
+.wb-about-timeline-dot{width:16px;height:16px;border-radius:50%;background:var(--ai);border:3px solid #fff;box-shadow:0 0 0 3px var(--ai);flex-shrink:0}
+.wb-about-timeline-card{background:#fff;border:1px solid var(--silver);border-radius:16px;padding:clamp(24px,3vw,36px);transition:border-color .3s}
+.wb-about-timeline-card:hover{border-color:var(--ai)}
+.wb-about-timeline-img-wrap{border-radius:12px;overflow:hidden;margin-bottom:16px}
+.wb-about-timeline-img{width:100%;height:auto;display:block;border-radius:12px}
+.wb-about-timeline-year{font-family:var(--H);font-size:clamp(13px,1.2vw,14px);font-weight:700;color:var(--ai);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.wb-about-timeline-title{font-family:var(--H);font-size:clamp(18px,2vw,22px);font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:12px}
+.wb-about-timeline-desc{font-family:var(--B);font-size:14px;line-height:1.7;color:var(--stone);margin-bottom:20px}
+.wb-about-timeline-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:12px;margin-bottom:20px}
+.wb-about-timeline-stat{background:var(--cream);border-radius:10px;padding:14px 12px;text-align:center}
+.wb-about-timeline-stat-n{font-family:var(--H);font-size:clamp(18px,2vw,24px);font-weight:800;color:var(--navy);display:block}
+.wb-about-timeline-stat-l{font-family:var(--B);font-size:12px;color:var(--stone);display:block;margin-top:2px}
+.wb-about-timeline-highlights{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.wb-about-timeline-highlights li{font-family:var(--B);font-size:14px;color:var(--navy);padding-left:20px;position:relative}
+.wb-about-timeline-highlights li::before{content:"";position:absolute;left:0;top:7px;width:8px;height:8px;border-radius:50%;background:var(--ai)}
+
+.wb-about-cta-inner{max-width:800px;margin:0 auto;padding:0 var(--pad);text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px}
+.wb-about-cta-inner h2{font-family:var(--H);font-size:clamp(24px,3.5vw,40px);font-weight:800;color:var(--navy);line-height:1.2}
+.wb-about-cta-inner p{font-family:var(--B);font-size:clamp(14px,1.4vw,16px);line-height:1.7;color:var(--stone);max-width:560px}
+.wb-about-cta-actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+
+@media(max-width:900px){
+  .wb-about-hero-inner{grid-template-columns:1fr}
+  .wb-about-hero-stats{grid-template-columns:repeat(4,1fr)}
+  .wb-about-values-body{grid-template-columns:1fr}
+  .wb-about-mv-inner{grid-template-columns:1fr}
+  .wb-about-timeline-block,.wb-about-timeline-block.is-right{grid-template-columns:40px 1fr}
+  .wb-about-timeline-block .wb-about-timeline-card,.wb-about-timeline-block.is-right .wb-about-timeline-card{grid-column:2}
+  .wb-about-timeline-block .wb-about-timeline-marker{grid-column:1}
+  .wb-about-timeline-line{left:20px}
+}
+@media(max-width:560px){
+  .wb-about-hero-stats{grid-template-columns:1fr 1fr}
+}
+
+/* Gallery slider */
+.wb-about-gallery-inner{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.wb-about-gallery-hdr{text-align:center;margin-bottom:clamp(32px,4vw,48px)}
+.wb-about-gallery-track-wrap{overflow:hidden;position:relative;border-radius:16px}
+.wb-about-gallery-track{display:flex;gap:20px;animation:wb-gallery-scroll 30s linear infinite;width:max-content}
+.wb-about-gallery-track:hover{animation-play-state:paused}
+.wb-about-gallery-slide{flex-shrink:0;width:clamp(280px,30vw,400px);border-radius:14px;overflow:hidden}
+.wb-about-gallery-img{width:100%;height:clamp(190px,20vw,270px);object-fit:cover;display:block;border-radius:14px;transition:transform .4s}
+.wb-about-gallery-slide:hover .wb-about-gallery-img{transform:scale(1.04)}
+@keyframes wb-gallery-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* Wanbufferians – Case Studies carousel */
+.wb-cs-section{background:#fff}
+.wb-cs-inner{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.wb-cs-hdr{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:clamp(28px,3.5vw,48px)}
+.wb-cs-all-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:6px;background:var(--red);color:#fff;font-family:var(--H);font-size:13px;font-weight:700;letter-spacing:.04em;text-decoration:none;transition:background .2s,transform .2s;white-space:nowrap;flex-shrink:0;align-self:center}
+.wb-cs-all-btn:hover{background:var(--red-dark,#b3012e);transform:translateY(-1px)}
+.wb-cs-track-wrap{overflow:hidden}
+.wb-cs-track{display:flex;gap:24px;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.wb-cs-card{flex-shrink:0;width:clamp(260px,28.5vw,360px);background:#fff;border:1px solid var(--silver);border-radius:16px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:box-shadow .25s,border-color .25s,transform .25s}
+.wb-cs-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.1);border-color:var(--red);transform:translateY(-3px)}
+.wb-cs-card-img-wrap{width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--cream)}
+.wb-cs-card-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.wb-cs-card:hover .wb-cs-card-img{transform:scale(1.04)}
+.wb-cs-card-body{padding:20px 20px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.wb-cs-card-badge{display:inline-block;padding:5px 14px;border-radius:20px;background:var(--red);color:#fff;font-family:var(--H);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;align-self:flex-start}
+.wb-cs-card-title{font-family:var(--H);font-size:clamp(15px,1.4vw,17px);font-weight:700;color:var(--navy);line-height:1.35;margin:0}
+.wb-cs-card-excerpt{font-family:var(--B);font-size:13px;line-height:1.7;color:var(--stone);margin:0;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.wb-cs-nav{display:flex;justify-content:flex-end;gap:10px;margin-top:28px}
+.wb-cs-nav-btn{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--silver);background:#fff;color:var(--navy);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.wb-cs-nav-btn:hover:not(:disabled){background:var(--red);border-color:var(--red);color:#fff}
+.wb-cs-nav-btn:disabled{opacity:.35;cursor:default}
+@media(max-width:900px){.wb-cs-card{width:clamp(240px,55vw,320px)}}
+@media(max-width:640px){.wb-cs-card{width:clamp(240px,80vw,320px)}.wb-cs-hdr{flex-direction:column;align-items:flex-start;gap:12px}}
+
+/* Wanbufferians – Let's Discuss + What Clients Say */
+.wb-discuss-sec{background:var(--cream)}
+.wb-discuss-inner{max-width:1320px;margin:0 auto;padding:0 var(--pad);display:grid;grid-template-columns:1fr 2fr;gap:clamp(32px,5vw,72px);align-items:start}
+.wb-discuss-h{font-family:var(--H);font-size:clamp(22px,2.5vw,30px);font-weight:800;color:var(--navy);margin:8px 0 16px;padding-bottom:10px;border-bottom:3px solid var(--red);display:inline-block}
+.wb-discuss-desc{font-family:var(--B);font-size:14px;line-height:1.7;color:var(--stone);margin-bottom:20px}
+.wb-discuss-form{display:flex;flex-direction:column;gap:12px}
+.wb-discuss-input{width:100%;padding:12px 14px;border:1px solid var(--silver);border-radius:8px;font-family:var(--B);font-size:14px;color:var(--navy);background:#fff;outline:none;transition:border-color .2s}
+.wb-discuss-input:focus{border-color:var(--red)}
+.wb-discuss-privacy{font-family:var(--B);font-size:12px;line-height:1.6;color:var(--stone)}
+.wb-discuss-privacy a{color:var(--red);text-decoration:underline}
+.wb-discuss-btn{padding:13px 24px;background:var(--red);color:#fff;border:none;border-radius:8px;font-family:var(--H);font-size:13px;font-weight:700;letter-spacing:.04em;cursor:pointer;transition:background .2s,transform .15s;text-align:center}
+.wb-discuss-btn:hover{background:var(--red-dark,#b3012e);transform:translateY(-1px)}
+.wb-discuss-test-card{background:#fff;border:1px solid var(--silver);border-radius:16px;padding:clamp(24px,3vw,36px);margin:16px 0 20px;transition:box-shadow .3s}
+.wb-discuss-test-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.07)}
+.wb-discuss-test-author{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.wb-discuss-test-avatar{position:relative;width:65px;height:65px;flex-shrink:0}
+.wb-discuss-test-label{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--silver);border-radius:50%;font-family:var(--H);font-size:16px;font-weight:700;color:var(--stone)}
+.wb-discuss-test-img{position:relative;z-index:1;width:65px;height:65px;object-fit:cover;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.wb-discuss-test-name{font-family:var(--H);font-size:clamp(15px,1.5vw,17px);font-weight:700;color:var(--navy)}
+.wb-discuss-test-role{font-family:var(--B);font-size:13px;color:var(--stone);margin-top:2px}
+.wb-discuss-test-body{display:flex;gap:12px;align-items:flex-start}
+.wb-discuss-test-quote-icon{font-family:Georgia,serif;font-size:48px;line-height:.8;color:var(--red);opacity:.6;flex-shrink:0;margin-top:4px}
+.wb-discuss-test-text{font-family:var(--B);font-size:clamp(13px,1.3vw,14.5px);line-height:1.8;color:var(--stone);margin:0}
+.wb-discuss-test-pagination{display:flex;gap:8px;align-items:center}
+.wb-discuss-test-page{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--silver);background:#fff;font-family:var(--H);font-size:13px;font-weight:700;color:var(--stone);cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center}
+.wb-discuss-test-page:hover{border-color:var(--red);color:var(--red)}
+.wb-discuss-test-page.is-active{background:var(--red);border-color:var(--red);color:#fff}
+@media(max-width:900px){.wb-discuss-inner{grid-template-columns:1fr}}
+@media(max-width:640px){.wb-discuss-test-body{flex-direction:column;gap:8px}.wb-discuss-test-quote-icon{font-size:36px}}
+
+/* Wanbufferians – Industries */
+.wb-ind-section{background:var(--cream)}
+.wb-ind-inner{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.wb-ind-layout{display:grid;grid-template-columns:260px 1fr;gap:clamp(28px,4vw,56px);align-items:start}
+.wb-ind-info{display:flex;flex-direction:column;gap:16px}
+.wb-ind-desc{font-family:var(--B);font-size:clamp(13px,1.3vw,15px);line-height:1.75;color:var(--stone)}
+.wb-ind-discover-btn{display:inline-block;padding:11px 22px;background:var(--red);color:#fff;border-radius:6px;font-family:var(--H);font-size:13px;font-weight:700;letter-spacing:.04em;text-decoration:none;transition:background .2s,transform .15s;align-self:flex-start}
+.wb-ind-discover-btn:hover{background:var(--red-dark,#b3012e);transform:translateY(-1px)}
+.wb-ind-track-wrap{overflow:hidden}
+.wb-ind-track{display:flex;gap:20px;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.wb-ind-card{flex-shrink:0;width:clamp(220px,24vw,300px);background:#fff;border:1px solid var(--silver);border-radius:14px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:box-shadow .25s,border-color .25s,transform .25s}
+.wb-ind-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.1);border-color:var(--red);transform:translateY(-3px)}
+.wb-ind-card-img-wrap{width:100%;aspect-ratio:4/3;overflow:hidden;background:var(--cream)}
+.wb-ind-card-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.wb-ind-card:hover .wb-ind-card-img{transform:scale(1.05)}
+.wb-ind-card-body{padding:16px 16px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.wb-ind-card-title{font-family:var(--H);font-size:clamp(14px,1.4vw,16px);font-weight:700;color:var(--navy);margin:0}
+.wb-ind-card-desc{font-family:var(--B);font-size:12.5px;line-height:1.65;color:var(--stone);margin:0;flex:1}
+.wb-ind-card-link{font-family:var(--H);font-size:12px;font-weight:700;color:var(--red);letter-spacing:.04em;margin-top:4px}
+.wb-ind-nav{display:flex;justify-content:flex-end;gap:10px;margin-top:24px}
+.wb-ind-nav-btn{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--silver);background:#fff;color:var(--navy);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.wb-ind-nav-btn:hover:not(:disabled){background:var(--red);border-color:var(--red);color:#fff}
+.wb-ind-nav-btn:disabled{opacity:.35;cursor:default}
+@media(max-width:900px){.wb-ind-layout{grid-template-columns:1fr}.wb-ind-info{max-width:500px}.wb-ind-card{width:clamp(200px,48vw,280px)}}
+@media(max-width:640px){.wb-ind-card{width:clamp(200px,75vw,260px)}}
+
+/* ── Case Studies Portfolio Page ── */
+/* ── Case Studies Hero ───────────────────────────────────────── */
+.csh-hero{position:relative;background:#f9f9fb;background-image:radial-gradient(circle,rgba(0,0,0,.08) 1px,transparent 1px);background-size:28px 28px;overflow:hidden;padding:clamp(64px,10vw,110px) var(--pad) clamp(56px,8vw,96px)}
+.csh-hero-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:start;gap:clamp(24px,4vw,56px)}
+.csh-tags{display:flex;flex-direction:column;gap:14px;padding-top:32px}
+.csh-tags-left{align-items:flex-start}
+.csh-tags-right{align-items:flex-end}
+.csh-tag{display:inline-flex;align-items:center;padding:8px 18px;border:1px solid rgba(0,0,0,.14);border-radius:999px;font-family:var(--B);font-size:clamp(12px,1.1vw,13px);font-weight:500;color:var(--txt);background:#fff;white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.06);transition:border-color .2s,box-shadow .2s}
+.csh-tag:hover{border-color:var(--red);box-shadow:0 2px 8px rgba(216,28,85,.12)}
+.csh-centre{display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;min-width:340px;max-width:420px}
+.csh-h1{font-family:var(--H);font-size:clamp(42px,6vw,76px);font-weight:900;line-height:1.05;color:var(--txt);letter-spacing:-.03em}
+.csh-clutch{display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:12px;padding:8px 20px;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+.csh-clutch-left{display:flex;flex-direction:column;align-items:flex-start}
+.csh-clutch-reviewed{font-family:var(--H);font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#888}
+.csh-clutch-brand{font-family:var(--H);font-size:18px;font-weight:900;color:#111;letter-spacing:-.02em}
+.csh-clutch-right{display:flex;flex-direction:column;align-items:flex-start;border-left:1px solid rgba(0,0,0,.1);padding-left:12px}
+.csh-clutch-stars{color:#ff3d2e;font-size:14px;letter-spacing:2px;line-height:1}
+.csh-clutch-rating{font-family:var(--H);font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#888}
+.csh-desc{font-family:var(--B);font-size:clamp(13px,1.3vw,15px);line-height:1.8;color:var(--txtm);max-width:480px}
+.csh-cta-btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 36px;border-radius:999px;background:var(--red);color:#fff;font-family:var(--H);font-size:14px;font-weight:700;letter-spacing:.04em;text-decoration:none;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 18px rgba(216,28,85,.3)}
+.csh-cta-btn:hover{background:#b5173f;transform:translateY(-2px);box-shadow:0 8px 28px rgba(216,28,85,.35)}
+/* circular floating badge */
+.csh-circle-badge{position:absolute;bottom:clamp(24px,4vw,48px);right:clamp(24px,4vw,64px);width:clamp(96px,8vw,116px);height:clamp(96px,8vw,116px);border-radius:50%;border:1.5px solid rgba(216,28,85,.45);display:flex;align-items:center;justify-content:center;text-decoration:none;animation:csh-spin-slow 18s linear infinite;transition:border-color .2s}
+.csh-circle-badge:hover{border-color:var(--red);animation-play-state:paused}
+.csh-circle-text-svg{position:absolute;inset:0;width:100%;height:100%}
+.csh-circle-text{font-family:var(--H);font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;fill:var(--txt)}
+.csh-circle-arrow{font-size:clamp(18px,2vw,22px);color:var(--red);z-index:1}
+@keyframes csh-spin-slow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+/* responsive */
+@media(max-width:900px){
+  .csh-hero-inner{grid-template-columns:1fr;gap:0}
+  .csh-tags{flex-direction:row;flex-wrap:wrap;justify-content:center;padding-top:0}
+  .csh-tags-left,.csh-tags-right{align-items:center}
+  .csh-tags-right{order:3}
+  .csh-centre{order:2;margin:28px 0}
+  .csh-circle-badge{display:none}
+}
+/* ── end Case Studies Hero ───────────────────────────────────── */
+
+.cs-portfolio-section{background:#f9f9fb;padding-bottom:clamp(56px,8vw,96px)}
+.cs-portfolio-inner{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.cs-portfolio-hdr{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;padding:clamp(48px,6vw,80px) 0 clamp(32px,4vw,48px)}
+.cs-portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.5vw,28px)}
+.cs-portfolio-card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:20px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:box-shadow .3s,border-color .3s,transform .25s;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.cs-portfolio-card:hover{box-shadow:0 16px 48px rgba(0,0,0,.12);border-color:var(--red);transform:translateY(-6px)}
+.cs-portfolio-card-img-wrap{width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--cream);position:relative}
+.cs-portfolio-card-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.cs-portfolio-card:hover .cs-portfolio-card-img{transform:scale(1.07)}
+.cs-portfolio-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55),transparent 60%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:16px}
+.cs-portfolio-card:hover .cs-portfolio-card-overlay{opacity:1}
+.cs-portfolio-card-view{font-family:var(--H);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:6px}
+.cs-portfolio-card-view::after{content:"→"}
+.cs-portfolio-card-body{padding:clamp(16px,2vw,22px);display:flex;flex-direction:column;gap:10px;flex:1}
+.cs-portfolio-card-badge{display:inline-block;align-self:flex-start;padding:4px 12px;background:#fff5f7;border:1px solid rgba(216,28,85,.18);border-radius:20px;font-family:var(--B);font-size:11px;font-weight:600;color:var(--red);letter-spacing:.03em}
+.cs-portfolio-card-title{font-family:var(--H);font-size:clamp(15px,1.5vw,18px);font-weight:800;color:var(--navy);line-height:1.3;margin:0}
+.cs-portfolio-card-info{font-family:var(--B);font-size:clamp(12px,1.15vw,13.5px);line-height:1.75;color:var(--stone);margin:0;flex:1}
+@media(max-width:900px){.cs-portfolio-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.cs-portfolio-grid{grid-template-columns:1fr}}
