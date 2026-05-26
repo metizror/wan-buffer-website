@@ -28,10 +28,10 @@ export function HomeFooter() {
           <div className="f-colt ai-col">AI &amp; Automation ⚡</div>
           <ul className="f-links">
             <li>
-              <a href="#">AI Agents for ERP</a>
+              <a href="/ai-agents-for-erp">AI Agents for ERP</a>
             </li>
             <li>
-              <a href="#">Workflow Automation</a>
+              <a href="/workflow-automation">Workflow Automation</a>
             </li>
             <li>
               <a href="#">Predictive Analytics</a>

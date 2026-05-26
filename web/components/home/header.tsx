@@ -18,17 +18,17 @@ const MOB_MENU = [
       {
         title: "AI Services",
         subs: [
-          { label: "AI Agents for ERP", href: "/#ai-services" },
-          { label: "Workflow Automation", href: "/#ai-services" },
-          { label: "Predictive Analytics", href: "/#ai-services" },
-          { label: "AI Chatbots & Copilots", href: "/#ai-services" },
+          { label: "AI Agents for ERP", href: "/ai-agents-for-erp" },
+          { label: "Workflow Automation", href: "/workflow-automation" },
+          { label: "Predictive Analytics", href: "/predictive-analytics" },
+          { label: "AI Chatbots & Copilots", href: "/ai-chatbots" },
         ],
       },
       {
         title: "Capabilities",
         subs: [
-          { label: "LangChain & LLM Integration", href: "/#ai-services" },
-          { label: "ML-Powered Insights", href: "/#ai-services" },
+          { label: "LangChain & LLM Integration", href: "/langchain-llm-integration" },
+          { label: "ML-Powered Insights", href: "/ml-powered-insights" },
           { label: "RPA & Process Mining", href: "/#ai-services" },
           { label: "AI Governance & Ethics", href: "/#ai-services" },
         ],
@@ -155,7 +155,7 @@ const MOB_MENU = [
 const MOB_PLAIN = [
   { label: "Engagement", href: "/#models" },
   { label: "Events", href: "/event" },
-  { label: "Insights", href: "/#insights" },
+  { label: "Insights", href: "/blogs" },
   { label: "Contact", href: "/contact-us" },
 ];
 
@@ -304,51 +304,51 @@ export function HomeHeader(_props: HomeHeaderProps) {
                 <div className="mega-body">
                   <div className="mega-col">
                     <div className="mega-col-title">AI Services</div>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/ai-agents-for-erp">
                       <div className="mega-icon">🤖</div>
                       <div>
                         <div className="mega-item-t">AI Agents for ERP</div>
                         <div className="mega-item-s">Autonomous agents that execute ERP tasks</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/workflow-automation">
                       <div className="mega-icon">⚡</div>
                       <div>
                         <div className="mega-item-t">Workflow Automation</div>
                         <div className="mega-item-s">End-to-end process automation</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/predictive-analytics">
                       <div className="mega-icon">🧠</div>
                       <div>
                         <div className="mega-item-t">Predictive Analytics</div>
                         <div className="mega-item-s">Demand forecasting &amp; anomaly detection</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/ai-chatbots">
                       <div className="mega-icon">💬</div>
                       <div>
                         <div className="mega-item-t">AI Chatbots &amp; Copilots</div>
                         <div className="mega-item-s">Natural language ERP interaction</div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                   <div className="mega-col">
                     <div className="mega-col-title">Capabilities</div>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/langchain-llm-integration">
                       <div className="mega-icon">🔗</div>
                       <div>
                         <div className="mega-item-t">LangChain &amp; LLM Integration</div>
                         <div className="mega-item-s">GPT-4, Claude &amp; open-source LLMs</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/ml-powered-insights">
                       <div className="mega-icon">📊</div>
                       <div>
                         <div className="mega-item-t">ML-Powered Insights</div>
                         <div className="mega-item-s">Real-time operational intelligence</div>
                       </div>
-                    </div>
+                    </Link>
                     <div className="mega-item">
                       <div className="mega-icon">🔄</div>
                       <div>
@@ -903,7 +903,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
             <Link href="/event">Events</Link>
           </li>
           <li>
-            <Link href="/#insights">Insights</Link>
+            <Link href="/blogs">Insights</Link>
           </li>
           <li>
             <Link href="/contact-us">Contact</Link>
