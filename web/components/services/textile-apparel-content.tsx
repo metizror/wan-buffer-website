@@ -266,7 +266,7 @@ export function TextileApparelContent() {
                   <div className="ta-multi-loc-t">{u.t}</div>
                   <div className="ta-multi-loc-sub">{u.sub}</div>
                   {u.lines > 0 && <div className="ta-multi-loc-stat">{u.lines} sewing lines</div>}
-                  {u.rolls && u.rolls > 0 && <div className="ta-multi-loc-stat">{u.rolls.toLocaleString()} rolls tracked</div>}
+                  {"rolls" in u && u.rolls > 0 && <div className="ta-multi-loc-stat">{u.rolls.toLocaleString()} rolls tracked</div>}
                   {!u.active && <div className="ta-multi-loc-stat">API integration</div>}
                 </div>
               ))}
