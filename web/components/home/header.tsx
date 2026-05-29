@@ -29,17 +29,17 @@ const MOB_MENU = [
         subs: [
           { label: "LangChain & LLM Integration", href: "/langchain-llm-integration" },
           { label: "ML-Powered Insights", href: "/ml-powered-insights" },
-          { label: "RPA & Process Mining", href: "/#ai-services" },
-          { label: "AI Governance & Ethics", href: "/#ai-services" },
+          { label: "RPA & Process Mining", href: "/rpa-process-mining" },
+          { label: "AI Governance & Ethics", href: "/ai-governance" },
         ],
       },
       {
         title: "Use Cases",
         subs: [
-          { label: "Smart Inventory Management", href: "/#ai-services" },
-          { label: "Automated Invoice Processing", href: "/#ai-services" },
-          { label: "Predictive Maintenance", href: "/#ai-services" },
-          { label: "AI-Assisted HR & Payroll", href: "/#ai-services" },
+          { label: "Smart Inventory Management", href: "/smart-inventory-management" },
+          { label: "Automated Invoice Processing", href: "/automated-invoice-processing" },
+          { label: "Predictive Maintenance", href: "/predictive-maintenance" },
+          { label: "AI-Assisted HR & Payroll", href: "/ai-hr-payroll" },
         ],
       },
     ],
@@ -63,20 +63,20 @@ const MOB_MENU = [
       {
         title: "Zoho & Salesforce",
         subs: [
-          { label: "Zoho CRM Implementation", href: "/#platforms" },
-          { label: "Zoho Books & Finance", href: "/#platforms" },
-          { label: "Salesforce CRM Setup", href: "/#platforms" },
-          { label: "Odoo ↔ Salesforce Sync", href: "/#platforms" },
+          { label: "Zoho CRM Implementation", href: "/zoho-crm-implementation" },
+          { label: "Zoho Books & Finance", href: "/zoho-books-finance" },
+          { label: "Salesforce CRM Setup", href: "/salesforce-crm-setup" },
+          { label: "Odoo ↔ Salesforce Sync", href: "/odoo-salesforce-sync" },
         ],
       },
       {
         title: "All ERP Services",
         subs: [
-          { label: "ERP Consulting", href: "/#platforms" },
-          { label: "Inventory & WMS", href: "/#platforms" },
-          { label: "Finance & Accounting", href: "/#platforms" },
-          { label: "HR & Payroll", href: "/#platforms" },
-          { label: "ERP Support & AMC", href: "/#platforms" },
+          { label: "ERP Consulting", href: "/erp-consulting" },
+          { label: "Inventory & WMS", href: "/inventory-wms" },
+          { label: "Finance & Accounting", href: "/finance-accounting" },
+          { label: "HR & Payroll", href: "/hr-payroll" },
+          { label: "ERP Support & AMC", href: "/erp-support-amc" },
         ],
       },
     ],
@@ -89,29 +89,29 @@ const MOB_MENU = [
       {
         title: "Magento",
         subs: [
-          { label: "Magento Development", href: "/#platforms" },
-          { label: "Magento → Odoo Integration", href: "/#platforms" },
-          { label: "Performance Optimisation", href: "/#platforms" },
-          { label: "Magento Security & AMC", href: "/#platforms" },
+          { label: "Magento Development", href: "/magento-development" },
+          { label: "Magento → Odoo Integration", href: "/magento-odoo-integration" },
+          { label: "Performance Optimisation", href: "/magento-performance" },
+          { label: "Magento Security & AMC", href: "/magento-security-amc" },
         ],
       },
       {
         title: "Shopify",
         subs: [
-          { label: "Shopify Store Setup", href: "/#platforms" },
-          { label: "Shopify → Odoo Integration", href: "/#platforms" },
-          { label: "Payment & Razorpay Setup", href: "/#platforms" },
-          { label: "Shopify Analytics + AI", href: "/#platforms" },
+          { label: "Shopify Store Setup", href: "/shopify-store-setup" },
+          { label: "Shopify → Odoo Integration", href: "/shopify-odoo-integration" },
+          { label: "Payment & Razorpay Setup", href: "/payment-razorpay-setup" },
+          { label: "Shopify Analytics + AI", href: "/shopify-analytics-ai" },
         ],
       },
       {
         title: "More Services",
         subs: [
-          { label: "AI Product Recommendations", href: "/#platforms" },
-          { label: "Multi-Warehouse + 3PL Sync", href: "/#platforms" },
-          { label: "AI Customer Support Bot", href: "/#platforms" },
-          { label: "Multi-Currency & Multi-Region", href: "/#platforms" },
-          { label: "eCommerce SEO & CRO", href: "/#platforms" },
+          { label: "AI Product Recommendations", href: "/ai-product-recommendations" },
+          { label: "Multi-Warehouse + 3PL Sync", href: "/multi-warehouse-3pl" },
+          { label: "AI Customer Support Bot", href: "/ai-customer-support-bot" },
+          { label: "Multi-Currency & Multi-Region", href: "/multi-currency-multi-region" },
+          { label: "eCommerce SEO & CRO", href: "/ecommerce-seo-cro" },
         ],
       },
     ],
@@ -124,28 +124,28 @@ const MOB_MENU = [
       {
         title: "Products & Goods",
         subs: [
-          { label: "Manufacturing", href: "/industries" },
-          { label: "Retail & eCommerce", href: "/industries" },
-          { label: "Steel & Metal Fabrication", href: "/industries" },
-          { label: "Textile & Apparel", href: "/industries" },
+          { label: "Manufacturing", href: "/manufacturing" },
+          { label: "Retail & eCommerce", href: "/retail-ecommerce" },
+          { label: "Steel & Metal Fabrication", href: "/steel-metal-fabrication" },
+          { label: "Textile & Apparel", href: "/textile-apparel" },
         ],
       },
       {
         title: "Operations & Services",
         subs: [
-          { label: "Logistics & 3PL", href: "/industries" },
-          { label: "Healthcare", href: "/industries" },
-          { label: "Finance & Services", href: "/industries" },
-          { label: "Construction & Projects", href: "/industries" },
+          { label: "Logistics & 3PL", href: "/logistics-3pl" },
+          { label: "Healthcare", href: "/healthcare" },
+          { label: "Finance & Services", href: "/finance-services" },
+          { label: "Construction & Projects", href: "/construction-projects" },
         ],
       },
       {
         title: "Markets",
         subs: [
-          { label: "Real Estate", href: "/industries" },
-          { label: "GCC & Middle East", href: "/industries" },
-          { label: "India Market", href: "/industries" },
-          { label: "USA & Europe", href: "/industries" },
+          { label: "Real Estate", href: "/real-estate" },
+          { label: "GCC & Middle East", href: "/gcc-middle-east" },
+          { label: "India Market", href: "/india-market" },
+          { label: "USA & Europe", href: "/usa-europe" },
         ],
       },
     ],
@@ -153,7 +153,7 @@ const MOB_MENU = [
 ];
 
 const MOB_PLAIN = [
-  { label: "Engagement", href: "/#models" },
+  { label: "Engagement", href: "/engagement" },
   { label: "Events", href: "/event" },
   { label: "Insights", href: "/blogs" },
   { label: "Contact", href: "/contact-us" },
@@ -349,51 +349,51 @@ export function HomeHeader(_props: HomeHeaderProps) {
                         <div className="mega-item-s">Real-time operational intelligence</div>
                       </div>
                     </Link>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/rpa-process-mining">
                       <div className="mega-icon">🔄</div>
                       <div>
                         <div className="mega-item-t">RPA &amp; Process Mining</div>
                         <div className="mega-item-s">Automate repetitive ERP tasks</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/ai-governance">
                       <div className="mega-icon">🛡️</div>
                       <div>
                         <div className="mega-item-t">AI Governance &amp; Ethics</div>
                         <div className="mega-item-s">Responsible AI deployment</div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                   <div className="mega-col">
                     <div className="mega-col-title">Use Cases</div>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/smart-inventory-management">
                       <div className="mega-icon">📦</div>
                       <div>
                         <div className="mega-item-t">Smart Inventory Management</div>
                         <div className="mega-item-s">AI-driven stock optimisation</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/automated-invoice-processing">
                       <div className="mega-icon">💰</div>
                       <div>
                         <div className="mega-item-t">Automated Invoice Processing</div>
                         <div className="mega-item-s">OCR + AI validation</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/predictive-maintenance">
                       <div className="mega-icon">🏭</div>
                       <div>
                         <div className="mega-item-t">Predictive Maintenance</div>
                         <div className="mega-item-s">AI-triggered work orders</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/ai-hr-payroll">
                       <div className="mega-icon">👥</div>
                       <div>
                         <div className="mega-item-t">AI-Assisted HR &amp; Payroll</div>
                         <div className="mega-item-s">Intelligent onboarding flows</div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
                 <div className="mega-footer">
@@ -475,34 +475,34 @@ export function HomeHeader(_props: HomeHeaderProps) {
 
                   <div className="mega-col erp-col">
                     <div className="mega-col-title">Zoho &amp; Salesforce</div>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/zoho-crm-implementation">
                       <div className="mega-icon">☁️</div>
                       <div>
                         <div className="mega-item-t">Zoho CRM Implementation</div>
                         <div className="mega-item-s">Sales pipeline &amp; automation</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/zoho-books-finance">
                       <div className="mega-icon">📋</div>
                       <div>
                         <div className="mega-item-t">Zoho Books &amp; Finance</div>
                         <div className="mega-item-s">Accounting, invoicing, GST</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/salesforce-crm-setup">
                       <div className="mega-icon">💼</div>
                       <div>
                         <div className="mega-item-t">Salesforce CRM Setup</div>
                         <div className="mega-item-s">B2B sales &amp; lead management</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/odoo-salesforce-sync">
                       <div className="mega-icon">🔀</div>
                       <div>
                         <div className="mega-item-t">Odoo ↔ Salesforce Sync</div>
                         <div className="mega-item-s">Bi-directional CRM + ERP bridge</div>
                       </div>
-                    </div>
+                    </Link>
                     <div className="mega-cs">
                       <div className="mega-cs-tag">Case Study</div>
                       <div className="mega-cs-t">Gulf Logistics automates 3PL ops with Zoho + AI agents</div>
@@ -512,41 +512,41 @@ export function HomeHeader(_props: HomeHeaderProps) {
 
                   <div className="mega-col erp-col">
                     <div className="mega-col-title">All ERP Services</div>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/erp-consulting">
                       <div className="mega-icon">🏗️</div>
                       <div>
                         <div className="mega-item-t">ERP Consulting</div>
                         <div className="mega-item-s">Scope, roadmap &amp; vendor selection</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/inventory-wms">
                       <div className="mega-icon">📦</div>
                       <div>
                         <div className="mega-item-t">Inventory &amp; WMS</div>
                         <div className="mega-item-s">Multi-warehouse, lot &amp; serial tracking</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/finance-accounting">
                       <div className="mega-icon">💳</div>
                       <div>
                         <div className="mega-item-t">Finance &amp; Accounting</div>
                         <div className="mega-item-s">Multi-currency, GCC VAT, GST e-invoicing</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/hr-payroll">
                       <div className="mega-icon">🧑‍💼</div>
                       <div>
                         <div className="mega-item-t">HR &amp; Payroll</div>
                         <div className="mega-item-s">Leave, attendance, WPS payroll</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/erp-support-amc">
                       <div className="mega-icon">🛠️</div>
                       <div>
                         <div className="mega-item-t">ERP Support &amp; AMC</div>
                         <div className="mega-item-s">SLA-based maintenance plans</div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="mega-col mega-cta-col">
@@ -597,34 +597,34 @@ export function HomeHeader(_props: HomeHeaderProps) {
                 <div className="mega-body mega-4col">
                   <div className="mega-col ecom-col">
                     <div className="mega-col-title">Magento</div>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/magento-development">
                       <div className="mega-icon">🏪</div>
                       <div>
                         <div className="mega-item-t">Magento Development</div>
                         <div className="mega-item-s">Custom themes &amp; module dev</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/magento-odoo-integration">
                       <div className="mega-icon">⚙️</div>
                       <div>
                         <div className="mega-item-t">Magento → Odoo Integration</div>
                         <div className="mega-item-s">Real-time inventory &amp; order sync</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/magento-performance">
                       <div className="mega-icon">🚀</div>
                       <div>
                         <div className="mega-item-t">Performance Optimisation</div>
                         <div className="mega-item-s">Core Web Vitals &amp; speed tuning</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/magento-security-amc">
                       <div className="mega-icon">🔐</div>
                       <div>
                         <div className="mega-item-t">Magento Security &amp; AMC</div>
                         <div className="mega-item-s">Patches, SSL, PCI compliance</div>
                       </div>
-                    </div>
+                    </Link>
                     <div className="mega-cs ecom-cs">
                       <div className="mega-cs-tag">Case Study</div>
                       <div className="mega-cs-t">Fashion brand scales to 10k orders/day via Magento + Odoo</div>
@@ -634,34 +634,34 @@ export function HomeHeader(_props: HomeHeaderProps) {
 
                   <div className="mega-col ecom-col">
                     <div className="mega-col-title">Shopify</div>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/shopify-store-setup">
                       <div className="mega-icon">🛍️</div>
                       <div>
                         <div className="mega-item-t">Shopify Store Setup</div>
                         <div className="mega-item-s">Theme dev, apps &amp; launch</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/shopify-odoo-integration">
                       <div className="mega-icon">🔗</div>
                       <div>
                         <div className="mega-item-t">Shopify → Odoo Integration</div>
                         <div className="mega-item-s">Inventory, orders &amp; customers</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/payment-razorpay-setup">
                       <div className="mega-icon">💳</div>
                       <div>
                         <div className="mega-item-t">Payment &amp; Razorpay Setup</div>
                         <div className="mega-item-s">Checkout flows &amp; subscriptions</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/shopify-analytics-ai">
                       <div className="mega-icon">📊</div>
                       <div>
                         <div className="mega-item-t">Shopify Analytics + AI</div>
                         <div className="mega-item-s">AI demand forecasting &amp; LTV</div>
                       </div>
-                    </div>
+                    </Link>
                     <div className="mega-cs ecom-cs">
                       <div className="mega-cs-tag">Case Study</div>
                       <div className="mega-cs-t">D2C brand grows 3× revenue with Shopify + Odoo + AI agents</div>
@@ -671,41 +671,41 @@ export function HomeHeader(_props: HomeHeaderProps) {
 
                   <div className="mega-col ecom-col">
                     <div className="mega-col-title">More Services</div>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/ai-product-recommendations">
                       <div className="mega-icon">🤖</div>
                       <div>
                         <div className="mega-item-t">AI Product Recommendations</div>
                         <div className="mega-item-s">Personalisation engine</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/multi-warehouse-3pl">
                       <div className="mega-icon">📦</div>
                       <div>
                         <div className="mega-item-t">Multi-Warehouse + 3PL Sync</div>
                         <div className="mega-item-s">Real-time fulfilment routing</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/ai-customer-support-bot">
                       <div className="mega-icon">💬</div>
                       <div>
                         <div className="mega-item-t">AI Customer Support Bot</div>
                         <div className="mega-item-s">Returns, FAQs, order tracking</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/multi-currency-multi-region">
                       <div className="mega-icon">🌍</div>
                       <div>
                         <div className="mega-item-t">Multi-Currency &amp; Multi-Region</div>
                         <div className="mega-item-s">UAE, India, GCC, EU localisation</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/ecommerce-seo-cro">
                       <div className="mega-icon">📈</div>
                       <div>
                         <div className="mega-item-t">eCommerce SEO &amp; CRO</div>
                         <div className="mega-item-s">GTM, schema, conversion rate</div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="mega-col mega-cta-col ecom-cta">
@@ -754,98 +754,98 @@ export function HomeHeader(_props: HomeHeaderProps) {
                 <div className="mega-body mega-4col">
                   <div className="mega-col">
                     <div className="mega-col-title">Products &amp; Goods</div>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/manufacturing">
                       <div className="mega-icon">🏭</div>
                       <div>
                         <div className="mega-item-t">Manufacturing</div>
                         <div className="mega-item-s">MRP, AI quality gates, predictive maintenance</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/retail-ecommerce">
                       <div className="mega-icon">🛒</div>
                       <div>
                         <div className="mega-item-t">Retail &amp; eCommerce</div>
                         <div className="mega-item-s">Omnichannel ERP, AI demand forecasting</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/steel-metal-fabrication">
                       <div className="mega-icon">🔩</div>
                       <div>
                         <div className="mega-item-t">Steel &amp; Metal Fabrication</div>
                         <div className="mega-item-s">Heat tracking, BOM, production scheduling</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/textile-apparel">
                       <div className="mega-icon">🧵</div>
                       <div>
                         <div className="mega-item-t">Textile &amp; Apparel</div>
                         <div className="mega-item-s">Style-level BOM, season planning, AI reorder</div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="mega-col">
                     <div className="mega-col-title">Operations &amp; Services</div>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/logistics-3pl">
                       <div className="mega-icon">🚚</div>
                       <div>
                         <div className="mega-item-t">Logistics &amp; 3PL</div>
                         <div className="mega-item-s">Smart WMS, route AI, SLA monitoring</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/healthcare">
                       <div className="mega-icon">🏥</div>
                       <div>
                         <div className="mega-item-t">Healthcare</div>
                         <div className="mega-item-s">Patient flow, billing automation, scheduling AI</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/finance-services">
                       <div className="mega-icon">💼</div>
                       <div>
                         <div className="mega-item-t">Finance &amp; Services</div>
                         <div className="mega-item-s">Auto-reconcile, fraud detection, lead scoring</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/construction-projects">
                       <div className="mega-icon">🏗️</div>
                       <div>
                         <div className="mega-item-t">Construction &amp; Projects</div>
                         <div className="mega-item-s">Project ERP, BOQ, subcontractor management</div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="mega-col">
                     <div className="mega-col-title">Property &amp; Markets</div>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/real-estate">
                       <div className="mega-icon">🏢</div>
                       <div>
                         <div className="mega-item-t">Real Estate</div>
                         <div className="mega-item-s">CRM, AI lead scoring, lease lifecycle</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/gcc-middle-east">
                       <div className="mega-icon">🌍</div>
                       <div>
                         <div className="mega-item-t">GCC &amp; Middle East</div>
                         <div className="mega-item-s">Arabic UI, GCC VAT, multi-currency</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/india-market">
                       <div className="mega-icon">🇮🇳</div>
                       <div>
                         <div className="mega-item-t">India Market</div>
                         <div className="mega-item-s">GST e-invoicing, Razorpay, MRP/manufacturing</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/usa-europe">
                       <div className="mega-icon">🇺🇸</div>
                       <div>
                         <div className="mega-item-t">USA &amp; Europe</div>
                         <div className="mega-item-s">Salesforce sync, GDPR, EU VAT, tax compliance</div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
 
                   <div
@@ -897,7 +897,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
           </li>
 
           <li>
-            <Link href="/#models">Engagement</Link>
+            <Link href="/engagement">Engagement</Link>
           </li>
           <li>
             <Link href="/event">Events</Link>

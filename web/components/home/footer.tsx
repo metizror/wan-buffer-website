@@ -34,16 +34,16 @@ export function HomeFooter() {
               <a href="/workflow-automation">Workflow Automation</a>
             </li>
             <li>
-              <a href="#">Predictive Analytics</a>
+              <a href="/predictive-analytics">Predictive Analytics</a>
             </li>
             <li>
-              <a href="#">AI Copilots</a>
+              <a href="/ai-chatbots">AI Copilots</a>
             </li>
             <li>
-              <a href="#">Document AI</a>
+              <a href="/document-ai">Document AI</a>
             </li>
             <li>
-              <a href="#">ERP + AI Integration</a>
+              <a href="/ai-agents-for-erp">ERP + AI Integration</a>
             </li>
           </ul>
         </div>
@@ -79,22 +79,22 @@ export function HomeFooter() {
           <div className="f-colt">Engagement</div>
           <ul className="f-links">
             <li>
-              <a href="#">Project-Based</a>
+              <a href="/project-based">Project-Based</a>
             </li>
             <li>
-              <a href="#">AI Agent + Human Team</a>
+              <a href="/ai-agent-human-team">AI Agent + Human Team</a>
             </li>
             <li>
-              <a href="#">Dedicated Team</a>
+              <a href="/dedicated-team">Dedicated Team</a>
             </li>
             <li>
-              <a href="#">Retainer Model</a>
+              <a href="/retainer-model">Retainer Model</a>
             </li>
             <li>
-              <a href="#">Hire ERP Developers</a>
+              <a href="/hire-erp-developers">Hire ERP Developers</a>
             </li>
             <li>
-              <a href="#">Hire AI Engineers</a>
+              <a href="/hire-ai-engineers">Hire AI Engineers</a>
             </li>
           </ul>
         </div>
