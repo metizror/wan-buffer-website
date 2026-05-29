@@ -8,20 +8,18 @@ import { HomeContact } from "@/components/home/contact";
 import { HomeFooter } from "@/components/home/footer";
 import { HomeWanny } from "@/components/home/wanny";
 import { BlogDetailContent } from "@/components/pages/blog-detail-content";
-import { getAllBlogSlugs, getBlogBySlug } from "@/lib/blogs-data";
+import { getPublishedBlogBySlug, getRelatedBlogs } from "@/lib/blog-service";
+
+export const dynamic = "force-dynamic";
 
 interface BlogDetailPageProps {
   params: Promise<{ slug: string }>;
 }
 
-export function generateStaticParams() {
-  return getAllBlogSlugs().map((slug) => ({ slug }));
-}
-
 export async function generateMetadata({ params }: BlogDetailPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = getBlogBySlug(slug);
-  if (!post || !post.detail) return { title: "Article not found | Wan Buffer" };
+  const post = await getPublishedBlogBySlug(slug);
+  if (!post) return { title: "Article not found | Wan Buffer" };
 
   return {
     title: `${post.title} | Wan Buffer Blog`,
@@ -39,14 +37,16 @@ export async function generateMetadata({ params }: BlogDetailPageProps): Promise
 
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const { slug } = await params;
-  const post = getBlogBySlug(slug);
-  if (!post || !post.detail) notFound();
+  const post = await getPublishedBlogBySlug(slug);
+  if (!post) notFound();
+
+  const related = await getRelatedBlogs(slug, post.category);
 
   return (
     <>
       <HomeLeadPopup />
       <HomeHeader />
-      <BlogDetailContent post={post} />
+      <BlogDetailContent post={post} related={related} />
       <HomeContact />
       <HomeFooter />
       <HomeWanny />

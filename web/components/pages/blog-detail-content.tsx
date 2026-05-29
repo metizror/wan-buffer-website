@@ -1,20 +1,15 @@
 import Link from "next/link";
 
-import { ArrowRightIcon, CheckIcon, MailIcon, PhoneCallIcon } from "@/components/services/odoo-service-icons";
-import { BLOG_POSTS, type BlogPost } from "@/lib/blogs-data";
+import { ArrowRightIcon, MailIcon, PhoneCallIcon } from "@/components/services/odoo-service-icons";
+import type { BlogDocument } from "@/lib/definitions";
+import { calculateReadTime } from "@/lib/read-time";
 
 interface BlogDetailContentProps {
-  post: BlogPost;
+  post: BlogDocument;
+  related: BlogDocument[];
 }
 
-export function BlogDetailContent({ post }: BlogDetailContentProps) {
-  const detail = post.detail!;
-
-  /* Related posts — same category, excluding current */
-  const related = BLOG_POSTS
-    .filter((p) => p.slug !== post.slug && p.category === post.category)
-    .slice(0, 3);
-
+export function BlogDetailContent({ post, related }: BlogDetailContentProps) {
   return (
     <main className="svc-page">
       {/* ═══ HERO ═══ */}
@@ -34,12 +29,8 @@ export function BlogDetailContent({ post }: BlogDetailContentProps) {
                   <span>{post.author}{post.authorRole ? ` · ${post.authorRole}` : ""}</span>
                 </li>
                 <li>
-                  <strong>Published</strong>
-                  <span>{post.date}</span>
-                </li>
-                <li>
                   <strong>Read time</strong>
-                  <span>{post.readTime}</span>
+                  <span>{calculateReadTime(post.content)}</span>
                 </li>
                 <li>
                   <strong>Category</strong>
@@ -64,29 +55,15 @@ export function BlogDetailContent({ post }: BlogDetailContentProps) {
         <div className="oi-evt-detail-layout">
           <article className="oi-evt-detail-article">
 
-            {/* Sections */}
-            {detail.sections.map((sec, i) => (
-              <div key={sec.heading} className={i === 0 ? undefined : "oi-evt-detail-block"}>
-                <h2 className="oi-evt-detail-h2">{sec.heading}</h2>
-                {sec.paragraphs?.map((p) => (
-                  <p key={p.slice(0, 50)} className="oi-evt-detail-p">{p}</p>
-                ))}
-                {sec.bullets && (
-                  <ul className="oi-evt-detail-list">
-                    {sec.bullets.map((b) => (
-                      <li key={b.slice(0, 40)}>{b}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
+            {/* Rich HTML content */}
+            <div className="blog-html-content" dangerouslySetInnerHTML={{ __html: post.content }} />
 
             {/* FAQs */}
-            {detail.faqs && detail.faqs.length > 0 && (
+            {post.faqs && post.faqs.length > 0 && (
               <div className="oi-evt-detail-block">
                 <h2 className="oi-evt-detail-h2">Frequently Asked Questions</h2>
                 <div className="bd-faqs">
-                  {detail.faqs.map((faq) => (
+                  {post.faqs.map((faq) => (
                     <div key={faq.q.slice(0, 40)} className="bd-faq">
                       <h3 className="bd-faq-q">{faq.q}</h3>
                       <p className="bd-faq-a">{faq.a}</p>
@@ -133,14 +110,11 @@ export function BlogDetailContent({ post }: BlogDetailContentProps) {
             <h2 className="bd-related-h rev">Related articles</h2>
             <div className="bd-related-grid rev">
               {related.map((rp) => {
-                const href = rp.detail ? `/blogs/${rp.slug}` : rp.externalUrl;
-                const isExternal = !rp.detail;
                 return (
                   <a
                     key={rp.slug}
                     className="bl-card"
-                    href={href}
-                    {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    href={`/blogs/${rp.slug}`}
                   >
                     <div className="bl-card-media">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -149,7 +123,6 @@ export function BlogDetailContent({ post }: BlogDetailContentProps) {
                     <div className="bl-card-body">
                       <div className="bl-card-meta">
                         <span className="bl-card-cat">{rp.category}</span>
-                        <span className="bl-card-date">{rp.date}</span>
                       </div>
                       <h3 className="bl-card-title">{rp.title}</h3>
                       <p className="bl-card-excerpt">{rp.excerpt}</p>

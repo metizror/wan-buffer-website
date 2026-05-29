@@ -1,11 +1,15 @@
 import Link from "next/link";
 
 import { ArrowRightIcon, MailIcon, PhoneCallIcon } from "@/components/services/odoo-service-icons";
-import { BLOG_COUNT } from "@/lib/blogs-data";
+import type { PaginatedResult } from "@/lib/definitions";
 
 import { BlogsListing } from "./blogs-listing";
 
-export function BlogsContent() {
+interface BlogsContentProps {
+  initialData: PaginatedResult;
+}
+
+export function BlogsContent({ initialData }: BlogsContentProps) {
   return (
     <main className="svc-page">
       <section className="oi-hero-lux" aria-labelledby="bl-hero-title">
@@ -49,9 +53,9 @@ export function BlogsContent() {
               <span className="oi-hero-lux-foot-sep">/</span>
               <span className="oi-hero-lux-foot-item">Manufacturing</span>
               <span className="oi-hero-lux-foot-sep">/</span>
-              <span className="oi-hero-lux-foot-item">Logistics</span>
+              <span className="oi-hero-lux-foot-item">AI & ML</span>
               <span className="oi-hero-lux-foot-sep">/</span>
-              <span className="oi-hero-lux-foot-item">AI</span>
+              <span className="oi-hero-lux-foot-item">CRM</span>
             </div>
           </div>
         </div>
@@ -70,7 +74,7 @@ export function BlogsContent() {
 
       <section className="bl-list section alt" id="blog-list" aria-label="Blog listings">
         <div className="bl-list-inner">
-          <BlogsListing />
+          <BlogsListing initialData={initialData} />
         </div>
       </section>
 
@@ -130,7 +134,7 @@ export function BlogsContent() {
               </div>
               <div className="oi-supp-label">All articles</div>
               <a className="oi-supp-title-v2" href="#blog-list">
-                {BLOG_COUNT} articles
+                {initialData.total} articles
               </a>
               <p className="oi-supp-body-v2">
                 Browse all insights on ERP, Odoo, manufacturing, and more.

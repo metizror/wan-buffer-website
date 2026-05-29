@@ -7,6 +7,9 @@ import { HomeContact } from "@/components/home/contact";
 import { HomeFooter } from "@/components/home/footer";
 import { HomeWanny } from "@/components/home/wanny";
 import { BlogsContent } from "@/components/pages/blogs-content";
+import { getPaginatedBlogs } from "@/lib/blog-service";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Blog | ERP, Odoo & AI Insights | Wan Buffer",
@@ -36,12 +39,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogsPage() {
+export default async function BlogsPage() {
+  const initial = await getPaginatedBlogs({ page: 1, limit: 10, published: true });
+
   return (
     <>
       <HomeLeadPopup />
       <HomeHeader />
-      <BlogsContent />
+      <BlogsContent initialData={initial} />
       <HomeContact />
       <HomeFooter />
       <HomeWanny />
