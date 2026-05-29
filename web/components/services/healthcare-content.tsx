@@ -284,7 +284,7 @@ export function HealthcareContent() {
                   <div className="hc-multi-loc-t">{fac.t}</div>
                   <div className="hc-multi-loc-sub">{fac.sub}</div>
                   {fac.beds > 0 && <div className="hc-multi-loc-stat">{fac.beds} beds</div>}
-                  {fac.ops && <div className="hc-multi-loc-stat">{fac.ops}</div>}
+                  {"ops" in fac && fac.ops && <div className="hc-multi-loc-stat">{fac.ops}</div>}
                   {!fac.active && <div className="hc-multi-loc-stat">LIS / PACS integration</div>}
                 </div>
               ))}
