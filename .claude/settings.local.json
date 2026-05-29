@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(git push *)",
-      "WebFetch(domain:wanbuffer.com)"
+      "WebFetch(domain:wanbuffer.com)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Fix TypeScript error: narrow ops property access with '\\\\''in'\\\\'' check *)"
     ]
   }
 }
