@@ -127,10 +127,10 @@ export function HomeFooter() {
       <div className="f-bot">
         <span className="f-copy">© 2026 Wan Buffer Services Pvt. Ltd. All rights reserved. AI-Powered ERP Solutions.</span>
         <div className="f-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Cookie Policy</a>
-          <a href="#">GDPR</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-use">Terms of Use</a>
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/gdpr">GDPR</a>
         </div>
       </div>
     </footer>

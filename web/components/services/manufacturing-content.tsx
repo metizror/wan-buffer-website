@@ -70,10 +70,10 @@ const FEATURES = [
 
 /* ── Process flow ── */
 const PROCESS = [
-  { icon: <SearchIcon />, t: "Assess", s: "Map production processes, BOMs & pain points" },
-  { icon: <SettingsIcon />, t: "Configure", s: "Set up MRP, routing, quality & AI models" },
-  { icon: <DatabaseIcon />, t: "Migrate", s: "Transfer product data with full BOM validation" },
-  { icon: <RocketIcon />, t: "Go live", s: "Deploy with training & parallel production run" },
+  { num: "01", icon: <SearchIcon />, t: "Assess", s: "Map production processes, BOMs & pain points" },
+  { num: "02", icon: <SettingsIcon />, t: "Configure", s: "Set up MRP, routing, quality & AI models" },
+  { num: "03", icon: <DatabaseIcon />, t: "Migrate", s: "Transfer product data with full BOM validation" },
+  { num: "04", icon: <RocketIcon />, t: "Go live", s: "Deploy with training & parallel production run" },
 ] as const;
 
 /* ── Multi-plant locations ── */
@@ -210,11 +210,14 @@ export function ManufacturingContent() {
           <div className="mf-proc-flow rev">
             {PROCESS.map((p, i) => (
               <div key={p.t} className="mf-proc-step-wrap">
-                {i > 0 && <div className="mf-proc-dots" />}
+                {i > 0 && <div className="mf-proc-dots" aria-hidden="true" />}
                 <div className="mf-proc-step">
                   <div className="mf-proc-step-icon">{p.icon}</div>
-                  <div className="mf-proc-step-t">{p.t}</div>
-                  <div className="mf-proc-step-s">{p.s}</div>
+                  <div className="mf-proc-step-body">
+                    <span className="mf-proc-step-num" aria-hidden="true">{p.num}</span>
+                    <div className="mf-proc-step-t">{p.t}</div>
+                    <div className="mf-proc-step-s">{p.s}</div>
+                  </div>
                 </div>
               </div>
             ))}
