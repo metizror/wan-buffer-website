@@ -1,0 +1,44 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        working-directory: ./web
+        run: npm ci
+
+      - name: Build
+        working-directory: ./web
+        run: |
+          cp /var/www/wan-buffer-website/web/.env.local .env.local
+          npm run build
+
+      - name: Deploy to production
+        run: |
+          rsync -av --delete \
+            --exclude='.env.local' \
+            --exclude='node_modules' \
+            ./web/ /var/www/wan-buffer-website/web/
+
+      - name: Install production dependencies
+        working-directory: /var/www/wan-buffer-website/web
+        run: npm ci --omit=dev
+
+      - name: Restart app
+        run: |
+          pm2 describe wan-buffer > /dev/null 2>&1 && pm2 restart wan-buffer || \
+          cd /var/www/wan-buffer-website/web && PORT=3007 pm2 start npm --name wan-buffer -- start
+          pm2 save
