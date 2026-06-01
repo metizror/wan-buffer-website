@@ -9,7 +9,7 @@ import { calculateReadTime } from "@/lib/read-time";
 
 type BlogCategory = (typeof BLOG_CATEGORIES)[number] | "All";
 
-const PER_PAGE = 10;
+const PER_PAGE = 12;
 
 function SearchIcon() {
   return (
