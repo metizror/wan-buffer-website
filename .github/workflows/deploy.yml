@@ -24,7 +24,7 @@ jobs:
         working-directory: ./web
         run: |
           cp /var/www/wan-buffer-website/web/.env.local .env.local
-          npm run build
+          npx next build --webpack
 
       - name: Deploy to production
         run: |
