@@ -56,6 +56,7 @@ const MOB_MENU = [
           { label: "Odoo Customisation", href: "/odoo/odoo-customization-and-installation" },
           { label: "Odoo Migration", href: "/odoo/migration" },
           { label: "Odoo Integration", href: "/odoo/odoo-erp-integration" },
+          { label: "Odoo Apps", href: "/odoo/apps" },
           { label: "Odoo Training", href: "/odoo/training" },
           { label: "Odoo Hosting", href: "/odoo/hosting" },
         ],
@@ -450,6 +451,13 @@ export function HomeHeader(_props: HomeHeaderProps) {
                       <div>
                         <div className="mega-item-t">Odoo Integration</div>
                         <div className="mega-item-s">API, Shopify, Salesforce &amp; more</div>
+                      </div>
+                    </Link>
+                    <Link className="mega-item" href="/odoo/apps">
+                      <div className="mega-icon">📦</div>
+                      <div>
+                        <div className="mega-item-t">Odoo Apps</div>
+                        <div className="mega-item-s">31 modules on Odoo Apps Store</div>
                       </div>
                     </Link>
                     <Link className="mega-item" href="/odoo/training">
