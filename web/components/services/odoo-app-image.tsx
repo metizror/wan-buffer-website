@@ -55,7 +55,7 @@ export function OdooAppImage({
   const imageStyle = fixedSize
     ? style
     : cover
-      ? { width: "100%", height: "100%", objectFit: "cover", ...style }
+      ? { width: "100%", height: "100%", objectFit: "cover" as const, ...style }
       : { width: "100%", height: "auto", ...style };
 
   const placeholderStyle = cover
