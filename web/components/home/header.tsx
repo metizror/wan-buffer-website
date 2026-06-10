@@ -153,10 +153,57 @@ const MOB_MENU = [
   },
 ];
 
+const MOB_MENU_EXTRA = [
+  {
+    label: "Engagement",
+    href: "/engagement",
+    accent: null,
+    sections: [
+      {
+        title: "Engagement Models",
+        subs: [
+          { label: "Project-Based", href: "/engagement" },
+          { label: "AI Agent + Human Team", href: "/engagement" },
+          { label: "Dedicated Team", href: "/engagement" },
+          { label: "Retainer Model", href: "/engagement" },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Insights",
+    href: "/blogs",
+    accent: null,
+    sections: [
+      {
+        title: "Blog & Articles",
+        subs: [
+          { label: "AI Agents in Odoo 17", href: "/blogs" },
+          { label: "AI-Enabled vs Traditional ERP", href: "/blogs" },
+          { label: "Odoo vs SAP for AI Automation", href: "/blogs" },
+        ],
+      },
+      {
+        title: "Case Studies",
+        subs: [
+          { label: "Fabric Mill — 40% Lead Time Cut", href: "/case-studies" },
+          { label: "Gulf Logistics — 3PL Automation", href: "/case-studies" },
+          { label: "Arabian Properties — AI CRM", href: "/case-studies" },
+        ],
+      },
+      {
+        title: "Company",
+        subs: [
+          { label: "Events & Webinars", href: "/event" },
+          { label: "Careers & Recruitment", href: "/engagement" },
+        ],
+      },
+    ],
+  },
+];
+
 const MOB_PLAIN = [
-  { label: "Engagement", href: "/engagement" },
   { label: "Events", href: "/event" },
-  { label: "Insights", href: "/blogs" },
   { label: "Contact", href: "/contact-us" },
 ];
 
@@ -181,7 +228,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
         </button>
 
         {/* Accordion categories */}
-        {MOB_MENU.map((item, idx) => (
+        {[...MOB_MENU, ...MOB_MENU_EXTRA].map((item, idx) => (
           <div key={item.label}>
             <div
               className={`mob-cat${openIdx === idx ? " open" : ""}`}
@@ -904,14 +951,450 @@ export function HomeHeader(_props: HomeHeaderProps) {
             </div>
           </li>
 
+          {/* Engagement Mega Menu */}
           <li>
             <Link href="/engagement">Engagement</Link>
+            <div className="n-mega-wrap">
+              <div className="n-mega n-mega-erp" style={{ width: 900 }}>
+                <div className="mega-top erp-top">
+                  <div className="mega-tag">How We Work</div>
+                  <div className="mega-title">4 Ways to Engage With Wan Buffer</div>
+                  <div className="mega-sub">
+                    Choose the model that fits your stage, budget, and goals — or mix them as your needs evolve. Every
+                    model includes a dedicated point of contact and pre-agreed KPIs.
+                  </div>
+                </div>
+                <div className="mega-body mega-4col">
+                  {/* Model 01: Project-Based */}
+                  <div className="mega-col erp-col">
+                    <div
+                      className="mega-col-title"
+                      style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}
+                    >
+                      Model 01{" "}
+                      <span
+                        style={{
+                          fontSize: 9,
+                          color: "rgba(255,255,255,.25)",
+                          letterSpacing: 0,
+                          textTransform: "none",
+                          fontFamily: "var(--B)",
+                        }}
+                      >
+                        Fixed Price
+                      </span>
+                    </div>
+                    <div style={{ fontSize: 22, marginBottom: 10 }}>🎯</div>
+                    <div className="mega-item-t" style={{ fontSize: 13, marginBottom: 6 }}>
+                      Project-Based
+                    </div>
+                    <p
+                      style={{
+                        fontFamily: "var(--B)",
+                        fontSize: 11,
+                        fontWeight: 300,
+                        color: "rgba(255,255,255,.45)",
+                        lineHeight: 1.65,
+                        marginBottom: 14,
+                      }}
+                    >
+                      Fixed scope, fixed price, defined delivery — ideal for one-time ERP implementations or AI module
+                      builds.
+                    </p>
+                    <div className="mega-item" style={{ padding: "6px 0" }}>
+                      <div
+                        className="mega-icon"
+                        style={{ background: "rgba(216,28,85,.1)", borderColor: "rgba(216,28,85,.2)" }}
+                      >
+                        📋
+                      </div>
+                      <div>
+                        <div className="mega-item-t">Defined scope &amp; milestones</div>
+                        <div className="mega-item-s">Transparent fixed-price contract</div>
+                      </div>
+                    </div>
+                    <div className="mega-item" style={{ padding: "6px 0" }}>
+                      <div
+                        className="mega-icon"
+                        style={{ background: "rgba(216,28,85,.1)", borderColor: "rgba(216,28,85,.2)" }}
+                      >
+                        🛡️
+                      </div>
+                      <div>
+                        <div className="mega-item-t">3-month post-launch support</div>
+                        <div className="mega-item-s">Included at no extra cost</div>
+                      </div>
+                    </div>
+                    <Link
+                      className="mega-footer-a"
+                      href="/contact-us"
+                      style={{ marginTop: 14, fontSize: 10, color: "var(--red)" }}
+                    >
+                      Start a Project →
+                    </Link>
+                  </div>
+
+                  {/* Model 02: AI Agent + Human Team — FEATURED */}
+                  <div
+                    className="mega-col"
+                    style={{
+                      background: "linear-gradient(160deg,rgba(0,194,255,.07),var(--navy2))",
+                      borderLeft: "1px solid rgba(0,194,255,.2)",
+                      position: "relative",
+                    }}
+                  >
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 14,
+                        right: 14,
+                        fontFamily: "var(--H)",
+                        fontSize: 7,
+                        fontWeight: 700,
+                        letterSpacing: ".15em",
+                        textTransform: "uppercase",
+                        background: "var(--ai)",
+                        color: "var(--navy)",
+                        padding: "3px 8px",
+                        borderRadius: 100,
+                      }}
+                    >
+                      ⚡ New
+                    </div>
+                    <div className="mega-col-title" style={{ color: "var(--ai)" }}>
+                      Model 02
+                    </div>
+                    <div style={{ fontSize: 22, marginBottom: 10 }}>🤖</div>
+                    <div className="mega-item-t" style={{ fontSize: 13, marginBottom: 6, color: "var(--ai)" }}>
+                      AI Agent + Human Team
+                    </div>
+                    <p
+                      style={{
+                        fontFamily: "var(--B)",
+                        fontSize: 11,
+                        fontWeight: 300,
+                        color: "rgba(255,255,255,.45)",
+                        lineHeight: 1.65,
+                        marginBottom: 14,
+                      }}
+                    >
+                      Our most innovative model — AI agents handle repetitive ERP execution while senior engineers focus
+                      on strategy and custom logic.
+                    </p>
+                    <div className="mega-item" style={{ padding: "6px 0" }}>
+                      <div className="mega-icon">⚡</div>
+                      <div>
+                        <div className="mega-item-t">50–70% lower cost</div>
+                        <div className="mega-item-s">vs. fully human teams</div>
+                      </div>
+                    </div>
+                    <div className="mega-item" style={{ padding: "6px 0" }}>
+                      <div className="mega-icon">📊</div>
+                      <div>
+                        <div className="mega-item-t">Full transparency dashboard</div>
+                        <div className="mega-item-s">Audit logs &amp; agent activity</div>
+                      </div>
+                    </div>
+                    <Link
+                      className="mega-footer-a"
+                      href="/contact-us"
+                      style={{ marginTop: 14, fontSize: 10, color: "var(--ai)" }}
+                    >
+                      Explore This Model →
+                    </Link>
+                  </div>
+
+                  {/* Model 03: Dedicated Team */}
+                  <div className="mega-col erp-col" style={{ position: "relative" }}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 14,
+                        right: 14,
+                        fontFamily: "var(--H)",
+                        fontSize: 7,
+                        fontWeight: 700,
+                        letterSpacing: ".15em",
+                        textTransform: "uppercase",
+                        background: "rgba(255,255,255,.1)",
+                        color: "rgba(255,255,255,.7)",
+                        padding: "3px 8px",
+                        borderRadius: 100,
+                      }}
+                    >
+                      Most Popular
+                    </div>
+                    <div className="mega-col-title">Model 03</div>
+                    <div style={{ fontSize: 22, marginBottom: 10 }}>👥</div>
+                    <div className="mega-item-t" style={{ fontSize: 13, marginBottom: 6 }}>
+                      Dedicated Team
+                    </div>
+                    <p
+                      style={{
+                        fontFamily: "var(--B)",
+                        fontSize: 11,
+                        fontWeight: 300,
+                        color: "rgba(255,255,255,.45)",
+                        lineHeight: 1.65,
+                        marginBottom: 14,
+                      }}
+                    >
+                      Your offshore ERP + AI engineering squad — 2–15 engineers, fully dedicated, scale up or down
+                      monthly.
+                    </p>
+                    <div className="mega-item" style={{ padding: "6px 0" }}>
+                      <div
+                        className="mega-icon"
+                        style={{ background: "rgba(216,28,85,.1)", borderColor: "rgba(216,28,85,.2)" }}
+                      >
+                        👥
+                      </div>
+                      <div>
+                        <div className="mega-item-t">Direct Slack / Jira standups</div>
+                        <div className="mega-item-s">Senior tech lead + AI specialist</div>
+                      </div>
+                    </div>
+                    <div className="mega-item" style={{ padding: "6px 0" }}>
+                      <div
+                        className="mega-icon"
+                        style={{ background: "rgba(216,28,85,.1)", borderColor: "rgba(216,28,85,.2)" }}
+                      >
+                        📈
+                      </div>
+                      <div>
+                        <div className="mega-item-t">Flexible team scaling</div>
+                        <div className="mega-item-s">Month-to-month adjustments</div>
+                      </div>
+                    </div>
+                    <Link
+                      className="mega-footer-a"
+                      href="/contact-us"
+                      style={{ marginTop: 14, fontSize: 10, color: "var(--red)" }}
+                    >
+                      Build My Team →
+                    </Link>
+                  </div>
+
+                  {/* Model 04: Retainer */}
+                  <div className="mega-col mega-cta-col">
+                    <div className="mega-cta-label">Model 04</div>
+                    <div style={{ fontSize: 22, marginBottom: 8 }}>🔄</div>
+                    <div className="mega-cta-h">Retainer Model</div>
+                    <p className="mega-cta-body">
+                      Ongoing ERP support, AI optimisation, and managed platform evolution — a long-term strategic
+                      partnership with SLA guarantees.
+                    </p>
+                    <div className="mega-cta-stat">
+                      <div className="mega-cta-stat-n">24h</div>
+                      <div className="mega-cta-stat-l">Priority bug fix SLA</div>
+                    </div>
+                    <div className="mega-cta-stat">
+                      <div className="mega-cta-stat-n">4×</div>
+                      <div className="mega-cta-stat-l">Quarterly AI + ERP health audits/yr</div>
+                    </div>
+                    <Link className="mega-cta-btn" href="/contact-us">
+                      Get a Retainer →
+                    </Link>
+                  </div>
+                </div>
+                <div className="mega-footer">
+                  <span className="mega-footer-t">
+                    Project-Based · AI Agent + Human · Dedicated Team · Retainer
+                  </span>
+                  <Link className="mega-footer-a" href="/engagement">
+                    Compare All Models →
+                  </Link>
+                </div>
+              </div>
+            </div>
           </li>
+
           <li>
             <Link href="/event">Events</Link>
           </li>
+
+          {/* Insights Mega Menu */}
           <li>
             <Link href="/blogs">Insights</Link>
+            <div className="n-mega-wrap">
+              <div className="n-mega n-mega-erp" style={{ width: 860 }}>
+                <div className="mega-top" style={{ borderBottomColor: "rgba(255,255,255,.08)" }}>
+                  <div className="mega-tag" style={{ color: "rgba(255,255,255,.5)" }}>
+                    Knowledge &amp; Resources
+                  </div>
+                  <div className="mega-title">Insights, Guides &amp; More</div>
+                  <div className="mega-sub">
+                    Technical articles, case studies, career opportunities, and downloadable resources from the Wan
+                    Buffer team.
+                  </div>
+                </div>
+                <div className="mega-body mega-4col">
+                  {/* Col 1: Blog & Articles */}
+                  <div className="mega-col">
+                    <div className="mega-col-title">Blog &amp; Articles</div>
+                    <Link className="mega-item" href="/blogs">
+                      <div className="mega-icon">🤖</div>
+                      <div>
+                        <div className="mega-item-t">AI Agents in Odoo 17</div>
+                        <div className="mega-item-s">Practical build guide · Feb 2026</div>
+                      </div>
+                    </Link>
+                    <Link className="mega-item" href="/blogs">
+                      <div className="mega-icon">📊</div>
+                      <div>
+                        <div className="mega-item-t">AI-Enabled vs Traditional ERP</div>
+                        <div className="mega-item-s">100 implementation data points</div>
+                      </div>
+                    </Link>
+                    <Link className="mega-item" href="/blogs">
+                      <div className="mega-icon">🏭</div>
+                      <div>
+                        <div className="mega-item-t">AI Replacing Manual ERP Entry</div>
+                        <div className="mega-item-s">Manufacturing deep-dive · Feb 2026</div>
+                      </div>
+                    </Link>
+                    <Link className="mega-item" href="/blogs">
+                      <div className="mega-icon">📝</div>
+                      <div>
+                        <div className="mega-item-t">Odoo vs SAP for AI Automation</div>
+                        <div className="mega-item-s">Comparison guide for mid-market</div>
+                      </div>
+                    </Link>
+                    <Link className="mega-footer-a" href="/blogs" style={{ marginTop: 12, fontSize: 10 }}>
+                      All Articles →
+                    </Link>
+                  </div>
+
+                  {/* Col 2: Case Studies */}
+                  <div className="mega-col">
+                    <div className="mega-col-title">Case Studies</div>
+                    <Link className="mega-item" href="/case-studies">
+                      <div className="mega-icon">🧵</div>
+                      <div>
+                        <div className="mega-item-t">Fabric Mill — 40% Lead Time Cut</div>
+                        <div className="mega-item-s">Manufacturing · Odoo MRP + AI · India</div>
+                      </div>
+                    </Link>
+                    <Link className="mega-item" href="/case-studies">
+                      <div className="mega-icon">🚚</div>
+                      <div>
+                        <div className="mega-item-t">Gulf Logistics — 3PL Automation</div>
+                        <div className="mega-item-s">Logistics · Zoho + AI Agents · Kuwait</div>
+                      </div>
+                    </Link>
+                    <Link className="mega-item" href="/case-studies">
+                      <div className="mega-icon">🏢</div>
+                      <div>
+                        <div className="mega-item-t">Arabian Properties — AI CRM</div>
+                        <div className="mega-item-s">Real Estate · Odoo · Dubai UAE</div>
+                      </div>
+                    </Link>
+                    <Link className="mega-item" href="/case-studies">
+                      <div className="mega-icon">💊</div>
+                      <div>
+                        <div className="mega-item-t">PharmaCore — Compliance ERP</div>
+                        <div className="mega-item-s">Healthcare · Odoo 17 · Hyderabad</div>
+                      </div>
+                    </Link>
+                    <Link className="mega-footer-a" href="/case-studies" style={{ marginTop: 12, fontSize: 10 }}>
+                      All Case Studies →
+                    </Link>
+                  </div>
+
+                  {/* Col 3: Company & Careers */}
+                  <div className="mega-col">
+                    <div className="mega-col-title">Company &amp; Careers</div>
+                    <div className="mega-item">
+                      <div className="mega-icon">🏢</div>
+                      <div>
+                        <div className="mega-item-t">About Wan Buffer</div>
+                        <div className="mega-item-s">Our story, mission &amp; team</div>
+                      </div>
+                    </div>
+                    <div className="mega-item">
+                      <div className="mega-icon">🤝</div>
+                      <div>
+                        <div className="mega-item-t">Partner With Us</div>
+                        <div className="mega-item-s">Reseller &amp; referral programmes</div>
+                      </div>
+                    </div>
+                    <div className="mega-item">
+                      <div className="mega-icon">💼</div>
+                      <div>
+                        <div className="mega-item-t">Careers &amp; Recruitment</div>
+                        <div className="mega-item-s">Open roles in AI, ERP &amp; dev</div>
+                      </div>
+                    </div>
+                    <div className="mega-item">
+                      <div className="mega-icon">🎓</div>
+                      <div>
+                        <div className="mega-item-t">Wanbufferians</div>
+                        <div className="mega-item-s">Culture, team &amp; life at WB</div>
+                      </div>
+                    </div>
+                    <Link className="mega-item" href="/event">
+                      <div className="mega-icon">📅</div>
+                      <div>
+                        <div className="mega-item-t">Events &amp; Webinars</div>
+                        <div className="mega-item-s">Odoo community days &amp; expos</div>
+                      </div>
+                    </Link>
+                  </div>
+
+                  {/* Col 4: Resources CTA */}
+                  <div
+                    className="mega-col mega-cta-col"
+                    style={{
+                      background: "linear-gradient(160deg,rgba(255,255,255,.04),rgba(11,22,39,.95))",
+                      borderLeftColor: "rgba(255,255,255,.08)",
+                    }}
+                  >
+                    <div className="mega-cta-label" style={{ color: "rgba(255,255,255,.4)" }}>
+                      Free Resources
+                    </div>
+                    <div className="mega-cta-h">Downloadable Guides</div>
+                    <p className="mega-cta-body">
+                      Practical tools to help you plan your ERP and AI transformation — no fluff, no sales pitch.
+                    </p>
+                    <div className="mega-cta-stat" style={{ cursor: "pointer" }}>
+                      <div className="mega-cta-stat-n" style={{ color: "var(--ai)", fontSize: 13, fontWeight: 700 }}>
+                        📋 AI ERP Readiness Checklist
+                      </div>
+                      <div className="mega-cta-stat-l">Is your business ready for AI + ERP? Free PDF</div>
+                    </div>
+                    <div className="mega-cta-stat" style={{ cursor: "pointer" }}>
+                      <div className="mega-cta-stat-n" style={{ color: "var(--ai)", fontSize: 13, fontWeight: 700 }}>
+                        📊 ROI Calculator Template
+                      </div>
+                      <div className="mega-cta-stat-l">Estimate your ERP automation ROI in 5 mins</div>
+                    </div>
+                    <div className="mega-cta-stat" style={{ cursor: "pointer" }}>
+                      <div className="mega-cta-stat-n" style={{ color: "var(--ai)", fontSize: 13, fontWeight: 700 }}>
+                        🆚 Odoo vs SAP Comparison
+                      </div>
+                      <div className="mega-cta-stat-l">Feature-by-feature breakdown for mid-market</div>
+                    </div>
+                    <Link
+                      className="mega-cta-btn"
+                      href="/contact-us"
+                      style={{
+                        background: "rgba(255,255,255,.1)",
+                        border: "1px solid rgba(255,255,255,.15)",
+                        color: "var(--white)",
+                      }}
+                    >
+                      Get Free Resources →
+                    </Link>
+                  </div>
+                </div>
+                <div className="mega-footer">
+                  <span className="mega-footer-t">Blog · Case Studies · Careers · Events · Downloads</span>
+                  <Link className="mega-footer-a" href="/blogs">
+                    All Insights →
+                  </Link>
+                </div>
+              </div>
+            </div>
           </li>
           <li>
             <Link href="/contact-us">Contact</Link>

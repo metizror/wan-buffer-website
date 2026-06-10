@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { jwtVerify } from "jose";
+import { lookupRedirect } from "@/lib/redirect-lookup";
 
 const secretKey = process.env.SESSION_SECRET!;
 const encodedKey = new TextEncoder().encode(secretKey);
@@ -20,7 +21,7 @@ async function decryptToken(token: string | undefined) {
 export async function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname;
 
-  // Protect /admin routes except /admin/login
+  // ── Admin auth guard ──
   if (path.startsWith("/admin") && !path.startsWith("/admin/login")) {
     const token = request.cookies.get("session")?.value;
     const session = await decryptToken(token);
@@ -29,7 +30,6 @@ export async function proxy(request: NextRequest) {
     }
   }
 
-  // If logged in and visiting /admin/login, redirect to dashboard
   if (path === "/admin/login") {
     const token = request.cookies.get("session")?.value;
     const session = await decryptToken(token);
@@ -38,9 +38,32 @@ export async function proxy(request: NextRequest) {
     }
   }
 
+  // ── URL redirect lookup (skip API, admin, static, and file requests) ──
+  if (
+    !path.startsWith("/api/") &&
+    !path.startsWith("/admin") &&
+    !path.startsWith("/_next/") &&
+    !path.includes(".")
+  ) {
+    try {
+      const match = await lookupRedirect(path);
+      if (match) {
+        const destination = match.newUrl.startsWith("http")
+          ? match.newUrl
+          : new URL(match.newUrl, request.url).toString();
+
+        return NextResponse.redirect(destination, {
+          status: match.isPermanent ? 301 : 302,
+        });
+      }
+    } catch {
+      // If lookup fails, continue normally
+    }
+  }
+
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: ["/admin/:path*", "/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };
