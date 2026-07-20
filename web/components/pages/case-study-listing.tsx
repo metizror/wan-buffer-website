@@ -15,8 +15,6 @@ import {
   type CaseStudyTechnology,
 } from "@/lib/case-study-data";
 
-import { ArrowRightIcon } from "@/components/services/odoo-service-icons";
-
 type FilterTab = "industry" | "region" | "technology";
 
 interface CaseStudyListingProps {
@@ -137,42 +135,36 @@ export function CaseStudyListing({ studies }: CaseStudyListingProps) {
           </button>
         </div>
       ) : (
-        <ul className="oi-cs-list">
+        <div className="cs-portfolio-grid">
           {filtered.map((cs, index) => (
-            <li key={cs.slug}>
-              <Link href={caseStudyPath(cs.slug)} className="oi-cs-card" aria-label={`View case study: ${cs.title}`}>
-                <div className="oi-cs-card-visual">
-                  <Image
-                    src={cs.imageSrc}
-                    alt=""
-                    fill
-                    className="oi-cs-card-img"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    priority={index < 2}
-                  />
-                  <div className="oi-cs-card-visual-shade" aria-hidden="true" />
-                  <span className="oi-cs-client">{cs.clientLabel}</span>
+            <Link
+              key={cs.slug}
+              href={caseStudyPath(cs.slug)}
+              className="cs-portfolio-card"
+              aria-label={`View case study: ${cs.title}`}
+            >
+              <div className="cs-portfolio-card-img-wrap">
+                <Image
+                  src={cs.imageSrc}
+                  alt={cs.title}
+                  width={800}
+                  height={450}
+                  className="cs-portfolio-card-img"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority={index < 3}
+                />
+                <div className="cs-portfolio-card-overlay">
+                  <span className="cs-portfolio-card-view">View Case Study</span>
                 </div>
-                <div className="oi-cs-card-body">
-                  <h2 className="oi-cs-card-title">{cs.title}</h2>
-                  <p className="oi-cs-card-excerpt">{cs.excerpt}</p>
-                  <div className="oi-cs-card-stats">
-                    {cs.metrics.map((m) => (
-                      <div key={m.label} className="oi-cs-stat">
-                        <span className="oi-cs-stat-v">{m.value}</span>
-                        <span className="oi-cs-stat-l">{m.label}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <span className="oi-cs-card-cta">
-                    View case study
-                    <ArrowRightIcon />
-                  </span>
-                </div>
-              </Link>
-            </li>
+              </div>
+              <div className="cs-portfolio-card-body">
+                <span className="cs-portfolio-card-badge">{cs.clientLabel}</span>
+                <h2 className="cs-portfolio-card-title">{cs.title}</h2>
+                <p className="cs-portfolio-card-info">{cs.excerpt}</p>
+              </div>
+            </Link>
           ))}
-        </ul>
+        </div>
       )}
     </>
   );
