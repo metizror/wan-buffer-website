@@ -60,6 +60,7 @@ const MODELS = [
     timeline: "4–16 weeks",
     teamSize: "2–8 engineers",
     cta: "Start a Project",
+    href: "/project-based",
     color: "ai" as const,
   },
   {
@@ -81,6 +82,7 @@ const MODELS = [
     timeline: "Ongoing — monthly",
     teamSize: "AI agents + 1–3 engineers",
     cta: "Explore This Model",
+    href: "/ai-agent-human-team",
     color: "green" as const,
   },
   {
@@ -102,6 +104,7 @@ const MODELS = [
     timeline: "Ongoing — monthly",
     teamSize: "2–15 engineers",
     cta: "Build My Team",
+    href: "/dedicated-team",
     color: "purple" as const,
   },
   {
@@ -123,6 +126,7 @@ const MODELS = [
     timeline: "6–12 month contracts",
     teamSize: "1–4 engineers",
     cta: "Get a Retainer",
+    href: "/retainer-model",
     color: "red" as const,
   },
 ] as const;
@@ -254,10 +258,10 @@ export function EngagementContent() {
                       <span>{m.teamSize}</span>
                     </div>
                   </div>
-                  <a className="eg-model-cta" href="#contact">
+                  <Link className="eg-model-cta" href={m.href}>
                     <span>{m.cta}</span>
                     <ArrowRightIcon />
-                  </a>
+                  </Link>
                 </div>
                 <div className="eg-model-right">
                   <div className="eg-model-section">

@@ -162,10 +162,10 @@ const MOB_MENU_EXTRA = [
       {
         title: "Engagement Models",
         subs: [
-          { label: "Project-Based", href: "/engagement" },
-          { label: "AI Agent + Human Team", href: "/engagement" },
-          { label: "Dedicated Team", href: "/engagement" },
-          { label: "Retainer Model", href: "/engagement" },
+          { label: "Project-Based", href: "/project-based" },
+          { label: "AI Agent + Human Team", href: "/ai-agent-human-team" },
+          { label: "Dedicated Team", href: "/dedicated-team" },
+          { label: "Retainer Model", href: "/retainer-model" },
         ],
       },
     ],
@@ -178,24 +178,24 @@ const MOB_MENU_EXTRA = [
       {
         title: "Blog & Articles",
         subs: [
-          { label: "AI Agents in Odoo 17", href: "/blogs" },
-          { label: "AI-Enabled vs Traditional ERP", href: "/blogs" },
-          { label: "Odoo vs SAP for AI Automation", href: "/blogs" },
+          { label: "Essential Odoo Integrations for 2025", href: "/blogs/essential-odoo-integrations-u-s-companies-need-in-2025-shopify-amazon-quickbooks" },
+          { label: "Why Generic ERP Fails for Oil & Gas", href: "/blogs/why-generic-erp-fails-for-oil-and-gas-suppliers" },
+          { label: "Dedicated Teams vs In-House Hiring", href: "/blogs/dedicated-engineering-teams-vs-in-house-hiring-for-erp-projects" },
         ],
       },
       {
         title: "Case Studies",
         subs: [
-          { label: "Fabric Mill — 40% Lead Time Cut", href: "/case-studies" },
-          { label: "Gulf Logistics — 3PL Automation", href: "/case-studies" },
-          { label: "Arabian Properties — AI CRM", href: "/case-studies" },
+          { label: "Textile Industry — Odoo ERP", href: "/case-study/odoo-erp-implementation-in-the-textile-industry" },
+          { label: "Steel Product Customization", href: "/case-study/odoo-steel-solution" },
+          { label: "eCommerce Retailer Integration", href: "/case-study/odoo-integration-ecommerce-retailer" },
         ],
       },
       {
         title: "Company",
         subs: [
           { label: "Events & Webinars", href: "/event" },
-          { label: "Careers & Recruitment", href: "/engagement" },
+          { label: "Careers & Recruitment", href: "/wanbufferians" },
         ],
       },
     ],
@@ -1027,7 +1027,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                     </div>
                     <Link
                       className="mega-footer-a"
-                      href="/contact-us"
+                      href="/project-based"
                       style={{ marginTop: 14, fontSize: 10, color: "var(--red)" }}
                     >
                       Start a Project →
@@ -1097,7 +1097,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                     </div>
                     <Link
                       className="mega-footer-a"
-                      href="/contact-us"
+                      href="/ai-agent-human-team"
                       style={{ marginTop: 14, fontSize: 10, color: "var(--ai)" }}
                     >
                       Explore This Model →
@@ -1168,7 +1168,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                     </div>
                     <Link
                       className="mega-footer-a"
-                      href="/contact-us"
+                      href="/dedicated-team"
                       style={{ marginTop: 14, fontSize: 10, color: "var(--red)" }}
                     >
                       Build My Team →
@@ -1192,7 +1192,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                       <div className="mega-cta-stat-n">4×</div>
                       <div className="mega-cta-stat-l">Quarterly AI + ERP health audits/yr</div>
                     </div>
-                    <Link className="mega-cta-btn" href="/contact-us">
+                    <Link className="mega-cta-btn" href="/retainer-model">
                       Get a Retainer →
                     </Link>
                   </div>
@@ -1232,32 +1232,32 @@ export function HomeHeader(_props: HomeHeaderProps) {
                   {/* Col 1: Blog & Articles */}
                   <div className="mega-col">
                     <div className="mega-col-title">Blog &amp; Articles</div>
-                    <Link className="mega-item" href="/blogs">
-                      <div className="mega-icon">🤖</div>
+                    <Link className="mega-item" href="/blogs/essential-odoo-integrations-u-s-companies-need-in-2025-shopify-amazon-quickbooks">
+                      <div className="mega-icon">🔌</div>
                       <div>
-                        <div className="mega-item-t">AI Agents in Odoo 17</div>
-                        <div className="mega-item-s">Practical build guide · Feb 2026</div>
+                        <div className="mega-item-t">Essential Odoo Integrations for 2025</div>
+                        <div className="mega-item-s">Shopify, Amazon &amp; QuickBooks</div>
                       </div>
                     </Link>
-                    <Link className="mega-item" href="/blogs">
-                      <div className="mega-icon">📊</div>
+                    <Link className="mega-item" href="/blogs/why-generic-erp-fails-for-oil-and-gas-suppliers">
+                      <div className="mega-icon">🛢️</div>
                       <div>
-                        <div className="mega-item-t">AI-Enabled vs Traditional ERP</div>
-                        <div className="mega-item-s">100 implementation data points</div>
+                        <div className="mega-item-t">Why Generic ERP Fails for Oil &amp; Gas</div>
+                        <div className="mega-item-s">Project-based ERP deep-dive</div>
                       </div>
                     </Link>
-                    <Link className="mega-item" href="/blogs">
-                      <div className="mega-icon">🏭</div>
+                    <Link className="mega-item" href="/blogs/erp-systems-designed-for-fabric-manufacturers-in-india-thailand-and-vietnam">
+                      <div className="mega-icon">🧵</div>
                       <div>
-                        <div className="mega-item-t">AI Replacing Manual ERP Entry</div>
-                        <div className="mega-item-s">Manufacturing deep-dive · Feb 2026</div>
+                        <div className="mega-item-t">ERP for Fabric Manufacturers</div>
+                        <div className="mega-item-s">India, Thailand &amp; Vietnam</div>
                       </div>
                     </Link>
-                    <Link className="mega-item" href="/blogs">
-                      <div className="mega-icon">📝</div>
+                    <Link className="mega-item" href="/blogs/dedicated-engineering-teams-vs-in-house-hiring-for-erp-projects">
+                      <div className="mega-icon">👨‍💻</div>
                       <div>
-                        <div className="mega-item-t">Odoo vs SAP for AI Automation</div>
-                        <div className="mega-item-s">Comparison guide for mid-market</div>
+                        <div className="mega-item-t">Dedicated Teams vs In-House Hiring</div>
+                        <div className="mega-item-s">For ERP projects</div>
                       </div>
                     </Link>
                     <Link className="mega-footer-a" href="/blogs" style={{ marginTop: 12, fontSize: 10 }}>
@@ -1268,32 +1268,32 @@ export function HomeHeader(_props: HomeHeaderProps) {
                   {/* Col 2: Case Studies */}
                   <div className="mega-col">
                     <div className="mega-col-title">Case Studies</div>
-                    <Link className="mega-item" href="/case-studies">
+                    <Link className="mega-item" href="/case-study/odoo-erp-implementation-in-the-textile-industry">
                       <div className="mega-icon">🧵</div>
                       <div>
-                        <div className="mega-item-t">Fabric Mill — 40% Lead Time Cut</div>
-                        <div className="mega-item-s">Manufacturing · Odoo MRP + AI · India</div>
+                        <div className="mega-item-t">Textile Industry — Odoo ERP</div>
+                        <div className="mega-item-s">Manufacturing · Odoo ERP</div>
                       </div>
                     </Link>
-                    <Link className="mega-item" href="/case-studies">
-                      <div className="mega-icon">🚚</div>
+                    <Link className="mega-item" href="/case-study/odoo-steel-solution">
+                      <div className="mega-icon">🏗️</div>
                       <div>
-                        <div className="mega-item-t">Gulf Logistics — 3PL Automation</div>
-                        <div className="mega-item-s">Logistics · Zoho + AI Agents · Kuwait</div>
+                        <div className="mega-item-t">Steel Product Customization</div>
+                        <div className="mega-item-s">Manufacturing · Odoo automation</div>
                       </div>
                     </Link>
-                    <Link className="mega-item" href="/case-studies">
-                      <div className="mega-icon">🏢</div>
+                    <Link className="mega-item" href="/case-study/odoo-integration-ecommerce-retailer">
+                      <div className="mega-icon">🛒</div>
                       <div>
-                        <div className="mega-item-t">Arabian Properties — AI CRM</div>
-                        <div className="mega-item-s">Real Estate · Odoo · Dubai UAE</div>
+                        <div className="mega-item-t">eCommerce Retailer Integration</div>
+                        <div className="mega-item-s">Retail · Odoo · USA</div>
                       </div>
                     </Link>
-                    <Link className="mega-item" href="/case-studies">
-                      <div className="mega-icon">💊</div>
+                    <Link className="mega-item" href="/case-study/ui-product-management-enhancements">
+                      <div className="mega-icon">🎨</div>
                       <div>
-                        <div className="mega-item-t">PharmaCore — Compliance ERP</div>
-                        <div className="mega-item-s">Healthcare · Odoo 17 · Hyderabad</div>
+                        <div className="mega-item-t">UI &amp; Product Management</div>
+                        <div className="mega-item-s">Odoo eCommerce enhancements</div>
                       </div>
                     </Link>
                     <Link className="mega-footer-a" href="/case-studies" style={{ marginTop: 12, fontSize: 10 }}>
@@ -1304,34 +1304,34 @@ export function HomeHeader(_props: HomeHeaderProps) {
                   {/* Col 3: Company & Careers */}
                   <div className="mega-col">
                     <div className="mega-col-title">Company &amp; Careers</div>
-                    <div className="mega-item">
+                    <Link className="mega-item" href="/wanbufferians">
                       <div className="mega-icon">🏢</div>
                       <div>
                         <div className="mega-item-t">About Wan Buffer</div>
                         <div className="mega-item-s">Our story, mission &amp; team</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/contact-us">
                       <div className="mega-icon">🤝</div>
                       <div>
                         <div className="mega-item-t">Partner With Us</div>
                         <div className="mega-item-s">Reseller &amp; referral programmes</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/wanbufferians">
                       <div className="mega-icon">💼</div>
                       <div>
                         <div className="mega-item-t">Careers &amp; Recruitment</div>
                         <div className="mega-item-s">Open roles in AI, ERP &amp; dev</div>
                       </div>
-                    </div>
-                    <div className="mega-item">
+                    </Link>
+                    <Link className="mega-item" href="/wanbufferians">
                       <div className="mega-icon">🎓</div>
                       <div>
                         <div className="mega-item-t">Wanbufferians</div>
                         <div className="mega-item-s">Culture, team &amp; life at WB</div>
                       </div>
-                    </div>
+                    </Link>
                     <Link className="mega-item" href="/event">
                       <div className="mega-icon">📅</div>
                       <div>
