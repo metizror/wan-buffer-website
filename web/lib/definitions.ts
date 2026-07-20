@@ -66,6 +66,7 @@ export interface BlogDocument {
   content: string;
   faqs: BlogFaq[];
   tags: string[];
+  keywords?: string[];
   isPublished: boolean;
   status: BlogStatus;
   scheduledAt: Date | null;

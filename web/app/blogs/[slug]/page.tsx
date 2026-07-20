@@ -52,6 +52,8 @@ export async function generateMetadata({
   return {
     title: post.metaTitle || `${post.title} | Wan Buffer Blog`,
     description: post.metaDescription || post.excerpt,
+    keywords:
+      post.keywords && post.keywords.length > 0 ? post.keywords : undefined,
     alternates: {
       canonical: post.canonical || `https://wanbuffer.com/blogs/${slug}`,
     },
