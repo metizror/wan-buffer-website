@@ -6,6 +6,7 @@ import { HomeContact } from "@/components/home/contact";
 import { HomeFooter } from "@/components/home/footer";
 import { HomeWanny } from "@/components/home/wanny";
 import { CaseStudyContent } from "@/components/pages/case-study-content";
+import { getPublicCaseStudies } from "@/lib/portfolio-service";
 
 export const metadata: Metadata = {
   title: "Case Studies | Wan Buffer",
@@ -28,12 +29,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function CaseStudyPage() {
+export default async function CaseStudyPage() {
+  const studies = await getPublicCaseStudies();
   return (
     <>
       <HomeLeadPopup />
       <HomeHeader />
-      <CaseStudyContent />
+      <CaseStudyContent studies={studies} />
       <HomeContact />
       <HomeFooter />
       <HomeWanny />

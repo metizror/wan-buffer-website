@@ -7,19 +7,23 @@ import { HomeContact } from "@/components/home/contact";
 import { HomeFooter } from "@/components/home/footer";
 import { HomeWanny } from "@/components/home/wanny";
 import { CaseStudyDetailContent } from "@/components/pages/case-study-detail-content";
-import { getAllCaseStudySlugs, getCaseStudyBySlug } from "@/lib/case-study-data";
+import {
+  getAllPublicCaseStudySlugs,
+  getPublicCaseStudyBySlug,
+} from "@/lib/portfolio-service";
 
 interface CaseStudyDetailPageProps {
   params: Promise<{ slug: string }>;
 }
 
-export function generateStaticParams() {
-  return getAllCaseStudySlugs().map((slug) => ({ slug }));
+export async function generateStaticParams() {
+  const slugs = await getAllPublicCaseStudySlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: CaseStudyDetailPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const study = getCaseStudyBySlug(slug);
+  const study = await getPublicCaseStudyBySlug(slug);
   if (!study) return { title: "Case study not found | Wan Buffer" };
 
   return {
@@ -38,7 +42,7 @@ export async function generateMetadata({ params }: CaseStudyDetailPageProps): Pr
 
 export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPageProps) {
   const { slug } = await params;
-  const study = getCaseStudyBySlug(slug);
+  const study = await getPublicCaseStudyBySlug(slug);
   if (!study) notFound();
 
   return (

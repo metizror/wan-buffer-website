@@ -8,11 +8,8 @@ import {
   INDUSTRY_FILTERS,
   REGION_FILTERS,
   TECHNOLOGY_FILTERS,
-  WAN_BUFFER_CASE_STUDIES,
   caseStudyPath,
-  countCaseStudiesByIndustry,
-  countCaseStudiesByRegion,
-  countCaseStudiesByTechnology,
+  type CaseStudy,
   type CaseStudyIndustry,
   type CaseStudyRegion,
   type CaseStudyTechnology,
@@ -22,20 +19,31 @@ import { ArrowRightIcon } from "@/components/services/odoo-service-icons";
 
 type FilterTab = "industry" | "region" | "technology";
 
-export function CaseStudyListing() {
+interface CaseStudyListingProps {
+  studies: CaseStudy[];
+}
+
+export function CaseStudyListing({ studies }: CaseStudyListingProps) {
   const [tab, setTab] = useState<FilterTab>("industry");
   const [industry, setIndustry] = useState<CaseStudyIndustry | "all">("all");
   const [region, setRegion] = useState<CaseStudyRegion | "all">("all");
   const [technology, setTechnology] = useState<CaseStudyTechnology | "all">("all");
 
+  const countByIndustry = (id: CaseStudyIndustry | "all") =>
+    id === "all" ? studies.length : studies.filter((c) => c.industries.includes(id)).length;
+  const countByRegion = (id: CaseStudyRegion | "all") =>
+    id === "all" ? studies.length : studies.filter((c) => c.regions.includes(id)).length;
+  const countByTechnology = (id: CaseStudyTechnology | "all") =>
+    id === "all" ? studies.length : studies.filter((c) => c.technologies.includes(id)).length;
+
   const filtered = useMemo(() => {
-    return WAN_BUFFER_CASE_STUDIES.filter((cs) => {
+    return studies.filter((cs) => {
       if (industry !== "all" && !cs.industries.includes(industry)) return false;
       if (region !== "all" && !cs.regions.includes(region)) return false;
       if (technology !== "all" && !cs.technologies.includes(technology)) return false;
       return true;
     });
-  }, [industry, region, technology]);
+  }, [studies, industry, region, technology]);
 
   const hasFilters = industry !== "all" || region !== "all" || technology !== "all";
 
@@ -61,9 +69,9 @@ export function CaseStudyListing() {
   }
 
   const resultLabel =
-    filtered.length === WAN_BUFFER_CASE_STUDIES.length
-      ? `${WAN_BUFFER_CASE_STUDIES.length} case studies`
-      : `${filtered.length} of ${WAN_BUFFER_CASE_STUDIES.length} case studies`;
+    filtered.length === studies.length
+      ? `${studies.length} case studies`
+      : `${filtered.length} of ${studies.length} case studies`;
 
   return (
     <>
@@ -92,11 +100,11 @@ export function CaseStudyListing() {
           {activeFilters.map((f) => {
             let count: number | null = null;
             if (tab === "industry") {
-              count = countCaseStudiesByIndustry(f.id as CaseStudyIndustry | "all");
+              count = countByIndustry(f.id as CaseStudyIndustry | "all");
             } else if (tab === "region") {
-              count = countCaseStudiesByRegion(f.id as CaseStudyRegion | "all");
+              count = countByRegion(f.id as CaseStudyRegion | "all");
             } else if (tab === "technology") {
-              count = countCaseStudiesByTechnology(f.id as CaseStudyTechnology | "all");
+              count = countByTechnology(f.id as CaseStudyTechnology | "all");
             }
             const label = count !== null && f.id !== "all" ? `${f.label} (${count})` : f.id === "all" && tab === "industry" ? `All (${count})` : f.label;
             return (

@@ -13,9 +13,9 @@ export default async function DashboardLayout({
 
   return (
     <div className="adm-shell">
-      <AdminSidebar />
+      <AdminSidebar role={session.role} />
       <div className="adm-main">
-        <AdminHeader username={session.displayName} />
+        <AdminHeader username={session.displayName} email={session.email} />
         <div className="adm-content">{children}</div>
       </div>
     </div>

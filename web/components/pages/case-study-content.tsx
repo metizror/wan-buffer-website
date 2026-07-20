@@ -1,11 +1,16 @@
 import Link from "next/link";
 
 import { ArrowRightIcon, MailIcon, PhoneCallIcon } from "@/components/services/odoo-service-icons";
-import { CASE_STUDY_COUNT } from "@/lib/case-study-data";
+import type { CaseStudy } from "@/lib/case-study-data";
 
 import { CaseStudyListing } from "./case-study-listing";
 
-export function CaseStudyContent() {
+interface CaseStudyContentProps {
+  studies: CaseStudy[];
+}
+
+export function CaseStudyContent({ studies }: CaseStudyContentProps) {
+  const caseStudyCount = studies.length;
   return (
     <main className="svc-page">
       <section className="oi-hero-lux" aria-labelledby="oi-cs-hero-title">
@@ -80,7 +85,7 @@ export function CaseStudyContent() {
               Filter by industry, region, or technology to find projects relevant to your business.
             </p>
           </div>
-          <CaseStudyListing />
+          <CaseStudyListing studies={studies} />
         </div>
       </section>
 
@@ -92,7 +97,7 @@ export function CaseStudyContent() {
               Build something <span>similar?</span>
             </h2>
             <p>
-              Discuss your Odoo, ERP, or custom software project with our team — {CASE_STUDY_COUNT} published case
+              Discuss your Odoo, ERP, or custom software project with our team — {caseStudyCount} published case
               studies and counting.
             </p>
           </div>

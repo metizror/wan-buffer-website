@@ -68,7 +68,12 @@ export async function PUT(request: Request) {
 
     // Refresh session if displayName changed
     if (displayName) {
-      await createSession(session.userId, displayName);
+      await createSession(
+        session.userId,
+        displayName,
+        session.email,
+        session.role
+      );
     }
 
     return NextResponse.json({ success: true, message: "Profile updated successfully" });

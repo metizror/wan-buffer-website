@@ -3,7 +3,20 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { TipTapEditor } from "./tiptap-editor";
-import { BLOG_CATEGORIES } from "@/lib/definitions";
+import { ImageUpload } from "./image-upload";
+import {
+  FieldWrapper,
+  FormField,
+  FormTextArea,
+  FormSelect,
+  FormActions,
+} from "./form-fields";
+import {
+  BLOG_CATEGORIES,
+  BLOG_STATUSES,
+  BLOG_STATUS_LABELS,
+  type BlogStatus,
+} from "@/lib/definitions";
 
 interface BlogFormProps {
   initialData?: {
@@ -21,7 +34,17 @@ interface BlogFormProps {
     externalUrl: string;
     content: string;
     faqs: { q: string; a: string }[];
+    tags?: string[];
     isPublished: boolean;
+    status?: BlogStatus;
+    scheduledAt?: string | null;
+    hidden?: boolean;
+    metaTitle?: string;
+    metaDescription?: string;
+    ogImage?: string;
+    canonical?: string;
+    noIndex?: boolean;
+    focusKeyphrase?: string;
   };
   mode: "create" | "edit";
 }
@@ -43,6 +66,22 @@ function formatDate(dateStr: string) {
   });
 }
 
+/** Convert a stored ISO/Date string to a `datetime-local` input value. */
+function toDatetimeLocal(value?: string | null): string {
+  if (!value) return "";
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return "";
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(
+    d.getHours()
+  )}:${pad(d.getMinutes())}`;
+}
+
+const STATUS_OPTIONS = BLOG_STATUSES.map((s) => ({
+  value: s,
+  label: BLOG_STATUS_LABELS[s],
+}));
+
 export function BlogForm({ initialData, mode }: BlogFormProps) {
   const router = useRouter();
   const [saving, setSaving] = useState(false);
@@ -62,8 +101,27 @@ export function BlogForm({ initialData, mode }: BlogFormProps) {
   const [faqs, setFaqs] = useState<{ q: string; a: string }[]>(
     initialData?.faqs || []
   );
-  const [isPublished, setIsPublished] = useState(
-    initialData?.isPublished ?? false
+  const [tags, setTags] = useState((initialData?.tags || []).join(", "));
+
+  // Publishing
+  const [status, setStatus] = useState<BlogStatus>(
+    initialData?.status ?? (initialData?.isPublished ? "published" : "draft")
+  );
+  const [scheduledAt, setScheduledAt] = useState(
+    toDatetimeLocal(initialData?.scheduledAt)
+  );
+  const [hidden, setHidden] = useState(initialData?.hidden ?? false);
+
+  // SEO
+  const [metaTitle, setMetaTitle] = useState(initialData?.metaTitle || "");
+  const [metaDescription, setMetaDescription] = useState(
+    initialData?.metaDescription || ""
+  );
+  const [ogImage, setOgImage] = useState(initialData?.ogImage || "");
+  const [canonical, setCanonical] = useState(initialData?.canonical || "");
+  const [noIndex, setNoIndex] = useState(initialData?.noIndex ?? false);
+  const [focusKeyphrase, setFocusKeyphrase] = useState(
+    initialData?.focusKeyphrase || ""
   );
 
   function handleTitleChange(val: string) {
@@ -87,15 +145,15 @@ export function BlogForm({ initialData, mode }: BlogFormProps) {
     setFaqs(faqs.filter((_, i) => i !== index));
   }
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setError("");
-    setSaving(true);
-
+  function buildBody() {
     const displayDate = sortDate ? formatDate(sortDate) : "";
     const filteredFaqs = faqs.filter((f) => f.q.trim() && f.a.trim());
+    const tagList = tags
+      .split(",")
+      .map((t) => t.trim())
+      .filter(Boolean);
 
-    const body = {
+    return {
       title,
       slug,
       excerpt,
@@ -109,8 +167,24 @@ export function BlogForm({ initialData, mode }: BlogFormProps) {
       externalUrl,
       content,
       faqs: filteredFaqs,
-      isPublished,
+      tags: tagList,
+      status,
+      isPublished: status === "published",
+      scheduledAt: status === "scheduled" && scheduledAt ? scheduledAt : null,
+      hidden,
+      metaTitle,
+      metaDescription,
+      ogImage,
+      canonical,
+      noIndex,
+      focusKeyphrase,
     };
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setError("");
+    setSaving(true);
 
     try {
       const url =
@@ -122,7 +196,7 @@ export function BlogForm({ initialData, mode }: BlogFormProps) {
       const res = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
+        body: JSON.stringify(buildBody()),
       });
 
       const data = await res.json();
@@ -141,6 +215,10 @@ export function BlogForm({ initialData, mode }: BlogFormProps) {
     }
   }
 
+  function handlePreview() {
+    if (slug) window.open(`/blogs/${slug}?preview=1`, "_blank");
+  }
+
   return (
     <form onSubmit={handleSubmit}>
       {error && <div className="adm-login-error">{error}</div>}
@@ -149,45 +227,50 @@ export function BlogForm({ initialData, mode }: BlogFormProps) {
       <div className="adm-form-card">
         <h2>Basic Information</h2>
         <div className="adm-form-grid">
-          <div className="adm-form-full adm-field">
-            <label>Title</label>
-            <input
-              value={title}
-              onChange={(e) => handleTitleChange(e.target.value)}
-              placeholder="Blog title"
-              required
-            />
-          </div>
-          <div className="adm-field">
-            <label>Slug</label>
-            <input
-              value={slug}
-              onChange={(e) => setSlug(e.target.value)}
-              placeholder="url-friendly-slug"
-              required
-            />
-          </div>
-          <div className="adm-field">
-            <label>Category</label>
-            <select value={category} onChange={(e) => setCategory(e.target.value)} required>
-              <option value="">Select category</option>
-              {BLOG_CATEGORIES.map((c) => (
-                <option key={c} value={c}>
-                  {c}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="adm-form-full adm-field">
-            <label>Excerpt</label>
-            <textarea
-              value={excerpt}
-              onChange={(e) => setExcerpt(e.target.value)}
-              placeholder="Short description of the blog"
-              rows={3}
-              required
-            />
-          </div>
+          <FormField
+            label="Title"
+            name="title"
+            value={title}
+            onChange={handleTitleChange}
+            placeholder="Blog title"
+            required
+            fullWidth
+          />
+          <FormField
+            label="Slug"
+            name="slug"
+            value={slug}
+            onChange={setSlug}
+            placeholder="url-friendly-slug"
+            required
+          />
+          <FormSelect
+            label="Category"
+            name="category"
+            value={category}
+            onChange={setCategory}
+            options={[...BLOG_CATEGORIES]}
+            placeholder="Select category"
+            required
+          />
+          <FormTextArea
+            label="Excerpt"
+            name="excerpt"
+            value={excerpt}
+            onChange={setExcerpt}
+            placeholder="Short description of the blog"
+            rows={3}
+            required
+          />
+          <FormField
+            label="Tags"
+            name="tags"
+            value={tags}
+            onChange={setTags}
+            placeholder="odoo, erp, automation"
+            hint="Comma-separated list of tags"
+            fullWidth
+          />
         </div>
       </div>
 
@@ -195,64 +278,150 @@ export function BlogForm({ initialData, mode }: BlogFormProps) {
       <div className="adm-form-card">
         <h2>Meta Information</h2>
         <div className="adm-form-grid">
-          <div className="adm-field">
-            <label>Author</label>
-            <input
-              value={author}
-              onChange={(e) => setAuthor(e.target.value)}
-              placeholder="Author name"
-              required
-            />
-          </div>
-          <div className="adm-field">
-            <label>Author Role</label>
-            <input
-              value={authorRole}
-              onChange={(e) => setAuthorRole(e.target.value)}
-              placeholder="e.g. Flutter Developer"
-            />
-          </div>
-          <div className="adm-field">
-            <label>Publish Date</label>
-            <input
-              type="date"
-              value={sortDate}
-              onChange={(e) => setSortDate(e.target.value)}
-              required
-            />
-          </div>
-          <div className="adm-field">
-            <label>Read Time</label>
-            <input
-              value={readTime}
-              onChange={(e) => setReadTime(e.target.value)}
-              placeholder="e.g. 4 min"
-              required
-            />
-          </div>
-          <div className="adm-field">
-            <label>Image URL</label>
-            <input
-              value={imageSrc}
-              onChange={(e) => setImageSrc(e.target.value)}
-              placeholder="https://..."
-            />
-          </div>
-          <div className="adm-field">
-            <label>External URL</label>
-            <input
-              value={externalUrl}
-              onChange={(e) => setExternalUrl(e.target.value)}
-              placeholder="https://..."
-            />
-          </div>
+          <FormField
+            label="Author"
+            name="author"
+            value={author}
+            onChange={setAuthor}
+            placeholder="Author name"
+            required
+          />
+          <FormField
+            label="Author Role"
+            name="authorRole"
+            value={authorRole}
+            onChange={setAuthorRole}
+            placeholder="e.g. Flutter Developer"
+          />
+          <FormField
+            label="Publish Date"
+            name="sortDate"
+            type="date"
+            value={sortDate}
+            onChange={setSortDate}
+            required
+          />
+          <FormField
+            label="Read Time"
+            name="readTime"
+            value={readTime}
+            onChange={setReadTime}
+            placeholder="e.g. 4 min"
+            required
+          />
+          <FormField
+            label="External URL"
+            name="externalUrl"
+            value={externalUrl}
+            onChange={setExternalUrl}
+            placeholder="https://..."
+          />
         </div>
+        <ImageUpload
+          label="Featured Image"
+          value={imageSrc}
+          onChange={setImageSrc}
+          hint="Shown on cards and the article hero"
+        />
       </div>
 
       {/* Content */}
       <div className="adm-form-card">
         <h2>Content</h2>
         <TipTapEditor value={content} onChange={setContent} />
+      </div>
+
+      {/* Publishing */}
+      <div className="adm-form-card">
+        <h2>Publishing</h2>
+        <div className="adm-form-grid">
+          <FormSelect
+            label="Status"
+            name="status"
+            value={status}
+            onChange={(v) => setStatus(v as BlogStatus)}
+            options={STATUS_OPTIONS}
+          />
+          {status === "scheduled" && (
+            <FieldWrapper
+              label="Scheduled For"
+              htmlFor="scheduledAt"
+              hint="Goes live automatically once this time passes"
+            >
+              <input
+                id="scheduledAt"
+                type="datetime-local"
+                value={scheduledAt}
+                onChange={(e) => setScheduledAt(e.target.value)}
+              />
+            </FieldWrapper>
+          )}
+        </div>
+        <div className="adm-toggle">
+          <button
+            type="button"
+            className={`adm-toggle-switch ${hidden ? "active" : ""}`}
+            onClick={() => setHidden(!hidden)}
+          />
+          <label onClick={() => setHidden(!hidden)}>
+            {hidden ? "Hidden from public lists" : "Visible"}
+          </label>
+        </div>
+      </div>
+
+      {/* SEO */}
+      <div className="adm-form-card">
+        <h2>SEO</h2>
+        <div className="adm-form-grid">
+          <FormTextArea
+            label="Meta Title"
+            name="metaTitle"
+            value={metaTitle}
+            onChange={setMetaTitle}
+            placeholder="Defaults to the blog title"
+            rows={2}
+            maxCount={60}
+          />
+          <FormTextArea
+            label="Meta Description"
+            name="metaDescription"
+            value={metaDescription}
+            onChange={setMetaDescription}
+            placeholder="Defaults to the excerpt"
+            rows={3}
+            maxCount={160}
+          />
+          <FormField
+            label="Canonical URL"
+            name="canonical"
+            value={canonical}
+            onChange={setCanonical}
+            placeholder="https://wanbuffer.com/blogs/..."
+          />
+          <FormField
+            label="Focus Keyphrase"
+            name="focusKeyphrase"
+            value={focusKeyphrase}
+            onChange={setFocusKeyphrase}
+            placeholder="e.g. odoo erp implementation"
+          />
+        </div>
+        <ImageUpload
+          label="OG Image"
+          value={ogImage}
+          onChange={setOgImage}
+          hint="Social share image. Defaults to the featured image when empty"
+        />
+        <div className="adm-toggle">
+          <button
+            type="button"
+            className={`adm-toggle-switch ${noIndex ? "active" : ""}`}
+            onClick={() => setNoIndex(!noIndex)}
+          />
+          <label onClick={() => setNoIndex(!noIndex)}>
+            {noIndex ? "No-index (hidden from search engines)" : "Indexable"}
+          </label>
+        </div>
       </div>
 
       {/* FAQs */}
@@ -298,35 +467,18 @@ export function BlogForm({ initialData, mode }: BlogFormProps) {
         </button>
       </div>
 
-      {/* Publish toggle + actions */}
+      {/* Actions */}
       <div className="adm-form-card">
-        <div className="adm-toggle">
-          <button
-            type="button"
-            className={`adm-toggle-switch ${isPublished ? "active" : ""}`}
-            onClick={() => setIsPublished(!isPublished)}
-          />
-          <label onClick={() => setIsPublished(!isPublished)}>
-            {isPublished ? "Published" : "Draft"}
-          </label>
-        </div>
-
-        <div className="adm-form-actions">
-          <button
-            type="button"
-            className="adm-btn adm-btn-secondary"
-            onClick={() => router.push("/admin/blogs")}
-          >
-            Cancel
-          </button>
-          <button type="submit" className="adm-btn adm-btn-primary" disabled={saving}>
-            {saving
-              ? "Saving..."
-              : mode === "create"
-                ? "Create Blog"
-                : "Update Blog"}
-          </button>
-        </div>
+        <FormActions
+          saving={saving}
+          submitLabel={mode === "create" ? "Create Blog" : "Update Blog"}
+          onCancel={() => router.push("/admin/blogs")}
+          secondary={
+            mode === "edit" && slug
+              ? { label: "Preview", onClick: handlePreview, disabled: saving }
+              : undefined
+          }
+        />
       </div>
     </form>
   );

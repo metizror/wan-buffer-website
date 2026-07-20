@@ -1,7 +1,7 @@
 import "server-only";
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
-import type { SessionPayload } from "./definitions";
+import type { Role, SessionPayload } from "./definitions";
 
 const secretKey = process.env.SESSION_SECRET!;
 const encodedKey = new TextEncoder().encode(secretKey);
@@ -29,8 +29,13 @@ export async function decrypt(
   }
 }
 
-export async function createSession(userId: string, displayName: string) {
-  const token = await encrypt({ userId, displayName });
+export async function createSession(
+  userId: string,
+  displayName: string,
+  email: string,
+  role: Role
+) {
+  const token = await encrypt({ userId, displayName, email, role });
   const cookieStore = await cookies();
   cookieStore.set(COOKIE_NAME, token, {
     httpOnly: true,

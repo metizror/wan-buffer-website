@@ -34,7 +34,19 @@ export default async function EditBlogPage({
           externalUrl: blog.externalUrl,
           content: blog.content,
           faqs: blog.faqs || [],
+          tags: blog.tags || [],
           isPublished: blog.isPublished,
+          status: blog.status,
+          scheduledAt: blog.scheduledAt
+            ? new Date(blog.scheduledAt).toISOString()
+            : null,
+          hidden: blog.hidden,
+          metaTitle: blog.metaTitle,
+          metaDescription: blog.metaDescription,
+          ogImage: blog.ogImage,
+          canonical: blog.canonical,
+          noIndex: blog.noIndex,
+          focusKeyphrase: blog.focusKeyphrase,
         }}
       />
     </>

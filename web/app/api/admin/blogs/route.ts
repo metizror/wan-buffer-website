@@ -1,7 +1,8 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { verifySession } from "@/lib/dal";
 import { getPaginatedBlogs, createBlog } from "@/lib/blog-service";
-import { blogFormSchema } from "@/lib/definitions";
+import { logAudit } from "@/lib/audit-service";
+import { blogFormSchema, BLOG_STATUSES, type BlogStatus } from "@/lib/definitions";
 
 export async function GET(request: NextRequest) {
   const session = await verifySession();
@@ -14,8 +15,12 @@ export async function GET(request: NextRequest) {
   const limit = parseInt(searchParams.get("limit") || "10", 10);
   const search = searchParams.get("search") || undefined;
   const category = searchParams.get("category") || undefined;
+  const statusParam = searchParams.get("status") || undefined;
+  const status = BLOG_STATUSES.includes(statusParam as BlogStatus)
+    ? (statusParam as BlogStatus)
+    : undefined;
 
-  const result = await getPaginatedBlogs({ page, limit, search, category });
+  const result = await getPaginatedBlogs({ page, limit, search, category, status });
   return NextResponse.json(result);
 }
 
@@ -37,6 +42,14 @@ export async function POST(request: Request) {
     }
 
     const blog = await createBlog(parsed.data);
+    await logAudit({
+      userId: session.userId,
+      userEmail: session.email,
+      action: "create",
+      entityType: "blog",
+      entityId: blog._id ?? "",
+      entityName: blog.title,
+    });
     return NextResponse.json({ blog }, { status: 201 });
   } catch (err: unknown) {
     const message =

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { verifySession } from "@/lib/dal";
 import { getBlogById, updateBlog, deleteBlog } from "@/lib/blog-service";
+import { logAudit, shallowDiff } from "@/lib/audit-service";
 import { blogFormSchema } from "@/lib/definitions";
 
 export async function GET(
@@ -44,10 +45,26 @@ export async function PUT(
       );
     }
 
+    const before = await getBlogById(id);
     const blog = await updateBlog(id, parsed.data);
     if (!blog) {
       return NextResponse.json({ error: "Blog not found" }, { status: 404 });
     }
+
+    await logAudit({
+      userId: session.userId,
+      userEmail: session.email,
+      action: "update",
+      entityType: "blog",
+      entityId: id,
+      entityName: blog.title,
+      diff: before
+        ? shallowDiff(
+            before as unknown as Record<string, unknown>,
+            blog as unknown as Record<string, unknown>
+          )
+        : null,
+    });
 
     return NextResponse.json({ blog });
   } catch (err: unknown) {
@@ -69,10 +86,20 @@ export async function DELETE(
   }
 
   const { id } = await params;
+  const existing = await getBlogById(id);
   const deleted = await deleteBlog(id);
   if (!deleted) {
     return NextResponse.json({ error: "Blog not found" }, { status: 404 });
   }
+
+  await logAudit({
+    userId: session.userId,
+    userEmail: session.email,
+    action: "delete",
+    entityType: "blog",
+    entityId: id,
+    entityName: existing?.title ?? id,
+  });
 
   return NextResponse.json({ success: true });
 }

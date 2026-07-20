@@ -5,10 +5,11 @@ import { useState } from "react";
 
 interface AdminHeaderProps {
   username: string;
+  email?: string;
   pageTitle?: string;
 }
 
-export function AdminHeader({ username, pageTitle }: AdminHeaderProps) {
+export function AdminHeader({ username, email, pageTitle }: AdminHeaderProps) {
   const router = useRouter();
   const [loggingOut, setLoggingOut] = useState(false);
 
@@ -25,7 +26,7 @@ export function AdminHeader({ username, pageTitle }: AdminHeaderProps) {
         {pageTitle || "Dashboard"}
       </h2>
       <div className="adm-topbar-user">
-        <span>{username}</span>
+        <span>{email || username}</span>
         <button
           className="adm-btn adm-btn-ghost adm-btn-sm"
           onClick={handleLogout}

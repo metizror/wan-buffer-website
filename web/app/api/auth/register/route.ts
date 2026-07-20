@@ -14,7 +14,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const { displayName, email, password } = parsed.data;
+    const { displayName, email, password, role } = parsed.data;
 
     const existing = await findAdminByEmail(email);
     if (existing) {
@@ -24,7 +24,7 @@ export async function POST(request: Request) {
       );
     }
 
-    await createAdmin(displayName, email, password);
+    await createAdmin(displayName, email, password, role);
 
     return NextResponse.json({
       success: true,
