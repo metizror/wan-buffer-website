@@ -41,17 +41,17 @@ export function OdooIntegrationContent() {
             </span>
           </h1>
           <p className="oi-hero-lux-sub rev">
-            Are you looking for <strong>Odoo ERP Integration?</strong>
+          Your business doesn't run on Odoo alone — it runs on Odoo plus your store, your payment gateway, your shipping carriers, your accounting tool. We connect them all with <strong>reliable two-way sync,</strong> so your data lives in one place instead of being re-typed between five systems.
           </p>
           <div className="oi-hero-lux-cta rev">
             <a className="oi-hero-lux-primary" href="#contact">
-              <span>Contact us</span>
+              <span>Discuss Your Integration</span>
               <span className="oi-hero-lux-primary-circle">
                 <ArrowRightIcon />
               </span>
             </a>
             <a className="oi-hero-lux-secondary" href="#intro">
-              Overview
+            See how we connect
             </a>
           </div>
           <div className="oi-hero-lux-foot rev">

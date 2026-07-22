@@ -43,12 +43,12 @@ import {
 
 /* ── Data ── */
 const PHASES = [
-  { icon: <SearchIcon/>, title: "Analysis of requirements", body: "We first understand your company's requirements. It is extremely difficult to create the right solution without fully grasping your business needs.", tag: "Discovery", ai: false, outcome: "Signed-off scope", duration: "1–2 weeks", deliverables: ["Stakeholder interviews", "Process mapping", "Fit-gap analysis", "Risk register"] },
-  { icon: <CodeIcon/>, title: "Development & personalisation", body: "After understanding your needs, we proceed with Odoo ERP development. Modules are built to serve your business, following industry norms.", tag: "Build", ai: true, outcome: "Modules shipped", duration: "4–6 weeks", deliverables: ["Custom modules", "Peer code reviews", "API integrations", "Sprint demos"] },
-  { icon: <SettingsIcon/>, title: "Odoo installation & configuration", body: "Configuration flexibility aligned to your business. ERP functions and analysis tools are tuned for the highest practical level of customisation.", tag: "Configure", ai: false, outcome: "Fit-gap closed", duration: "2–3 weeks", deliverables: ["Master data setup", "Workflows & rules", "Permissions matrix", "Reports & KPIs"] },
+  { icon: <SearchIcon/>, title: "Requirements Analysis", body: "We analyze your business needs, evaluate current processes, and define the optimal Odoo solution to support your operational and strategic objectives.", tag: "Discovery", ai: false, outcome: "Requirements approval", duration: "1–2 weeks", deliverables: ["Business assessment", "Process review", "Fit-gap analysis", "Solution design"] },
+  { icon: <CodeIcon/>, title: "Development & Personalisation", body: "Based on the approved requirements and fit-gap analysis, we customize Odoo to align with your business processes. We develop custom features, integrate third-party applications through APIs, and conduct regular demo sessions to ensure the solution meets business expectations throughout the development lifecycle.", tag: "Build", ai: true, outcome: "Solution developed & validated", duration: "4–6 weeks", deliverables: ["Custom module development", "API & third-party integrations", "Periodic demo sessions", "User acceptance testing"] },
+  { icon: <SettingsIcon/>, title: "Odoo Installation & Configuration", body: "We deploy and configure Odoo based on the approved solution blueprint, ensuring the platform is aligned with your business processes, governance framework, and operational objectives. Our consultants establish a scalable foundation that supports efficiency, compliance, and future growth.", tag: "Configure", ai: false, outcome: "Production-ready Odoo environment", duration: "2–3 weeks", deliverables: ["Master data architecture", "Workflow & approval configuration", "Role-based security framework", "Executive dashboards & KPI reporting"] },
   { icon: <DatabaseIcon/>, title: "Data transfer", body: "Data transfer is vital. We move data from legacy software, spreadsheets, and older Odoo versions into your new Odoo ERP with care.", tag: "Migrate", ai: true, outcome: "Data reconciled", duration: "1–2 weeks", deliverables: ["Data cleansing", "Mapping rules", "Mock cutovers", "Reconciliation"] },
-  { icon: <GraduationIcon/>, title: "Assistance & training", body: "Odoo's breadth makes training essential. After go-live, we train end users through live sessions, recordings, and documentation.", tag: "Enable", ai: false, outcome: "Teams ready", duration: "1–2 weeks", deliverables: ["Role-based journeys", "Live training sessions", "Documentation pack", "Champions program"] },
-  { icon: <RocketIcon/>, title: "Going live", body: "We stay with you through launch and stabilisation so unclear edge cases are handled quickly from day one.", tag: "Launch", ai: true, outcome: "Live in production", duration: "1 week + 90 days hypercare", deliverables: ["Cutover plan", "Hypercare desk", "Defect tracking", "Stabilisation review"] },
+  { icon: <GraduationIcon/>, title: "Training & Knowledge Transfer", body: "Comprehensive training and knowledge transfer sessions designed to equip end users, key users, and system administrators with the skills required to confidently operate and manage Odoo. Training is tailored to business processes, ensuring successful user adoption and long-term system effectiveness.", tag: "Enable", ai: false, outcome: "Users fully prepared", duration: "1–2 weeks", deliverables: ["Role-based user training", "Administrator knowledge transfer", "Process documentation & SOPs", "User guides and training materials", "Best practices for daily operations"] },
+  { icon: <RocketIcon/>, title: "Go-Live & Deployment", body: "A structured transition from implementation to production, ensuring Odoo is deployed smoothly with minimal business disruption. Final system validation, production readiness checks, and deployment activities are executed to ensure a successful launch.", tag: "Launch", ai: true, outcome: "Live in production", duration: "1 week + 90 days hypercare", deliverables: ["Production environment deployment", "Final data validation", "Go-live readiness checklist", "Cutover execution plan", "System monitoring and stabilization support"] },
 ] as const;
 
 const ROADMAP_CHAPTERS = [
@@ -109,18 +109,20 @@ export function OdooImplementationContent() {
             <div className="oi-hero-lux-eyebrow">Odoo ERP services</div>
           </div>
           <h1 className="oi-hero-lux-h rev">
-            <span className="ln">Implementation,</span>
-            <span className="ln"><span className="ai">without the risk.</span></span>
+            <span className="ln">Odoo</span>
+            <span className="ln"><span className="ai">Implementation</span></span>
           </h1>
           <p className="oi-hero-lux-sub rev">
-            Senior-led, sign-off gated Odoo rollouts. <strong>Discovery to hypercare in 12–16 weeks</strong> — with a method refined across 254+ go-lives.
+            Most ERP projects don’t fail because of the software — they fail in the rollout. We run the whole
+            implementation for you: analysing how you work, configuring Odoo to match, migrating your data, training
+            your team, and going live in phases — so Odoo actually gets <strong>adopted</strong>, not just installed.
           </p>
           <div className="oi-hero-lux-cta rev">
             <a className="oi-hero-lux-primary" href="#contact">
-              <span>Plan your rollout</span>
+              <span>Plan Your Implementation</span>
               <span className="oi-hero-lux-primary-circle"><ArrowRightIcon /></span>
             </a>
-            <a className="oi-hero-lux-secondary" href="#phases">See the methodology</a>
+            <a className="oi-hero-lux-secondary" href="#phases">See how we roll out</a>
           </div>
           <div className="oi-hero-lux-foot rev">
             <span className="oi-hero-lux-foot-l">Built for</span>
@@ -156,8 +158,8 @@ export function OdooImplementationContent() {
         <div className="oi-meth-inner">
           <div className="oi-meth-intro rev">
             <div className="oi-meth-intro-l">
-              <div className="eyebrow">Methodology</div>
-              <h2>From requirements<br /><span>to confident go-live.</span></h2>
+              <div className="eyebrow">Our methodology</div>
+              <h2>Agile delivery, <span>phased rollout</span></h2>
               <div className="oi-meth-intro-l-meta">
                 <span className="oi-meth-intro-l-meta-k">Last refined</span>
                 <span className="oi-meth-intro-l-meta-v">
@@ -167,7 +169,7 @@ export function OdooImplementationContent() {
               </div>
             </div>
             <div className="oi-meth-intro-r">
-              <p>Six gated phases. Each one staffed by senior consultants who have run comparable rollouts before — so you always know what is happening next, what you walk away with, and why it matters for your KPIs.</p>
+              <p>The steps below are what we do. This is <em>how</em> we do them — the principles that govern every decision on your project.</p>
               <div className="oi-meth-intro-mini">
                 <div className="oi-meth-mini">
                   <div className="oi-meth-mini-row"><span className="oi-meth-mini-n">6</span><span className="oi-meth-mini-u">phases</span></div>

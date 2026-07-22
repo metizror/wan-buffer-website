@@ -4,6 +4,7 @@
    Closer · Clean support
 ──────────────────────────────────────────────────────────────────────── */
 
+import type { CSSProperties } from "react";
 import Link from "next/link";
 
 import {
@@ -16,7 +17,6 @@ import {
   ClockIcon,
   CloudIcon,
   CodeIcon,
-  DatabaseIcon,
   EyeIcon,
   FlagIcon,
   HeartIcon,
@@ -26,7 +26,6 @@ import {
   RefreshIcon,
   RocketIcon,
   SearchIcon,
-  SettingsIcon,
   ShieldIcon,
   TrendingUpIcon,
   UsersIcon,
@@ -35,12 +34,14 @@ import {
 
 /* ── Data ── */
 const PHASES = [
-  { icon: <SearchIcon/>, title: "Version & stack audit", body: "We inventory your Odoo version, custom apps, integrations, and data volumes—so the upgrade path is clear before any code changes.", tag: "Audit", ai: false, outcome: "Migration blueprint", duration: "1 week", deliverables: ["Version inventory", "Addon compatibility list", "Risk register", "Rollback strategy"] },
-  { icon: <PackageIcon/>, title: "Migration of Odoo apps", body: "Required applications and add-ons need Python and front-end updates for the new Odoo version—built to modern standards while preserving behaviour your teams rely on.", tag: "Apps", ai: true, outcome: "Apps upgraded", duration: "2–5 weeks", deliverables: ["Code refactoring", "UI parity checks", "Dependency updates", "Module test packs"] },
-  { icon: <DatabaseIcon/>, title: "Data transfer", body: "Existing data must map cleanly to new tables and fields. We cleanse, transform, and reconcile so reports, finance, and customer records stay trustworthy.", tag: "Data", ai: true, outcome: "Data reconciled", duration: "1–3 weeks", deliverables: ["Field mapping", "Cleansing rules", "Mock imports", "Reconciliation sign-off"] },
-  { icon: <CheckCircleIcon/>, title: "Evaluating migration", body: "Sophisticated testing under realistic load proves durability—performance, usability, and critical flows are validated before you cut over.", tag: "QA", ai: false, outcome: "UAT passed", duration: "1–2 weeks", deliverables: ["Test scripts", "Load scenarios", "Defect triage", "Go / no-go review"] },
-  { icon: <SettingsIcon/>, title: "Cutover planning", body: "Freeze windows, communication plans, and rollback paths are agreed in writing—so production downtime stays predictable and recoverable.", tag: "Plan", ai: false, outcome: "Cutover ready", duration: "3–5 days", deliverables: ["Cutover runbook", "Stakeholder comms", "Freeze checklist", "War-room schedule"] },
-  { icon: <RocketIcon/>, title: "Go-live on new Odoo", body: "You land on a faster, more reliable Odoo with new features integrated into daily operations—plus hypercare while teams stabilise.", tag: "Launch", ai: true, outcome: "Live on new version", duration: "1 week + hypercare", deliverables: ["Production cutover", "Hypercare desk", "Issue tracking", "Stabilisation review"] },
+  { icon: <SearchIcon/>, title: "Audit", body: "We inventory your current version (or legacy ERP), database size, custom modules, and integrations — so we know exactly what's moving before we plan anything.", tag: "Assess", ai: false, outcome: "Migration audit", duration: "2–3 days", deliverables: ["Version & DB audit", "Customization inventory", "Integration map", "Risk list"] },
+  { icon: <ShieldIcon/>, title: "Compatibility", body: "We test every custom module and third-party app against the target version, flagging deprecated code and what needs rewriting — no nasty surprises mid-migration.", tag: "Check", ai: false, outcome: "Compatibility report", duration: "3–5 days", deliverables: ["Compatibility matrix", "Deprecated-code flags", "Third-party app check", "Effort estimate"] },
+  { icon: <FlagIcon/>, title: "Migration plan", body: "We design the path and sequence, pick a cutover window that fits your operations, and write the rollback plan — so everyone knows exactly how the switch happens.", tag: "Plan", ai: true, outcome: "Migration plan", duration: "2–4 days", deliverables: ["Migration plan", "Cutover window", "Rollback plan", "Data-mapping scheme"] },
+  { icon: <BarChartIcon/>, title: "Estimation", body: "A clear, itemized cost and timeline based on what the audit actually found. You approve before we touch production — no open-ended bills.", tag: "Estimate", ai: false, outcome: "Signed estimate", duration: "2–3 days", deliverables: ["Cost breakdown", "Timeline", "Resource plan", "Assumptions"] },
+  { icon: <ArrowsIcon/>, title: "Migrate on staging", body: "On a staging copy — never your live system — we migrate data, upgrade modules, rewrite incompatible code, and reconnect every integration.", tag: "Build", ai: false, outcome: "Staging build", duration: "Scope-based", deliverables: ["Data migrated", "Modules upgraded", "Code rewritten", "Integrations reconnected"] },
+  { icon: <CheckCircleIcon/>, title: "Validate", body: "Functional testing, a parallel run, and your team's UAT — so migrated numbers reconcile against the old system and sign-off is real, not assumed.", tag: "Test", ai: true, outcome: "Test + UAT report", duration: "3–7 days", deliverables: ["Functional tests", "Data reconciliation", "UAT sign-off", "Performance check"] },
+  { icon: <RocketIcon/>, title: "Cutover", body: "We execute go-live in the agreed window with a final data sync, run smoke tests on the live system, and keep the rollback plan armed until it's confirmed stable.", tag: "Go-live", ai: true, outcome: "Live system", duration: "1–2 days", deliverables: ["Production cutover", "Final data sync", "Smoke tests", "Rollback ready"] },
+  { icon: <HeartIcon/>, title: "Hypercare", body: "After go-live we stay close — monitoring, quick fixes, and tuning while your team settles into the new version, with documentation they can actually use.", tag: "Support", ai: false, outcome: "Live & supported", duration: "Ongoing", deliverables: ["Hypercare window", "Monitoring", "Issue fixes", "Handover docs"] },
 ] as const;
 
 const ROADMAP_CHAPTERS = [
@@ -90,18 +91,18 @@ export function OdooMigrationContent() {
             <div className="oi-hero-lux-eyebrow">Odoo ERP services</div>
           </div>
           <h1 className="oi-hero-lux-h rev">
-            <span className="ln">Migration,</span>
-            <span className="ln"><span className="ai">without the breakage.</span></span>
+            <span className="ln">Odoo,</span>
+            <span className="ln"><span className="ai">Migration.</span></span>
           </h1>
           <p className="oi-hero-lux-sub rev">
-            Partner-led Odoo upgrades when versions move fast. <strong>Data continuity, app parity, and rigorous QA</strong> — so reports, finance, and custom add-ons stay usable on the new release.
+          Stuck on an old Odoo version, or running a legacy ERP you've outgrown? We move you to the latest Odoo — <strong>data intact, customizations rebuilt, integrations reconnected</strong> — on a planned cutover with a rollback safety net, so the switch happens without disrupting your business.
           </p>
           <div className="oi-hero-lux-cta rev">
             <a className="oi-hero-lux-primary" href="#contact">
-              <span>Plan your upgrade</span>
+              <span>Get a Migration Assessment </span>
               <span className="oi-hero-lux-primary-circle"><ArrowRightIcon /></span>
             </a>
-            <Link className="oi-hero-lux-secondary" href="/odoo/implementation">See implementation</Link>
+            <Link className="oi-hero-lux-secondary" href="/odoo/implementation">See how we migrate</Link>
           </div>
           <div className="oi-hero-lux-foot rev">
             <span className="oi-hero-lux-foot-l">We migrate</span>
@@ -137,8 +138,8 @@ export function OdooMigrationContent() {
         <div className="oi-meth-inner">
           <div className="oi-meth-intro rev">
             <div className="oi-meth-intro-l">
-              <div className="eyebrow">Methodology</div>
-              <h2>From legacy stack<br /><span>to confident upgrade.</span></h2>
+              <div className="eyebrow">How we migrate</div>
+              <h2>A migration path with a<span> safety net at every step.</span></h2>
               <div className="oi-meth-intro-l-meta">
                 <span className="oi-meth-intro-l-meta-k">Last refined</span>
                 <span className="oi-meth-intro-l-meta-v">
@@ -148,10 +149,10 @@ export function OdooMigrationContent() {
               </div>
             </div>
             <div className="oi-meth-intro-r">
-              <p>Six gated phases covering apps, data, QA, and cutover. Odoo releases new versions frequently—we help you land on a faster, more reliable platform without losing the reports and add-ons your business depends on.</p>
+              <p>We never touch production until the new version is proven on staging. Eight steps, each with a clear deliverable — and a rollback plan standing by.</p>
               <div className="oi-meth-intro-mini">
                 <div className="oi-meth-mini">
-                  <div className="oi-meth-mini-row"><span className="oi-meth-mini-n">6</span><span className="oi-meth-mini-u">phases</span></div>
+                  <div className="oi-meth-mini-row"><span className="oi-meth-mini-n">8</span><span className="oi-meth-mini-u">phases</span></div>
                   <div className="oi-meth-mini-bar" />
                   <div className="oi-meth-mini-l">Sign-off gated</div>
                   <div className="oi-meth-mini-s">Each one ends in your acceptance.</div>
@@ -172,7 +173,11 @@ export function OdooMigrationContent() {
             </div>
           </div>
 
-          <div className="oi-meth-strip rev">
+          <div
+            className="oi-meth-strip rev"
+            data-cols={PHASES.length}
+            style={{ "--oi-meth-cols": PHASES.length } as CSSProperties}
+          >
             {PHASES.map((phase, i) => (
               <div key={phase.tag} className={`oi-meth-strip-step${phase.ai ? " ai" : ""}`}>
                 <div className="oi-meth-strip-num">{String(i + 1).padStart(2, "0")}</div>
@@ -181,7 +186,7 @@ export function OdooMigrationContent() {
             ))}
           </div>
 
-          <div className="oi-meth-grid rev">
+          <div className="oi-meth-grid rev" data-cols={PHASES.length}>
             {PHASES.map((phase, i) => (
               <div key={phase.title} className={`oi-meth-card${phase.ai ? " ai" : ""}`}>
                 <div className="oi-meth-card-head">
