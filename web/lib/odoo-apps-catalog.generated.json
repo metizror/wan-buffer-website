@@ -8,7 +8,7 @@
     "introParagraphs": [
       "This Statement of Work (SOW) covers the implementation of an enhanced task time-tracking capability within Odoo that allows users to easily start and stop timers directly from the task list view. By introducing a simple popup-based task selection and real-time timer visibility, the solution streamlines time tracking for daily work activities while keeping existing task processes unchanged. The enhancement improves accuracy, user adoption, and productivity by reducing manual effort, without affecting standard task workflows, approvals, or reporting structures already in place.",
       "No, this module is not compatible with Odoo Online (SaaS) environments. It can only be used with Odoo.sh or on-premise installations.",
-      "Yes, you\u00e2\u0080\u0099ll receive 60 days of complimentary support from the date of purchase to resolve any bugs or technical issues related to the module."
+      "Yes, you’ll receive 60 days of complimentary support from the date of purchase to resolve any bugs or technical issues related to the module."
     ],
     "categories": [
       "Productivity"
@@ -28,32 +28,32 @@
     "features": [
       {
         "title": "",
-        "body": "",
+        "body": "Users can start or stop time tracking on a task with a single click.",
         "imageSrc": "/odoo-apps/advance-task-timer/features/start_btn1.png"
       },
       {
         "title": "",
-        "body": "",
+        "body": "Each user can run only one timer at a time on their assigned tasks.",
         "imageSrc": "/odoo-apps/advance-task-timer/features/one_user_one_task.png"
       },
       {
         "title": "",
-        "body": "",
+        "body": "Start/Stop timer button appears directly in the task list near the user image.",
         "imageSrc": "/odoo-apps/advance-task-timer/features/end_task_btn.png"
       },
       {
         "title": "",
-        "body": "",
+        "body": "Timer button automatically switches between Start and Stop based on task status.",
         "imageSrc": "/odoo-apps/advance-task-timer/features/kanban_view.png"
       },
       {
         "title": "",
-        "body": "",
+        "body": "Running timer is shown next to the user profile and updates in real time.",
         "imageSrc": "/odoo-apps/advance-task-timer/features/running_time.png"
       },
       {
         "title": "",
-        "body": "",
+        "body": "Tracked time is automatically saved into standard Odoo timesheets.",
         "imageSrc": "/odoo-apps/advance-task-timer/features/start_wizard.png"
       }
     ],
@@ -76,7 +76,7 @@
       },
       {
         "title": "User can select task from kanban view",
-        "body": "All tracked time is seamlessly saved to Odoo\u00e2\u0080\u0099s default timesheets with no change to existing approval or reporting processes, while allowing users to control timers directly from both Task List and Kanban views."
+        "body": "All tracked time is seamlessly saved to Odoo’s default timesheets with no change to existing approval or reporting processes, while allowing users to control timers directly from both Task List and Kanban views."
       },
       {
         "title": "User can end task",
@@ -243,43 +243,43 @@
     ],
     "features": [
       {
-        "title": "Feature1",
-        "body": "A core part of Sales Customer Credit Limit designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Define customer-wise credit limits directly from the Customer form.",
         "imageSrc": "/odoo-apps/sale-customer-credit-limit/features/feature1.png"
       },
       {
-        "title": "Feature2",
-        "body": "A core part of Sales Customer Credit Limit designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Automatically validates Sales Orders against available customer credit.",
         "imageSrc": "/odoo-apps/sale-customer-credit-limit/features/feature2.png"
       },
       {
-        "title": "Feature3",
-        "body": "A core part of Sales Customer Credit Limit designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Triggers a credit approval request when the limit is exceeded.",
         "imageSrc": "/odoo-apps/sale-customer-credit-limit/features/feature3.png"
       },
       {
-        "title": "Feature4",
-        "body": "A core part of Sales Customer Credit Limit designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Dedicated approval wizard shows remaining credit and order value clearly.",
         "imageSrc": "/odoo-apps/sale-customer-credit-limit/features/feature4.png"
       },
       {
-        "title": "Feature5",
-        "body": "A core part of Sales Customer Credit Limit designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Restricts credit approval access using role-based security groups.",
         "imageSrc": "/odoo-apps/sale-customer-credit-limit/features/feature5.png"
       },
       {
-        "title": "Feature6",
-        "body": "A core part of Sales Customer Credit Limit designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Real-time calculation of remaining credit based on unpaid invoices.",
         "imageSrc": "/odoo-apps/sale-customer-credit-limit/features/feature6.png"
       },
       {
-        "title": "Feature7",
-        "body": "A core part of Sales Customer Credit Limit designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Enable or disable credit limit enforcement from system settings.",
         "imageSrc": "/odoo-apps/sale-customer-credit-limit/features/feature7.png"
       },
       {
-        "title": "Feature8",
-        "body": "A core part of Sales Customer Credit Limit designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Works seamlessly with existing Sales and Accounting workflows.",
         "imageSrc": "/odoo-apps/sale-customer-credit-limit/features/feature8.png"
       }
     ],
@@ -313,7 +313,7 @@
         "body": "Limit for a Customer."
       },
       {
-        "title": "customer\u00e2\u0080\u0099s credit limit is visible in the",
+        "title": "customer’s credit limit is visible in the",
         "body": "Sales module."
       },
       {
@@ -322,7 +322,7 @@
       },
       {
         "title": "The validation error that occurs when a sales user tries to confirm an order exceeding the",
-        "body": "The validation error that occurs when a sales user tries to confirm an order exceeding the customer\u00e2\u0080\u0099s credit limit."
+        "body": "The validation error that occurs when a sales user tries to confirm an order exceeding the customer’s credit limit."
       },
       {
         "title": "credit approval, with a pop-up asking for confirmation.",
@@ -463,10 +463,10 @@
     "slug": "scandoc-integration",
     "name": "ScanDoc Integration",
     "technicalName": "wb_scandoc_integration",
-    "summary": "Yes, ScanDoc works seamlessly with Odoo\u00e2\u0080\u0099s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management.",
-    "description": "Yes, ScanDoc works seamlessly with Odoo\u00e2\u0080\u0099s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management.",
+    "summary": "Yes, ScanDoc works seamlessly with Odoo’s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management.",
+    "description": "Yes, ScanDoc works seamlessly with Odoo’s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management.",
     "introParagraphs": [
-      "Yes, ScanDoc works seamlessly with Odoo\u00e2\u0080\u0099s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management.",
+      "Yes, ScanDoc works seamlessly with Odoo’s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management.",
       "Yes, you can upload and process multiple documents at once, reducing repetitive work and saving time.",
       "Yes, it can integrate with Dropbox, Google Drive, and OneDrive for easy document imports and exports."
     ],
@@ -496,33 +496,33 @@
     ],
     "features": [
       {
-        "title": "AI-Powered OCR \u00e2\u0080\u0093 Extract text from scanned documents, PDFs, and images with high accuracy.",
-        "body": "AI-Powered OCR \u00e2\u0080\u0093 Extract text from scanned documents, PDFs, and images with high accuracy.",
+        "title": "",
+        "body": "AI-Powered OCR – Extract text from scanned documents, PDFs, and images with high accuracy.",
         "imageSrc": "/odoo-apps/scandoc-integration/features/f1.png"
       },
       {
-        "title": "Multi-Format Support \u00e2\u0080\u0093 Process invoices, contracts, purchase orders, ID documents, and more.",
-        "body": "Multi-Format Support \u00e2\u0080\u0093 Process invoices, contracts, purchase orders, ID documents, and more.",
+        "title": "",
+        "body": "Multi-Format Support – Process invoices, contracts, purchase orders, ID documents, and more.",
         "imageSrc": "/odoo-apps/scandoc-integration/features/f2.png"
       },
       {
-        "title": "Bulk Document Processing \u00e2\u0080\u0093 Save time by scanning and processing multiple files at once.",
-        "body": "Bulk Document Processing \u00e2\u0080\u0093 Save time by scanning and processing multiple files at once.",
+        "title": "",
+        "body": "Bulk Document Processing – Save time by scanning and processing multiple files at once.",
         "imageSrc": "/odoo-apps/scandoc-integration/features/f3.png"
       },
       {
-        "title": "Automated Data Entry \u00e2\u0080\u0093 Map extracted fields directly into Odoo records.",
-        "body": "Automated Data Entry \u00e2\u0080\u0093 Map extracted fields directly into Odoo records.",
+        "title": "",
+        "body": "Automated Data Entry – Map extracted fields directly into Odoo records.",
         "imageSrc": "/odoo-apps/scandoc-integration/features/f4.png"
       },
       {
-        "title": "Secure Storage \u00e2\u0080\u0093 Store and manage documents in Odoo\u00e2\u0080\u0099s document module with role-based access.",
-        "body": "Secure Storage \u00e2\u0080\u0093 Store and manage documents in Odoo\u00e2\u0080\u0099s document module with role-based access.",
+        "title": "",
+        "body": "Secure Storage – Store and manage documents in Odoo's document module with role-based access.",
         "imageSrc": "/odoo-apps/scandoc-integration/features/f5.png"
       },
       {
-        "title": "Searchable Archives \u00e2\u0080\u0093 Convert scanned files into fully searchable text-based archives.",
-        "body": "Searchable Archives \u00e2\u0080\u0093 Convert scanned files into fully searchable text-based archives.",
+        "title": "",
+        "body": "Searchable Archives – Convert scanned files into fully searchable text-based archives.",
         "imageSrc": "/odoo-apps/scandoc-integration/features/f6.png"
       }
     ],
@@ -613,7 +613,7 @@
     "faqs": [
       {
         "q": "What does ScanDoc Integration do?",
-        "a": "Yes, ScanDoc works seamlessly with Odoo\u00e2\u0080\u0099s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management."
+        "a": "Yes, ScanDoc works seamlessly with Odoo’s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management."
       },
       {
         "q": "Is support included after purchase?",
@@ -660,42 +660,42 @@
     ],
     "features": [
       {
-        "title": "Create Purchase Orders directly from Helpdesk Tickets with a single click.",
+        "title": "",
         "body": "Create Purchase Orders directly from Helpdesk Tickets with a single click.",
         "imageSrc": "/odoo-apps/ticket-po/features/feature1.png"
       },
       {
-        "title": "Syncs all PO chatter messages to the linked Ticket for complete visibility.",
+        "title": "",
         "body": "Syncs all PO chatter messages to the linked Ticket for complete visibility.",
         "imageSrc": "/odoo-apps/ticket-po/features/feature2.png"
       },
       {
-        "title": "Link existing Purchase Orders to Tickets using an intuitive wizard interface.",
+        "title": "",
         "body": "Link existing Purchase Orders to Tickets using an intuitive wizard interface.",
         "imageSrc": "/odoo-apps/ticket-po/features/feature3.png"
       },
       {
-        "title": "Maintains full audit trail of PO lifecycle events (create, link, cancel, delete).",
+        "title": "",
         "body": "Maintains full audit trail of PO lifecycle events (create, link, cancel, delete).",
         "imageSrc": "/odoo-apps/ticket-po/features/feature4.png"
       },
       {
-        "title": "Smart button displays PO count with one-click access to all linked orders.",
+        "title": "",
         "body": "Smart button displays PO count with one-click access to all linked orders.",
         "imageSrc": "/odoo-apps/ticket-po/features/feature5.png"
       },
       {
-        "title": "Pre-populates PO form with Ticket data for faster order creation.",
+        "title": "",
         "body": "Pre-populates PO form with Ticket data for faster order creation.",
         "imageSrc": "/odoo-apps/ticket-po/features/feature6.png"
       },
       {
-        "title": "Auto-transition Ticket to \"PO Generated\" stage when PO is created or linked.",
+        "title": "",
         "body": "Auto-transition Ticket to \"PO Generated\" stage when PO is created or linked.",
         "imageSrc": "/odoo-apps/ticket-po/features/feature7.png"
       },
       {
-        "title": "Works seamlessly with existing Helpdesk and Purchase workflows.",
+        "title": "",
         "body": "Works seamlessly with existing Helpdesk and Purchase workflows.",
         "imageSrc": "/odoo-apps/ticket-po/features/feature8.png"
       }
@@ -855,43 +855,43 @@
     ],
     "features": [
       {
-        "title": "Feature1",
-        "body": "A core part of Helpdesk Ticket to Sales Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Create Sales Orders directly from Helpdesk Tickets with a single click.",
         "imageSrc": "/odoo-apps/ticket-so/features/feature1.png"
       },
       {
-        "title": "Feature2",
-        "body": "A core part of Helpdesk Ticket to Sales Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Syncs all SO chatter messages to the linked Ticket for complete visibility.",
         "imageSrc": "/odoo-apps/ticket-so/features/feature2.png"
       },
       {
-        "title": "Feature3",
-        "body": "A core part of Helpdesk Ticket to Sales Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Link existing Sales Orders to Tickets using an intuitive wizard interface.",
         "imageSrc": "/odoo-apps/ticket-so/features/feature3.png"
       },
       {
-        "title": "Feature4",
-        "body": "A core part of Helpdesk Ticket to Sales Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Maintains full audit trail of SO lifecycle events (create, link, cancel, delete).",
         "imageSrc": "/odoo-apps/ticket-so/features/feature4.png"
       },
       {
-        "title": "Feature5",
-        "body": "A core part of Helpdesk Ticket to Sales Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Smart button displays SO count with one-click access to all linked orders.",
         "imageSrc": "/odoo-apps/ticket-so/features/feature5.png"
       },
       {
-        "title": "Feature6",
-        "body": "A core part of Helpdesk Ticket to Sales Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Pre-populates SO form with Ticket data for faster order creation.",
         "imageSrc": "/odoo-apps/ticket-so/features/feature6.png"
       },
       {
-        "title": "Feature7",
-        "body": "A core part of Helpdesk Ticket to Sales Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Auto-transition Ticket to \"SO Generated\" stage when SO is created or linked.",
         "imageSrc": "/odoo-apps/ticket-so/features/feature7.png"
       },
       {
-        "title": "Feature8",
-        "body": "A core part of Helpdesk Ticket to Sales Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Works seamlessly with existing Helpdesk and Sales workflows.",
         "imageSrc": "/odoo-apps/ticket-so/features/feature8.png"
       }
     ],
@@ -1054,33 +1054,33 @@
     ],
     "features": [
       {
-        "title": "Create multiple Terms & Conditions templates for Sales documents",
-        "body": "Create multiple Terms & Conditions templates for Sales documents",
+        "title": "",
+        "body": "Create multiple Terms & Conditions templates for Sales documents.",
         "imageSrc": "/odoo-apps/terms-and-conditions/features/f1.png"
       },
       {
-        "title": "Select terms while creating Sales Quotations and Orders",
-        "body": "Select terms while creating Sales Quotations and Orders",
+        "title": "",
+        "body": "Select terms while creating Sales Quotations and Orders.",
         "imageSrc": "/odoo-apps/terms-and-conditions/features/f2.png"
       },
       {
-        "title": "Chosen terms auto-reflected in Customer Invoices",
-        "body": "Chosen terms auto-reflected in Customer Invoices",
+        "title": "",
+        "body": "Chosen terms auto-reflected in Customer Invoices.",
         "imageSrc": "/odoo-apps/terms-and-conditions/features/f3.png"
       },
       {
-        "title": "Terms are visible in print/PDF layouts",
-        "body": "Terms are visible in print/PDF layouts",
+        "title": "",
+        "body": "Terms are visible in print/PDF layouts.",
         "imageSrc": "/odoo-apps/terms-and-conditions/features/f4.png"
       },
       {
-        "title": "Works with Odoo Sales module (Community & Enterprise)",
-        "body": "Works with Odoo Sales module (Community & Enterprise)",
+        "title": "",
+        "body": "Works with Odoo Sales module (Community & Enterprise).",
         "imageSrc": "/odoo-apps/terms-and-conditions/features/f5.png"
       },
       {
-        "title": "One-time setup, no coding required",
-        "body": "One-time setup, no coding required",
+        "title": "",
+        "body": "One-time setup, no coding required.",
         "imageSrc": "/odoo-apps/terms-and-conditions/features/f6.png"
       }
     ],
@@ -1107,7 +1107,7 @@
       },
       {
         "title": "Select",
-        "body": "Terms on Quotation Form On the quotation details page, you will find a new tab named Terms and Conditions . Select the desired template from the dropdown \u00e2\u0080\u0093 the content will populate automatically."
+        "body": "Terms on Quotation Form On the quotation details page, you will find a new tab named Terms and Conditions . Select the desired template from the dropdown – the content will populate automatically."
       },
       {
         "title": "Terms in",
@@ -1257,10 +1257,10 @@
     "slug": "aged-receivable",
     "name": "Aged Receivable Salesperson",
     "technicalName": "wb_aged_receivable",
-    "summary": "Enhance Odoo\u00e2\u0080\u0099s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by...",
-    "description": "Enhance Odoo\u00e2\u0080\u0099s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by salesperson, and full PDF/XLSX export support for better receivables tracking and analysis.",
+    "summary": "Enhance Odoo’s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by...",
+    "description": "Enhance Odoo’s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by salesperson, and full PDF/XLSX export support for better receivables tracking and analysis.",
     "introParagraphs": [
-      "Enhance Odoo\u00e2\u0080\u0099s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by salesperson, and full PDF/XLSX export support for better receivables tracking and analysis.",
+      "Enhance Odoo’s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by salesperson, and full PDF/XLSX export support for better receivables tracking and analysis.",
       "The data is pulled directly from the \"Salesperson\" field (user_id) defined on the Partner record in Odoo.",
       "Yes, Odoo's native PDF and Excel export features will honor the \"Group by Salesperson\" setting, maintaining the structure and column visibility in the exported files."
     ],
@@ -1281,23 +1281,23 @@
     ],
     "features": [
       {
-        "title": "",
-        "body": "",
+        "title": "Salesperson Visibility",
+        "body": "Displays the assigned salesperson directly in the Aged Receivable report rows.",
         "imageSrc": "/odoo-apps/aged-receivable/features/Aged Receivable by Salesperson 1.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Multi-Salesperson Filter",
+        "body": "Filter the report to view data for one or multiple salespeople simultaneously.",
         "imageSrc": "/odoo-apps/aged-receivable/features/Aged Receivable by Salesperson 2.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Group by Salesperson",
+        "body": "Organize receivables in an expandable hierarchy, grouped by individuals.",
         "imageSrc": "/odoo-apps/aged-receivable/features/Aged Receivable by Salesperson 3.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Export Ready",
+        "body": "Fully compatible with PDF and Excel exports, preserving all custom data and grouping.",
         "imageSrc": "/odoo-apps/aged-receivable/features/Aged Receivable by Salesperson 4.png"
       }
     ],
@@ -1412,7 +1412,7 @@
     "faqs": [
       {
         "q": "What does Aged Receivable Salesperson do?",
-        "a": "Enhance Odoo\u00e2\u0080\u0099s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by salesperson, and full PDF/XLSX export support for better receivables tracking and analysis."
+        "a": "Enhance Odoo’s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by salesperson, and full PDF/XLSX export support for better receivables tracking and analysis."
       },
       {
         "q": "Is support included after purchase?",
@@ -1459,43 +1459,43 @@
     ],
     "features": [
       {
-        "title": "Feature1",
-        "body": "A core part of Auto Credit Note for Cancelled Sale Orders designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Automatic credit note creation on sale order cancellation",
         "imageSrc": "/odoo-apps/so-auto-credit-note/features/feature1.png"
       },
       {
-        "title": "Feature2",
-        "body": "A core part of Auto Credit Note for Cancelled Sale Orders designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Auto-detection of linked posted customer invoices",
         "imageSrc": "/odoo-apps/so-auto-credit-note/features/feature2.png"
       },
       {
-        "title": "Feature3",
-        "body": "A core part of Auto Credit Note for Cancelled Sale Orders designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Automatic posting of generated credit notes",
         "imageSrc": "/odoo-apps/so-auto-credit-note/features/feature3.png"
       },
       {
-        "title": "Feature4",
-        "body": "A core part of Auto Credit Note for Cancelled Sale Orders designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Automatic reconciliation with original invoices",
         "imageSrc": "/odoo-apps/so-auto-credit-note/features/feature4.png"
       },
       {
-        "title": "Feature5",
-        "body": "A core part of Auto Credit Note for Cancelled Sale Orders designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Invoice payment state automatically marked as \"Reversed\"",
         "imageSrc": "/odoo-apps/so-auto-credit-note/features/feature5.png"
       },
       {
-        "title": "Feature6",
-        "body": "A core part of Auto Credit Note for Cancelled Sale Orders designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Daily scheduled cron job for missed credit note processing",
         "imageSrc": "/odoo-apps/so-auto-credit-note/features/feature6.png"
       },
       {
-        "title": "Feature7",
-        "body": "A core part of Auto Credit Note for Cancelled Sale Orders designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Handles multiple invoices per sale order",
         "imageSrc": "/odoo-apps/so-auto-credit-note/features/feature7.png"
       },
       {
-        "title": "Feature8",
-        "body": "A core part of Auto Credit Note for Cancelled Sale Orders designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Prevents duplicate credit note creation",
         "imageSrc": "/odoo-apps/so-auto-credit-note/features/feature8.png"
       }
     ],
@@ -1697,33 +1697,33 @@
     ],
     "features": [
       {
-        "title": "Feature1",
-        "body": "A core part of Auto Po Fulfillment designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Automatically detects and links relevant open Purchase Orders based on same Vendor and same Product, eliminating manual PO searching and reducing human errors.",
         "imageSrc": "/odoo-apps/auto-po-fulfillment/features/feature1.png"
       },
       {
-        "title": "Feature2",
-        "body": "A core part of Auto Po Fulfillment designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Intelligently distributes received quantities across multiple open Purchase Orders, ensuring accurate allocation and real-time stock updates.",
         "imageSrc": "/odoo-apps/auto-po-fulfillment/features/feature2.png"
       },
       {
-        "title": "Feature3",
-        "body": "A core part of Auto Po Fulfillment designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Automatically manages partial receipts and backorders, maintaining proper traceability and preventing stock mismatches.",
         "imageSrc": "/odoo-apps/auto-po-fulfillment/features/feature3.png"
       },
       {
-        "title": "Feature4",
-        "body": "A core part of Auto Po Fulfillment designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Ensures proper stock valuation, traceability compliance, and correct PO fulfillment without quantity conflicts.",
         "imageSrc": "/odoo-apps/auto-po-fulfillment/features/feature4.png"
       },
       {
-        "title": "Feature5",
-        "body": "A core part of Auto Po Fulfillment designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Auto calculation button show all details about distribution.",
         "imageSrc": "/odoo-apps/auto-po-fulfillment/features/feature5.png"
       },
       {
-        "title": "Feature6",
-        "body": "A core part of Auto Po Fulfillment designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Fully integrated with Odoo’s Purchase, Inventory modules — no complex configuration required.",
         "imageSrc": "/odoo-apps/auto-po-fulfillment/features/feature6.png"
       }
     ],
@@ -1934,33 +1934,33 @@
     ],
     "features": [
       {
-        "title": "Feature1",
-        "body": "A core part of BI Dashboard designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Create and customize unlimited interactive dashboards with easy drag-and-drop functionality, giving you complete control over your data visualization.",
         "imageSrc": "/odoo-apps/bi-dashboard/features/feature1.png"
       },
       {
-        "title": "Feature2",
-        "body": "A core part of BI Dashboard designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Supports a wide variety of dynamic charts including line, bar, pie, and radar charts to analyze data from Sales, Inventory, Accounting and more.",
         "imageSrc": "/odoo-apps/bi-dashboard/features/feature2.png"
       },
       {
-        "title": "Feature3",
-        "body": "A core part of BI Dashboard designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Advanced data filtering and sorting capabilities allow you to drill down into specific metrics and timeframes for precise business insights.",
         "imageSrc": "/odoo-apps/bi-dashboard/features/feature3.png"
       },
       {
-        "title": "Feature4",
-        "body": "A core part of BI Dashboard designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Multi-company and multi-branch support ensures you can seamlessly monitor performance across your entire organization from a single view.",
         "imageSrc": "/odoo-apps/bi-dashboard/features/feature4.png"
       },
       {
-        "title": "Feature5",
-        "body": "A core part of BI Dashboard designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Export data easily with options to download charts as PDF, Excel, or files to share reports with stakeholders effortlessly.",
         "imageSrc": "/odoo-apps/bi-dashboard/features/feature5.png"
       },
       {
-        "title": "Feature6",
-        "body": "A core part of BI Dashboard designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Fully integrated with Odoo's core modules with auto-refresh intervals to ensure your KPIs are always up-to-date in real-time.",
         "imageSrc": "/odoo-apps/bi-dashboard/features/feature6.png"
       }
     ],
@@ -2134,44 +2134,74 @@
     ],
     "features": [
       {
-        "title": "Brevo%20Connector%201",
-        "body": "A core part of Brevo Connector | Odoo Brevo Integration | Brevo Email Marketing designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Bi-directional Contact Synchronization: Seamlessly sync contacts between Odoo and Brevo in both directions (Odoo ↔ Brevo).",
         "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 1.png"
       },
       {
-        "title": "Brevo%20Connector%202",
-        "body": "A core part of Brevo Connector | Odoo Brevo Integration | Brevo Email Marketing designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Bi-directional Mailing List Synchronization: Manage and sync mailing lists across both platforms simultaneously (Odoo ↔ Brevo).",
         "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 2.png"
       },
       {
-        "title": "Brevo%20Connector%203",
-        "body": "A core part of Brevo Connector | Odoo Brevo Integration | Brevo Email Marketing designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Bi-directional Email Campaign Synchronization: Keep your marketing campaigns updated on both Odoo and Brevo in real-time (Odoo ↔ Brevo).",
         "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 3.png"
       },
       {
-        "title": "Brevo%20Connector%204",
-        "body": "A core part of Brevo Connector | Odoo Brevo Integration | Brevo Email Marketing designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Brevo Template Fetching: Directly fetch and use professionally designed Brevo email templates within your Odoo environment.",
         "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 4.png"
       },
       {
-        "title": "Brevo%20Connector%205",
-        "body": "A core part of Brevo Connector | Odoo Brevo Integration | Brevo Email Marketing designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Verified Sender Synchronization: Automatically fetch all your verified senders from Brevo into Odoo for secure emailing.",
         "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 5.png"
       },
       {
-        "title": "Brevo%20Connector%206",
-        "body": "A core part of Brevo Connector | Odoo Brevo Integration | Brevo Email Marketing designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Folder Management: Fetch and organize Brevo folders directly from the Odoo interface for better list categorization.",
         "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 6.png"
       },
       {
-        "title": "Brevo%20Connector%207",
-        "body": "A core part of Brevo Connector | Odoo Brevo Integration | Brevo Email Marketing designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Automated Background Processing: Three dedicated Cron jobs ensure your data stays synced automatically without manual intervention.",
         "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 7.png"
       },
       {
-        "title": "Brevo%20Connector%208",
-        "body": "A core part of Brevo Connector | Odoo Brevo Integration | Brevo Email Marketing designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Real-time Campaign Statistics: Track critical metrics like Received, Opened, and Clicked status for every campaign inside Odoo.",
         "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 8.png"
+      },
+      {
+        "title": "",
+        "body": "Sync Activity Tracking: Maintain a detailed log of every synchronization activity for complete transparency and monitoring.",
+        "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 9.png"
+      },
+      {
+        "title": "",
+        "body": "Error Diagnostic System: Easily view and debug synchronization errors with a centralized logging system.",
+        "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 10.png"
+      },
+      {
+        "title": "",
+        "body": "Dynamic Attribute Mapping: Map any Odoo partner field to Brevo attributes for highly personalized marketing automation.",
+        "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 11.png"
+      },
+      {
+        "title": "",
+        "body": "Subscription Status Auto-Sync: Automatically update subscriber statuses (Opt-in/Opt-out) across both platforms.",
+        "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 12.png"
+      },
+      {
+        "title": "",
+        "body": "Integrated Smart Buttons: Access live Brevo data and insights directly from Odoo records using interactive smart buttons.",
+        "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 13.png"
+      },
+      {
+        "title": "",
+        "body": "Manual Sync Support: Trigger immediate data synchronization manually at any time for specific records or lists.",
+        "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 14.png"
       }
     ],
     "setupSteps": [
@@ -2376,9 +2406,9 @@
     "name": "CRM Lead Prefix & Reassignment To Sales Person",
     "technicalName": "wb_crm_lead_generation",
     "summary": "This CRM lead generation feature enables automatic creation of unique lead numbers by allowing users to configure a custom prefix and starting number, ensuring consistent...",
-    "description": "This CRM lead generation feature enables automatic creation of unique lead numbers by allowing users to configure a custom prefix and starting number, ensuring consistent identification such as LEAD0001. Once enabled, users can easily manage and transfer leads directly from CRM \u00e2\u0086\u0092 Sales \u00e2\u0086\u0092 My Pipeline using the Transfer Lead option, which opens a simple reassignment pop-up to update the assigned user, helping streamline lead ownership and improve sales workflow efficiency.",
+    "description": "This CRM lead generation feature enables automatic creation of unique lead numbers by allowing users to configure a custom prefix and starting number, ensuring consistent identification such as LEAD0001. Once enabled, users can easily manage and transfer leads directly from CRM → Sales → My Pipeline using the Transfer Lead option, which opens a simple reassignment pop-up to update the assigned user, helping streamline lead ownership and improve sales workflow efficiency.",
     "introParagraphs": [
-      "This CRM lead generation feature enables automatic creation of unique lead numbers by allowing users to configure a custom prefix and starting number, ensuring consistent identification such as LEAD0001. Once enabled, users can easily manage and transfer leads directly from CRM \u00e2\u0086\u0092 Sales \u00e2\u0086\u0092 My Pipeline using the Transfer Lead option, which opens a simple reassignment pop-up to update the assigned user, helping streamline lead ownership and improve sales workflow efficiency.",
+      "This CRM lead generation feature enables automatic creation of unique lead numbers by allowing users to configure a custom prefix and starting number, ensuring consistent identification such as LEAD0001. Once enabled, users can easily manage and transfer leads directly from CRM → Sales → My Pipeline using the Transfer Lead option, which opens a simple reassignment pop-up to update the assigned user, helping streamline lead ownership and improve sales workflow efficiency.",
       "This module automatically generates unique lead numbers in Odoo CRM and provides an easy way to transfer leads between sales users for better lead management.",
       "The \"Transfer Lead\" option allows users to quickly reassign leads to another salesperson or team member directly from the CRM pipeline."
     ],
@@ -2398,33 +2428,33 @@
     ],
     "features": [
       {
-        "title": "1.Auto-generate unique custom Lead Number using configurable sequence",
-        "body": "1.Auto-generate unique custom Lead Number using configurable sequence",
+        "title": "",
+        "body": "Auto-generate unique custom Lead Number using configurable sequence.",
         "imageSrc": "/odoo-apps/crm-lead-generation/features/confrigation.png"
       },
       {
-        "title": "2.Lead number is auto-generated using the custom sequence configuration",
-        "body": "2.Lead number is auto-generated using the custom sequence configuration",
+        "title": "",
+        "body": "Lead number is auto-generated using the custom sequence configuration.",
         "imageSrc": "/odoo-apps/crm-lead-generation/features/assigment.png"
       },
       {
-        "title": "3.Automatic lead number assignment during lead transfer",
-        "body": "3.Automatic lead number assignment during lead transfer",
+        "title": "",
+        "body": "Automatic lead number assignment during lead transfer.",
         "imageSrc": "/odoo-apps/crm-lead-generation/features/sale_person_change.png"
       },
       {
-        "title": "4.Salesperson is updated automatically when the lead is assigned",
-        "body": "4.Salesperson is updated automatically when the lead is assigned",
+        "title": "",
+        "body": "Salesperson is updated automatically when the lead is assigned.",
         "imageSrc": "/odoo-apps/crm-lead-generation/features/transfer.png"
       },
       {
-        "title": "5.Prevent duplicate lead number generation",
-        "body": "5.Prevent duplicate lead number generation",
+        "title": "",
+        "body": "Prevent duplicate lead number generation.",
         "imageSrc": "/odoo-apps/crm-lead-generation/features/prevent_duplicate.png"
       },
       {
-        "title": "6.Secure lead transfer with role-based access control",
-        "body": "6.Secure lead transfer with role-based access control",
+        "title": "",
+        "body": "Secure lead transfer with role-based access control.",
         "imageSrc": "/odoo-apps/crm-lead-generation/features/role_based.png"
       }
     ],
@@ -2439,7 +2469,7 @@
       },
       {
         "title": "To check, go to",
-        "body": "CRM \u00e2\u0086\u0092 My Pipeline \u00e2\u0086\u0092Leads. To use the transfer feature, open CRM, then Sales, and go to My Pipeline. The Transfer Lead button will appear automatically after the Lead Number & Transfer configuration is enabled."
+        "body": "CRM → My Pipeline →Leads. To use the transfer feature, open CRM, then Sales, and go to My Pipeline. The Transfer Lead button will appear automatically after the Lead Number & Transfer configuration is enabled."
       },
       {
         "title": "Create",
@@ -2451,7 +2481,7 @@
       },
       {
         "title": "Saleperson automatically",
-        "body": "Change After clicking Confirm, the Salesperson is updated automatically. You can check this in CRM, then Sales, under My Pipeline. For example, the Salesperson may change from \u00e2\u0080\u009cMitchel Admin\u00e2\u0080\u009d to \u00e2\u0080\u009cMark Demo.\u00e2\u0080\u009d"
+        "body": "Change After clicking Confirm, the Salesperson is updated automatically. You can check this in CRM, then Sales, under My Pipeline. For example, the Salesperson may change from “Mitchel Admin” to “Mark Demo.”"
       },
       {
         "title": "Go to the",
@@ -2559,7 +2589,7 @@
     "faqs": [
       {
         "q": "What does CRM Lead Prefix & Reassignment To Sales Person do?",
-        "a": "This CRM lead generation feature enables automatic creation of unique lead numbers by allowing users to configure a custom prefix and starting number, ensuring consistent identification such as LEAD0001. Once enabled, users can easily manage and transfer leads directly from CRM \u00e2\u0086\u0092 Sales \u00e2\u0086\u0092 My Pipeline using the Transfer Lead option, which opens a"
+        "a": "This CRM lead generation feature enables automatic creation of unique lead numbers by allowing users to configure a custom prefix and starting number, ensuring consistent identification such as LEAD0001. Once enabled, users can easily manage and transfer leads directly from CRM → Sales → My Pipeline using the Transfer Lead option, which opens a"
       },
       {
         "q": "Is support included after purchase?",
@@ -2603,23 +2633,23 @@
     ],
     "features": [
       {
-        "title": "Code%20Captcha%201",
-        "body": "A core part of Code Captcha designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Modern \"I am not a robot\" checkbox integrated directly into the Odoo login form.",
         "imageSrc": "/odoo-apps/code-captcha/features/Code Captcha 1.png"
       },
       {
-        "title": "Code%20Captcha%202",
-        "body": "A core part of Code Captcha designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Triggers a character-based challenge with canvas-based rendering to prevent automated bots from reading the code.",
         "imageSrc": "/odoo-apps/code-captcha/features/Code Captcha 2.png"
       },
       {
-        "title": "Code%20Captcha%203",
-        "body": "A core part of Code Captcha designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Refresh button inside the CAPTCHA modal to generate a new security code.",
         "imageSrc": "/odoo-apps/code-captcha/features/Code Captcha 3.png"
       },
       {
-        "title": "Code%20Captcha%204",
-        "body": "A core part of Code Captcha designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Blocks form submission until the CAPTCHA is successfully solved.",
         "imageSrc": "/odoo-apps/code-captcha/features/Code Captcha 4.png"
       }
     ],
@@ -2760,44 +2790,64 @@
     ],
     "features": [
       {
-        "title": "Feature1",
-        "body": "A core part of Contact Merge Customization designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Configure fields for duplicate partner detection.",
         "imageSrc": "/odoo-apps/partner-merge-customization/features/feature1.png"
       },
       {
-        "title": "Feature2",
-        "body": "A core part of Contact Merge Customization designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Support AND / OR logic for duplicate identification.",
         "imageSrc": "/odoo-apps/partner-merge-customization/features/feature2.png"
       },
       {
-        "title": "Feature3",
-        "body": "A core part of Contact Merge Customization designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Automatically scan contacts to detect duplicate records.",
         "imageSrc": "/odoo-apps/partner-merge-customization/features/feature3.png"
       },
       {
-        "title": "Feature4",
-        "body": "A core part of Contact Merge Customization designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "View duplicate partner groups in a centralized dashboard.",
         "imageSrc": "/odoo-apps/partner-merge-customization/features/feature4.png"
       },
       {
-        "title": "Feature5",
-        "body": "A core part of Contact Merge Customization designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Select a primary contact before merging duplicates.",
         "imageSrc": "/odoo-apps/partner-merge-customization/features/feature5.png"
       },
       {
-        "title": "Feature6",
-        "body": "A core part of Contact Merge Customization designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Merge duplicate contacts into a single main partner record.",
         "imageSrc": "/odoo-apps/partner-merge-customization/features/feature6.png"
       },
       {
-        "title": "Feature7",
-        "body": "A core part of Contact Merge Customization designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Automatically transfer related records during merge.",
         "imageSrc": "/odoo-apps/partner-merge-customization/features/feature7.png"
       },
       {
-        "title": "Feature8",
-        "body": "A core part of Contact Merge Customization designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Track complete merge history for audit purposes.",
         "imageSrc": "/odoo-apps/partner-merge-customization/features/feature8.png"
+      },
+      {
+        "title": "",
+        "body": "Restore merged contacts using rollback functionality.",
+        "imageSrc": "/odoo-apps/partner-merge-customization/features/feature9.png"
+      },
+      {
+        "title": "",
+        "body": "Normalize phone numbers before duplicate detection.",
+        "imageSrc": "/odoo-apps/partner-merge-customization/features/feature10.png"
+      },
+      {
+        "title": "",
+        "body": "Schedule automatic duplicate detection using cron jobs.",
+        "imageSrc": "/odoo-apps/partner-merge-customization/features/feature11.png"
+      },
+      {
+        "title": "",
+        "body": "Improve data quality by reducing redundant contacts.",
+        "imageSrc": "/odoo-apps/partner-merge-customization/features/feature12.png"
       }
     ],
     "setupSteps": [
@@ -3003,43 +3053,43 @@
     ],
     "features": [
       {
-        "title": "Feature1",
-        "body": "A core part of Dynamic Company Filter designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Instant search for companies and branches directly within the switcher.",
         "imageSrc": "/odoo-apps/company-filter/features/feature1.png"
       },
       {
-        "title": "Feature2",
-        "body": "A core part of Dynamic Company Filter designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Clear hierarchical view of parent companies and their respective branches.",
         "imageSrc": "/odoo-apps/company-filter/features/feature2.png"
       },
       {
-        "title": "Feature3",
-        "body": "A core part of Dynamic Company Filter designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Optimized multi-company switcher for faster and more intuitive navigation.",
         "imageSrc": "/odoo-apps/company-filter/features/feature3.png"
       },
       {
-        "title": "Feature4",
-        "body": "A core part of Dynamic Company Filter designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Context-aware labels showing current company and parent company relationships.",
         "imageSrc": "/odoo-apps/company-filter/features/feature4.png"
       },
       {
-        "title": "Feature5",
-        "body": "A core part of Dynamic Company Filter designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Seamless transitions between different branches without losing context.",
         "imageSrc": "/odoo-apps/company-filter/features/feature5.png"
       },
       {
-        "title": "Feature6",
-        "body": "A core part of Dynamic Company Filter designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Improved UI layout for better readability in high-density company setups.",
         "imageSrc": "/odoo-apps/company-filter/features/feature6.png"
       },
       {
-        "title": "Feature7",
-        "body": "A core part of Dynamic Company Filter designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Configurable visibility settings for different user roles and access levels.",
         "imageSrc": "/odoo-apps/company-filter/features/feature7.png"
       },
       {
-        "title": "Feature8",
-        "body": "A core part of Dynamic Company Filter designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Smooth integration with Odoo's standard multi-company security rules.",
         "imageSrc": "/odoo-apps/company-filter/features/feature8.png"
       }
     ],
@@ -3196,33 +3246,33 @@
     ],
     "features": [
       {
-        "title": "",
-        "body": "",
+        "title": "Universal Compatibility",
+        "body": "This feature ensures that the warning banner works across all standard Odoo form views like Sales Orders, Contacts, Products, Invoices, etc.",
         "imageSrc": "/odoo-apps/dynamic-warning/features/Dynamic Warnings 1.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Filter-Based Condition Builder",
+        "body": "Create complex rules easily using Odoo's native filter widget. No more typing manual code; just pick your fields and values from a dropdown.",
         "imageSrc": "/odoo-apps/dynamic-warning/features/Dynamic Warnings 2.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "User-Based Visibility",
+        "body": "You can control who sees which warning by assigning user groups. For example, only Sales Managers can see certain alerts, while regular users won't.",
         "imageSrc": "/odoo-apps/dynamic-warning/features/Dynamic Warnings 3.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Scheduled Alerts",
+        "body": "Each warning can have a defined validity period using \"Valid From\" and \"Valid To\" dates. The system automatically shows or hides warnings based on the current date.",
         "imageSrc": "/odoo-apps/dynamic-warning/features/Dynamic Warnings 4.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Multi-Company Ready",
+        "body": "Each warning can be configured to apply to specific companies, allowing you to show different alerts to users in different legal entities.",
         "imageSrc": "/odoo-apps/dynamic-warning/features/Dynamic Warnings 5.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Native UI Design",
+        "body": "The warning banners use Odoo's built-in Bootstrap alert styles such as Info (blue), Warning (yellow), and Danger (red).",
         "imageSrc": "/odoo-apps/dynamic-warning/features/Dynamic Warnings 6.png"
       }
     ],
@@ -3429,23 +3479,23 @@
     ],
     "features": [
       {
-        "title": "Image%20Captcha%201",
-        "body": "A core part of Image Captcha designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Modern \"I am not a robot\" checkbox integrated directly into the Odoo login form.",
         "imageSrc": "/odoo-apps/image-captcha/features/Image Captcha 1.png"
       },
       {
-        "title": "Image%20Captcha%202",
-        "body": "A core part of Image Captcha designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Triggers a grid of images where users must select all images matching a given category (e.g., cars, buses).",
         "imageSrc": "/odoo-apps/image-captcha/features/Image Captcha 2.png"
       },
       {
-        "title": "Image%20Captcha%203",
-        "body": "A core part of Image Captcha designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Refresh button inside the CAPTCHA modal to load a new set of images.",
         "imageSrc": "/odoo-apps/image-captcha/features/Image Captcha 3.png"
       },
       {
-        "title": "Image%20Captcha%204",
-        "body": "A core part of Image Captcha designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Blocks form submission until the CAPTCHA is successfully solved.",
         "imageSrc": "/odoo-apps/image-captcha/features/Image Captcha 4.png"
       }
     ],
@@ -3584,33 +3634,33 @@
     ],
     "features": [
       {
-        "title": "Feature1",
-        "body": "A core part of Inventory Quantity Updater designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Batch Inventory Adjustments: Effortlessly update stock quantities for multiple products in one go.",
         "imageSrc": "/odoo-apps/update-record/features/feature1.png"
       },
       {
-        "title": "Feature2",
-        "body": "A core part of Inventory Quantity Updater designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "CSV Data Import: Upload CSV files to sync inventory data quickly and accurately.",
         "imageSrc": "/odoo-apps/update-record/features/feature2.png"
       },
       {
-        "title": "Feature3",
-        "body": "A core part of Inventory Quantity Updater designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Smart Product Creation: Automatically create products that don't exist in the system.",
         "imageSrc": "/odoo-apps/update-record/features/feature3.png"
       },
       {
-        "title": "Feature4",
-        "body": "A core part of Inventory Quantity Updater designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Validation & Error Handling: Robust checks for file format, missing locations, and tracked products.",
         "imageSrc": "/odoo-apps/update-record/features/feature4.png"
       },
       {
-        "title": "Feature5",
-        "body": "A core part of Inventory Quantity Updater designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "User Feedback: Real-time notifications on the number of successful and failed record updates.",
         "imageSrc": "/odoo-apps/update-record/features/feature5.png"
       },
       {
-        "title": "Feature6",
-        "body": "A core part of Inventory Quantity Updater designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Control Product Creation: Give users full control over whether new products should be added.",
         "imageSrc": "/odoo-apps/update-record/features/feature6.png"
       }
     ],
@@ -3735,10 +3785,10 @@
     "slug": "custom-widget-many2many",
     "name": "Many2Many Form Opener",
     "technicalName": "wb_custom_widget_many2many",
-    "summary": "Many2Many Form Opener enhances Odoo\u00e2\u0080\u0099s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This...",
-    "description": "Many2Many Form Opener enhances Odoo\u00e2\u0080\u0099s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This customization improves workflow efficiency and user experience by providing quick access to linked records without additional clicks or navigation.",
+    "summary": "Many2Many Form Opener enhances Odoo’s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This...",
+    "description": "Many2Many Form Opener enhances Odoo’s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This customization improves workflow efficiency and user experience by providing quick access to linked records without additional clicks or navigation.",
     "introParagraphs": [
-      "Many2Many Form Opener enhances Odoo\u00e2\u0080\u0099s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This customization improves workflow efficiency and user experience by providing quick access to linked records without additional clicks or navigation.",
+      "Many2Many Form Opener enhances Odoo’s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This customization improves workflow efficiency and user experience by providing quick access to linked records without additional clicks or navigation.",
       "This module enhances Odoo's default Many2Many widget by allowing users to directly open related records from Many2Many tags.",
       "Users can quickly access linked records directly from tags without manually searching or navigating through multiple menus."
     ],
@@ -3758,32 +3808,32 @@
     ],
     "features": [
       {
-        "title": "Open related records directly from Many2Many tags with a single click.",
+        "title": "",
         "body": "Open related records directly from Many2Many tags with a single click.",
         "imageSrc": "/odoo-apps/custom-widget-many2many/features/1.png"
       },
       {
-        "title": "Works seamlessly across Form, List, and Kanban views for better usability.",
+        "title": "",
         "body": "Works seamlessly across Form, List, and Kanban views for better usability.",
         "imageSrc": "/odoo-apps/custom-widget-many2many/features/4.png"
       },
       {
-        "title": "Enhances navigation speed by reducing steps to access linked records.",
+        "title": "",
         "body": "Enhances navigation speed by reducing steps to access linked records.",
         "imageSrc": "/odoo-apps/custom-widget-many2many/features/2.png"
       },
       {
-        "title": "Maintains Odoo\u00e2\u0080\u0099s native design while extending default Many2Many behavior.",
-        "body": "Maintains Odoo\u00e2\u0080\u0099s native design while extending default Many2Many behavior.",
+        "title": "",
+        "body": "Maintains Odoo's native design while extending default Many2Many behavior.",
         "imageSrc": "/odoo-apps/custom-widget-many2many/features/5.png"
       },
       {
-        "title": "Developer-friendly structure for easy customization and extension.",
+        "title": "",
         "body": "Developer-friendly structure for easy customization and extension.",
         "imageSrc": "/odoo-apps/custom-widget-many2many/features/3.png"
       },
       {
-        "title": "Improves productivity by offering a smooth and intuitive user experience.",
+        "title": "",
         "body": "Improves productivity by offering a smooth and intuitive user experience.",
         "imageSrc": "/odoo-apps/custom-widget-many2many/features/6.png"
       }
@@ -3929,7 +3979,7 @@
     "faqs": [
       {
         "q": "What does Many2Many Form Opener do?",
-        "a": "Many2Many Form Opener enhances Odoo\u00e2\u0080\u0099s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This customization improves workflow efficiency and user experience by providing quick access to linked records without additional clicks or navigation."
+        "a": "Many2Many Form Opener enhances Odoo’s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This customization improves workflow efficiency and user experience by providing quick access to linked records without additional clicks or navigation."
       },
       {
         "q": "Is support included after purchase?",
@@ -3976,33 +4026,33 @@
     ],
     "features": [
       {
-        "title": "Feature1",
-        "body": "A core part of Merge Invoices designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Supports Customer Invoices, Vendor Bills, Credit Notes, and Debit Notes.",
         "imageSrc": "/odoo-apps/invoice-merging/features/feature1.png"
       },
       {
-        "title": "Feature2",
-        "body": "A core part of Merge Invoices designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Option to create a new document or merge into an existing one.",
         "imageSrc": "/odoo-apps/invoice-merging/features/feature2.png"
       },
       {
-        "title": "Feature3",
-        "body": "A core part of Merge Invoices designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Post-merge actions: keep, cancel, or delete original documents.",
         "imageSrc": "/odoo-apps/invoice-merging/features/feature3.png"
       },
       {
-        "title": "Feature4",
-        "body": "A core part of Merge Invoices designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Allows merging across different customers/vendors.",
         "imageSrc": "/odoo-apps/invoice-merging/features/feature4.png"
       },
       {
-        "title": "Feature5",
-        "body": "A core part of Merge Invoices designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Merges chatter/messages from all documents.",
         "imageSrc": "/odoo-apps/invoice-merging/features/feature5.png"
       },
       {
-        "title": "Feature6",
-        "body": "A core part of Merge Invoices designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Supports partial quantity merging (line-wise control).",
         "imageSrc": "/odoo-apps/invoice-merging/features/feature6.png"
       }
     ],
@@ -4180,32 +4230,32 @@
     ],
     "features": [
       {
-        "title": "Email-based OTP verification after successful credential validation.",
+        "title": "",
         "body": "Email-based OTP verification after successful credential validation.",
         "imageSrc": "/odoo-apps/otp-login/features/feature1.png"
       },
       {
-        "title": "60-second countdown timer with visual feedback for OTP resend.",
+        "title": "",
         "body": "60-second countdown timer with visual feedback for OTP resend.",
         "imageSrc": "/odoo-apps/otp-login/features/feature2.png"
       },
       {
-        "title": "Secure SHA256 hashing for OTP storage - codes never stored in plain text.",
+        "title": "",
         "body": "Secure SHA256 hashing for OTP storage - codes never stored in plain text.",
         "imageSrc": "/odoo-apps/otp-login/features/feature3.png"
       },
       {
-        "title": "1-minute OTP expiry with automatic cleanup of expired tokens.",
+        "title": "",
         "body": "1-minute OTP expiry with automatic cleanup of expired tokens.",
         "imageSrc": "/odoo-apps/otp-login/features/feature4.png"
       },
       {
-        "title": "Terminal logging for development when email server is not configured.",
+        "title": "",
         "body": "Terminal logging for development when email server is not configured.",
         "imageSrc": "/odoo-apps/otp-login/features/feature5.png"
       },
       {
-        "title": "Works with both regular users and superuser login.",
+        "title": "",
         "body": "Works with both regular users and superuser login.",
         "imageSrc": "/odoo-apps/otp-login/features/feature6.png"
       }
@@ -4348,33 +4398,33 @@
     ],
     "features": [
       {
-        "title": "",
-        "body": "",
+        "title": "Automated Overdue Payment Reminders",
+        "body": "Send automatic reminder emails for overdue invoices, vendor bills, and expenses on a daily, weekly, or monthly basis after the due date.",
         "imageSrc": "/odoo-apps/overdue-penalty/features/Ticket to PO - 1.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Flexible Penalty Calculation (Fixed or Percentage)",
+        "body": "Apply penalties as either a fixed amount or a percentage of the outstanding balance, configurable to match your business credit policy.",
         "imageSrc": "/odoo-apps/overdue-penalty/features/Ticket to PO - 2.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Penalty Application on Invoice Total or Line Items",
+        "body": "Apply penalties on the total invoice amount or individual invoice line items for better accuracy and financial transparency.",
         "imageSrc": "/odoo-apps/overdue-penalty/features/Ticket to PO - 3.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Recurring Penalty Application Based on Frequency",
+        "body": "Automatically reapply penalties on daily, weekly, or monthly cycles until payment is completed — no manual follow-ups required.",
         "imageSrc": "/odoo-apps/overdue-penalty/features/Ticket to PO - 4.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Dynamic & User-Friendly Configuration",
+        "body": "Smart UI behavior dynamically shows or hides fields based on selected options (Fixed / Percentage, Total / Line Item), ensuring a clean and intuitive setup.",
         "imageSrc": "/odoo-apps/overdue-penalty/features/Ticket to PO - 5.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Global & Customer-Specific Penalty Configuration",
+        "body": "Define a global penalty rule for all customers and override it for specific customers when needed. Customer-level settings always take priority.",
         "imageSrc": "/odoo-apps/overdue-penalty/features/Ticket to PO - 6.png"
       }
     ],
@@ -4523,7 +4573,7 @@
     "description": "The Low Stock Notification Module is designed to alert users when product stock levels fall below defined minimum quantities. It supports global, individual, and reorder rule-based configurations , ensuring timely stock replenishment and uninterrupted business operations.",
     "introParagraphs": [
       "The Low Stock Notification Module is designed to alert users when product stock levels fall below defined minimum quantities. It supports global, individual, and reorder rule-based configurations , ensuring timely stock replenishment and uninterrupted business operations.",
-      "User Notification Preference Users can activate \u00e2\u0080\u009cNotify User\u00e2\u0080\u009d in preferences to receive alerts.",
+      "User Notification Preference Users can activate “Notify User” in preferences to receive alerts.",
       "Global Product Alerts Set global minimum stock levels to monitor all products at once."
     ],
     "categories": [
@@ -4542,33 +4592,33 @@
     ],
     "features": [
       {
-        "title": "",
-        "body": "",
+        "title": "Automatic Low-Stock Alerts",
+        "body": "The system automatically alerts users through email when product quantities fall below the defined minimum stock level.",
         "imageSrc": "/odoo-apps/low-stock-notification/features/Low Stock Notification - 1.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Email Notification to Authorized Users",
+        "body": "Only the designated or configured users receive the low-stock alerts, including a detailed report as an attachment.",
         "imageSrc": "/odoo-apps/low-stock-notification/features/Low Stock Notification - 2.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Minimum Quantity Setup per Product",
+        "body": "Users can define a specific minimum stock threshold for each product to trigger restock notifications.",
         "imageSrc": "/odoo-apps/low-stock-notification/features/Low Stock Notification - 3.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Variant-Level Minimum Quantity Setup",
+        "body": "Minimum quantity limits can also be configured at the product-variant level to track individual item availability.",
         "imageSrc": "/odoo-apps/low-stock-notification/features/Low Stock Notification - 4.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Flexible Notification Options",
+        "body": "Alerts can be configured globally for all products, individually per product, or dynamically based on existing reordering rules.",
         "imageSrc": "/odoo-apps/low-stock-notification/features/Low Stock Notification - 5.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Stock Basis Selection",
+        "body": "Notifications can be triggered using either On-Hand stock levels or Forecasted Quantities, depending on the user's preference.",
         "imageSrc": "/odoo-apps/low-stock-notification/features/Low Stock Notification - 6.png"
       }
     ],
@@ -4765,23 +4815,23 @@
     ],
     "features": [
       {
-        "title": "Feature1",
-        "body": "A core part of Product Multiple Barcodes designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Easy to Create Multiple Barcode for Single Product.",
         "imageSrc": "/odoo-apps/product-multiple-barcodes/features/feature1.png"
       },
       {
-        "title": "Feature2",
-        "body": "A core part of Product Multiple Barcodes designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Easy to Search Product based on Multiple Barcodes.",
         "imageSrc": "/odoo-apps/product-multiple-barcodes/features/feature2.png"
       },
       {
-        "title": "Feature3",
-        "body": "A core part of Product Multiple Barcodes designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Set Barcode for Specific Model or Department to avoid confusion and ensure accurate product identification.",
         "imageSrc": "/odoo-apps/product-multiple-barcodes/features/feature3.png"
       },
       {
-        "title": "Feature4",
-        "body": "A core part of Product Multiple Barcodes designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Use Specific Barcode for Selected Model Only.",
         "imageSrc": "/odoo-apps/product-multiple-barcodes/features/feature4.png"
       }
     ],
@@ -5006,33 +5056,33 @@
     ],
     "features": [
       {
-        "title": "Feature1",
-        "body": "A core part of Split Extract Sales Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Quickly extract or split sales orders directly from the sales order form.",
         "imageSrc": "/odoo-apps/split-extract-sales-order/features/feature1.png"
       },
       {
-        "title": "Feature2",
-        "body": "A core part of Split Extract Sales Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Allow only authorized users to access Extract / Split functionality.",
         "imageSrc": "/odoo-apps/split-extract-sales-order/features/feature2.png"
       },
       {
-        "title": "Feature3",
-        "body": "A core part of Split Extract Sales Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Choose individual products for precise order extract/split.",
         "imageSrc": "/odoo-apps/split-extract-sales-order/features/feature3.png"
       },
       {
-        "title": "Feature4",
-        "body": "A core part of Split Extract Sales Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Extracted/splited lines can be moved to a new sales order or merged into an existing one.",
         "imageSrc": "/odoo-apps/split-extract-sales-order/features/feature4.png"
       },
       {
-        "title": "Feature5",
-        "body": "A core part of Split Extract Sales Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Automatically maintains smart button between original and extracted/splited sales orders.",
         "imageSrc": "/odoo-apps/split-extract-sales-order/features/feature5.png"
       },
       {
-        "title": "Feature6",
-        "body": "A core part of Split Extract Sales Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Works smoothly with standard Odoo Sales processes without disrupting existing operations.",
         "imageSrc": "/odoo-apps/split-extract-sales-order/features/feature6.png"
       }
     ],
@@ -5272,33 +5322,33 @@
     ],
     "features": [
       {
-        "title": "Feature1",
-        "body": "A core part of Stock 3D View designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Visualize warehouse and stock locations in a fully interactive 3D environment. Display locations as structured 3D blocks.",
         "imageSrc": "/odoo-apps/stock-3d-custom-view/features/feature1.png"
       },
       {
-        "title": "Feature2",
-        "body": "A core part of Stock 3D View designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Location in form view Configure 3D dimensions for each stock location, Define coordinates to precisely position locations inside the warehouse layout.",
         "imageSrc": "/odoo-apps/stock-3d-custom-view/features/feature2.png"
       },
       {
-        "title": "Feature3",
-        "body": "A core part of Stock 3D View designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Drag and drop stock locations directly in the 3D view to redesign warehouse layouts visually. Click on any location in the 3D scene to view detailed location information instantly.",
         "imageSrc": "/odoo-apps/stock-3d-custom-view/features/feature3.png"
       },
       {
-        "title": "Feature4",
-        "body": "A core part of Stock 3D View designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "View available products and stock quantities per location directly from the 3D interface. Automatically fetch and update product data for each location in real time.",
         "imageSrc": "/odoo-apps/stock-3d-custom-view/features/feature4.png"
       },
       {
-        "title": "Feature5",
-        "body": "A core part of Stock 3D View designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Create internal stock transfers by selecting source and destination locations visually. Enter transfer quantities through an intuitive dialog without leaving the 3D view.",
         "imageSrc": "/odoo-apps/stock-3d-custom-view/features/feature5.png"
       },
       {
-        "title": "Feature6",
-        "body": "A core part of Stock 3D View designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Launch the 3D warehouse view directly from stock location list or form views. Fully integrated with Odoo Inventory workflows and stock move operations.",
         "imageSrc": "/odoo-apps/stock-3d-custom-view/features/feature6.png"
       }
     ],
@@ -5457,7 +5507,7 @@
     "description": "Protect your Odoo chatter logs with role-based message deletion control. Only users with Log Remover access can delete chatter messages, preventing accidental or unauthorized data loss. Deletion is enforced at both the UI and backend levels with a confirmation step, ensuring secure and intentional cleanup while maintaining a clean, real-time user experience across all documents.",
     "introParagraphs": [
       "Protect your Odoo chatter logs with role-based message deletion control. Only users with Log Remover access can delete chatter messages, preventing accidental or unauthorized data loss. Deletion is enforced at both the UI and backend levels with a confirmation step, ensuring secure and intentional cleanup while maintaining a clean, real-time user experience across all documents.",
-      "User Access Management Administrators can grant or revoke chatter message deletion rights by simply enabling the Log Remover option in the user access settings\u00e2\u0080\u0094no technical configuration required.",
+      "User Access Management Administrators can grant or revoke chatter message deletion rights by simply enabling the Log Remover option in the user access settings—no technical configuration required.",
       "Role-Based Delete Icon Visibility The delete (trash) icon appears in the chatter message header only for users who are assigned to the Log Remover access group. Unauthorized users will not see any delete option, ensuring a clean and secure interface."
     ],
     "categories": [
@@ -5475,33 +5525,33 @@
     ],
     "features": [
       {
-        "title": "",
-        "body": "",
+        "title": "Secure Chatter Message Deletion",
+        "body": "Allow deletion of chatter messages only for authorized users. The module ensures that sensitive logs and discussions cannot be removed accidentally or by unauthorized users.",
         "imageSrc": "/odoo-apps/log-message-delete/features/Log Message Delete 1.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Dedicated Log Remover Access Group",
+        "body": "Introduces a special Log Remover security group. Only users assigned to this group can delete chatter messages across any document, ensuring strict role-based control.",
         "imageSrc": "/odoo-apps/log-message-delete/features/Log Message Delete 2.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Safe Deletion with Explicit Permission Validation",
+        "body": "Message deletion is executed only after validating user permissions and deletion intent, ensuring system logs remain protected from accidental or unintended removal.",
         "imageSrc": "/odoo-apps/log-message-delete/features/Log Message Delete 3.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Context-Aware Safe Deletion Logic",
+        "body": "Deletion is allowed only when triggered with a secure context flag, ensuring normal system operations remain unaffected while preventing unintended or mass deletions.",
         "imageSrc": "/odoo-apps/log-message-delete/features/Log Message Delete 4.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Clean & Intuitive Chatter UI Integration",
+        "body": "A Delete (trash) icon appears directly in the chatter message header, visible only to Log Remover users, keeping the interface clean and clutter-free for others.",
         "imageSrc": "/odoo-apps/log-message-delete/features/Log Message Delete 5.png"
       },
       {
-        "title": "",
-        "body": "",
+        "title": "Confirmation Dialog & Instant UI Update",
+        "body": "Before deletion, users are prompted with a confirmation dialog to avoid mistakes. Once confirmed, the message is removed instantly from the chatter — no page refresh required.",
         "imageSrc": "/odoo-apps/log-message-delete/features/Log Message Delete 6.png"
       }
     ],
@@ -5623,9 +5673,9 @@
     "name": "Cancel Manufacturing Order",
     "technicalName": "wb_cancel_mo",
     "summary": "Take full control of your manufacturing workflow by cancelling completed Manufacturing Orders in Odoo. This module allows you to reverse done MOs, automatically restore...",
-    "description": "Take full control of your manufacturing workflow by cancelling completed Manufacturing Orders in Odoo. This module allows you to reverse done MOs, automatically restore consumed stock, reset orders to draft, and handle multi-step manufacturing with full work order reversal \u00e2\u0080\u0094 all governed by role-based access control.",
+    "description": "Take full control of your manufacturing workflow by cancelling completed Manufacturing Orders in Odoo. This module allows you to reverse done MOs, automatically restore consumed stock, reset orders to draft, and handle multi-step manufacturing with full work order reversal — all governed by role-based access control.",
     "introParagraphs": [
-      "Take full control of your manufacturing workflow by cancelling completed Manufacturing Orders in Odoo. This module allows you to reverse done MOs, automatically restore consumed stock, reset orders to draft, and handle multi-step manufacturing with full work order reversal \u00e2\u0080\u0094 all governed by role-based access control.",
+      "Take full control of your manufacturing workflow by cancelling completed Manufacturing Orders in Odoo. This module allows you to reverse done MOs, automatically restore consumed stock, reset orders to draft, and handle multi-step manufacturing with full work order reversal — all governed by role-based access control.",
       "This module allows you to cancel completed, in-progress, or to-close Manufacturing Orders. It automatically reverses done stock moves, cancels related pickings and work orders, and restores inventory.",
       "When a Done Manufacturing Order is cancelled, the finished product and all consumed components are reversed in inventory, restoring your stock to its pre-production quantities."
     ],
@@ -5646,33 +5696,33 @@
     ],
     "features": [
       {
-        "title": "Feature1",
-        "body": "A core part of Cancel Manufacturing Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Cancel Completed Manufacturing Orders — Reverse done MOs and revert their state with a single click.",
         "imageSrc": "/odoo-apps/cancel-mo/features/feature1.png"
       },
       {
-        "title": "Feature2",
-        "body": "A core part of Cancel Manufacturing Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Automatic Stock Restoration — Consumed components and finished products are automatically reversed in inventory.",
         "imageSrc": "/odoo-apps/cancel-mo/features/feature2.png"
       },
       {
-        "title": "Feature3",
-        "body": "A core part of Cancel Manufacturing Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Reset Manufacturing Orders to Draft — Re-open cancelled MOs back to confirmed state with regenerated moves and operations.",
         "imageSrc": "/odoo-apps/cancel-mo/features/feature3.png"
       },
       {
-        "title": "Feature4",
-        "body": "A core part of Cancel Manufacturing Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Support for Multi-Step Manufacturing — Handles 1-step, 2-step (pick components), and 3-step (pick + store) manufacturing routes.",
         "imageSrc": "/odoo-apps/cancel-mo/features/feature4.png"
       },
       {
-        "title": "Feature5",
-        "body": "A core part of Cancel Manufacturing Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Work Order Reversal & Recreation — Cancels finished work orders and scrap orders linked to the MO.",
         "imageSrc": "/odoo-apps/cancel-mo/features/feature5.png"
       },
       {
-        "title": "Feature6",
-        "body": "A core part of Cancel Manufacturing Order designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Role-Based Access Control — Only users with the \"Cancel Manufacturing Orders\" security group can perform cancellation actions.",
         "imageSrc": "/odoo-apps/cancel-mo/features/feature6.png"
       }
     ],
@@ -5795,7 +5845,7 @@
     "faqs": [
       {
         "q": "What does Cancel Manufacturing Order do?",
-        "a": "Take full control of your manufacturing workflow by cancelling completed Manufacturing Orders in Odoo. This module allows you to reverse done MOs, automatically restore consumed stock, reset orders to draft, and handle multi-step manufacturing with full work order reversal \u00e2\u0080\u0094 all governed by role-based access control."
+        "a": "Take full control of your manufacturing workflow by cancelling completed Manufacturing Orders in Odoo. This module allows you to reverse done MOs, automatically restore consumed stock, reset orders to draft, and handle multi-step manufacturing with full work order reversal — all governed by role-based access control."
       },
       {
         "q": "Is support included after purchase?",
@@ -5839,23 +5889,23 @@
     ],
     "features": [
       {
-        "title": "Features1",
-        "body": "A core part of Access Record in New Tab designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Open any record in a new browser tab instantly.",
         "imageSrc": "/odoo-apps/access-record-in-new-tab/features/features1.png"
       },
       {
-        "title": "Features2",
-        "body": "A core part of Access Record in New Tab designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Copy the direct URL of any record to clipboard.",
         "imageSrc": "/odoo-apps/access-record-in-new-tab/features/features2.png"
       },
       {
-        "title": "Features3",
-        "body": "A core part of Access Record in New Tab designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Original List/Kanban view stays open — record opens in a separate tab.",
         "imageSrc": "/odoo-apps/access-record-in-new-tab/features/features3.png"
       },
       {
-        "title": "Features4",
-        "body": "A core part of Access Record in New Tab designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Hold Shift + Right-Click to access the browser's native context menu at any time.",
         "imageSrc": "/odoo-apps/access-record-in-new-tab/features/features4.png"
       }
     ],
@@ -5971,23 +6021,23 @@
     ],
     "features": [
       {
-        "title": "Feature1",
-        "body": "A core part of Advanced list: split view, column filters, freeze, form auto-save designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Excel-like Column Filters: Filter records directly from column headers for instant results.",
         "imageSrc": "/odoo-apps/advanced-search-views-columns/features/feature1.png"
       },
       {
-        "title": "Feature2",
-        "body": "A core part of Advanced list: split view, column filters, freeze, form auto-save designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Split View (Master-Detail): View list/kanban and form side-by-side for seamless navigation.",
         "imageSrc": "/odoo-apps/advanced-search-views-columns/features/feature2.png"
       },
       {
-        "title": "Feature3",
-        "body": "A core part of Advanced list: split view, column filters, freeze, form auto-save designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Freeze Columns: Lock important columns to the left side while scrolling horizontally.",
         "imageSrc": "/odoo-apps/advanced-search-views-columns/features/feature3.png"
       },
       {
-        "title": "Feature4",
-        "body": "A core part of Advanced list: split view, column filters, freeze, form auto-save designed to improve day-to-day work inside Odoo.",
+        "title": "",
+        "body": "Form Auto-Save: Automatically save changes when navigating between records in split view.",
         "imageSrc": "/odoo-apps/advanced-search-views-columns/features/feature4.png"
       }
     ],

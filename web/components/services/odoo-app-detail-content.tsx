@@ -4,6 +4,7 @@ import type { OdooApp } from "@/lib/odoo-apps-data";
 import { getRelatedOdooApps } from "@/lib/odoo-apps-data";
 import { OdooAppFaqSection } from "./odoo-app-faq";
 import { OdooAppImage } from "./odoo-app-image";
+import { OdooAppScreenshotsCarousel } from "./odoo-app-screenshots-carousel";
 import { ArrowRightIcon, CheckIcon } from "./odoo-service-icons";
 
 interface OdooAppDetailContentProps {
@@ -185,12 +186,12 @@ export function OdooAppDetailContent({ app }: OdooAppDetailContentProps) {
 
           <div className="oa-features-rich rev">
             {app.features.map((feature) => (
-              <article key={feature.title} className="oa-feature-rich">
+              <article key={feature.title || feature.body} className="oa-feature-rich">
                 {feature.imageSrc ? (
                   <div className="oa-feature-rich-media">
                     <OdooAppImage
                       src={feature.imageSrc}
-                      alt={feature.title}
+                      alt={feature.title || `${app.name} feature`}
                       width={120}
                       height={120}
                       fixedSize
@@ -199,7 +200,7 @@ export function OdooAppDetailContent({ app }: OdooAppDetailContentProps) {
                   </div>
                 ) : null}
                 <div className="oa-feature-rich-body">
-                  <h3>{feature.title}</h3>
+                  {feature.title ? <h3>{feature.title}</h3> : null}
                   <p>{feature.body}</p>
                 </div>
               </article>
@@ -221,24 +222,8 @@ export function OdooAppDetailContent({ app }: OdooAppDetailContentProps) {
             </p>
           </div>
 
-          <div className="oa-screenshots-grid rev">
-            {app.screenshots.map((shot) => (
-              <figure key={shot.title} className="oa-shot">
-                <div className="oa-shot-media">
-                  <OdooAppImage
-                    src={shot.src}
-                    alt={shot.alt}
-                    width={960}
-                    height={600}
-                    className="oa-shot-img"
-                  />
-                </div>
-                <figcaption>
-                  <h3>{shot.title}</h3>
-                  <p>{shot.caption}</p>
-                </figcaption>
-              </figure>
-            ))}
+          <div className="oa-screenshots-slider rev">
+            <OdooAppScreenshotsCarousel screenshots={app.screenshots} />
           </div>
         </div>
       </section>
