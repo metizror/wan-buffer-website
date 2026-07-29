@@ -7,7 +7,9 @@ import {
   getAllOdooApps,
   getRotatingFeaturedOdooApp,
   ODOO_APP_CATEGORIES,
+  ODOO_APP_VERSIONS,
   type OdooAppCategory,
+  type OdooAppVersion,
 } from "@/lib/odoo-apps-data";
 import { OdooAppImage } from "./odoo-app-image";
 import { ArrowRightIcon, CheckIcon } from "./odoo-service-icons";
@@ -38,6 +40,7 @@ export function OdooAppsCatalogContent() {
   const apps = getAllOdooApps();
   const featuredApp = getRotatingFeaturedOdooApp(apps);
   const [category, setCategory] = useState<OdooAppCategory | "All">("All");
+  const [version, setVersion] = useState<OdooAppVersion | "All">("All");
   const [query, setQuery] = useState("");
 
   const filteredApps = useMemo(() => {
@@ -45,6 +48,7 @@ export function OdooAppsCatalogContent() {
 
     return apps.filter((app) => {
       const matchesCategory = category === "All" || app.categories.includes(category);
+      const matchesVersion = version === "All" || app.versions.includes(version);
       const matchesQuery =
         !normalizedQuery ||
         app.name.toLowerCase().includes(normalizedQuery) ||
@@ -52,9 +56,9 @@ export function OdooAppsCatalogContent() {
         app.technicalName.toLowerCase().includes(normalizedQuery) ||
         app.categories.some((item) => item.toLowerCase().includes(normalizedQuery));
 
-      return matchesCategory && matchesQuery;
+      return matchesCategory && matchesVersion && matchesQuery;
     });
-  }, [apps, category, query]);
+  }, [apps, category, query, version]);
 
   return (
     <main className="svc-page">
@@ -197,7 +201,7 @@ export function OdooAppsCatalogContent() {
               Explore our <span className="acc">Odoo Apps</span>
             </h2>
             <p className="sec-p">
-              Filter by category. Each card opens a full app page with screenshots,
+              Filter by category or Odoo version. Each card opens a full app page with screenshots,
               setup steps, FAQs, and a direct link to the Odoo Apps Store listing.
             </p>
           </div>
@@ -237,6 +241,28 @@ export function OdooAppsCatalogContent() {
               </div>
             </div>
 
+            <div className="oa-filter-group">
+              <span className="oa-filter-label">Odoo version</span>
+              <div className="oa-filter-chips">
+                <button
+                  type="button"
+                  className={`oa-chip${version === "All" ? " active" : ""}`}
+                  onClick={() => setVersion("All")}
+                >
+                  All
+                </button>
+                {ODOO_APP_VERSIONS.map((item) => (
+                  <button
+                    key={item}
+                    type="button"
+                    className={`oa-chip${version === item ? " active" : ""}`}
+                    onClick={() => setVersion(item)}
+                  >
+                    v{item}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
 
           {filteredApps.length === 0 ? (
