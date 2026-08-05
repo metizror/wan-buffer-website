@@ -20,6 +20,14 @@ export const metadata: Metadata = {
     "use license",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Terms of Use | Wan Buffer",
     description: "Terms and conditions governing the use of Wan Buffer's website and services.",

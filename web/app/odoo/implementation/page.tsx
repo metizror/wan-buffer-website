@@ -20,6 +20,14 @@ export const metadata: Metadata = {
     "Odoo training",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Odoo ERP Implementation | Wan Buffer",
     description:

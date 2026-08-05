@@ -5,6 +5,7 @@ import { ScrollRevealInit } from "@/components/providers/scroll-reveal-init";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://wanbuffer.com"),
   title:
     "Odoo AI Integration Services | AI-Powered ERP Implementation Partner — Wan Buffer",
   description:
@@ -22,11 +23,9 @@ export const metadata: Metadata = {
       "Specialist Odoo AI implementation partner. AI agents, ERP automation, predictive analytics built natively into Odoo 17.",
     url: "https://wanbuffer.com/",
     siteName: "Wan Buffer",
-    images: [
-      {
-        url: "https://res.cloudinary.com/dghplu26l/image/upload/v1719489724/logo-black_fxcdpr.png",
-      },
-    ],
+    // og:image comes from app/opengraph-image.png. File-based metadata takes
+    // priority over this object, and unlike it, applies to every route — the
+    // pages that declare their own `openGraph` replace this one wholesale.
   },
 };
 

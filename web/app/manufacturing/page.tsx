@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     "manufacturing India USA UAE",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Manufacturing ERP — MRP, AI Quality Gates & Predictive Maintenance | Wan Buffer",
     description:

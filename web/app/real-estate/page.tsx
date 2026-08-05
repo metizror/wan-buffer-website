@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     "real estate India USA UAE",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Real Estate ERP — CRM, AI Lead Scoring & Lease Lifecycle | Wan Buffer",
     description:

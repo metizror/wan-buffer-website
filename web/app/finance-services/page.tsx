@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     "finance ERP India USA UAE",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Finance & Services ERP — Auto-Reconcile, Fraud Detection & Lead Scoring | Wan Buffer",
     description:

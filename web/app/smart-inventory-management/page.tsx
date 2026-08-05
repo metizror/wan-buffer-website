@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "real-time stock tracking",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Smart Inventory Management — AI-Driven Stock Optimisation | Wan Buffer",
     description:

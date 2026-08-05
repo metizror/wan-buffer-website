@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     "Middle East business ERP",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "GCC & Middle East ERP — Arabic UI, GCC VAT & Multi-Currency | Wan Buffer",
     description:

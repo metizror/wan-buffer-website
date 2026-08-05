@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "eCommerce operations",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Shopify → Odoo Integration — Inventory, Orders & Customers | Wan Buffer",
     description:

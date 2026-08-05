@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "conversational ERP interface",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "AI Chatbots & Copilots — Natural Language ERP Interaction | Wan Buffer",
     description:

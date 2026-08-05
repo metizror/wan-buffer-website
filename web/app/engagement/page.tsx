@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     "ERP partnership model",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Engagement Models — Project-Based, AI Agent + Human Team, Dedicated Team & Retainer | Wan Buffer",
     description:

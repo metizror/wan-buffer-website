@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     "ERP project India USA UAE",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Project-Based Engagement — Fixed Scope, Fixed Price ERP & AI Delivery | Wan Buffer",
     description:

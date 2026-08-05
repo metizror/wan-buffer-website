@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "Magento Odoo India",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Magento → Odoo Integration — Real-Time Inventory & Order Sync | Wan Buffer",
     description:

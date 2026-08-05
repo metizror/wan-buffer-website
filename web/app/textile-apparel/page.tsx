@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     "textile India USA UAE",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Textile & Apparel ERP — Style-Level BOM, Season Planning & AI Reorder | Wan Buffer",
     description:

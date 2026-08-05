@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     "transport management system",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Logistics & 3PL ERP — Smart WMS, Route AI & SLA Monitoring | Wan Buffer",
     description:

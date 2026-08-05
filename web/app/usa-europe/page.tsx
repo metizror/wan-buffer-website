@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     "USA Europe business ERP",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "USA & Europe ERP — Salesforce Sync, GDPR, EU VAT & Tax Compliance | Wan Buffer",
     description:

@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "LLM fine-tuning services",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "LangChain & LLM Integration — Enterprise AI Development | Wan Buffer",
     description:

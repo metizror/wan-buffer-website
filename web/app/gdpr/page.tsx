@@ -21,6 +21,14 @@ export const metadata: Metadata = {
     "data privacy",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "GDPR Compliance | Wan Buffer",
     description: "How Wan Buffer complies with the GDPR to protect your personal data.",

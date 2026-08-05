@@ -21,6 +21,14 @@ export const metadata: Metadata = {
     "data collection",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Cookie Policy | Wan Buffer",
     description: "Understand how Wan Buffer uses cookies to enhance your experience on our website.",

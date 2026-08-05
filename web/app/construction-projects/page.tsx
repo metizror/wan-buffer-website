@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     "construction ERP India USA UAE",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Construction & Projects ERP — BOQ, Subcontractor Management & Project Cost Control | Wan Buffer",
     description:

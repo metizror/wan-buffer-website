@@ -21,6 +21,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://wanbuffer.com/event" },
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Events | Wan Buffer",
     description:

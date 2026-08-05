@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "distributed inventory",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Multi-Warehouse + 3PL Sync — Real-Time Fulfilment Routing | Wan Buffer",
     description:

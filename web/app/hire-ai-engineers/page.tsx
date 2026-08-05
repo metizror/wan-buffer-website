@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     "offshore AI team",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Hire AI Engineers — LangChain, GPT, ML & Python Specialists | Wan Buffer",
     description:

@@ -21,6 +21,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://wanbuffer.com/case-study" },
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Software, Odoo, ERP & App Development Case Studies | Wan Buffer",
     description:

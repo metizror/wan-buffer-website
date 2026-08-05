@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     "metal fabrication India USA UAE",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Steel & Metal Fabrication ERP — Heat Tracking, BOM & Production Scheduling | Wan Buffer",
     description:

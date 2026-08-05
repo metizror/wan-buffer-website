@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     "Since 2018, Wan Buffer has delivered web, mobile, SaaS, ERP, and AI solutions. Explore case studies and measurable outcomes across industries and regions.",
   keywords: ["Wan Buffer case studies", "success stories", "Odoo implementation case study", "AI automation case study"],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Case Studies - Wan Buffer",
     description: "Success stories & client solutions across ERP + AI delivery.",

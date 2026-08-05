@@ -21,6 +21,14 @@ export const metadata: Metadata = {
     "privacy statement",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Privacy Policy | Wan Buffer",
     description: "Learn how Wan Buffer collects, uses, and protects your personal information.",

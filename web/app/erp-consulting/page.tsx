@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "ERP digital transformation",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "ERP Consulting — Scope, Roadmap & Vendor Selection | Wan Buffer",
     description:

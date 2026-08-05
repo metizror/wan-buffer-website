@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "Shopify store migration",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Shopify Store Setup — Theme Dev, Apps & Launch | Wan Buffer",
     description:

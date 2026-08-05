@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "Magento support plan",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Magento Security & AMC — Patches, PCI & Maintenance | Wan Buffer",
     description:

@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "Zoho CRM India USA UAE",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Zoho CRM Implementation — Sales Pipeline & Automation | Wan Buffer",
     description:

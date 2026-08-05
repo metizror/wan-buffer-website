@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     "hire ERP developer USA UAE",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Hire ERP Developers — Odoo, Zoho & Salesforce Engineers | Wan Buffer",
     description:

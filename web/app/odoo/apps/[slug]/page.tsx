@@ -35,6 +35,14 @@ export async function generateMetadata({ params }: OdooAppDetailPageProps): Prom
     ],
     alternates: { canonical: `https://wanbuffer.com/odoo/apps/${slug}` },
     openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
       type: "website",
       title: `${app.name} | Wan Buffer Odoo App`,
       description: app.summary,

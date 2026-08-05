@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "ERP finance module",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Finance & Accounting — Multi-Currency, GST & VAT | Wan Buffer",
     description:

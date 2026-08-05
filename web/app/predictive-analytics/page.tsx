@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "predictive modelling services",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Predictive Analytics — AI-Powered Business Forecasting | Wan Buffer",
     description:

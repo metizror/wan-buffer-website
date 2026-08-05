@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "automated employee onboarding",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "AI-Assisted HR & Payroll — Intelligent Onboarding & Automation | Wan Buffer",
     description:

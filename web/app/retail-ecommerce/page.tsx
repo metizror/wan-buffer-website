@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     "retail India USA UAE",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Retail & eCommerce ERP — Omnichannel Management & AI Demand Forecasting | Wan Buffer",
     description:

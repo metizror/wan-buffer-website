@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "eCommerce speed optimisation",
   ],
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+      },
+    ],
     type: "website",
     title: "Magento Performance Optimisation — Core Web Vitals & Speed | Wan Buffer",
     description:
