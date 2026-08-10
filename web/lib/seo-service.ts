@@ -50,6 +50,7 @@ const POLICY_SLUGS = new Set([
   "terms-of-use",
   "cookie-policy",
   "gdpr",
+  "cancellation-and-refund-policy",
 ]);
 
 const STATIC_SKIP = new Set(["admin", "api"]);

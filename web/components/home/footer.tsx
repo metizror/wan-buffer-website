@@ -130,6 +130,7 @@ export function HomeFooter() {
           <a href="/privacy-policy">Privacy Policy</a>
           <a href="/terms-of-use">Terms of Use</a>
           <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/cancellation-and-refund-policy">Cancellation &amp; Refund Policy</a>
           <a href="/gdpr">GDPR</a>
         </div>
       </div>
