@@ -45,6 +45,10 @@ export default function RootLayout({
         <Script id="js-class" strategy="beforeInteractive">
           {`document.documentElement.classList.add('js');`}
         </Script>
+        <script
+          src="https://d2mvefebd70kbz.cloudfront.net/scripts/01a0139a-1594-715e-9e44-1eb5858732ec.js"
+          async
+        />
         <Script src="/home-runtime.js" strategy="afterInteractive" />
         <ScrollRevealInit />
         {children}
