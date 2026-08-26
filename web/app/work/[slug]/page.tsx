@@ -33,7 +33,6 @@ export async function generateMetadata({ params }: WorkDetailPageProps): Promise
     alternates: { canonical: `https://wanbuffer.com/work/${slug}` },
   };
 }
-
 export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
   const { slug } = await params;
   const item = await getPublicWorkBySlug(slug);
