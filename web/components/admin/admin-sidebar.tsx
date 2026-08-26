@@ -16,6 +16,7 @@ const navItems: NavItem[] = [
   { href: "/admin", label: "Dashboard", icon: "📊" },
   { href: "/admin/blogs", label: "Blogs", icon: "📝" },
   { href: "/admin/portfolio", label: "Portfolio", icon: "💼" },
+  { href: "/admin/events", label: "Events", icon: "📅" },
   { href: "/admin/seo", label: "SEO", icon: "🔎" },
   { href: "/admin/redirects", label: "Redirects", icon: "🔀" },
   { href: "/admin/404-logs", label: "404 Logs", icon: "🚫" },

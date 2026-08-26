@@ -1,13 +1,12 @@
-export type EventCategory =
-  | "AI"
-  | "Email Marketing"
-  | "Events"
-  | "Marketing Automation"
-  | "Odoo"
-  | "Odoo CRM"
-  | "PharmaTech Expo";
+/**
+ * Categories and locations are free-form strings: the admin panel can create new
+ * values at any time. The arrays below are the values shipped with the static
+ * seed data and are used as suggestions in the admin form and as the fallback
+ * filter options on the public page.
+ */
+export type EventCategory = string;
 
-export type EventLocation = "Online" | "Helipad Exhibition Centre, Gandhinagar, Gujarat, India";
+export type EventLocation = string;
 
 export interface EventHost {
   name: string;
@@ -42,6 +41,8 @@ export interface WanBufferEvent {
   introParagraphs: string[];
   hosts?: EventHost[];
   highlights?: EventHighlight[];
+  /** Heading above the highlights list. Defaults to "Why you should tune in". */
+  highlightsHeading?: string;
   sections?: EventContentSection[];
   learnItems?: string[];
   audienceItems?: string[];
@@ -293,6 +294,7 @@ export const WAN_BUFFER_EVENTS: WanBufferEvent[] = [
         ],
       },
     ],
+    highlightsHeading: "Why attend?",
     highlights: [
       {
         title: "Face-to-Face Interaction",

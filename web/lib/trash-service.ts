@@ -9,9 +9,14 @@ import {
   restorePortfolioItem,
   hardDeletePortfolioItem,
 } from "./portfolio-service";
+import {
+  listDeletedEvents,
+  restoreEvent,
+  hardDeleteEvent,
+} from "./events-service";
 
 /** Entity types that participate in the trash (soft-delete-aware collections). */
-export const TRASH_ENTITY_TYPES = ["blog", "portfolio"] as const;
+export const TRASH_ENTITY_TYPES = ["blog", "portfolio", "event"] as const;
 export type TrashEntityType = (typeof TRASH_ENTITY_TYPES)[number];
 
 export interface TrashItem {
@@ -32,9 +37,10 @@ export function isTrashEntityType(value: unknown): value is TrashEntityType {
 
 /** All soft-deleted items across trash-aware collections, newest-deleted first. */
 export async function listTrash(): Promise<TrashItem[]> {
-  const [blogs, portfolio] = await Promise.all([
+  const [blogs, portfolio, events] = await Promise.all([
     listDeletedBlogs(),
     listDeletedPortfolio(),
+    listDeletedEvents(),
   ]);
 
   const items: TrashItem[] = [
@@ -52,6 +58,13 @@ export async function listTrash(): Promise<TrashItem[]> {
       meta: p.type,
       deletedAt: p.deletedAt,
     })),
+    ...events.map((e) => ({
+      entityType: "event" as const,
+      id: e._id as string,
+      name: e.title,
+      meta: e.dateLabel,
+      deletedAt: e.deletedAt,
+    })),
   ];
 
   return items.sort((a, b) => {
@@ -67,6 +80,7 @@ export async function restoreItem(
   id: string
 ): Promise<boolean> {
   if (entityType === "blog") return restoreBlog(id);
+  if (entityType === "event") return restoreEvent(id);
   return restorePortfolioItem(id);
 }
 
@@ -76,5 +90,6 @@ export async function purgeItem(
   id: string
 ): Promise<boolean> {
   if (entityType === "blog") return hardDeleteBlog(id);
+  if (entityType === "event") return hardDeleteEvent(id);
   return hardDeletePortfolioItem(id);
 }

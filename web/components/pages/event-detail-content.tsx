@@ -94,7 +94,7 @@ export function EventDetailContent({ event }: EventDetailContentProps) {
             {event.highlights && event.highlights.length > 0 ? (
               <div className="oi-evt-detail-block">
                 <h2 className="oi-evt-detail-h2">
-                  {event.slug.includes("pharmatech") ? "Why attend?" : "Why you should tune in"}
+                  {event.highlightsHeading || "Why you should tune in"}
                 </h2>
                 <ul className="oi-train-highlights">
                   {event.highlights.map((item) => (

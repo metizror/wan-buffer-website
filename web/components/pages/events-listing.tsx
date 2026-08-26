@@ -5,14 +5,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 import {
-  EVENT_CATEGORIES,
-  EVENT_COUNT,
-  EVENT_LOCATIONS,
-  WAN_BUFFER_EVENTS,
   eventPath,
   type EventCategory,
   type EventLocation,
+  type WanBufferEvent,
 } from "@/lib/events-data";
+
+interface EventsListingProps {
+  events: WanBufferEvent[];
+  /** Filter options — the categories/locations actually in use, plus the built-in ones. */
+  categories: string[];
+  locations: string[];
+}
 
 function SearchIcon() {
   return (
@@ -62,12 +66,20 @@ function ArrowUpRightIcon() {
   );
 }
 
+/** "Helipad Exhibition Centre, Gandhinagar, Gujarat, India" → "Gandhinagar, India". */
 function locationShortLabel(location: EventLocation): string {
-  if (location === "Online") return "Online";
-  return "Gandhinagar, India";
+  const parts = location.split(",").map((p) => p.trim()).filter(Boolean);
+  if (parts.length < 2) return location;
+  return `${parts[1]}, ${parts[parts.length - 1]}`;
 }
 
-export function EventsListing() {
+/** Same string trimmed to its venue and city, for the filter dropdown. */
+function locationOptionLabel(location: EventLocation): string {
+  const parts = location.split(",").map((p) => p.trim()).filter(Boolean);
+  return parts.slice(0, 2).join(", ") || location;
+}
+
+export function EventsListing({ events, categories, locations }: EventsListingProps) {
   const [keyword, setKeyword] = useState("");
   const [location, setLocation] = useState<EventLocation | "">("");
   const [category, setCategory] = useState<EventCategory | "">("");
@@ -76,7 +88,7 @@ export function EventsListing() {
 
   const filtered = useMemo(() => {
     const q = keyword.trim().toLowerCase();
-    return WAN_BUFFER_EVENTS.filter((event) => {
+    return events.filter((event) => {
       if (q) {
         const haystack = `${event.title} ${event.excerpt} ${event.categories.join(" ")}`.toLowerCase();
         if (!haystack.includes(q)) return false;
@@ -85,7 +97,7 @@ export function EventsListing() {
       if (category && !event.categories.includes(category)) return false;
       return true;
     });
-  }, [keyword, location, category]);
+  }, [events, keyword, location, category]);
 
   function clearFilters() {
     setKeyword("");
@@ -93,10 +105,11 @@ export function EventsListing() {
     setCategory("");
   }
 
+  const total = events.length;
   const resultLabel =
-    filtered.length === EVENT_COUNT
-      ? `Discover ${EVENT_COUNT} upcoming and past events`
-      : `${filtered.length} of ${EVENT_COUNT} events match your filters`;
+    filtered.length === total
+      ? `Discover ${total} upcoming and past events`
+      : `${filtered.length} of ${total} events match your filters`;
 
   return (
     <>
@@ -133,9 +146,9 @@ export function EventsListing() {
               aria-label="Location"
             >
               <option value="">All locations</option>
-              {EVENT_LOCATIONS.map((loc) => (
+              {locations.map((loc) => (
                 <option key={loc} value={loc}>
-                  {loc === "Online" ? "Online" : "Helipad Exhibition Centre, Gandhinagar"}
+                  {locationOptionLabel(loc)}
                 </option>
               ))}
             </select>
@@ -152,7 +165,7 @@ export function EventsListing() {
               aria-label="Category"
             >
               <option value="">All categories</option>
-              {EVENT_CATEGORIES.map((cat) => (
+              {categories.map((cat) => (
                 <option key={cat} value={cat}>
                   {cat}
                 </option>

@@ -1,4 +1,9 @@
 import { z } from "zod";
+import type {
+  EventContentSection,
+  EventHighlight,
+  EventHost,
+} from "./events-data";
 
 // ── Blog ──
 
@@ -531,3 +536,129 @@ export const portfolioFormSchema = z.object({
 });
 
 export type PortfolioFormData = z.infer<typeof portfolioFormSchema>;
+
+// ── Events ──
+
+export const EVENT_STATUSES = ["published", "draft"] as const;
+export type EventStatus = (typeof EVENT_STATUSES)[number];
+
+export const EVENT_STATUS_LABELS: Record<EventStatus, string> = {
+  published: "Published",
+  draft: "Draft",
+};
+
+/**
+ * A dynamically managed event. Mirrors the static `WanBufferEvent` shape so the
+ * public pages can render DB and static events with the same component, plus
+ * the admin-only fields (status, order, soft delete).
+ */
+export interface EventDocument {
+  _id?: string;
+  slug: string;
+  title: string;
+  pageHeading: string;
+  excerpt: string;
+  dateLabel: string;
+  /** ISO date (YYYY-MM-DD) used for sorting. */
+  sortDate: string;
+  time: string;
+  location: string;
+  categories: string[];
+  imageSrc: string;
+  imageW: number;
+  imageH: number;
+  priceLabel: string;
+  introParagraphs: string[];
+  hosts: EventHost[];
+  highlights: EventHighlight[];
+  highlightsHeading: string;
+  sections: EventContentSection[];
+  learnItems: string[];
+  audienceItems: string[];
+  closingParagraphs: string[];
+  youtubeUrl: string;
+  hashtags: string;
+  status: EventStatus;
+  order: number;
+  deletedAt: Date | null;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+const eventHostSchema = z.object({
+  name: z.string().min(1, "Host name is required"),
+  role: z.string().optional().default(""),
+});
+
+const eventHighlightSchema = z.object({
+  title: z.string().min(1, "Highlight title is required"),
+  description: z.string().optional().default(""),
+});
+
+const eventSectionSchema = z.object({
+  heading: z.string().min(1, "Section heading is required"),
+  paragraphs: z.array(z.string()).optional().default([]),
+  bullets: z.array(z.string()).optional().default([]),
+});
+
+/** Empty, a site-relative path, or an absolute http(s) URL — never `javascript:`. */
+const eventImageSchema = z
+  .string()
+  .optional()
+  .default("")
+  .refine(
+    (v) => v === "" || v.startsWith("/") || /^https:\/\//i.test(v),
+    "Image must be a site path (/event/name.jpg) or an https URL"
+  );
+
+const eventLinkSchema = z
+  .string()
+  .optional()
+  .default("")
+  .refine(
+    (v) => v === "" || /^https?:\/\//i.test(v),
+    "Link must be an absolute http(s) URL"
+  );
+
+export const eventFormSchema = z.object({
+  slug: z
+    .string()
+    .min(1, "Slug is required")
+    .regex(
+      /^[a-z0-9]+(?:-[a-z0-9]+)*$/,
+      "Slug may only contain lowercase letters, numbers and hyphens"
+    ),
+  title: z.string().min(1, "Title is required"),
+  pageHeading: z.string().optional().default(""),
+  excerpt: z.string().optional().default(""),
+  dateLabel: z.string().optional().default(""),
+  sortDate: z
+    .string()
+    .optional()
+    .default("")
+    .refine(
+      (v) => v === "" || /^\d{4}-\d{2}-\d{2}$/.test(v),
+      "Sort date must be in YYYY-MM-DD format"
+    ),
+  time: z.string().optional().default(""),
+  location: z.string().optional().default("Online"),
+  categories: z.array(z.string()).optional().default([]),
+  imageSrc: eventImageSchema,
+  imageW: z.number().int().positive().optional().default(750),
+  imageH: z.number().int().positive().optional().default(385),
+  priceLabel: z.string().optional().default("Free"),
+  introParagraphs: z.array(z.string()).optional().default([]),
+  hosts: z.array(eventHostSchema).optional().default([]),
+  highlights: z.array(eventHighlightSchema).optional().default([]),
+  highlightsHeading: z.string().optional().default(""),
+  sections: z.array(eventSectionSchema).optional().default([]),
+  learnItems: z.array(z.string()).optional().default([]),
+  audienceItems: z.array(z.string()).optional().default([]),
+  closingParagraphs: z.array(z.string()).optional().default([]),
+  youtubeUrl: eventLinkSchema,
+  hashtags: z.string().optional().default(""),
+  status: z.enum(EVENT_STATUSES).optional().default("draft"),
+  order: z.number().optional().default(0),
+});
+
+export type EventFormData = z.infer<typeof eventFormSchema>;

@@ -7,6 +7,8 @@ import { HomeFooter } from "@/components/home/footer";
 import { HomeWanny } from "@/components/home/wanny";
 import { EventsContent } from "@/components/pages/events-content";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Events | Wan Buffer",
   description:

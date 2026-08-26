@@ -5,7 +5,7 @@ import type { Role } from "@/lib/definitions";
 import { relativeTime } from "@/lib/relative-time";
 
 interface TrashRow {
-  entityType: "blog" | "portfolio";
+  entityType: "blog" | "portfolio" | "event";
   id: string;
   name: string;
   meta: string;
@@ -20,6 +20,7 @@ interface Props {
 const TYPE_BADGE: Record<TrashRow["entityType"], string> = {
   blog: "adm-badge-blue",
   portfolio: "adm-badge-green",
+  event: "adm-badge-yellow",
 };
 
 export function TrashTable({ initialItems, currentUserRole }: Props) {

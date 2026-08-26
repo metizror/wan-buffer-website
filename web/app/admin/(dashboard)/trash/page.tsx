@@ -11,7 +11,7 @@ export default async function TrashPage() {
     <>
       <PageHeader
         title="Trash"
-        subtitle="Soft-deleted blogs and portfolio items. Restore them, or purge permanently."
+        subtitle="Soft-deleted blogs, portfolio items and events. Restore them, or purge permanently."
       />
       <TrashTable initialItems={items} currentUserRole={session.role} />
     </>

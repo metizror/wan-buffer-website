@@ -1,11 +1,21 @@
 import Link from "next/link";
 
 import { ArrowRightIcon, MailIcon, PhoneCallIcon } from "@/components/services/odoo-service-icons";
-import { EVENT_COUNT } from "@/lib/events-data";
+import {
+  getPublicEvents,
+  getEventCategories,
+  getEventLocations,
+} from "@/lib/events-service";
 
 import { EventsListing } from "./events-listing";
 
-export function EventsContent() {
+export async function EventsContent() {
+  const [events, categories, locations] = await Promise.all([
+    getPublicEvents(),
+    getEventCategories(),
+    getEventLocations(),
+  ]);
+
   return (
     <main className="svc-page">
       <section className="oi-hero-lux" aria-labelledby="oi-evt-hero-title">
@@ -90,7 +100,11 @@ export function EventsContent() {
 
       <section className="oi-evt-list section alt" id="events-list" aria-label="Event listings">
         <div className="oi-evt-list-inner">
-          <EventsListing />
+          <EventsListing
+            events={events}
+            categories={categories}
+            locations={locations}
+          />
         </div>
       </section>
 
@@ -151,7 +165,7 @@ export function EventsContent() {
               </div>
               <div className="oi-supp-label">Event listings</div>
               <a className="oi-supp-title-v2" href="#events-list">
-                {EVENT_COUNT} events
+                {events.length} events
               </a>
               <p className="oi-supp-body-v2">
                 Browse webinars, expos, and talk shows—with full detail pages on this site.

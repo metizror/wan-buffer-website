@@ -7,19 +7,17 @@ import { HomeContact } from "@/components/home/contact";
 import { HomeFooter } from "@/components/home/footer";
 import { HomeWanny } from "@/components/home/wanny";
 import { EventDetailContent } from "@/components/pages/event-detail-content";
-import { getAllEventSlugs, getEventBySlug } from "@/lib/events-data";
+import { getPublicEventBySlug } from "@/lib/events-service";
 
 interface EventDetailPageProps {
   params: Promise<{ slug: string }>;
 }
 
-export function generateStaticParams() {
-  return getAllEventSlugs().map((slug) => ({ slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: EventDetailPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const event = getEventBySlug(slug);
+  const event = await getPublicEventBySlug(slug);
   if (!event) return { title: "Event not found | Wan Buffer" };
 
   const canonical = `https://wanbuffer.com/event/${slug}`;
@@ -40,7 +38,7 @@ export async function generateMetadata({ params }: EventDetailPageProps): Promis
 
 export default async function EventDetailPage({ params }: EventDetailPageProps) {
   const { slug } = await params;
-  const event = getEventBySlug(slug);
+  const event = await getPublicEventBySlug(slug);
   if (!event) notFound();
 
   return (
