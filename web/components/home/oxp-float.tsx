@@ -10,7 +10,13 @@ export function HomeOxpFloat() {
   }
 
   return (
-    <a id="oxp-float" href="/event" aria-label="OXP 2026, Odoo Experience — view all events">
+    <a
+      id="oxp-float"
+      href="https://www.odoo.com/event/odoo-experience-2026-india-10174/page/oxp26-india-introduction"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="OXP 2026, Odoo Experience India — event details (opens in a new tab)"
+    >
       <span className="oxp-float-badge" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" />
