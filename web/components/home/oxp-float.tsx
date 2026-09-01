@@ -18,13 +18,8 @@ export function HomeOxpFloat() {
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") setOpen(false);
     }
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
     document.addEventListener("keydown", onKey);
-    return () => {
-      document.body.style.overflow = prev;
-      document.removeEventListener("keydown", onKey);
-    };
+    return () => document.removeEventListener("keydown", onKey);
   }, [open]);
 
   if (dismissed) return null;
@@ -62,14 +57,8 @@ export function HomeOxpFloat() {
       </div>
 
       {open && (
-        <div className="oxp-modal-overlay" onClick={() => setOpen(false)}>
-          <div
-            className="oxp-modal"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="oxp-modal-title"
-            onClick={(e) => e.stopPropagation()}
-          >
+        <div className="oxp-modal-overlay">
+          <div className="oxp-modal" role="dialog" aria-labelledby="oxp-modal-title">
             <button type="button" className="oxp-modal-close" aria-label="Close" onClick={() => setOpen(false)}>
               ✕
             </button>

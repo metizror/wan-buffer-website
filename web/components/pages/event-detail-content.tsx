@@ -248,11 +248,11 @@ export function EventDetailContent({ event }: EventDetailContentProps) {
                 <PhoneCallIcon />
               </div>
               <div className="oi-supp-label">Phone</div>
-              <a className="oi-supp-title-v2" href="tel:+919825555555">
-                +91 98255 55555
+              <a className="oi-supp-title-v2" href="tel:+919904122699">
+                +91 99041 22699
               </a>
               <p className="oi-supp-body-v2">Speak with our team directly.</p>
-              <a className="oi-supp-cta-v2" href="tel:+919825555555">
+              <a className="oi-supp-cta-v2" href="tel:+919904122699">
                 Call now <ArrowRightIcon />
               </a>
             </div>
