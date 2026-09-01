@@ -5,7 +5,6 @@ import { HomeLeadPopup } from "@/components/home/lead-popup";
 import { HomeContact } from "@/components/home/contact";
 import { HomeFooter } from "@/components/home/footer";
 import { HomeWanny } from "@/components/home/wanny";
-import { HomeOxpFloat } from "@/components/home/oxp-float";
 import { EventsContent } from "@/components/pages/events-content";
 
 export const dynamic = "force-dynamic";
@@ -49,7 +48,6 @@ export default function EventsPage() {
       <HomeContact />
       <HomeFooter />
       <HomeWanny />
-      <HomeOxpFloat />
     </>
   );
 }

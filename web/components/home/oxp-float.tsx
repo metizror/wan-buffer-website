@@ -1,61 +1,104 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
+const OXP_URL =
+  "https://www.odoo.com/event/odoo-experience-2026-india-10174/page/oxp26-india-introduction";
+
 /**
- * Floating "upcoming event" pill, mirrored to the left edge so it stays clear
- * of the Wanny stack in the bottom-right. Used on the home and event pages.
+ * Floating "upcoming event" bar, styled as a search-style pill pinned to the
+ * bottom centre. Clicking it opens a short event modal. Home page only.
  */
 export function HomeOxpFloat() {
-  function dismiss() {
-    document.getElementById("oxp-float")?.classList.add("dismissed");
-  }
+  const [open, setOpen] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  if (dismissed) return null;
 
   return (
-    <a
-      id="oxp-float"
-      href="https://www.odoo.com/event/odoo-experience-2026-india-10174/page/oxp26-india-introduction"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="OXP 2026, Odoo Experience India — event details (opens in a new tab)"
-    >
-      <span className="oxp-float-badge" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="4" width="18" height="18" rx="2" />
-          <line x1="16" y1="2" x2="16" y2="6" />
-          <line x1="8" y1="2" x2="8" y2="6" />
-          <line x1="3" y1="10" x2="21" y2="10" />
-        </svg>
-        <span className="oxp-float-badge-dot" />
-      </span>
+    <>
+      <div id="oxp-float" className={open ? "is-open" : undefined}>
+        <button
+          type="button"
+          className="oxp-float-bar"
+          onClick={() => setOpen(true)}
+          aria-haspopup="dialog"
+          aria-expanded={open}
+          aria-label="OXP 2026, Odoo Experience India — view event details"
+        >
+          <span className="oxp-float-label">
+            <strong>OXP 2026</strong> — Odoo Experience India
+          </span>
+          <span className="oxp-float-go" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="12" y1="19" x2="12" y2="5" />
+              <polyline points="5 12 12 5 19 12" />
+            </svg>
+          </span>
+        </button>
 
-      <span className="oxp-float-text">
-        <span className="oxp-float-name">OXP 2026</span>
-        <span className="oxp-float-sub">Odoo Experience · Upcoming</span>
-      </span>
+        <button
+          type="button"
+          className="oxp-float-close"
+          aria-label="Dismiss upcoming event banner"
+          onClick={() => setDismissed(true)}
+        >
+          ✕
+        </button>
+      </div>
 
-      <span className="oxp-float-arrow" aria-hidden="true">
-        →
-      </span>
+      {open && (
+        <div className="oxp-modal-overlay" onClick={() => setOpen(false)}>
+          <div
+            className="oxp-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="oxp-modal-title"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button type="button" className="oxp-modal-close" aria-label="Close" onClick={() => setOpen(false)}>
+              ✕
+            </button>
 
-      <span
-        className="oxp-float-close"
-        role="button"
-        tabIndex={0}
-        aria-label="Dismiss upcoming event banner"
-        onClick={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          dismiss();
-        }}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            e.stopPropagation();
-            dismiss();
-          }
-        }}
-      >
-        ✕
-      </span>
-    </a>
+            <span className="oxp-modal-badge">Upcoming event</span>
+            <h2 id="oxp-modal-title" className="oxp-modal-title">
+              OXP 2026 — Odoo Experience India
+            </h2>
+            <p className="oxp-modal-body">
+              Odoo Experience is Odoo&apos;s flagship gathering: product keynotes, hands-on functional and technical
+              sessions, and a partner floor where implementation teams and customers meet face to face. The India
+              edition brings that programme to the region.
+            </p>
+            <p className="oxp-modal-body">
+              We follow the sessions closely because they set the direction for the Odoo work we deliver — new modules,
+              deprecations, and AI capabilities land here first.
+            </p>
+
+            <div className="oxp-modal-actions">
+              <a className="oxp-modal-cta" href="/event">
+                See our events <span aria-hidden="true">→</span>
+              </a>
+              <a className="oxp-modal-alt" href={OXP_URL} target="_blank" rel="noopener noreferrer">
+                Official OXP 2026 page
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
