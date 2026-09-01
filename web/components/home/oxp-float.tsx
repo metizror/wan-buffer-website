@@ -2,7 +2,7 @@
 
 /**
  * Floating "upcoming event" pill, mirrored to the left edge so it stays clear
- * of the Wanny stack in the bottom-right. Home page only.
+ * of the Wanny stack in the bottom-right. Used on the home and event pages.
  */
 export function HomeOxpFloat() {
   function dismiss() {
