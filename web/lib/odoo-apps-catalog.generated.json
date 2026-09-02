@@ -9865,5 +9865,487 @@
     "heroImageSrc": "/odoo-apps/time-based-product-in-pos/screenshots/image_1.png",
     "featured": false,
     "priceAmount": "$45.18"
+  },
+  {
+    "slug": "product-margin",
+    "name": "Product Margin",
+    "technicalName": "wb_product_margin",
+    "summary": "Turn on Product Margin in Inventory settings. Each product and variant shows Margin Amount and Margin %. Customer invoices show cost, margin and a Total Margin. Negative...",
+    "description": "Turn on Product Margin in Inventory settings. Each product and variant shows Margin Amount and Margin %. Customer invoices show cost, margin and a Total Margin. Negative figures go red. Filter products and invoices by margin.",
+    "introParagraphs": [
+      "Turn on Product Margin in Inventory settings. Each product and variant shows Margin Amount and Margin %. Customer invoices show cost, margin and a Total Margin. Negative figures go red. Filter products and invoices by margin.",
+      "Margin Amount and Margin % sit next to Sales Price and Cost on the product and on each variant.",
+      "Negative, Positive, Zero, High and Low Margin filters on the product list and on customer invoices."
+    ],
+    "categories": [
+      "Sales & CRM",
+      "Accounting"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $24",
+    "license": "OPL-1",
+    "dependencies": [
+      "Discuss",
+      "Inventory",
+      "Invoicing"
+    ],
+    "features": [
+      {
+        "title": "Margin on the Product",
+        "body": "Margin Amount and Margin % sit next to Sales Price and Cost on the product and on each variant.",
+        "imageSrc": "/odoo-apps/product-margin/features/feature_1.png"
+      },
+      {
+        "title": "Margin Filters",
+        "body": "Negative, Positive, Zero, High and Low Margin filters on the product list and on customer invoices.",
+        "imageSrc": "/odoo-apps/product-margin/features/feature_2.png"
+      },
+      {
+        "title": "Margin on Invoices",
+        "body": "Each customer invoice line shows Cost Price, Margin Amount and Margin %. The footer totals Total Margin.",
+        "imageSrc": "/odoo-apps/product-margin/features/feature_3.png"
+      },
+      {
+        "title": "Red for a Loss",
+        "body": "A negative margin is red on the product and the invoice. If cost is above sales price, a warning appears before you save.",
+        "imageSrc": "/odoo-apps/product-margin/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Product Margin, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Product Margin behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/product-margin/screenshots/image_1.png",
+        "alt": "Product Margin app card in Odoo Apps",
+        "title": "Install the Module",
+        "caption": "In Apps, search for Product Margin and click Activate."
+      },
+      {
+        "src": "/odoo-apps/product-margin/screenshots/image_2.png",
+        "alt": "Inventory settings Product Margin enabled",
+        "title": "Turn On Product Margin",
+        "caption": "Go to Settings \u2192 Inventory. Under Products, tick Product Margin and Save. This shows Margin Amount and Margin % on product and variant forms."
+      },
+      {
+        "src": "/odoo-apps/product-margin/screenshots/image_3.png",
+        "alt": "Product form with Margin Amount and Margin percent",
+        "title": "Margin on the Product",
+        "caption": "Open a product. Margin Amount and Margin % sit under the prices, from Sales Price minus Cost."
+      },
+      {
+        "src": "/odoo-apps/product-margin/screenshots/image_4.png",
+        "alt": "Product list with Margin Amount and Margin percent columns in red for a loss",
+        "title": "Margin on the Product List",
+        "caption": "On the product list, Margin Amount and Margin % columns are there. A loss is red."
+      },
+      {
+        "src": "/odoo-apps/product-margin/screenshots/image_5.png",
+        "alt": "Customer invoice with Cost Price Margin Amount Margin percent and Total Margin",
+        "title": "Margin on the Invoice",
+        "caption": "On a customer invoice, each line shows Cost Price , Margin Amount and Margin % . The footer shows Total Margin and Margin % for the invoice."
+      },
+      {
+        "src": "/odoo-apps/product-margin/screenshots/image_6.png",
+        "alt": "Product search filters Negative Positive Zero High and Low Margin",
+        "title": "Filter Products by Margin",
+        "caption": "On Products, use Negative Margin, Positive Margin, Zero Margin, High Margin or Low Margin."
+      },
+      {
+        "src": "/odoo-apps/product-margin/screenshots/image_7.png",
+        "alt": "Customer invoice search filters Negative Positive Zero High and Low Margin",
+        "title": "Filter Invoices by Margin",
+        "caption": "On customer invoices, the same five filters pull up invoices by Total Margin or Margin %."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Product Margin do?",
+        "a": "Turn on Product Margin in Inventory settings. Each product and variant shows Margin Amount and Margin %. Customer invoices show cost, margin and a Total Margin. Negative figures go red. Filter products and invoices by margin."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_product_margin",
+    "iconSrc": "/odoo-apps/product-margin/icon.png",
+    "cardImageSrc": "/odoo-apps/product-margin/cover.png",
+    "heroImageSrc": "/odoo-apps/product-margin/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$24.42"
+  },
+  {
+    "slug": "restrict-pricelist",
+    "name": "Restrict Pricelist",
+    "technicalName": "wb_restrict_pricelist",
+    "summary": "Limit which pricelists can be chosen on sales orders and customers. Turn the rule on in Sales Settings, then assign lists per user or per customer so the dropdown only shows...",
+    "description": "Limit which pricelists can be chosen on sales orders and customers. Turn the rule on in Sales Settings, then assign lists per user or per customer so the dropdown only shows those entries.",
+    "introParagraphs": [
+      "Limit which pricelists can be chosen on sales orders and customers. Turn the rule on in Sales Settings, then assign lists per user or per customer so the dropdown only shows those entries.",
+      "On the user Preferences tab, set User Price List to the lists that person may use.",
+      "On the customer Sales & Purchases tab, set Partner Price List to the lists allowed for that customer."
+    ],
+    "categories": [
+      "Sales & CRM"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $20",
+    "license": "OPL-1",
+    "dependencies": [
+      "Invoicing",
+      "Sales",
+      "Discuss"
+    ],
+    "features": [
+      {
+        "title": "On or Off in Settings",
+        "body": "Turn Restrict Pricelists on or off from Sales \u2192 Configuration \u2192 Settings.",
+        "imageSrc": "/odoo-apps/restrict-pricelist/features/feature_1.png"
+      },
+      {
+        "title": "For User or For Partner",
+        "body": "Choose whether lists are limited by the logged-in user or by the customer.",
+        "imageSrc": "/odoo-apps/restrict-pricelist/features/feature_2.png"
+      },
+      {
+        "title": "Lists per User",
+        "body": "On the user Preferences tab, set User Price List to the lists that person may use.",
+        "imageSrc": "/odoo-apps/restrict-pricelist/features/feature_3.png"
+      },
+      {
+        "title": "Lists per Customer",
+        "body": "On the customer Sales & Purchases tab, set Partner Price List to the lists allowed for that customer.",
+        "imageSrc": "/odoo-apps/restrict-pricelist/features/feature_4.png"
+      },
+      {
+        "title": "Sales Order Dropdown",
+        "body": "The Pricelist field on the sales order only lists the entries allowed in the current mode.",
+        "imageSrc": "/odoo-apps/restrict-pricelist/features/feature_5.png"
+      },
+      {
+        "title": "Customer Default List",
+        "body": "The customer default Pricelist field is limited to the same allowed set.",
+        "imageSrc": "/odoo-apps/restrict-pricelist/features/feature_6.png"
+      },
+      {
+        "title": "Safe Fallback",
+        "body": "On a new draft order, if the customer default is not allowed, the field falls back to an allowed list.",
+        "imageSrc": "/odoo-apps/restrict-pricelist/features/feature_7.png"
+      },
+      {
+        "title": "Confirmed Orders Unchanged",
+        "body": "Works with standard Sales. Confirmed orders keep the pricelist they already have.",
+        "imageSrc": "/odoo-apps/restrict-pricelist/features/feature_8.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Restrict Pricelist, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Restrict Pricelist behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/restrict-pricelist/screenshots/image_1.png",
+        "alt": "Install Restrict Pricelist in Odoo Apps",
+        "title": "Install the Module",
+        "caption": "Open Apps, search for Restrict Pricelist and click Activate ."
+      },
+      {
+        "src": "/odoo-apps/restrict-pricelist/screenshots/image_2.png",
+        "alt": "Sales settings Restrict Pricelists For User or For Partner",
+        "title": "Turn On the Restriction",
+        "caption": "Go to Sales \u2192 Configuration \u2192 Settings . Under Pricing, enable Restrict Pricelists and choose For User or For Partner ."
+      },
+      {
+        "src": "/odoo-apps/restrict-pricelist/screenshots/image_3.png",
+        "alt": "User Preferences User Price List",
+        "title": "Assign Lists to a User",
+        "caption": "Open the user, open the Preferences tab, and set User Price List to the lists that person may use, for example Default (USD) and AED."
+      },
+      {
+        "src": "/odoo-apps/restrict-pricelist/screenshots/image_4.png",
+        "alt": "Customer Sales and Purchases Partner Price List",
+        "title": "Assign Lists to a Customer",
+        "caption": "Open the customer, open Sales & Purchases , and set Partner Price List to the lists allowed for that customer."
+      },
+      {
+        "src": "/odoo-apps/restrict-pricelist/screenshots/image_5.png",
+        "alt": "Sales order Pricelist dropdown with allowed lists only",
+        "title": "Use the Sales Order Dropdown",
+        "caption": "On a quotation, the Pricelist field only lists the allowed entries. The same rule applies to the default pricelist on the customer form."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Restrict Pricelist do?",
+        "a": "Limit which pricelists can be chosen on sales orders and customers. Turn the rule on in Sales Settings, then assign lists per user or per customer so the dropdown only shows those entries."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_restrict_pricelist",
+    "iconSrc": "/odoo-apps/restrict-pricelist/icon.png",
+    "cardImageSrc": "/odoo-apps/restrict-pricelist/cover.png",
+    "heroImageSrc": "/odoo-apps/restrict-pricelist/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$20.10"
+  },
+  {
+    "slug": "stock-per-warehouse",
+    "name": "Stock Per Warehouse",
+    "technicalName": "wb_stock_per_warehouse",
+    "summary": "Shoppers click Check Availability in Store on the product page and see stock in each warehouse. Use On-hand Quantity or Forecasted Quantity. Set who can see it, and override...",
+    "description": "Shoppers click Check Availability in Store on the product page and see stock in each warehouse. Use On-hand Quantity or Forecasted Quantity. Set who can see it, and override that on a product if you need to.",
+    "introParagraphs": [
+      "Shoppers click Check Availability in Store on the product page and see stock in each warehouse. Use On-hand Quantity or Forecasted Quantity. Set who can see it, and override that on a product if you need to.",
+      "A Check Availability in Store button sits on the product page. One click shows stock per warehouse on that page.",
+      "Quantity Type is On-hand Quantity or Forecasted Quantity. On-hand is what is in stock now. Forecasted includes what is still incoming."
+    ],
+    "categories": [
+      "Inventory"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $13",
+    "license": "OPL-1",
+    "dependencies": [
+      "Inventory",
+      "eCommerce",
+      "Discuss",
+      "Website",
+      "Invoicing"
+    ],
+    "features": [
+      {
+        "title": "Check Availability in Store",
+        "body": "A Check Availability in Store button sits on the product page. One click shows stock per warehouse on that page.",
+        "imageSrc": "/odoo-apps/stock-per-warehouse/features/feature_1.png"
+      },
+      {
+        "title": "On-hand or Forecasted",
+        "body": "Quantity Type is On-hand Quantity or Forecasted Quantity. On-hand is what is in stock now. Forecasted includes what is still incoming.",
+        "imageSrc": "/odoo-apps/stock-per-warehouse/features/feature_2.png"
+      },
+      {
+        "title": "Who Sees the Stock",
+        "body": "Stock Visibility can be Public Users, Portal Users, or Hidden. That is the default for the website.",
+        "imageSrc": "/odoo-apps/stock-per-warehouse/features/feature_3.png"
+      },
+      {
+        "title": "Per Product Override",
+        "body": "On the product, set Stock Visibility. Use Website Setting follows the default. Any other value applies only to that product.",
+        "imageSrc": "/odoo-apps/stock-per-warehouse/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Stock Per Warehouse, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Stock Per Warehouse behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/stock-per-warehouse/screenshots/image_1.png",
+        "alt": "Stock Per Warehouse app card in Odoo Apps",
+        "title": "Install the Module",
+        "caption": "In Apps, search for Stock Per Warehouse and click Activate. It needs Inventory and eCommerce."
+      },
+      {
+        "src": "/odoo-apps/stock-per-warehouse/screenshots/image_2.png",
+        "alt": "Inventory settings Warehouse Stock Configuration",
+        "title": "Warehouse Stock Configuration",
+        "caption": "Go to Settings \u2192 Inventory. Under Warehouse Stock Configuration , pick the Website, Quantity Type (On-hand Quantity or Forecasted Quantity), Stock Visibility, and Show Quantity. Save."
+      },
+      {
+        "src": "/odoo-apps/stock-per-warehouse/screenshots/image_3.png",
+        "alt": "Product Sales tab Stock Visibility Use Website Setting",
+        "title": "Stock Visibility on the Product",
+        "caption": "Open the product Sales tab. Under eCommerce Shop, set Stock Visibility . Leave it on Use Website Setting to follow the website, or pick another value for this product."
+      },
+      {
+        "src": "/odoo-apps/stock-per-warehouse/screenshots/image_4.png",
+        "alt": "Product Warehouse Stocks tab with On Hand Forecasted Incoming Outgoing",
+        "title": "Warehouse Stocks Tab",
+        "caption": "On the product, open the Warehouse Stocks tab. It lists each warehouse with On Hand, Forecasted, Incoming, and Outgoing."
+      },
+      {
+        "src": "/odoo-apps/stock-per-warehouse/screenshots/image_5.png",
+        "alt": "Website product page Check Availability in Store button",
+        "title": "Check Availability in Store",
+        "caption": "On the website product page, Check Availability in Store sits under Add to cart when the visitor is allowed to see stock."
+      },
+      {
+        "src": "/odoo-apps/stock-per-warehouse/screenshots/image_6.png",
+        "alt": "Check Availability in Store with In stock and Out of stock per warehouse",
+        "title": "Stock Per Warehouse",
+        "caption": "Click the button. Each warehouse is listed with In stock or Out of stock. With Show Quantity on, the quantity is shown as well."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Stock Per Warehouse do?",
+        "a": "Shoppers click Check Availability in Store on the product page and see stock in each warehouse. Use On-hand Quantity or Forecasted Quantity. Set who can see it, and override that on a product if you need to."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_stock_per_warehouse",
+    "iconSrc": "/odoo-apps/stock-per-warehouse/icon.png",
+    "cardImageSrc": "/odoo-apps/stock-per-warehouse/cover.png",
+    "heroImageSrc": "/odoo-apps/stock-per-warehouse/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$12.83"
   }
 ]

@@ -72,6 +72,9 @@ MODULES = [
     "wb_pos_homedelivery",
     "wb_pos_stock",
     "wb_time_based_product_in_pos",
+    "wb_product_margin",
+    "wb_restrict_pricelist",
+    "wb_stock_per_warehouse",
 ]
 
 CATEGORY_RULES = [
