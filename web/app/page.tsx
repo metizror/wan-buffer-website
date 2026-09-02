@@ -21,7 +21,6 @@ import { HomeInsights } from "@/components/home/insights";
 import { HomeContact } from "@/components/home/contact";
 import { HomeFooter } from "@/components/home/footer";
 import { HomeWanny } from "@/components/home/wanny";
-import { HomeOxpFloat } from "@/components/home/oxp-float";
 
 export default function HomePage() {
   return (
@@ -47,7 +46,6 @@ export default function HomePage() {
       <HomeContact />
       <HomeFooter />
       <HomeWanny />
-      <HomeOxpFloat />
       <Script src="/home-runtime.js" strategy="afterInteractive" />
     </>
   );

@@ -77,9 +77,15 @@ export function HomeOxpFloat() {
               deprecations, and AI capabilities land here first.
             </p>
 
+            <div className="oxp-modal-meta">
+              <span>11–12 September 2026</span>
+              <span aria-hidden="true">•</span>
+              <span>Mahatma Mandir, Gandhinagar, Gujarat</span>
+            </div>
+
             <div className="oxp-modal-actions">
-              <a className="oxp-modal-cta" href="/event">
-                See our events <span aria-hidden="true">→</span>
+              <a className="oxp-modal-cta" href="/event/odoo-experience-2026-india">
+                Meet us at OXP 2026 <span aria-hidden="true">→</span>
               </a>
               <a className="oxp-modal-alt" href={OXP_URL} target="_blank" rel="noopener noreferrer">
                 Official OXP 2026 page

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 
+import { HomeOxpFloat } from "@/components/home/oxp-float";
 import { ScrollRevealInit } from "@/components/providers/scroll-reveal-init";
 import "./globals.css";
 
@@ -52,6 +53,9 @@ export default function RootLayout({
         <Script src="/home-runtime.js" strategy="afterInteractive" />
         <ScrollRevealInit />
         {children}
+        {/* Site-wide upcoming-event bar. Lives here rather than per page so
+            every route carries it. */}
+        <HomeOxpFloat />
       </body>
     </html>
   );

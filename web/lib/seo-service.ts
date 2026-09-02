@@ -63,6 +63,21 @@ function titleCase(segment: string): string {
     .join(" ");
 }
 
+/**
+ * Nested static routes the top-level scan below cannot see. Add a route here
+ * when it lives under a folder that also holds a dynamic `[slug]` segment.
+ */
+const NESTED_STATIC_ENTRIES: SourceEntry[] = [
+  {
+    slug: "/event/odoo-experience-2026-india",
+    title: "Odoo Experience 2026 India",
+    category: "static",
+    metaDescription:
+      "Meet Wan Buffer at Odoo Experience 2026 India, 11-12 September 2026 at Mahatma Mandir, Gandhinagar.",
+    ogImage: "",
+  },
+];
+
 /** Discover top-level marketing/policy routes by scanning the `app/` dir. */
 function getStaticSourceEntries(): SourceEntry[] {
   const entries: SourceEntry[] = [
@@ -102,6 +117,8 @@ function getStaticSourceEntries(): SourceEntry[] {
   } catch {
     // Filesystem not available — fall back to just the home route.
   }
+
+  entries.push(...NESTED_STATIC_ENTRIES);
 
   return entries;
 }
