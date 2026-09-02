@@ -61,6 +61,11 @@ MODULES = [
     "wb_bulk_name_nsp",
     "wb_cancel_stock_picking",
     "wb_custom_tax_report",
+    "wb_lead_quotation_duplicate",
+    "wb_contact_sync",
+    "wb_mail_desk",
+    "wb_mrp_tags",
+    "wb_manufecturing_timesheet",
 ]
 
 CATEGORY_RULES = [

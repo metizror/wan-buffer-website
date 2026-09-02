@@ -7800,5 +7800,922 @@
     "heroImageSrc": "/odoo-apps/custom-tax-report/screenshots/image_1.png",
     "featured": false,
     "priceAmount": "$30.44"
+  },
+  {
+    "slug": "lead-quotation-duplicate",
+    "name": "Duplicate Lead & Quotations",
+    "technicalName": "wb_lead_quotation_duplicate",
+    "summary": "Replaces Odoo's standard single-record duplication with an interactive wizard. Selectively copy lead quotations to draft state, automatically generate user-abbreviated lead...",
+    "description": "Replaces Odoo's standard single-record duplication with an interactive wizard. Selectively copy lead quotations to draft state, automatically generate user-abbreviated lead reference numbers, manage custom CRM projects, and maintain seamless client-project synchronization.",
+    "introParagraphs": [
+      "Replaces Odoo's standard single-record duplication with an interactive wizard. Selectively copy lead quotations to draft state, automatically generate user-abbreviated lead reference numbers, manage custom CRM projects, and maintain seamless client-project synchronization.",
+      "Choose specific quotations to duplicate along with the lead, automatically relinking them to the new opportunity in draft status.",
+      "Automatically generates structured lead numbers formatted with user initials (e.g. LEAD202608-0001-HAD) for clear ownership."
+    ],
+    "categories": [
+      "Sales & CRM"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $10",
+    "license": "OPL-1",
+    "dependencies": [
+      "Sales",
+      "CRM",
+      "Calendar",
+      "Contacts",
+      "Discuss",
+      "Invoicing"
+    ],
+    "features": [
+      {
+        "title": "Selective Quotation Copy",
+        "body": "Choose specific quotations to duplicate along with the lead, automatically relinking them to the new opportunity in draft status.",
+        "imageSrc": "/odoo-apps/lead-quotation-duplicate/features/feature_1.png"
+      },
+      {
+        "title": "User Abbreviated Reference",
+        "body": "Automatically generates structured lead numbers formatted with user initials (e.g. LEAD202608-0001-HAD) for clear ownership.",
+        "imageSrc": "/odoo-apps/lead-quotation-duplicate/features/feature_2.png"
+      },
+      {
+        "title": "CRM Project Tracking",
+        "body": "Create and manage custom project categories under CRM Configuration and tag leads and quotations directly.",
+        "imageSrc": "/odoo-apps/lead-quotation-duplicate/features/feature_3.png"
+      },
+      {
+        "title": "Client & Project Sync",
+        "body": "Changes to Client or Project on the lead automatically cascade to associated editable quotations via the Allow Edit setting.",
+        "imageSrc": "/odoo-apps/lead-quotation-duplicate/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Duplicate Lead & Quotations, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Duplicate Lead & Quotations behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/lead-quotation-duplicate/screenshots/image_1.png",
+        "alt": "Module Installation in Odoo Apps",
+        "title": "Install Duplicate Lead & Quotations",
+        "caption": "Open the Odoo Apps menu, search for wb_lead_quotation_duplicate , and click Activate to enable selective lead replication and quotation cloning features."
+      },
+      {
+        "src": "/odoo-apps/lead-quotation-duplicate/screenshots/image_2.png",
+        "alt": "User Abbreviation & Designation Setup",
+        "title": "Configure User Abbreviation & Designation",
+        "caption": "Navigate to Settings \u2192 Users & Companies \u2192 Users. Define the user's Designation and required Abbreviation (e.g. HAD ) used for lead number generation."
+      },
+      {
+        "src": "/odoo-apps/lead-quotation-duplicate/screenshots/image_3.png",
+        "alt": "CRM Projects Configuration Menu",
+        "title": "Manage CRM Projects",
+        "caption": "Access Projects under CRM \u2192 Configuration \u2192 Projects to create and maintain project master records for assigning to sales leads and orders."
+      },
+      {
+        "src": "/odoo-apps/lead-quotation-duplicate/screenshots/image_4.png",
+        "alt": "Lead Form View with Duplicate Lead Header Button",
+        "title": "Lead Form with Custom Number & Duplicate Action",
+        "caption": "View the auto-generated Lead Number , assign Client and Project, and click the header Duplicate Lead button to initiate the selective duplication process."
+      },
+      {
+        "src": "/odoo-apps/lead-quotation-duplicate/screenshots/image_5.png",
+        "alt": "Duplicate Lead Wizard Popup with Quotation Selection",
+        "title": "Select Quotations to Duplicate",
+        "caption": "In the popup wizard, select exactly which associated quotations to carry over. All selected quotations will be duplicated and reset to draft."
+      },
+      {
+        "src": "/odoo-apps/lead-quotation-duplicate/screenshots/image_6.png",
+        "alt": "Wizard Warning Confirmation Alert when No Quotation Selected",
+        "title": "Warning Confirmation for No Quotation Selection",
+        "caption": "If no quotation is selected, a warning banner alerts the user before proceeding to duplicate only the lead record."
+      },
+      {
+        "src": "/odoo-apps/lead-quotation-duplicate/screenshots/image_7.png",
+        "alt": "Duplicated Lead Form View with Synced Draft Quotation",
+        "title": "Duplicated Lead with Linked Draft Quotation",
+        "caption": "The newly duplicated lead opens with a fresh lead reference code, linked draft quotations, and synced Client & Project details."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Duplicate Lead & Quotations do?",
+        "a": "Replaces Odoo's standard single-record duplication with an interactive wizard. Selectively copy lead quotations to draft state, automatically generate user-abbreviated lead reference numbers, manage custom CRM projects, and maintain seamless client-project synchronization."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_lead_quotation_duplicate",
+    "iconSrc": "/odoo-apps/lead-quotation-duplicate/icon.png",
+    "cardImageSrc": "/odoo-apps/lead-quotation-duplicate/cover.png",
+    "heroImageSrc": "/odoo-apps/lead-quotation-duplicate/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$10.02"
+  },
+  {
+    "slug": "contact-sync",
+    "name": "Google Drive Contact Sync | Odoo Google Sheets Integration | Google Sheets Contact Sync",
+    "technicalName": "wb_contact_sync",
+    "summary": "Connect Google once. Then send contacts to a sheet in your Drive. Sync from the list, sync unsynced records from Settings, or let a daily job keep the sheet up to date.",
+    "description": "Connect Google once. Then send contacts to a sheet in your Drive. Sync from the list, sync unsynced records from Settings, or let a daily job keep the sheet up to date.",
+    "introParagraphs": [
+      "Connect Google once. Then send contacts to a sheet in your Drive. Sync from the list, sync unsynced records from Settings, or let a daily job keep the sheet up to date.",
+      "Select contacts on the list and run Sync to Google Sheets. Those records are written to the sheet in one click.",
+      "In Settings, Sync Unsynced Contacts Now sends every contact that has not been pushed yet."
+    ],
+    "categories": [
+      "Productivity"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $23",
+    "license": "OPL-1",
+    "dependencies": [
+      "Contacts",
+      "Discuss"
+    ],
+    "features": [
+      {
+        "title": "Bulk Sync from the List",
+        "body": "Select contacts on the list and run Sync to Google Sheets. Those records are written to the sheet in one click.",
+        "imageSrc": "/odoo-apps/contact-sync/features/feature_1.png"
+      },
+      {
+        "title": "Sync Unsynced Contacts",
+        "body": "In Settings, Sync Unsynced Contacts Now sends every contact that has not been pushed yet.",
+        "imageSrc": "/odoo-apps/contact-sync/features/feature_2.png"
+      },
+      {
+        "title": "Open the Google Sheet",
+        "body": "Open the target spreadsheet from Settings in a new tab. No need to hunt for it in Drive.",
+        "imageSrc": "/odoo-apps/contact-sync/features/feature_3.png"
+      },
+      {
+        "title": "Daily Scheduled Sync",
+        "body": "A daily scheduled action sends new contacts created that day, so the sheet stays current without a manual run.",
+        "imageSrc": "/odoo-apps/contact-sync/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Google Drive Contact Sync | Odoo Google Sheets Integration | Google Sheets Contact Sync, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Google Drive Contact Sync | Odoo Google Sheets Integration | Google Sheets Contact Sync behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/contact-sync/screenshots/image_1.png",
+        "alt": "Google Cloud Console create a project",
+        "title": "Create a Google Cloud Project",
+        "caption": "Open the Google Cloud Console and create a project."
+      },
+      {
+        "src": "/odoo-apps/contact-sync/screenshots/image_2.png",
+        "alt": "Google Cloud New Project",
+        "title": "Start a New Project",
+        "caption": "Click New Project ."
+      },
+      {
+        "src": "/odoo-apps/contact-sync/screenshots/image_3.png",
+        "alt": "Google Cloud project name and Create",
+        "title": "Name the Project",
+        "caption": "Enter the project name and click Create ."
+      },
+      {
+        "src": "/odoo-apps/contact-sync/screenshots/image_4.png",
+        "alt": "Google Cloud APIs and Services",
+        "title": "Open APIs and Services",
+        "caption": "Open APIs & Services ."
+      },
+      {
+        "src": "/odoo-apps/contact-sync/screenshots/image_5.png",
+        "alt": "Google Cloud API Library",
+        "title": "Open the Library",
+        "caption": "Open the Library section."
+      },
+      {
+        "src": "/odoo-apps/contact-sync/screenshots/image_6.png",
+        "alt": "Google Drive API and Google Sheets API in the library",
+        "title": "Find Drive and Sheets APIs",
+        "caption": "Find Google Drive API and Google Sheets API ."
+      },
+      {
+        "src": "/odoo-apps/contact-sync/screenshots/image_7.png",
+        "alt": "Enable Google Drive API",
+        "title": "Enable Google Drive API",
+        "caption": "Click Enable for Google Drive API."
+      },
+      {
+        "src": "/odoo-apps/contact-sync/screenshots/image_8.png",
+        "alt": "Enable Google Sheets API",
+        "title": "Enable Google Sheets API",
+        "caption": "Click Enable for Google Sheets API."
+      },
+      {
+        "src": "/odoo-apps/contact-sync/screenshots/image_9.png",
+        "alt": "Google Cloud Credentials menu",
+        "title": "Open Credentials",
+        "caption": "Open Credentials in the left menu."
+      },
+      {
+        "src": "/odoo-apps/contact-sync/screenshots/image_10.png",
+        "alt": "Create Credentials button",
+        "title": "Create Credentials",
+        "caption": "Click Create Credentials ."
+      },
+      {
+        "src": "/odoo-apps/contact-sync/screenshots/image_11.png",
+        "alt": "OAuth client ID option",
+        "title": "Choose OAuth Client ID",
+        "caption": "Select OAuth client ID ."
+      },
+      {
+        "src": "/odoo-apps/contact-sync/screenshots/image_12.png",
+        "alt": "Configure consent screen",
+        "title": "Configure the Consent Screen",
+        "caption": "Configure the OAuth consent screen first."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Google Drive Contact Sync | Odoo Google Sheets Integration | Google Sheets Contact Sync do?",
+        "a": "Connect Google once. Then send contacts to a sheet in your Drive. Sync from the list, sync unsynced records from Settings, or let a daily job keep the sheet up to date."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_contact_sync",
+    "iconSrc": "/odoo-apps/contact-sync/icon.png",
+    "cardImageSrc": "/odoo-apps/contact-sync/cover.png",
+    "heroImageSrc": "/odoo-apps/contact-sync/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$23.19"
+  },
+  {
+    "slug": "mail-desk",
+    "name": "MailDesk - Email Client & Unified Inbox",
+    "technicalName": "wb_mail_desk",
+    "summary": "A real email client living inside Odoo. Connect Gmail, Outlook / Microsoft 365 or plain IMAP mailboxes and read, organise and answer mail without leaving Odoo. Unlike native...",
+    "description": "A real email client living inside Odoo. Connect Gmail, Outlook / Microsoft 365 or plain IMAP mailboxes and read, organise and answer mail without leaving Odoo. Unlike native incoming mail servers, MailDesk keeps every message .  not only the ones routed to a business record .  together with its folder, flags and conversation thread.",
+    "introParagraphs": [
+      "A real email client living inside Odoo. Connect Gmail, Outlook / Microsoft 365 or plain IMAP mailboxes and read, organise and answer mail without leaving Odoo. Unlike native incoming mail servers, MailDesk keeps every message .  not only the ones routed to a business record .  together with its folder, flags and conversation thread.",
+      "Read Gmail, Outlook and IMAP mail in one three-pane inbox with folders, snippets and sender avatars.",
+      "Connect personal and team mailboxes. Grant User or Administrator access from Settings \u2192 Users."
+    ],
+    "categories": [
+      "Productivity"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $301",
+    "license": "OPL-1",
+    "dependencies": [
+      "AI",
+      "Contacts",
+      "Discuss"
+    ],
+    "features": [
+      {
+        "title": "Unified Inbox",
+        "body": "Read Gmail, Outlook and IMAP mail in one three-pane inbox with folders, snippets and sender avatars.",
+        "imageSrc": "/odoo-apps/mail-desk/features/feature_1.png"
+      },
+      {
+        "title": "Multi-Mailbox & Shared Inboxes",
+        "body": "Connect personal and team mailboxes. Grant User or Administrator access from Settings \u2192 Users.",
+        "imageSrc": "/odoo-apps/mail-desk/features/feature_2.png"
+      },
+      {
+        "title": "OAuth2 & IMAP Sync",
+        "body": "Sign in with Gmail or Microsoft 365 OAuth2, or use IMAP / SMTP. Test Connection, Fetch Mail and scheduled sync keep folders current.",
+        "imageSrc": "/odoo-apps/mail-desk/features/feature_3.png"
+      },
+      {
+        "title": "Compose, Reply & Forward",
+        "body": "Reply, reply-all, forward, drafts, signatures and templates without leaving Odoo.",
+        "imageSrc": "/odoo-apps/mail-desk/features/feature_4.png"
+      },
+      {
+        "title": "Folders, Tags & Filters",
+        "body": "IMAP folder tree, tags, star, read / unread and quick filters for unread, starred, incoming and outgoing mail.",
+        "imageSrc": "/odoo-apps/mail-desk/features/feature_5.png"
+      },
+      {
+        "title": "Link Emails to Odoo Records",
+        "body": "Attach any message to contacts, CRM or other documents, with optional automatic linking.",
+        "imageSrc": "/odoo-apps/mail-desk/features/feature_6.png"
+      },
+      {
+        "title": "Built-in AI Assistant",
+        "body": "Docked MailDesk AI panel: morning briefing, priorities, find emails, Ask AI, summarise and draft replies on ChatGPT or Gemini.",
+        "imageSrc": "/odoo-apps/mail-desk/features/feature_7.png"
+      },
+      {
+        "title": "Security Scan & Safe Mode",
+        "body": "Screen messages for phishing (SAFE / SUSPICIOUS / DANGEROUS) and hold back risky media until reviewed.",
+        "imageSrc": "/odoo-apps/mail-desk/features/feature_8.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for MailDesk - Email Client & Unified Inbox, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm MailDesk - Email Client & Unified Inbox behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/mail-desk/screenshots/image_1.png",
+        "alt": "Activate MailDesk in Odoo Apps",
+        "title": "Install MailDesk",
+        "caption": "Open the Odoo Apps menu, search for wb_mail_desk , and click Activate . Odoo Enterprise AI is installed with MailDesk so the assistant is available from day one."
+      },
+      {
+        "src": "/odoo-apps/mail-desk/screenshots/image_2.png",
+        "alt": "MailDesk access rights on the user form",
+        "title": "Grant MailDesk Access",
+        "caption": "Go to Settings \u2192 Users & Companies \u2192 Users. Under Productivity , set MailDesk to User or Administrator ."
+      },
+      {
+        "src": "/odoo-apps/mail-desk/screenshots/image_3.png",
+        "alt": "Mailboxes configuration empty state",
+        "title": "Open Configuration & Mailboxes",
+        "caption": "From MailDesk \u2192 Configuration you can manage Mailboxes, Folders, Tags, Signatures, Email Templates, Server Changes and Settings. Click New to connect the first mailbox."
+      },
+      {
+        "src": "/odoo-apps/mail-desk/screenshots/image_4.png",
+        "alt": "New mailbox form with authentication options",
+        "title": "Choose Authentication",
+        "caption": "Pick IMAP / SMTP (password) , Gmail (OAuth2) or Outlook / Microsoft 365 (OAuth2) . Configure incoming IMAP, outgoing SMTP, Access, Folders, AI and Signature on the mailbox form."
+      },
+      {
+        "src": "/odoo-apps/mail-desk/screenshots/image_5.png",
+        "alt": "Test Connection on a MailDesk mailbox",
+        "title": "Test Connection & Confirm",
+        "caption": "Use Test Connection before confirming the mailbox. Enable Link Mail to Records Automatically if incoming mail should attach to Odoo records."
+      },
+      {
+        "src": "/odoo-apps/mail-desk/screenshots/image_6.png",
+        "alt": "MailDesk inbox with Fetch Mail",
+        "title": "Open the Inbox & Fetch Mail",
+        "caption": "The Inbox has Compose, AI assistant, Today's priorities, Find emails and Fetch Mail . Search and filters sit above the message list."
+      },
+      {
+        "src": "/odoo-apps/mail-desk/screenshots/image_7.png",
+        "alt": "Inbox with folders, messages and MailDesk AI panel",
+        "title": "Work the Unified Inbox",
+        "caption": "Synced folders appear in the sidebar. The list shows sender avatars, subjects and snippets. Open the AI panel for a morning briefing, priorities, unanswered mail and natural-language search."
+      },
+      {
+        "src": "/odoo-apps/mail-desk/screenshots/image_8.png",
+        "alt": "Odoo home screen with MailDesk and AI apps",
+        "title": "MailDesk & AI on the Home Screen",
+        "caption": "MailDesk appears as its own app. The Odoo AI app is installed automatically so you can manage agents and providers next to MailDesk."
+      },
+      {
+        "src": "/odoo-apps/mail-desk/screenshots/image_9.png",
+        "alt": "AI provider settings for ChatGPT and Gemini",
+        "title": "Configure an AI Provider",
+        "caption": "Open AI \u2192 Configuration \u2192 Settings and connect your own ChatGPT or Google Gemini API key before using MailDesk AI actions."
+      },
+      {
+        "src": "/odoo-apps/mail-desk/screenshots/image_10.png",
+        "alt": "MailDesk AI agents in Odoo",
+        "title": "MailDesk AI Agents",
+        "caption": "Dedicated agents cover summarise, draft reply, tone refine, phishing check, find emails, Ask AI and attachment analysis. They are created on install and can be reviewed under AI \u2192 Agents."
+      },
+      {
+        "src": "/odoo-apps/mail-desk/screenshots/image_11.png",
+        "alt": "Reading pane with AI actions and summary",
+        "title": "Ask AI from the Reading Pane",
+        "caption": "Open a message and use Ask AI, show the whole conversation, summarise, draft a reply or check for phishing. Results appear in the AI panel with Copy, Use as reply, Insert and Regenerate."
+      },
+      {
+        "src": "/odoo-apps/mail-desk/screenshots/image_12.png",
+        "alt": "User preferences with light and dark theme",
+        "title": "Light & Dark Preferences",
+        "caption": "Users can switch System, Light or Dark theme from Preferences. MailDesk follows Odoo's theme so the inbox stays readable in both modes."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does MailDesk - Email Client & Unified Inbox do?",
+        "a": "A real email client living inside Odoo. Connect Gmail, Outlook / Microsoft 365 or plain IMAP mailboxes and read, organise and answer mail without leaving Odoo. Unlike native incoming mail servers, MailDesk keeps every message .  not only the ones routed to a business record .  together with its folder, flags and conversation thread."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_mail_desk",
+    "iconSrc": "/odoo-apps/mail-desk/icon.png",
+    "cardImageSrc": "/odoo-apps/mail-desk/cover.png",
+    "heroImageSrc": "/odoo-apps/mail-desk/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$301.16"
+  },
+  {
+    "slug": "mrp-tags",
+    "name": "Manufacturing Tags",
+    "technicalName": "wb_mrp_tags",
+    "summary": "Create colored tags and put them on manufacturing orders. Search and filter by tag. Add or replace tags on many orders at once. New orders can get default tags automatically.",
+    "description": "Create colored tags and put them on manufacturing orders. Search and filter by tag. Add or replace tags on many orders at once. New orders can get default tags automatically.",
+    "introParagraphs": [
+      "Create colored tags and put them on manufacturing orders. Search and filter by tag. Add or replace tags on many orders at once. New orders can get default tags automatically.",
+      "Set default tags in Manufacturing settings. New manufacturing orders get them automatically.",
+      "On the user form, enable Enable MRP Mass Tags . Those users can manage tags, set defaults and run mass updates."
+    ],
+    "categories": [
+      "Manufacturing"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $12",
+    "license": "OPL-1",
+    "dependencies": [
+      "Manufacturing",
+      "Inventory",
+      "Discuss"
+    ],
+    "features": [
+      {
+        "title": "Tag Master",
+        "body": "Create and manage colored tags from Manufacturing \u2192 Configuration \u2192 MRP Tags.",
+        "imageSrc": "/odoo-apps/mrp-tags/features/feature_1.png"
+      },
+      {
+        "title": "Tags on Manufacturing Orders",
+        "body": "Put one or more tags on a manufacturing order. Use them to search and filter.",
+        "imageSrc": "/odoo-apps/mrp-tags/features/feature_2.png"
+      },
+      {
+        "title": "Mass Tag Update",
+        "body": "Select orders and add or replace tags in bulk from Actions \u2192 Update Mass Tag.",
+        "imageSrc": "/odoo-apps/mrp-tags/features/feature_3.png"
+      },
+      {
+        "title": "Default Tags",
+        "body": "Set default tags in Manufacturing settings. New manufacturing orders get them automatically.",
+        "imageSrc": "/odoo-apps/mrp-tags/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Manufacturing Tags, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Manufacturing Tags behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/mrp-tags/screenshots/image_1.png",
+        "alt": "Manufacturing Tags app in Odoo Apps",
+        "title": "Install Manufacturing Tags",
+        "caption": "In Apps, install Manufacturing Tags ."
+      },
+      {
+        "src": "/odoo-apps/mrp-tags/screenshots/image_2.png",
+        "alt": "User form Enable MRP Mass Tags",
+        "title": "Allow Mass Tag Updates",
+        "caption": "On the user form, enable Enable MRP Mass Tags . Those users can manage tags, set defaults and run mass updates."
+      },
+      {
+        "src": "/odoo-apps/mrp-tags/screenshots/image_3.png",
+        "alt": "MRP Tags list with names and colors",
+        "title": "Create Colored Tags",
+        "caption": "Go to Manufacturing \u2192 Configuration \u2192 MRP Tags . Create tags and pick a color for each."
+      },
+      {
+        "src": "/odoo-apps/mrp-tags/screenshots/image_4.png",
+        "alt": "Manufacturing order form with tags widget",
+        "title": "Assign Tags on an MO",
+        "caption": "Open a manufacturing order. Use the tags field to pick existing tags or create a new one."
+      },
+      {
+        "src": "/odoo-apps/mrp-tags/screenshots/image_5.png",
+        "alt": "Manufacturing Orders list with tags column",
+        "title": "See Tags on the List",
+        "caption": "The Manufacturing Orders list shows the tags column. You can hide or show it with the optional column selector."
+      },
+      {
+        "src": "/odoo-apps/mrp-tags/screenshots/image_6.png",
+        "alt": "Actions menu Update Mass Tag on Manufacturing Orders list",
+        "title": "Open Mass Tag Update",
+        "caption": "Select several orders, then Actions \u2192 Update Mass Tag ."
+      },
+      {
+        "src": "/odoo-apps/mrp-tags/screenshots/image_7.png",
+        "alt": "Mass Tag Update wizard Add method",
+        "title": "Add Tags in Bulk",
+        "caption": "In the wizard, choose Add , pick the tags, and confirm. Those tags are added on the selected orders."
+      },
+      {
+        "src": "/odoo-apps/mrp-tags/screenshots/image_8.png",
+        "alt": "Manufacturing Orders list after mass add tags",
+        "title": "List After Add",
+        "caption": "The list shows the new tags on the orders you selected."
+      },
+      {
+        "src": "/odoo-apps/mrp-tags/screenshots/image_9.png",
+        "alt": "Mass Tag Update wizard Replace method",
+        "title": "Replace Tags in Bulk",
+        "caption": "Use Replace in the same wizard to swap existing tags for the ones you pick."
+      },
+      {
+        "src": "/odoo-apps/mrp-tags/screenshots/image_10.png",
+        "alt": "Manufacturing Orders list after mass replace tags",
+        "title": "List After Replace",
+        "caption": "The list shows the replaced tags on those orders."
+      },
+      {
+        "src": "/odoo-apps/mrp-tags/screenshots/image_11.png",
+        "alt": "Manufacturing Order kanban cards with colored tags",
+        "title": "Tags on Kanban Cards",
+        "caption": "Kanban cards show the same colored tags."
+      },
+      {
+        "src": "/odoo-apps/mrp-tags/screenshots/image_12.png",
+        "alt": "Search bar filter by manufacturing tag",
+        "title": "Search by Tag",
+        "caption": "Search manufacturing orders by tag in the search bar."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Manufacturing Tags do?",
+        "a": "Create colored tags and put them on manufacturing orders. Search and filter by tag. Add or replace tags on many orders at once. New orders can get default tags automatically."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_mrp_tags",
+    "iconSrc": "/odoo-apps/mrp-tags/icon.png",
+    "cardImageSrc": "/odoo-apps/mrp-tags/cover.png",
+    "heroImageSrc": "/odoo-apps/mrp-tags/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$12.16"
+  },
+  {
+    "slug": "manufecturing-timesheet",
+    "name": "Manufacturing Timesheets (MRP Timesheets)",
+    "technicalName": "wb_manufecturing_timesheet",
+    "summary": "Log employee working hours directly on Manufacturing Orders and Work Orders. Turn tracking on per order, open timesheets from a smart button or the Timesheets menu, and keep...",
+    "description": "Log employee working hours directly on Manufacturing Orders and Work Orders. Turn tracking on per order, open timesheets from a smart button or the Timesheets menu, and keep operators on their own entries while managers see every line.",
+    "introParagraphs": [
+      "Log employee working hours directly on Manufacturing Orders and Work Orders. Turn tracking on per order, open timesheets from a smart button or the Timesheets menu, and keep operators on their own entries while managers see every line.",
+      "Turn timesheet tracking on or off per Manufacturing Order and Work Order with Allow Timesheet.",
+      "Manufacturing Users can create, view and manage their own manufacturing timesheets."
+    ],
+    "categories": [
+      "Manufacturing"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $16",
+    "license": "OPL-1",
+    "dependencies": [
+      "Manufacturing",
+      "Project",
+      "Inventory",
+      "Discuss",
+      "Sales",
+      "Invoicing",
+      "Employees"
+    ],
+    "features": [
+      {
+        "title": "Hours on MO and Work Orders",
+        "body": "Record employee working hours directly on Manufacturing Orders and Work Orders.",
+        "imageSrc": "/odoo-apps/manufecturing-timesheet/features/feature_1.png"
+      },
+      {
+        "title": "Toggle Tracking Per Order",
+        "body": "Turn timesheet tracking on or off per Manufacturing Order and Work Order with Allow Timesheet.",
+        "imageSrc": "/odoo-apps/manufecturing-timesheet/features/feature_2.png"
+      },
+      {
+        "title": "Users See Their Own Hours",
+        "body": "Manufacturing Users can create, view and manage their own manufacturing timesheets.",
+        "imageSrc": "/odoo-apps/manufecturing-timesheet/features/feature_3.png"
+      },
+      {
+        "title": "Managers See Every Line",
+        "body": "Manufacturing Managers can view, create, edit and delete all manufacturing timesheets.",
+        "imageSrc": "/odoo-apps/manufecturing-timesheet/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Manufacturing Timesheets (MRP Timesheets), and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Manufacturing Timesheets (MRP Timesheets) behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/manufecturing-timesheet/screenshots/image_1.png",
+        "alt": "Install Manufacturing Timesheets in Odoo Apps",
+        "title": "Install the Module",
+        "caption": "Open the Odoo Apps menu, search for Manufacturing Timesheets (MRP Timesheets) and click Activate ."
+      },
+      {
+        "src": "/odoo-apps/manufecturing-timesheet/screenshots/image_2.png",
+        "alt": "Manufacturing Order with Allow Timesheet disabled",
+        "title": "Timesheets Off on the Manufacturing Order",
+        "caption": "Open a Manufacturing Order. Allow Timesheet is off by default, so the Timesheets tab and smart button stay hidden."
+      },
+      {
+        "src": "/odoo-apps/manufecturing-timesheet/screenshots/image_3.png",
+        "alt": "Manufacturing Order with timesheets enabled",
+        "title": "Enable Timesheets on the Manufacturing Order",
+        "caption": "Check Allow Timesheet . The Timesheets tab and Timesheets smart button appear so you can log and open hours on that order."
+      },
+      {
+        "src": "/odoo-apps/manufecturing-timesheet/screenshots/image_4.png",
+        "alt": "Work Order timesheet tracking",
+        "title": "Log Hours on a Work Order",
+        "caption": "On a Work Order, enable Allow Timesheet to record hours against that operation. Lines stay linked to the Manufacturing Order."
+      },
+      {
+        "src": "/odoo-apps/manufecturing-timesheet/screenshots/image_5.png",
+        "alt": "Timesheets menu under Manufacturing",
+        "title": "Open the Timesheets Menu",
+        "caption": "Go to Manufacturing \u2192 Timesheets . Use My Timesheets for your own entries or All Timesheets for every manufacturing line."
+      },
+      {
+        "src": "/odoo-apps/manufecturing-timesheet/screenshots/image_6.png",
+        "alt": "My Timesheets list view",
+        "title": "My Timesheets",
+        "caption": "My Timesheets lists the current user\u2019s entries with date, employee, description, Manufacturing Order, Work Order and duration."
+      },
+      {
+        "src": "/odoo-apps/manufecturing-timesheet/screenshots/image_7.png",
+        "alt": "Timesheet form linked to a manufacturing order",
+        "title": "Create or Edit a Timesheet",
+        "caption": "Open a timesheet form to set employee, date, project, task, duration, Manufacturing Order and Work Order. Duration must be greater than zero."
+      },
+      {
+        "src": "/odoo-apps/manufecturing-timesheet/screenshots/image_8.png",
+        "alt": "All Timesheets manager view",
+        "title": "All Timesheets for Managers",
+        "caption": "Manufacturing Managers open All Timesheets to view, create, edit or delete every manufacturing timesheet across the company."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Manufacturing Timesheets (MRP Timesheets) do?",
+        "a": "Log employee working hours directly on Manufacturing Orders and Work Orders. Turn tracking on per order, open timesheets from a smart button or the Timesheets menu, and keep operators on their own entries while managers see every line."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_manufecturing_timesheet",
+    "iconSrc": "/odoo-apps/manufecturing-timesheet/icon.png",
+    "cardImageSrc": "/odoo-apps/manufecturing-timesheet/cover.png",
+    "heroImageSrc": "/odoo-apps/manufecturing-timesheet/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$16.19"
   }
 ]
