@@ -15,7 +15,8 @@ import { OdooAppImage } from "./odoo-app-image";
 import { ArrowRightIcon, CheckIcon } from "./odoo-service-icons";
 
 const STATS = [
-  { n: "31", l: "Odoo apps published", g: false },
+  // Derived so the headline count cannot drift as apps are added to the catalog.
+  { n: String(getAllOdooApps().length), l: "Odoo apps published", g: false },
   { n: "365", l: "Days free support", g: true },
   { n: "254+", l: "Happy customers", g: false },
   { n: "17 / 18 / 19", l: "Odoo versions supported", g: false },
@@ -87,7 +88,7 @@ export function OdooAppsCatalogContent() {
               </p>
 
               <div className="oa-hero-pills">
-                <span className="oa-hero-pill">31 published apps</span>
+                <span className="oa-hero-pill">{apps.length} published apps</span>
                 <span className="oa-hero-pill">365-day support</span>
                 <span className="oa-hero-pill">Odoo 17, 18, and 19</span>
               </div>

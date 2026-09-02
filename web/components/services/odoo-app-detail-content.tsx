@@ -157,8 +157,9 @@ export function OdooAppDetailContent({ app }: OdooAppDetailContentProps) {
             <h2 className="sec-h">
               Why teams install <span className="acc">{app.name}</span>
             </h2>
-            {app.introParagraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 40)} className="oa-overview-p">
+            {app.introParagraphs.map((paragraph, index) => (
+              // Scraped paragraphs can share an opening sentence, so index by position.
+              <p key={index} className="oa-overview-p">
                 {paragraph}
               </p>
             ))}

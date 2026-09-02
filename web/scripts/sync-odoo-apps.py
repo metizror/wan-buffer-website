@@ -51,6 +51,16 @@ MODULES = [
     "wb_cancel_mo",
     "wb_access_record_in_new_tab",
     "wb_advanced_search_views_columns",
+    "wb_mrp_product_kanban",
+    "wb_auto_logout",
+    "wb_duplicate_email_validation",
+    "wb_reacho_integration",
+    "wb_auto_process_manufacturing_order",
+    "wb_mo_bom_img",
+    "wb_bom_usage_report",
+    "wb_bulk_name_nsp",
+    "wb_cancel_stock_picking",
+    "wb_custom_tax_report",
 ]
 
 CATEGORY_RULES = [
@@ -59,9 +69,17 @@ CATEGORY_RULES = [
     (["stock", "barcode", "low_stock", "po_fulfillment", "ticket_po", "auto_po", "3d", "cancel_mo"], "Inventory"),
     (["timer", "task", "log_message", "update_record", "company_filter", "partner_merge", "widget", "dynamic_warning", "access_record", "advanced_search", "search_views", "new_tab"], "Productivity"),
     (["bi_dashboard", "dashboard"], "Productivity"),
+    (["mrp", "manufactur", "bill of material", "bom", "work order", "work_order"], "Manufacturing"),
     (["captcha", "otp", "login", "code_captcha", "image_captcha"], "Website"),
     (["brevo", "scandoc", "terms"], "Website"),
 ]
+
+# Some listings do not render the technical info table server-side, so the
+# dependency list cannot be scraped. Record the real dependency here rather than
+# letting the generic "Discuss" fallback stand.
+DEPENDENCY_OVERRIDES = {
+    "wb_auto_logout": ["Web"],
+}
 
 DEFAULT_TRUST_STATS = [
     {"value": "365", "label": "Days free support"},
@@ -127,6 +145,41 @@ def fetch(url: str, retries: int = 4) -> bytes:
                 continue
             raise last_error
     raise RuntimeError(f"Failed to fetch {url}")
+
+
+# Newest first. A module published only for older Odoo still has a page at the
+# newest version, but that page is a stub with no description or dependency
+# table, so resolve to the newest version that actually carries the listing.
+STORE_VERSIONS = ("19.0", "18.0", "17.0")
+
+_store_pages: dict[str, tuple[str, str]] = {}
+
+
+def resolve_store_page(technical_name: str) -> tuple[str, str]:
+    """Return (version, html) for the newest version that renders the listing."""
+    cached = _store_pages.get(technical_name)
+    if cached:
+        return cached
+
+    fallback: tuple[str, str] | None = None
+    for version in STORE_VERSIONS:
+        url = f"https://apps.odoo.com/apps/modules/{version}/{technical_name}"
+        html = fetch(url).decode("utf-8", "replace")
+        if 'id="module-description"' in html:
+            _store_pages[technical_name] = (version, html)
+            return version, html
+        if fallback is None:
+            fallback = (version, html)
+
+    # No version rendered a description; keep the newest so the caller still
+    # gets a page to parse rather than failing the whole sync.
+    assert fallback is not None
+    _store_pages[technical_name] = fallback
+    return fallback
+
+
+def store_version(technical_name: str) -> str:
+    return resolve_store_page(technical_name)[0]
 
 
 def primary_desc_content(desc_chunk: str) -> str:
@@ -195,7 +248,12 @@ def download_file(url: str, destination: Path, force: bool = False) -> bool:
 
 
 def asset_paths_in_html(html: str, technical_name: str) -> list[str]:
-    pattern = rf"apps/assets/19\.0/{re.escape(technical_name)}/([^\"?]+\.(?:png|jpg|jpeg|webp))"
+    # Any version: a module published only for older Odoo serves its assets from
+    # that version's path, not 19.0.
+    pattern = (
+        rf"apps/assets/\d+\.\d+/{re.escape(technical_name)}"
+        rf"/([^\"?]+\.(?:png|jpg|jpeg|webp))"
+    )
     paths: list[str] = []
     for match in re.findall(pattern, html, flags=re.I):
         lowered = match.lower()
@@ -204,6 +262,71 @@ def asset_paths_in_html(html: str, technical_name: str) -> list[str]:
         if match not in paths:
             paths.append(match)
     return paths
+
+
+def describe_feature_asset(html: str, technical_name: str, relative_path: str) -> tuple[str, str]:
+    """Pull the heading and body a store listing prints beside a feature icon.
+
+    Listings vary: some wrap the heading in a <span>, others leave it as a bare
+    text node after the <img>. Both forms sit within a few hundred characters of
+    the image, so read that window and fall back to the img alt text.
+    """
+    marker = re.search(
+        rf"{re.escape(technical_name)}/{re.escape(relative_path)}[^>]*>",
+        html,
+        flags=re.I,
+    )
+    if not marker:
+        return "", ""
+
+    alt_match = re.search(r'alt="([^"]*)"', marker.group(0))
+    alt = clean_text(alt_match.group(1)) if alt_match else ""
+
+    window = html[marker.end() : marker.end() + 900]
+    body_match = re.search(r"<p[^>]*>([\s\S]*?)</p>", window)
+    body = clean_text(body_match.group(1)) if body_match else ""
+
+    heading = clean_text(window[: body_match.start()] if body_match else window[:200])
+    if not heading or len(heading) > 100:
+        heading = alt
+
+    return heading, body
+
+
+def describe_screenshot_asset(html: str, technical_name: str, relative_path: str) -> tuple[str, str]:
+    """Pull the heading and body a store listing prints above a screenshot.
+
+    Step-by-step listings put an <h3> and a <p> in the block just before each
+    image. Read backwards from the image, stopping at the previous image so a
+    heading from an earlier block is never picked up.
+    """
+    marker = re.search(
+        rf"{re.escape(technical_name)}/{re.escape(relative_path)}",
+        html,
+        flags=re.I,
+    )
+    if not marker:
+        return "", ""
+
+    # marker.start() points inside the current <img> src, so step back past that
+    # tag before looking for the block that introduces it.
+    image_start = html.rfind("<img", 0, marker.start())
+    if image_start == -1:
+        image_start = marker.start()
+
+    window = html[max(0, image_start - 3000) : image_start]
+    previous_image = window.rfind("<img")
+    if previous_image != -1:
+        window = window[previous_image:]
+
+    headings = re.findall(r"<h[1-6][^>]*>([\s\S]*?)</h[1-6]>", window)
+    bodies = re.findall(r"<p[^>]*>([\s\S]*?)</p>", window)
+    heading = clean_text(headings[-1]) if headings else ""
+    body = clean_text(bodies[-1]) if bodies else ""
+    if len(heading) > 100:
+        heading = ""
+
+    return heading, body
 
 
 def discover_feature_files(html: str, technical_name: str) -> list[str]:
@@ -242,9 +365,10 @@ def download_screenshot_asset(
 ) -> bool:
     filename = screenshot_local_name(relative_path)
     destination = app_dir / "screenshots" / filename
+    version = store_version(technical_name)
     candidates = [
-        f"https://apps.odoocdn.com/apps/assets/19.0/{technical_name}/{relative_path}",
-        f"https://apps.odoocdn.com/apps/assets/19.0/{technical_name}/{urllib.parse.unquote(relative_path)}",
+        f"https://apps.odoocdn.com/apps/assets/{version}/{technical_name}/{relative_path}",
+        f"https://apps.odoocdn.com/apps/assets/{version}/{technical_name}/{urllib.parse.unquote(relative_path)}",
     ]
     seen: set[str] = set()
     for url in candidates:
@@ -257,8 +381,8 @@ def download_screenshot_asset(
 
 
 def parse_module(technical_name: str) -> dict:
-    store_url = f"https://apps.odoo.com/apps/modules/19.0/{technical_name}"
-    html = fetch(store_url).decode("utf-8", "replace")
+    version, html = resolve_store_page(technical_name)
+    store_url = f"https://apps.odoo.com/apps/modules/{version}/{technical_name}"
 
     info_end = html.find('id="module-description"')
     info = html[:info_end]
@@ -270,19 +394,25 @@ def parse_module(technical_name: str) -> dict:
     name_match = re.search(r'itemprop="name"><b>([^<]+)</b>', html)
     name = clean_text(name_match.group(1)) if name_match else humanize_filename(technical_name)
 
+    # Some listings print the technical info table above the description, others
+    # below it. Fall back to the whole page when the prefix window has no table.
+    technical_info = info if "Odoo Apps Dependencies" in info else html
+
     dependencies: list[str] = []
-    for dep_name, _dep_code in re.findall(r"<span>([^<(]+)\s*\(([a-z_0-9]+)\)</span>", info):
+    for dep_name, _dep_code in re.findall(
+        r"<span>([^<(]+)\s*\(([a-z_0-9]+)\)</span>", technical_info
+    ):
         label = clean_text(dep_name).strip()
         if label and label not in dependencies:
             dependencies.append(label)
     if not dependencies:
-        dependencies = ["Discuss"]
+        dependencies = DEPENDENCY_OVERRIDES.get(technical_name, ["Discuss"])
 
-    price_match = re.search(r'oe_currency_value">([\d.]+)', info)
+    price_match = re.search(r'oe_currency_value">([\d.]+)', technical_info)
     price = price_match.group(1) if price_match else None
     price_label = f"From ${float(price):.0f}" if price else "View on store"
 
-    loc_match = re.search(r"Lines of code[\s\S]*?<td[^>]*>\s*(\d+)", info)
+    loc_match = re.search(r"Lines of code[\s\S]*?<td[^>]*>\s*(\d+)", technical_info)
     lines_of_code = int(loc_match.group(1)) if loc_match else None
 
     versions = sorted(set(re.findall(rf"/apps/modules/([\d.]+)/{re.escape(technical_name)}", info)), key=float)
@@ -314,23 +444,14 @@ def parse_module(technical_name: str) -> dict:
         ]
 
     feature_paths = discover_feature_files(asset_html, technical_name)
-    feature_texts = [
-        clean_text(match)
-        for match in re.findall(
-            r'features/[^"]+\.(?:png|jpg|jpeg|webp)[^>]*>\s*<span[^>]*>\s*([^<]+)',
-            asset_html,
-            flags=re.I,
-        )
-    ][:8]
 
     features = []
     slug = slug_from_technical(technical_name)
-    for index, feature_path in enumerate(feature_paths):
+    for feature_path in feature_paths:
         image_file = Path(feature_path).name
-        title = feature_texts[index] if index < len(feature_texts) else humanize_filename(image_file)
-        body = feature_texts[index] if index < len(feature_texts) else (
-            f"A core part of {name} designed to improve day-to-day work inside Odoo."
-        )
+        heading, body = describe_feature_asset(asset_html, technical_name, feature_path)
+        title = heading or humanize_filename(image_file)
+        body = body or f"A core part of {name} designed to improve day-to-day work inside Odoo."
         features.append(
             {
                 "title": title[:100],
@@ -382,13 +503,21 @@ def parse_module(technical_name: str) -> dict:
     screenshots = []
     for screenshot_path in screenshot_paths:
         screenshot_file = screenshot_local_name(screenshot_path)
-        title = humanize_filename(screenshot_file)
+        alt_match = re.search(
+            rf"{re.escape(technical_name)}/{re.escape(screenshot_path)}[^>]*alt=\"([^\"]+)\"",
+            asset_html,
+            flags=re.I,
+        )
+        alt_text = clean_text(alt_match.group(1)) if alt_match else ""
+        heading, body = describe_screenshot_asset(asset_html, technical_name, screenshot_path)
+        title = heading or alt_text or humanize_filename(screenshot_file)
+        caption = body or f"A live view of {title[:1].lower()}{title[1:]} inside {name}."
         screenshots.append(
             {
                 "src": f"/odoo-apps/{slug}/screenshots/{screenshot_file}",
-                "alt": f"{name} {title} screenshot",
-                "title": title,
-                "caption": f"A live view of {title.lower()} inside {name}.",
+                "alt": alt_text or f"{name} {title} screenshot",
+                "title": title[:100],
+                "caption": caption[:260],
             }
         )
 
@@ -468,7 +597,10 @@ def sync_assets(app: dict, cover_image_id: str | None = None, force: bool = Fals
     downloaded_features: list[str] = []
     for feature_path in assets.get("featureFiles", []):
         feature_file = urllib.parse.unquote(Path(feature_path).name)
-        url = f"https://apps.odoocdn.com/apps/assets/19.0/{technical_name}/{feature_path}"
+        url = (
+            f"https://apps.odoocdn.com/apps/assets/{store_version(technical_name)}"
+            f"/{technical_name}/{feature_path}"
+        )
         if download_file(url, app_dir / "features" / feature_file, force=force):
             downloaded_features.append(feature_file)
 
@@ -514,21 +646,45 @@ def main() -> None:
         action="store_true",
         help="Re-download assets even when local files already exist.",
     )
+    parser.add_argument(
+        "--only",
+        help=(
+            "Comma-separated technical names to sync. Their entries are merged into the "
+            "existing catalog and every other app is left untouched."
+        ),
+    )
     args = parser.parse_args()
+
+    if args.only:
+        requested = [name.strip() for name in args.only.split(",") if name.strip()]
+        unknown = [name for name in requested if name not in MODULES]
+        if unknown:
+            raise SystemExit(f"Not in MODULES: {', '.join(unknown)}")
+        targets = requested
+    else:
+        targets = MODULES
 
     print("Fetching Odoo Apps Store cover images...")
     cover_map = fetch_store_cover_map()
     print(f"Found {len(cover_map)} store cover images")
 
-    apps = []
-    for index, technical_name in enumerate(MODULES, start=1):
-        print(f"[{index}/{len(MODULES)}] Syncing {technical_name}...")
+    existing: dict[str, dict] = {}
+    if args.only and CATALOG_JSON.exists():
+        for entry in json.loads(CATALOG_JSON.read_text(encoding="utf-8")):
+            existing[entry["technicalName"]] = entry
+
+    synced: dict[str, dict] = {}
+    for index, technical_name in enumerate(targets, start=1):
+        print(f"[{index}/{len(targets)}] Syncing {technical_name}...")
         app = parse_module(technical_name)
         sync_assets(app, cover_image_id=cover_map.get(technical_name), force=args.force)
-        apps.append(app)
+        synced[technical_name] = app
+
+        merged = {**existing, **synced}
+        apps = [merged[name] for name in MODULES if name in merged]
         CATALOG_JSON.write_text(json.dumps(apps, indent=2), encoding="utf-8")
 
-    print(f"Wrote {len(apps)} apps to {CATALOG_JSON}")
+    print(f"Synced {len(synced)} app(s); catalog now holds {len(apps)} in {CATALOG_JSON}")
 
 
 if __name__ == "__main__":

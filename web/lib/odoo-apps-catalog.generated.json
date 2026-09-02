@@ -8,7 +8,7 @@
     "introParagraphs": [
       "This Statement of Work (SOW) covers the implementation of an enhanced task time-tracking capability within Odoo that allows users to easily start and stop timers directly from the task list view. By introducing a simple popup-based task selection and real-time timer visibility, the solution streamlines time tracking for daily work activities while keeping existing task processes unchanged. The enhancement improves accuracy, user adoption, and productivity by reducing manual effort, without affecting standard task workflows, approvals, or reporting structures already in place.",
       "No, this module is not compatible with Odoo Online (SaaS) environments. It can only be used with Odoo.sh or on-premise installations.",
-      "Yes, you’ll receive 60 days of complimentary support from the date of purchase to resolve any bugs or technical issues related to the module."
+      "Yes, you\u2019ll receive 60 days of complimentary support from the date of purchase to resolve any bugs or technical issues related to the module."
     ],
     "categories": [
       "Productivity"
@@ -76,7 +76,7 @@
       },
       {
         "title": "User can select task from kanban view",
-        "body": "All tracked time is seamlessly saved to Odoo’s default timesheets with no change to existing approval or reporting processes, while allowing users to control timers directly from both Task List and Kanban views."
+        "body": "All tracked time is seamlessly saved to Odoo\u2019s default timesheets with no change to existing approval or reporting processes, while allowing users to control timers directly from both Task List and Kanban views."
       },
       {
         "title": "User can end task",
@@ -313,7 +313,7 @@
         "body": "Limit for a Customer."
       },
       {
-        "title": "customer’s credit limit is visible in the",
+        "title": "customer\u2019s credit limit is visible in the",
         "body": "Sales module."
       },
       {
@@ -322,7 +322,7 @@
       },
       {
         "title": "The validation error that occurs when a sales user tries to confirm an order exceeding the",
-        "body": "The validation error that occurs when a sales user tries to confirm an order exceeding the customer’s credit limit."
+        "body": "The validation error that occurs when a sales user tries to confirm an order exceeding the customer\u2019s credit limit."
       },
       {
         "title": "credit approval, with a pop-up asking for confirmation.",
@@ -463,10 +463,10 @@
     "slug": "scandoc-integration",
     "name": "ScanDoc Integration",
     "technicalName": "wb_scandoc_integration",
-    "summary": "Yes, ScanDoc works seamlessly with Odoo’s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management.",
-    "description": "Yes, ScanDoc works seamlessly with Odoo’s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management.",
+    "summary": "Yes, ScanDoc works seamlessly with Odoo\u2019s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management.",
+    "description": "Yes, ScanDoc works seamlessly with Odoo\u2019s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management.",
     "introParagraphs": [
-      "Yes, ScanDoc works seamlessly with Odoo’s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management.",
+      "Yes, ScanDoc works seamlessly with Odoo\u2019s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management.",
       "Yes, you can upload and process multiple documents at once, reducing repetitive work and saving time.",
       "Yes, it can integrate with Dropbox, Google Drive, and OneDrive for easy document imports and exports."
     ],
@@ -497,32 +497,32 @@
     "features": [
       {
         "title": "",
-        "body": "AI-Powered OCR – Extract text from scanned documents, PDFs, and images with high accuracy.",
+        "body": "AI-Powered OCR \u2013 Extract text from scanned documents, PDFs, and images with high accuracy.",
         "imageSrc": "/odoo-apps/scandoc-integration/features/f1.png"
       },
       {
         "title": "",
-        "body": "Multi-Format Support – Process invoices, contracts, purchase orders, ID documents, and more.",
+        "body": "Multi-Format Support \u2013 Process invoices, contracts, purchase orders, ID documents, and more.",
         "imageSrc": "/odoo-apps/scandoc-integration/features/f2.png"
       },
       {
         "title": "",
-        "body": "Bulk Document Processing – Save time by scanning and processing multiple files at once.",
+        "body": "Bulk Document Processing \u2013 Save time by scanning and processing multiple files at once.",
         "imageSrc": "/odoo-apps/scandoc-integration/features/f3.png"
       },
       {
         "title": "",
-        "body": "Automated Data Entry – Map extracted fields directly into Odoo records.",
+        "body": "Automated Data Entry \u2013 Map extracted fields directly into Odoo records.",
         "imageSrc": "/odoo-apps/scandoc-integration/features/f4.png"
       },
       {
         "title": "",
-        "body": "Secure Storage – Store and manage documents in Odoo's document module with role-based access.",
+        "body": "Secure Storage \u2013 Store and manage documents in Odoo's document module with role-based access.",
         "imageSrc": "/odoo-apps/scandoc-integration/features/f5.png"
       },
       {
         "title": "",
-        "body": "Searchable Archives – Convert scanned files into fully searchable text-based archives.",
+        "body": "Searchable Archives \u2013 Convert scanned files into fully searchable text-based archives.",
         "imageSrc": "/odoo-apps/scandoc-integration/features/f6.png"
       }
     ],
@@ -613,7 +613,7 @@
     "faqs": [
       {
         "q": "What does ScanDoc Integration do?",
-        "a": "Yes, ScanDoc works seamlessly with Odoo’s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management."
+        "a": "Yes, ScanDoc works seamlessly with Odoo\u2019s Documents, Accounting, Sales, Purchase, and custom modules to automate data entry and document management."
       },
       {
         "q": "Is support included after purchase?",
@@ -1107,7 +1107,7 @@
       },
       {
         "title": "Select",
-        "body": "Terms on Quotation Form On the quotation details page, you will find a new tab named Terms and Conditions . Select the desired template from the dropdown – the content will populate automatically."
+        "body": "Terms on Quotation Form On the quotation details page, you will find a new tab named Terms and Conditions . Select the desired template from the dropdown \u2013 the content will populate automatically."
       },
       {
         "title": "Terms in",
@@ -1257,10 +1257,10 @@
     "slug": "aged-receivable",
     "name": "Aged Receivable Salesperson",
     "technicalName": "wb_aged_receivable",
-    "summary": "Enhance Odoo’s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by...",
-    "description": "Enhance Odoo’s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by salesperson, and full PDF/XLSX export support for better receivables tracking and analysis.",
+    "summary": "Enhance Odoo\u2019s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by...",
+    "description": "Enhance Odoo\u2019s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by salesperson, and full PDF/XLSX export support for better receivables tracking and analysis.",
     "introParagraphs": [
-      "Enhance Odoo’s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by salesperson, and full PDF/XLSX export support for better receivables tracking and analysis.",
+      "Enhance Odoo\u2019s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by salesperson, and full PDF/XLSX export support for better receivables tracking and analysis.",
       "The data is pulled directly from the \"Salesperson\" field (user_id) defined on the Partner record in Odoo.",
       "Yes, Odoo's native PDF and Excel export features will honor the \"Group by Salesperson\" setting, maintaining the structure and column visibility in the exported files."
     ],
@@ -1412,7 +1412,7 @@
     "faqs": [
       {
         "q": "What does Aged Receivable Salesperson do?",
-        "a": "Enhance Odoo’s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by salesperson, and full PDF/XLSX export support for better receivables tracking and analysis."
+        "a": "Enhance Odoo\u2019s Aged Receivable report with salesperson insights by adding a dedicated salesperson column, advanced multi-select filtering, hierarchical grouping by salesperson, and full PDF/XLSX export support for better receivables tracking and analysis."
       },
       {
         "q": "Is support included after purchase?",
@@ -1723,7 +1723,7 @@
       },
       {
         "title": "",
-        "body": "Fully integrated with Odoo’s Purchase, Inventory modules — no complex configuration required.",
+        "body": "Fully integrated with Odoo\u2019s Purchase, Inventory modules \u2014 no complex configuration required.",
         "imageSrc": "/odoo-apps/auto-po-fulfillment/features/feature6.png"
       }
     ],
@@ -2135,17 +2135,17 @@
     "features": [
       {
         "title": "",
-        "body": "Bi-directional Contact Synchronization: Seamlessly sync contacts between Odoo and Brevo in both directions (Odoo ↔ Brevo).",
+        "body": "Bi-directional Contact Synchronization: Seamlessly sync contacts between Odoo and Brevo in both directions (Odoo \u2194 Brevo).",
         "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 1.png"
       },
       {
         "title": "",
-        "body": "Bi-directional Mailing List Synchronization: Manage and sync mailing lists across both platforms simultaneously (Odoo ↔ Brevo).",
+        "body": "Bi-directional Mailing List Synchronization: Manage and sync mailing lists across both platforms simultaneously (Odoo \u2194 Brevo).",
         "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 2.png"
       },
       {
         "title": "",
-        "body": "Bi-directional Email Campaign Synchronization: Keep your marketing campaigns updated on both Odoo and Brevo in real-time (Odoo ↔ Brevo).",
+        "body": "Bi-directional Email Campaign Synchronization: Keep your marketing campaigns updated on both Odoo and Brevo in real-time (Odoo \u2194 Brevo).",
         "imageSrc": "/odoo-apps/brevo-connector/features/Brevo Connector 3.png"
       },
       {
@@ -2406,9 +2406,9 @@
     "name": "CRM Lead Prefix & Reassignment To Sales Person",
     "technicalName": "wb_crm_lead_generation",
     "summary": "This CRM lead generation feature enables automatic creation of unique lead numbers by allowing users to configure a custom prefix and starting number, ensuring consistent...",
-    "description": "This CRM lead generation feature enables automatic creation of unique lead numbers by allowing users to configure a custom prefix and starting number, ensuring consistent identification such as LEAD0001. Once enabled, users can easily manage and transfer leads directly from CRM → Sales → My Pipeline using the Transfer Lead option, which opens a simple reassignment pop-up to update the assigned user, helping streamline lead ownership and improve sales workflow efficiency.",
+    "description": "This CRM lead generation feature enables automatic creation of unique lead numbers by allowing users to configure a custom prefix and starting number, ensuring consistent identification such as LEAD0001. Once enabled, users can easily manage and transfer leads directly from CRM \u2192 Sales \u2192 My Pipeline using the Transfer Lead option, which opens a simple reassignment pop-up to update the assigned user, helping streamline lead ownership and improve sales workflow efficiency.",
     "introParagraphs": [
-      "This CRM lead generation feature enables automatic creation of unique lead numbers by allowing users to configure a custom prefix and starting number, ensuring consistent identification such as LEAD0001. Once enabled, users can easily manage and transfer leads directly from CRM → Sales → My Pipeline using the Transfer Lead option, which opens a simple reassignment pop-up to update the assigned user, helping streamline lead ownership and improve sales workflow efficiency.",
+      "This CRM lead generation feature enables automatic creation of unique lead numbers by allowing users to configure a custom prefix and starting number, ensuring consistent identification such as LEAD0001. Once enabled, users can easily manage and transfer leads directly from CRM \u2192 Sales \u2192 My Pipeline using the Transfer Lead option, which opens a simple reassignment pop-up to update the assigned user, helping streamline lead ownership and improve sales workflow efficiency.",
       "This module automatically generates unique lead numbers in Odoo CRM and provides an easy way to transfer leads between sales users for better lead management.",
       "The \"Transfer Lead\" option allows users to quickly reassign leads to another salesperson or team member directly from the CRM pipeline."
     ],
@@ -2469,7 +2469,7 @@
       },
       {
         "title": "To check, go to",
-        "body": "CRM → My Pipeline →Leads. To use the transfer feature, open CRM, then Sales, and go to My Pipeline. The Transfer Lead button will appear automatically after the Lead Number & Transfer configuration is enabled."
+        "body": "CRM \u2192 My Pipeline \u2192Leads. To use the transfer feature, open CRM, then Sales, and go to My Pipeline. The Transfer Lead button will appear automatically after the Lead Number & Transfer configuration is enabled."
       },
       {
         "title": "Create",
@@ -2481,7 +2481,7 @@
       },
       {
         "title": "Saleperson automatically",
-        "body": "Change After clicking Confirm, the Salesperson is updated automatically. You can check this in CRM, then Sales, under My Pipeline. For example, the Salesperson may change from “Mitchel Admin” to “Mark Demo.”"
+        "body": "Change After clicking Confirm, the Salesperson is updated automatically. You can check this in CRM, then Sales, under My Pipeline. For example, the Salesperson may change from \u201cMitchel Admin\u201d to \u201cMark Demo.\u201d"
       },
       {
         "title": "Go to the",
@@ -2589,7 +2589,7 @@
     "faqs": [
       {
         "q": "What does CRM Lead Prefix & Reassignment To Sales Person do?",
-        "a": "This CRM lead generation feature enables automatic creation of unique lead numbers by allowing users to configure a custom prefix and starting number, ensuring consistent identification such as LEAD0001. Once enabled, users can easily manage and transfer leads directly from CRM → Sales → My Pipeline using the Transfer Lead option, which opens a"
+        "a": "This CRM lead generation feature enables automatic creation of unique lead numbers by allowing users to configure a custom prefix and starting number, ensuring consistent identification such as LEAD0001. Once enabled, users can easily manage and transfer leads directly from CRM \u2192 Sales \u2192 My Pipeline using the Transfer Lead option, which opens a"
       },
       {
         "q": "Is support included after purchase?",
@@ -3785,10 +3785,10 @@
     "slug": "custom-widget-many2many",
     "name": "Many2Many Form Opener",
     "technicalName": "wb_custom_widget_many2many",
-    "summary": "Many2Many Form Opener enhances Odoo’s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This...",
-    "description": "Many2Many Form Opener enhances Odoo’s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This customization improves workflow efficiency and user experience by providing quick access to linked records without additional clicks or navigation.",
+    "summary": "Many2Many Form Opener enhances Odoo\u2019s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This...",
+    "description": "Many2Many Form Opener enhances Odoo\u2019s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This customization improves workflow efficiency and user experience by providing quick access to linked records without additional clicks or navigation.",
     "introParagraphs": [
-      "Many2Many Form Opener enhances Odoo’s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This customization improves workflow efficiency and user experience by providing quick access to linked records without additional clicks or navigation.",
+      "Many2Many Form Opener enhances Odoo\u2019s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This customization improves workflow efficiency and user experience by providing quick access to linked records without additional clicks or navigation.",
       "This module enhances Odoo's default Many2Many widget by allowing users to directly open related records from Many2Many tags.",
       "Users can quickly access linked records directly from tags without manually searching or navigating through multiple menus."
     ],
@@ -3979,7 +3979,7 @@
     "faqs": [
       {
         "q": "What does Many2Many Form Opener do?",
-        "a": "Many2Many Form Opener enhances Odoo’s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This customization improves workflow efficiency and user experience by providing quick access to linked records without additional clicks or navigation."
+        "a": "Many2Many Form Opener enhances Odoo\u2019s default Many2Many widget by allowing users to open related records directly from tags in Kanban, List, and Form views. This customization improves workflow efficiency and user experience by providing quick access to linked records without additional clicks or navigation."
       },
       {
         "q": "Is support included after purchase?",
@@ -4414,7 +4414,7 @@
       },
       {
         "title": "Recurring Penalty Application Based on Frequency",
-        "body": "Automatically reapply penalties on daily, weekly, or monthly cycles until payment is completed — no manual follow-ups required.",
+        "body": "Automatically reapply penalties on daily, weekly, or monthly cycles until payment is completed \u2014 no manual follow-ups required.",
         "imageSrc": "/odoo-apps/overdue-penalty/features/Ticket to PO - 4.png"
       },
       {
@@ -4573,7 +4573,7 @@
     "description": "The Low Stock Notification Module is designed to alert users when product stock levels fall below defined minimum quantities. It supports global, individual, and reorder rule-based configurations , ensuring timely stock replenishment and uninterrupted business operations.",
     "introParagraphs": [
       "The Low Stock Notification Module is designed to alert users when product stock levels fall below defined minimum quantities. It supports global, individual, and reorder rule-based configurations , ensuring timely stock replenishment and uninterrupted business operations.",
-      "User Notification Preference Users can activate “Notify User” in preferences to receive alerts.",
+      "User Notification Preference Users can activate \u201cNotify User\u201d in preferences to receive alerts.",
       "Global Product Alerts Set global minimum stock levels to monitor all products at once."
     ],
     "categories": [
@@ -5507,7 +5507,7 @@
     "description": "Protect your Odoo chatter logs with role-based message deletion control. Only users with Log Remover access can delete chatter messages, preventing accidental or unauthorized data loss. Deletion is enforced at both the UI and backend levels with a confirmation step, ensuring secure and intentional cleanup while maintaining a clean, real-time user experience across all documents.",
     "introParagraphs": [
       "Protect your Odoo chatter logs with role-based message deletion control. Only users with Log Remover access can delete chatter messages, preventing accidental or unauthorized data loss. Deletion is enforced at both the UI and backend levels with a confirmation step, ensuring secure and intentional cleanup while maintaining a clean, real-time user experience across all documents.",
-      "User Access Management Administrators can grant or revoke chatter message deletion rights by simply enabling the Log Remover option in the user access settings—no technical configuration required.",
+      "User Access Management Administrators can grant or revoke chatter message deletion rights by simply enabling the Log Remover option in the user access settings\u2014no technical configuration required.",
       "Role-Based Delete Icon Visibility The delete (trash) icon appears in the chatter message header only for users who are assigned to the Log Remover access group. Unauthorized users will not see any delete option, ensuring a clean and secure interface."
     ],
     "categories": [
@@ -5551,7 +5551,7 @@
       },
       {
         "title": "Confirmation Dialog & Instant UI Update",
-        "body": "Before deletion, users are prompted with a confirmation dialog to avoid mistakes. Once confirmed, the message is removed instantly from the chatter — no page refresh required.",
+        "body": "Before deletion, users are prompted with a confirmation dialog to avoid mistakes. Once confirmed, the message is removed instantly from the chatter \u2014 no page refresh required.",
         "imageSrc": "/odoo-apps/log-message-delete/features/Log Message Delete 6.png"
       }
     ],
@@ -5673,9 +5673,9 @@
     "name": "Cancel Manufacturing Order",
     "technicalName": "wb_cancel_mo",
     "summary": "Take full control of your manufacturing workflow by cancelling completed Manufacturing Orders in Odoo. This module allows you to reverse done MOs, automatically restore...",
-    "description": "Take full control of your manufacturing workflow by cancelling completed Manufacturing Orders in Odoo. This module allows you to reverse done MOs, automatically restore consumed stock, reset orders to draft, and handle multi-step manufacturing with full work order reversal — all governed by role-based access control.",
+    "description": "Take full control of your manufacturing workflow by cancelling completed Manufacturing Orders in Odoo. This module allows you to reverse done MOs, automatically restore consumed stock, reset orders to draft, and handle multi-step manufacturing with full work order reversal \u2014 all governed by role-based access control.",
     "introParagraphs": [
-      "Take full control of your manufacturing workflow by cancelling completed Manufacturing Orders in Odoo. This module allows you to reverse done MOs, automatically restore consumed stock, reset orders to draft, and handle multi-step manufacturing with full work order reversal — all governed by role-based access control.",
+      "Take full control of your manufacturing workflow by cancelling completed Manufacturing Orders in Odoo. This module allows you to reverse done MOs, automatically restore consumed stock, reset orders to draft, and handle multi-step manufacturing with full work order reversal \u2014 all governed by role-based access control.",
       "This module allows you to cancel completed, in-progress, or to-close Manufacturing Orders. It automatically reverses done stock moves, cancels related pickings and work orders, and restores inventory.",
       "When a Done Manufacturing Order is cancelled, the finished product and all consumed components are reversed in inventory, restoring your stock to its pre-production quantities."
     ],
@@ -5697,32 +5697,32 @@
     "features": [
       {
         "title": "",
-        "body": "Cancel Completed Manufacturing Orders — Reverse done MOs and revert their state with a single click.",
+        "body": "Cancel Completed Manufacturing Orders \u2014 Reverse done MOs and revert their state with a single click.",
         "imageSrc": "/odoo-apps/cancel-mo/features/feature1.png"
       },
       {
         "title": "",
-        "body": "Automatic Stock Restoration — Consumed components and finished products are automatically reversed in inventory.",
+        "body": "Automatic Stock Restoration \u2014 Consumed components and finished products are automatically reversed in inventory.",
         "imageSrc": "/odoo-apps/cancel-mo/features/feature2.png"
       },
       {
         "title": "",
-        "body": "Reset Manufacturing Orders to Draft — Re-open cancelled MOs back to confirmed state with regenerated moves and operations.",
+        "body": "Reset Manufacturing Orders to Draft \u2014 Re-open cancelled MOs back to confirmed state with regenerated moves and operations.",
         "imageSrc": "/odoo-apps/cancel-mo/features/feature3.png"
       },
       {
         "title": "",
-        "body": "Support for Multi-Step Manufacturing — Handles 1-step, 2-step (pick components), and 3-step (pick + store) manufacturing routes.",
+        "body": "Support for Multi-Step Manufacturing \u2014 Handles 1-step, 2-step (pick components), and 3-step (pick + store) manufacturing routes.",
         "imageSrc": "/odoo-apps/cancel-mo/features/feature4.png"
       },
       {
         "title": "",
-        "body": "Work Order Reversal & Recreation — Cancels finished work orders and scrap orders linked to the MO.",
+        "body": "Work Order Reversal & Recreation \u2014 Cancels finished work orders and scrap orders linked to the MO.",
         "imageSrc": "/odoo-apps/cancel-mo/features/feature5.png"
       },
       {
         "title": "",
-        "body": "Role-Based Access Control — Only users with the \"Cancel Manufacturing Orders\" security group can perform cancellation actions.",
+        "body": "Role-Based Access Control \u2014 Only users with the \"Cancel Manufacturing Orders\" security group can perform cancellation actions.",
         "imageSrc": "/odoo-apps/cancel-mo/features/feature6.png"
       }
     ],
@@ -5845,7 +5845,7 @@
     "faqs": [
       {
         "q": "What does Cancel Manufacturing Order do?",
-        "a": "Take full control of your manufacturing workflow by cancelling completed Manufacturing Orders in Odoo. This module allows you to reverse done MOs, automatically restore consumed stock, reset orders to draft, and handle multi-step manufacturing with full work order reversal — all governed by role-based access control."
+        "a": "Take full control of your manufacturing workflow by cancelling completed Manufacturing Orders in Odoo. This module allows you to reverse done MOs, automatically restore consumed stock, reset orders to draft, and handle multi-step manufacturing with full work order reversal \u2014 all governed by role-based access control."
       },
       {
         "q": "Is support included after purchase?",
@@ -5900,7 +5900,7 @@
       },
       {
         "title": "",
-        "body": "Original List/Kanban view stays open — record opens in a separate tab.",
+        "body": "Original List/Kanban view stays open \u2014 record opens in a separate tab.",
         "imageSrc": "/odoo-apps/access-record-in-new-tab/features/features3.png"
       },
       {
@@ -6127,5 +6127,1678 @@
     "heroImageSrc": "/odoo-apps/advanced-search-views-columns/screenshots/image_1.png",
     "featured": false,
     "priceAmount": "$30.83"
+  },
+  {
+    "slug": "mrp-product-kanban",
+    "name": "Manufacturing Product Kanban",
+    "technicalName": "wb_mrp_product_kanban",
+    "summary": "A Products Kanban board under Manufacturing. Each product is a card with live Manufacturing, Work Orders and BOM counts. Click a count or the card menu to open that product\u2019s...",
+    "description": "A Products Kanban board under Manufacturing. Each product is a card with live Manufacturing, Work Orders and BOM counts. Click a count or the card menu to open that product\u2019s orders, bills of materials, unbuild or scrap.",
+    "introParagraphs": [
+      "A Products Kanban board under Manufacturing. Each product is a card with live Manufacturing, Work Orders and BOM counts. Click a count or the card menu to open that product\u2019s orders, bills of materials, unbuild or scrap.",
+      "A Products Kanban menu under Manufacturing lists every product as a card with its image and name.",
+      "Each card shows Manufacturing, Work Orders and BOM counts, worked out per product."
+    ],
+    "categories": [
+      "Manufacturing"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "View on store",
+    "license": "OPL-1",
+    "dependencies": [
+      "Manufacturing",
+      "Inventory",
+      "Discuss"
+    ],
+    "features": [
+      {
+        "title": "Products Kanban Board",
+        "body": "A Products Kanban menu under Manufacturing lists every product as a card with its image and name.",
+        "imageSrc": "/odoo-apps/mrp-product-kanban/features/feature_1.png"
+      },
+      {
+        "title": "Three Live Counters",
+        "body": "Each card shows Manufacturing, Work Orders and BOM counts, worked out per product.",
+        "imageSrc": "/odoo-apps/mrp-product-kanban/features/feature_2.png"
+      },
+      {
+        "title": "Counters Open the List",
+        "body": "Click Manufacturing, Work Orders or BOM on a card to open that product\u2019s records in one click.",
+        "imageSrc": "/odoo-apps/mrp-product-kanban/features/feature_3.png"
+      },
+      {
+        "title": "Five Card Shortcuts",
+        "body": "The card menu opens Manufacturing Orders, Work Orders, Unbuild Orders, Bill of Materials or Scrap Orders.",
+        "imageSrc": "/odoo-apps/mrp-product-kanban/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Manufacturing Product Kanban, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Manufacturing Product Kanban behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/mrp-product-kanban/screenshots/image_1.png",
+        "alt": "Install Manufacturing Product Kanban in Odoo Apps",
+        "title": "Install the Module",
+        "caption": "Open the Odoo Apps menu, search for Manufacturing Product Kanban and click Activate . It needs the Manufacturing app."
+      },
+      {
+        "src": "/odoo-apps/mrp-product-kanban/screenshots/image_2.png",
+        "alt": "Products Kanban menu under Manufacturing",
+        "title": "Open Products Kanban",
+        "caption": "Go to Manufacturing \u2192 Products Kanban . The menu sits between Operations and Planning. The board lists every product as a card."
+      },
+      {
+        "src": "/odoo-apps/mrp-product-kanban/screenshots/image_3.png",
+        "alt": "Product kanban cards with live counters",
+        "title": "Read the Card Counters",
+        "caption": "Each card shows the product image and name, plus three counters: Manufacturing, Work Orders and BOM. The numbers match that product\u2019s records."
+      },
+      {
+        "src": "/odoo-apps/mrp-product-kanban/screenshots/image_4.png",
+        "alt": "Manufacturing orders filtered to a product",
+        "title": "Click a Counter",
+        "caption": "Click Manufacturing on a card to open that product\u2019s manufacturing orders, with a Product filter at the top of the list. Remove the filter to see every product."
+      },
+      {
+        "src": "/odoo-apps/mrp-product-kanban/screenshots/image_5.png",
+        "alt": "Kanban card shortcuts menu",
+        "title": "Use the Card Menu",
+        "caption": "The menu on each card has five shortcuts: Manufacturing Orders, Work Orders, Unbuild Orders, Bill Of Material and Scrap Orders. Each one opens filtered to the product."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Manufacturing Product Kanban do?",
+        "a": "A Products Kanban board under Manufacturing. Each product is a card with live Manufacturing, Work Orders and BOM counts. Click a count or the card menu to open that product\u2019s orders, bills of materials, unbuild or scrap."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_mrp_product_kanban",
+    "iconSrc": "/odoo-apps/mrp-product-kanban/icon.png",
+    "cardImageSrc": "/odoo-apps/mrp-product-kanban/cover.png",
+    "heroImageSrc": "/odoo-apps/mrp-product-kanban/screenshots/image_1.png",
+    "featured": false
+  },
+  {
+    "slug": "auto-logout",
+    "name": "Auto Logout",
+    "technicalName": "wb_auto_logout",
+    "summary": "Automatically logs out inactive users after a configurable timeout duration to enhance system security. Features global default setup, per-user timeout rules, live countdown...",
+    "description": "Automatically logs out inactive users after a configurable timeout duration to enhance system security. Features global default setup, per-user timeout rules, live countdown badge, and optional timer visibility control.",
+    "introParagraphs": [
+      "Automatically logs out inactive users after a configurable timeout duration to enhance system security. Features global default setup, per-user timeout rules, live countdown badge, and optional timer visibility control.",
+      "Set the inactivity timeout duration in minutes globally or per user to align with company security standards.",
+      "Detects mouse movements, clicks, keyboard entries, scrolling, and touch events to reset the timer dynamically."
+    ],
+    "categories": [
+      "Productivity"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "View on store",
+    "license": "OPL-1",
+    "dependencies": [
+      "Web"
+    ],
+    "features": [
+      {
+        "title": "Configurable Timeout",
+        "body": "Set the inactivity timeout duration in minutes globally or per user to align with company security standards.",
+        "imageSrc": "/odoo-apps/auto-logout/features/feature_1.png"
+      },
+      {
+        "title": "Smart Activity Tracking",
+        "body": "Detects mouse movements, clicks, keyboard entries, scrolling, and touch events to reset the timer dynamically.",
+        "imageSrc": "/odoo-apps/auto-logout/features/feature_2.png"
+      },
+      {
+        "title": "Hide Timeout Option",
+        "body": "Option to hide the floating countdown badge for specific users while maintaining active session logout in background.",
+        "imageSrc": "/odoo-apps/auto-logout/features/feature_3.png"
+      },
+      {
+        "title": "Live Countdown Widget",
+        "body": "Displays a fixed bottom-right countdown widget (e.g. \"Auto Logout in: 15:00\") informing users of remaining active session time.",
+        "imageSrc": "/odoo-apps/auto-logout/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Auto Logout, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Auto Logout behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/auto-logout/screenshots/image_1.png",
+        "alt": "Setup step 1",
+        "title": "Install the Module",
+        "caption": "Open the Odoo Apps menu, search for wb_auto_logout and click Activate. The module is ready to use immediately."
+      },
+      {
+        "src": "/odoo-apps/auto-logout/screenshots/image_2.png",
+        "alt": "Setup step 2",
+        "title": "Live Session Countdown Badge",
+        "caption": "A floating badge at the bottom right corner displays a live countdown timer showing the remaining time before automatic session logout."
+      },
+      {
+        "src": "/odoo-apps/auto-logout/screenshots/image_3.png",
+        "alt": "Setup step 3",
+        "title": "User-Specific Session Logout Settings",
+        "caption": "Go to Settings \u2192 Users & Companies \u2192 Users. Select a user and open the Session Logout tab to set custom Auto Log-out duration (in minutes) or check Hide Timeout ."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Auto Logout do?",
+        "a": "Automatically logs out inactive users after a configurable timeout duration to enhance system security. Features global default setup, per-user timeout rules, live countdown badge, and optional timer visibility control."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_auto_logout",
+    "iconSrc": "/odoo-apps/auto-logout/icon.png",
+    "cardImageSrc": "/odoo-apps/auto-logout/cover.png",
+    "heroImageSrc": "/odoo-apps/auto-logout/screenshots/image_1.png",
+    "featured": false
+  },
+  {
+    "slug": "duplicate-email-validation",
+    "name": "Duplicate Email Validation",
+    "technicalName": "wb_duplicate_email_validation",
+    "summary": "Normalize every email to lowercase and block duplicates across Users, Contacts and Employees. Mixed-case copies of the same address are treated as one, and a clear error tells...",
+    "description": "Normalize every email to lowercase and block duplicates across Users, Contacts and Employees. Mixed-case copies of the same address are treated as one, and a clear error tells you where it already exists.",
+    "introParagraphs": [
+      "Normalize every email to lowercase and block duplicates across Users, Contacts and Employees. Mixed-case copies of the same address are treated as one, and a clear error tells you where it already exists.",
+      "A validation error names the email and where it already exists, then blocks the save.",
+      "Update other fields on your own record without triggering a duplicate check on that email."
+    ],
+    "categories": [
+      "Productivity"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "View on store",
+    "license": "OPL-1",
+    "dependencies": [
+      "Contacts",
+      "Employees",
+      "Discuss"
+    ],
+    "features": [
+      {
+        "title": "Automatic Normalization",
+        "body": "Whitespace is trimmed and every email is stored in lowercase on save.",
+        "imageSrc": "/odoo-apps/duplicate-email-validation/features/feature_1.png"
+      },
+      {
+        "title": "Cross-Model Uniqueness",
+        "body": "The same address cannot be used again on a User, Contact or Employee.",
+        "imageSrc": "/odoo-apps/duplicate-email-validation/features/feature_2.png"
+      },
+      {
+        "title": "Clear Error Messages",
+        "body": "A validation error names the email and where it already exists, then blocks the save.",
+        "imageSrc": "/odoo-apps/duplicate-email-validation/features/feature_3.png"
+      },
+      {
+        "title": "Self-Editing Allowed",
+        "body": "Update other fields on your own record without triggering a duplicate check on that email.",
+        "imageSrc": "/odoo-apps/duplicate-email-validation/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Duplicate Email Validation, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Duplicate Email Validation behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/duplicate-email-validation/screenshots/image_1.png",
+        "alt": "Install Duplicate Email Validation in Odoo Apps",
+        "title": "Install the Module",
+        "caption": "Open the Odoo Apps menu, search for Duplicate Email Validation and click Activate ."
+      },
+      {
+        "src": "/odoo-apps/duplicate-email-validation/screenshots/image_2.png",
+        "alt": "Settings Users and Companies Users menu",
+        "title": "Open Users",
+        "caption": "Go to Settings \u2192 Users & Companies \u2192 Users and click New ."
+      },
+      {
+        "src": "/odoo-apps/duplicate-email-validation/screenshots/image_3.png",
+        "alt": "User form with uppercase email",
+        "title": "Enter an Email in Uppercase",
+        "caption": "Create a user and type the email in uppercase, for example DILNAVAZ@GMAIL.COM , then save."
+      },
+      {
+        "src": "/odoo-apps/duplicate-email-validation/screenshots/image_4.png",
+        "alt": "User form with normalized lowercase email",
+        "title": "Email Is Saved in Lowercase",
+        "caption": "After save, the address is trimmed and stored as lowercase, for example dilnavaz@gmail.com ."
+      },
+      {
+        "src": "/odoo-apps/duplicate-email-validation/screenshots/image_5.png",
+        "alt": "Validation error on duplicate user email",
+        "title": "Duplicate Users Are Blocked",
+        "caption": "Creating another user with the same email in mixed case, for example DilNavaz@Gmail.Com , shows a validation error and the save is blocked."
+      },
+      {
+        "src": "/odoo-apps/duplicate-email-validation/screenshots/image_6.png",
+        "alt": "Validation error on duplicate contact email",
+        "title": "The Same Check Across Contacts",
+        "caption": "Creating a contact with an email already used by a user is also blocked. The check covers Users, Contacts and Employees."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Duplicate Email Validation do?",
+        "a": "Normalize every email to lowercase and block duplicates across Users, Contacts and Employees. Mixed-case copies of the same address are treated as one, and a clear error tells you where it already exists."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_duplicate_email_validation",
+    "iconSrc": "/odoo-apps/duplicate-email-validation/icon.png",
+    "cardImageSrc": "/odoo-apps/duplicate-email-validation/cover.png",
+    "heroImageSrc": "/odoo-apps/duplicate-email-validation/screenshots/image_1.png",
+    "featured": false
+  },
+  {
+    "slug": "reacho-integration",
+    "name": "ReachO - Multi WhatsApp Numbers for Odoo",
+    "technicalName": "wb_reacho_integration",
+    "summary": "Send WhatsApp text and template messages from multiple business numbers directly in Odoo across Contacts, Sales, CRM, Purchase, Stock and POS .  with a full message tracking...",
+    "description": "Send WhatsApp text and template messages from multiple business numbers directly in Odoo across Contacts, Sales, CRM, Purchase, Stock and POS .  with a full message tracking and delivery logs.",
+    "introParagraphs": [
+      "Send WhatsApp text and template messages from multiple business numbers directly in Odoo across Contacts, Sales, CRM, Purchase, Stock and POS .  with a full message tracking and delivery logs.",
+      "Sign in once with your ReachO email and password from the Settings page. Odoo links to your account and keeps the connection.",
+      "Every WhatsApp number on your ReachO account appears in Settings on its own. Turn each one on or off without leaving Odoo."
+    ],
+    "categories": [
+      "Sales & CRM",
+      "Inventory"
+    ],
+    "versions": [
+      "19.0"
+    ],
+    "priceLabel": "View on store",
+    "license": "OPL-1",
+    "dependencies": [
+      "CRM",
+      "Discuss",
+      "Inventory",
+      "Point of Sale",
+      "Purchase",
+      "Sales",
+      "Calendar",
+      "Contacts",
+      "Invoicing"
+    ],
+    "features": [
+      {
+        "title": "Connect Your ReachO Account",
+        "body": "Sign in once with your ReachO email and password from the Settings page. Odoo links to your account and keeps the connection.",
+        "imageSrc": "/odoo-apps/reacho-integration/features/feature_1.png"
+      },
+      {
+        "title": "Numbers Added Automatically",
+        "body": "Every WhatsApp number on your ReachO account appears in Settings on its own. Turn each one on or off without leaving Odoo.",
+        "imageSrc": "/odoo-apps/reacho-integration/features/feature_2.png"
+      },
+      {
+        "title": "A Number Per Odoo Model",
+        "body": "Decide which number each Odoo model sends from. The Send WhatsApp button only appears where an active number is mapped.",
+        "imageSrc": "/odoo-apps/reacho-integration/features/feature_3.png"
+      },
+      {
+        "title": "Build Templates Inside Odoo",
+        "body": "Set the name, category, language, header and body with {{1}} variables, and watch a live WhatsApp preview as you type.",
+        "imageSrc": "/odoo-apps/reacho-integration/features/feature_4.png"
+      },
+      {
+        "title": "Meta Rules Checked On Save",
+        "body": "At least 20 characters of fixed text, a space around every variable, and no template that starts or ends on one. Caught before you submit.",
+        "imageSrc": "/odoo-apps/reacho-integration/features/feature_5.png"
+      },
+      {
+        "title": "Submit For Approval",
+        "body": "Send the template to ReachO with one click. The status moves Draft to Pending to Approved and syncs back into Odoo.",
+        "imageSrc": "/odoo-apps/reacho-integration/features/feature_6.png"
+      },
+      {
+        "title": "Attach The Record's PDF",
+        "body": "Pick a PDF report on the template. The document is generated from the record and sent with the message as an attachment.",
+        "imageSrc": "/odoo-apps/reacho-integration/features/feature_7.png"
+      },
+      {
+        "title": "Template Or Plain Text",
+        "body": "Send an approved template with variables filled from the record, or type a free text message. Every send is logged, with retry.",
+        "imageSrc": "/odoo-apps/reacho-integration/features/feature_8.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for ReachO - Multi WhatsApp Numbers for Odoo, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm ReachO - Multi WhatsApp Numbers for Odoo behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/reacho-integration/screenshots/screenshots1.png",
+        "alt": "Setup step 1",
+        "title": "Install the Module",
+        "caption": "Open the Odoo Apps menu, search for ReachO and click Activate. That's it .  the module will be ready in a few seconds."
+      },
+      {
+        "src": "/odoo-apps/reacho-integration/screenshots/screenshots2.png",
+        "alt": "Setup step 2",
+        "title": "Log In to Your ReachO Account",
+        "caption": "After installation, go to your Odoo dashboard and open the ReachO app icon. A login box will appear .  enter your ReachO email and password. Your account will be linked automatically."
+      },
+      {
+        "src": "/odoo-apps/reacho-integration/screenshots/screenshots3.png",
+        "alt": "Setup step 3",
+        "title": "Check Your Settings & WhatsApp Numbers",
+        "caption": "The Settings page shows how many messages were sent today and the list of WhatsApp phone numbers connected to your account. You can see whether each number is active or not, and turn it on or off from here."
+      },
+      {
+        "src": "/odoo-apps/reacho-integration/screenshots/screenshots4.png",
+        "alt": "Setup step 4",
+        "title": "Choose Which Number to Use for Each Section",
+        "caption": "On the same Settings page, you can choose which WhatsApp number should be used when sending messages from different parts of Odoo."
+      },
+      {
+        "src": "/odoo-apps/reacho-integration/screenshots/screenshots5.png",
+        "alt": "Setup step 5",
+        "title": "View Your Message Activity",
+        "caption": "Open the Overview to see a summary of all the messages you have sent .  how many were delivered, how many are still waiting, and a history of recent messages."
+      },
+      {
+        "src": "/odoo-apps/reacho-integration/screenshots/screenshots6.png",
+        "alt": "Setup step 6",
+        "title": "Create a Message Template",
+        "caption": "Choose where the template will be used, give it a name, and type your message. You will see a live preview of exactly how the message will look on WhatsApp before you save it."
+      },
+      {
+        "src": "/odoo-apps/reacho-integration/screenshots/screenshots7.png",
+        "alt": "Setup step 7",
+        "title": "Your Template is Saved (Draft)",
+        "caption": "After saving, your template appears in the template list as a Draft. This means it is saved in Odoo but not yet ready to send. Review it carefully before moving to the next step."
+      },
+      {
+        "src": "/odoo-apps/reacho-integration/screenshots/screenshots8.png",
+        "alt": "Setup step 8",
+        "title": "Submit Your Template for Approval",
+        "caption": "Open the template and click Submit. Your template will be sent to ReachO for review. The status will change to Pending. Once it is approved, you can come back and check the status."
+      },
+      {
+        "src": "/odoo-apps/reacho-integration/screenshots/screenshots9.png",
+        "alt": "Setup step 9",
+        "title": "Template Approved & Ready to Use",
+        "caption": "When your template is approved, its status in Odoo automatically changes to Approved. You can now use it to send WhatsApp messages from any model in Odoo."
+      },
+      {
+        "src": "/odoo-apps/reacho-integration/screenshots/screenshots10.png",
+        "alt": "Setup step 10",
+        "title": "Send a WhatsApp Message",
+        "caption": "Open any record in Odoo and click the Send WhatsApp button. Choose the message template you want to use, confirm the customer's phone number, and click Send."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does ReachO - Multi WhatsApp Numbers for Odoo do?",
+        "a": "Send WhatsApp text and template messages from multiple business numbers directly in Odoo across Contacts, Sales, CRM, Purchase, Stock and POS .  with a full message tracking and delivery logs."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_reacho_integration",
+    "iconSrc": "/odoo-apps/reacho-integration/icon.png",
+    "cardImageSrc": "/odoo-apps/reacho-integration/cover.png",
+    "heroImageSrc": "/odoo-apps/reacho-integration/screenshots/screenshots1.png",
+    "featured": false
+  },
+  {
+    "slug": "auto-process-manufacturing-order",
+    "name": "Auto Process Manufacturing Order",
+    "technicalName": "wb_auto_process_manufacturing_order",
+    "summary": "Select draft manufacturing orders, then Auto Process Orders. Available Quantity finishes them only when components are in stock. Forcefully Done finishes them anyway. Lots,...",
+    "description": "Select draft manufacturing orders, then Auto Process Orders. Available Quantity finishes them only when components are in stock. Forcefully Done finishes them anyway. Lots, work orders, and quality checks are handled for you.",
+    "introParagraphs": [
+      "Select draft manufacturing orders, then Auto Process Orders. Available Quantity finishes them only when components are in stock. Forcefully Done finishes them anyway. Lots, work orders, and quality checks are handled for you.",
+      "Select draft manufacturing orders, then Action \u2192 Auto Process Orders. Confirm finishes them together.",
+      "Forcefully Done confirms the order and marks it Done even if components are not available."
+    ],
+    "categories": [
+      "Inventory",
+      "Manufacturing"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $25",
+    "license": "OPL-1",
+    "dependencies": [
+      "Manufacturing",
+      "Inventory",
+      "Discuss"
+    ],
+    "features": [
+      {
+        "title": "Process Many Orders at Once",
+        "body": "Select draft manufacturing orders, then Action \u2192 Auto Process Orders. Confirm finishes them together.",
+        "imageSrc": "/odoo-apps/auto-process-manufacturing-order/features/feature_1.png"
+      },
+      {
+        "title": "Forcefully Done",
+        "body": "Forcefully Done confirms the order and marks it Done even if components are not available.",
+        "imageSrc": "/odoo-apps/auto-process-manufacturing-order/features/feature_2.png"
+      },
+      {
+        "title": "Available Quantity",
+        "body": "Available Quantity confirms and reserves. The order is Done only when every component is reserved.",
+        "imageSrc": "/odoo-apps/auto-process-manufacturing-order/features/feature_3.png"
+      },
+      {
+        "title": "Lots, Work Orders and Quality",
+        "body": "Lot and serial numbers are set for you. Work orders are finished and quality checks are passed automatically.",
+        "imageSrc": "/odoo-apps/auto-process-manufacturing-order/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Auto Process Manufacturing Order, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Auto Process Manufacturing Order behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/auto-process-manufacturing-order/screenshots/image_1.png",
+        "alt": "Auto Process Manufacturing Order app card in Odoo Apps",
+        "title": "Install the Module",
+        "caption": "In Apps, search for Auto Process Manufacturing Order and click Activate."
+      },
+      {
+        "src": "/odoo-apps/auto-process-manufacturing-order/screenshots/image_2.png",
+        "alt": "Manufacturing Orders list Actions Auto Process Orders",
+        "title": "Auto Process Orders",
+        "caption": "Open Manufacturing Orders. Select draft orders, then Action \u2192 Auto Process Orders ."
+      },
+      {
+        "src": "/odoo-apps/auto-process-manufacturing-order/screenshots/image_3.png",
+        "alt": "Auto Process Manufacturing Order wizard Available Quantity",
+        "title": "Available Quantity",
+        "caption": "The wizard Auto Process Manufacturing Order opens. Confirm Mrp Order: pick Available Quantity . Mrp Orders lists the selected orders. Click Confirm."
+      },
+      {
+        "src": "/odoo-apps/auto-process-manufacturing-order/screenshots/image_4.png",
+        "alt": "Manufacturing Orders list after Available Quantity",
+        "title": "Orders After Available Quantity",
+        "caption": "Orders with stock move to Done. Orders still waiting on components stay Confirmed."
+      },
+      {
+        "src": "/odoo-apps/auto-process-manufacturing-order/screenshots/image_5.png",
+        "alt": "Manufacturing order form Done with lot number",
+        "title": "Done Order",
+        "caption": "Open a finished order. State is Done. Lot/Serial Number is set when the product is tracked."
+      },
+      {
+        "src": "/odoo-apps/auto-process-manufacturing-order/screenshots/image_6.png",
+        "alt": "Manufacturing order Confirmed Component Status Not Available",
+        "title": "Not Enough Stock",
+        "caption": "With Available Quantity, if a component is missing, Component Status stays Not Available and the order stays Confirmed."
+      },
+      {
+        "src": "/odoo-apps/auto-process-manufacturing-order/screenshots/image_7.png",
+        "alt": "Manufacturing Orders Actions Auto Process Orders for a draft order",
+        "title": "Auto Process Again",
+        "caption": "Select another draft order and open Action \u2192 Auto Process Orders again."
+      },
+      {
+        "src": "/odoo-apps/auto-process-manufacturing-order/screenshots/image_8.png",
+        "alt": "Auto Process Manufacturing Order wizard Forcefully Done",
+        "title": "Forcefully Done",
+        "caption": "In the wizard, set Confirm Mrp Order to Forcefully Done and click Confirm."
+      },
+      {
+        "src": "/odoo-apps/auto-process-manufacturing-order/screenshots/image_9.png",
+        "alt": "Manufacturing Orders list order Done after Forcefully Done",
+        "title": "Order Marked Done",
+        "caption": "The list shows that manufacturing order as Done."
+      },
+      {
+        "src": "/odoo-apps/auto-process-manufacturing-order/screenshots/image_10.png",
+        "alt": "Manufacturing order form Done after Forcefully Done",
+        "title": "Force Done on the Form",
+        "caption": "Open the order. State is Done. Components show as consumed. Lot/Serial Number is set."
+      },
+      {
+        "src": "/odoo-apps/auto-process-manufacturing-order/screenshots/image_11.png",
+        "alt": "Validation Error All selected orders must be in the draft state",
+        "title": "Draft Orders Only",
+        "caption": "If a selected order is not draft, you get: All selected orders must be in the draft state."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Auto Process Manufacturing Order do?",
+        "a": "Select draft manufacturing orders, then Auto Process Orders. Available Quantity finishes them only when components are in stock. Forcefully Done finishes them anyway. Lots, work orders, and quality checks are handled for you."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_auto_process_manufacturing_order",
+    "iconSrc": "/odoo-apps/auto-process-manufacturing-order/icon.png",
+    "cardImageSrc": "/odoo-apps/auto-process-manufacturing-order/cover.png",
+    "heroImageSrc": "/odoo-apps/auto-process-manufacturing-order/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$24.90"
+  },
+  {
+    "slug": "mo-bom-img",
+    "name": "BOM Product Image in View & Report",
+    "technicalName": "wb_mo_bom_img",
+    "summary": "Show product and component images on Bills of Materials, Manufacturing Orders and their PDFs. Shop-floor users can check the part at a glance. Set Small, Medium or Large from...",
+    "description": "Show product and component images on Bills of Materials, Manufacturing Orders and their PDFs. Shop-floor users can check the part at a glance. Set Small, Medium or Large from Manufacturing settings, and only users in Manage BOM Product Image can change those options.",
+    "introParagraphs": [
+      "Show product and component images on Bills of Materials, Manufacturing Orders and their PDFs. Shop-floor users can check the part at a glance. Set Small, Medium or Large from Manufacturing settings, and only users in Manage BOM Product Image can change those options.",
+      "Turn image printing on or off from Manufacturing settings and set a default size: Small, Medium or Large.",
+      "Each component on the Bill of Materials shows its product image in the list, at the size you chose."
+    ],
+    "categories": [
+      "Manufacturing"
+    ],
+    "versions": [
+      "17.0",
+      "18.0"
+    ],
+    "priceLabel": "From $10",
+    "license": "OPL-1",
+    "dependencies": [
+      "Inventory",
+      "Manufacturing",
+      "Discuss"
+    ],
+    "features": [
+      {
+        "title": "Global Print Settings",
+        "body": "Turn image printing on or off from Manufacturing settings and set a default size: Small, Medium or Large.",
+        "imageSrc": "/odoo-apps/mo-bom-img/features/feature_1.png"
+      },
+      {
+        "title": "Images on the BoM Form",
+        "body": "Each component on the Bill of Materials shows its product image in the list, at the size you chose.",
+        "imageSrc": "/odoo-apps/mo-bom-img/features/feature_2.png"
+      },
+      {
+        "title": "Images on the MO Form",
+        "body": "The finished product appears in the Manufacturing Order header. Component images appear on the raw materials list.",
+        "imageSrc": "/odoo-apps/mo-bom-img/features/feature_3.png"
+      },
+      {
+        "title": "Settings Copy to the MO",
+        "body": "When you create a Manufacturing Order from a BoM, print on/off and image size copy across automatically.",
+        "imageSrc": "/odoo-apps/mo-bom-img/features/feature_4.png"
+      },
+      {
+        "title": "Restricted to a Group",
+        "body": "Only users in Manage BOM Product Image can change print settings. Everyone else sees them as read-only.",
+        "imageSrc": "/odoo-apps/mo-bom-img/features/feature_5.png"
+      },
+      {
+        "title": "BoM Structure PDF",
+        "body": "The landscape BoM Structure & Cost PDF prints product and component images next to quantity, stock and cost.",
+        "imageSrc": "/odoo-apps/mo-bom-img/features/feature_6.png"
+      },
+      {
+        "title": "Manufacturing Order PDF",
+        "body": "The Manufacturing Order PDF shows the finished product in the header and component images in the components table.",
+        "imageSrc": "/odoo-apps/mo-bom-img/features/feature_7.png"
+      },
+      {
+        "title": "Placeholder When No Photo",
+        "body": "If a product has no image, a placeholder is shown so the layout stays even on the form and on the PDF.",
+        "imageSrc": "/odoo-apps/mo-bom-img/features/feature_8.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for BOM Product Image in View & Report, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm BOM Product Image in View & Report behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/mo-bom-img/screenshots/image_1.png",
+        "alt": "Install BOM Product Image in View and Report",
+        "title": "Install the Module",
+        "caption": "Open the Odoo Apps menu, search for BOM Product Image in View & Report and click Activate ."
+      },
+      {
+        "src": "/odoo-apps/mo-bom-img/screenshots/image_2.png",
+        "alt": "Manage BOM Product Image extra right",
+        "title": "Grant Image Settings Access",
+        "caption": "Go to Settings \u2192 Users & Companies \u2192 Users. On the user form, under Extra Rights, enable Manage BOM Product Image ."
+      },
+      {
+        "src": "/odoo-apps/mo-bom-img/screenshots/image_3.png",
+        "alt": "Global print product image settings",
+        "title": "Set Global Print Options",
+        "caption": "Open Manufacturing \u2192 Configuration \u2192 Settings. Enable Print Product Image and choose Small, Medium or Large."
+      },
+      {
+        "src": "/odoo-apps/mo-bom-img/screenshots/image_4.png",
+        "alt": "Component images on the BoM form",
+        "title": "Images on the BoM Form",
+        "caption": "Open a Bill of Materials. Component images appear in the components list. You can override print on/off and size on that BoM if you have the group."
+      },
+      {
+        "src": "/odoo-apps/mo-bom-img/screenshots/image_5.png",
+        "alt": "BoM Structure and Cost PDF with images",
+        "title": "BoM Structure & Cost PDF",
+        "caption": "Print BoM Structure & Cost. The landscape PDF shows component images next to product, quantity, availability, lead time, route and cost."
+      },
+      {
+        "src": "/odoo-apps/mo-bom-img/screenshots/image_6.png",
+        "alt": "Product and component images on the MO form",
+        "title": "Images on the Manufacturing Order",
+        "caption": "Open a Manufacturing Order. The finished product shows in the header, print options come from the BoM, and components show images in the raw materials list."
+      },
+      {
+        "src": "/odoo-apps/mo-bom-img/screenshots/image_7.png",
+        "alt": "Manufacturing Order PDF with images",
+        "title": "Manufacturing Order PDF",
+        "caption": "Print the Manufacturing Order. The PDF includes the finished product in the header and component images in the components table."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does BOM Product Image in View & Report do?",
+        "a": "Show product and component images on Bills of Materials, Manufacturing Orders and their PDFs. Shop-floor users can check the part at a glance. Set Small, Medium or Large from Manufacturing settings, and only users in Manage BOM Product Image can change those options."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/18.0/wb_mo_bom_img",
+    "iconSrc": "/odoo-apps/mo-bom-img/icon.png",
+    "cardImageSrc": "/odoo-apps/mo-bom-img/cover.png",
+    "heroImageSrc": "/odoo-apps/mo-bom-img/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$10.16"
+  },
+  {
+    "slug": "bom-usage-report",
+    "name": "BOM Product Wise Usage Report",
+    "technicalName": "wb_bom_usage_report",
+    "summary": "Generate a Component Analysis report for BoM components used on Manufacturing and Unbuild Orders. See build quantity, unbuild quantity, net consumption and current on-hand...",
+    "description": "Generate a Component Analysis report for BoM components used on Manufacturing and Unbuild Orders. See build quantity, unbuild quantity, net consumption and current on-hand stock, then export PDF or Excel .  or share the report by email.",
+    "introParagraphs": [
+      "Generate a Component Analysis report for BoM components used on Manufacturing and Unbuild Orders. See build quantity, unbuild quantity, net consumption and current on-hand stock, then export PDF or Excel .  or share the report by email.",
+      "Shows component-wise Build Quantity, Unbuild Quantity, Net Consumption and Current On-Hand Stock.",
+      "Filter the report by date range, product, product category, warehouse and responsible user."
+    ],
+    "categories": [
+      "Inventory",
+      "Manufacturing"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $4",
+    "license": "OPL-1",
+    "dependencies": [
+      "Discuss",
+      "Inventory",
+      "Manufacturing"
+    ],
+    "features": [
+      {
+        "title": "Component Analysis Report",
+        "body": "Shows component-wise Build Quantity, Unbuild Quantity, Net Consumption and Current On-Hand Stock.",
+        "imageSrc": "/odoo-apps/bom-usage-report/features/feature_1.png"
+      },
+      {
+        "title": "Advanced Report Filters",
+        "body": "Filter the report by date range, product, product category, warehouse and responsible user.",
+        "imageSrc": "/odoo-apps/bom-usage-report/features/feature_2.png"
+      },
+      {
+        "title": "Role-Based Access Control",
+        "body": "Users see only their own Manufacturing Orders. Administrators can access all records and every filter.",
+        "imageSrc": "/odoo-apps/bom-usage-report/features/feature_3.png"
+      },
+      {
+        "title": "PDF & Excel Export",
+        "body": "Generate the same component analysis as PDF or Excel for review, sharing and documentation.",
+        "imageSrc": "/odoo-apps/bom-usage-report/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for BOM Product Wise Usage Report, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm BOM Product Wise Usage Report behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/bom-usage-report/screenshots/image_1.png",
+        "alt": "Install BOM Product Wise Usage Report in Odoo Apps",
+        "title": "Install the Module",
+        "caption": "Open the Odoo Apps menu, search for BOM Product Wise Usage Report and click Activate ."
+      },
+      {
+        "src": "/odoo-apps/bom-usage-report/screenshots/image_2.png",
+        "alt": "Enable Component Analysis filters in Manufacturing settings",
+        "title": "Enable Component Analysis",
+        "caption": "Go to Manufacturing \u2192 Configuration \u2192 Settings. Turn on Component Analysis and choose which optional filters .  Product, Product Category and Warehouse .  should appear on the wizard."
+      },
+      {
+        "src": "/odoo-apps/bom-usage-report/screenshots/image_3.png",
+        "alt": "Component Analysis Report Administrator access",
+        "title": "Grant Administrator Access",
+        "caption": "Open a user\u2019s Access Rights tab. Under Supply Chain \u2192 Component Analysis Report , set the level to Administrator for full access to all records and every filter."
+      },
+      {
+        "src": "/odoo-apps/bom-usage-report/screenshots/image_4.png",
+        "alt": "Component Analysis Report User access",
+        "title": "Grant User Access",
+        "caption": "Set the level to User for a standard Component Analysis Report user. They can view only their own Manufacturing Orders."
+      },
+      {
+        "src": "/odoo-apps/bom-usage-report/screenshots/image_5.png",
+        "alt": "Bills of Materials with components",
+        "title": "Define Bills of Materials",
+        "caption": "Create Bills of Materials under Manufacturing \u2192 Products \u2192 Bills of Materials. The report analyses the components listed on each BoM."
+      },
+      {
+        "src": "/odoo-apps/bom-usage-report/screenshots/image_6.png",
+        "alt": "Manufacturing Order with Responsible user",
+        "title": "Create Manufacturing Orders",
+        "caption": "Create Manufacturing Orders as usual and assign a Responsible user. The report aggregates component usage from Build and Unbuild Orders, and the Responsible user drives role-based visibility."
+      },
+      {
+        "src": "/odoo-apps/bom-usage-report/screenshots/image_7.png",
+        "alt": "Component Analysis menu under Manufacturing Reporting",
+        "title": "Open Component Analysis",
+        "caption": "Go to Manufacturing \u2192 Reporting \u2192 Component Analysis to open the report wizard."
+      },
+      {
+        "src": "/odoo-apps/bom-usage-report/screenshots/image_8.png",
+        "alt": "Component Analysis wizard filters and export options",
+        "title": "Set Filters and Export",
+        "caption": "Set the date range, toggle Build Product and Unbuild Product, and narrow results by Products, Product Categories, Warehouses and Responsible User. Then choose Generate PDF, Generate Excel or Share via Email."
+      },
+      {
+        "src": "/odoo-apps/bom-usage-report/screenshots/image_9.png",
+        "alt": "PDF Component Analysis Report",
+        "title": "PDF Component Analysis",
+        "caption": "The PDF lists each component with Total Build Quantity, Total Unbuild Quantity, Net Consumption and Current On-Hand Quantity, plus the selected date range, warehouse and responsible user."
+      },
+      {
+        "src": "/odoo-apps/bom-usage-report/screenshots/image_10.png",
+        "alt": "Excel Component Analysis Report",
+        "title": "Excel Component Analysis",
+        "caption": "The same data is available as an Excel spreadsheet for further analysis, or delivered to stakeholders with Share via Email."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does BOM Product Wise Usage Report do?",
+        "a": "Generate a Component Analysis report for BoM components used on Manufacturing and Unbuild Orders. See build quantity, unbuild quantity, net consumption and current on-hand stock, then export PDF or Excel .  or share the report by email."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_bom_usage_report",
+    "iconSrc": "/odoo-apps/bom-usage-report/icon.png",
+    "cardImageSrc": "/odoo-apps/bom-usage-report/cover.png",
+    "heroImageSrc": "/odoo-apps/bom-usage-report/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$4.07"
+  },
+  {
+    "slug": "bulk-name-nsp",
+    "name": "Bulk Name & NSP Pricing",
+    "technicalName": "wb_bulk_name_nsp",
+    "summary": "Transform quotation templates into modular Bulk Name building blocks with section-based NSP and Sub-NSP mathematical pricing chains. Features per-customer margin rates,...",
+    "description": "Transform quotation templates into modular Bulk Name building blocks with section-based NSP and Sub-NSP mathematical pricing chains. Features per-customer margin rates, section-level unit price rounding, and structured Excel BOM Report export.",
+    "introParagraphs": [
+      "Transform quotation templates into modular Bulk Name building blocks with section-based NSP and Sub-NSP mathematical pricing chains. Features per-customer margin rates, section-level unit price rounding, and structured Excel BOM Report export.",
+      "Create reusable modular blocks containing sections, subsections, and items to quickly generate complex sales quotations.",
+      "Automatically calculates line Sub-NSP, section Sub-NSP(PB), customer margin formula, and rounds unit price up to nearest 10."
+    ],
+    "categories": [
+      "Sales & CRM",
+      "Manufacturing"
+    ],
+    "versions": [
+      "17.0",
+      "18.0"
+    ],
+    "priceLabel": "From $15",
+    "license": "OPL-1",
+    "dependencies": [
+      "Sales",
+      "Discuss",
+      "Invoicing"
+    ],
+    "features": [
+      {
+        "title": "Bulk Name Templates",
+        "body": "Create reusable modular blocks containing sections, subsections, and items to quickly generate complex sales quotations.",
+        "imageSrc": "/odoo-apps/bulk-name-nsp/features/feature_1.png"
+      },
+      {
+        "title": "Section NSP Pricing Chain",
+        "body": "Automatically calculates line Sub-NSP, section Sub-NSP(PB), customer margin formula, and rounds unit price up to nearest 10.",
+        "imageSrc": "/odoo-apps/bulk-name-nsp/features/feature_2.png"
+      },
+      {
+        "title": "Customer Margin Setup",
+        "body": "Configure custom client margin rates (e.g. 0.7/0.9) per customer for automatic section margin and unit price computation.",
+        "imageSrc": "/odoo-apps/bulk-name-nsp/features/feature_3.png"
+      },
+      {
+        "title": "BOM Report Export",
+        "body": "Export structured Bill of Materials Excel reports containing section-wise product pricing breakdowns directly from Quotations.",
+        "imageSrc": "/odoo-apps/bulk-name-nsp/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Bulk Name & NSP Pricing, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Bulk Name & NSP Pricing behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/bulk-name-nsp/screenshots/image_1.png",
+        "alt": "Setup step 1",
+        "title": "Install Bulk Name & NSP Pricing",
+        "caption": "Open the Odoo Apps menu, search for wb_bulk , and click Activate to enable Bulk Name templates and NSP pricing features."
+      },
+      {
+        "src": "/odoo-apps/bulk-name-nsp/screenshots/image_2.png",
+        "alt": "Setup step 2",
+        "title": "Configure Customer Margin",
+        "caption": "Go to Sales \u2192 Orders \u2192 Customers. Open a customer record and set the custom Margin ratio (e.g. 0.7/0.9 ) used to calculate quotation section pricing."
+      },
+      {
+        "src": "/odoo-apps/bulk-name-nsp/screenshots/image_3.png",
+        "alt": "Setup step 3",
+        "title": "Bulk Products Menu",
+        "caption": "Access Bulk Products under the Sales \u2192 Products menu to create, manage, and inspect reusable Bulk Name template blocks."
+      },
+      {
+        "src": "/odoo-apps/bulk-name-nsp/screenshots/image_4.png",
+        "alt": "Setup step 4",
+        "title": "Bulk Name Template Builder",
+        "caption": "Build reusable templates with sections, subsections, and product lines. Section-level Sub-NSP(PB) is automatically calculated from child product line items."
+      },
+      {
+        "src": "/odoo-apps/bulk-name-nsp/screenshots/image_5.png",
+        "alt": "Setup step 5",
+        "title": "Quotation & BOM Report Generation",
+        "caption": "Select Bulk Name templates directly on quotations. Click the header BOM Report button to generate an Excel report breaking down section and product costs."
+      },
+      {
+        "src": "/odoo-apps/bulk-name-nsp/screenshots/image_6.png",
+        "alt": "Setup step 6",
+        "title": "Automated Section Pricing & Order Totals",
+        "caption": "Section-level Margin, Unit Price, and Sub-NSP are automatically calculated. Order totals display Total Before Discount, Discount, and Final Amount."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Bulk Name & NSP Pricing do?",
+        "a": "Transform quotation templates into modular Bulk Name building blocks with section-based NSP and Sub-NSP mathematical pricing chains. Features per-customer margin rates, section-level unit price rounding, and structured Excel BOM Report export."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/18.0/wb_bulk_name_nsp",
+    "iconSrc": "/odoo-apps/bulk-name-nsp/icon.png",
+    "cardImageSrc": "/odoo-apps/bulk-name-nsp/cover.png",
+    "heroImageSrc": "/odoo-apps/bulk-name-nsp/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$14.99"
+  },
+  {
+    "slug": "cancel-stock-picking",
+    "name": "Cancel Stock Transfer",
+    "technicalName": "wb_cancel_stock_picking",
+    "summary": "Cancel a validated delivery order with one click. Stock quantities come back on hand, and the linked valuation journal entries are reversed, so you do not have to fix inventory...",
+    "description": "Cancel a validated delivery order with one click. Stock quantities come back on hand, and the linked valuation journal entries are reversed, so you do not have to fix inventory or accounting by hand.",
+    "introParagraphs": [
+      "Cancel a validated delivery order with one click. Stock quantities come back on hand, and the linked valuation journal entries are reversed, so you do not have to fix inventory or accounting by hand.",
+      "Cancel a validated stock picking from the Done stage with a single click. No return wizard and no manual stock moves.",
+      "After cancel, on-hand quantity is restored. The product is back in stock without a separate return."
+    ],
+    "categories": [
+      "Accounting",
+      "Inventory"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $6",
+    "license": "OPL-1",
+    "dependencies": [
+      "Discuss",
+      "Inventory",
+      "Invoicing"
+    ],
+    "features": [
+      {
+        "title": "Cancel a Done Delivery",
+        "body": "Cancel a validated stock picking from the Done stage with a single click. No return wizard and no manual stock moves.",
+        "imageSrc": "/odoo-apps/cancel-stock-picking/features/feature_1.png"
+      },
+      {
+        "title": "Stock Put Back Automatically",
+        "body": "After cancel, on-hand quantity is restored. The product is back in stock without a separate return.",
+        "imageSrc": "/odoo-apps/cancel-stock-picking/features/feature_2.png"
+      },
+      {
+        "title": "Fits Existing Delivery Flow",
+        "body": "Works on the standard delivery order form. The Cancel button shows only on outgoing pickings in Done.",
+        "imageSrc": "/odoo-apps/cancel-stock-picking/features/feature_3.png"
+      },
+      {
+        "title": "No Manual Reversals",
+        "body": "Inventory and valuation journal entries are reversed together, so you do not correct stock or accounting by hand.",
+        "imageSrc": "/odoo-apps/cancel-stock-picking/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Cancel Stock Transfer, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Cancel Stock Transfer behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/cancel-stock-picking/screenshots/image_1.png",
+        "alt": "Install Cancel Stock Transfer in Odoo Apps",
+        "title": "Install the Module",
+        "caption": "Open the Odoo Apps menu, search for Cancel Stock Transfer and click Activate ."
+      },
+      {
+        "src": "/odoo-apps/cancel-stock-picking/screenshots/image_2.png",
+        "alt": "Allow Picking Cancel extra right on the user form",
+        "title": "Grant Cancel Access",
+        "caption": "Go to Settings \u2192 Users & Companies \u2192 Users. On the user form, under Extra Rights , enable Allow Picking Cancel ."
+      },
+      {
+        "src": "/odoo-apps/cancel-stock-picking/screenshots/image_3.png",
+        "alt": "Check initial product quantity on hand",
+        "title": "Check Quantity On Hand",
+        "caption": "Before you validate a delivery, note the product's Quantity On Hand. You will compare this after cancel."
+      },
+      {
+        "src": "/odoo-apps/cancel-stock-picking/screenshots/image_4.png",
+        "alt": "Validate the delivery order",
+        "title": "Validate the Delivery Order",
+        "caption": "Create an outgoing delivery, add the product, and click Validate so the transfer moves to Done."
+      },
+      {
+        "src": "/odoo-apps/cancel-stock-picking/screenshots/image_5.png",
+        "alt": "Quantity on hand reduced after validation",
+        "title": "Confirm Stock Was Reduced",
+        "caption": "After validation, Quantity On Hand is reduced by the delivered quantity. The picking is now Done."
+      },
+      {
+        "src": "/odoo-apps/cancel-stock-picking/screenshots/image_6.png",
+        "alt": "Cancel button on a validated delivery",
+        "title": "Cancel the Done Picking",
+        "caption": "On the Done delivery, an authorised user sees Cancel . Confirm the prompt to reverse the transfer."
+      },
+      {
+        "src": "/odoo-apps/cancel-stock-picking/screenshots/image_7.png",
+        "alt": "Quantity on hand restored after cancel",
+        "title": "Confirm Stock Was Restored",
+        "caption": "After cancel, Quantity On Hand is back to the original value. Valuation journal entries for the transfer are reversed."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Cancel Stock Transfer do?",
+        "a": "Cancel a validated delivery order with one click. Stock quantities come back on hand, and the linked valuation journal entries are reversed, so you do not have to fix inventory or accounting by hand."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_cancel_stock_picking",
+    "iconSrc": "/odoo-apps/cancel-stock-picking/icon.png",
+    "cardImageSrc": "/odoo-apps/cancel-stock-picking/cover.png",
+    "heroImageSrc": "/odoo-apps/cancel-stock-picking/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$6.11"
+  },
+  {
+    "slug": "custom-tax-report",
+    "name": "Customer Invoice Tax Report || Vendor Bill Tax Report",
+    "technicalName": "wb_custom_tax_report",
+    "summary": "Print a tax report for customer invoices, vendor bills, or both. Filter by date range or by quarter. Lines are grouped by tax. Totals split by currency. Download PDF or Excel.",
+    "description": "Print a tax report for customer invoices, vendor bills, or both. Filter by date range or by quarter. Lines are grouped by tax. Totals split by currency. Download PDF or Excel.",
+    "introParagraphs": [
+      "Print a tax report for customer invoices, vendor bills, or both. Filter by date range or by quarter. Lines are grouped by tax. Totals split by currency. Download PDF or Excel.",
+      "Choose Customer Invoice, Vendor Bills, or Both. One wizard covers sales and purchase taxes.",
+      "Filter between a start and end date, or tick Quarterly and enter a year to split the report by quarter."
+    ],
+    "categories": [
+      "Sales & CRM",
+      "Accounting"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $30",
+    "license": "OPL-1",
+    "dependencies": [
+      "Invoicing",
+      "Discuss"
+    ],
+    "features": [
+      {
+        "title": "Customer, Vendor, or Both",
+        "body": "Choose Customer Invoice, Vendor Bills, or Both. One wizard covers sales and purchase taxes.",
+        "imageSrc": "/odoo-apps/custom-tax-report/features/feature_1.png"
+      },
+      {
+        "title": "Date Range or Quarter",
+        "body": "Filter between a start and end date, or tick Quarterly and enter a year to split the report by quarter.",
+        "imageSrc": "/odoo-apps/custom-tax-report/features/feature_2.png"
+      },
+      {
+        "title": "Print PDF",
+        "body": "Print PDF builds a printable report with company header, tax groups, and section totals.",
+        "imageSrc": "/odoo-apps/custom-tax-report/features/feature_3.png"
+      },
+      {
+        "title": "Print Excel",
+        "body": "Print Excel downloads an .xlsx file with the same groups and totals, ready to open in a spreadsheet.",
+        "imageSrc": "/odoo-apps/custom-tax-report/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Customer Invoice Tax Report || Vendor Bill Tax Report, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Customer Invoice Tax Report || Vendor Bill Tax Report behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/custom-tax-report/screenshots/image_1.png",
+        "alt": "Customer Invoice Tax Report Vendor Bill Tax Report app card in Odoo Apps",
+        "title": "Install the App",
+        "caption": "In Apps, search for Customer Invoice Tax Report || Vendor Bill Tax Report and click Activate."
+      },
+      {
+        "src": "/odoo-apps/custom-tax-report/screenshots/image_2.png",
+        "alt": "Posted customer invoice INV/26-27/0011 with 5 percent GST S SGST and CGST",
+        "title": "Post Invoices with Tax",
+        "caption": "Create and post customer invoices (or vendor bills) with tax. Only posted documents are included. This invoice shows 5% GST S split into SGST and CGST."
+      },
+      {
+        "src": "/odoo-apps/custom-tax-report/screenshots/image_3.png",
+        "alt": "Accounting Reporting menu with Custom Tax Report highlighted",
+        "title": "Open Custom Tax Report",
+        "caption": "Go to Accounting \u2192 Reporting \u2192 Custom Tax Report ."
+      },
+      {
+        "src": "/odoo-apps/custom-tax-report/screenshots/image_4.png",
+        "alt": "Tax Report Custom wizard with Both selected and start end dates",
+        "title": "Choose Type and Dates",
+        "caption": "Pick Customer Invoice, Vendor Bills, or Both. Set start and end date. Click Print PDF or Print Excel ."
+      },
+      {
+        "src": "/odoo-apps/custom-tax-report/screenshots/image_5.png",
+        "alt": "PDF Customer Taxes grouped by tax with currency wise totals",
+        "title": "PDF: Customer Taxes by Rate",
+        "caption": "The PDF lists Customer Taxes grouped by tax name, for example 2.5% SGST S, with invoice lines and currency-wise totals."
+      },
+      {
+        "src": "/odoo-apps/custom-tax-report/screenshots/image_6.png",
+        "alt": "PDF customer tax totals by currency then Vendor Taxes section",
+        "title": "PDF: Customer Totals and Vendor Taxes",
+        "caption": "Customer tax grand totals print per currency, then the Vendor Taxes section starts, grouped the same way."
+      },
+      {
+        "src": "/odoo-apps/custom-tax-report/screenshots/image_7.png",
+        "alt": "Excel tax report from date range with Customer Taxes grouped by tax",
+        "title": "Excel: Date Range Customer Taxes",
+        "caption": "Print Excel downloads an .xlsx file. The header shows the date range. Customer Taxes are grouped by tax name with currency-wise totals."
+      },
+      {
+        "src": "/odoo-apps/custom-tax-report/screenshots/image_8.png",
+        "alt": "Excel Total Customer Taxes by currency then Vendor Taxes section",
+        "title": "Excel: Customer Totals and Vendor Taxes",
+        "caption": "The spreadsheet shows Total Customer Taxes by currency, then Vendor Taxes grouped by tax (IGST, SGST, CGST)."
+      },
+      {
+        "src": "/odoo-apps/custom-tax-report/screenshots/image_9.png",
+        "alt": "Tax Report Custom wizard with Quarterly checked and year 2026",
+        "title": "Run a Quarterly Report",
+        "caption": "Tick Quarterly , enter the year, for example 2026, then Print PDF or Print Excel."
+      },
+      {
+        "src": "/odoo-apps/custom-tax-report/screenshots/image_10.png",
+        "alt": "Quarterly PDF Customer Taxes for April to June grouped by tax",
+        "title": "Quarterly PDF: April to June",
+        "caption": "The PDF splits by quarter, for example April to June, then by tax name under Customer Taxes."
+      },
+      {
+        "src": "/odoo-apps/custom-tax-report/screenshots/image_11.png",
+        "alt": "Quarterly PDF customer totals by currency then Vendor Taxes",
+        "title": "Quarterly PDF Totals",
+        "caption": "Quarterly and overall Customer Taxes totals print per currency, then Vendor Taxes for the same quarter."
+      },
+      {
+        "src": "/odoo-apps/custom-tax-report/screenshots/image_12.png",
+        "alt": "Quarterly Excel Customer Taxes April to June grouped by tax",
+        "title": "Quarterly Excel: Customer Taxes",
+        "caption": "The Excel file uses the same quarter blocks, for example April to June, then tax groups under Customer Taxes."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Customer Invoice Tax Report || Vendor Bill Tax Report do?",
+        "a": "Print a tax report for customer invoices, vendor bills, or both. Filter by date range or by quarter. Lines are grouped by tax. Totals split by currency. Download PDF or Excel."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_custom_tax_report",
+    "iconSrc": "/odoo-apps/custom-tax-report/icon.png",
+    "cardImageSrc": "/odoo-apps/custom-tax-report/cover.png",
+    "heroImageSrc": "/odoo-apps/custom-tax-report/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$30.44"
   }
 ]
