@@ -96,7 +96,7 @@ DEPENDENCY_OVERRIDES = {
 }
 
 DEFAULT_TRUST_STATS = [
-    {"value": "365", "label": "Days free support"},
+    {"value": "99", "label": "Days free support"},
     {"value": "50+", "label": "Custom apps delivered"},
     {"value": "254+", "label": "Happy customers"},
     {"value": "7+", "label": "Years of experience"},
@@ -108,8 +108,8 @@ DEFAULT_HIGHLIGHTS = [
         "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform.",
     },
     {
-        "title": "365 days of Wan Buffer support",
-        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance.",
+        "title": "99 days of free Wan Buffer support",
+        "body": "Every purchase includes 99 days of free support from our Odoo team for setup questions, fixes, and guidance.",
     },
     {
         "title": "Community and Enterprise ready",
@@ -454,7 +454,7 @@ def parse_module(technical_name: str) -> dict:
     if len(intro_paragraphs) < 2:
         intro_paragraphs = [
             description,
-            f"{name} is available on the Odoo Apps Store with 365 days of support from Wan Buffer.",
+            f"{name} is available on the Odoo Apps Store with 99 days of free support from Wan Buffer.",
         ]
 
     feature_paths = discover_feature_files(asset_html, technical_name)
@@ -542,7 +542,7 @@ def parse_module(technical_name: str) -> dict:
             {"q": f"What does {name} do?", "a": description[:350]},
             {
                 "q": "Is support included after purchase?",
-                "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help.",
+                "a": "Yes. Wan Buffer includes 99 days of free support. Email support@wanbuffer.com for installation or customization help.",
             },
             {
                 "q": "Does it work on Community and Enterprise?",

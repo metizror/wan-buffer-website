@@ -17,7 +17,7 @@ import { ArrowRightIcon, CheckIcon } from "./odoo-service-icons";
 const STATS = [
   // Derived so the headline count cannot drift as apps are added to the catalog.
   { n: String(getAllOdooApps().length), l: "Odoo apps published", g: false },
-  { n: "365", l: "Days free support", g: true },
+  { n: "99", l: "Days free support", g: true },
   { n: "254+", l: "Happy customers", g: false },
   { n: "17 / 18 / 19", l: "Odoo versions supported", g: false },
 ] as const;
@@ -29,7 +29,7 @@ const WHY_POINTS = [
   },
   {
     title: "Supported after purchase",
-    body: "Every module includes 365 days of support from Wan Buffer. If you need help with installation, configuration, or a bug fix, you can reach our team directly.",
+    body: "Every module includes 99 days of free support from Wan Buffer. If you need help with installation, configuration, or a bug fix, you can reach our team directly.",
   },
   {
     title: "Ready for multiple environments",
@@ -84,12 +84,12 @@ export function OdooAppsCatalogContent() {
               <p className="oi-hero-lux-sub">
                 Browse modules for sales, inventory, accounting, and productivity. Each listing
                 includes screenshots, setup notes, and{" "}
-                <strong>365 days of included support</strong> on the Odoo Apps Store.
+                <strong>99 days of free support</strong> on the Odoo Apps Store.
               </p>
 
               <div className="oa-hero-pills">
                 <span className="oa-hero-pill">{apps.length} published apps</span>
-                <span className="oa-hero-pill">365-day support</span>
+                <span className="oa-hero-pill">99-day free support</span>
                 <span className="oa-hero-pill">Odoo 17, 18, and 19</span>
               </div>
 

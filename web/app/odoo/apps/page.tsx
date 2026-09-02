@@ -11,7 +11,7 @@ import { OdooAppsCatalogContent } from "@/components/services/odoo-apps-catalog-
 export const metadata: Metadata = {
   title: "Odoo Apps by Wan Buffer | Module Catalog",
   description:
-    "Browse Wan Buffer Odoo apps with screenshots, setup guides, and FAQs. Production-ready modules for Odoo 17, 18, and 19 with 365 days of support on the Apps Store.",
+    "Browse Wan Buffer Odoo apps with screenshots, setup guides, and FAQs. Production-ready modules for Odoo 17, 18, and 19 with 99 days of free support on the Apps Store.",
   keywords: [
     "Wan Buffer Odoo apps",
     "Odoo modules",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Odoo Apps by Wan Buffer",
     description:
-      "Production-ready Odoo modules with 365-day support—browse our catalog and buy on the Odoo Apps Store.",
+      "Production-ready Odoo modules with 99-day free support—browse our catalog and buy on the Odoo Apps Store.",
     siteName: "Wan Buffer",
   },
 };

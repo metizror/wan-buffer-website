@@ -15,7 +15,7 @@ export const ACTIVITY_MANAGEMENT_APP: OdooApp = {
     introParagraphs: [
       "If your team lives inside Odoo activities, you already know the pain. Tasks are spread across CRM, sales orders, invoices, and projects. Managers struggle to see the full picture, and users waste time opening record after record just to check what is due.",
       "Activity Management fixes that with a dedicated dashboard built around how Odoo activities actually work. Users stay focused on their own work. Managers get visibility across the business. Everyone can filter by Today, Planned, Overdue, or History without leaving a single screen.",
-      "The module respects Odoo access rights, works with the apps you already installed, and ships with the same 365-day support Wan Buffer provides across our Apps Store catalog.",
+      "The module respects Odoo access rights, works with the apps you already installed, and ships with the same 99-day free support Wan Buffer provides across our Apps Store catalog.",
     ],
     categories: ["Productivity", "Sales & CRM"],
     versions: ["17.0", "18.0", "19.0"],
@@ -42,7 +42,7 @@ export const ACTIVITY_MANAGEMENT_APP: OdooApp = {
       },
     ],
     trustStats: [
-      { value: "365", label: "Days free support" },
+      { value: "99", label: "Days free support" },
       { value: "50+", label: "Custom apps delivered" },
       { value: "254+", label: "Happy customers" },
       { value: "7+", label: "Years of experience" },
@@ -232,7 +232,7 @@ export const ACTIVITY_MANAGEMENT_APP: OdooApp = {
       },
       {
         q: "How do I get support after purchase?",
-        a: "Every purchase includes 365 days of support from Wan Buffer. Email sales@wanbuffer.com for setup help, bug reports, or customization questions.",
+        a: "Every purchase includes 99 days of free support from Wan Buffer. Email support@wanbuffer.com for setup help, bug reports, or customization questions.",
       },
     ],
     odooStoreUrl: "https://apps.odoo.com/apps/modules/19.0/wb_activity_dashboard",
