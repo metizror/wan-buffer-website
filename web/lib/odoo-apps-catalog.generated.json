@@ -8717,5 +8717,1153 @@
     "heroImageSrc": "/odoo-apps/manufecturing-timesheet/screenshots/image_1.png",
     "featured": false,
     "priceAmount": "$16.19"
+  },
+  {
+    "slug": "merge-delivery-order",
+    "name": "Merge Delivery Orders",
+    "technicalName": "wb_merge_delivery_order",
+    "summary": "Merge several deliveries, receipts or internal transfers for the same partner into one transfer. Pick the lines and quantities to move, set matching rules for warehouse, route,...",
+    "description": "Merge several deliveries, receipts or internal transfers for the same partner into one transfer. Pick the lines and quantities to move, set matching rules for warehouse, route, carrier, salesperson, priority or incoterm, and keep a log in the chatter.",
+    "introParagraphs": [
+      "Merge several deliveries, receipts or internal transfers for the same partner into one transfer. Pick the lines and quantities to move, set matching rules for warehouse, route, carrier, salesperson, priority or incoterm, and keep a log in the chatter.",
+      "Combine several deliveries, receipts or internal transfers into one target picking.",
+      "When the incoterm rule is on, linked sales and purchase orders are checked for matching terms."
+    ],
+    "categories": [
+      "Sales & CRM",
+      "Inventory"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $20",
+    "license": "OPL-1",
+    "dependencies": [
+      "Discuss",
+      "Inventory",
+      "Manufacturing",
+      "Purchase",
+      "Invoicing"
+    ],
+    "features": [
+      {
+        "title": "Merge Multiple Transfers",
+        "body": "Combine several deliveries, receipts or internal transfers into one target picking.",
+        "imageSrc": "/odoo-apps/merge-delivery-order/features/feature_1.png"
+      },
+      {
+        "title": "Choose the Destination",
+        "body": "Create a new picking, or merge lines into an existing open picking.",
+        "imageSrc": "/odoo-apps/merge-delivery-order/features/feature_2.png"
+      },
+      {
+        "title": "Pick Which Lines",
+        "body": "In the wizard, tick or untick move lines so only the lines you want are merged.",
+        "imageSrc": "/odoo-apps/merge-delivery-order/features/feature_3.png"
+      },
+      {
+        "title": "Partial Quantities",
+        "body": "If enabled, edit the merge quantity instead of moving the full demand.",
+        "imageSrc": "/odoo-apps/merge-delivery-order/features/feature_4.png"
+      },
+      {
+        "title": "Smart Merge Rules",
+        "body": "Require the same warehouse, route, carrier, salesperson, priority or incoterm.",
+        "imageSrc": "/odoo-apps/merge-delivery-order/features/feature_5.png"
+      },
+      {
+        "title": "Incoterm Check",
+        "body": "When the incoterm rule is on, linked sales and purchase orders are checked for matching terms.",
+        "imageSrc": "/odoo-apps/merge-delivery-order/features/feature_6.png"
+      },
+      {
+        "title": "Clean Up Sources",
+        "body": "When every line of a source picking is merged, that picking can be cancelled automatically.",
+        "imageSrc": "/odoo-apps/merge-delivery-order/features/feature_7.png"
+      },
+      {
+        "title": "Chatter History",
+        "body": "A summary of merged products and source pickings is posted on the target transfer.",
+        "imageSrc": "/odoo-apps/merge-delivery-order/features/feature_8.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Merge Delivery Orders, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Merge Delivery Orders behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/merge-delivery-order/screenshots/image_1.png",
+        "alt": "Install Merge Delivery Orders in Odoo Apps",
+        "title": "Install the Module",
+        "caption": "Open Apps, search for Merge Delivery Orders and click Activate ."
+      },
+      {
+        "src": "/odoo-apps/merge-delivery-order/screenshots/image_2.png",
+        "alt": "Inventory settings Merge Pickings Configuration",
+        "title": "Set Merge Options",
+        "caption": "Go to Inventory \u2192 Configuration \u2192 Settings . Under Merge Pickings Configuration , set the default merge type, partial merge, chatter, auto-cancel and the smart rules."
+      },
+      {
+        "src": "/odoo-apps/merge-delivery-order/screenshots/image_3.png",
+        "alt": "Sales order S00032 for Acme Corporation",
+        "title": "Create the First Sales Order",
+        "caption": "Create a sales order for the customer, for example S00032 with product a (2) and product b (1). Confirm it so a delivery is created."
+      },
+      {
+        "src": "/odoo-apps/merge-delivery-order/screenshots/image_4.png",
+        "alt": "Sales order S00033 for Acme Corporation with product b",
+        "title": "Create a Second Sales Order",
+        "caption": "Create another order for the same customer, for example S00033 with product b (5). Confirm it to get a second delivery."
+      },
+      {
+        "src": "/odoo-apps/merge-delivery-order/screenshots/image_5.png",
+        "alt": "Deliveries list with Merge Picking in the Actions menu",
+        "title": "Select Deliveries to Merge",
+        "caption": "In Inventory \u2192 Operations \u2192 Deliveries , select the ready pickings and choose Merge Picking from Actions."
+      },
+      {
+        "src": "/odoo-apps/merge-delivery-order/screenshots/image_6.png",
+        "alt": "Merge Picking wizard with move lines and quantities",
+        "title": "Review the Merge Wizard",
+        "caption": "In the wizard, review the lines. Tick the moves to include, set merge type to create a new picking or merge into an existing one, then click Confirm Merge ."
+      },
+      {
+        "src": "/odoo-apps/merge-delivery-order/screenshots/image_7.png",
+        "alt": "Merged delivery WH/OUT/00098 with chatter merge log",
+        "title": "See the Merged Delivery",
+        "caption": "A new delivery, for example WH/OUT/00098 , holds the combined quantities. The chatter lists the merged products."
+      },
+      {
+        "src": "/odoo-apps/merge-delivery-order/screenshots/image_8.png",
+        "alt": "Deliveries list showing cancelled sources and the merged picking",
+        "title": "Original Deliveries Are Cancelled",
+        "caption": "If auto-cancel is on, the source deliveries are set to Cancelled . The new picking lists them as source documents."
+      },
+      {
+        "src": "/odoo-apps/merge-delivery-order/screenshots/image_9.png",
+        "alt": "Settings with Merge by Warehouse enabled",
+        "title": "Turn On Merge by Warehouse",
+        "caption": "In settings, enable Merge by Warehouse so only pickings from the same warehouse can be merged."
+      },
+      {
+        "src": "/odoo-apps/merge-delivery-order/screenshots/image_10.png",
+        "alt": "Delivery sf/OUT/00004 from San Francisco warehouse",
+        "title": "A Delivery from Warehouse A",
+        "caption": "Example: delivery sf/OUT/00004 from San Francisco warehouse 2."
+      },
+      {
+        "src": "/odoo-apps/merge-delivery-order/screenshots/image_11.png",
+        "alt": "Delivery cg/OUT/00002 from Chicago warehouse",
+        "title": "A Delivery from Warehouse B",
+        "caption": "Example: delivery cg/OUT/00002 from Chicago warehouse 3."
+      },
+      {
+        "src": "/odoo-apps/merge-delivery-order/screenshots/image_12.png",
+        "alt": "Invalid Operation only pickings with the same operation type can be merged",
+        "title": "Warehouse or Operation Type Block",
+        "caption": "Merging those two pickings is blocked. The message explains that only pickings with the same operation type can be merged."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Merge Delivery Orders do?",
+        "a": "Merge several deliveries, receipts or internal transfers for the same partner into one transfer. Pick the lines and quantities to move, set matching rules for warehouse, route, carrier, salesperson, priority or incoterm, and keep a log in the chatter."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_merge_delivery_order",
+    "iconSrc": "/odoo-apps/merge-delivery-order/icon.png",
+    "cardImageSrc": "/odoo-apps/merge-delivery-order/cover.png",
+    "heroImageSrc": "/odoo-apps/merge-delivery-order/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$20.21"
+  },
+  {
+    "slug": "merge-sales-orders",
+    "name": "Merge Sales Orders",
+    "technicalName": "wb_merge_sales_orders",
+    "summary": "Merge several confirmed sales orders of the same customer into one. Only remaining undelivered qty is moved. Source orders and pending deliveries are cancelled. A history...",
+    "description": "Merge several confirmed sales orders of the same customer into one. Only remaining undelivered qty is moved. Source orders and pending deliveries are cancelled. A history record keeps the trail.",
+    "introParagraphs": [
+      "Merge several confirmed sales orders of the same customer into one. Only remaining undelivered qty is moved. Source orders and pending deliveries are cancelled. A history record keeps the trail.",
+      "Combine several confirmed sales orders of the same customer into one sales order.",
+      "Orders must share the same customer and pricelist. The merge is blocked otherwise."
+    ],
+    "categories": [
+      "Sales & CRM"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $20",
+    "license": "OPL-1",
+    "dependencies": [
+      "CRM",
+      "Inventory",
+      "Sales",
+      "Calendar",
+      "Contacts",
+      "Discuss",
+      "Invoicing"
+    ],
+    "features": [
+      {
+        "title": "Merge Confirmed Orders",
+        "body": "Combine several confirmed sales orders of the same customer into one sales order.",
+        "imageSrc": "/odoo-apps/merge-sales-orders/features/feature_1.png"
+      },
+      {
+        "title": "Same Customer and Pricelist",
+        "body": "Orders must share the same customer and pricelist. The merge is blocked otherwise.",
+        "imageSrc": "/odoo-apps/merge-sales-orders/features/feature_2.png"
+      },
+      {
+        "title": "Undelivered Qty Only",
+        "body": "Only remaining undelivered qty is moved. Fully delivered lines are left out.",
+        "imageSrc": "/odoo-apps/merge-sales-orders/features/feature_3.png"
+      },
+      {
+        "title": "Merge Wizard",
+        "body": "Select orders on the list and open Actions \u2192 Merge Sales Orders. Review them side by side.",
+        "imageSrc": "/odoo-apps/merge-sales-orders/features/feature_4.png"
+      },
+      {
+        "title": "Auto-Fill from a Source",
+        "body": "Pick a source order to fill addresses, payment terms and warehouse. Change any field before you confirm.",
+        "imageSrc": "/odoo-apps/merge-sales-orders/features/feature_5.png"
+      },
+      {
+        "title": "Cancel Sources and Deliveries",
+        "body": "When the merge is confirmed, source orders and their pending deliveries are cancelled.",
+        "imageSrc": "/odoo-apps/merge-sales-orders/features/feature_6.png"
+      },
+      {
+        "title": "Merge History",
+        "body": "A history record stores source orders, the new order, the user and the quantities moved.",
+        "imageSrc": "/odoo-apps/merge-sales-orders/features/feature_7.png"
+      },
+      {
+        "title": "User Permission",
+        "body": "Only users with Allow Merge Sales Orders on their user form can open the wizard.",
+        "imageSrc": "/odoo-apps/merge-sales-orders/features/feature_8.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for Merge Sales Orders, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm Merge Sales Orders behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/merge-sales-orders/screenshots/image_1.png",
+        "alt": "Merge Sales Orders app card in Odoo Apps",
+        "title": "Install Merge Sales Orders",
+        "caption": "In Apps, search for Merge Sales Orders and click Activate."
+      },
+      {
+        "src": "/odoo-apps/merge-sales-orders/screenshots/image_2.png",
+        "alt": "User Mitchell Admin with Allow Merge Sales Orders checked",
+        "title": "Allow Merge on the User",
+        "caption": "Open Settings \u2192 Users & Companies \u2192 Users. Tick Allow Merge Sales Orders under Merge Sales Order."
+      },
+      {
+        "src": "/odoo-apps/merge-sales-orders/screenshots/image_3.png",
+        "alt": "Sales order S00029 for Acme Corporation with order lines",
+        "title": "First Confirmed Order",
+        "caption": "Confirmed order S00029 for Acme Corporation, with product lines still to deliver."
+      },
+      {
+        "src": "/odoo-apps/merge-sales-orders/screenshots/image_4.png",
+        "alt": "Sales order S00030 for Acme Corporation with order lines",
+        "title": "Second Confirmed Order",
+        "caption": "Confirmed order S00030 for the same customer and pricelist, with more product lines."
+      },
+      {
+        "src": "/odoo-apps/merge-sales-orders/screenshots/image_5.png",
+        "alt": "Quotations list Actions Merge Sales Orders",
+        "title": "Select Orders and Merge",
+        "caption": "On the Quotations list, select the orders. Open Actions and choose Merge Sales Orders ."
+      },
+      {
+        "src": "/odoo-apps/merge-sales-orders/screenshots/image_6.png",
+        "alt": "Merge Sales Orders wizard Selected Source Line",
+        "title": "Pick a Source in the Wizard",
+        "caption": "The wizard opens. Choose a source in Selected Source Line to fill invoice address, delivery address and other fields."
+      },
+      {
+        "src": "/odoo-apps/merge-sales-orders/screenshots/image_7.png",
+        "alt": "Merge wizard Selected SO Values tab",
+        "title": "Review Selected Order Values",
+        "caption": "On the Selected SO Values tab, compare the selected orders before you confirm."
+      },
+      {
+        "src": "/odoo-apps/merge-sales-orders/screenshots/image_8.png",
+        "alt": "Merged sales order S00031 with combined order lines",
+        "title": "Confirm the Merged Order",
+        "caption": "Click Confirm Merge . A new sales order is created, for example S00031, with combined lines and summed qty."
+      },
+      {
+        "src": "/odoo-apps/merge-sales-orders/screenshots/image_9.png",
+        "alt": "Quotations list source orders S00029 and S00030 Cancelled",
+        "title": "Source Orders Cancelled",
+        "caption": "The original orders, for example S00029 and S00030, are cancelled. The new merged order stays active."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does Merge Sales Orders do?",
+        "a": "Merge several confirmed sales orders of the same customer into one. Only remaining undelivered qty is moved. Source orders and pending deliveries are cancelled. A history record keeps the trail."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_merge_sales_orders",
+    "iconSrc": "/odoo-apps/merge-sales-orders/icon.png",
+    "cardImageSrc": "/odoo-apps/merge-sales-orders/cover.png",
+    "heroImageSrc": "/odoo-apps/merge-sales-orders/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$20.34"
+  },
+  {
+    "slug": "pos-hide-unavailable",
+    "name": "POS Hide Out of Stock Products",
+    "technicalName": "wb_pos_hide_unavailable",
+    "summary": "Turn on one switch in Point of Sale settings. Products with zero or negative stock stay off the POS grid. Services and combos still show. After you sell the last unit, that...",
+    "description": "Turn on one switch in Point of Sale settings. Products with zero or negative stock stay off the POS grid. Services and combos still show. After you sell the last unit, that product is gone from the next order.",
+    "introParagraphs": [
+      "Turn on one switch in Point of Sale settings. Products with zero or negative stock stay off the POS grid. Services and combos still show. After you sell the last unit, that product is gone from the next order.",
+      "Turn on POS Hide Unavailable Product under POS Interface. Save. That shop then loads only products with stock.",
+      "Products with quantity on hand at zero or below stay off the POS grid. Cashiers cannot pick them."
+    ],
+    "categories": [
+      "Sales & CRM",
+      "Inventory"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $16",
+    "license": "OPL-1",
+    "dependencies": [
+      "Inventory",
+      "Point of Sale",
+      "Discuss",
+      "Invoicing"
+    ],
+    "features": [
+      {
+        "title": "One Switch in Settings",
+        "body": "Turn on POS Hide Unavailable Product under POS Interface. Save. That shop then loads only products with stock.",
+        "imageSrc": "/odoo-apps/pos-hide-unavailable/features/feature_1.png"
+      },
+      {
+        "title": "Hide Out of Stock",
+        "body": "Products with quantity on hand at zero or below stay off the POS grid. Cashiers cannot pick them.",
+        "imageSrc": "/odoo-apps/pos-hide-unavailable/features/feature_2.png"
+      },
+      {
+        "title": "Services and Combos Stay",
+        "body": "Services, combos and goods you do not track always show. Only stock-tracked products get the stock check.",
+        "imageSrc": "/odoo-apps/pos-hide-unavailable/features/feature_3.png"
+      },
+      {
+        "title": "Hide After the Last Sale",
+        "body": "You can finish the current bill even if you oversell. Once on-hand hits zero, that product is gone from the next order.",
+        "imageSrc": "/odoo-apps/pos-hide-unavailable/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for POS Hide Out of Stock Products, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm POS Hide Out of Stock Products behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/pos-hide-unavailable/screenshots/image_1.png",
+        "alt": "POS Hide Out of Stock Products app card in Odoo Apps",
+        "title": "Install the Module",
+        "caption": "In Apps, search for POS Hide Out of Stock Products and click Activate."
+      },
+      {
+        "src": "/odoo-apps/pos-hide-unavailable/screenshots/image_2.png",
+        "alt": "POS settings POS Hide Unavailable Product enabled",
+        "title": "Turn On the Switch",
+        "caption": "Go to Point of Sale \u2192 Configuration \u2192 Settings. Under POS Interface , tick POS Hide Unavailable Product and Save."
+      },
+      {
+        "src": "/odoo-apps/pos-hide-unavailable/screenshots/image_3.png",
+        "alt": "Product Variants list filtered Available in POS and Quantity On Hand greater than 0",
+        "title": "Preview In-Stock Products",
+        "caption": "Optional: on Point of Sale \u2192 Products \u2192 Product Variants, filter by Available in POS and Quantity On Hand > 0 to see what the POS will load."
+      },
+      {
+        "src": "/odoo-apps/pos-hide-unavailable/screenshots/image_4.png",
+        "alt": "POS product grid showing in-stock products",
+        "title": "POS Grid With Stock Only",
+        "caption": "Open the POS session. Products with stock appear in the grid. Zero and negative stock stay hidden."
+      },
+      {
+        "src": "/odoo-apps/pos-hide-unavailable/screenshots/image_5.png",
+        "alt": "POS grid with bakery items including services and combos",
+        "title": "Services and Combos Still Show",
+        "caption": "Services, combos and untracked goods stay on the grid. Only stock-tracked products are hidden when empty."
+      },
+      {
+        "src": "/odoo-apps/pos-hide-unavailable/screenshots/image_6.png",
+        "alt": "POS order selling Large Cabinet and Acoustic Bloc Screens remaining stock",
+        "title": "Sell Down During the Bill",
+        "caption": "You can still add remaining units on the current order, even if you oversell. The product stays on this bill."
+      },
+      {
+        "src": "/odoo-apps/pos-hide-unavailable/screenshots/image_7.png",
+        "alt": "POS product grid on the next order without the sold-out products",
+        "title": "Gone From the Next Order",
+        "caption": "After the order is paid and on-hand is zero, that product is gone from the next order grid."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does POS Hide Out of Stock Products do?",
+        "a": "Turn on one switch in Point of Sale settings. Products with zero or negative stock stay off the POS grid. Services and combos still show. After you sell the last unit, that product is gone from the next order."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_pos_hide_unavailable",
+    "iconSrc": "/odoo-apps/pos-hide-unavailable/icon.png",
+    "cardImageSrc": "/odoo-apps/pos-hide-unavailable/cover.png",
+    "heroImageSrc": "/odoo-apps/pos-hide-unavailable/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$16.36"
+  },
+  {
+    "slug": "pos-homedelivery",
+    "name": "POS Home Delivery",
+    "technicalName": "wb_pos_homedelivery",
+    "summary": "Turn on Home Delivery in Point of Sale settings. Cashiers fill the address, assign a person, and set a time. Delivery charge can go on the cart. The receipt prints the delivery...",
+    "description": "Turn on Home Delivery in Point of Sale settings. Cashiers fill the address, assign a person, and set a time. Delivery charge can go on the cart. The receipt prints the delivery details. Track status in the backend.",
+    "introParagraphs": [
+      "Turn on Home Delivery in Point of Sale settings. Cashiers fill the address, assign a person, and set a time. Delivery charge can go on the cart. The receipt prints the delivery details. Track status in the backend.",
+      "A Home Delivery button with a truck icon sits on the POS action pad. Cashiers tap it when the order should go out.",
+      "Fill customer, ship-to address, delivery person, scheduled time, order notes, and delivery instructions in one dialog."
+    ],
+    "categories": [
+      "Sales & CRM",
+      "Inventory"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $50",
+    "license": "OPL-1",
+    "dependencies": [
+      "Discuss",
+      "Inventory",
+      "Invoicing",
+      "Point of Sale"
+    ],
+    "features": [
+      {
+        "title": "Home Delivery Button",
+        "body": "A Home Delivery button with a truck icon sits on the POS action pad. Cashiers tap it when the order should go out.",
+        "imageSrc": "/odoo-apps/pos-homedelivery/features/feature_1.png"
+      },
+      {
+        "title": "Delivery Details Popup",
+        "body": "Fill customer, ship-to address, delivery person, scheduled time, order notes, and delivery instructions in one dialog.",
+        "imageSrc": "/odoo-apps/pos-homedelivery/features/feature_2.png"
+      },
+      {
+        "title": "Delivery Charge on the Cart",
+        "body": "Turn on Home Delivery Charges in settings. The Delivery Charge service product is added to the cart on save.",
+        "imageSrc": "/odoo-apps/pos-homedelivery/features/feature_3.png"
+      },
+      {
+        "title": "Delivery on the Receipt",
+        "body": "The receipt prints a Home Delivery block: reference, deliver-to name, address, scheduled time, and instructions.",
+        "imageSrc": "/odoo-apps/pos-homedelivery/features/feature_4.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for POS Home Delivery, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm POS Home Delivery behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/pos-homedelivery/screenshots/image_1.png",
+        "alt": "POS Home Delivery app card in Odoo Apps",
+        "title": "Install the Module",
+        "caption": "In Apps, search for POS Home Delivery and click Activate."
+      },
+      {
+        "src": "/odoo-apps/pos-homedelivery/screenshots/image_2.png",
+        "alt": "POS settings POS Home Delivery Home Delivery Charges and Delivery Persons",
+        "title": "Turn On Home Delivery",
+        "caption": "Go to Point of Sale \u2192 Configuration \u2192 Settings. Enable POS Home Delivery and, if you want, Home Delivery Charges . Assign default Delivery Persons and Save."
+      },
+      {
+        "src": "/odoo-apps/pos-homedelivery/screenshots/image_3.png",
+        "alt": "Delivery Charge product form with Point of Sale category",
+        "title": "Delivery Charge Product",
+        "caption": "A Delivery Charge service product is created for you. Set its sales price and keep it available in Point of Sale."
+      },
+      {
+        "src": "/odoo-apps/pos-homedelivery/screenshots/image_4.png",
+        "alt": "POS product screen with Home Delivery button",
+        "title": "Home Delivery Button",
+        "caption": "Open a POS session and add items. The Home Delivery button with a truck icon is on the action pad."
+      },
+      {
+        "src": "/odoo-apps/pos-homedelivery/screenshots/image_5.png",
+        "alt": "Home Delivery popup with customer address delivery person and schedule",
+        "title": "Fill the Delivery Popup",
+        "caption": "Tap Home Delivery. Enter customer details, tick Ship to Different Address if needed, assign a delivery person, set the scheduled time, and add notes or instructions."
+      },
+      {
+        "src": "/odoo-apps/pos-homedelivery/screenshots/image_6.png",
+        "alt": "POS cart with Delivery Charge line and order note",
+        "title": "Charge and Note on the Cart",
+        "caption": "After save, Delivery Charge is added to the cart when charges are on. The order note shows on the cart. If mail is set up, the customer can get a confirmation email."
+      },
+      {
+        "src": "/odoo-apps/pos-homedelivery/screenshots/image_7.png",
+        "alt": "POS receipt with Home Delivery section",
+        "title": "Print the Receipt",
+        "caption": "After payment, the receipt includes the Delivery Charge line and a Home Delivery block with reference, customer, and delivery address."
+      },
+      {
+        "src": "/odoo-apps/pos-homedelivery/screenshots/image_8.png",
+        "alt": "Home Deliveries list in the Odoo backend",
+        "title": "Track Deliveries in the Backend",
+        "caption": "Go to Point of Sale \u2192 Orders \u2192 Home Deliveries. List and form views show status (Draft, Confirmed, Out for Delivery, Delivered) and the assigned person."
+      },
+      {
+        "src": "/odoo-apps/pos-homedelivery/screenshots/image_9.png",
+        "alt": "Customer invoice with Delivery Charge line",
+        "title": "Invoice With Delivery Charge",
+        "caption": "When the POS order is invoiced, the invoice includes the same Delivery Charge as the POS payment."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does POS Home Delivery do?",
+        "a": "Turn on Home Delivery in Point of Sale settings. Cashiers fill the address, assign a person, and set a time. Delivery charge can go on the cart. The receipt prints the delivery details. Track status in the backend."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_pos_homedelivery",
+    "iconSrc": "/odoo-apps/pos-homedelivery/icon.png",
+    "cardImageSrc": "/odoo-apps/pos-homedelivery/cover.png",
+    "heroImageSrc": "/odoo-apps/pos-homedelivery/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$50.38"
+  },
+  {
+    "slug": "pos-stock",
+    "name": "POS Stock Management",
+    "technicalName": "wb_pos_stock",
+    "summary": "Show on-hand quantity on every POS product card. Cashiers get low-stock alerts, a low-stock list, and can be warned or blocked when an item runs out. All of this is set from...",
+    "description": "Show on-hand quantity on every POS product card. Cashiers get low-stock alerts, a low-stock list, and can be warned or blocked when an item runs out. All of this is set from Point of Sale settings.",
+    "introParagraphs": [
+      "Show on-hand quantity on every POS product card. Cashiers get low-stock alerts, a low-stock list, and can be warned or blocked when an item runs out. All of this is set from Point of Sale settings.",
+      "A quantity badge on every POS product card. Set colour and position in settings.",
+      "Set a deny limit. When quantity falls to that value, the cashier sees an alert and cannot add the product."
+    ],
+    "categories": [
+      "Sales & CRM",
+      "Inventory"
+    ],
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0"
+    ],
+    "priceLabel": "From $32",
+    "license": "OPL-1",
+    "dependencies": [
+      "Inventory",
+      "Point of Sale",
+      "Discuss",
+      "Invoicing"
+    ],
+    "features": [
+      {
+        "title": "Live Stock Badge",
+        "body": "A quantity badge on every POS product card. Set colour and position in settings.",
+        "imageSrc": "/odoo-apps/pos-stock/features/feature_1.png"
+      },
+      {
+        "title": "Stock Updates After Sale",
+        "body": "After a payment, badges refresh at once. No page reload.",
+        "imageSrc": "/odoo-apps/pos-stock/features/feature_2.png"
+      },
+      {
+        "title": "Low Stock List",
+        "body": "A Low Stock Product List shows items at or below the threshold you set.",
+        "imageSrc": "/odoo-apps/pos-stock/features/feature_3.png"
+      },
+      {
+        "title": "Stop Out-of-Stock Sales",
+        "body": "Set a deny limit. When quantity falls to that value, the cashier sees an alert and cannot add the product.",
+        "imageSrc": "/odoo-apps/pos-stock/features/feature_4.png"
+      },
+      {
+        "title": "On Hand or Available",
+        "body": "Show on-hand quantity or available (forecasted) quantity, from all warehouses or the session warehouse.",
+        "imageSrc": "/odoo-apps/pos-stock/features/feature_5.png"
+      },
+      {
+        "title": "Badge Look",
+        "body": "Set background colour, font colour, and place the badge top-left, top-right, bottom-left or bottom-right.",
+        "imageSrc": "/odoo-apps/pos-stock/features/feature_6.png"
+      },
+      {
+        "title": "Product Variants",
+        "body": "Products with variants such as size or colour show combined stock on the card.",
+        "imageSrc": "/odoo-apps/pos-stock/features/feature_7.png"
+      },
+      {
+        "title": "Per Shop Settings",
+        "body": "Each POS shop has its own display, deny limit, location and appearance settings.",
+        "imageSrc": "/odoo-apps/pos-stock/features/feature_8.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for POS Stock Management, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm POS Stock Management behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/pos-stock/screenshots/image_1.png",
+        "alt": "Install POS Stock Management in Odoo Apps",
+        "title": "Install the Module",
+        "caption": "Open Apps, search for POS Stock Management and click Activate ."
+      },
+      {
+        "src": "/odoo-apps/pos-stock/screenshots/image_2.png",
+        "alt": "Point of Sale settings Stock Configuration in POS",
+        "title": "Open POS Settings",
+        "caption": "Go to Point of Sale \u2192 Configuration \u2192 Settings . Under Stock Configuration in POS you will see the new fields."
+      },
+      {
+        "src": "/odoo-apps/pos-stock/screenshots/image_3.png",
+        "alt": "Settings to display stock and choose stock type",
+        "title": "Show Stock on Product Cards",
+        "caption": "Turn on Display Stock in POS . Choose Qty on Hand or Qty Available as the stock type."
+      },
+      {
+        "src": "/odoo-apps/pos-stock/screenshots/image_4.png",
+        "alt": "Settings to allow out of stock sales and deny limit",
+        "title": "Allow or Block Out-of-Stock Sales",
+        "caption": "Turn on Allow POS Order When Product is Out of Stock if cashiers may still sell. Set Deny POS Order When Product Qty goes down to to block sales at that quantity, or 0 to block at zero."
+      },
+      {
+        "src": "/odoo-apps/pos-stock/screenshots/image_5.png",
+        "alt": "Settings for stock badge background and font colour",
+        "title": "Set Badge Colours",
+        "caption": "Set Background Color and Font Color for the stock badge on the product card."
+      },
+      {
+        "src": "/odoo-apps/pos-stock/screenshots/image_6.png",
+        "alt": "Settings for stock badge position",
+        "title": "Set Badge Position",
+        "caption": "Use Stock Position to place the badge at the top right, top left, bottom right or bottom left of the card."
+      },
+      {
+        "src": "/odoo-apps/pos-stock/screenshots/image_7.png",
+        "alt": "Settings for stock location and current session warehouse",
+        "title": "Choose the Stock Location",
+        "caption": "Under Stock Location Configuration, choose all warehouses or Current Session Warehouse , then pick a Stock Location if needed."
+      },
+      {
+        "src": "/odoo-apps/pos-stock/screenshots/image_8.png",
+        "alt": "POS product grid with stock quantity badges",
+        "title": "See Quantity on the POS Screen",
+        "caption": "Open a POS session. Each product card shows its stock quantity on the badge."
+      },
+      {
+        "src": "/odoo-apps/pos-stock/screenshots/image_9.png",
+        "alt": "POS order with products and total number of items",
+        "title": "See Quantity on the Order Line",
+        "caption": "When a product is added several times, the order line shows how many units are in the cart, and the total number of items is shown."
+      },
+      {
+        "src": "/odoo-apps/pos-stock/screenshots/image_10.png",
+        "alt": "POS receipt with Total Number Of Items",
+        "title": "See Item Count on the Receipt",
+        "caption": "After payment, the receipt also shows Total Number Of Items for the order."
+      },
+      {
+        "src": "/odoo-apps/pos-stock/screenshots/image_11.png",
+        "alt": "Low Stock Product List popup on the POS",
+        "title": "Open the Low Stock List",
+        "caption": "Set Product Low Stock in settings. When quantity falls to that limit, the badge turns red. Click Low Stock Product List to see those products."
+      },
+      {
+        "src": "/odoo-apps/pos-stock/screenshots/image_12.png",
+        "alt": "Out of Stock alert on the POS when quantity is zero",
+        "title": "Block a Sale at Zero",
+        "caption": "If the deny limit is 0 and a product has no stock, clicking it shows an out-of-stock alert and it is not added to the order."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does POS Stock Management do?",
+        "a": "Show on-hand quantity on every POS product card. Cashiers get low-stock alerts, a low-stock list, and can be warned or blocked when an item runs out. All of this is set from Point of Sale settings."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_pos_stock",
+    "iconSrc": "/odoo-apps/pos-stock/icon.png",
+    "cardImageSrc": "/odoo-apps/pos-stock/cover.png",
+    "heroImageSrc": "/odoo-apps/pos-stock/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$31.89"
+  },
+  {
+    "slug": "time-based-product-in-pos",
+    "name": "POS Time Based Products",
+    "technicalName": "wb_time_based_product_in_pos",
+    "summary": "Sell time in POS for caf\u00e9s, gaming, parking or meeting rooms. Start and pause a timer on the order line, watch elapsed time in HH:MM:SS, and let quantity, price and tax update...",
+    "description": "Sell time in POS for caf\u00e9s, gaming, parking or meeting rooms. Start and pause a timer on the order line, watch elapsed time in HH:MM:SS, and let quantity, price and tax update as the clock runs. Minimum billing and round-up rules apply when you stop. Start time, end time and duration print on the receipt.",
+    "introParagraphs": [
+      "Sell time in POS for caf\u00e9s, gaming, parking or meeting rooms. Start and pause a timer on the order line, watch elapsed time in HH:MM:SS, and let quantity, price and tax update as the clock runs. Minimum billing and round-up rules apply when you stop. Start time, end time and duration print on the receipt.",
+      "Turn on Manage Time on the product. POS Minute is set by default; switch to POS Hour when you bill by the hour.",
+      "Play and pause sit on each time-based order line. Start when the customer begins, pause when they stop."
+    ],
+    "categories": [
+      "Productivity"
+    ],
+    "versions": [
+      "19.0"
+    ],
+    "priceLabel": "From $45",
+    "license": "OPL-1",
+    "dependencies": [
+      "Point of Sale",
+      "Discuss",
+      "Inventory",
+      "Invoicing"
+    ],
+    "features": [
+      {
+        "title": "Manage Time on the Product",
+        "body": "Turn on Manage Time on the product. POS Minute is set by default; switch to POS Hour when you bill by the hour.",
+        "imageSrc": "/odoo-apps/time-based-product-in-pos/features/feature_1.png"
+      },
+      {
+        "title": "Start and Pause on the Line",
+        "body": "Play and pause sit on each time-based order line. Start when the customer begins, pause when they stop.",
+        "imageSrc": "/odoo-apps/time-based-product-in-pos/features/feature_2.png"
+      },
+      {
+        "title": "Live Digital Clock",
+        "body": "A clock on the line shows elapsed time in HH:MM:SS so the cashier can see duration without leaving POS.",
+        "imageSrc": "/odoo-apps/time-based-product-in-pos/features/feature_3.png"
+      },
+      {
+        "title": "Price Updates as Time Runs",
+        "body": "Quantity, unit price and tax recalculate while the timer is running. The line total always matches elapsed time.",
+        "imageSrc": "/odoo-apps/time-based-product-in-pos/features/feature_4.png"
+      },
+      {
+        "title": "Minimum Billing",
+        "body": "Set a minimum billable duration in POS Settings, for example 30 minutes, so short sessions still bill the floor.",
+        "imageSrc": "/odoo-apps/time-based-product-in-pos/features/feature_5.png"
+      },
+      {
+        "title": "Round-up Rules",
+        "body": "Round elapsed time up to the nearest minute or hour interval you configure, so billing stays simple at the till.",
+        "imageSrc": "/odoo-apps/time-based-product-in-pos/features/feature_6.png"
+      },
+      {
+        "title": "Price and Quantity Lock",
+        "body": "Cashiers cannot edit price or quantity while a timer is running. Payment is blocked until every timer is stopped.",
+        "imageSrc": "/odoo-apps/time-based-product-in-pos/features/feature_7.png"
+      },
+      {
+        "title": "Times on the Receipt",
+        "body": "The printed receipt includes start time, end time and total duration for each time-based line.",
+        "imageSrc": "/odoo-apps/time-based-product-in-pos/features/feature_8.png"
+      }
+    ],
+    "setupSteps": [
+      {
+        "title": "Install the module",
+        "body": "Open Apps in Odoo, search for POS Time Based Products, and install it on your database."
+      },
+      {
+        "title": "Configure users and settings",
+        "body": "Review access rights and module settings so the workflow matches your team."
+      },
+      {
+        "title": "Validate with a test record",
+        "body": "Create or open a sample record and confirm POS Time Based Products behaves as expected."
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/odoo-apps/time-based-product-in-pos/screenshots/image_1.png",
+        "alt": "Install POS Time Based Products",
+        "title": "Install the Module",
+        "caption": "Open the Odoo Apps menu, search for POS Time Based Products and click Activate ."
+      },
+      {
+        "src": "/odoo-apps/time-based-product-in-pos/screenshots/image_2.png",
+        "alt": "Time billing settings in POS",
+        "title": "rgba Set Time Billing Rules",
+        "caption": "Open Point of Sale \u2192 Configuration \u2192 Settings. Enable Time Billing Configuration and set minimum duration and round-up for minutes and hours."
+      },
+      {
+        "src": "/odoo-apps/time-based-product-in-pos/screenshots/image_3.png",
+        "alt": "Manage Time on the product form",
+        "title": "Mark the Product as Time-Based",
+        "caption": "Open the product, go to the Point of Sale tab and enable Manage Time . Unit of measure is set to POS Minute; change it to POS Hour if you bill by the hour."
+      },
+      {
+        "src": "/odoo-apps/time-based-product-in-pos/screenshots/image_4.png",
+        "alt": "Time-based product on the POS order line",
+        "title": "Add the Product in POS",
+        "caption": "Start a POS session and add the time-based product. A start button and a clock at 00:00:00 appear on the order line."
+      },
+      {
+        "src": "/odoo-apps/time-based-product-in-pos/screenshots/image_5.png",
+        "alt": "Live timer and real-time billing in POS",
+        "title": "Start the Timer",
+        "caption": "Click play. The clock runs in HH:MM:SS and quantity, price and tax update as time elapses."
+      },
+      {
+        "src": "/odoo-apps/time-based-product-in-pos/screenshots/image_6.png",
+        "alt": "Concurrent timers on multiple units",
+        "title": "Several Units at Once",
+        "caption": "Add more than one unit of the same time-based product. Each line keeps its own timer so you can bill several sessions together."
+      },
+      {
+        "src": "/odoo-apps/time-based-product-in-pos/screenshots/image_7.png",
+        "alt": "Quantity locked while the timer runs",
+        "title": "Quantity Locked While Running",
+        "caption": "While the timer is running, quantity on that line cannot be changed. Stop the timer first if you need to edit the line."
+      },
+      {
+        "src": "/odoo-apps/time-based-product-in-pos/screenshots/image_8.png",
+        "alt": "Warning when paying with an active timer",
+        "title": "Stop Before Payment",
+        "caption": "If you go to payment with a timer still running, POS shows a warning. Stop every timer, then continue to payment."
+      },
+      {
+        "src": "/odoo-apps/time-based-product-in-pos/screenshots/image_9.png",
+        "alt": "Start time, end time and duration on the POS receipt",
+        "title": "Times on the Receipt",
+        "caption": "After the timer is stopped and payment is done, the receipt prints start time, end time and total duration for the line."
+      },
+      {
+        "src": "/odoo-apps/time-based-product-in-pos/screenshots/image_10.png",
+        "alt": "Allocation time on POS order lines in the backend",
+        "title": "See Allocation Time in the Backend",
+        "caption": "Open the POS order in the backend. Order lines store quantity and Allocation Time (start, end and duration) for reporting."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Built for live Odoo teams",
+        "body": "The module fits into standard Odoo menus and workflows, so your users adopt it without relearning the platform."
+      },
+      {
+        "title": "365 days of Wan Buffer support",
+        "body": "Every purchase includes a full year of support from our Odoo team for setup questions, fixes, and guidance."
+      },
+      {
+        "title": "Community and Enterprise ready",
+        "body": "Install on Odoo Online, Odoo.sh, or on-premise deployments running Odoo Community or Enterprise."
+      }
+    ],
+    "trustStats": [
+      {
+        "value": "365",
+        "label": "Days free support"
+      },
+      {
+        "value": "50+",
+        "label": "Custom apps delivered"
+      },
+      {
+        "value": "254+",
+        "label": "Happy customers"
+      },
+      {
+        "value": "7+",
+        "label": "Years of experience"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does POS Time Based Products do?",
+        "a": "Sell time in POS for caf\u00e9s, gaming, parking or meeting rooms. Start and pause a timer on the order line, watch elapsed time in HH:MM:SS, and let quantity, price and tax update as the clock runs. Minimum billing and round-up rules apply when you stop. Start time, end time and duration print on the receipt."
+      },
+      {
+        "q": "Is support included after purchase?",
+        "a": "Yes. Wan Buffer includes 365 days of support. Email sales@wanbuffer.com for installation or customization help."
+      },
+      {
+        "q": "Does it work on Community and Enterprise?",
+        "a": "Yes. The module supports Odoo Community and Enterprise on Odoo Online, Odoo.sh, and on-premise."
+      }
+    ],
+    "odooStoreUrl": "https://apps.odoo.com/apps/modules/19.0/wb_time_based_product_in_pos",
+    "iconSrc": "/odoo-apps/time-based-product-in-pos/icon.png",
+    "cardImageSrc": "/odoo-apps/time-based-product-in-pos/cover.png",
+    "heroImageSrc": "/odoo-apps/time-based-product-in-pos/screenshots/image_1.png",
+    "featured": false,
+    "priceAmount": "$45.18"
   }
 ]

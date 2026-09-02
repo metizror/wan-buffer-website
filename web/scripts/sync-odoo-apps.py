@@ -66,12 +66,18 @@ MODULES = [
     "wb_mail_desk",
     "wb_mrp_tags",
     "wb_manufecturing_timesheet",
+    "wb_merge_delivery_order",
+    "wb_merge_sales_orders",
+    "wb_pos_hide_unavailable",
+    "wb_pos_homedelivery",
+    "wb_pos_stock",
+    "wb_time_based_product_in_pos",
 ]
 
 CATEGORY_RULES = [
     (["crm", "lead", "sale", "credit", "ticket_so", "split_extract_sales", "customer"], "Sales & CRM"),
     (["invoice", "receivable", "credit_note", "penalty", "account", "merging", "aged"], "Accounting"),
-    (["stock", "barcode", "low_stock", "po_fulfillment", "ticket_po", "auto_po", "3d", "cancel_mo"], "Inventory"),
+    (["stock", "barcode", "low_stock", "po_fulfillment", "ticket_po", "auto_po", "3d", "cancel_mo", "delivery", "picking", "warehouse", "internal transfer"], "Inventory"),
     (["timer", "task", "log_message", "update_record", "company_filter", "partner_merge", "widget", "dynamic_warning", "access_record", "advanced_search", "search_views", "new_tab"], "Productivity"),
     (["bi_dashboard", "dashboard"], "Productivity"),
     (["mrp", "manufactur", "bill of material", "bom", "work order", "work_order"], "Manufacturing"),
