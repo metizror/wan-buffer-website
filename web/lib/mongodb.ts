@@ -9,14 +9,16 @@ let db: Db;
 if (!uri) throw new Error("MONGODB_URI is not defined");
 if (!dbName) throw new Error("MONGODB_DB is not defined");
 
+const mongoOptions = { serverSelectionTimeoutMS: 3000 };
+
 if (process.env.NODE_ENV === "development") {
   const g = globalThis as typeof globalThis & { _mongoClient?: MongoClient };
   if (!g._mongoClient) {
-    g._mongoClient = new MongoClient(uri);
+    g._mongoClient = new MongoClient(uri, mongoOptions);
   }
   client = g._mongoClient;
 } else {
-  client = new MongoClient(uri);
+  client = new MongoClient(uri, mongoOptions);
 }
 
 export async function getDb(): Promise<Db> {

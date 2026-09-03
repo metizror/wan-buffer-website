@@ -1,6 +1,7 @@
 import "server-only";
 import { ObjectId } from "mongodb";
 import { getDb } from "./mongodb";
+import { BLOG_POSTS, type BlogPost } from "./blogs-data";
 import type {
   BlogDocument,
   BlogFormData,
@@ -10,6 +11,87 @@ import type {
 
 function col() {
   return getDb().then((db) => db.collection<BlogDocument>("blogs"));
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function staticPostToDocument(post: BlogPost): BlogDocument {
+  let content = `<p>${escapeHtml(post.excerpt)}</p>`;
+  if (post.detail) {
+    content = post.detail.sections
+      .map((section) => {
+        const heading = `<h2>${escapeHtml(section.heading)}</h2>`;
+        const paragraphs = (section.paragraphs ?? [])
+          .map((p) => `<p>${escapeHtml(p)}</p>`)
+          .join("");
+        const bullets = section.bullets?.length
+          ? `<ul>${section.bullets.map((b) => `<li>${escapeHtml(b)}</li>`).join("")}</ul>`
+          : "";
+        return `${heading}${paragraphs}${bullets}`;
+      })
+      .join("");
+  }
+  const stamp = new Date(`${post.sortDate}T00:00:00.000Z`);
+  return {
+    slug: post.slug,
+    title: post.title,
+    excerpt: post.excerpt,
+    date: post.date,
+    sortDate: post.sortDate,
+    author: post.author,
+    authorRole: post.authorRole,
+    readTime: post.readTime,
+    imageSrc: post.imageSrc,
+    category: post.category,
+    externalUrl: post.externalUrl,
+    content,
+    faqs: post.detail?.faqs ?? [],
+    tags: [post.category],
+    isPublished: true,
+    status: "published",
+    scheduledAt: null,
+    hidden: false,
+    deletedAt: null,
+    metaTitle: post.title,
+    metaDescription: post.excerpt,
+    ogImage: post.imageSrc,
+    canonical: `https://wanbuffer.com/blogs/${post.slug}`,
+    noIndex: false,
+    focusKeyphrase: "",
+    createdAt: stamp,
+    updatedAt: stamp,
+  };
+}
+
+function staticPublishedBlogs(): BlogDocument[] {
+  return [...BLOG_POSTS]
+    .sort((a, b) => b.sortDate.localeCompare(a.sortDate))
+    .map(staticPostToDocument);
+}
+
+function filterStaticBlogs(
+  docs: BlogDocument[],
+  options: QueryOptions
+): BlogDocument[] {
+  return docs.filter((doc) => {
+    if (options.category && options.category !== "All" && doc.category !== options.category) {
+      return false;
+    }
+    if (options.search) {
+      const q = options.search.toLowerCase();
+      return (
+        doc.title.toLowerCase().includes(q) ||
+        doc.excerpt.toLowerCase().includes(q) ||
+        doc.author.toLowerCase().includes(q)
+      );
+    }
+    return true;
+  });
 }
 
 export async function ensureIndexes() {
@@ -261,40 +343,73 @@ export async function getPaginatedBlogs(options: {
   status?: BlogStatus;
   published?: boolean;
 }): Promise<PaginatedResult> {
-  const c = await col();
   const page = Math.max(1, options.page ?? 1);
   const limit = Math.min(100, Math.max(1, options.limit ?? 10));
-  const filter = buildFilter(options);
 
-  const [docs, total] = await Promise.all([
-    c.find(filter).sort({ sortDate: -1 }).skip((page - 1) * limit).limit(limit).toArray(),
-    c.countDocuments(filter),
-  ]);
-
-  return {
-    blogs: docs.map(serializeBlog),
-    total,
-    page,
-    limit,
-    totalPages: Math.max(1, Math.ceil(total / limit)),
+  const paginate = (docs: BlogDocument[]): PaginatedResult => {
+    const total = docs.length;
+    return {
+      blogs: docs.slice((page - 1) * limit, page * limit),
+      total,
+      page,
+      limit,
+      totalPages: Math.max(1, Math.ceil(total / limit)),
+    };
   };
+
+  try {
+    const c = await col();
+    const filter = buildFilter(options);
+    const [docs, total] = await Promise.all([
+      c.find(filter).sort({ sortDate: -1 }).skip((page - 1) * limit).limit(limit).toArray(),
+      c.countDocuments(filter),
+    ]);
+    if (options.published === true && total === 0) {
+      return paginate(filterStaticBlogs(staticPublishedBlogs(), options));
+    }
+    return {
+      blogs: docs.map(serializeBlog),
+      total,
+      page,
+      limit,
+      totalPages: Math.max(1, Math.ceil(total / limit)),
+    };
+  } catch {
+    if (options.published === true) {
+      return paginate(filterStaticBlogs(staticPublishedBlogs(), options));
+    }
+    return { blogs: [], total: 0, page, limit, totalPages: 1 };
+  }
 }
 
 // ── Public helpers ──
 
 export async function getPublishedBlogs(): Promise<BlogDocument[]> {
-  const c = await col();
-  const docs = await c
-    .find(publiclyVisibleConditions(new Date()))
-    .sort({ sortDate: -1 })
-    .toArray();
-  return docs.map(serializeBlog);
+  try {
+    const c = await col();
+    const docs = await c
+      .find(publiclyVisibleConditions(new Date()))
+      .sort({ sortDate: -1 })
+      .toArray();
+    if (docs.length === 0) return staticPublishedBlogs();
+    return docs.map(serializeBlog);
+  } catch {
+    return staticPublishedBlogs();
+  }
 }
 
 export async function getPublishedBlogBySlug(slug: string): Promise<BlogDocument | null> {
-  const c = await col();
-  const doc = await c.findOne({ slug, ...publiclyVisibleConditions(new Date()) });
-  return doc ? serializeBlog(doc) : null;
+  try {
+    const c = await col();
+    const doc = await c.findOne({ slug, ...publiclyVisibleConditions(new Date()) });
+    if (doc) return serializeBlog(doc);
+    const anyDoc = await c.findOne({ slug });
+    if (anyDoc) return null;
+  } catch {
+    // fall through to static seed
+  }
+  const post = BLOG_POSTS.find((p) => p.slug === slug);
+  return post ? staticPostToDocument(post) : null;
 }
 
 /** Load a post by slug bypassing the published check (admin preview only). */
@@ -305,26 +420,38 @@ export async function getBlogBySlugForPreview(slug: string): Promise<BlogDocumen
 }
 
 export async function getAllPublishedSlugs(): Promise<string[]> {
-  const c = await col();
-  const docs = await c
-    .find({ ...publiclyVisibleConditions(new Date()), content: { $ne: "" } })
-    .project({ slug: 1 })
-    .toArray();
-  return docs.map((d) => d.slug as string);
+  try {
+    const c = await col();
+    const docs = await c
+      .find({ ...publiclyVisibleConditions(new Date()), content: { $ne: "" } })
+      .project({ slug: 1 })
+      .toArray();
+    if (docs.length > 0) return docs.map((d) => d.slug as string);
+  } catch {
+    // fall through
+  }
+  return BLOG_POSTS.map((p) => p.slug);
 }
 
 export async function getRelatedBlogs(slug: string, category: string, limit = 3): Promise<BlogDocument[]> {
-  const c = await col();
-  const docs = await c
-    .find({
-      slug: { $ne: slug },
-      category,
-      ...publiclyVisibleConditions(new Date()),
-    })
-    .sort({ updatedAt: -1 })
-    .limit(limit)
-    .toArray();
-  return docs.map(serializeBlog);
+  try {
+    const c = await col();
+    const docs = await c
+      .find({
+        slug: { $ne: slug },
+        category,
+        ...publiclyVisibleConditions(new Date()),
+      })
+      .sort({ updatedAt: -1 })
+      .limit(limit)
+      .toArray();
+    if (docs.length > 0) return docs.map(serializeBlog);
+  } catch {
+    // fall through
+  }
+  return staticPublishedBlogs()
+    .filter((p) => p.slug !== slug && p.category === category)
+    .slice(0, limit);
 }
 
 function serializeBlog(doc: BlogDocument & { _id?: unknown }): BlogDocument {

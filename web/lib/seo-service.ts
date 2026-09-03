@@ -4,9 +4,11 @@ import path from "path";
 import { ObjectId } from "mongodb";
 import { getDb } from "./mongodb";
 import { getPublishedBlogs } from "./blog-service";
+import { BLOG_POSTS } from "./blogs-data";
 import { getActiveRedirectsMap } from "./redirect-service";
 import { WAN_BUFFER_CASE_STUDIES } from "./case-study-data";
 import { getAllOdooApps } from "./odoo-apps-data";
+import { getPublicEvents } from "./events-service";
 import { computeSeoScore } from "./seo-score";
 import type {
   PageCategory,
@@ -53,7 +55,16 @@ const POLICY_SLUGS = new Set([
   "cancellation-and-refund-policy",
 ]);
 
-const STATIC_SKIP = new Set(["admin", "api"]);
+const STATIC_SKIP = new Set(["admin", "api", "contact"]);
+
+/** Paths that 301/308 elsewhere — never list these in the public sitemap. */
+const REDIRECT_SLUGS = new Set([
+  "/contact",
+  "/events",
+  "/engagement-models",
+  "/hosting",
+  "/odoo/odoo-customization-and-installation",
+]);
 
 function titleCase(segment: string): string {
   return segment
@@ -104,15 +115,36 @@ function getStaticSourceEntries(): SourceEntry[] {
       ) {
         continue;
       }
-      if (!existsSync(path.join(appDir, dir, "page.tsx"))) continue;
+      const topPage = existsSync(path.join(appDir, dir, "page.tsx"));
+      if (topPage) {
+        entries.push({
+          slug: `/${dir}`,
+          title: titleCase(dir),
+          category: POLICY_SLUGS.has(dir) ? "policy" : "static",
+          metaDescription: "",
+          ogImage: "",
+        });
+      }
 
-      entries.push({
-        slug: `/${dir}`,
-        title: titleCase(dir),
-        category: POLICY_SLUGS.has(dir) ? "policy" : "static",
-        metaDescription: "",
-        ogImage: "",
-      });
+      try {
+        for (const nested of readdirSync(path.join(appDir, dir), { withFileTypes: true })) {
+          if (!nested.isDirectory()) continue;
+          const nestedName = nested.name;
+          if (nestedName.startsWith("[") || nestedName.startsWith("(") || nestedName.startsWith("_")) {
+            continue;
+          }
+          if (!existsSync(path.join(appDir, dir, nestedName, "page.tsx"))) continue;
+          entries.push({
+            slug: `/${dir}/${nestedName}`,
+            title: titleCase(nestedName),
+            category: "static",
+            metaDescription: "",
+            ogImage: "",
+          });
+        }
+      } catch {
+        // ignore unreadable nested dirs
+      }
     }
   } catch {
     // Filesystem not available — fall back to just the home route.
@@ -125,8 +157,33 @@ function getStaticSourceEntries(): SourceEntry[] {
 
 async function gatherSourceEntries(): Promise<SourceEntry[]> {
   const blogs = await getPublishedBlogs();
+  const blogBySlug = new Map(
+    blogs.map((b) => [
+      b.slug,
+      {
+        slug: b.slug,
+        title: b.title,
+        excerpt: b.excerpt,
+        metaDescription: b.metaDescription,
+        ogImage: b.ogImage,
+        imageSrc: b.imageSrc,
+      },
+    ])
+  );
+  for (const post of BLOG_POSTS) {
+    if (!blogBySlug.has(post.slug)) {
+      blogBySlug.set(post.slug, {
+        slug: post.slug,
+        title: post.title,
+        excerpt: post.excerpt,
+        metaDescription: post.excerpt,
+        ogImage: post.imageSrc,
+        imageSrc: post.imageSrc,
+      });
+    }
+  }
 
-  const blogEntries: SourceEntry[] = blogs.map((b) => ({
+  const blogEntries: SourceEntry[] = [...blogBySlug.values()].map((b) => ({
     slug: `/blogs/${b.slug}`,
     title: b.title,
     category: "blog",
@@ -150,9 +207,29 @@ async function gatherSourceEntries(): Promise<SourceEntry[]> {
     ogImage: a.cardImageSrc || a.iconSrc || "",
   }));
 
+  let eventEntries: SourceEntry[] = [];
+  try {
+    const events = await getPublicEvents();
+    eventEntries = events.map((e) => ({
+      slug: `/event/${e.slug}`,
+      title: e.title,
+      category: "static",
+      metaDescription: e.excerpt || "",
+      ogImage: e.imageSrc || "",
+    }));
+  } catch {
+    // listing page still covers /event
+  }
+
   const staticEntries = getStaticSourceEntries();
 
-  return [...blogEntries, ...workEntries, ...productEntries, ...staticEntries];
+  return [
+    ...blogEntries,
+    ...workEntries,
+    ...productEntries,
+    ...eventEntries,
+    ...staticEntries,
+  ];
 }
 
 // ── Seed ──
@@ -341,23 +418,44 @@ export interface SitemapEntry {
 }
 
 /**
- * Pages eligible for the public sitemap: active, sitemap-included, and
- * indexable — excluding any slug that has an active redirect.
+ * Public sitemap: filesystem + blogs + case studies + apps + events, merged
+ * with any extra SEO catalogue rows. Redirect sources and noindex pages are
+ * dropped so Search Console only sees live URLs.
  */
 export async function getSitemapEntries(): Promise<SitemapEntry[]> {
-  const c = await col();
-  const [docs, redirects] = await Promise.all([
-    c
-      .find({ isActive: true, includeInSitemap: true, noIndex: { $ne: true } })
-      .project({ slug: 1, updatedAt: 1 })
-      .toArray(),
-    getActiveRedirectsMap(),
-  ]);
+  const now = new Date();
+  const bySlug = new Map<string, Date>();
 
-  return docs
-    .filter((d) => !redirects.has(normalizeSlug(d.slug as string)))
-    .map((d) => ({
-      slug: d.slug as string,
-      updatedAt: (d.updatedAt as Date) ?? new Date(),
-    }));
+  const sources = await gatherSourceEntries();
+  for (const source of sources) {
+    const slug = normalizeSlug(source.slug);
+    if (REDIRECT_SLUGS.has(slug)) continue;
+    bySlug.set(slug, now);
+  }
+
+  try {
+    const c = await col();
+    const [docs, redirects] = await Promise.all([
+      c
+        .find({ isActive: true, includeInSitemap: true, noIndex: { $ne: true } })
+        .project({ slug: 1, updatedAt: 1 })
+        .toArray(),
+      getActiveRedirectsMap(),
+    ]);
+
+    for (const doc of docs) {
+      const slug = normalizeSlug(doc.slug as string);
+      if (REDIRECT_SLUGS.has(slug) || redirects.has(slug)) continue;
+      bySlug.set(slug, (doc.updatedAt as Date) ?? now);
+    }
+    for (const oldUrl of redirects.keys()) {
+      bySlug.delete(normalizeSlug(oldUrl));
+    }
+  } catch {
+    // Mongo optional
+  }
+
+  return [...bySlug.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([slug, updatedAt]) => ({ slug, updatedAt }));
 }

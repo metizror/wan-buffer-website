@@ -55,7 +55,7 @@ export function HomeFooter() {
               <a href="/odoo/implementation">Implementation</a>
             </li>
             <li>
-              <a href="/odoo/odoo-customization-and-installation">Customisation</a>
+              <a href="/odoo/customization">Customisation</a>
             </li>
             <li>
               <a href="/odoo/migration">Migration &amp; Upgrade</a>

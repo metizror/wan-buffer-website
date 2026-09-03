@@ -12,7 +12,7 @@ interface HomeHeaderProps {
 const MOB_MENU = [
   {
     label: "AI & Automation",
-    href: "/#ai-services",
+    href: "/ai-services",
     accent: "ai" as const,
     sections: [
       {
@@ -46,14 +46,14 @@ const MOB_MENU = [
   },
   {
     label: "ERP",
-    href: "/#platforms",
+    href: "/odoo",
     accent: null,
     sections: [
       {
         title: "Odoo",
         subs: [
           { label: "Odoo Implementation", href: "/odoo/implementation" },
-          { label: "Odoo Customisation", href: "/odoo/odoo-customization-and-installation" },
+          { label: "Odoo Customisation", href: "/odoo/customization" },
           { label: "Odoo Migration", href: "/odoo/migration" },
           { label: "Odoo Integration", href: "/odoo/odoo-erp-integration" },
           { label: "Odoo Apps", href: "/odoo/apps" },
@@ -84,7 +84,7 @@ const MOB_MENU = [
   },
   {
     label: "eCommerce",
-    href: "/#platforms",
+    href: "/ecommerce",
     accent: null,
     sections: [
       {
@@ -178,9 +178,9 @@ const MOB_MENU_EXTRA = [
       {
         title: "Blog & Articles",
         subs: [
-          { label: "Essential Odoo Integrations for 2025", href: "/blogs/essential-odoo-integrations-u-s-companies-need-in-2025-shopify-amazon-quickbooks" },
+          { label: "Essential Odoo Integrations for 2025", href: "/blogs/essential-odoo-integrations-us-companies-need-2025" },
           { label: "Why Generic ERP Fails for Oil & Gas", href: "/blogs/why-generic-erp-fails-for-oil-and-gas-suppliers" },
-          { label: "Dedicated Teams vs In-House Hiring", href: "/blogs/dedicated-engineering-teams-vs-in-house-hiring-for-erp-projects" },
+          { label: "Dedicated Teams vs In-House Hiring", href: "/blogs/dedicated-engineering-teams-vs-in-house-hiring" },
         ],
       },
       {
@@ -274,7 +274,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
 
         {/* CTA buttons */}
         <div className="mob-btns">
-          <Link className="mob-btn-ai" href="/#ai-services" onClick={closeNav}>
+          <Link className="mob-btn-ai" href="/ai-services" onClick={closeNav}>
             Explore AI Services ⚡
           </Link>
           <Link className="mob-btn-r" href="/contact-us" onClick={closeNav}>
@@ -336,7 +336,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
         <ul className="n-links">
           {/* AI Mega-menu item */}
           <li>
-            <Link href="/#ai-services" className="n-ai-link">
+            <Link href="/ai-services" className="n-ai-link">
               AI &amp; Automation
             </Link>
             <div className="n-mega-wrap">
@@ -446,7 +446,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                 </div>
                 <div className="mega-footer">
                   <span className="mega-footer-t">Powered by OpenAI · LangChain · Python · Odoo</span>
-                  <Link className="mega-footer-a" href="/#ai-services">
+                  <Link className="mega-footer-a" href="/ai-services">
                     Explore All AI Services →
                   </Link>
                 </div>
@@ -456,7 +456,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
 
           {/* ERP Mega Menu */}
           <li>
-            <Link href="/#platforms" className="n-erp-link">
+            <Link href="/odoo" className="n-erp-link">
               ERP
             </Link>
             <div className="n-mega-wrap">
@@ -479,7 +479,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                         <div className="mega-item-s">End-to-end Odoo 16/17/18 setup</div>
                       </div>
                     </Link>
-                    <Link className="mega-item" href="/odoo/odoo-customization-and-installation">
+                    <Link className="mega-item" href="/odoo/customization">
                       <div className="mega-icon">🔧</div>
                       <div>
                         <div className="mega-item-t">Odoo Customisation</div>
@@ -626,7 +626,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                 </div>
                 <div className="mega-footer">
                   <span className="mega-footer-t">Odoo Partner · Zoho · Salesforce · Razorpay Official Partner</span>
-                  <Link className="mega-footer-a" href="/#platforms">
+                  <Link className="mega-footer-a" href="/odoo">
                     Explore All ERP Services →
                   </Link>
                 </div>
@@ -636,7 +636,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
 
           {/* eCommerce Mega Menu */}
           <li>
-            <Link href="/#platforms" className="n-ecom-link">
+            <Link href="/ecommerce" className="n-ecom-link">
               eCommerce
             </Link>
             <div className="n-mega-wrap">
@@ -785,7 +785,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                 </div>
                 <div className="mega-footer">
                   <span className="mega-footer-t">Shopify Plus · Magento 2 · Odoo · Razorpay · AI-Powered</span>
-                  <Link className="mega-footer-a" href="/#platforms">
+                  <Link className="mega-footer-a" href="/ecommerce">
                     Explore All eCommerce Services →
                   </Link>
                 </div>
@@ -1232,7 +1232,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                   {/* Col 1: Blog & Articles */}
                   <div className="mega-col">
                     <div className="mega-col-title">Blog &amp; Articles</div>
-                    <Link className="mega-item" href="/blogs/essential-odoo-integrations-u-s-companies-need-in-2025-shopify-amazon-quickbooks">
+                    <Link className="mega-item" href="/blogs/essential-odoo-integrations-us-companies-need-2025">
                       <div className="mega-icon">🔌</div>
                       <div>
                         <div className="mega-item-t">Essential Odoo Integrations for 2025</div>
@@ -1246,14 +1246,14 @@ export function HomeHeader(_props: HomeHeaderProps) {
                         <div className="mega-item-s">Project-based ERP deep-dive</div>
                       </div>
                     </Link>
-                    <Link className="mega-item" href="/blogs/erp-systems-designed-for-fabric-manufacturers-in-india-thailand-and-vietnam">
+                    <Link className="mega-item" href="/blogs/erp-systems-designed-for-fabric-manufacturers">
                       <div className="mega-icon">🧵</div>
                       <div>
                         <div className="mega-item-t">ERP for Fabric Manufacturers</div>
                         <div className="mega-item-s">India, Thailand &amp; Vietnam</div>
                       </div>
                     </Link>
-                    <Link className="mega-item" href="/blogs/dedicated-engineering-teams-vs-in-house-hiring-for-erp-projects">
+                    <Link className="mega-item" href="/blogs/dedicated-engineering-teams-vs-in-house-hiring">
                       <div className="mega-icon">👨‍💻</div>
                       <div>
                         <div className="mega-item-t">Dedicated Teams vs In-House Hiring</div>
@@ -1402,7 +1402,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
         </ul>
 
         <div className="n-end">
-          <Link className="n-ai-cta" href="/#ai-services">
+          <Link className="n-ai-cta" href="/ai-services">
             AI Services ⚡
           </Link>
           <Link className="n-cta" href="/contact-us">

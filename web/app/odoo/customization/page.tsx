@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "Odoo custom modules",
     "Odoo development",
   ],
+  alternates: { canonical: "https://wanbuffer.com/odoo/customization" },
   openGraph: {
     images: [
       {
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function OdooCustomizationInstallationPage() {
+export default function OdooCustomizationPage() {
   return (
     <>
       <HomeLeadPopup />

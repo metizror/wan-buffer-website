@@ -104,7 +104,7 @@ const SOLUTIONS = [
     tag: "Odoo Customization",
     t: "Make Odoo Work Your Way",
     b: "Extend Odoo with customized workflows, features, reports, and business logic designed around your unique requirements.",
-    href: "/odoo/odoo-customization-and-installation",
+    href: "/odoo/customization",
     cta: "Explore Customization",
   },
   {
@@ -242,7 +242,7 @@ const FAQS: Oxp2026Faq[] = [
 
 const FOOTER_SOLUTIONS = [
   { label: "Odoo Implementation", href: "/odoo/implementation" },
-  { label: "Odoo Customization", href: "/odoo/odoo-customization-and-installation" },
+  { label: "Odoo Customization", href: "/odoo/customization" },
   { label: "Integrations", href: "/odoo/odoo-erp-integration" },
   { label: "Odoo Apps", href: "/odoo/apps" },
   { label: "Industry Solutions", href: "/industries" },

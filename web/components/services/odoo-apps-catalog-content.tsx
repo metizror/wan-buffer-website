@@ -348,7 +348,7 @@ export function OdooAppsCatalogContent() {
             <p>
               More apps are being added to this catalog. Need help choosing or installing modules?{" "}
               <Link href="/odoo/implementation">Talk to our Odoo implementation team</Link> or{" "}
-              <Link href="/odoo/odoo-customization-and-installation">request custom development</Link>.
+              <Link href="/odoo/customization">request custom development</Link>.
             </p>
           </div>
         </div>

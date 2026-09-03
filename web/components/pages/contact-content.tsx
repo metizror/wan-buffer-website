@@ -38,7 +38,7 @@ const quickCards = [
     k: "Privacy policy",
     v: "Data usage & consent",
     body: "We will add your information to our CRM for contacting you regarding your request. For more details, please consult our privacy policy.",
-    href: "https://wanbuffer.com/privacy-policy.php",
+    href: "/privacy-policy",
     hrefLabel: "Read privacy policy →",
   },
 ] as const;
@@ -227,7 +227,7 @@ export function ContactContent() {
             >
               We will add your information to our CRM for contacting you regarding your request. For more details,
               please consult our{" "}
-              <a href="https://wanbuffer.com/privacy-policy.php" style={{ color: "var(--ai)", textDecoration: "underline" }}>
+              <a href="/privacy-policy" style={{ color: "var(--ai)", textDecoration: "underline" }}>
                 privacy policy
               </a>
               .

@@ -34,7 +34,7 @@ export function getBlogBySlug(slug: string): BlogPost | undefined {
 }
 
 export function getAllBlogSlugs(): string[] {
-  return BLOG_POSTS.filter((p) => p.detail).map((p) => p.slug);
+  return BLOG_POSTS.map((p) => p.slug);
 }
 
 export const BLOG_CATEGORIES = [
@@ -208,10 +208,143 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "April 3, 2026",
     sortDate: "2026-04-03",
     author: "Vaishali Rathod",
-    readTime: "4 min",
+    authorRole: "HR Manager",
+    readTime: "19 min",
     imageSrc: "https://wanbuffer.com/blogs/wp-content/uploads/2026/04/Blog-Jigar-sir-FINAL-02.png",
     category: "Oil & Gas",
     externalUrl: "https://wanbuffer.com/blogs/why-generic-erp-fails-for-oil-and-gas-suppliers/",
+    detail: {
+      sections: [
+        {
+          heading: "Introduction",
+          paragraphs: [
+            "For many oil and gas suppliers, ERP implementation begins with hope. The promise is simple—better control, improved visibility, and smoother operations.",
+            "But over time, that promise often turns into frustration.",
+            "Generic ERP for oil and gas suppliers rarely delivers what businesses truly need. Instead of simplifying operations, it introduces gaps, workarounds, and inefficiencies that teams must manage every day.",
+            "This is not a technology failure. It is a mismatch between system design and real-world operations.",
+          ],
+        },
+        {
+          heading: "The Operational Reality of Oil and Gas Suppliers",
+          paragraphs: [
+            "Oil and gas suppliers do not operate like standard distributors or manufacturers. Their workflows are deeply tied to projects, timelines, and client expectations.",
+            "Key realities include:",
+          ],
+          bullets: [
+            "Complex RFQ and quotation cycles",
+            "High dependency on project timelines",
+            "Multi-vendor sourcing for a single requirement",
+            "Strict compliance and documentation needs",
+            "High-value transactions with tight delivery commitments",
+          ],
+        },
+        {
+          heading: "Where Generic ERP Systems Fall Short",
+          paragraphs: [
+            "Generic ERP systems are built for standard processes. Oil and gas supply operations are anything but standard.",
+            "Common limitations include:",
+          ],
+          bullets: [
+            "Poor handling of RFQ management and revisions",
+            "Limited support for project-based workflows",
+            "Weak visibility into inventory commitments",
+            "Inability to link procurement with project timelines",
+            "Lack of structured vendor comparison processes",
+          ],
+        },
+        {
+          heading: "The Cost of ERP Misalignment",
+          paragraphs: [
+            "When ERP systems fail to align with operations, the impact is not always immediate—but it is always real.",
+            "Businesses experience:",
+          ],
+          bullets: [
+            "Delays in responding to client RFQs",
+            "Errors in procurement and inventory planning",
+            "Increased dependency on manual tracking",
+            "Missed delivery deadlines",
+            "Reduced client trust and credibility",
+          ],
+        },
+        {
+          heading: "What Oil and Gas Suppliers Actually Need from ERP",
+          paragraphs: [
+            "To support real operations, ERP systems must be designed around how oil and gas suppliers work.",
+            "Essential capabilities include:",
+          ],
+          bullets: [
+            "Structured RFQ and quotation management",
+            "Project-based sales and procurement tracking",
+            "Real-time inventory visibility with commitments",
+            "Vendor comparison and sourcing workflows",
+            "Centralized documentation for compliance",
+            "Seamless integration between departments",
+          ],
+        },
+        {
+          heading: "Project-Based Complexity and ERP Limitations",
+          paragraphs: [
+            "One of the biggest gaps in generic ERP systems is their inability to handle project-based operations.",
+            "Oil and gas suppliers manage:",
+          ],
+          bullets: [
+            "Multiple RFQs within a single project",
+            "Partial deliveries aligned with project phases",
+            "Procurement from multiple vendors for one order",
+            "Cost tracking at the project level",
+          ],
+        },
+        {
+          heading: "The Impact of Disconnected Systems",
+          paragraphs: [
+            "When ERP systems fail to meet operational needs, businesses often compensate by adding external tools.",
+            "The result is a disconnected ecosystem: spreadsheets for RFQ tracking, emails for vendor communication, separate tools for inventory, and manual coordination between departments.",
+            "Teams spend more time reconciling data than making decisions. Errors become harder to detect, and delays become harder to prevent.",
+          ],
+        },
+        {
+          heading: "Benefits of Industry-Specific ERP",
+          paragraphs: [
+            "When ERP systems are designed specifically for oil and gas supply workflows, the difference is clear.",
+          ],
+          bullets: [
+            "Faster and more accurate RFQ responses",
+            "Better control over project timelines",
+            "Clear visibility into inventory and procurement",
+            "Reduced reliance on manual processes",
+            "Improved coordination across teams",
+            "Stronger client confidence and reliability",
+          ],
+        },
+        {
+          heading: "How Wan Buffer Helps Overcome ERP Challenges",
+          paragraphs: [
+            "Wan Buffer works with oil and gas suppliers to address the real gaps in ERP implementation. The focus is on aligning systems with actual workflows, not forcing businesses to adapt to rigid software.",
+          ],
+          bullets: [
+            "Customizing ERP systems for RFQ-driven processes",
+            "Designing project-based procurement and inventory tracking",
+            "Integrating sales, purchase, and logistics operations",
+            "Eliminating disconnected tools and manual workarounds",
+            "Building scalable ERP systems for long-term growth",
+          ],
+        },
+        {
+          heading: "Conclusion",
+          paragraphs: [
+            "Generic ERP for oil and gas suppliers often fails not because it lacks features, but because it lacks understanding.",
+            "Oil and gas supply is a project-driven, high-stakes environment where precision and coordination are critical. Systems that are not designed for this reality create more problems than they solve.",
+            "By moving toward ERP systems built specifically for oil and gas workflows, suppliers can regain control, improve efficiency, and operate with confidence.",
+          ],
+        },
+      ],
+      faqs: [
+        { q: "Why do generic ERP systems fail in the oil and gas industry?", a: "Because they are not designed for project-based workflows, complex RFQ processes, and multi-vendor procurement." },
+        { q: "What are the biggest ERP challenges for industrial suppliers?", a: "Lack of project tracking, poor inventory visibility, weak RFQ management, and disconnected workflows." },
+        { q: "Can ERP help solve RFQ management issues?", a: "Yes. With the right configuration, ERP systems can streamline RFQ tracking, vendor comparison, and quotation processes." },
+        { q: "What should oil and gas suppliers look for in an ERP system?", a: "Project-based capabilities, real-time visibility, integration across departments, and strong workflow alignment." },
+      ],
+    },
   },
   {
     slug: "odoo-erp-for-oil-and-gas-suppliers-in-uae",
@@ -232,10 +365,131 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "March 16, 2026",
     sortDate: "2026-03-16",
     author: "Vaishali Rathod",
-    readTime: "4 min",
+    authorRole: "HR Manager",
+    readTime: "15 min",
     imageSrc: "https://wanbuffer.com/blogs/wp-content/uploads/2026/03/Febric-3-contary-01.png",
     category: "Manufacturing",
     externalUrl: "https://wanbuffer.com/blogs/erp-systems-designed-for-fabric-manufacturers-in-india-thailand-and-vietnam/",
+    detail: {
+      sections: [
+        {
+          heading: "Introduction",
+          paragraphs: [
+            "Fabric manufacturing is one of the most complex production environments in the world. From yarn procurement and dyeing processes to weaving, finishing, and dispatch, every stage requires precision, timing, and coordination.",
+            "Manufacturers in India, Thailand, and Vietnam face additional challenges due to export-driven demand, seasonal production cycles, and increasing pressure on delivery timelines.",
+            "This is why many textile companies are moving toward ERP systems specifically designed for fabric manufacturing workflows, rather than relying on generic ERP solutions.",
+          ],
+        },
+        {
+          heading: "The Fabric Manufacturing Landscape in India, Thailand, and Vietnam",
+          paragraphs: [
+            "These three countries represent some of the most important textile manufacturing hubs globally.",
+            "Key characteristics include:",
+          ],
+          bullets: [
+            "Large-scale export-oriented production",
+            "High-volume seasonal orders",
+            "Multiple production stages such as spinning, dyeing, weaving, and finishing",
+            "Complex supplier and raw material networks",
+            "Tight delivery schedules for global buyers",
+          ],
+        },
+        {
+          heading: "Why Generic ERP Systems Fail Fabric Manufacturers",
+          paragraphs: [
+            "Many textile companies adopt ERP systems that were originally designed for general manufacturing.",
+            "Common problems include:",
+          ],
+          bullets: [
+            "Poor support for textile-specific production processes",
+            "Limited visibility into yarn, greige, dyed, and finished fabric inventory",
+            "Inflexible production planning tools",
+            "Weak batch and lot tracking",
+            "Difficulty managing multiple dyeing and finishing processes",
+          ],
+        },
+        {
+          heading: "What Fabric Manufacturers Actually Need from ERP",
+          paragraphs: [
+            "A well-designed ERP for fabric manufacturers must address the realities of textile production.",
+            "Essential capabilities include:",
+          ],
+          bullets: [
+            "Yarn and raw material tracking",
+            "Dyeing and finishing process management",
+            "Batch and lot-level inventory visibility",
+            "Production planning across multiple machines and stages",
+            "Accurate Bill of Materials (BOM) for fabrics",
+            "Quality inspection and defect tracking",
+            "Integration between sales orders, production planning, and dispatch",
+          ],
+        },
+        {
+          heading: "Core ERP Capabilities for Textile and Fabric Production",
+          paragraphs: ["An ERP designed for fabric manufacturing should support:"],
+          bullets: [
+            "End-to-end production planning",
+            "Real-time inventory management",
+            "Machine and capacity scheduling",
+            "Fabric roll and batch tracking",
+            "Cost calculation and margin analysis",
+            "Export documentation and compliance support",
+          ],
+        },
+        {
+          heading: "How Regional Manufacturing Complexity Shapes ERP Design",
+          paragraphs: [
+            "Manufacturers in India, Thailand, and Vietnam often operate across multiple factories, warehouses, and supplier networks.",
+            "ERP systems must therefore support:",
+          ],
+          bullets: [
+            "Multi-location production management",
+            "Supplier coordination across regions",
+            "Integration with export logistics and shipping",
+            "Multi-currency and international trade requirements",
+          ],
+        },
+        {
+          heading: "Benefits of an ERP Built for Fabric Manufacturing",
+          paragraphs: [
+            "When ERP systems are designed specifically for textile operations, manufacturers gain:",
+          ],
+          bullets: [
+            "Better production visibility",
+            "Improved inventory accuracy",
+            "Faster and more reliable production planning",
+            "Reduced material wastage",
+            "Stronger delivery performance",
+            "More accurate cost and profitability analysis",
+          ],
+        },
+        {
+          heading: "How Wan Buffer Helps Fabric Manufacturers Modernize ERP",
+          paragraphs: [
+            "Wan Buffer works with fabric and textile manufacturers to design ERP systems that match real production workflows.",
+          ],
+          bullets: [
+            "Textile-specific ERP customization",
+            "Production planning optimization",
+            "Inventory and batch tracking setup",
+            "Integration between sales, manufacturing, and logistics",
+            "Scalable ERP architecture for multi-location operations",
+          ],
+        },
+        {
+          heading: "Conclusion",
+          paragraphs: [
+            "Fabric manufacturing requires precision, coordination, and real-time operational visibility. Generic ERP systems often struggle to support the complexity of textile production across multiple stages and locations.",
+            "By implementing ERP systems designed specifically for fabric manufacturing, companies in India, Thailand, and Vietnam can improve planning, control costs, and deliver orders more reliably.",
+          ],
+        },
+      ],
+      faqs: [
+        { q: "Is Odoo suitable for fabric manufacturing ERP?", a: "Yes. Odoo can be customized to support textile production workflows including dyeing, weaving, and finishing." },
+        { q: "What makes textile ERP different from regular ERP?", a: "Textile ERP includes batch tracking, fabric production planning, and process-specific workflows designed for textile manufacturing environments." },
+        { q: "Can ERP help reduce fabric production delays?", a: "Yes. Better planning, inventory visibility, and workflow coordination help reduce production bottlenecks and improve delivery timelines." },
+      ],
+    },
   },
   {
     slug: "dedicated-engineering-teams-vs-in-house-hiring",
@@ -244,10 +498,123 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "March 3, 2026",
     sortDate: "2026-03-03",
     author: "Saloni Darji",
-    readTime: "4 min",
+    authorRole: "Sales Executive",
+    readTime: "16 min",
     imageSrc: "https://wanbuffer.com/blogs/wp-content/uploads/2026/03/dedicated-enginear.png",
     category: "ERP",
     externalUrl: "https://wanbuffer.com/blogs/dedicated-engineering-teams-vs-in-house-hiring-for-erp-projects/",
+    detail: {
+      sections: [
+        {
+          heading: "Introduction",
+          paragraphs: [
+            "ERP projects are complex, high-impact initiatives that require the right mix of technical expertise, functional understanding, and delivery discipline.",
+            "For many companies and ERP partners, the first instinct is to build an in-house team. But as projects grow in scale and complexity, hiring internally can become slow, expensive, and difficult to manage.",
+            "That’s why many organizations are turning to dedicated engineering teams — a flexible model that expands delivery capacity without the long-term risk of traditional hiring.",
+          ],
+        },
+        {
+          heading: "The Talent Challenge in ERP Projects",
+          paragraphs: [
+            "ERP implementations require specialized expertise across multiple areas, including:",
+          ],
+          bullets: [
+            "ERP architecture and customization",
+            "Business workflow mapping",
+            "Integration with external systems",
+            "Performance optimization",
+            "Data migration and upgrades",
+            "Ongoing support and maintenance",
+          ],
+        },
+        {
+          heading: "What In-House ERP Hiring Looks Like",
+          paragraphs: ["Hiring an internal ERP team often involves:"],
+          bullets: [
+            "Long recruitment cycles",
+            "High salary commitments",
+            "Training and onboarding time",
+            "Risk of hiring mismatches",
+            "Limited flexibility during workload fluctuations",
+            "Retention challenges in competitive markets",
+          ],
+        },
+        {
+          heading: "What Dedicated Engineering Teams Offer",
+          paragraphs: [
+            "Dedicated engineering teams act as an extension of your internal team. Instead of hiring multiple individuals, organizations gain access to a coordinated group of specialists.",
+            "This model provides:",
+          ],
+          bullets: [
+            "ERP developers and architects ready to start quickly",
+            "Functional and technical expertise in one team",
+            "Consistent collaboration with your internal staff",
+            "Flexibility to scale resources based on project needs",
+          ],
+        },
+        {
+          heading: "Speed and Scalability: The Real Difference",
+          paragraphs: [
+            "The biggest advantage of dedicated teams is speed. Recruitment for in-house roles can take months, and projects stall while seats sit empty.",
+            "With dedicated engineering teams, specialists are available quickly, capacity can scale up or down with workload, and multiple project streams can run at once. That agility matters when ERP go-live dates are fixed.",
+          ],
+        },
+        {
+          heading: "Cost Structure and Risk Comparison",
+          paragraphs: [
+            "In-house hiring includes salaries and benefits, recruitment costs, infrastructure and training, and long-term financial commitments.",
+            "Dedicated teams typically offer predictable project-based or monthly costs, no recruitment overhead, lower operational risk, and flexibility to adjust resources when projects change.",
+          ],
+        },
+        {
+          heading: "When In-House Teams Make Sense",
+          paragraphs: ["In-house teams can be the right choice when:"],
+          bullets: [
+            "ERP development is a long-term core capability",
+            "Continuous system customization is required",
+            "Internal knowledge must remain entirely within the company",
+            "Organizations have stable, predictable workloads",
+          ],
+        },
+        {
+          heading: "When Dedicated Engineering Teams Deliver Better Results",
+          paragraphs: ["Dedicated teams are often more effective when:"],
+          bullets: [
+            "ERP projects have tight delivery timelines",
+            "Specialized expertise is needed quickly",
+            "Workloads fluctuate across multiple projects",
+            "Companies want to avoid long hiring cycles",
+            "ERP partners need to expand delivery capacity",
+          ],
+        },
+        {
+          heading: "How Wan Buffer Supports ERP Projects with Dedicated Teams",
+          paragraphs: [
+            "Wan Buffer provides dedicated engineering teams to support ERP implementation and customization. Teams work as an extension of yours on:",
+          ],
+          bullets: [
+            "ERP development and customization",
+            "Workflow automation and integrations",
+            "Version upgrades and migrations",
+            "Performance optimization",
+            "Testing and ongoing support",
+          ],
+        },
+        {
+          heading: "Conclusion",
+          paragraphs: [
+            "Choosing between in-house hiring and dedicated engineering teams depends on project scale, timelines, and internal capabilities.",
+            "While internal teams offer long-term control, dedicated engineering teams provide flexibility, speed, and access to specialized expertise — making them an effective solution for complex ERP projects.",
+            "Organizations that combine strategic internal leadership with scalable engineering support often achieve the best outcomes.",
+          ],
+        },
+      ],
+      faqs: [
+        { q: "What is a dedicated engineering team?", a: "A dedicated engineering team is a group of specialists who work exclusively on your project as an extension of your internal team." },
+        { q: "Are dedicated teams suitable for long ERP projects?", a: "Yes. They can support both short-term implementations and long-term development needs." },
+        { q: "Can dedicated teams work alongside in-house teams?", a: "Absolutely. Many organizations use dedicated teams to complement internal expertise." },
+      ],
+    },
   },
   {
     slug: "why-fabric-manufacturers-are-rebuilding-erp",
@@ -340,10 +707,108 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "December 16, 2025",
     sortDate: "2025-12-16",
     author: "Kush Parmar",
-    readTime: "4 min",
+    authorRole: "Flutter Developer",
+    readTime: "10 min",
     imageSrc: "https://wanbuffer.com/blogs/wp-content/uploads/2025/12/Blog16.12.2025.png",
     category: "eCommerce",
     externalUrl: "https://wanbuffer.com/blogs/essential-odoo-integrations-u-s-companies-need-in-2025-shopify-amazon-quickbooks/",
+    detail: {
+      sections: [
+        {
+          heading: "Introduction",
+          paragraphs: [
+            "U.S. businesses rely heavily on multiple systems to run e-commerce, logistics, and finance. When these systems are disconnected, the result is data duplication, delayed decisions, and operational chaos.",
+            "Odoo solves this through integrations — connecting platforms like Shopify, Amazon, and QuickBooks into one ecosystem. In 2025, these integrations are essential for productivity, compliance, and growth.",
+          ],
+        },
+        {
+          heading: "Why Integrations Matter for U.S. Businesses",
+          paragraphs: ["Disconnected stacks typically create:"],
+          bullets: [
+            "Manual order entry and reconciliation",
+            "Inventory mismatch across channels",
+            "Slow fulfillment and customer complaints",
+            "Reporting delays and compliance risks",
+            "Higher operational costs",
+          ],
+        },
+        {
+          heading: "Shopify + Odoo: Smarter E-commerce Operations",
+          paragraphs: ["When Odoo connects with Shopify:"],
+          bullets: [
+            "Orders sync automatically into Odoo",
+            "Real-time inventory updates prevent overselling",
+            "Product details remain consistent across channels",
+            "Invoices and shipments are auto-generated",
+            "Customer behavior insights feed directly into CRM",
+          ],
+        },
+        {
+          heading: "Amazon + Odoo: High-Volume Marketplace Automation",
+          paragraphs: ["Odoo + Amazon integration helps sellers scale:"],
+          bullets: [
+            "Auto-order import and synced stock",
+            "Integrated FBA workflows",
+            "Settlement and fee reconciliation automation",
+            "Centralized listing and pricing management",
+          ],
+        },
+        {
+          heading: "QuickBooks + Odoo: Simplifying Accounting and Compliance",
+          paragraphs: ["For companies using QuickBooks, integration ensures:"],
+          bullets: [
+            "Sales and expenses sync automatically",
+            "U.S. accounting compliance remains intact",
+            "No duplicate data entry",
+            "Accurate tax reporting and audit-ready books",
+          ],
+        },
+        {
+          heading: "Additional Must-Have Integrations",
+          paragraphs: ["Beyond the three core platforms, U.S. operators typically also need:"],
+          bullets: [
+            "UPS, FedEx, USPS — shipping and tracking automation",
+            "Stripe, PayPal, Authorize.net — payment processing",
+            "Walmart, eBay, WooCommerce — marketplace expansion",
+            "3PL — outsourced warehouse fulfillment",
+            "EDI — big-box retailer compliance",
+          ],
+        },
+        {
+          heading: "Benefits of Unified Operations with Odoo",
+          paragraphs: ["A connected stack delivers:"],
+          bullets: [
+            "Real-time visibility across channels",
+            "Reduced manual effort and operational cost",
+            "Faster order processing and shipping",
+            "Accurate reporting and compliance",
+            "A scalable foundation for U.S. market growth",
+          ],
+        },
+        {
+          heading: "How Wan Buffer Helps U.S. Businesses Integrate Odoo",
+          paragraphs: ["We deliver:"],
+          bullets: [
+            "Shopify, Amazon, and QuickBooks integrations",
+            "Custom middleware for tailored workflows",
+            "3PL, logistics, and payments integrations",
+            "Automation optimized for performance",
+            "Support, enhancements, and monitoring",
+          ],
+        },
+        {
+          heading: "Conclusion",
+          paragraphs: [
+            "Disconnected systems hold U.S. businesses back. Odoo integrations with Shopify, Amazon, and QuickBooks deliver automation, visibility, and compliance while enabling rapid scaling.",
+          ],
+        },
+      ],
+      faqs: [
+        { q: "Can Odoo manage multi-channel selling in the U.S.?", a: "Yes. Odoo can centralize Shopify, Amazon, and additional channels into one system of record." },
+        { q: "Does Odoo replace QuickBooks?", a: "Over time, many companies move accounting into Odoo. The integration provides a controlled transition rather than a hard cutover." },
+        { q: "Will integrations reduce manual processing?", a: "Yes. Orders, payments, and inventory can sync automatically once the mappings and exception rules are in place." },
+      ],
+    },
   },
   {
     slug: "why-custom-odoo-modules-fail",

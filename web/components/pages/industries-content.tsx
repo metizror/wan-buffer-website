@@ -7,6 +7,7 @@ import { ArrowRightIcon } from "@/components/services/odoo-service-icons";
 
 const industries = [
   {
+    href: "/manufacturing",
     icon: "🏭",
     title: "Manufacturing",
     body: "Odoo MRP with AI shop floor intelligence, multi-level BOM management, work centre routing, predictive maintenance, autonomous procurement agents, and AI quality control. For discrete, process, and steel/metal fabrication manufacturing.",
@@ -14,6 +15,7 @@ const industries = [
     ai: false,
   },
   {
+    href: "/retail-ecommerce",
     icon: "🛒",
     title: "Retail & eCommerce",
     body: "Omnichannel ERP connecting Shopify, Magento, and physical POS to Odoo inventory and accounting. AI demand forecasting, auto-replenishment, customer LTV prediction, and personalisation engine built on your own data.",
@@ -21,6 +23,7 @@ const industries = [
     ai: false,
   },
   {
+    href: "/logistics-3pl",
     icon: "🚚",
     title: "Logistics & 3PL",
     body: "Smart WMS with AI route optimisation, real-time SLA monitoring, carrier integration (DHL, Aramex, FedEx), multi-warehouse routing, vendor-managed inventory, and customer delivery portal with live tracking.",
@@ -28,6 +31,7 @@ const industries = [
     ai: false,
   },
   {
+    href: "/healthcare",
     icon: "🏥",
     title: "Healthcare",
     body: "HIPAA-aligned Odoo architecture with AI appointment scheduling, patient flow automation, intelligent pharmacy inventory management, insurance and billing automation, and document processing for clinical paperwork.",
@@ -35,6 +39,7 @@ const industries = [
     ai: true,
   },
   {
+    href: "/finance-services",
     icon: "💼",
     title: "Finance & Services",
     body: "AI compliance monitoring, automated multi-currency reconciliation, intelligent CRM with AI lead scoring, KYC and document automation, GCC VAT and GST compliance, and fraud detection for financial institutions.",
@@ -42,6 +47,7 @@ const industries = [
     ai: true,
   },
   {
+    href: "/real-estate",
     icon: "🏢",
     title: "Real Estate",
     body: "AI-powered broker CRM with lead qualification, automated lease workflows and contract generation, predictive occupancy analytics, property listing portal, investor reporting, and commission tracking for developers and property managers.",
@@ -49,6 +55,7 @@ const industries = [
     ai: true,
   },
   {
+    href: "/steel-metal-fabrication",
     icon: "🔩",
     title: "Steel & Metal Fabrication",
     body: "Heat number traceability, BOM for steel products, coil-to-cut production scheduling, weight-based inventory management, quality certificates, and supplier portal for steel service centres and metal distributors.",
@@ -56,6 +63,7 @@ const industries = [
     ai: false,
   },
   {
+    href: "/construction-projects",
     icon: "🏗️",
     title: "Construction & Projects",
     body: "Project ERP with BOQ management, subcontractor portal, material procurement linked to project phases, equipment tracking, site progress dashboards, and retention management for construction companies.",
@@ -63,6 +71,7 @@ const industries = [
     ai: false,
   },
   {
+    href: "/textile-apparel",
     icon: "🧵",
     title: "Textile & Apparel",
     body: "Style-level BOM management, season and collection planning, AI demand forecasting by SKU, yarn and fabric inventory, vendor collaboration portal, and quality inspection workflows for apparel manufacturers and brands.",
@@ -136,8 +145,8 @@ export function IndustriesContent() {
       <section className="oi-bento-sec" id="verticals">
         <div className="oi-bento-inner">
           <div className="oi-bento rev">
-            {industries.map((it, i) => (
-              <div key={it.title} className={`oi-bento-card${it.ai ? " ai" : ""}`}>
+            {industries.map((it) => (
+              <Link key={it.title} href={it.href} className={`oi-bento-card${it.ai ? " ai" : ""}`} style={{ textDecoration: "none", color: "inherit" }}>
                 <div className="oi-bento-card-head">
                   <div
                     className="oi-bento-icon"
@@ -156,7 +165,7 @@ export function IndustriesContent() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -182,7 +191,7 @@ export function IndustriesContent() {
                   <ArrowRightIcon />
                 </span>
               </Link>
-              <Link className="oi-closer-cta-link" href="/#platforms">
+            <Link className="oi-closer-cta-link" href="/odoo">
                 Explore ERP Services
               </Link>
             </div>

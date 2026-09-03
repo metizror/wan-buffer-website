@@ -74,7 +74,7 @@ export function WanbufferiansTestimonials() {
             <p className="wb-discuss-privacy">
               We will add your information to our CRM for contacting you regarding your request. For more
               details, please consult our{" "}
-              <a href="https://wanbuffer.com/privacy-policy.php" target="_blank" rel="noreferrer">
+              <a href="/privacy-policy">
                 privacy policy
               </a>
               .

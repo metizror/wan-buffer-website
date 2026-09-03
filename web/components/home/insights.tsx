@@ -1,4 +1,31 @@
+import Link from "next/link";
+
+const FEATURED = [
+  {
+    href: "/blogs/essential-odoo-integrations-us-companies-need-2025",
+    category: "Odoo · Integrations",
+    title: "Essential Odoo Integrations US Companies Need in 2025",
+    meta: "Shopify, Amazon & QuickBooks",
+    featured: true,
+  },
+  {
+    href: "/blogs/why-generic-erp-fails-for-oil-and-gas-suppliers",
+    category: "Oil & Gas · ERP",
+    title: "Why Generic ERP Fails for Oil and Gas Suppliers",
+    meta: "Project-based procurement",
+  },
+  {
+    href: "/blogs/dedicated-engineering-teams-vs-in-house-hiring",
+    category: "Strategy · Teams",
+    title: "Dedicated Engineering Teams vs In-House Hiring for ERP",
+    meta: "Delivery models",
+  },
+] as const;
+
 export function HomeInsights() {
+  const featured = FEATURED[0];
+  const rest = FEATURED.slice(1);
+
   return (
     <section className="insights" id="insights">
       <div className="ins-hdr rev">
@@ -8,40 +35,31 @@ export function HomeInsights() {
             AI + ERP <span className="acc">Insights</span>
           </h2>
         </div>
-        <a className="link-r" href="#">
+        <Link className="link-r" href="/blogs">
           All Articles →
-        </a>
+        </Link>
       </div>
       <div className="ins-grid rev">
-        <div className="ins-main">
+        <Link className="ins-main" href={featured.href} style={{ textDecoration: "none", color: "inherit" }}>
           <div className="ins-c">
-            <span className="ins-cat">AI Agents · Manufacturing ERP</span>
-            <div className="ins-title">How AI Agents Are Replacing Manual ERP Data Entry in Manufacturing</div>
-            <div className="ins-meta">Feb 20, 2026 · Mit Mathukiya · 8 min read</div>
+            <span className="ins-cat">{featured.category}</span>
+            <div className="ins-title">{featured.title}</div>
+            <div className="ins-meta">{featured.meta}</div>
           </div>
-        </div>
-        <div className="ins-card">
-          <div>
-            <span className="ins-cat">AI · Odoo</span>
-            <div className="ins-title">Building Your First AI Agent Inside Odoo 17: A Practical Guide</div>
-            <div className="ins-meta">Feb 10, 2026 · Kush Parmar</div>
+        </Link>
+        {rest.map((item) => (
+          <div key={item.href} className="ins-card">
+            <div>
+              <span className="ins-cat">{item.category}</span>
+              <div className="ins-title">{item.title}</div>
+              <div className="ins-meta">{item.meta}</div>
+            </div>
+            <Link className="ins-link" href={item.href}>
+              Read Article →
+            </Link>
           </div>
-          <a className="ins-link" href="#">
-            Read Article →
-          </a>
-        </div>
-        <div className="ins-card">
-          <div>
-            <span className="ins-cat">Strategy · ERP</span>
-            <div className="ins-title">AI-Enabled vs. Traditional ERP: What the Data Says After 100 Implementations</div>
-            <div className="ins-meta">Jan 28, 2026 · Saloni Darji</div>
-          </div>
-          <a className="ins-link" href="#">
-            Read Article →
-          </a>
-        </div>
+        ))}
       </div>
     </section>
   );
 }
-

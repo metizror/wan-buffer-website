@@ -307,7 +307,7 @@ export function OdooAppDetailContent({ app }: OdooAppDetailContentProps) {
               Odoo Implementation
               <ArrowRightIcon />
             </Link>
-            <Link className="oa-card-secondary" href="/odoo/odoo-customization-and-installation">
+            <Link className="oa-card-secondary" href="/odoo/customization">
               Odoo Customisation
             </Link>
           </div>
