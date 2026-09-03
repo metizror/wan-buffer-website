@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const OXP_URL =
@@ -7,9 +8,11 @@ const OXP_URL =
 
 /**
  * Floating "upcoming event" bar, styled as a search-style pill pinned to the
- * bottom centre. Clicking it opens a short event modal. Home page only.
+ * bottom centre. Clicking it opens a short event modal. Rendered from the root
+ * layout so every public page carries it; hidden on the admin panel.
  */
 export function HomeOxpFloat() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [dismissed, setDismissed] = useState(false);
 
@@ -22,6 +25,9 @@ export function HomeOxpFloat() {
     return () => document.removeEventListener("keydown", onKey);
   }, [open]);
 
+  // Marketing-only widget: the admin panel and its login screen are not
+  // public pages, so it has no place there.
+  if (pathname?.startsWith("/admin")) return null;
   if (dismissed) return null;
 
   return (
