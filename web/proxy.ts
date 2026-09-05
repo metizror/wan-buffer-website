@@ -38,8 +38,10 @@ export async function proxy(request: NextRequest) {
     }
   }
 
-  // ── URL redirect lookup (skip API, admin, static, and file requests) ──
+  // ── URL redirect lookup (skip API, admin, static, homepage, and file requests) ──
+  // Homepage has no redirects; awaiting Mongo here added ~3s TTFB and crushed Lighthouse.
   if (
+    path !== "/" &&
     !path.startsWith("/api/") &&
     !path.startsWith("/admin") &&
     !path.startsWith("/_next/") &&

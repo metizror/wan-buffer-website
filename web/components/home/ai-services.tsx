@@ -14,9 +14,8 @@ export function HomeAiServices() {
           </div>
           <div className="ai-serv-hdr-r">
             <p className="sec-p light">
-              We design, build, and deploy AI agents, automation workflows, and predictive analytics — integrating
-              natively with your ERP to eliminate manual work, surface real-time intelligence, and drive measurable
-              operational outcomes across every business function.
+              We build AI agents, automation, and forecasts that live inside your ERP. The point is less manual work,
+              clearer numbers, and results you can see on the floor, not another dashboard nobody opens.
             </p>
             <a className="btn-ai" href="/#contact" style={{ width: "fit-content", marginTop: 16 }}>
               <span>Discuss Your AI Needs →</span>
@@ -30,8 +29,8 @@ export function HomeAiServices() {
             <div className="as-cat">Core Service</div>
             <div className="as-title">AI Agents for ERP</div>
             <p className="as-body">
-              Autonomous agents that monitor, decide, and act inside your Odoo modules — from auto-generating purchase
-              orders when stock hits reorder points, to resolving invoice discrepancies without human intervention.
+              Agents that watch your Odoo modules, then act: raise a purchase order when stock hits reorder, or clear
+              an invoice mismatch without someone chasing it by hand.
             </p>
             <div className="as-tags">
               <span className="as-tag">LangChain</span>
@@ -46,7 +45,7 @@ export function HomeAiServices() {
             <div className="as-title">Workflow Automation</div>
             <p className="as-body">
               Map, analyse, and automate your most time-consuming ERP processes. From multi-step approval chains to
-              cross-module data synchronisation — zero-touch, zero-error.
+              cross-module data synchronisation, zero-touch, zero-error.
             </p>
             <div className="as-tags">
               <span className="as-tag">RPA</span>
@@ -60,7 +59,7 @@ export function HomeAiServices() {
             <div className="as-cat">Core Service</div>
             <div className="as-title">Predictive Analytics &amp; ML</div>
             <p className="as-body">
-              Custom ML models trained on your ERP data — demand forecasting, churn prediction, production yield
+              Custom ML models trained on your ERP data, demand forecasting, churn prediction, production yield
               optimisation, and anomaly detection that surface insights before issues occur.
             </p>
             <div className="as-tags">
@@ -75,7 +74,7 @@ export function HomeAiServices() {
             <div className="as-cat">Advanced Service</div>
             <div className="as-title">AI Copilots &amp; Chatbots</div>
             <p className="as-body">
-              Natural language interfaces for ERP — let your team query inventory, create sales orders, or check
+              Natural language interfaces for ERP, let your team query inventory, create sales orders, or check
               financials using plain English. Embedded inside Odoo or as standalone assistants.
             </p>
             <div className="as-tags">
@@ -90,7 +89,7 @@ export function HomeAiServices() {
             <div className="as-cat">Advanced Service</div>
             <div className="as-title">Intelligent Document Processing</div>
             <p className="as-body">
-              AI-powered OCR that reads, validates, and processes invoices, POs, delivery notes, and contracts —
+              AI-powered OCR that reads, validates, and processes invoices, POs, delivery notes, and contracts : 
               automatically pushing structured data into the right Odoo fields.
             </p>
             <div className="as-tags">
@@ -128,7 +127,7 @@ export function HomeAiServices() {
               <div className="auc-icon-box">📦</div>
               <div className="auc-title">Smart Inventory Replenishment</div>
               <p className="auc-body">
-                AI agent monitors stock levels, predicts demand, and raises purchase orders autonomously — zero manual
+                AI agent monitors stock levels, predicts demand, and raises purchase orders autonomously, zero manual
                 intervention.
               </p>
               <span className="auc-module">Odoo Purchase · Inventory</span>
@@ -158,7 +157,7 @@ export function HomeAiServices() {
               <div className="auc-icon-box">🚛</div>
               <div className="auc-title">AI Route Optimisation</div>
               <p className="auc-body">
-                Real-time delivery route optimisation integrated with Odoo logistics — reducing fuel costs and
+                Real-time delivery route optimisation integrated with Odoo logistics, reducing fuel costs and
                 improving SLA compliance.
               </p>
               <span className="auc-module">Odoo Inventory · Delivery</span>
@@ -195,7 +194,7 @@ export function HomeAiServices() {
               <div className="auc-icon-box">📊</div>
               <div className="auc-title">Executive AI Dashboard</div>
               <p className="auc-body">
-                Ask your ERP questions in plain English and receive instant AI-generated insights — no SQL, no waiting.
+                Ask your ERP questions in plain English and receive instant AI-generated insights, no SQL, no waiting.
               </p>
               <span className="auc-module">Odoo BI · Reporting</span>
             </div>

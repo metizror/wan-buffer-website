@@ -25,7 +25,7 @@ function remainingFrom(now: number): Remaining | null {
 
 /**
  * Hero countdown. Starts empty so the server render and the first client render
- * agree, then fills in on mount — the clock cannot match across the two.
+ * agree, then fills in on mount, the clock cannot match across the two.
  */
 export function Oxp2026Countdown() {
   const [left, setLeft] = useState<Remaining | null>(null);

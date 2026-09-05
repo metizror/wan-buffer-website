@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { ProjectBasedContent } from "@/components/services/project-based-content";
 
 export const metadata: Metadata = {
-  title: "Project-Based Engagement | Fixed Scope, Fixed Price ERP & AI Delivery — Wan Buffer",
+  title: "Project-Based Engagement | Fixed Scope, Fixed Price ERP & AI Delivery | Wan Buffer",
   description:
     "Fixed-scope, fixed-price ERP and AI project delivery with defined milestones, dedicated project manager, transparent contracts, and 3-month post-launch support. From discovery to go-live in 4–16 weeks.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Project-Based Engagement — Fixed Scope, Fixed Price ERP & AI Delivery | Wan Buffer",
+    title: "Project-Based Engagement: Fixed Scope, Fixed Price ERP & AI Delivery | Wan Buffer",
     description:
-      "Fixed-scope, fixed-price ERP and AI project delivery with milestones, dedicated PM, and 3-month post-launch support — from discovery to go-live in 4–16 weeks.",
+      "Fixed-scope, fixed-price ERP and AI project delivery with milestones, dedicated PM, and 3-month post-launch support, from discovery to go-live in 4–16 weeks.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/project-based" },

@@ -1,5 +1,5 @@
 /**
- * SEO score — deterministic, dependency-free. Safe to import on both the
+ * SEO score: deterministic, dependency-free. Safe to import on both the
  * server (to persist `lastSeoScore`) and the client (live Analysis preview).
  */
 

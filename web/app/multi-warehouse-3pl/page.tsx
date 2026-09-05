@@ -11,7 +11,7 @@ import { MultiWarehouse3plContent } from "@/components/services/multi-warehouse-
 export const metadata: Metadata = {
   title: "Multi-Warehouse + 3PL Sync | Real-Time Fulfilment Routing | Wan Buffer",
   description:
-    "Multi-warehouse orchestration and 3PL integration — intelligent order routing, real-time inventory sync across locations, carrier integration, and fulfilment automation for eCommerce and distribution businesses.",
+    "Multi-warehouse orchestration and 3PL integration, intelligent order routing, real-time inventory sync across locations, carrier integration, and fulfilment automation for eCommerce and distribution businesses.",
   keywords: [
     "multi-warehouse management",
     "3PL integration",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Multi-Warehouse + 3PL Sync — Real-Time Fulfilment Routing | Wan Buffer",
+    title: "Multi-Warehouse + 3PL Sync: Real-Time Fulfilment Routing | Wan Buffer",
     description:
-      "Multi-warehouse orchestration and 3PL sync — intelligent order routing, real-time inventory across locations, and fulfilment automation.",
+      "Multi-warehouse orchestration and 3PL sync, intelligent order routing, real-time inventory across locations, and fulfilment automation.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/multi-warehouse-3pl" },

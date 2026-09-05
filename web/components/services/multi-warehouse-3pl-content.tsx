@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   MULTI-WAREHOUSE + 3PL SYNC — unique page design
+   MULTI-WAREHOUSE + 3PL SYNC, unique page design
    Hero split + network map · 3PL partner cards · Feature rows ·
    Fulfilment flow · Stats · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -47,17 +47,17 @@ const LOCATIONS = [
 
 /* ── 3PL partners ── */
 const PARTNERS = [
-  { icon: <PackageIcon />, t: "Shiprocket", s: "Auto label generation, tracking sync, rate shopping across 17+ carriers, and NDR management — connected to your ERP.", status: "Integrated" },
+  { icon: <PackageIcon />, t: "Shiprocket", s: "Auto label generation, tracking sync, rate shopping across 17+ carriers, and NDR management, connected to your ERP.", status: "Integrated" },
   { icon: <RocketIcon />, t: "Delhivery", s: "Warehouse-in/out sync, reverse logistics, weight discrepancy resolution, and COD remittance tracking.", status: "Integrated" },
-  { icon: <CloudIcon />, t: "Custom 3PL API", s: "Any 3PL with an API — we build custom connectors for ASN, GRN, despatch, and returns with full error handling.", status: "Configurable" },
+  { icon: <CloudIcon />, t: "Custom 3PL API", s: "Any 3PL with an API, we build custom connectors for ASN, GRN, despatch, and returns with full error handling.", status: "Configurable" },
 ] as const;
 
 /* ── Features ── */
 const FEATURES = [
   { icon: <SettingsIcon />, t: "Intelligent Order Routing", s: "Orders route to the optimal warehouse or 3PL based on proximity to customer, stock availability, carrier cost, and delivery SLA. Rules engine configurable per product category, region, and order value." },
-  { icon: <RefreshIcon />, t: "Real-Time Inventory Sync", s: "Stock levels sync across all warehouses and 3PL partners within seconds. Available-to-promise quantities calculated in real time — no overselling, no manual stock counts." },
-  { icon: <PackageIcon />, t: "Inter-Warehouse Transfers", s: "When a location runs low, the system triggers internal transfers automatically. Transfer orders create, route for approval, and update stock at both ends — zero manual intervention." },
-  { icon: <MonitorIcon />, t: "Fulfilment Dashboard", s: "Live visibility into order status, warehouse utilisation, 3PL performance, carrier SLAs, and delivery exceptions — across every location from a single screen." },
+  { icon: <RefreshIcon />, t: "Real-Time Inventory Sync", s: "Stock levels sync across all warehouses and 3PL partners within seconds. Available-to-promise quantities calculated in real time, no overselling, no manual stock counts." },
+  { icon: <PackageIcon />, t: "Inter-Warehouse Transfers", s: "When a location runs low, the system triggers internal transfers automatically. Transfer orders create, route for approval, and update stock at both ends, zero manual intervention." },
+  { icon: <MonitorIcon />, t: "Fulfilment Dashboard", s: "Live visibility into order status, warehouse utilisation, 3PL performance, carrier SLAs, and delivery exceptions, across every location from a single screen." },
   { icon: <RocketIcon />, t: "Carrier Rate Shopping", s: "Compare rates across carriers in real time at dispatch. Auto-select the cheapest or fastest option based on order priority, weight, and destination." },
   { icon: <ShieldIcon />, t: "Returns & Reverse Logistics", s: "Return requests route to the nearest warehouse or 3PL. Quality inspection gates, refund triggers, and restocking rules run automatically." },
 ] as const;
@@ -91,9 +91,9 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "How does intelligent order routing work?", a: "When an order arrives, the routing engine evaluates all fulfilment locations — checking stock availability, proximity to customer, carrier costs, and delivery SLAs. The optimal location is selected automatically. Rules are configurable per product, region, and priority." },
+  { q: "How does intelligent order routing work?", a: "When an order arrives, the routing engine evaluates all fulfilment locations, checking stock availability, proximity to customer, carrier costs, and delivery SLAs. The optimal location is selected automatically. Rules are configurable per product, region, and priority." },
   { q: "Can you integrate with any 3PL provider?", a: "Yes. We integrate with Shiprocket, Delhivery, FedEx, DHL, BlueDart, and any 3PL with an API. Custom connectors handle ASN, GRN, dispatch confirmation, tracking, and returns." },
-  { q: "How quickly does inventory sync across locations?", a: "Within seconds via webhooks and API polling. Stock changes at any warehouse or 3PL propagate to all connected systems in real time — ERP, eCommerce storefront, and fulfilment dashboard." },
+  { q: "How quickly does inventory sync across locations?", a: "Within seconds via webhooks and API polling. Stock changes at any warehouse or 3PL propagate to all connected systems in real time. ERP, eCommerce storefront, and fulfilment dashboard." },
   { q: "Do you handle returns and reverse logistics?", a: "Yes. Return requests route to the nearest location. Quality inspection, refund triggers, and restocking rules are automated. Return analytics track reasons, costs, and patterns." },
   { q: "Which ERP and eCommerce platforms do you support?", a: "Odoo, Zoho, SAP for ERP. Shopify, Magento, WooCommerce for eCommerce. We build the middleware that connects your storefront, ERP, and 3PL partners into one system." },
   { q: "How long does implementation take?", a: "Single warehouse + 1 3PL: 3–4 weeks. Multi-warehouse with intelligent routing and multiple 3PLs: 6–10 weeks. Complexity depends on the number of locations, carriers, and routing rules." },
@@ -104,7 +104,7 @@ export function MultiWarehouse3plContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + network map right ═══ */}
+      {/* ═══ HERO: text left + network map right ═══ */}
       <section className="mw-hero">
         <div className="mw-hero-glow mw-hero-glow-1" aria-hidden="true" />
         <div className="mw-hero-glow mw-hero-glow-2" aria-hidden="true" />
@@ -119,7 +119,7 @@ export function MultiWarehouse3plContent() {
               <span className="acc">Route. Ship. Track.</span>
             </h1>
             <p className="mw-hero-sub rev">
-              Intelligent order routing, real-time inventory sync across locations, and 3PL partner integration — <strong>one system for every fulfilment point.</strong>
+              Intelligent order routing, real-time inventory sync across locations, and 3PL partner integration, <strong>one system for every fulfilment point.</strong>
             </p>
             <div className="mw-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -183,7 +183,7 @@ export function MultiWarehouse3plContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — rows ═══ */}
+      {/* ═══ FEATURES: rows ═══ */}
       <section className="mw-feat" id="features">
         <div className="mw-feat-inner">
           <div className="mw-feat-hdr rev">
@@ -285,10 +285,10 @@ export function MultiWarehouse3plContent() {
                 <div className="oi-closer-insight-stat">45%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of multi-location businesses have inventory discrepancies across systems.</strong>
-                  Source: Zebra Technologies, 2024. The cause is disconnected warehouses — each with its own stock count, its own processes, and no real-time sync to the systems that matter.
+                  Source: Zebra Technologies, 2024. The cause is disconnected warehouses, each with its own stock count, its own processes, and no real-time sync to the systems that matter.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer multi-warehouse deployment connects everything — ERP, eCommerce, warehouses, and 3PL partners — into one real-time system.</p>
+              <p>That&apos;s why every Wan Buffer multi-warehouse deployment connects everything. ERP, eCommerce, warehouses, and 3PL partners, into one real-time system.</p>
             </div>
           </div>
 
@@ -311,7 +311,7 @@ export function MultiWarehouse3plContent() {
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><EyeIcon /></div>
                 <div className="oi-closer-commit-t">Full visibility</div>
-                <p className="oi-closer-commit-b">One dashboard for all locations, carriers, and 3PL partners. Stock levels, order status, and delivery performance — real time.</p>
+                <p className="oi-closer-commit-b">One dashboard for all locations, carriers, and 3PL partners. Stock levels, order status, and delivery performance, real time.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>

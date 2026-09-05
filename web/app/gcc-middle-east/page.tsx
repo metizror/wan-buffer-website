@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { GccMiddleEastContent } from "@/components/services/gcc-middle-east-content";
 
 export const metadata: Metadata = {
-  title: "GCC & Middle East ERP | Arabic UI, GCC VAT & Multi-Currency — Wan Buffer",
+  title: "GCC & Middle East ERP | Arabic UI, GCC VAT & Multi-Currency | Wan Buffer",
   description:
     "GCC and Middle East ERP localisation with Arabic RTL interface, GCC VAT compliance, multi-currency operations, WPS payroll, e-invoicing, and free zone configurations. For businesses in UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "GCC & Middle East ERP — Arabic UI, GCC VAT & Multi-Currency | Wan Buffer",
+    title: "GCC & Middle East ERP: Arabic UI, GCC VAT & Multi-Currency | Wan Buffer",
     description:
-      "GCC and Middle East ERP with Arabic RTL interface, VAT compliance, multi-currency, WPS payroll, and free zone configurations — for UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman.",
+      "GCC and Middle East ERP with Arabic RTL interface, VAT compliance, multi-currency, WPS payroll, and free zone configurations, for UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/gcc-middle-east" },

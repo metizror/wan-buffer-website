@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { ManufacturingContent } from "@/components/services/manufacturing-content";
 
 export const metadata: Metadata = {
-  title: "Manufacturing ERP | MRP, AI Quality Gates & Predictive Maintenance — Wan Buffer",
+  title: "Manufacturing ERP | MRP, AI Quality Gates & Predictive Maintenance | Wan Buffer",
   description:
     "End-to-end manufacturing ERP with Odoo MRP, multi-level BOM management, AI-powered quality gates, predictive maintenance, work centre routing, and autonomous procurement agents. For discrete, process, and metal fabrication manufacturing.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Manufacturing ERP — MRP, AI Quality Gates & Predictive Maintenance | Wan Buffer",
+    title: "Manufacturing ERP: MRP, AI Quality Gates & Predictive Maintenance | Wan Buffer",
     description:
-      "Odoo MRP with AI shop floor intelligence, multi-level BOM management, predictive maintenance, and autonomous procurement agents — for discrete, process, and metal fabrication manufacturing.",
+      "Odoo MRP with AI shop floor intelligence, multi-level BOM management, predictive maintenance, and autonomous procurement agents, for discrete, process, and metal fabrication manufacturing.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/manufacturing" },

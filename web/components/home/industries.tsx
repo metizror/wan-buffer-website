@@ -35,7 +35,7 @@ export function HomeIndustries() {
           </div>
           <div className="ind-card-name">Manufacturing</div>
           <div className="ind-card-body">
-            Odoo MRP + AI shop floor intelligence — predictive maintenance, autonomous procurement agents, and AI
+            Odoo MRP + AI shop floor intelligence, predictive maintenance, autonomous procurement agents, and AI
             quality control.
           </div>
           <div className="ind-card-feats">
@@ -91,7 +91,7 @@ export function HomeIndustries() {
           </div>
           <div className="ind-card-name">Logistics &amp; 3PL</div>
           <div className="ind-card-body">
-            AI route optimisation, autonomous shipment tracking, and intelligent 3PL billing — fully integrated with
+            AI route optimisation, autonomous shipment tracking, and intelligent 3PL billing, fully integrated with
             Odoo.
           </div>
           <div className="ind-card-feats">

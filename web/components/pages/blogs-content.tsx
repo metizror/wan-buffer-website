@@ -31,7 +31,7 @@ export function BlogsContent({ initialData }: BlogsContentProps) {
             </span>
           </h1>
           <p className="oi-hero-lux-sub rev">
-            Deep dives into ERP strategy, Odoo engineering, AI automation, and industry-specific digital transformation — written by the engineers who build it.
+            Deep dives into ERP strategy, Odoo engineering, AI automation, and industry-specific digital transformation, written by the engineers who build it.
           </p>
           <div className="oi-hero-lux-cta rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -64,7 +64,7 @@ export function BlogsContent({ initialData }: BlogsContentProps) {
       <section className="oi-host-intro-band" aria-label="About our blog">
         <div className="oi-host-intro-band-inner rev">
           <p>
-            Practical insights from our engineering and consulting teams — covering ERP implementation strategy, Odoo customisation, industry-specific automation, and digital transformation playbooks for manufacturing, logistics, oil &amp; gas, and more.
+            Practical insights from our engineering and consulting teams, covering ERP implementation strategy, Odoo customisation, industry-specific automation, and digital transformation playbooks for manufacturing, logistics, oil &amp; gas, and more.
           </p>
           <a className="oi-host-intro-cta" href="#blog-list">
             View all articles
@@ -86,7 +86,7 @@ export function BlogsContent({ initialData }: BlogsContentProps) {
               Have a project <span>in mind?</span>
             </h2>
             <p>
-              Reach out for ERP consulting, Odoo implementation, or AI automation — our engineering team is ready to help.
+              Reach out for ERP consulting, Odoo implementation, or AI automation, our engineering team is ready to help.
             </p>
           </div>
           <div className="oi-supp-grid rev">

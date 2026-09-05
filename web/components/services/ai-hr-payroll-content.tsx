@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   AI-ASSISTED HR & PAYROLL — unique page design
+   AI-ASSISTED HR & PAYROLL, unique page design
    Centered hero + journey strip · Tall module cards · Asymmetric
    split showcase · Stacked phase bands · Inline stat ticker ·
    Platforms · Closer · Support
@@ -48,7 +48,7 @@ const JOURNEY = [
   { t: "Active employee", status: "pending" as const },
 ] as const;
 
-/* ── HR modules — tall cards ── */
+/* ── HR modules: tall cards ── */
 const MODULES = [
   { icon: <UsersIcon />, t: "AI Onboarding", bullets: ["Auto-trigger IT, finance, and HR workflows", "Document collection with AI verification", "Training plan assignment by role", "Progress tracking with manager alerts"] },
   { icon: <ClockIcon />, t: "Leave Management", bullets: ["Employee self-service leave requests", "AI conflict detection for team coverage", "Auto-approval rules by policy", "Leave balance forecasting"] },
@@ -58,15 +58,15 @@ const MODULES = [
 
 /* ── Showcase features ── */
 const SHOWCASE_FEATURES = [
-  { icon: <SparklesIcon />, t: "AI Resume Screening", s: "ML models rank candidates by fit, flag missing qualifications, and suggest interview questions — reducing screening time by 80%." },
-  { icon: <BarChartIcon />, t: "Attrition Prediction", s: "Identify flight-risk employees using engagement, performance, and behavioural signals — intervene before resignation." },
-  { icon: <MonitorIcon />, t: "Workforce Analytics", s: "Headcount trends, department costs, overtime patterns, and productivity metrics — updated in real time from your ERP." },
-  { icon: <MailIcon />, t: "HR Chatbot", s: "Employees ask about policies, leave balances, payslips, and benefits through natural language — 24/7, no HR ticket required." },
+  { icon: <SparklesIcon />, t: "AI Resume Screening", s: "ML models rank candidates by fit, flag missing qualifications, and suggest interview questions, reducing screening time by 80%." },
+  { icon: <BarChartIcon />, t: "Attrition Prediction", s: "Identify flight-risk employees using engagement, performance, and behavioural signals, intervene before resignation." },
+  { icon: <MonitorIcon />, t: "Workforce Analytics", s: "Headcount trends, department costs, overtime patterns, and productivity metrics, updated in real time from your ERP." },
+  { icon: <MailIcon />, t: "HR Chatbot", s: "Employees ask about policies, leave balances, payslips, and benefits through natural language, 24/7, no HR ticket required." },
 ] as const;
 
 /* ── Process phases ── */
 const PHASES = [
-  { num: "01", t: "Audit & map", b: "We map your entire HR lifecycle — recruitment, onboarding, leave, payroll, performance, and exit. Every manual touchpoint, approval chain, and data handoff is documented.", icon: <SearchIcon />, deliverables: ["Process map", "Automation candidates", "ROI projection"] },
+  { num: "01", t: "Audit & map", b: "We map your entire HR lifecycle, recruitment, onboarding, leave, payroll, performance, and exit. Every manual touchpoint, approval chain, and data handoff is documented.", icon: <SearchIcon />, deliverables: ["Process map", "Automation candidates", "ROI projection"] },
   { num: "02", t: "Automate & integrate", b: "AI-powered workflows replace manual steps. Onboarding triggers cascade to IT, finance, and training. Payroll calculations auto-apply tax rules and statutory deductions. Leave approvals route by policy.", icon: <SettingsIcon />, deliverables: ["Live workflows", "ERP integration", "Test suite"] },
   { num: "03", t: "Deploy & optimise", b: "Employee self-service portals, manager dashboards, and HR chatbots go live. Continuous monitoring ensures accuracy and adoption. Models retrain as workforce patterns evolve.", icon: <RocketIcon />, deliverables: ["Self-service portal", "Dashboards", "Feedback loops"] },
 ] as const;
@@ -96,7 +96,7 @@ export function AiHrPayrollContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered + journey strip ═══ */}
+      {/* ═══ HERO: centered + journey strip ═══ */}
       <section className="hr-hero">
         <div className="hr-hero-glow hr-hero-glow-1" aria-hidden="true" />
         <div className="hr-hero-glow hr-hero-glow-2" aria-hidden="true" />
@@ -110,7 +110,7 @@ export function AiHrPayrollContent() {
             <span className="acc">&amp; Payroll.</span>
           </h1>
           <p className="hr-hero-sub rev">
-            Intelligent onboarding, automated payroll, AI-powered leave management, and employee self-service — <strong>built into your ERP, not bolted on.</strong>
+            Intelligent onboarding, automated payroll, AI-powered leave management, and employee self-service, <strong>built into your ERP, not bolted on.</strong>
           </p>
           <div className="hr-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -151,7 +151,7 @@ export function AiHrPayrollContent() {
         </div>
       </section>
 
-      {/* ═══ HR MODULES — 4 tall cards ═══ */}
+      {/* ═══ HR MODULES: 4 tall cards ═══ */}
       <section className="hr-mods" id="modules">
         <div className="hr-mods-inner">
           <div className="hr-mods-hdr rev">
@@ -174,7 +174,7 @@ export function AiHrPayrollContent() {
         </div>
       </section>
 
-      {/* ═══ AI SHOWCASE — asymmetric split ═══ */}
+      {/* ═══ AI SHOWCASE: asymmetric split ═══ */}
       <section className="hr-show" id="ai-features">
         <div className="hr-show-inner">
           <div className="hr-show-hdr rev">
@@ -185,7 +185,7 @@ export function AiHrPayrollContent() {
             <div className="hr-show-left">
               <div className="hr-show-left-icon"><CpuIcon /></div>
               <div className="hr-show-left-t">AI that understands<br />your workforce</div>
-              <p className="hr-show-left-s">Beyond basic automation — ML models that predict attrition, screen candidates, answer employee questions, and surface workforce insights your leadership team actually uses.</p>
+              <p className="hr-show-left-s">Beyond basic automation: ML models that predict attrition, screen candidates, answer employee questions, and surface workforce insights your leadership team actually uses.</p>
             </div>
             <div className="hr-show-right">
               {SHOWCASE_FEATURES.map((f) => (
@@ -202,7 +202,7 @@ export function AiHrPayrollContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — stacked phase bands ═══ */}
+      {/* ═══ PROCESS: stacked phase bands ═══ */}
       <section className="hr-proc" id="process">
         <div className="hr-proc-inner">
           <div className="hr-proc-hdr rev">
@@ -272,10 +272,10 @@ export function AiHrPayrollContent() {
                 <div className="oi-closer-insight-stat">65%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of HR teams still spend most of their time on administrative tasks.</strong>
-                  Source: McKinsey, 2024. The problem isn&apos;t missing tools — it&apos;s tools that digitise paperwork without actually automating the underlying processes, approvals, and cross-department handoffs.
+                  Source: McKinsey, 2024. The problem isn&apos;t missing tools, it&apos;s tools that digitise paperwork without actually automating the underlying processes, approvals, and cross-department handoffs.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer HR deployment automates the full workflow — not just the form. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer HR deployment automates the full workflow, not just the form. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -286,25 +286,25 @@ export function AiHrPayrollContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">End-to-end workflow automation</div>
-                <p className="oi-closer-commit-b">Onboarding isn&apos;t just an HR form — it triggers IT provisioning, finance setup, training assignment, and manager notifications. Every handoff is automated.</p>
+                <p className="oi-closer-commit-b">Onboarding isn&apos;t just an HR form, it triggers IT provisioning, finance setup, training assignment, and manager notifications. Every handoff is automated.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed KPIs</div>
-                <p className="oi-closer-commit-b">Onboarding time reduction, payroll accuracy, and HR ticket volume are defined before development. If we miss targets, we keep iterating — at our cost.</p>
+                <p className="oi-closer-commit-b">Onboarding time reduction, payroll accuracy, and HR ticket volume are defined before development. If we miss targets, we keep iterating, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
                 <div className="oi-closer-commit-t">Compliance built in</div>
-                <p className="oi-closer-commit-b">Labour law compliance, statutory reporting, GDPR data handling, and audit trails built into every workflow — not added as an afterthought.</p>
+                <p className="oi-closer-commit-b">Labour law compliance, statutory reporting, GDPR data handling, and audit trails built into every workflow, not added as an afterthought.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><HeartIcon /></div>
                 <div className="oi-closer-commit-t">Senior HR engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineers who design your HR automation are the ones who build, deploy, and support it — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineers who design your HR automation are the ones who build, deploy, and support it, named in the contract.</p>
               </div>
             </div>
           </div>
@@ -347,7 +347,7 @@ export function AiHrPayrollContent() {
               <div className="oi-supp-icon-v2"><PhoneCallIcon /></div>
               <div className="oi-supp-label">Phone · 24 &times; 7</div>
               <a className="oi-supp-title-v2" href="tel:+919904122699">+91 99041 22699</a>
-              <p className="oi-supp-body-v2">Payroll processing failures or compliance escalations. Answered by a senior engineer — not a call centre.</p>
+              <p className="oi-supp-body-v2">Payroll processing failures or compliance escalations. Answered by a senior engineer, not a call centre.</p>
               <a className="oi-supp-cta-v2" href="tel:+919904122699">Call now <ArrowRightIcon /></a>
             </div>
             <div className="oi-supp-card">

@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   AI PRODUCT RECOMMENDATIONS — unique page design
+   AI PRODUCT RECOMMENDATIONS, unique page design
    Centered hero + reco widget · Recommendation types · Data flow ·
    Features grid · Results split · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -47,9 +47,9 @@ const RECO_PRODUCTS = [
 
 /* ── Recommendation types ── */
 const RECO_TYPES = [
-  { icon: <GridIcon />, t: "Frequently Bought Together", s: "Products commonly purchased in the same order — auto-surfaced at cart and checkout.", color: "ai" as const },
+  { icon: <GridIcon />, t: "Frequently Bought Together", s: "Products commonly purchased in the same order, auto-surfaced at cart and checkout.", color: "ai" as const },
   { icon: <SparklesIcon />, t: "You May Also Like", s: "Personalised suggestions based on browse history, purchase patterns, and similar customer behaviour.", color: "purple" as const },
-  { icon: <TrendingUpIcon />, t: "Trending Now", s: "Products gaining momentum in your catalogue — surfaced on homepage and category pages.", color: "green" as const },
+  { icon: <TrendingUpIcon />, t: "Trending Now", s: "Products gaining momentum in your catalogue, surfaced on homepage and category pages.", color: "green" as const },
   { icon: <RefreshIcon />, t: "Recently Viewed + Reorder", s: "Bring customers back to products they browsed or help repeat buyers reorder fast.", color: "amber" as const },
 ] as const;
 
@@ -62,16 +62,16 @@ const DATA_FLOW = [
 
 /* ── Features ── */
 const FEATURES = [
-  { icon: <CpuIcon />, t: "Real-Time Personalisation", s: "Recommendations update in real time as customers browse, add to cart, and purchase. No batch jobs — every page load reflects the latest behaviour." },
+  { icon: <CpuIcon />, t: "Real-Time Personalisation", s: "Recommendations update in real time as customers browse, add to cart, and purchase. No batch jobs, every page load reflects the latest behaviour." },
   { icon: <BarChartIcon />, t: "A/B Testing Built In", s: "Test different recommendation algorithms, widget placements, and strategies. Measure impact on AOV and conversion rate with statistical significance." },
   { icon: <GridIcon />, t: "Cross-Sell & Upsell Logic", s: "Rules engine for cross-sell (complementary products) and upsell (higher-tier alternatives). AI learns which strategies work for which customer segments." },
-  { icon: <MailIcon />, t: "Email & Push Recommendations", s: "Personalised product suggestions in abandoned cart emails, post-purchase follow-ups, and push notifications — not just on-site." },
+  { icon: <MailIcon />, t: "Email & Push Recommendations", s: "Personalised product suggestions in abandoned cart emails, post-purchase follow-ups, and push notifications, not just on-site." },
   { icon: <MonitorIcon />, t: "Performance Dashboard", s: "Track recommendation click-through rate, add-to-cart rate, revenue attributed, and AOV impact. See which widget placements drive the most revenue." },
   { icon: <ShieldIcon />, t: "Privacy-First Architecture", s: "No third-party cookies required. First-party data only. GDPR and CCPA compliant by design. Customer data never leaves your infrastructure." },
 ] as const;
 
 /* ── Results ── */
-const HERO_RESULT = { n: "25%", l: "Avg AOV increase", sub: "Average order value improvement across our recommendation engine deployments — measured against pre-deployment baselines." };
+const HERO_RESULT = { n: "25%", l: "Avg AOV increase", sub: "Average order value improvement across our recommendation engine deployments, measured against pre-deployment baselines." };
 const SIDE_RESULTS = [
   { n: "15%", l: "Conversion rate lift" },
   { n: "3.2×", l: "Click-to-purchase on recos" },
@@ -89,11 +89,11 @@ const PLATFORMS = [
 /* ── FAQ ── */
 const FAQS = [
   { q: "How do AI product recommendations work?", a: "ML models analyse customer behaviour (browsing, purchases, cart actions) and product attributes (category, price, features) to predict which products each customer is most likely to buy. Recommendations are generated in real time for every page load." },
-  { q: "Which eCommerce platforms do you support?", a: "Shopify, Magento 2, WooCommerce, and custom-built stores. We deploy via JavaScript widget, API integration, or native app — depending on your platform." },
+  { q: "Which eCommerce platforms do you support?", a: "Shopify, Magento 2, WooCommerce, and custom-built stores. We deploy via JavaScript widget, API integration, or native app, depending on your platform." },
   { q: "How long does it take to see results?", a: "Recommendation widgets go live in 2–3 weeks. ML models need 2–4 weeks of behavioural data to personalise effectively. Most stores see measurable AOV lift within 30 days of deployment." },
-  { q: "Do you replace Shopify's built-in recommendations?", a: "Yes. Our ML-powered engine significantly outperforms Shopify's default suggestions — with collaborative filtering, real-time personalisation, and A/B testing that the native system doesn't offer." },
-  { q: "Is customer data safe?", a: "Yes. First-party data only. No third-party cookies. GDPR and CCPA compliant. Customer data stays on your infrastructure — we process it, we don't store it." },
-  { q: "Can recommendations appear in emails and push notifications?", a: "Yes. Personalised product suggestions can be embedded in abandoned cart emails, post-purchase follow-ups, win-back campaigns, and push notifications — not just on-site widgets." },
+  { q: "Do you replace Shopify's built-in recommendations?", a: "Yes. Our ML-powered engine significantly outperforms Shopify's default suggestions, with collaborative filtering, real-time personalisation, and A/B testing that the native system doesn't offer." },
+  { q: "Is customer data safe?", a: "Yes. First-party data only. No third-party cookies. GDPR and CCPA compliant. Customer data stays on your infrastructure, we process it, we don't store it." },
+  { q: "Can recommendations appear in emails and push notifications?", a: "Yes. Personalised product suggestions can be embedded in abandoned cart emails, post-purchase follow-ups, win-back campaigns, and push notifications, not just on-site widgets." },
 ] as const;
 
 /* ── Component ── */
@@ -101,7 +101,7 @@ export function AiRecommendationsContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered + reco widget ═══ */}
+      {/* ═══ HERO: centered + reco widget ═══ */}
       <section className="ar-hero">
         <div className="ar-hero-glow ar-hero-glow-1" aria-hidden="true" />
         <div className="ar-hero-glow ar-hero-glow-2" aria-hidden="true" />
@@ -115,7 +115,7 @@ export function AiRecommendationsContent() {
             <span className="acc">Recommendations.</span>
           </h1>
           <p className="ar-hero-sub rev">
-            Personalised product suggestions that increase average order value by 25%+ — <strong>powered by ML, not rules.</strong> Frequently bought together, cross-sell, upsell, and trending products.
+            Personalised product suggestions that increase average order value by 25%+, <strong>powered by ML, not rules.</strong> Frequently bought together, cross-sell, upsell, and trending products.
           </p>
           <div className="ar-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -201,7 +201,7 @@ export function AiRecommendationsContent() {
         </div>
       </section>
 
-      {/* ═══ RESULTS — asymmetric ═══ */}
+      {/* ═══ RESULTS: asymmetric ═══ */}
       <section className="ar-results" id="results">
         <div className="ar-results-inner">
           <div className="ar-results-hdr rev">
@@ -272,10 +272,10 @@ export function AiRecommendationsContent() {
                 <div className="oi-closer-insight-stat">35%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of Amazon&apos;s revenue comes from its recommendation engine.</strong>
-                  Source: McKinsey, 2024. The difference is truly personalised ML models — not &quot;best sellers&quot; lists disguised as recommendations.
+                  Source: McKinsey, 2024. The difference is truly personalised ML models, not &quot;best sellers&quot; lists disguised as recommendations.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer recommendation engine uses collaborative filtering and real-time personalisation — not popularity rankings.</p>
+              <p>That&apos;s why every Wan Buffer recommendation engine uses collaborative filtering and real-time personalisation, not popularity rankings.</p>
             </div>
           </div>
 
@@ -286,7 +286,7 @@ export function AiRecommendationsContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><CpuIcon /></div>
                 <div className="oi-closer-commit-t">Real ML, not rules</div>
-                <p className="oi-closer-commit-b">Collaborative filtering and content-based models — not hand-coded rules or popularity lists. Every recommendation is genuinely personalised per customer.</p>
+                <p className="oi-closer-commit-b">Collaborative filtering and content-based models, not hand-coded rules or popularity lists. Every recommendation is genuinely personalised per customer.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>

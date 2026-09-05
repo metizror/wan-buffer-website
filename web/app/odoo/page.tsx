@@ -11,7 +11,7 @@ import { HubListingContent } from "@/components/pages/hub-listing-content";
 export const metadata: Metadata = {
   title: "Odoo ERP Services | Implementation, Customisation, Migration | Wan Buffer",
   description:
-    "Odoo implementation, customisation, migration, integration, apps, training, and hosting from Wan Buffer — an Odoo partner for manufacturing, logistics, and commerce.",
+    "Odoo implementation, customisation, migration, integration, apps, training, and hosting from Wan Buffer | an Odoo partner for manufacturing, logistics, and commerce.",
   alternates: { canonical: "https://wanbuffer.com/odoo" },
 };
 
@@ -34,7 +34,7 @@ export default function OdooHubPage() {
       <HubListingContent
         eyebrow="Odoo Services"
         titleLines={["Official Odoo Partner.", "Full-cycle delivery."]}
-        subtitle="Implementation, customisation, migration, integrations, apps, training, and hosting — one engineering team from blueprint to go-live."
+        subtitle="Implementation, customisation, migration, integrations, apps, training, and hosting, one engineering team from blueprint to go-live."
         primaryCta={{ href: "/contact-us", label: "Book an Odoo audit" }}
         secondaryCta={{ href: "/case-studies", label: "View case studies" }}
         items={ITEMS}

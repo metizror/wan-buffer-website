@@ -62,11 +62,10 @@ export function HomeFaq() {
             </button>
             <div className="faq-a">
               <div className="faq-a-inner" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                Our AI Agent + Human Team model pairs autonomous AI agents with senior Wan Buffer engineers. The AI agents
-                handle repetitive, rule-based ERP tasks — generating purchase orders, processing invoices, updating stock
-                levels, sending alerts — while our human engineers focus on custom logic, exceptions, system architecture,
-                and continuous improvement. This typically reduces operational costs by 50–70% compared to a fully human
-                team, while maintaining enterprise-grade quality and oversight.
+                We pair AI agents with senior Wan Buffer engineers. The agents take the repetitive ERP work: purchase
+                orders, invoices, stock updates, alerts. The engineers handle custom logic, exceptions, architecture,
+                and the parts that need judgment. Most clients spend about 50–70% less than a fully human team, with
+                the same quality checks.
                 <div>
                   <span className="faq-tag">⚡ New Model</span>
                 </div>
@@ -77,17 +76,16 @@ export function HomeFaq() {
           <div className="faq-item" data-cat="ai">
             <button className="faq-q" type="button" onClick={(e) => (window as any).toggleFaq?.(e.currentTarget)}>
               <span className="faq-q-text" itemProp="name">
-                What AI technologies do you use — do you build custom models or use existing LLMs?
+                What AI do you use? Do you train custom models or plug in existing LLMs?
               </span>
               <span className="faq-arrow">+</span>
             </button>
             <div className="faq-a">
               <div className="faq-a-inner" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                Both. For most ERP automation use cases we integrate proven LLMs (OpenAI GPT-4o, Claude, Mistral) using
-                LangChain or LlamaIndex — this is faster to deploy and more reliable. For industry-specific predictions
-                like demand forecasting, quality defect detection, or churn risk we build custom ML models using
-                TensorFlow and Scikit-learn, trained on your historical ERP data. We recommend the approach based on your
-                data volume, latency requirements, and budget.
+                Both. For most ERP automation we wire in proven models (GPT-4o, Claude, Mistral) through LangChain or
+                LlamaIndex. That ships faster and holds up in production. For demand, quality defects, or churn we
+                train models on your own ERP history with TensorFlow and Scikit-learn. We pick the path based on your
+                data, how fast it needs to respond, and budget.
               </div>
             </div>
           </div>
@@ -102,7 +100,7 @@ export function HomeFaq() {
             <div className="faq-a">
               <div className="faq-a-inner" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                 We actively develop and support Odoo 16, 17, and 18. We also handle migrations from older versions (v12,
-                v13, v14, v15) — including custom module migration, data migration, and post-migration validation. Our
+                v13, v14, v15), including custom module migration, data migration, and post-migration validation. Our
                 migration projects use a proven 4-phase framework: audit → rebuild → migrate → validate, with zero
                 downtime for most configurations. We also support Odoo Community and Odoo Enterprise.
               </div>
@@ -154,8 +152,8 @@ export function HomeFaq() {
             </button>
             <div className="faq-a">
               <div className="faq-a-inner" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <strong>Project-Based</strong> works best when you have a clearly defined deliverable — an Odoo
-                implementation, a specific AI module, or a migration — with a fixed budget. <strong>Dedicated Team</strong>{" "}
+                <strong>Project-Based</strong> works best when you have a clearly defined deliverable, an Odoo
+                implementation, a specific AI module, or a migration, with a fixed budget. <strong>Dedicated Team</strong>{" "}
                 is ideal when you have ongoing development needs, need direct control over engineers, or want to scale a
                 tech team without hiring in-house. <strong>Retainer</strong> suits businesses that already have Odoo live
                 and want continuous improvement, priority support, and quarterly AI audits. <strong>AI Agent + Human Team</strong>{" "}
@@ -193,7 +191,7 @@ export function HomeFaq() {
             <div className="faq-a">
               <div className="faq-a-inner" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                 Absolutely. Integration is one of our strongest capabilities. We build REST API, webhook, and
-                middleware-based integrations between Odoo and virtually any external platform — Salesforce, HubSpot,
+                middleware-based integrations between Odoo and virtually any external platform. Salesforce, HubSpot,
                 Shopify, Magento, WooCommerce, payment gateways (Stripe, PayTabs), shipping providers (FedEx, DHL, Aramex),
                 custom ERPs, and more. We also use Zapier, Make (Integromat), and Kafka for event-driven integrations.
                 Every integration is thoroughly tested with automated test suites before go-live.

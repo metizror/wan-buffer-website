@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   PROJECT-BASED ENGAGEMENT — dedicated page
+   PROJECT-BASED ENGAGEMENT, dedicated page
    Hero split + project timeline mock · What's included · How it works ·
    Project types · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -51,20 +51,20 @@ const MILESTONES = [
 
 /* ── What's included ── */
 const INCLUDED = [
-  { icon: <TargetIcon />, t: "Fixed Scope & Price", s: "Every deliverable, timeline, and cost is defined upfront in a detailed Statement of Work. No scope creep, no surprise invoices — you know exactly what you are paying for before work begins.", color: "ai" as const },
-  { icon: <UsersIcon />, t: "Dedicated Project Manager", s: "A named PM owns your project from Day 1 — managing scope, timeline, risks, and communication. Weekly status reports, milestone reviews, and a single point of accountability throughout.", color: "green" as const },
-  { icon: <FlagIcon />, t: "Milestone-Based Delivery", s: "Work is broken into clearly defined milestones with acceptance criteria. You review and approve each milestone before the next begins — full control over quality and progress at every stage.", color: "purple" as const },
-  { icon: <HeartIcon />, t: "3-Month Post-Launch Support", s: "After go-live, our team stays for 90 days of hypercare — bug fixes, configuration tweaks, user support, and minor enhancements at no additional cost. You never go live alone.", color: "red" as const },
+  { icon: <TargetIcon />, t: "Fixed Scope & Price", s: "Every deliverable, timeline, and cost is defined upfront in a detailed Statement of Work. No scope creep, no surprise invoices, you know exactly what you are paying for before work begins.", color: "ai" as const },
+  { icon: <UsersIcon />, t: "Dedicated Project Manager", s: "A named PM owns your project from Day 1, managing scope, timeline, risks, and communication. Weekly status reports, milestone reviews, and a single point of accountability throughout.", color: "green" as const },
+  { icon: <FlagIcon />, t: "Milestone-Based Delivery", s: "Work is broken into clearly defined milestones with acceptance criteria. You review and approve each milestone before the next begins, full control over quality and progress at every stage.", color: "purple" as const },
+  { icon: <HeartIcon />, t: "3-Month Post-Launch Support", s: "After go-live, our team stays for 90 days of hypercare, bug fixes, configuration tweaks, user support, and minor enhancements at no additional cost. You never go live alone.", color: "red" as const },
 ] as const;
 
 /* ── Features / What makes it different ── */
 const FEATURES = [
-  { num: "01", icon: <SearchIcon />, t: "Discovery & Requirements Workshop", s: "A structured 2–5 day workshop where we map your business processes, identify pain points, and define the exact scope of work. The output is a detailed requirements document and solution design — approved by your team before any development begins." },
-  { num: "02", icon: <SettingsIcon />, t: "Solution Design & Architecture", s: "Technical architecture, module selection, integration map, data migration plan, and user role matrix — documented and signed off. No ambiguity about what will be built, how it connects to your existing systems, or who will use what." },
-  { num: "03", icon: <CodeIcon />, t: "Agile Build with Fixed Milestones", s: "Development runs in 2-week sprints within the fixed scope. Each sprint delivers testable functionality. You see working software every 2 weeks — not just at the end. Scope changes follow a formal Change Request process with transparent cost impact." },
-  { num: "04", icon: <DatabaseIcon />, t: "Data Migration with Validation", s: "Your existing data — customers, vendors, products, opening balances, historical transactions — migrated with field-level mapping, transformation rules, and validation reports. Parallel run confirms accuracy before the old system is retired." },
-  { num: "05", icon: <MonitorIcon />, t: "UAT, Training & Go-Live", s: "User Acceptance Testing with your team, role-based training sessions (recorded for future reference), and a structured go-live checklist. Cut-over plan with rollback strategy — every risk identified and mitigated before the switch." },
-  { num: "06", icon: <ShieldIcon />, t: "90-Day Hypercare & Handover", s: "Post go-live, our team provides 90 days of priority support — bug fixes within 24 hours, configuration adjustments, and user hand-holding. At the end, full documentation and knowledge transfer ensure your team can operate independently." },
+  { num: "01", icon: <SearchIcon />, t: "Discovery & Requirements Workshop", s: "A structured 2–5 day workshop where we map your business processes, identify pain points, and define the exact scope of work. The output is a detailed requirements document and solution design, approved by your team before any development begins." },
+  { num: "02", icon: <SettingsIcon />, t: "Solution Design & Architecture", s: "Technical architecture, module selection, integration map, data migration plan, and user role matrix, documented and signed off. No ambiguity about what will be built, how it connects to your existing systems, or who will use what." },
+  { num: "03", icon: <CodeIcon />, t: "Agile Build with Fixed Milestones", s: "Development runs in 2-week sprints within the fixed scope. Each sprint delivers testable functionality. You see working software every 2 weeks, not just at the end. Scope changes follow a formal Change Request process with transparent cost impact." },
+  { num: "04", icon: <DatabaseIcon />, t: "Data Migration with Validation", s: "Your existing data, customers, vendors, products, opening balances, historical transactions, migrated with field-level mapping, transformation rules, and validation reports. Parallel run confirms accuracy before the old system is retired." },
+  { num: "05", icon: <MonitorIcon />, t: "UAT, Training & Go-Live", s: "User Acceptance Testing with your team, role-based training sessions (recorded for future reference), and a structured go-live checklist. Cut-over plan with rollback strategy, every risk identified and mitigated before the switch." },
+  { num: "06", icon: <ShieldIcon />, t: "90-Day Hypercare & Handover", s: "Post go-live, our team provides 90 days of priority support, bug fixes within 24 hours, configuration adjustments, and user hand-holding. At the end, full documentation and knowledge transfer ensure your team can operate independently." },
 ] as const;
 
 /* ── Process flow ── */
@@ -95,10 +95,10 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "What happens if the scope needs to change mid-project?", a: "Scope changes are handled through a formal Change Request (CR) process. You describe the change, we assess the impact on timeline and cost, and you approve or decline before any work is done. CRs are transparent — you always know the exact cost of a scope change before committing. The original scope continues unaffected." },
-  { q: "How is the fixed price calculated?", a: "We estimate effort based on the detailed requirements from the Discovery workshop — broken down by module, feature, integration, and migration complexity. The price is presented as a line-item breakdown so you can see exactly what each component costs. No hidden fees, no ambiguous 'project management overhead' — every hour is accounted for." },
+  { q: "What happens if the scope needs to change mid-project?", a: "Scope changes are handled through a formal Change Request (CR) process. You describe the change, we assess the impact on timeline and cost, and you approve or decline before any work is done. CRs are transparent, you always know the exact cost of a scope change before committing. The original scope continues unaffected." },
+  { q: "How is the fixed price calculated?", a: "We estimate effort based on the detailed requirements from the Discovery workshop, broken down by module, feature, integration, and migration complexity. The price is presented as a line-item breakdown so you can see exactly what each component costs. No hidden fees, no ambiguous 'project management overhead', every hour is accounted for." },
   { q: "What does the 3-month post-launch support cover?", a: "Bug fixes (within 24 hours for critical issues), configuration adjustments, user support queries, and minor enhancements that don't require new development. If something breaks or doesn't work as specified, we fix it at no extra cost. After 90 days, you can transition to a Retainer model for ongoing support or engage on a per-ticket basis." },
-  { q: "Can I see working software before the final delivery?", a: "Yes. We run 2-week sprints within the fixed scope. At the end of each sprint, you see a demo of working functionality — not slides or mockups. You can test, provide feedback, and confirm alignment with requirements. This means issues are caught early, not at the final UAT." },
+  { q: "Can I see working software before the final delivery?", a: "Yes. We run 2-week sprints within the fixed scope. At the end of each sprint, you see a demo of working functionality, not slides or mockups. You can test, provide feedback, and confirm alignment with requirements. This means issues are caught early, not at the final UAT." },
   { q: "What if the project is delivered late?", a: "Our Statement of Work includes a delivery timeline with milestone dates. If we miss a milestone due to factors within our control, we escalate internally and add resources at our cost. Persistent delays trigger penalty clauses defined in the contract. We have a 94% on-time delivery rate across 254+ projects." },
   { q: "How long does a typical project-based engagement take?", a: "Single-module ERP implementations take 4–8 weeks. Full ERP implementations with multiple modules, integrations, and data migration take 8–16 weeks. AI module builds with ERP integration take 4–10 weeks. Complex multi-entity deployments take 12–20 weeks. Timeline is defined and agreed before work begins." },
 ] as const;
@@ -108,7 +108,7 @@ export function ProjectBasedContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + project timeline right ═══ */}
+      {/* ═══ HERO: text left + project timeline right ═══ */}
       <section className="pb-hero">
         <div className="pb-hero-glow pb-hero-glow-1" aria-hidden="true" />
         <div className="pb-hero-glow pb-hero-glow-2" aria-hidden="true" />
@@ -124,7 +124,7 @@ export function ProjectBasedContent() {
               <span className="acc">Fixed scope.<br />Fixed price.<br />Delivered.</span>
             </h1>
             <p className="pb-hero-sub rev">
-              Defined deliverables, milestone-based delivery, dedicated project manager, and 3-month post-launch support — <strong>from discovery to go-live.</strong>
+              Defined deliverables, milestone-based delivery, dedicated project manager, and 3-month post-launch support, <strong>from discovery to go-live.</strong>
             </p>
             <div className="pb-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -185,7 +185,7 @@ export function ProjectBasedContent() {
         </div>
       </section>
 
-      {/* ═══ WHAT'S INCLUDED — 4 cards ═══ */}
+      {/* ═══ WHAT'S INCLUDED: 4 cards ═══ */}
       <section className="pb-ops">
         <div className="pb-ops-inner">
           <div className="pb-ops-hdr rev">
@@ -204,7 +204,7 @@ export function ProjectBasedContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — alternating rows ═══ */}
+      {/* ═══ FEATURES: alternating rows ═══ */}
       <section className="pb-feat" id="features">
         <div className="pb-feat-inner">
           <div className="pb-feat-hdr rev">
@@ -226,7 +226,7 @@ export function ProjectBasedContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="pb-proc" id="process">
         <div className="pb-proc-inner">
           <div className="pb-proc-hdr rev">
@@ -261,7 +261,7 @@ export function ProjectBasedContent() {
         </div>
       </section>
 
-      {/* ═══ PROJECT TYPES — split ═══ */}
+      {/* ═══ PROJECT TYPES: split ═══ */}
       <section className="pb-multi" id="project-types">
         <div className="pb-multi-inner">
           <div className="pb-multi-hdr rev">
@@ -272,7 +272,7 @@ export function ProjectBasedContent() {
             <div className="pb-multi-left">
               <div className="pb-multi-big-n">254+</div>
               <div className="pb-multi-big-l">Projects delivered on fixed scope &amp; price</div>
-              <p className="pb-multi-big-s">ERP implementations, system migrations, and AI module builds — all delivered with the same rigour: defined scope, milestone approval, dedicated PM, and 90-day hypercare.</p>
+              <p className="pb-multi-big-s">ERP implementations, system migrations, and AI module builds, all delivered with the same rigour: defined scope, milestone approval, dedicated PM, and 90-day hypercare.</p>
             </div>
             <div className="pb-multi-right">
               {PROJECT_TYPES.map((pt) => (
@@ -333,10 +333,10 @@ export function ProjectBasedContent() {
                 <div className="oi-closer-insight-stat">94%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>on-time delivery rate across 254+ projects.</strong>
-                  That&apos;s because we scope before we promise, break work into milestones, and assign a dedicated PM who owns the outcome — not just the timeline.
+                  That&apos;s because we scope before we promise, break work into milestones, and assign a dedicated PM who owns the outcome, not just the timeline.
                 </div>
               </div>
-              <p>Every project-based engagement comes with four guarantees — written into the Statement of Work, not just the proposal.</p>
+              <p>Every project-based engagement comes with four guarantees, written into the Statement of Work, not just the proposal.</p>
             </div>
           </div>
 
@@ -346,7 +346,7 @@ export function ProjectBasedContent() {
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><WalletIcon /></div>
-                <div className="oi-closer-commit-t">Fixed price — no overruns</div>
+                <div className="oi-closer-commit-t">Fixed price, no overruns</div>
                 <p className="oi-closer-commit-b">The price in the Statement of Work is the price you pay. Period. No hidden fees, no ambiguous change orders, no invoice surprises at the end of the project.</p>
               </div>
               <div className="oi-closer-commit">
@@ -358,13 +358,13 @@ export function ProjectBasedContent() {
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><HeartIcon /></div>
-                <div className="oi-closer-commit-t">90-day hypercare — included free</div>
-                <p className="oi-closer-commit-b">After go-live, we stay for 90 days. Bug fixes, config tweaks, user support, and minor enhancements — at zero additional cost. You never go live alone.</p>
+                <div className="oi-closer-commit-t">90-day hypercare, included free</div>
+                <p className="oi-closer-commit-b">After go-live, we stay for 90 days. Bug fixes, config tweaks, user support, and minor enhancements, at zero additional cost. You never go live alone.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
-                <div className="oi-closer-commit-t">Named PM &amp; engineers — in the contract</div>
+                <div className="oi-closer-commit-t">Named PM &amp; engineers, in the contract</div>
                 <p className="oi-closer-commit-b">No juniors, no bait-and-switch. The project manager and engineers proposed are the ones who deliver. Every team member is named in the Statement of Work.</p>
               </div>
             </div>

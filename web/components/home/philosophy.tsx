@@ -23,9 +23,9 @@ export function HomePhilosophy() {
         <div className="phil-attr rev">
           <div className="phil-line" />
           <div className="phil-t">
-            <strong>सर्वे कर्मवशा वयम् — We are all under the power of our actions.</strong>
-            This is why we measure ourselves by results alone — whether that result is a faster production cycle, an
-            AI agent that saves 200 hours a month, or a system that never breaks at 2 AM.
+            <strong>सर्वे कर्मवशा वयम्: We are all under the power of our actions.</strong>
+            That is why we judge ourselves on results: a shorter production cycle, an agent that saves 200 hours a
+            month, or a system that still stands up at 2 AM.
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@ export function HomePhilosophy() {
             Proven at <span className="acc">Scale</span>
           </h2>
           <p className="rec-sub-txt">
-            7 years of consistent ERP + AI delivery across 20+ countries — measured in real client outcomes.
+            7 years of consistent ERP + AI delivery across 20+ countries, measured in real client outcomes.
           </p>
         </div>
 

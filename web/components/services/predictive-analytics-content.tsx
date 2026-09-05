@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   PREDICTIVE ANALYTICS — unique page design
+   PREDICTIVE ANALYTICS, unique page design
    Centered hero + floating dashboard · Data-flow strip · Bento
    capabilities · Vertical alternating timeline · Dark industry
    showcase · Split tech stack · Closer · Support
@@ -60,19 +60,19 @@ const CAPS = [
   { icon: <TrendingUpIcon />, t: "Demand Forecasting", s: "Predict product demand 30–90 days ahead using historical sales, seasonality, and external market signals. Reduce stockouts by 60% and overstock by 45%.", stat: { n: "92%", l: "Forecast accuracy" }, size: "featured" as const },
   { icon: <EyeIcon />, t: "Anomaly Detection", s: "Automatically surface outliers in revenue, expenses, inventory, and supplier behaviour before they become costly problems.", stat: { n: "3.5×", l: "Faster detection" }, size: "normal" as const },
   { icon: <UsersIcon />, t: "Churn Prediction", s: "Score every customer by churn probability using purchase patterns, engagement data, and support interactions.", stat: { n: "35%", l: "Churn reduction" }, size: "normal" as const },
-  { icon: <WalletIcon />, t: "Revenue Forecasting", s: "AI-generated revenue projections by product line, region, and channel — updated daily from live ERP data.", stat: { n: "94%", l: "Confidence" }, size: "wide" as const },
+  { icon: <WalletIcon />, t: "Revenue Forecasting", s: "AI-generated revenue projections by product line, region, and channel, updated daily from live ERP data.", stat: { n: "94%", l: "Confidence" }, size: "wide" as const },
   { icon: <PackageIcon />, t: "Inventory Optimisation", s: "Dynamic reorder points powered by demand predictions, supplier lead-time models, and carrying cost analysis.", stat: { n: "45%", l: "Less excess stock" }, size: "normal" as const },
   { icon: <SettingsIcon />, t: "Predictive Maintenance", s: "Forecast equipment failures using sensor data, usage patterns, and historical maintenance logs.", stat: { n: "50%", l: "Downtime prevented" }, size: "normal" as const },
 ] as const;
 
 /* ── Methodology timeline ── */
 const TIMELINE = [
-  { num: "01", icon: <DatabaseIcon />, tag: "Ingest", t: "Data audit & pipeline setup", b: "We connect to your ERP, CRM, and operational systems — extracting, cleaning, and structuring the data that will power your predictive models. No manual exports, no CSV uploads.", deliverables: ["Data inventory", "Quality report"] },
-  { num: "02", icon: <SearchIcon />, tag: "Explore", t: "Feature engineering & discovery", b: "Our data scientists identify the variables, patterns, and correlations that drive your business outcomes — then engineer the features that give models their predictive edge.", deliverables: ["Feature map", "Correlation analysis"] },
+  { num: "01", icon: <DatabaseIcon />, tag: "Ingest", t: "Data audit & pipeline setup", b: "We connect to your ERP, CRM, and operational systems, extracting, cleaning, and structuring the data that will power your predictive models. No manual exports, no CSV uploads.", deliverables: ["Data inventory", "Quality report"] },
+  { num: "02", icon: <SearchIcon />, tag: "Explore", t: "Feature engineering & discovery", b: "Our data scientists identify the variables, patterns, and correlations that drive your business outcomes, then engineer the features that give models their predictive edge.", deliverables: ["Feature map", "Correlation analysis"] },
   { num: "03", icon: <CpuIcon />, tag: "Model", t: "Model training & validation", b: "We train, test, and benchmark multiple ML models against your historical data. Only the model that delivers the highest accuracy on unseen data gets promoted.", deliverables: ["Trained models", "Accuracy benchmarks"] },
-  { num: "04", icon: <CloudIcon />, tag: "Deploy", t: "Production deployment", b: "Models deploy directly into your ERP workflows via secure APIs. Predictions surface where your team works — inside dashboards, approval flows, and alerts.", deliverables: ["Live predictions", "API endpoints"] },
-  { num: "05", icon: <MonitorIcon />, tag: "Monitor", t: "Drift detection & retraining", b: "Automated monitoring catches model drift before accuracy degrades. Retraining pipelines trigger when data patterns shift — keeping predictions sharp.", deliverables: ["Drift alerts", "Retrained models"] },
-  { num: "06", icon: <RocketIcon />, tag: "Scale", t: "Expand & optimise", b: "Once initial models prove ROI, we scale predictions to new departments, product lines, and geographies — each expansion faster than the last.", deliverables: ["Expansion plan", "New models"] },
+  { num: "04", icon: <CloudIcon />, tag: "Deploy", t: "Production deployment", b: "Models deploy directly into your ERP workflows via secure APIs. Predictions surface where your team works, inside dashboards, approval flows, and alerts.", deliverables: ["Live predictions", "API endpoints"] },
+  { num: "05", icon: <MonitorIcon />, tag: "Monitor", t: "Drift detection & retraining", b: "Automated monitoring catches model drift before accuracy degrades. Retraining pipelines trigger when data patterns shift, keeping predictions sharp.", deliverables: ["Drift alerts", "Retrained models"] },
+  { num: "06", icon: <RocketIcon />, tag: "Scale", t: "Expand & optimise", b: "Once initial models prove ROI, we scale predictions to new departments, product lines, and geographies, each expansion faster than the last.", deliverables: ["Expansion plan", "New models"] },
 ] as const;
 
 /* ── Industries ── */
@@ -102,7 +102,7 @@ export function PredictiveAnalyticsContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered with floating dashboard mock ═══ */}
+      {/* ═══ HERO: centered with floating dashboard mock ═══ */}
       <section className="pa-hero">
         <div className="pa-hero-glow pa-hero-glow-1" aria-hidden="true" />
         <div className="pa-hero-glow pa-hero-glow-2" aria-hidden="true" />
@@ -117,7 +117,7 @@ export function PredictiveAnalyticsContent() {
             <span className="acc">See what&apos;s coming next.</span>
           </h1>
           <p className="pa-hero-sub rev">
-            Transform raw ERP data into accurate business forecasts. Demand prediction, anomaly detection, and churn analysis — <strong>embedded directly in your workflows</strong> so your team acts on insights, not hunches.
+            Transform raw ERP data into accurate business forecasts. Demand prediction, anomaly detection, and churn analysis, <strong>embedded directly in your workflows</strong> so your team acts on insights, not hunches.
           </p>
           <div className="pa-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -147,7 +147,7 @@ export function PredictiveAnalyticsContent() {
         </div>
       </section>
 
-      {/* ═══ DATA FLOW — horizontal connected nodes ═══ */}
+      {/* ═══ DATA FLOW: horizontal connected nodes ═══ */}
       <section className="pa-flow">
         <div className="pa-flow-inner rev">
           <div className="pa-flow-label">How your data becomes predictions</div>
@@ -166,13 +166,13 @@ export function PredictiveAnalyticsContent() {
         </div>
       </section>
 
-      {/* ═══ CAPABILITIES — bento grid ═══ */}
+      {/* ═══ CAPABILITIES: bento grid ═══ */}
       <section className="pa-bento" id="capabilities">
         <div className="pa-bento-inner">
           <div className="pa-bento-hdr rev">
             <div className="eyebrow">Core capabilities</div>
             <h2>Six prediction engines.<br /><span>One integrated platform.</span></h2>
-            <p>Each capability is purpose-built for ERP environments — not a generic BI layer. Models train on your live business data, surface predictions inside your existing tools, and retrain automatically as patterns shift.</p>
+            <p>Each capability is purpose-built for ERP environments, not a generic BI layer. Models train on your live business data, surface predictions inside your existing tools, and retrain automatically as patterns shift.</p>
           </div>
 
           <div className="pa-bento-grid rev">
@@ -193,13 +193,13 @@ export function PredictiveAnalyticsContent() {
         </div>
       </section>
 
-      {/* ═══ METHODOLOGY — vertical alternating timeline ═══ */}
+      {/* ═══ METHODOLOGY: vertical alternating timeline ═══ */}
       <section className="pa-tl" id="methodology">
         <div className="pa-tl-inner">
           <div className="pa-tl-hdr rev">
             <div className="eyebrow lt">Methodology</div>
             <h2>Six stages to<br /><span>production-grade predictions.</span></h2>
-            <p>Every model we deploy is validated against your historical data before it touches a live system. Senior data scientists lead each phase — no black boxes, no unexplainable outputs, no shortcuts.</p>
+            <p>Every model we deploy is validated against your historical data before it touches a live system. Senior data scientists lead each phase, no black boxes, no unexplainable outputs, no shortcuts.</p>
           </div>
 
           <div className="pa-tl-track">
@@ -240,7 +240,7 @@ export function PredictiveAnalyticsContent() {
         </div>
       </section>
 
-      {/* ═══ INDUSTRIES — dark vertical showcase ═══ */}
+      {/* ═══ INDUSTRIES: dark vertical showcase ═══ */}
       <section className="pa-ind" id="industries">
         <div className="pa-ind-inner">
           <div className="pa-ind-hdr rev">
@@ -263,7 +263,7 @@ export function PredictiveAnalyticsContent() {
         </div>
       </section>
 
-      {/* ═══ TECH STACK — split layout ═══ */}
+      {/* ═══ TECH STACK: split layout ═══ */}
       <section className="pa-stack">
         <div className="pa-stack-inner rev">
           <div className="pa-stack-left">
@@ -294,10 +294,10 @@ export function PredictiveAnalyticsContent() {
                 <div className="oi-closer-insight-stat">87%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of data science projects never make it to production.</strong>
-                  Source: VentureBeat, 2024. The gap isn&apos;t talent or tools — it&apos;s the disconnect between model accuracy in a notebook and real-world business value in production.
+                  Source: VentureBeat, 2024. The gap isn&apos;t talent or tools, it&apos;s the disconnect between model accuracy in a notebook and real-world business value in production.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer analytics engagement is anchored to four commitments — written into the contract, tracked weekly, and never traded for speed.</p>
+              <p>That&apos;s why every Wan Buffer analytics engagement is anchored to four commitments, written into the contract, tracked weekly, and never traded for speed.</p>
             </div>
           </div>
 
@@ -314,19 +314,19 @@ export function PredictiveAnalyticsContent() {
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><CheckCircleIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed accuracy targets</div>
-                <p className="oi-closer-commit-b">Model accuracy, prediction latency, and business KPIs are defined before training begins. If we miss the targets, we keep iterating — at our cost.</p>
+                <p className="oi-closer-commit-b">Model accuracy, prediction latency, and business KPIs are defined before training begins. If we miss the targets, we keep iterating, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><EyeIcon /></div>
                 <div className="oi-closer-commit-t">Full explainability</div>
-                <p className="oi-closer-commit-b">No black-box predictions. Every forecast includes feature importance, confidence intervals, and reasoning — so your team trusts and acts on the output.</p>
+                <p className="oi-closer-commit-b">No black-box predictions. Every forecast includes feature importance, confidence intervals, and reasoning, so your team trusts and acts on the output.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior data scientists only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The data scientists who design your models are the ones who train, deploy, and support them — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The data scientists who design your models are the ones who train, deploy, and support them, named in the contract.</p>
               </div>
             </div>
           </div>
@@ -369,7 +369,7 @@ export function PredictiveAnalyticsContent() {
               <div className="oi-supp-icon-v2"><PhoneCallIcon /></div>
               <div className="oi-supp-label">Phone · 24 &times; 7</div>
               <a className="oi-supp-title-v2" href="tel:+919904122699">+91 99041 22699</a>
-              <p className="oi-supp-body-v2">Model failures or prediction pipeline incidents. Answered by a senior data scientist — not a call centre.</p>
+              <p className="oi-supp-body-v2">Model failures or prediction pipeline incidents. Answered by a senior data scientist, not a call centre.</p>
               <a className="oi-supp-cta-v2" href="tel:+919904122699">Call now <ArrowRightIcon /></a>
             </div>
             <div className="oi-supp-card">

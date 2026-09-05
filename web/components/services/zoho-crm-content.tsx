@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   ZOHO CRM IMPLEMENTATION — unique page design
+   ZOHO CRM IMPLEMENTATION, unique page design
    Hero split + CRM pipeline mock · Why-Zoho value cards · Service
    feature blocks · Process bar · Advantage cards · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -50,19 +50,19 @@ const PIPELINE_STAGES = [
 /* ── Why Zoho ── */
 const WHY_ZOHO = [
   { icon: <WalletIcon />, n: "60–80%", l: "Lower cost vs SAP/Oracle", s: "Enterprise-grade CRM at a fraction of legacy ERP pricing. Perfect for growing businesses that need power without the price tag." },
-  { icon: <TrendingUpIcon />, n: "45+", l: "Integrated apps", s: "CRM, Books, Inventory, People, Desk, Analytics, Creator — one ecosystem that eliminates data silos and multi-vendor complexity." },
-  { icon: <CloudIcon />, n: "99.9%", l: "Uptime SLA", s: "Cloud-native architecture with built-in redundancy, automatic backups, and enterprise-grade security — no on-premise infrastructure to maintain." },
-  { icon: <ShieldIcon />, n: "GDPR", l: "Compliant by default", s: "Built-in data encryption, two-factor authentication, role-based access, and GDPR/CCPA compliance tools — security isn't an add-on." },
+  { icon: <TrendingUpIcon />, n: "45+", l: "Integrated apps", s: "CRM, Books, Inventory, People, Desk, Analytics, Creator, one ecosystem that eliminates data silos and multi-vendor complexity." },
+  { icon: <CloudIcon />, n: "99.9%", l: "Uptime SLA", s: "Cloud-native architecture with built-in redundancy, automatic backups, and enterprise-grade security, no on-premise infrastructure to maintain." },
+  { icon: <ShieldIcon />, n: "GDPR", l: "Compliant by default", s: "Built-in data encryption, two-factor authentication, role-based access, and GDPR/CCPA compliance tools, security isn't an add-on." },
 ] as const;
 
 /* ── Services ── */
 const SERVICES = [
-  { icon: <SettingsIcon />, num: "01", t: "CRM Setup & Configuration", b: "We configure your Zoho CRM from scratch — modules, fields, layouts, pipeline stages, scoring rules, and automation workflows. Every configuration maps to your actual sales process, not a generic template.", bullets: ["Custom pipeline stages and deal fields", "Lead scoring and assignment rules", "Territory and role-based access setup", "Custom views, filters, and dashboards"] },
-  { icon: <ZapIcon />, num: "02", t: "Workflow Automation", b: "Automate repetitive sales tasks — lead assignment, follow-up reminders, deal stage transitions, email sequences, and approval routing. Your sales team sells instead of doing admin.", bullets: ["Auto lead assignment by territory/round-robin", "Email sequence triggers on deal stage change", "Approval workflows for discounts and contracts", "Task creation and SLA monitoring"] },
-  { icon: <CodeIcon />, num: "03", t: "Custom Module Development", b: "When standard modules aren't enough, we build custom ones using Zoho Creator and Deluge scripting. Custom objects, related lists, client portals, and industry-specific workflows — built for your exact operations.", bullets: ["Zoho Creator custom applications", "Deluge scripting for complex logic", "Client-facing portals and forms", "Industry-specific module development"] },
-  { icon: <RefreshIcon />, num: "04", t: "Data Migration & Cleanup", b: "We migrate your data from spreadsheets, legacy CRMs, or other platforms into Zoho — with full deduplication, field mapping, validation, and relationship preservation. No data loss, no broken references.", bullets: ["Migration from Salesforce, HubSpot, or spreadsheets", "Automated deduplication and cleanup", "Field mapping with validation rules", "Historical data preservation"] },
-  { icon: <GridIcon />, num: "05", t: "Third-Party Integration", b: "Connect Zoho CRM to your entire tech stack — accounting, eCommerce, marketing, communication, and payment platforms. Real-time bi-directional sync via APIs, webhooks, and Zoho Flow.", bullets: ["Zoho ↔ Shopify/Magento sync", "Razorpay/Stripe payment integration", "Google Workspace and Microsoft 365", "WhatsApp, Slack, and email platforms"] },
-  { icon: <UsersIcon />, num: "06", t: "Training & Adoption", b: "We train your team role by role — sales reps learn pipeline management, managers learn reporting, admins learn configuration. Adoption isn't optional; it's engineered into the rollout plan.", bullets: ["Role-based training sessions", "Video guides and documentation", "Admin training for self-service changes", "30-day post-launch adoption support"] },
+  { icon: <SettingsIcon />, num: "01", t: "CRM Setup & Configuration", b: "We configure your Zoho CRM from scratch, modules, fields, layouts, pipeline stages, scoring rules, and automation workflows. Every configuration maps to your actual sales process, not a generic template.", bullets: ["Custom pipeline stages and deal fields", "Lead scoring and assignment rules", "Territory and role-based access setup", "Custom views, filters, and dashboards"] },
+  { icon: <ZapIcon />, num: "02", t: "Workflow Automation", b: "Automate repetitive sales tasks, lead assignment, follow-up reminders, deal stage transitions, email sequences, and approval routing. Your sales team sells instead of doing admin.", bullets: ["Auto lead assignment by territory/round-robin", "Email sequence triggers on deal stage change", "Approval workflows for discounts and contracts", "Task creation and SLA monitoring"] },
+  { icon: <CodeIcon />, num: "03", t: "Custom Module Development", b: "When standard modules aren't enough, we build custom ones using Zoho Creator and Deluge scripting. Custom objects, related lists, client portals, and industry-specific workflows, built for your exact operations.", bullets: ["Zoho Creator custom applications", "Deluge scripting for complex logic", "Client-facing portals and forms", "Industry-specific module development"] },
+  { icon: <RefreshIcon />, num: "04", t: "Data Migration & Cleanup", b: "We migrate your data from spreadsheets, legacy CRMs, or other platforms into Zoho, with full deduplication, field mapping, validation, and relationship preservation. No data loss, no broken references.", bullets: ["Migration from Salesforce, HubSpot, or spreadsheets", "Automated deduplication and cleanup", "Field mapping with validation rules", "Historical data preservation"] },
+  { icon: <GridIcon />, num: "05", t: "Third-Party Integration", b: "Connect Zoho CRM to your entire tech stack, accounting, eCommerce, marketing, communication, and payment platforms. Real-time bi-directional sync via APIs, webhooks, and Zoho Flow.", bullets: ["Zoho ↔ Shopify/Magento sync", "Razorpay/Stripe payment integration", "Google Workspace and Microsoft 365", "WhatsApp, Slack, and email platforms"] },
+  { icon: <UsersIcon />, num: "06", t: "Training & Adoption", b: "We train your team role by role, sales reps learn pipeline management, managers learn reporting, admins learn configuration. Adoption isn't optional; it's engineered into the rollout plan.", bullets: ["Role-based training sessions", "Video guides and documentation", "Admin training for self-service changes", "30-day post-launch adoption support"] },
 ] as const;
 
 /* ── Process ── */
@@ -76,19 +76,19 @@ const PROCESS = [
 
 /* ── Advantages ── */
 const ADVANTAGES = [
-  { icon: <TargetIcon />, t: "Sales-Process-First Approach", s: "We map your actual sales process before touching Zoho. CRM is configured to match how your team sells — not the other way around. No generic templates, no configuration drift." },
-  { icon: <CheckCircleIcon />, t: "Pre-Agreed Adoption KPIs", s: "User login rates, pipeline updates, and automation usage are tracked from day one. If adoption drops below target, we intervene with additional training — at our cost." },
-  { icon: <UsersIcon />, t: "Senior CRM Consultants Only", s: "No juniors, no outsourcing. The consultant who maps your sales process is the one who configures, migrates, trains, and supports — named in the contract." },
+  { icon: <TargetIcon />, t: "Sales-Process-First Approach", s: "We map your actual sales process before touching Zoho. CRM is configured to match how your team sells, not the other way around. No generic templates, no configuration drift." },
+  { icon: <CheckCircleIcon />, t: "Pre-Agreed Adoption KPIs", s: "User login rates, pipeline updates, and automation usage are tracked from day one. If adoption drops below target, we intervene with additional training, at our cost." },
+  { icon: <UsersIcon />, t: "Senior CRM Consultants Only", s: "No juniors, no outsourcing. The consultant who maps your sales process is the one who configures, migrates, trains, and supports, named in the contract." },
 ] as const;
 
 /* ── FAQ ── */
 const FAQS = [
   { q: "How long does a Zoho CRM implementation take?", a: "Typical implementations take 4–8 weeks depending on complexity. Simple setups with standard pipelines can go live in 2–3 weeks. Complex multi-department deployments with custom modules and migrations take 8–12 weeks." },
   { q: "Can you migrate data from our existing CRM (Salesforce, HubSpot)?", a: "Yes. We handle full data migration from Salesforce, HubSpot, Pipedrive, spreadsheets, and legacy databases. Migration includes field mapping, deduplication, validation, and relationship preservation." },
-  { q: "Do you integrate Zoho CRM with accounting and eCommerce platforms?", a: "Yes. We integrate Zoho CRM with Zoho Books, QuickBooks, Tally, Shopify, Magento, WooCommerce, Razorpay, Stripe, Google Workspace, Microsoft 365, WhatsApp, and Slack — via APIs, Zoho Flow, or custom connectors." },
-  { q: "What ongoing support do you provide after go-live?", a: "Every implementation includes 90 days of hypercare — bug fixes, configuration adjustments, and user support. After that, we offer SLA-based annual maintenance contracts with guaranteed response times." },
+  { q: "Do you integrate Zoho CRM with accounting and eCommerce platforms?", a: "Yes. We integrate Zoho CRM with Zoho Books, QuickBooks, Tally, Shopify, Magento, WooCommerce, Razorpay, Stripe, Google Workspace, Microsoft 365, WhatsApp, and Slack, via APIs, Zoho Flow, or custom connectors." },
+  { q: "What ongoing support do you provide after go-live?", a: "Every implementation includes 90 days of hypercare, bug fixes, configuration adjustments, and user support. After that, we offer SLA-based annual maintenance contracts with guaranteed response times." },
   { q: "Is Zoho CRM suitable for enterprises or just small businesses?", a: "Zoho CRM serves businesses of all sizes. With Zoho One (45+ apps), custom modules via Creator, and enterprise-grade security, it handles complex multi-department operations at a fraction of SAP/Oracle pricing." },
-  { q: "Can Zoho CRM be customised for our specific industry?", a: "Absolutely. We build industry-specific modules, fields, workflows, and reports using Zoho Creator and Deluge scripting. Manufacturing, real estate, logistics, healthcare, and eCommerce — each gets a purpose-built configuration." },
+  { q: "Can Zoho CRM be customised for our specific industry?", a: "Absolutely. We build industry-specific modules, fields, workflows, and reports using Zoho Creator and Deluge scripting. Manufacturing, real estate, logistics, healthcare, and eCommerce, each gets a purpose-built configuration." },
 ] as const;
 
 /* ── Platforms ── */
@@ -108,7 +108,7 @@ export function ZohoCrmContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + CRM pipeline right ═══ */}
+      {/* ═══ HERO: text left + CRM pipeline right ═══ */}
       <section className="zc-hero">
         <div className="zc-hero-glow zc-hero-glow-1" aria-hidden="true" />
         <div className="zc-hero-glow zc-hero-glow-2" aria-hidden="true" />
@@ -123,7 +123,7 @@ export function ZohoCrmContent() {
               <span className="acc">Pipeline to profit.</span>
             </h1>
             <p className="zc-hero-sub rev">
-              End-to-end Zoho CRM implementation — sales pipeline configuration, workflow automation, third-party integration, and data migration. <strong>From first deal to full-scale CRM operations.</strong>
+              End-to-end Zoho CRM implementation, sales pipeline configuration, workflow automation, third-party integration, and data migration. <strong>From first deal to full-scale CRM operations.</strong>
             </p>
             <div className="zc-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -137,7 +137,7 @@ export function ZohoCrmContent() {
           {/* CRM pipeline mockup */}
           <div className="zc-pipe rev">
             <div className="zc-pipe-bar">
-              <span className="zc-pipe-bar-title">Sales Pipeline — Q3 2026</span>
+              <span className="zc-pipe-bar-title">Sales Pipeline: Q3 2026</span>
               <span className="zc-pipe-bar-badge">5 stages</span>
             </div>
             <div className="zc-pipe-stages">
@@ -153,7 +153,7 @@ export function ZohoCrmContent() {
         </div>
       </section>
 
-      {/* ═══ WHY ZOHO — value prop cards ═══ */}
+      {/* ═══ WHY ZOHO: value prop cards ═══ */}
       <section className="zc-why">
         <div className="zc-why-inner">
           <div className="zc-why-hdr rev">
@@ -173,13 +173,13 @@ export function ZohoCrmContent() {
         </div>
       </section>
 
-      {/* ═══ SERVICES — alternating feature blocks ═══ */}
+      {/* ═══ SERVICES: alternating feature blocks ═══ */}
       <section className="zc-svc" id="services">
         <div className="zc-svc-inner">
           <div className="zc-svc-hdr rev">
             <div className="eyebrow lt">Implementation services</div>
             <h2>Six services.<br /><span>One CRM partner.</span></h2>
-            <p>Every service is delivered by senior Zoho consultants who understand both the platform and your business. No generic setups — every configuration maps to your actual sales process.</p>
+            <p>Every service is delivered by senior Zoho consultants who understand both the platform and your business. No generic setups, every configuration maps to your actual sales process.</p>
           </div>
 
           {SERVICES.map((svc, i) => (
@@ -202,7 +202,7 @@ export function ZohoCrmContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — horizontal progress bar ═══ */}
+      {/* ═══ PROCESS: horizontal progress bar ═══ */}
       <section className="zc-proc" id="process">
         <div className="zc-proc-inner">
           <div className="zc-proc-hdr rev">
@@ -302,10 +302,10 @@ export function ZohoCrmContent() {
                 <div className="oi-closer-insight-stat">49%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of CRM implementations fail to meet expectations.</strong>
-                  Source: Forrester, 2024. The root cause is almost never the software — it&apos;s implementations that prioritise features over sales process alignment and skip adoption planning entirely.
+                  Source: Forrester, 2024. The root cause is almost never the software, it&apos;s implementations that prioritise features over sales process alignment and skip adoption planning entirely.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer CRM deployment starts with your sales process — not a feature checklist. We commit to four guarantees, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer CRM deployment starts with your sales process, not a feature checklist. We commit to four guarantees, written into the contract.</p>
             </div>
           </div>
 
@@ -316,25 +316,25 @@ export function ZohoCrmContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Sales-process-first</div>
-                <p className="oi-closer-commit-b">We map your actual sales process before configuring a single field. CRM mirrors how your team sells — stages, handoffs, approvals, and follow-ups.</p>
+                <p className="oi-closer-commit-b">We map your actual sales process before configuring a single field. CRM mirrors how your team sells, stages, handoffs, approvals, and follow-ups.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><CheckCircleIcon /></div>
                 <div className="oi-closer-commit-t">Adoption KPIs tracked</div>
-                <p className="oi-closer-commit-b">Login rates, pipeline updates, and automation usage are tracked weekly. If adoption drops, we intervene with additional training — at our cost.</p>
+                <p className="oi-closer-commit-b">Login rates, pipeline updates, and automation usage are tracked weekly. If adoption drops, we intervene with additional training, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
                 <div className="oi-closer-commit-t">Zero data loss migration</div>
-                <p className="oi-closer-commit-b">Every record is mapped, validated, and reconciled during migration. Relationships, attachments, and history are preserved — verified before and after.</p>
+                <p className="oi-closer-commit-b">Every record is mapped, validated, and reconciled during migration. Relationships, attachments, and history are preserved, verified before and after.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior CRM consultants only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The consultant who maps your process is the one who configures, migrates, trains, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The consultant who maps your process is the one who configures, migrates, trains, and supports, named in the contract.</p>
               </div>
             </div>
           </div>
@@ -377,7 +377,7 @@ export function ZohoCrmContent() {
               <div className="oi-supp-icon-v2"><PhoneCallIcon /></div>
               <div className="oi-supp-label">Phone · 24 &times; 7</div>
               <a className="oi-supp-title-v2" href="tel:+919904122699">+91 99041 22699</a>
-              <p className="oi-supp-body-v2">CRM downtime or data sync failures. Answered by a senior CRM consultant — not a call centre.</p>
+              <p className="oi-supp-body-v2">CRM downtime or data sync failures. Answered by a senior CRM consultant, not a call centre.</p>
               <a className="oi-supp-cta-v2" href="tel:+919904122699">Call now <ArrowRightIcon /></a>
             </div>
             <div className="oi-supp-card">

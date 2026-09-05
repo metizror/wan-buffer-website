@@ -11,7 +11,7 @@ import { AiAgentsErpContent } from "@/components/services/ai-agents-erp-content"
 export const metadata: Metadata = {
   title: "AI Agents for ERP | Intelligent ERP Automation | Wan Buffer",
   description:
-    "Deploy purpose-built AI agents that automate ERP tasks — invoice processing, inventory management, procurement, and more. Reduce manual work by 73% with human-in-the-loop AI agents for Odoo, Zoho, Salesforce, and SAP.",
+    "Deploy purpose-built AI agents that automate ERP tasks, invoice processing, inventory management, procurement, and more. Reduce manual work by 73% with human-in-the-loop AI agents for Odoo, Zoho, Salesforce, and SAP.",
   keywords: [
     "AI agents for ERP",
     "ERP automation",
@@ -34,11 +34,11 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "AI Agents for ERP — Autonomous ERP Automation | Wan Buffer",
+    title: "AI Agents for ERP: Autonomous ERP Automation | Wan Buffer",
     description:
       "Purpose-built AI agents that execute ERP tasks autonomously. Reduce manual work by 73%, cut costs by 40%, and achieve 99.2% accuracy with human-in-the-loop governance.",
     siteName: "Wan Buffer",

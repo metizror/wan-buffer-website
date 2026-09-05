@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   MULTI-CURRENCY & MULTI-REGION — unique page design
+   MULTI-CURRENCY & MULTI-REGION, unique page design
    Centered hero + currency panel · Region cards · Features grid ·
    Stats · Platforms · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -57,11 +57,11 @@ const REGIONS = [
 /* ── Features ── */
 const FEATURES = [
   { icon: <WalletIcon />, t: "Automatic Currency Conversion", s: "Prices display in the customer's local currency with real-time exchange rate updates. Rounding rules configurable per currency for clean pricing (₹999, $11.99, €10.00)." },
-  { icon: <ShieldIcon />, t: "Regional Tax Compliance", s: "GST for India, VAT for GCC and EU, sales tax for US states — calculated automatically at checkout based on customer location. Tax rules update when regulations change." },
+  { icon: <ShieldIcon />, t: "Regional Tax Compliance", s: "GST for India, VAT for GCC and EU, sales tax for US states, calculated automatically at checkout based on customer location. Tax rules update when regulations change." },
   { icon: <GridIcon />, t: "Localised Storefronts", s: "Different product catalogues, pricing, payment methods, and shipping options per region. One backend, multiple customer-facing experiences." },
   { icon: <PackageIcon />, t: "Geo-Based Shipping Rules", s: "Shipping zones, carrier selection, and rate calculation based on customer location. Free shipping thresholds configurable per market." },
   { icon: <MailIcon />, t: "Localised Communications", s: "Order confirmations, shipping notifications, and marketing emails in the customer's language and currency. No manual translation per order." },
-  { icon: <MonitorIcon />, t: "Unified Reporting", s: "Revenue, orders, and analytics consolidated across all regions — with currency conversion to your base currency. One dashboard for global operations." },
+  { icon: <MonitorIcon />, t: "Unified Reporting", s: "Revenue, orders, and analytics consolidated across all regions, with currency conversion to your base currency. One dashboard for global operations." },
 ] as const;
 
 /* ── Stats ── */
@@ -84,10 +84,10 @@ const PLATFORMS = [
 /* ── FAQ ── */
 const FAQS = [
   { q: "How does multi-currency pricing work?", a: "Prices are set in your base currency and automatically converted using live exchange rates. You can also set manual prices per currency for strategic pricing (e.g., ₹999 in India, $12.99 in USA). Rounding rules ensure clean price points." },
-  { q: "Do you handle tax compliance for different countries?", a: "Yes. GST for India (including e-invoicing), VAT for UAE/GCC/EU, and state-level sales tax for USA — all calculated automatically at checkout based on customer location. Tax rules update when regulations change." },
-  { q: "Can I show different products in different regions?", a: "Yes. We configure per-region product catalogues — different products, pricing, shipping options, and payment methods per market. Customers see only what's available and relevant to their region." },
+  { q: "Do you handle tax compliance for different countries?", a: "Yes. GST for India (including e-invoicing), VAT for UAE/GCC/EU, and state-level sales tax for USA, all calculated automatically at checkout based on customer location. Tax rules update when regulations change." },
+  { q: "Can I show different products in different regions?", a: "Yes. We configure per-region product catalogues, different products, pricing, shipping options, and payment methods per market. Customers see only what's available and relevant to their region." },
   { q: "Which platforms support multi-currency?", a: "Shopify Markets (built-in), Magento multi-store, Odoo multi-company, and WooCommerce with WPML/multi-currency plugins. We configure the right approach for your platform." },
-  { q: "Do you support right-to-left (RTL) languages?", a: "Yes. We configure Arabic and Hebrew RTL support for GCC and Middle East markets — full theme direction, font rendering, and content layout adjustments." },
+  { q: "Do you support right-to-left (RTL) languages?", a: "Yes. We configure Arabic and Hebrew RTL support for GCC and Middle East markets, full theme direction, font rendering, and content layout adjustments." },
   { q: "How long does multi-region setup take?", a: "Single additional region: 2–3 weeks. Full multi-region setup (4+ regions with separate tax, shipping, and language): 6–10 weeks." },
 ] as const;
 
@@ -96,7 +96,7 @@ export function MultiCurrencyContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered + currency panel ═══ */}
+      {/* ═══ HERO: centered + currency panel ═══ */}
       <section className="mc-hero">
         <div className="mc-hero-glow mc-hero-glow-1" aria-hidden="true" />
         <div className="mc-hero-glow mc-hero-glow-2" aria-hidden="true" />
@@ -110,7 +110,7 @@ export function MultiCurrencyContent() {
             <span className="acc">Multi-Region.</span>
           </h1>
           <p className="mc-hero-sub rev">
-            Sell globally with localised pricing, regional tax compliance, and geo-based shipping — <strong>one store, every market.</strong>
+            Sell globally with localised pricing, regional tax compliance, and geo-based shipping, <strong>one store, every market.</strong>
           </p>
           <div className="mc-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -242,10 +242,10 @@ export function MultiCurrencyContent() {
                 <div className="oi-closer-insight-stat">92%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of customers prefer shopping in their local currency.</strong>
-                  Source: Shopify, 2024. But currency conversion alone isn&apos;t localisation — customers also expect local payment methods, regional tax calculation, and shipping options that match their market.
+                  Source: Shopify, 2024. But currency conversion alone isn&apos;t localisation, customers also expect local payment methods, regional tax calculation, and shipping options that match their market.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer multi-region setup goes beyond currency — localising the entire shopping experience per market.</p>
+              <p>That&apos;s why every Wan Buffer multi-region setup goes beyond currency, localising the entire shopping experience per market.</p>
             </div>
           </div>
 
@@ -256,19 +256,19 @@ export function MultiCurrencyContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><WalletIcon /></div>
                 <div className="oi-closer-commit-t">Full localisation, not just currency</div>
-                <p className="oi-closer-commit-b">Pricing, tax, payment methods, shipping, language, and product availability — all localised per region. Not just a currency switcher.</p>
+                <p className="oi-closer-commit-b">Pricing, tax, payment methods, shipping, language, and product availability, all localised per region. Not just a currency switcher.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
                 <div className="oi-closer-commit-t">Tax compliance built in</div>
-                <p className="oi-closer-commit-b">GST, VAT, sales tax — configured per region and updated automatically when regulations change. Audit-ready from day one.</p>
+                <p className="oi-closer-commit-b">GST, VAT, sales tax, configured per region and updated automatically when regulations change. Audit-ready from day one.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><MonitorIcon /></div>
                 <div className="oi-closer-commit-t">Unified reporting</div>
-                <p className="oi-closer-commit-b">Revenue, orders, and analytics across all regions — consolidated in your base currency. One dashboard for global operations.</p>
+                <p className="oi-closer-commit-b">Revenue, orders, and analytics across all regions, consolidated in your base currency. One dashboard for global operations.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>

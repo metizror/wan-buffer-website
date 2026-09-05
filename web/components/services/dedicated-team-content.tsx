@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   DEDICATED TEAM — dedicated page
+   DEDICATED TEAM, dedicated page
    Hero split + team roster mock · What's included · Roles available ·
    Process flow · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -51,19 +51,19 @@ const ROSTER = [
 
 /* ── What's included ── */
 const INCLUDED = [
-  { icon: <UsersIcon />, t: "100% Dedicated Engineers", s: "Your team works exclusively on your projects — no shared resources, no split attention. Every engineer is 100% allocated to you with full-time availability during your working hours.", color: "ai" as const },
-  { icon: <MonitorIcon />, t: "Direct Communication", s: "Slack channels, Jira boards, daily standups, and weekly sprint reviews — your dedicated team operates as an extension of your in-house team with zero communication lag.", color: "green" as const },
-  { icon: <TrendingUpIcon />, t: "Month-to-Month Scaling", s: "Add engineers when workload peaks, release them when it eases. No long-term lock-ins — scale from 2 to 15 engineers with just 2 weeks' notice. You pay only for what you need.", color: "purple" as const },
-  { icon: <StarIcon />, t: "Senior Tech Lead Included", s: "Every team includes a senior tech lead who owns architecture, code quality, and sprint planning — plus an AI specialist when your project involves automation or ML components.", color: "red" as const },
+  { icon: <UsersIcon />, t: "100% Dedicated Engineers", s: "Your team works exclusively on your projects, no shared resources, no split attention. Every engineer is 100% allocated to you with full-time availability during your working hours.", color: "ai" as const },
+  { icon: <MonitorIcon />, t: "Direct Communication", s: "Slack channels, Jira boards, daily standups, and weekly sprint reviews, your dedicated team operates as an extension of your in-house team with zero communication lag.", color: "green" as const },
+  { icon: <TrendingUpIcon />, t: "Month-to-Month Scaling", s: "Add engineers when workload peaks, release them when it eases. No long-term lock-ins, scale from 2 to 15 engineers with just 2 weeks' notice. You pay only for what you need.", color: "purple" as const },
+  { icon: <StarIcon />, t: "Senior Tech Lead Included", s: "Every team includes a senior tech lead who owns architecture, code quality, and sprint planning, plus an AI specialist when your project involves automation or ML components.", color: "red" as const },
 ] as const;
 
 /* ── Roles available ── */
 const ROLES = [
-  { num: "01", icon: <CpuIcon />, t: "ERP Functional Consultants", s: "Domain experts in Odoo, Zoho, and Salesforce — business process mapping, module configuration, workflow design, and user training. They bridge the gap between your business requirements and the technical implementation." },
+  { num: "01", icon: <CpuIcon />, t: "ERP Functional Consultants", s: "Domain experts in Odoo, Zoho, and Salesforce, business process mapping, module configuration, workflow design, and user training. They bridge the gap between your business requirements and the technical implementation." },
   { num: "02", icon: <CodeIcon />, t: "ERP Technical Developers", s: "Python/Odoo, Java/Salesforce, and Deluge/Zoho developers who build custom modules, write integrations, develop reports, and extend ERP functionality. Senior developers with 4–8 years of platform-specific experience." },
-  { num: "03", icon: <SparklesIcon />, t: "AI & ML Engineers", s: "Python, LangChain, TensorFlow, and OpenAI specialists who build AI agents, predictive models, document processing pipelines, and intelligent automation — integrated directly into your ERP workflows." },
+  { num: "03", icon: <SparklesIcon />, t: "AI & ML Engineers", s: "Python, LangChain, TensorFlow, and OpenAI specialists who build AI agents, predictive models, document processing pipelines, and intelligent automation, integrated directly into your ERP workflows." },
   { num: "04", icon: <MonitorIcon />, t: "Full-Stack & Mobile Developers", s: "React, Next.js, Node.js, Flutter, and React Native developers for customer portals, mobile apps, dashboards, and frontend experiences that connect to your ERP backend." },
-  { num: "05", icon: <ShieldIcon />, t: "QA & Automation Engineers", s: "Manual and automated testing — Selenium, Cypress, and custom test frameworks for ERP workflows. Regression testing after every sprint, integration testing for APIs, and UAT coordination with your team." },
+  { num: "05", icon: <ShieldIcon />, t: "QA & Automation Engineers", s: "Manual and automated testing: Selenium, Cypress, and custom test frameworks for ERP workflows. Regression testing after every sprint, integration testing for APIs, and UAT coordination with your team." },
   { num: "06", icon: <SettingsIcon />, t: "DevOps & Infrastructure", s: "AWS, Azure, and GCP deployment, CI/CD pipelines, Odoo.sh management, Docker/Kubernetes orchestration, and monitoring setup. They keep your ERP infrastructure secure, fast, and available." },
 ] as const;
 
@@ -95,12 +95,12 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "How quickly can a dedicated team be assembled?", a: "A 2–4 person starter team can be onboarded within 1–2 weeks. Growth teams (5–8 engineers) typically take 2–3 weeks. Enterprise teams (9–15 engineers) take 3–4 weeks as we match specific skill requirements — ERP functional consultants, AI/ML engineers, mobile developers, and QA specialists. You interview and approve every team member before they start." },
-  { q: "Do I get to choose and interview the engineers?", a: "Yes. We propose 2–3 pre-vetted candidates for each role based on your requirements. You interview them, assess technical fit, and approve every hire. If someone isn't the right fit during the first 2 weeks, we replace them at no additional cost. You build the team — we source and manage the bench." },
-  { q: "How does communication and project management work?", a: "Your team joins your Slack workspace, Jira/Asana board, and any other tools you use. Daily standups (15 min), weekly sprint planning, and bi-weekly sprint reviews are standard. The tech lead owns sprint delivery and reports directly to your project stakeholder. Time zone overlap is guaranteed — minimum 4 hours of real-time collaboration daily." },
+  { q: "How quickly can a dedicated team be assembled?", a: "A 2–4 person starter team can be onboarded within 1–2 weeks. Growth teams (5–8 engineers) typically take 2–3 weeks. Enterprise teams (9–15 engineers) take 3–4 weeks as we match specific skill requirements. ERP functional consultants, AI/ML engineers, mobile developers, and QA specialists. You interview and approve every team member before they start." },
+  { q: "Do I get to choose and interview the engineers?", a: "Yes. We propose 2–3 pre-vetted candidates for each role based on your requirements. You interview them, assess technical fit, and approve every hire. If someone isn't the right fit during the first 2 weeks, we replace them at no additional cost. You build the team, we source and manage the bench." },
+  { q: "How does communication and project management work?", a: "Your team joins your Slack workspace, Jira/Asana board, and any other tools you use. Daily standups (15 min), weekly sprint planning, and bi-weekly sprint reviews are standard. The tech lead owns sprint delivery and reports directly to your project stakeholder. Time zone overlap is guaranteed, minimum 4 hours of real-time collaboration daily." },
   { q: "Can I scale the team up or down?", a: "Yes. Add or remove engineers month-to-month with 2 weeks' notice. There are no long-term lock-ins. Team changes take effect at the next sprint boundary so ongoing work isn't disrupted. If you need a specialist for just one sprint (e.g., a DevOps engineer for deployment), we accommodate that too." },
   { q: "What's included beyond engineering hours?", a: "Every team includes a senior tech lead (at no extra charge for teams of 4+), sprint management, code reviews, architecture guidance, and transparent time tracking. You also get monthly performance reviews, skill development plans, and a dedicated account manager as your single point of contact for team operations." },
-  { q: "How does pricing work for dedicated teams?", a: "Pricing is per-engineer, per-month — transparent and predictable. Rates vary by role and seniority. There are no hidden fees for project management, tools, or infrastructure. You see a clear breakdown before committing. Month-to-month billing with no long-term contracts required — though multi-month commitments get preferential rates." },
+  { q: "How does pricing work for dedicated teams?", a: "Pricing is per-engineer, per-month, transparent and predictable. Rates vary by role and seniority. There are no hidden fees for project management, tools, or infrastructure. You see a clear breakdown before committing. Month-to-month billing with no long-term contracts required, though multi-month commitments get preferential rates." },
 ] as const;
 
 /* ── Component ── */
@@ -108,7 +108,7 @@ export function DedicatedTeamContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + team roster right ═══ */}
+      {/* ═══ HERO: text left + team roster right ═══ */}
       <section className="dt-hero">
         <div className="dt-hero-glow dt-hero-glow-1" aria-hidden="true" />
         <div className="dt-hero-glow dt-hero-glow-2" aria-hidden="true" />
@@ -124,7 +124,7 @@ export function DedicatedTeamContent() {
               <span className="acc">Your engineers.<br />Your workflow.<br />Your pace.</span>
             </h1>
             <p className="dt-hero-sub rev">
-              2–15 engineers, 100% dedicated to you. ERP, AI, and mobile talent embedded in your workflows — <strong>scale month-to-month.</strong>
+              2–15 engineers, 100% dedicated to you. ERP, AI, and mobile talent embedded in your workflows, <strong>scale month-to-month.</strong>
             </p>
             <div className="dt-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -181,7 +181,7 @@ export function DedicatedTeamContent() {
         </div>
       </section>
 
-      {/* ═══ WHAT'S INCLUDED — 4 cards ═══ */}
+      {/* ═══ WHAT'S INCLUDED: 4 cards ═══ */}
       <section className="dt-ops">
         <div className="dt-ops-inner">
           <div className="dt-ops-hdr rev">
@@ -200,7 +200,7 @@ export function DedicatedTeamContent() {
         </div>
       </section>
 
-      {/* ═══ ROLES — alternating rows ═══ */}
+      {/* ═══ ROLES: alternating rows ═══ */}
       <section className="dt-feat" id="roles">
         <div className="dt-feat-inner">
           <div className="dt-feat-hdr rev">
@@ -222,7 +222,7 @@ export function DedicatedTeamContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="dt-proc" id="process">
         <div className="dt-proc-inner">
           <div className="dt-proc-hdr rev">
@@ -257,7 +257,7 @@ export function DedicatedTeamContent() {
         </div>
       </section>
 
-      {/* ═══ TEAM SIZES — split ═══ */}
+      {/* ═══ TEAM SIZES: split ═══ */}
       <section className="dt-multi" id="team-sizes">
         <div className="dt-multi-inner">
           <div className="dt-multi-hdr rev">
@@ -268,7 +268,7 @@ export function DedicatedTeamContent() {
             <div className="dt-multi-left">
               <div className="dt-multi-big-n">15</div>
               <div className="dt-multi-big-l">Maximum engineers per dedicated team</div>
-              <p className="dt-multi-big-s">From a 2-person starter team for focused module work to a 15-person enterprise squad for full product engineering — your team composition and size evolve with your needs, month to month.</p>
+              <p className="dt-multi-big-s">From a 2-person starter team for focused module work to a 15-person enterprise squad for full product engineering, your team composition and size evolve with your needs, month to month.</p>
             </div>
             <div className="dt-multi-right">
               {TEAM_SIZES.map((ts) => (
@@ -329,10 +329,10 @@ export function DedicatedTeamContent() {
                 <div className="oi-closer-insight-stat">84%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>client retention rate for dedicated team engagements.</strong>
-                  That&apos;s because dedicated engineers build deep context in your codebase, your business logic, and your workflows — context that compounds every month and makes the team more effective over time.
+                  That&apos;s because dedicated engineers build deep context in your codebase, your business logic, and your workflows, context that compounds every month and makes the team more effective over time.
                 </div>
               </div>
-              <p>Every dedicated team comes with four guarantees — written into the agreement.</p>
+              <p>Every dedicated team comes with four guarantees, written into the agreement.</p>
             </div>
           </div>
 
@@ -342,7 +342,7 @@ export function DedicatedTeamContent() {
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
-                <div className="oi-closer-commit-t">100% dedicated — no resource sharing</div>
+                <div className="oi-closer-commit-t">100% dedicated, no resource sharing</div>
                 <p className="oi-closer-commit-b">Every engineer on your team works exclusively on your projects. No split allocation, no shared attention, no context-switching between clients. Verified by transparent time tracking.</p>
               </div>
               <div className="oi-closer-commit">
@@ -354,14 +354,14 @@ export function DedicatedTeamContent() {
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><TrendingUpIcon /></div>
-                <div className="oi-closer-commit-t">Scale month-to-month — no lock-ins</div>
+                <div className="oi-closer-commit-t">Scale month-to-month, no lock-ins</div>
                 <p className="oi-closer-commit-b">Add or remove engineers with 2 weeks&apos; notice. No annual contracts, no penalties, no minimum terms. We earn your renewal every month through results.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><StarIcon /></div>
                 <div className="oi-closer-commit-t">Senior tech lead included free (4+ team)</div>
-                <p className="oi-closer-commit-b">Teams of 4 or more include a senior tech lead at no extra cost — owning architecture, code quality, sprint planning, and technical decision-making for your project.</p>
+                <p className="oi-closer-commit-b">Teams of 4 or more include a senior tech lead at no extra cost, owning architecture, code quality, sprint planning, and technical decision-making for your project.</p>
               </div>
             </div>
           </div>

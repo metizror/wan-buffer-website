@@ -190,9 +190,9 @@ export function PrivacyPolicyContent() {
               <div className="pp-location">
                 <h3 className="pp-h3">India</h3>
                 <ul className="pp-list">
-                  <li><strong>Ahmedabad</strong> — Head &amp; Account Office, Creative and R&amp;D Center</li>
-                  <li><strong>Telangana</strong> — Development Center</li>
-                  <li><strong>Bhavnagar</strong> — Development Center</li>
+                  <li><strong>Ahmedabad</strong>: Head &amp; Account Office, Creative and R&amp;D Center</li>
+                  <li><strong>Telangana</strong>. Development Center</li>
+                  <li><strong>Bhavnagar</strong>: Development Center</li>
                 </ul>
               </div>
               <div className="pp-location">

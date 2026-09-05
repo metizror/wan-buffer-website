@@ -159,7 +159,7 @@ export async function updateAdminUser(
   if (data.email !== undefined) set.email = data.email;
   if (data.role !== undefined) set.role = data.role;
   if (data.isActive !== undefined) set.isActive = data.isActive;
-  // Never overwrite the hash with an empty password — blank means "keep current".
+  // Never overwrite the hash with an empty password, blank means "keep current".
   if (data.password) set.passwordHash = await bcrypt.hash(data.password, 12);
 
   try {

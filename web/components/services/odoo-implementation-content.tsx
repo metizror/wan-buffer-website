@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   ODOO IMPLEMENTATION — full redesign
+   ODOO IMPLEMENTATION, full redesign
    Hero luxe · Stats band · Methodology cards · Chaptered roadmap ·
    Bento · Closer · Clean support
 ──────────────────────────────────────────────────────────────────────── */
@@ -52,23 +52,23 @@ const PHASES = [
 ] as const;
 
 const ROADMAP_CHAPTERS = [
-  { chapter: "01", tag: "Foundation", title: "Plan & Decide", desc: "Lay the foundation. Define outcomes, budget, ERP fit, and the right partner — before a single module is touched.", accent: "ai" as const,
+  { chapter: "01", tag: "Foundation", title: "Plan & Decide", desc: "Lay the foundation. Define outcomes, budget, ERP fit, and the right partner, before a single module is touched.", accent: "ai" as const,
     steps: [
       { n: "01", icon: <TargetIcon/>, title: "Defining business objectives", body: "We align on the outcomes you need so recommendations map to measurable goals.", deliverable: "Outcome map" },
       { n: "02", icon: <WalletIcon/>, title: "Allocation of finances", body: "Budget clarity early so scope, phases, and hosting choices stay realistic.", deliverable: "Phased budget" },
       { n: "03", icon: <BarChartIcon/>, title: "Choosing the most appropriate ERP", body: "If Odoo is the fit, we document why and how each app supports your processes.", deliverable: "Fit assessment" },
       { n: "04", icon: <UsersIcon/>, title: "Picking the right implementation partner", body: "Experience, methodology, and post-go-live support matter as much as technical skill.", deliverable: "Partner decision" },
     ]},
-  { chapter: "02", tag: "Construction", title: "Build & Validate", desc: "Construct, configure, migrate, and test — every step gated, so nothing reaches users until it's ready.", accent: "r" as const,
+  { chapter: "02", tag: "Construction", title: "Build & Validate", desc: "Construct, configure, migrate, and test, every step gated, so nothing reaches users until it's ready.", accent: "r" as const,
     steps: [
       { n: "05", icon: <MilestoneIcon/>, title: "Specifying implementation stages", body: "Phased delivery with clear milestones reduces risk and keeps teams productive.", deliverable: "Delivery plan" },
       { n: "06", icon: <CloudIcon/>, title: "Selecting the most suitable plan", body: "Hosting, integrations, and SLAs are chosen to match performance and compliance needs.", deliverable: "Hosting & SLAs" },
       { n: "07", icon: <ArrowsIcon/>, title: "Transfer of data", body: "Legacy data is cleaned, mapped, and reconciled before cutover.", deliverable: "Clean dataset" },
       { n: "08", icon: <CheckCircleIcon/>, title: "Testing", body: "Finance, inventory, and sales flows are thoroughly tested before go-live.", deliverable: "UAT sign-off" },
     ]},
-  { chapter: "03", tag: "Operations", title: "Launch & Operate", desc: "Train, cut over, and stay. The rollout doesn't end at go-live — hypercare and upkeep keep Odoo aligned to the business.", accent: "r" as const,
+  { chapter: "03", tag: "Operations", title: "Launch & Operate", desc: "Train, cut over, and stay. The rollout doesn't end at go-live, hypercare and upkeep keep Odoo aligned to the business.", accent: "r" as const,
     steps: [
-      { n: "09", icon: <BookOpenIcon/>, title: "Teaching", body: "Users learn the system in the context of their real jobs—not generic demos.", deliverable: "Trained users" },
+      { n: "09", icon: <BookOpenIcon/>, title: "Teaching", body: "Users learn the system in the context of their real jobs: not generic demos.", deliverable: "Trained users" },
       { n: "10", icon: <ZapIcon/>, title: "Going live", body: "Controlled cutover with rollback thinking and hypercare when you need it.", deliverable: "Cutover complete" },
       { n: "11", icon: <ShieldIcon/>, title: "Assistance & upkeep", body: "Ongoing support keeps Odoo aligned as your business and regulations evolve.", deliverable: "Ongoing partnership" },
     ]},
@@ -77,12 +77,12 @@ const ROADMAP_CHAPTERS = [
 const BENTO_DATA = [
   { icon: <CpuIcon/>, t: "Exceptional engineering discipline", b: "Clean, maintainable Odoo code that survives upgrades, audits, and growth.", tag: "Engineering", size: "feature", ai: true, variant: "", stat: { n: "100%", l: "Peer reviewed" } },
   { icon: <PackageIcon/>, t: "Strong Odoo Apps footprint", b: "Deep experience shipping modules the community and enterprises actually use.", tag: "Apps", size: "", ai: false, variant: "glow-red", mini: { n: "40+", l: "Modules" } },
-  { icon: <RefreshIcon/>, t: "Skilled across Odoo versions", b: "From older instances to Odoo 17/18—we plan migrations with zero surprises.", tag: "Versions", size: "", ai: true, variant: "glow-ai", mini: { n: "v10–v18", l: "Coverage" } },
+  { icon: <RefreshIcon/>, t: "Skilled across Odoo versions", b: "From older instances to Odoo 17/18: we plan migrations with zero surprises.", tag: "Versions", size: "", ai: true, variant: "glow-ai", mini: { n: "v10–v18", l: "Coverage" } },
   { icon: <SparklesIcon/>, t: "Uncompromised quality", b: "Reviews, automated checks, and partner-grade standards on every delivery.", tag: "Quality", size: "wide", ai: false, variant: "pattern", mini: { n: "0", l: "Critical regressions" } },
   { icon: <ClockIcon/>, t: "Years of execution", b: "Long-running programmes across manufacturing, services, and distribution.", tag: "Execution", size: "", ai: true, variant: "glow-ai", mini: { n: "7+", l: "Years" } },
   { icon: <TrophyIcon/>, t: "Thousands of success stories", b: "A track record you can verify through references and shipped projects.", tag: "Track record", size: "", ai: false, variant: "glow-red", mini: { n: "254+", l: "Live" } },
   { icon: <GridIcon/>, t: "All major Odoo domains", b: "Accounting, inventory, MRP, CRM, HR, eCommerce, and custom verticals.", tag: "Domains", size: "wide", ai: false, variant: "pattern", mini: { n: "9", l: "Domains" } },
-  { icon: <MonitorIcon/>, t: "UI & UX depth", b: "Interfaces your teams enjoy using—not cluttered forms bolted together.", tag: "UI/UX", size: "", ai: true, variant: "glow-ai", mini: { n: "WCAG AA", l: "Standard" } },
+  { icon: <MonitorIcon/>, t: "UI & UX depth", b: "Interfaces your teams enjoy using: not cluttered forms bolted together.", tag: "UI/UX", size: "", ai: true, variant: "glow-ai", mini: { n: "WCAG AA", l: "Standard" } },
 ] as const;
 
 const STATS = [
@@ -113,9 +113,9 @@ export function OdooImplementationContent() {
             <span className="ln"><span className="ai">Implementation</span></span>
           </h1>
           <p className="oi-hero-lux-sub rev">
-            Most ERP projects don’t fail because of the software — they fail in the rollout. We run the whole
+            Most ERP projects don’t fail because of the software, they fail in the rollout. We run the whole
             implementation for you: analysing how you work, configuring Odoo to match, migrating your data, training
-            your team, and going live in phases — so Odoo actually gets <strong>adopted</strong>, not just installed.
+            your team, and going live in phases, so Odoo actually gets <strong>adopted</strong>, not just installed.
           </p>
           <div className="oi-hero-lux-cta rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -169,7 +169,7 @@ export function OdooImplementationContent() {
               </div>
             </div>
             <div className="oi-meth-intro-r">
-              <p>The steps below are what we do. This is <em>how</em> we do them — the principles that govern every decision on your project.</p>
+              <p>The steps below are what we do. This is <em>how</em> we do them, the principles that govern every decision on your project.</p>
               <div className="oi-meth-intro-mini">
                 <div className="oi-meth-mini">
                   <div className="oi-meth-mini-row"><span className="oi-meth-mini-n">6</span><span className="oi-meth-mini-u">phases</span></div>
@@ -247,7 +247,7 @@ export function OdooImplementationContent() {
         </div>
       </section>
 
-      {/* ROADMAP — editorial light */}
+      {/* ROADMAP: editorial light */}
       <section className="oi-rmap" id="roadmap">
         <div className="oi-rmap-inner">
 
@@ -258,7 +258,7 @@ export function OdooImplementationContent() {
               <h2>Eleven gates.<br /><span>Zero surprises.</span></h2>
             </div>
             <div className="oi-rmap-hdr-r">
-              <p>Every stage in your rollout is <strong>sign-off gated</strong> — a phase only begins once you&apos;ve accepted the one before it. No scope drift, no silent overruns, no go-live shock. Refined across <strong>254+ go-lives</strong> in 20+ countries.</p>
+              <p>Every stage in your rollout is <strong>sign-off gated</strong>, a phase only begins once you&apos;ve accepted the one before it. No scope drift, no silent overruns, no go-live shock. Refined across <strong>254+ go-lives</strong> in 20+ countries.</p>
               <div className="oi-rmap-overview-row">
                 <div className="oi-rmap-overview">
                   <span className="oi-rmap-overview-dot" />
@@ -328,7 +328,7 @@ export function OdooImplementationContent() {
         </div>
       </section>
 
-      {/* BENTO — magazine spread */}
+      {/* BENTO: magazine spread */}
       <section className="oi-bento-sec" id="why-us">
         <div className="oi-bento-inner">
 
@@ -362,7 +362,7 @@ export function OdooImplementationContent() {
             <div className="oi-bento-hero-icon"><CpuIcon /></div>
             <div className="oi-bento-hero-body">
               <div className="oi-bento-hero-tag">Engineering discipline</div>
-              <div className="oi-bento-hero-t">Clean, maintainable Odoo code — built to survive upgrades, audits, and growth.</div>
+              <div className="oi-bento-hero-t">Clean, maintainable Odoo code, built to survive upgrades, audits, and growth.</div>
               <p className="oi-bento-hero-b">Every line shipped is peer-reviewed against partner-grade standards. We treat your stack as a long-term asset, not a one-time delivery.</p>
             </div>
             <div className="oi-bento-hero-stat">
@@ -397,7 +397,7 @@ export function OdooImplementationContent() {
         </div>
       </section>
 
-      {/* CLOSER — manifesto + commitments + CTA */}
+      {/* CLOSER: manifesto + commitments + CTA */}
       <section className="oi-closer" id="capabilities">
         <div className="oi-closer-inner">
 
@@ -412,7 +412,7 @@ export function OdooImplementationContent() {
                 <div className="oi-closer-insight-stat">1 in 3<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>ERP rollouts miss their go-live.</strong>
-                  Source: Panorama Consulting, 2023. The decisive factor isn&apos;t the software — it&apos;s the team that runs it. Methodology, seniority, and accountability matter more than license cost.
+                  Source: Panorama Consulting, 2023. The decisive factor isn&apos;t the software, it&apos;s the team that runs it. Methodology, seniority, and accountability matter more than license cost.
                 </div>
               </div>
               <p>That&apos;s why every Wan Buffer engagement is built around four written commitments. None are optional, none get traded away under deadline pressure.</p>
@@ -427,7 +427,7 @@ export function OdooImplementationContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior consultants only</div>
-                <p className="oi-closer-commit-b">Average 7+ years on Odoo. No juniors and no shadow staffing — the name on the SoW is the person doing the work.</p>
+                <p className="oi-closer-commit-b">Average 7+ years on Odoo. No juniors and no shadow staffing, the name on the SoW is the person doing the work.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
@@ -439,13 +439,13 @@ export function OdooImplementationContent() {
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
                 <div className="oi-closer-commit-t">90-day hypercare</div>
-                <p className="oi-closer-commit-b">Senior support included for 90 days post go-live. We stay until your team is genuinely independent — not billed extra.</p>
+                <p className="oi-closer-commit-b">Senior support included for 90 days post go-live. We stay until your team is genuinely independent, not billed extra.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><TrendingUpIcon /></div>
                 <div className="oi-closer-commit-t">Methodology, not theory</div>
-                <p className="oi-closer-commit-b">11-stage roadmap refined across 254+ go-lives. Each stage has its own acceptance criteria — and you sign off.</p>
+                <p className="oi-closer-commit-b">11-stage roadmap refined across 254+ go-lives. Each stage has its own acceptance criteria, and you sign off.</p>
               </div>
             </div>
           </div>

@@ -11,7 +11,7 @@ import { OdooCustomizationContent } from "@/components/services/odoo-customizati
 export const metadata: Metadata = {
   title: "Odoo ERP Customization & Installation | Wan Buffer",
   description:
-    "Odoo customization and installation: requirement gathering, scope and feasibility analysis, development, testing, and delivery—tailored to your business needs.",
+    "Odoo customization and installation: requirement gathering, scope and feasibility analysis, development, testing, and delivery: tailored to your business needs.",
   keywords: [
     "Odoo customization",
     "Odoo installation",
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
     title: "Odoo Customization & Installation | Wan Buffer",
     description:
-      "Tailored Odoo applications—from requirements and gap analysis through development, testing, and delivery.",
+      "Tailored Odoo applications: from requirements and gap analysis through development, testing, and delivery.",
     siteName: "Wan Buffer",
   },
 };

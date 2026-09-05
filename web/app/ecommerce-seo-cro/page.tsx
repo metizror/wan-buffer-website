@@ -11,7 +11,7 @@ import { EcommerceSeoContent } from "@/components/services/ecommerce-seo-content
 export const metadata: Metadata = {
   title: "eCommerce SEO & CRO | GTM, Schema & Conversion Rate | Wan Buffer",
   description:
-    "eCommerce SEO and conversion rate optimisation — technical SEO, schema markup, Core Web Vitals, A/B testing, checkout optimisation, and analytics setup for Shopify, Magento, and WooCommerce stores.",
+    "eCommerce SEO and conversion rate optimisation, technical SEO, schema markup, Core Web Vitals, A/B testing, checkout optimisation, and analytics setup for Shopify, Magento, and WooCommerce stores.",
   keywords: [
     "eCommerce SEO",
     "conversion rate optimisation",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "eCommerce SEO & CRO — GTM, Schema & Conversion Rate | Wan Buffer",
+    title: "eCommerce SEO & CRO: GTM, Schema & Conversion Rate | Wan Buffer",
     description:
-      "Technical SEO, schema markup, and conversion optimisation for eCommerce — more traffic, higher conversion, better revenue.",
+      "Technical SEO, schema markup, and conversion optimisation for eCommerce, more traffic, higher conversion, better revenue.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/ecommerce-seo-cro" },

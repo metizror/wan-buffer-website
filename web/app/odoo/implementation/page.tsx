@@ -25,13 +25,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
     title: "Odoo ERP Implementation | Wan Buffer",
     description:
-      "Structured Odoo rollout from discovery to go-live—configuration, customisation, data migration, training, and support.",
+      "Structured Odoo rollout from discovery to go-live: configuration, customisation, data migration, training, and support.",
     siteName: "Wan Buffer",
   },
 };

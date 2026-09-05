@@ -4,12 +4,12 @@ export const CASE_STUDY_DETAILS: Record<string, CaseStudyDetailFields> = {
   "odoo-erp-implementation-in-the-textile-industry": {
     aboutParagraphs: [
       "A textile manufacturing company producing cotton, linen, and polyester fabrics was facing serious inefficiencies in managing its growing warehouses and product lines. Operations were largely manual, with Excel sheets used for stock tracking. Employees spent hours searching for the right fabric rolls, managers lacked real-time visibility, and quality control was paper-based.",
-      "To overcome these challenges, the company partnered with Wan Buffer Services to implement a fully customized Odoo ERP system designed for the textile sector — delivering automation, accuracy, and real-time control across all operations.",
+      "To overcome these challenges, the company partnered with Wan Buffer Services to implement a fully customized Odoo ERP system designed for the textile sector, delivering automation, accuracy, and real-time control across all operations.",
     ],
     businessType: "Textile Industry",
     location: "Manufacturing",
     goalParagraph:
-      "The goal was to digitize and streamline fabric inventory, enhance production visibility, and implement end-to-end automation — from roll tracking to quality control — while improving team collaboration and decision-making.",
+      "The goal was to digitize and streamline fabric inventory, enhance production visibility, and implement end-to-end automation, from roll tracking to quality control, while improving team collaboration and decision-making.",
     highlights: [
       "Complete roll-level tracking and traceability",
       "Barcode & IoT automation for real-time updates",
@@ -59,7 +59,7 @@ export const CASE_STUDY_DETAILS: Record<string, CaseStudyDetailFields> = {
     approach: [
       { title: "Revamp", description: "Digitized roll-level inventory tracking, eliminating manual Excel workflows and centralizing operations under one Odoo system.", icon: "revamp" },
       { title: "Integration", description: "Connected IoT devices, barcode scanners, and AI dashboards to enable real-time visibility from production to warehouse to dispatch.", icon: "integration" },
-      { title: "Updates", description: "Implemented automated pricing, reorder, and quality workflows — reducing errors, improving speed, and ensuring full product traceability.", icon: "updates" },
+      { title: "Updates", description: "Implemented automated pricing, reorder, and quality workflows, reducing errors, improving speed, and ensuring full product traceability.", icon: "updates" },
       { title: "Optimization", description: "Introduced predictive dashboards and role-based access controls for smarter decision-making and transparent cross-department collaboration.", icon: "optimization" },
     ],
     results: [
@@ -74,7 +74,7 @@ export const CASE_STUDY_DETAILS: Record<string, CaseStudyDetailFields> = {
       company: "Textile Manufacturing Company",
       role: "Operations Head",
       quote:
-        "Roll-level tracking changed our day-to-day. We can locate exact fabrics in seconds, trace quality results, and replenish stock on time. The stress is gone — and our customers notice the difference.",
+        "Roll-level tracking changed our day-to-day. We can locate exact fabrics in seconds, trace quality results, and replenish stock on time. The stress is gone, and our customers notice the difference.",
     },
     techStack: ["Odoo", "Python", "PostgreSQL", "IoT", "Barcode"],
   },
@@ -137,7 +137,7 @@ export const CASE_STUDY_DETAILS: Record<string, CaseStudyDetailFields> = {
       { title: "Revamp", description: "Transformed the website into a dynamic ordering interface capable of handling standard and custom steel products, with built-in validation and pricing logic.", icon: "revamp" },
       { title: "Integration", description: "Enabled seamless bulk order entry via Excel uploads, mobile picking integration for warehouse staff, and dynamic pricing algorithms within Odoo.", icon: "integration" },
       { title: "Updates", description: "Automated custom pricing calculations, sales/purchase order creation from bulk files, and real-time picking assignments based on user workload.", icon: "updates" },
-      { title: "Optimization", description: "Deployed a mobile-enabled smart picking system with scanning, batch handling, and validation workflows—streamlining warehouse execution and boosting operational speed.", icon: "optimization" },
+      { title: "Optimization", description: "Deployed a mobile-enabled smart picking system with scanning, batch handling, and validation workflows: streamlining warehouse execution and boosting operational speed.", icon: "optimization" },
     ],
     results: [
       { value: "100% Automation", label: "of custom pricing logic" },
@@ -161,7 +161,7 @@ export const CASE_STUDY_DETAILS: Record<string, CaseStudyDetailFields> = {
     businessType: "E-Commerce Retailer",
     location: "United States",
     goalParagraph:
-      "The primary goal was to build a centralized hub within Odoo to consolidate orders from Listing Mirror—including Omnichannel, Merchant-Fulfilled, and Fulfilled by Amazon (FBA) orders. The business also needed to automate backend operations such as bulk order entry, stock updates, and purchase workflows to reduce manual overhead and minimize fulfillment delays.",
+      "The primary goal was to build a centralized hub within Odoo to consolidate orders from Listing Mirror: including Omnichannel, Merchant-Fulfilled, and Fulfilled by Amazon (FBA) orders. The business also needed to automate backend operations such as bulk order entry, stock updates, and purchase workflows to reduce manual overhead and minimize fulfillment delays.",
     highlights: [
       "Integrated Listing Mirror orders (Omnichannel, FBA, and MFN) with Odoo",
       "Enabled Excel-based bulk order uploads into the Odoo system",
@@ -229,7 +229,7 @@ export const CASE_STUDY_DETAILS: Record<string, CaseStudyDetailFields> = {
     businessType: "Logistics",
     location: "United States",
     goalParagraph:
-      "A company aimed to centralize its core operations—sales, inventory, procurement, logistics, and vendor communications—under one intelligent system. The company needed a reliable ERP that could automate order flows from Magento, synchronize real-time inventory, streamline multi-carrier shipping, and enhance financial operations through secure payment processing. An additional goal was to provide vendors with better collaboration tools and implement an efficient RMA (Return Merchandise Authorization) process to boost customer satisfaction and reduce return processing time.",
+      "A company aimed to centralize its core operations: sales, inventory, procurement, logistics, and vendor communications: under one intelligent system. The company needed a reliable ERP that could automate order flows from Magento, synchronize real-time inventory, streamline multi-carrier shipping, and enhance financial operations through secure payment processing. An additional goal was to provide vendors with better collaboration tools and implement an efficient RMA (Return Merchandise Authorization) process to boost customer satisfaction and reduce return processing time.",
     highlights: [
       "Seamless Magento-Odoo synchronization for products and orders",
       "Real-time logistics integrations with Freightcom, Lumis, and UPS",
@@ -271,9 +271,9 @@ export const CASE_STUDY_DETAILS: Record<string, CaseStudyDetailFields> = {
       },
     ],
     approach: [
-      { title: "Revamp", description: "Centralized disconnected systems—Magento, logistics platforms, and payment gateways—into a unified Odoo ERP, eliminating data silos and manual interventions.", icon: "revamp" },
+      { title: "Revamp", description: "Centralized disconnected systems: Magento, logistics platforms, and payment gateways: into a unified Odoo ERP, eliminating data silos and manual interventions.", icon: "revamp" },
       { title: "Integration", description: "Integrated third-party systems including Magento, Freightcom, Lumis, UPS, and Moneris to ensure seamless order processing, real-time shipping updates, and secure payment flows.", icon: "integration" },
-      { title: "Updates", description: "Automated workflows for logistics, vendor management, and RMA processing—improving operational speed, accuracy, and customer satisfaction.", icon: "updates" },
+      { title: "Updates", description: "Automated workflows for logistics, vendor management, and RMA processing: improving operational speed, accuracy, and customer satisfaction.", icon: "updates" },
       { title: "Optimization", description: "Developed a custom Vendor Portal and centralized reporting tools to enhance supplier collaboration and provide real-time business intelligence for smarter decision-making.", icon: "optimization" },
     ],
     results: [
@@ -316,7 +316,7 @@ export const CASE_STUDY_DETAILS: Record<string, CaseStudyDetailFields> = {
     solutions: [
       {
         title: "Modern UI/UX Redesign",
-        bullets: ["We revamped the entire frontend interface to ensure a clean, intuitive, and responsive shopping experience. The new layout improved navigation, reduced visual clutter, and guided users smoothly from product discovery to checkout—on both desktop and mobile devices."],
+        bullets: ["We revamped the entire frontend interface to ensure a clean, intuitive, and responsive shopping experience. The new layout improved navigation, reduced visual clutter, and guided users smoothly from product discovery to checkout: on both desktop and mobile devices."],
       },
       {
         title: "Advanced Product Filtering System",
@@ -332,7 +332,7 @@ export const CASE_STUDY_DETAILS: Record<string, CaseStudyDetailFields> = {
       },
       {
         title: "Real-Time Inventory Management",
-        bullets: ["We implemented inventory workflows that automatically reflect stock changes in real time. This included stock level tracking, reordering rules, and warehouse synchronization—ensuring accurate availability and minimizing customer dissatisfaction from stock errors."],
+        bullets: ["We implemented inventory workflows that automatically reflect stock changes in real time. This included stock level tracking, reordering rules, and warehouse synchronization: ensuring accurate availability and minimizing customer dissatisfaction from stock errors."],
       },
       {
         title: "Scalable Backend Infrastructure",

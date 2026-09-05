@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   ODOO MIGRATION — matches implementation page UI/UX
+   ODOO MIGRATION, matches implementation page UI/UX
    Hero luxe · Stats band · Methodology cards · Chaptered roadmap ·
    Closer · Clean support
 ──────────────────────────────────────────────────────────────────────── */
@@ -34,29 +34,29 @@ import {
 
 /* ── Data ── */
 const PHASES = [
-  { icon: <SearchIcon/>, title: "Audit", body: "We inventory your current version (or legacy ERP), database size, custom modules, and integrations — so we know exactly what's moving before we plan anything.", tag: "Assess", ai: false, outcome: "Migration audit", duration: "2–3 days", deliverables: ["Version & DB audit", "Customization inventory", "Integration map", "Risk list"] },
-  { icon: <ShieldIcon/>, title: "Compatibility", body: "We test every custom module and third-party app against the target version, flagging deprecated code and what needs rewriting — no nasty surprises mid-migration.", tag: "Check", ai: false, outcome: "Compatibility report", duration: "3–5 days", deliverables: ["Compatibility matrix", "Deprecated-code flags", "Third-party app check", "Effort estimate"] },
-  { icon: <FlagIcon/>, title: "Migration plan", body: "We design the path and sequence, pick a cutover window that fits your operations, and write the rollback plan — so everyone knows exactly how the switch happens.", tag: "Plan", ai: true, outcome: "Migration plan", duration: "2–4 days", deliverables: ["Migration plan", "Cutover window", "Rollback plan", "Data-mapping scheme"] },
-  { icon: <BarChartIcon/>, title: "Estimation", body: "A clear, itemized cost and timeline based on what the audit actually found. You approve before we touch production — no open-ended bills.", tag: "Estimate", ai: false, outcome: "Signed estimate", duration: "2–3 days", deliverables: ["Cost breakdown", "Timeline", "Resource plan", "Assumptions"] },
-  { icon: <ArrowsIcon/>, title: "Migrate on staging", body: "On a staging copy — never your live system — we migrate data, upgrade modules, rewrite incompatible code, and reconnect every integration.", tag: "Build", ai: false, outcome: "Staging build", duration: "Scope-based", deliverables: ["Data migrated", "Modules upgraded", "Code rewritten", "Integrations reconnected"] },
-  { icon: <CheckCircleIcon/>, title: "Validate", body: "Functional testing, a parallel run, and your team's UAT — so migrated numbers reconcile against the old system and sign-off is real, not assumed.", tag: "Test", ai: true, outcome: "Test + UAT report", duration: "3–7 days", deliverables: ["Functional tests", "Data reconciliation", "UAT sign-off", "Performance check"] },
+  { icon: <SearchIcon/>, title: "Audit", body: "We inventory your current version (or legacy ERP), database size, custom modules, and integrations, so we know exactly what's moving before we plan anything.", tag: "Assess", ai: false, outcome: "Migration audit", duration: "2–3 days", deliverables: ["Version & DB audit", "Customization inventory", "Integration map", "Risk list"] },
+  { icon: <ShieldIcon/>, title: "Compatibility", body: "We test every custom module and third-party app against the target version, flagging deprecated code and what needs rewriting, no nasty surprises mid-migration.", tag: "Check", ai: false, outcome: "Compatibility report", duration: "3–5 days", deliverables: ["Compatibility matrix", "Deprecated-code flags", "Third-party app check", "Effort estimate"] },
+  { icon: <FlagIcon/>, title: "Migration plan", body: "We design the path and sequence, pick a cutover window that fits your operations, and write the rollback plan, so everyone knows exactly how the switch happens.", tag: "Plan", ai: true, outcome: "Migration plan", duration: "2–4 days", deliverables: ["Migration plan", "Cutover window", "Rollback plan", "Data-mapping scheme"] },
+  { icon: <BarChartIcon/>, title: "Estimation", body: "A clear, itemized cost and timeline based on what the audit actually found. You approve before we touch production, no open-ended bills.", tag: "Estimate", ai: false, outcome: "Signed estimate", duration: "2–3 days", deliverables: ["Cost breakdown", "Timeline", "Resource plan", "Assumptions"] },
+  { icon: <ArrowsIcon/>, title: "Migrate on staging", body: "On a staging copy, never your live system, we migrate data, upgrade modules, rewrite incompatible code, and reconnect every integration.", tag: "Build", ai: false, outcome: "Staging build", duration: "Scope-based", deliverables: ["Data migrated", "Modules upgraded", "Code rewritten", "Integrations reconnected"] },
+  { icon: <CheckCircleIcon/>, title: "Validate", body: "Functional testing, a parallel run, and your team's UAT, so migrated numbers reconcile against the old system and sign-off is real, not assumed.", tag: "Test", ai: true, outcome: "Test + UAT report", duration: "3–7 days", deliverables: ["Functional tests", "Data reconciliation", "UAT sign-off", "Performance check"] },
   { icon: <RocketIcon/>, title: "Cutover", body: "We execute go-live in the agreed window with a final data sync, run smoke tests on the live system, and keep the rollback plan armed until it's confirmed stable.", tag: "Go-live", ai: true, outcome: "Live system", duration: "1–2 days", deliverables: ["Production cutover", "Final data sync", "Smoke tests", "Rollback ready"] },
-  { icon: <HeartIcon/>, title: "Hypercare", body: "After go-live we stay close — monitoring, quick fixes, and tuning while your team settles into the new version, with documentation they can actually use.", tag: "Support", ai: false, outcome: "Live & supported", duration: "Ongoing", deliverables: ["Hypercare window", "Monitoring", "Issue fixes", "Handover docs"] },
+  { icon: <HeartIcon/>, title: "Hypercare", body: "After go-live we stay close, monitoring, quick fixes, and tuning while your team settles into the new version, with documentation they can actually use.", tag: "Support", ai: false, outcome: "Live & supported", duration: "Ongoing", deliverables: ["Hypercare window", "Monitoring", "Issue fixes", "Handover docs"] },
 ] as const;
 
 const ROADMAP_CHAPTERS = [
-  { chapter: "01", tag: "Priorities", title: "Protect What Matters", desc: "Two things must hold through every upgrade: your data stays usable, and your apps keep working—with room for new Odoo capabilities.", accent: "ai" as const,
+  { chapter: "01", tag: "Priorities", title: "Protect What Matters", desc: "Two things must hold through every upgrade: your data stays usable, and your apps keep working: with room for new Odoo capabilities.", accent: "ai" as const,
     steps: [
-      { n: "01", icon: <BarChartIcon/>, title: "Reports & financial data", body: "Users need existing reports, customer and vendor records, payments, and finance—available and accurate on day one.", deliverable: "Data continuity plan" },
+      { n: "01", icon: <BarChartIcon/>, title: "Reports & financial data", body: "Users need existing reports, customer and vendor records, payments, and finance: available and accurate on day one.", deliverable: "Data continuity plan" },
       { n: "02", icon: <PackageIcon/>, title: "Apps & add-ons parity", body: "Custom modules and integrations must behave as before, with new-version features where they add value.", deliverable: "App parity matrix" },
-      { n: "03", icon: <ShieldIcon/>, title: "Handled with caution", body: "Given how critical these are, migration is partner-led—not ad-hoc scripts or untested shortcuts.", deliverable: "Risk controls" },
+      { n: "03", icon: <ShieldIcon/>, title: "Handled with caution", body: "Given how critical these are, migration is partner-led: not ad-hoc scripts or untested shortcuts.", deliverable: "Risk controls" },
       { n: "04", icon: <UsersIcon/>, title: "Odoo partner guidance", body: "Certified partners bring training, tooling, and escalation paths generalists cannot match.", deliverable: "Partner engagement" },
     ]},
-  { chapter: "02", tag: "Execution", title: "Migrate & Prove", desc: "Refactor apps, move data, and stress-test—each gate signed off before production is touched.", accent: "r" as const,
+  { chapter: "02", tag: "Execution", title: "Migrate & Prove", desc: "Refactor apps, move data, and stress-test: each gate signed off before production is touched.", accent: "r" as const,
     steps: [
       { n: "05", icon: <CodeIcon/>, title: "App code modernisation", body: "Python and front-end updates align custom work with the target Odoo release.", deliverable: "Upgraded modules" },
       { n: "06", icon: <ArrowsIcon/>, title: "Table mapping & import", body: "Legacy tables are mapped, transformed, and imported for compatibility with the new platform.", deliverable: "Mapped dataset" },
-      { n: "07", icon: <EyeIcon/>, title: "Performance & usability QA", body: "Durability and reliability are proven under realistic load—not just happy-path clicks.", deliverable: "QA sign-off" },
+      { n: "07", icon: <EyeIcon/>, title: "Performance & usability QA", body: "Durability and reliability are proven under realistic load: not just happy-path clicks.", deliverable: "QA sign-off" },
       { n: "08", icon: <CloudIcon/>, title: "Staging cutover rehearsal", body: "Mock cutovers surface gaps while rollback is still easy.", deliverable: "Rehearsal complete" },
     ]},
   { chapter: "03", tag: "Value", title: "Upgrade & Grow", desc: "Land on a faster Odoo with simplified operations, new features, and a partner who stays after go-live.", accent: "gold" as const,
@@ -95,7 +95,7 @@ export function OdooMigrationContent() {
             <span className="ln"><span className="ai">Migration.</span></span>
           </h1>
           <p className="oi-hero-lux-sub rev">
-          Stuck on an old Odoo version, or running a legacy ERP you've outgrown? We move you to the latest Odoo — <strong>data intact, customizations rebuilt, integrations reconnected</strong> — on a planned cutover with a rollback safety net, so the switch happens without disrupting your business.
+          Stuck on an old Odoo version, or running a legacy ERP you've outgrown? We move you to the latest Odoo, <strong>data intact, customizations rebuilt, integrations reconnected</strong>, on a planned cutover with a rollback safety net, so the switch happens without disrupting your business.
           </p>
           <div className="oi-hero-lux-cta rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -149,7 +149,7 @@ export function OdooMigrationContent() {
               </div>
             </div>
             <div className="oi-meth-intro-r">
-              <p>We never touch production until the new version is proven on staging. Eight steps, each with a clear deliverable — and a rollback plan standing by.</p>
+              <p>We never touch production until the new version is proven on staging. Eight steps, each with a clear deliverable, and a rollback plan standing by.</p>
               <div className="oi-meth-intro-mini">
                 <div className="oi-meth-mini">
                   <div className="oi-meth-mini-row"><span className="oi-meth-mini-n">8</span><span className="oi-meth-mini-u">phases</span></div>
@@ -231,7 +231,7 @@ export function OdooMigrationContent() {
         </div>
       </section>
 
-      {/* ROADMAP — editorial light */}
+      {/* ROADMAP: editorial light */}
       <section className="oi-rmap" id="roadmap">
         <div className="oi-rmap-inner">
 
@@ -242,7 +242,7 @@ export function OdooMigrationContent() {
               <h2>Eleven gates.<br /><span>Data &amp; apps protected.</span></h2>
             </div>
             <div className="oi-rmap-hdr-r">
-              <p>Every stage in your upgrade is <strong>sign-off gated</strong> — nothing reaches production until you accept the prior step. Your data, reports, and custom apps stay usable. Refined across <strong>180+ Odoo version upgrades</strong> in 20+ countries.</p>
+              <p>Every stage in your upgrade is <strong>sign-off gated</strong>, nothing reaches production until you accept the prior step. Your data, reports, and custom apps stay usable. Refined across <strong>180+ Odoo version upgrades</strong> in 20+ countries.</p>
               <div className="oi-rmap-overview-row">
                 <div className="oi-rmap-overview">
                   <span className="oi-rmap-overview-dot" />
@@ -312,7 +312,7 @@ export function OdooMigrationContent() {
         </div>
       </section>
 
-      {/* CLOSER — CTA */}
+      {/* CLOSER: CTA */}
       <section className="oi-closer" id="capabilities">
         <div className="oi-closer-inner">
 

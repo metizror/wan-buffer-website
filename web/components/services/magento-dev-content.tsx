@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   MAGENTO DEVELOPMENT — unique page design
+   MAGENTO DEVELOPMENT, unique page design
    Hero split + storefront mock · Services grid · Tech stack ·
    Process list · Stats band · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -48,10 +48,10 @@ const PRODUCTS = [
 
 /* ── Services ── */
 const SERVICES = [
-  { icon: <CodeIcon />, num: "01", t: "Custom Theme Development", s: "Pixel-perfect responsive themes built from your design — or designed by us. PWA-ready, Core Web Vitals optimised, and fully customisable without touching core Magento code." },
+  { icon: <CodeIcon />, num: "01", t: "Custom Theme Development", s: "Pixel-perfect responsive themes built from your design, or designed by us. PWA-ready, Core Web Vitals optimised, and fully customisable without touching core Magento code." },
   { icon: <GridIcon />, num: "02", t: "Module Development", s: "Custom Magento 2 modules for checkout flows, pricing rules, product configurators, B2B portals, and integrations. Built following Magento coding standards with full test coverage." },
   { icon: <RefreshIcon />, num: "03", t: "Migration & Upgrades", s: "Migrate from Magento 1, Shopify, WooCommerce, or legacy platforms to Magento 2 / Adobe Commerce. Data, SEO, customers, and order history preserved with zero downtime." },
-  { icon: <DatabaseIcon />, num: "04", t: "ERP Integration", s: "Connect Magento to Odoo, SAP, Zoho, or QuickBooks — real-time sync for inventory, orders, customers, and pricing. Bi-directional API integration, not batch exports." },
+  { icon: <DatabaseIcon />, num: "04", t: "ERP Integration", s: "Connect Magento to Odoo, SAP, Zoho, or QuickBooks, real-time sync for inventory, orders, customers, and pricing. Bi-directional API integration, not batch exports." },
   { icon: <ZapIcon />, num: "05", t: "Performance Optimisation", s: "Full Page Cache, Varnish configuration, image optimisation, lazy loading, database tuning, and CDN setup. Sub-3-second load times on mobile and desktop." },
   { icon: <ShieldIcon />, num: "06", t: "Security & Maintenance", s: "Security patches, PCI compliance, malware scanning, SSL management, and ongoing monitoring. AMC plans with SLA-backed response times for production issues." },
 ] as const;
@@ -71,7 +71,7 @@ const TECH = [
 /* ── Process ── */
 const PROCESS = [
   { num: "01", t: "Discovery & scoping", b: "We audit your current store, catalogue, integrations, and business requirements. A detailed scope document defines what's built, how, and by when." },
-  { num: "02", t: "Design & prototyping", b: "UI/UX design in Figma — responsive layouts, component library, and interactive prototypes. You approve the design before development begins." },
+  { num: "02", t: "Design & prototyping", b: "UI/UX design in Figma, responsive layouts, component library, and interactive prototypes. You approve the design before development begins." },
   { num: "03", t: "Development & integration", b: "Theme development, module builds, ERP integration, and payment gateway setup. Sprint-based delivery with demos every 2 weeks." },
   { num: "04", t: "Testing & QA", b: "Cross-browser, cross-device, load testing, security scanning, and UAT. Every feature tested against your real catalogue and order flows." },
   { num: "05", t: "Launch & optimise", b: "Go-live with monitoring, CDN, and caching configured. Post-launch performance tuning and 90-day hypercare support included." },
@@ -87,7 +87,7 @@ const STATS = [
 /* ── FAQ ── */
 const FAQS = [
   { q: "Do you work with Magento 2 or Adobe Commerce?", a: "Both. Magento 2 Open Source and Adobe Commerce (formerly Magento Commerce). We recommend the right edition based on your catalogue size, B2B requirements, and budget." },
-  { q: "Can you migrate our store from Shopify or WooCommerce?", a: "Yes. We handle full migration — products, categories, customers, orders, SEO URLs, and redirects. Your search rankings and customer history are preserved." },
+  { q: "Can you migrate our store from Shopify or WooCommerce?", a: "Yes. We handle full migration, products, categories, customers, orders, SEO URLs, and redirects. Your search rankings and customer history are preserved." },
   { q: "Do you integrate Magento with ERP systems?", a: "Yes. We integrate Magento with Odoo, SAP, Zoho, and QuickBooks via REST/GraphQL APIs. Real-time sync for inventory, orders, customers, and pricing." },
   { q: "How long does a Magento development project take?", a: "Simple stores: 6–8 weeks. Custom theme + modules: 10–14 weeks. Complex B2B with ERP integration: 14–20 weeks. We provide detailed timelines after the discovery phase." },
   { q: "Do you provide ongoing support after launch?", a: "Yes. Every project includes 90 days of hypercare. After that, we offer AMC plans with SLA-backed response times, security patches, and performance monitoring." },
@@ -99,7 +99,7 @@ export function MagentoDevContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + storefront right ═══ */}
+      {/* ═══ HERO: text left + storefront right ═══ */}
       <section className="mg-hero">
         <div className="mg-hero-glow mg-hero-glow-1" aria-hidden="true" />
         <div className="mg-hero-glow mg-hero-glow-2" aria-hidden="true" />
@@ -114,7 +114,7 @@ export function MagentoDevContent() {
               <span className="acc">eCommerce, engineered.</span>
             </h1>
             <p className="mg-hero-sub rev">
-              Custom Magento 2 themes, module development, ERP integration, and performance optimisation — <strong>high-performance eCommerce stores built for scale.</strong>
+              Custom Magento 2 themes, module development, ERP integration, and performance optimisation, <strong>high-performance eCommerce stores built for scale.</strong>
             </p>
             <div className="mg-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -166,7 +166,7 @@ export function MagentoDevContent() {
           <div className="mg-svc-hdr rev">
             <div className="eyebrow">Development services</div>
             <h2>Six services.<br /><span>Complete Magento delivery.</span></h2>
-            <p>Every project is delivered by certified Magento developers who understand both the platform and your business. No generic themes — every store is purpose-built.</p>
+            <p>Every project is delivered by certified Magento developers who understand both the platform and your business. No generic themes, every store is purpose-built.</p>
           </div>
           <div className="mg-svc-grid rev">
             {SERVICES.map((s) => (
@@ -264,10 +264,10 @@ export function MagentoDevContent() {
                 <div className="oi-closer-insight-stat">53%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of mobile users abandon sites that take over 3 seconds to load.</strong>
-                  Source: Google, 2024. The problem is Magento stores built for features, not performance — bloated themes, unoptimised images, and missing caching layers.
+                  Source: Google, 2024. The problem is Magento stores built for features, not performance, bloated themes, unoptimised images, and missing caching layers.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer Magento store ships with performance baked in — not bolted on after launch.</p>
+              <p>That&apos;s why every Wan Buffer Magento store ships with performance baked in, not bolted on after launch.</p>
             </div>
           </div>
 
@@ -284,7 +284,7 @@ export function MagentoDevContent() {
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><CodeIcon /></div>
                 <div className="oi-closer-commit-t">Clean, upgradeable code</div>
-                <p className="oi-closer-commit-b">No core hacks, no theme overrides, no shortcut code. Every customisation follows Magento coding standards — so version upgrades don&apos;t break your store.</p>
+                <p className="oi-closer-commit-b">No core hacks, no theme overrides, no shortcut code. Every customisation follows Magento coding standards, so version upgrades don&apos;t break your store.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
@@ -296,7 +296,7 @@ export function MagentoDevContent() {
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior developers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The developer who architects your store is the one who builds, tests, and supports it — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The developer who architects your store is the one who builds, tests, and supports it, named in the contract.</p>
               </div>
             </div>
           </div>

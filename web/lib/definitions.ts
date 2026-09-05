@@ -259,7 +259,7 @@ export interface SessionPayload {
 
 // ── Users (admin_users management) ──
 
-/** An admin user with the password hash stripped — safe to send to clients. */
+/** An admin user with the password hash stripped, safe to send to clients. */
 export type SafeAdminUser = Omit<AdminUser, "passwordHash">;
 
 export const userCreateSchema = z.object({
@@ -601,7 +601,7 @@ const eventSectionSchema = z.object({
   bullets: z.array(z.string()).optional().default([]),
 });
 
-/** Empty, a site-relative path, or an absolute http(s) URL — never `javascript:`. */
+/** Empty, a site-relative path, or an absolute http(s) URL, never `javascript:`. */
 const eventImageSchema = z
   .string()
   .optional()

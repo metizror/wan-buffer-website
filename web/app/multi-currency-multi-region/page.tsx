@@ -11,7 +11,7 @@ import { MultiCurrencyContent } from "@/components/services/multi-currency-conte
 export const metadata: Metadata = {
   title: "Multi-Currency & Multi-Region | International eCommerce | Wan Buffer",
   description:
-    "Sell globally with multi-currency pricing, regional tax compliance, localised storefronts, and geo-based shipping rules. Shopify Markets, Magento multi-store, and Odoo multi-company — configured for India, USA, UAE, GCC, and Europe.",
+    "Sell globally with multi-currency pricing, regional tax compliance, localised storefronts, and geo-based shipping rules. Shopify Markets, Magento multi-store, and Odoo multi-company, configured for India, USA, UAE, GCC, and Europe.",
   keywords: [
     "multi-currency eCommerce",
     "multi-region eCommerce",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Multi-Currency & Multi-Region — International eCommerce | Wan Buffer",
+    title: "Multi-Currency & Multi-Region: International eCommerce | Wan Buffer",
     description:
-      "Multi-currency, multi-region eCommerce — localised pricing, tax compliance, and storefronts for India, USA, UAE, GCC, and Europe.",
+      "Multi-currency, multi-region eCommerce, localised pricing, tax compliance, and storefronts for India, USA, UAE, GCC, and Europe.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/multi-currency-multi-region" },

@@ -11,7 +11,7 @@ import { ShopifyStoreContent } from "@/components/services/shopify-store-content
 export const metadata: Metadata = {
   title: "Shopify Store Setup | Theme Dev, Apps & Launch | Wan Buffer",
   description:
-    "Expert Shopify store setup — custom theme development, app installation, payment gateway integration, shipping configuration, and launch optimisation. Shopify Basic, Shopify, and Shopify Plus stores built for conversion.",
+    "Expert Shopify store setup, custom theme development, app installation, payment gateway integration, shipping configuration, and launch optimisation. Shopify Basic, Shopify, and Shopify Plus stores built for conversion.",
   keywords: [
     "Shopify store setup",
     "Shopify development",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Shopify Store Setup — Theme Dev, Apps & Launch | Wan Buffer",
+    title: "Shopify Store Setup: Theme Dev, Apps & Launch | Wan Buffer",
     description:
-      "Shopify store setup — custom themes, app integration, payments, and launch optimisation. From first product to first sale.",
+      "Shopify store setup, custom themes, app integration, payments, and launch optimisation. From first product to first sale.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/shopify-store-setup" },

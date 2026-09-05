@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   RETAIL & eCOMMERCE — unique page design
+   RETAIL & eCOMMERCE, unique page design
    Hero split + live orders mock · Operations cards · Alternating feature
    rows · Dotted process flow · Multi-channel section ·
    Platforms · FAQ · Closer · Support
@@ -52,8 +52,8 @@ const LIVE_ORDERS = [
 
 /* ── Retail operations ── */
 const OPERATIONS = [
-  { icon: <GridIcon />, t: "Omnichannel Orders", s: "Unified order management across online stores, marketplaces, social commerce, and physical POS — every order routed, tracked, and fulfilled from one system.", color: "ai" as const },
-  { icon: <SparklesIcon />, t: "AI Demand Forecasting", s: "Machine learning models that analyse sales history, seasonality, promotions, and external signals to predict demand — reducing stockouts by up to 60% and overstock by 35%.", color: "green" as const },
+  { icon: <GridIcon />, t: "Omnichannel Orders", s: "Unified order management across online stores, marketplaces, social commerce, and physical POS, every order routed, tracked, and fulfilled from one system.", color: "ai" as const },
+  { icon: <SparklesIcon />, t: "AI Demand Forecasting", s: "Machine learning models that analyse sales history, seasonality, promotions, and external signals to predict demand, reducing stockouts by up to 60% and overstock by 35%.", color: "green" as const },
   { icon: <TrendingUpIcon />, t: "Dynamic Pricing", s: "AI-driven price optimisation that adjusts in real time based on competitor pricing, demand elasticity, inventory levels, and margin targets across every channel.", color: "purple" as const },
   { icon: <UsersIcon />, t: "Customer Intelligence", s: "AI-powered segmentation, lifetime value prediction, churn risk scoring, and personalised recommendation engines that increase average order value by 25%.", color: "red" as const },
 ] as const;
@@ -61,10 +61,10 @@ const OPERATIONS = [
 /* ── Features ── */
 const FEATURES = [
   { num: "01", icon: <GridIcon />, t: "Unified Inventory Sync", s: "Single source of truth for stock across Shopify, Magento, Amazon, POS terminals, and warehouses. Real-time sync prevents overselling and enables ship-from-store, BOPIS, and cross-channel fulfilment." },
-  { num: "02", icon: <SparklesIcon />, t: "AI Demand Forecasting", s: "Predictive models trained on your sales data, seasonal patterns, marketing calendar, and external signals. Automated reorder points adjust dynamically — no more gut-feel purchasing." },
-  { num: "03", icon: <MonitorIcon />, t: "Omnichannel POS Integration", s: "Odoo POS, Shopify POS, and custom terminal integration — unified customer profiles, loyalty programmes, gift cards, and returns that work identically online and in-store." },
-  { num: "04", icon: <TargetIcon />, t: "Dynamic Pricing Engine", s: "Rule-based and AI-driven pricing across channels. Competitor monitoring, demand-based adjustments, flash sale automation, and margin guardrails — all managed from your ERP." },
-  { num: "05", icon: <UsersIcon />, t: "Customer Segmentation & LTV", s: "AI clusters customers by behaviour, purchase frequency, and lifetime value. Automated campaigns trigger based on segment — win-back, upsell, VIP tiers, and churn prevention." },
+  { num: "02", icon: <SparklesIcon />, t: "AI Demand Forecasting", s: "Predictive models trained on your sales data, seasonal patterns, marketing calendar, and external signals. Automated reorder points adjust dynamically, no more gut-feel purchasing." },
+  { num: "03", icon: <MonitorIcon />, t: "Omnichannel POS Integration", s: "Odoo POS, Shopify POS, and custom terminal integration, unified customer profiles, loyalty programmes, gift cards, and returns that work identically online and in-store." },
+  { num: "04", icon: <TargetIcon />, t: "Dynamic Pricing Engine", s: "Rule-based and AI-driven pricing across channels. Competitor monitoring, demand-based adjustments, flash sale automation, and margin guardrails, all managed from your ERP." },
+  { num: "05", icon: <UsersIcon />, t: "Customer Segmentation & LTV", s: "AI clusters customers by behaviour, purchase frequency, and lifetime value. Automated campaigns trigger based on segment, win-back, upsell, VIP tiers, and churn prevention." },
   { num: "06", icon: <BarChartIcon />, t: "Retail Analytics & BI", s: "Real-time dashboards for sales velocity, basket analysis, channel performance, margin by SKU, and inventory turnover. Drill from company-level KPIs to individual transaction." },
 ] as const;
 
@@ -96,11 +96,11 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "Can you sync inventory across Shopify, Magento, and physical stores in real time?", a: "Yes. We configure real-time bidirectional inventory sync across all your channels — Shopify, Magento, Amazon, POS terminals, and warehouses. Stock updates propagate within seconds, preventing overselling and enabling cross-channel fulfilment strategies like ship-from-store and BOPIS." },
-  { q: "How does AI demand forecasting work for seasonal products?", a: "Our ML models analyse 2–3 years of sales history, seasonal patterns, promotional calendars, and external signals like weather and market trends. The system generates SKU-level demand forecasts with confidence intervals and automatically adjusts reorder points — especially effective for seasonal and trend-driven categories." },
-  { q: "Can you integrate loyalty programmes across online and offline?", a: "Yes. We build unified loyalty programmes that work identically across your Shopify store, POS terminals, and marketplace orders. Points, tiers, gift cards, and rewards sync in real time — customers earn and redeem regardless of channel." },
+  { q: "Can you sync inventory across Shopify, Magento, and physical stores in real time?", a: "Yes. We configure real-time bidirectional inventory sync across all your channels. Shopify, Magento, Amazon, POS terminals, and warehouses. Stock updates propagate within seconds, preventing overselling and enabling cross-channel fulfilment strategies like ship-from-store and BOPIS." },
+  { q: "How does AI demand forecasting work for seasonal products?", a: "Our ML models analyse 2–3 years of sales history, seasonal patterns, promotional calendars, and external signals like weather and market trends. The system generates SKU-level demand forecasts with confidence intervals and automatically adjusts reorder points, especially effective for seasonal and trend-driven categories." },
+  { q: "Can you integrate loyalty programmes across online and offline?", a: "Yes. We build unified loyalty programmes that work identically across your Shopify store, POS terminals, and marketplace orders. Points, tiers, gift cards, and rewards sync in real time, customers earn and redeem regardless of channel." },
   { q: "Do you support multi-currency and multi-region retail?", a: "Yes. We configure multi-currency pricing, region-specific tax rules (GST, GCC VAT, EU VAT), localised checkout flows, and multi-warehouse fulfilment routing. A single ERP manages your entire global retail operation." },
-  { q: "How does dynamic pricing avoid margin erosion?", a: "Every pricing rule includes margin guardrails — minimum margin thresholds that the AI cannot breach. Rules can be layered: competitor-based floor, demand-based adjustment, and promotion caps. All price changes are logged and auditable." },
+  { q: "How does dynamic pricing avoid margin erosion?", a: "Every pricing rule includes margin guardrails, minimum margin thresholds that the AI cannot breach. Rules can be layered: competitor-based floor, demand-based adjustment, and promotion caps. All price changes are logged and auditable." },
   { q: "How long does an omnichannel ERP implementation take?", a: "Single-channel Shopify or Magento integration takes 3–4 weeks. Full omnichannel with POS, marketplace, and AI forecasting takes 8–14 weeks. Enterprise multi-region setups with custom AI models take 12–20 weeks." },
 ] as const;
 
@@ -109,7 +109,7 @@ export function RetailEcommerceContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + live orders right ═══ */}
+      {/* ═══ HERO: text left + live orders right ═══ */}
       <section className="re-hero">
         <div className="re-hero-glow re-hero-glow-1" aria-hidden="true" />
         <div className="re-hero-glow re-hero-glow-2" aria-hidden="true" />
@@ -124,7 +124,7 @@ export function RetailEcommerceContent() {
               <span className="acc">Every channel. One system.</span>
             </h1>
             <p className="re-hero-sub rev">
-              Omnichannel order management, AI demand forecasting, unified inventory, dynamic pricing, and customer intelligence — <strong>integrated into your ERP.</strong>
+              Omnichannel order management, AI demand forecasting, unified inventory, dynamic pricing, and customer intelligence, <strong>integrated into your ERP.</strong>
             </p>
             <div className="re-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -137,7 +137,7 @@ export function RetailEcommerceContent() {
 
           {/* Live orders mockup */}
           <div className="re-orders rev">
-            <div className="re-orders-title">Live Orders — All Channels</div>
+            <div className="re-orders-title">Live Orders: All Channels</div>
             <div className="re-orders-list">
               {LIVE_ORDERS.map((o) => (
                 <div key={o.id} className={`re-order re-order-${o.status}`}>
@@ -159,7 +159,7 @@ export function RetailEcommerceContent() {
         </div>
       </section>
 
-      {/* ═══ OPERATIONS — 4 cards ═══ */}
+      {/* ═══ OPERATIONS: 4 cards ═══ */}
       <section className="re-ops">
         <div className="re-ops-inner">
           <div className="re-ops-hdr rev">
@@ -178,7 +178,7 @@ export function RetailEcommerceContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — alternating rows ═══ */}
+      {/* ═══ FEATURES: alternating rows ═══ */}
       <section className="re-feat" id="features">
         <div className="re-feat-inner">
           <div className="re-feat-hdr rev">
@@ -200,7 +200,7 @@ export function RetailEcommerceContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="re-proc" id="process">
         <div className="re-proc-inner">
           <div className="re-proc-hdr rev">
@@ -235,7 +235,7 @@ export function RetailEcommerceContent() {
         </div>
       </section>
 
-      {/* ═══ MULTI-CHANNEL — split ═══ */}
+      {/* ═══ MULTI-CHANNEL: split ═══ */}
       <section className="re-multi" id="multi-channel">
         <div className="re-multi-inner">
           <div className="re-multi-hdr rev">
@@ -246,7 +246,7 @@ export function RetailEcommerceContent() {
             <div className="re-multi-left">
               <div className="re-multi-big-n">5+</div>
               <div className="re-multi-big-l">Sales channels managed from one ERP</div>
-              <p className="re-multi-big-s">Online stores, physical POS, marketplaces, social commerce, and wholesale — all orchestrated from a single system with real-time inventory visibility and unified customer profiles across every touchpoint.</p>
+              <p className="re-multi-big-s">Online stores, physical POS, marketplaces, social commerce, and wholesale, all orchestrated from a single system with real-time inventory visibility and unified customer profiles across every touchpoint.</p>
             </div>
             <div className="re-multi-right">
               {CHANNELS.map((ch) => (
@@ -308,10 +308,10 @@ export function RetailEcommerceContent() {
                 <div className="oi-closer-insight-stat">43%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of retailers still manage channels in separate systems.</strong>
-                  Source: McKinsey, 2024. The result is overselling, inconsistent pricing, fragmented customer data, and zero cross-channel visibility — problems that compound as you add channels.
+                  Source: McKinsey, 2024. The result is overselling, inconsistent pricing, fragmented customer data, and zero cross-channel visibility, problems that compound as you add channels.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer retail deployment covers the full commerce lifecycle — not just order processing. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer retail deployment covers the full commerce lifecycle, not just order processing. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -322,25 +322,25 @@ export function RetailEcommerceContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><GridIcon /></div>
                 <div className="oi-closer-commit-t">Every channel connected to one ERP</div>
-                <p className="oi-closer-commit-b">We integrate every sales channel — online stores, POS, marketplaces, and social — into a single system. Inventory, orders, and customer data sync in real time with zero manual intervention.</p>
+                <p className="oi-closer-commit-b">We integrate every sales channel, online stores, POS, marketplaces, and social, into a single system. Inventory, orders, and customer data sync in real time with zero manual intervention.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed accuracy &amp; speed targets</div>
-                <p className="oi-closer-commit-b">Inventory accuracy, order fulfilment speed, and forecast precision are defined before go-live. If we miss targets, we keep iterating — at our cost.</p>
+                <p className="oi-closer-commit-b">Inventory accuracy, order fulfilment speed, and forecast precision are defined before go-live. If we miss targets, we keep iterating, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><SparklesIcon /></div>
                 <div className="oi-closer-commit-t">AI-first forecasting &amp; pricing</div>
-                <p className="oi-closer-commit-b">Every demand forecast is ML-powered. Every pricing decision is data-driven. No spreadsheet-based guessing — predictive models that learn and improve with every transaction.</p>
+                <p className="oi-closer-commit-b">Every demand forecast is ML-powered. Every pricing decision is data-driven. No spreadsheet-based guessing, predictive models that learn and improve with every transaction.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior retail engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your retail operations is the one who integrates, migrates, trains, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your retail operations is the one who integrates, migrates, trains, and supports, named in the contract.</p>
               </div>
             </div>
           </div>

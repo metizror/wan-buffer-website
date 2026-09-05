@@ -56,7 +56,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   try {
     await syncSeoPages();
   } catch {
-    // Mongo optional — entries still come from routes + seed content.
+    // Mongo optional, entries still come from routes + seed content.
   }
 
   const entries = await getSitemapEntries();

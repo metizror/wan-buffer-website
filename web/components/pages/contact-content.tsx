@@ -70,11 +70,11 @@ const hiringPlans = [
 export function ContactContent() {
   return (
     <main className="svc-page">
-      {/* HERO — same design system as Case Studies hero */}
+      {/* HERO: same design system as Case Studies hero */}
       <section className="csh-hero">
         <div className="csh-hero-inner">
 
-          {/* floating tags — left */}
+          {/* floating tags: left */}
           <div className="csh-tags csh-tags-left">
             <span className="csh-tag">Free Consultation</span>
             <span className="csh-tag">Web & Mobile Projects</span>
@@ -102,7 +102,7 @@ export function ContactContent() {
 
             <p className="csh-desc">
               Connect with Wan Buffer&apos;s global team to discuss how we can empower your business. From ERP to AI
-              automation — we&apos;re ready to turn your ideas into impactful software solutions.
+              automation, we&apos;re ready to turn your ideas into impactful software solutions.
             </p>
 
             <a
@@ -115,7 +115,7 @@ export function ContactContent() {
             </a>
           </div>
 
-          {/* floating tags — right */}
+          {/* floating tags: right */}
           <div className="csh-tags csh-tags-right">
             <span className="csh-tag">Odoo Solutions</span>
             <span className="csh-tag">Implementation India</span>
@@ -212,7 +212,7 @@ export function ContactContent() {
           <div className="ai-strip-left">
             <div className="ai-strip-label">Let&apos;s discuss</div>
             <h2 className="ai-strip-h">
-              Leave a request — we&apos;ll analyse your situation and help you choose an effective solution to{" "}
+              Leave a request, we&apos;ll analyse your situation and help you choose an effective solution to{" "}
               <span className="ai">scale</span>
             </h2>
             <p

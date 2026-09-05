@@ -11,7 +11,7 @@ import { MagentoPerformanceContent } from "@/components/services/magento-perform
 export const metadata: Metadata = {
   title: "Magento Performance Optimisation | Core Web Vitals & Speed | Wan Buffer",
   description:
-    "Magento 2 performance optimisation — Full Page Cache, Varnish, Redis, CDN, database tuning, image optimisation, and Core Web Vitals improvement. Sub-3-second load times for Magento stores.",
+    "Magento 2 performance optimisation: Full Page Cache, Varnish, Redis, CDN, database tuning, image optimisation, and Core Web Vitals improvement. Sub-3-second load times for Magento stores.",
   keywords: [
     "Magento performance optimisation",
     "Magento speed optimisation",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Magento Performance Optimisation — Core Web Vitals & Speed | Wan Buffer",
+    title: "Magento Performance Optimisation: Core Web Vitals & Speed | Wan Buffer",
     description:
-      "Sub-3-second Magento stores — Full Page Cache, Varnish, Redis, CDN, and Core Web Vitals tuning for maximum eCommerce performance.",
+      "Sub-3-second Magento stores: Full Page Cache, Varnish, Redis, CDN, and Core Web Vitals tuning for maximum eCommerce performance.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/magento-performance" },

@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   SHOPIFY STORE SETUP — unique page design
+   SHOPIFY STORE SETUP, unique page design
    Hero split + store preview · Setup checklist · Services grid ·
    Edition cards · Process list · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -55,12 +55,12 @@ const CHECKLIST = [
 
 /* ── Services ── */
 const SERVICES = [
-  { icon: <CodeIcon />, num: "01", t: "Custom Theme Development", s: "Pixel-perfect Shopify themes built with Liquid, Tailwind, and Shopify 2.0 architecture. Responsive, fast-loading, and designed for conversion — not just aesthetics." },
+  { icon: <CodeIcon />, num: "01", t: "Custom Theme Development", s: "Pixel-perfect Shopify themes built with Liquid, Tailwind, and Shopify 2.0 architecture. Responsive, fast-loading, and designed for conversion, not just aesthetics." },
   { icon: <GridIcon />, num: "02", t: "Product & Collection Setup", s: "Product variants, metafields, collections, smart filters, and SEO-optimised descriptions. Your entire catalogue organised for discovery and purchase." },
   { icon: <WalletIcon />, num: "03", t: "Payment & Checkout", s: "Razorpay, Stripe, PayPal, UPI, and Shopify Payments configured. Checkout customisation, abandoned cart recovery, and multi-currency support included." },
   { icon: <PackageIcon />, num: "04", t: "Shipping & Fulfilment", s: "Shipping zones, rate rules, carrier integration (Shiprocket, Delhivery, FedEx), and real-time tracking. Multi-warehouse routing for Shopify Plus." },
-  { icon: <SparklesIcon />, num: "05", t: "App Installation & Setup", s: "We install, configure, and test the apps your store needs — reviews, email marketing, loyalty, upsells, SEO, and analytics. No bloat, only what works." },
-  { icon: <RefreshIcon />, num: "06", t: "Migration to Shopify", s: "Migrate from WooCommerce, Magento, or other platforms — products, customers, orders, SEO URLs, and redirects. Zero traffic loss during migration." },
+  { icon: <SparklesIcon />, num: "05", t: "App Installation & Setup", s: "We install, configure, and test the apps your store needs, reviews, email marketing, loyalty, upsells, SEO, and analytics. No bloat, only what works." },
+  { icon: <RefreshIcon />, num: "06", t: "Migration to Shopify", s: "Migrate from WooCommerce, Magento, or other platforms, products, customers, orders, SEO URLs, and redirects. Zero traffic loss during migration." },
 ] as const;
 
 /* ── Editions ── */
@@ -72,7 +72,7 @@ const EDITIONS = [
 
 /* ── Process ── */
 const PROCESS = [
-  { num: "01", t: "Discovery & planning", b: "We scope your store requirements — product catalogue, target audience, sales channels, payment methods, and shipping rules." },
+  { num: "01", t: "Discovery & planning", b: "We scope your store requirements, product catalogue, target audience, sales channels, payment methods, and shipping rules." },
   { num: "02", t: "Design & prototyping", b: "UI/UX design in Figma with mobile-first responsive layouts. You approve the design before any Liquid code is written." },
   { num: "03", t: "Development & setup", b: "Theme build, product upload, app installation, payment configuration, and shipping zone setup. Sprint-based delivery with weekly demos." },
   { num: "04", t: "Testing & QA", b: "Cross-device testing, checkout flow validation, speed audit, SEO check, and analytics verification. Every page, every flow, every device." },
@@ -89,10 +89,10 @@ const STATS = [
 /* ── FAQ ── */
 const FAQS = [
   { q: "How long does a Shopify store setup take?", a: "Simple stores with an existing theme: 2–3 weeks. Custom theme development: 4–6 weeks. Complex Shopify Plus with custom checkout and ERP integration: 8–12 weeks." },
-  { q: "Can you migrate our store from WooCommerce or Magento?", a: "Yes. We handle full migration — products, customers, orders, blog posts, SEO URLs, and 301 redirects. Your search rankings and customer data are preserved." },
+  { q: "Can you migrate our store from WooCommerce or Magento?", a: "Yes. We handle full migration, products, customers, orders, blog posts, SEO URLs, and 301 redirects. Your search rankings and customer data are preserved." },
   { q: "Do you build custom Shopify themes?", a: "Yes. We build custom themes using Shopify 2.0 architecture, Liquid templating, and modern CSS/JS. Every theme is responsive, accessible, and optimised for Core Web Vitals." },
   { q: "Which payment gateways do you support?", a: "Shopify Payments, Razorpay, Stripe, PayPal, UPI, COD, and any Shopify-compatible gateway. Multi-currency and tax-inclusive pricing configured per market." },
-  { q: "Do you integrate Shopify with ERP systems?", a: "Yes. We integrate Shopify with Odoo, Zoho, SAP, and QuickBooks — real-time sync for inventory, orders, customers, and pricing via APIs or middleware." },
+  { q: "Do you integrate Shopify with ERP systems?", a: "Yes. We integrate Shopify with Odoo, Zoho, SAP, and QuickBooks, real-time sync for inventory, orders, customers, and pricing via APIs or middleware." },
   { q: "Do you provide ongoing support after launch?", a: "Yes. Every store includes 90 days of hypercare. After that, we offer monthly retainers for design updates, app management, performance monitoring, and marketing support." },
 ] as const;
 
@@ -101,7 +101,7 @@ export function ShopifyStoreContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + store preview right ═══ */}
+      {/* ═══ HERO: text left + store preview right ═══ */}
       <section className="ss-hero">
         <div className="ss-hero-glow ss-hero-glow-1" aria-hidden="true" />
         <div className="ss-hero-glow ss-hero-glow-2" aria-hidden="true" />
@@ -116,7 +116,7 @@ export function ShopifyStoreContent() {
               <span className="acc">From product to purchase.</span>
             </h1>
             <p className="ss-hero-sub rev">
-              Custom Shopify themes, app integration, payment setup, and launch optimisation — <strong>stores built for conversion</strong> on Shopify Basic, Shopify, and Shopify Plus.
+              Custom Shopify themes, app integration, payment setup, and launch optimisation, <strong>stores built for conversion</strong> on Shopify Basic, Shopify, and Shopify Plus.
             </p>
             <div className="ss-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -199,7 +199,7 @@ export function ShopifyStoreContent() {
         </div>
       </section>
 
-      {/* ═══ EDITIONS — 3 plan cards ═══ */}
+      {/* ═══ EDITIONS: 3 plan cards ═══ */}
       <section className="ss-editions" id="editions">
         <div className="ss-editions-inner">
           <div className="ss-editions-hdr rev">
@@ -290,10 +290,10 @@ export function ShopifyStoreContent() {
                 <div className="oi-closer-insight-stat">70%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of Shopify stores have conversion rates below 2%.</strong>
-                  Source: LittleData, 2024. The cause is stores built with default themes, bloated apps, and no checkout optimisation — speed and UX problems that add up to lost revenue.
+                  Source: LittleData, 2024. The cause is stores built with default themes, bloated apps, and no checkout optimisation, speed and UX problems that add up to lost revenue.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer Shopify store is engineered for speed and conversion — not just launched with a template.</p>
+              <p>That&apos;s why every Wan Buffer Shopify store is engineered for speed and conversion, not just launched with a template.</p>
             </div>
           </div>
 
@@ -322,7 +322,7 @@ export function ShopifyStoreContent() {
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior developers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The developer who designs your store is the one who builds, tests, and supports it — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The developer who designs your store is the one who builds, tests, and supports it, named in the contract.</p>
               </div>
             </div>
           </div>

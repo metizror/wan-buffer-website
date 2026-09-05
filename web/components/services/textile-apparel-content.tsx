@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   TEXTILE & APPAREL — unique page design
+   TEXTILE & APPAREL, unique page design
    Hero split + size-colour matrix mock · Operations cards · Alternating
    feature rows · Dotted process flow · Multi-unit section ·
    Platforms · FAQ · Closer · Support
@@ -54,20 +54,20 @@ const MATRIX = {
 
 /* ── Apparel operations ── */
 const OPERATIONS = [
-  { icon: <GridIcon />, t: "Style-Level BOM", s: "Define bills of materials per style, per colourway — fabric, trims, labels, thread, and packaging. Automatic consumption calculation from marker efficiency and cut-plan ratios.", color: "ai" as const },
+  { icon: <GridIcon />, t: "Style-Level BOM", s: "Define bills of materials per style, per colourway, fabric, trims, labels, thread, and packaging. Automatic consumption calculation from marker efficiency and cut-plan ratios.", color: "ai" as const },
   { icon: <FlagIcon />, t: "Season & Collection Planning", s: "Plan collections by season, delivery window, and buyer. Tech-pack to production timeline with milestone tracking, sampling status, and fabric booking deadlines.", color: "green" as const },
-  { icon: <SparklesIcon />, t: "AI Reorder & Forecasting", s: "Machine learning models that analyse sell-through rates, size curves, and seasonal trends to trigger reorders before stockouts — reducing lost sales by up to 35%.", color: "purple" as const },
+  { icon: <SparklesIcon />, t: "AI Reorder & Forecasting", s: "Machine learning models that analyse sell-through rates, size curves, and seasonal trends to trigger reorders before stockouts, reducing lost sales by up to 35%.", color: "purple" as const },
   { icon: <PackageIcon />, t: "Fabric & Trim Inventory", s: "Track fabric by roll, lot, width, weight, and shade. Trim inventory by size, colour, and minimum order quantity. Automatic shade-lot matching for production batches.", color: "red" as const },
 ] as const;
 
 /* ── Features ── */
 const FEATURES = [
   { num: "01", icon: <GridIcon />, t: "Style-Level BOM Management", s: "Define BOMs at the style level with variants for every size and colourway. Fabric consumption calculated from marker length, width, and lay-plan efficiency. Trims, labels, packaging, and thread quantities auto-scale across the size matrix." },
-  { num: "02", icon: <FlagIcon />, t: "Season & Collection Planning", s: "Plan entire seasons with delivery windows, buyer allocations, and production milestones. Track tech-pack approval, sampling rounds, pre-production sign-off, and bulk delivery dates — with automated alerts when timelines slip." },
-  { num: "03", icon: <SparklesIcon />, t: "AI-Powered Reorder Intelligence", s: "ML models trained on your sell-through data, size-curve patterns, and seasonal trends. Automated reorder suggestions by style, size, and colour — with confidence scores and margin-aware quantity recommendations." },
+  { num: "02", icon: <FlagIcon />, t: "Season & Collection Planning", s: "Plan entire seasons with delivery windows, buyer allocations, and production milestones. Track tech-pack approval, sampling rounds, pre-production sign-off, and bulk delivery dates, with automated alerts when timelines slip." },
+  { num: "03", icon: <SparklesIcon />, t: "AI-Powered Reorder Intelligence", s: "ML models trained on your sell-through data, size-curve patterns, and seasonal trends. Automated reorder suggestions by style, size, and colour, with confidence scores and margin-aware quantity recommendations." },
   { num: "04", icon: <PackageIcon />, t: "Fabric Roll & Shade-Lot Tracking", s: "Every fabric roll tracked by supplier lot, shade, width, weight, and defect mapping. Shade-lot grouping ensures colour consistency across production batches. Automatic remnant tracking after spreading and cutting." },
-  { num: "05", icon: <TargetIcon />, t: "Cut-Plan Optimisation", s: "Marker efficiency calculation, lay-plan generation, and fabric utilisation tracking per style. Size-ratio-based cut orders that maximise fabric usage — reducing wastage by up to 12% compared to manual planning." },
-  { num: "06", icon: <BarChartIcon />, t: "Garment Costing & Margin Analysis", s: "Real-time cost sheets per style — fabric, trims, CMT (cut-make-trim), overheads, and logistics. Compare quoted vs actual cost at any stage. Margin analysis by style, buyer, and season with drill-down to component level." },
+  { num: "05", icon: <TargetIcon />, t: "Cut-Plan Optimisation", s: "Marker efficiency calculation, lay-plan generation, and fabric utilisation tracking per style. Size-ratio-based cut orders that maximise fabric usage, reducing wastage by up to 12% compared to manual planning." },
+  { num: "06", icon: <BarChartIcon />, t: "Garment Costing & Margin Analysis", s: "Real-time cost sheets per style, fabric, trims, CMT (cut-make-trim), overheads, and logistics. Compare quoted vs actual cost at any stage. Margin analysis by style, buyer, and season with drill-down to component level." },
 ] as const;
 
 /* ── Process flow ── */
@@ -98,10 +98,10 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "Can you handle size-colour matrix inventory in Odoo?", a: "Yes. We configure product variants using a size × colour matrix with full inventory tracking per SKU. Stock levels, reorder rules, and warehouse operations all work at the individual variant level — so you always know exactly how many units of Style X / Size M / Colour Indigo are in stock." },
-  { q: "How does style-level BOM work for different colourways?", a: "Each style has a master BOM that defines fabric, trims, labels, and packaging. Colour variants inherit the structure but reference colour-specific materials — Indigo fabric, Black thread, matching labels. Fabric quantities are calculated from marker efficiency and cut-plan ratios, not flat estimates." },
-  { q: "Can the AI reorder system handle seasonal demand patterns?", a: "Yes. Our ML models are specifically trained on seasonal fashion data — sell-through velocity, size-curve shifts between seasons, and promotional impact. The system distinguishes between continuity styles (ongoing reorder) and seasonal styles (one-time buys with clearance logic)." },
-  { q: "Do you support fabric roll tracking with shade-lot matching?", a: "Yes. Every roll is tracked by supplier lot, shade band, width, weight, GSM, and defect map. When production orders are created, the system groups rolls by shade lot to ensure colour consistency across the entire batch — critical for garment quality." },
+  { q: "Can you handle size-colour matrix inventory in Odoo?", a: "Yes. We configure product variants using a size × colour matrix with full inventory tracking per SKU. Stock levels, reorder rules, and warehouse operations all work at the individual variant level, so you always know exactly how many units of Style X / Size M / Colour Indigo are in stock." },
+  { q: "How does style-level BOM work for different colourways?", a: "Each style has a master BOM that defines fabric, trims, labels, and packaging. Colour variants inherit the structure but reference colour-specific materials. Indigo fabric, Black thread, matching labels. Fabric quantities are calculated from marker efficiency and cut-plan ratios, not flat estimates." },
+  { q: "Can the AI reorder system handle seasonal demand patterns?", a: "Yes. Our ML models are specifically trained on seasonal fashion data, sell-through velocity, size-curve shifts between seasons, and promotional impact. The system distinguishes between continuity styles (ongoing reorder) and seasonal styles (one-time buys with clearance logic)." },
+  { q: "Do you support fabric roll tracking with shade-lot matching?", a: "Yes. Every roll is tracked by supplier lot, shade band, width, weight, GSM, and defect map. When production orders are created, the system groups rolls by shade lot to ensure colour consistency across the entire batch, critical for garment quality." },
   { q: "Can you integrate with our existing PLM or tech-pack system?", a: "Yes. We integrate with PLM tools like Centric, Lectra, and Browzwear, as well as custom tech-pack systems. Style data, BOM structures, and measurement specs flow from PLM into the ERP. Sampling status and approval workflows are bidirectional." },
   { q: "How long does a textile and apparel ERP implementation take?", a: "Single-unit garment production setup takes 4–6 weeks. Full textile ERP with season planning, AI reorder, and fabric tracking takes 10–16 weeks. Multi-unit operations with PLM integration and contract manufacturer portals take 14–22 weeks." },
 ] as const;
@@ -111,7 +111,7 @@ export function TextileApparelContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + size-colour matrix right ═══ */}
+      {/* ═══ HERO: text left + size-colour matrix right ═══ */}
       <section className="ta-hero">
         <div className="ta-hero-glow ta-hero-glow-1" aria-hidden="true" />
         <div className="ta-hero-glow ta-hero-glow-2" aria-hidden="true" />
@@ -126,7 +126,7 @@ export function TextileApparelContent() {
               <span className="acc">Every style. Every size. Planned.</span>
             </h1>
             <p className="ta-hero-sub rev">
-              Style-level BOM management, season planning, AI-powered reorder, size-colour matrix inventory, and cut-plan optimisation — <strong>integrated into your ERP.</strong>
+              Style-level BOM management, season planning, AI-powered reorder, size-colour matrix inventory, and cut-plan optimisation, <strong>integrated into your ERP.</strong>
             </p>
             <div className="ta-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -171,7 +171,7 @@ export function TextileApparelContent() {
         </div>
       </section>
 
-      {/* ═══ OPERATIONS — 4 cards ═══ */}
+      {/* ═══ OPERATIONS: 4 cards ═══ */}
       <section className="ta-ops">
         <div className="ta-ops-inner">
           <div className="ta-ops-hdr rev">
@@ -190,7 +190,7 @@ export function TextileApparelContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — alternating rows ═══ */}
+      {/* ═══ FEATURES: alternating rows ═══ */}
       <section className="ta-feat" id="features">
         <div className="ta-feat-inner">
           <div className="ta-feat-hdr rev">
@@ -212,7 +212,7 @@ export function TextileApparelContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="ta-proc" id="process">
         <div className="ta-proc-inner">
           <div className="ta-proc-hdr rev">
@@ -247,7 +247,7 @@ export function TextileApparelContent() {
         </div>
       </section>
 
-      {/* ═══ MULTI-UNIT — split ═══ */}
+      {/* ═══ MULTI-UNIT: split ═══ */}
       <section className="ta-multi" id="multi-unit">
         <div className="ta-multi-inner">
           <div className="ta-multi-hdr rev">
@@ -258,7 +258,7 @@ export function TextileApparelContent() {
             <div className="ta-multi-left">
               <div className="ta-multi-big-n">3+</div>
               <div className="ta-multi-big-l">Production units managed from one ERP</div>
-              <p className="ta-multi-big-s">In-house cutting and sewing, fabric warehouses, and contract manufacturers — all orchestrated from a single system with real-time visibility across every unit, every style, and every delivery window.</p>
+              <p className="ta-multi-big-s">In-house cutting and sewing, fabric warehouses, and contract manufacturers, all orchestrated from a single system with real-time visibility across every unit, every style, and every delivery window.</p>
             </div>
             <div className="ta-multi-right">
               {UNITS.map((u) => (
@@ -321,10 +321,10 @@ export function TextileApparelContent() {
                 <div className="oi-closer-insight-stat">58%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of garment manufacturers still plan production on spreadsheets.</strong>
-                  Source: McKinsey Fashion Report, 2024. The result is missed delivery windows, excess fabric waste, size-ratio imbalances, and zero visibility into per-style profitability — problems that compound every season.
+                  Source: McKinsey Fashion Report, 2024. The result is missed delivery windows, excess fabric waste, size-ratio imbalances, and zero visibility into per-style profitability, problems that compound every season.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer apparel deployment covers the full style lifecycle — not just inventory counting. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer apparel deployment covers the full style lifecycle, not just inventory counting. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -335,25 +335,25 @@ export function TextileApparelContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><GridIcon /></div>
                 <div className="oi-closer-commit-t">Full size-colour matrix control</div>
-                <p className="oi-closer-commit-b">Every style tracked across every size and colourway — from fabric booking through cutting, sewing, and packing to dispatch. No blind spots in your size matrix.</p>
+                <p className="oi-closer-commit-b">Every style tracked across every size and colourway, from fabric booking through cutting, sewing, and packing to dispatch. No blind spots in your size matrix.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed on-time delivery targets</div>
-                <p className="oi-closer-commit-b">Season delivery hit-rates, fabric utilisation, and production schedule adherence are defined before go-live. If we miss targets, we keep iterating — at our cost.</p>
+                <p className="oi-closer-commit-b">Season delivery hit-rates, fabric utilisation, and production schedule adherence are defined before go-live. If we miss targets, we keep iterating, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><SparklesIcon /></div>
                 <div className="oi-closer-commit-t">AI-first reorder &amp; forecasting</div>
-                <p className="oi-closer-commit-b">Every reorder decision is data-driven — sell-through velocity, size-curve analysis, and seasonal trends. No gut-feel replenishment, no overstock surprises.</p>
+                <p className="oi-closer-commit-b">Every reorder decision is data-driven, sell-through velocity, size-curve analysis, and seasonal trends. No gut-feel replenishment, no overstock surprises.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior apparel engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your production is the one who configures, migrates, trains, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your production is the one who configures, migrates, trains, and supports, named in the contract.</p>
               </div>
             </div>
           </div>

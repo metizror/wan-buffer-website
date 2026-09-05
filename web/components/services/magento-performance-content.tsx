@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   MAGENTO PERFORMANCE OPTIMISATION — unique page design
+   MAGENTO PERFORMANCE OPTIMISATION, unique page design
    Hero split + CWV scorecard · Before/After metrics · Optimisation
    layers · Tech stack · Process · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -78,17 +78,17 @@ const TECH = [
 
 /* ── Process ── */
 const PROCESS = [
-  { icon: <SearchIcon />, t: "Audit", s: "Full performance audit — server response, database queries, frontend rendering, third-party scripts, and Core Web Vitals baseline. Every bottleneck identified and prioritised." },
-  { icon: <ZapIcon />, t: "Optimise", s: "Layer-by-layer optimisation — server tuning, caching stack, frontend performance, CDN, and image pipeline. Changes deployed incrementally with before/after measurements." },
+  { icon: <SearchIcon />, t: "Audit", s: "Full performance audit, server response, database queries, frontend rendering, third-party scripts, and Core Web Vitals baseline. Every bottleneck identified and prioritised." },
+  { icon: <ZapIcon />, t: "Optimise", s: "Layer-by-layer optimisation, server tuning, caching stack, frontend performance, CDN, and image pipeline. Changes deployed incrementally with before/after measurements." },
   { icon: <EyeIcon />, t: "Monitor", s: "Continuous performance monitoring with alerts. Monthly reports track Core Web Vitals, page speed, and conversion impact. Regression detection catches slowdowns early." },
 ] as const;
 
 /* ── FAQ ── */
 const FAQS = [
   { q: "How much faster can you make my Magento store?", a: "Most stores see 60–80% improvement in page load time. Typical results: 8s → 2s load time, PageSpeed score from 30s to 90+, and LCP under 2.5 seconds. Exact results depend on your current baseline." },
-  { q: "Do you guarantee specific Core Web Vitals scores?", a: "Yes. We define target CWV scores (LCP, INP, CLS) before starting work. If we don't hit the targets, we keep optimising — at our cost. Targets are based on your current baseline and realistic improvement potential." },
+  { q: "Do you guarantee specific Core Web Vitals scores?", a: "Yes. We define target CWV scores (LCP, INP, CLS) before starting work. If we don't hit the targets, we keep optimising, at our cost. Targets are based on your current baseline and realistic improvement potential." },
   { q: "Will optimisation break my existing functionality?", a: "No. Every change is deployed incrementally with full testing. We maintain a staging environment that mirrors production and validate every optimisation against your real catalogue and checkout flow." },
-  { q: "Do you set up Varnish and Redis?", a: "Yes. We configure Varnish as a reverse proxy with Full Page Cache, Redis for session and cache storage, and Elasticsearch for catalogue search — the standard Magento performance stack." },
+  { q: "Do you set up Varnish and Redis?", a: "Yes. We configure Varnish as a reverse proxy with Full Page Cache, Redis for session and cache storage, and Elasticsearch for catalogue search, the standard Magento performance stack." },
   { q: "How long does a performance optimisation project take?", a: "A full performance audit takes 3–5 days. Implementation of optimisations typically takes 2–4 weeks depending on the number of layers addressed. Monitoring is ongoing." },
   { q: "Do you provide ongoing performance monitoring?", a: "Yes. We offer monthly performance monitoring with alerts for regressions, quarterly reports, and proactive optimisation. Included in our AMC plans or available standalone." },
 ] as const;
@@ -98,7 +98,7 @@ export function MagentoPerformanceContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + CWV scorecard right ═══ */}
+      {/* ═══ HERO: text left + CWV scorecard right ═══ */}
       <section className="mp-hero">
         <div className="mp-hero-glow mp-hero-glow-1" aria-hidden="true" />
         <div className="mp-hero-glow mp-hero-glow-2" aria-hidden="true" />
@@ -113,7 +113,7 @@ export function MagentoPerformanceContent() {
               <span className="acc">Speed that converts.</span>
             </h1>
             <p className="mp-hero-sub rev">
-              Full-stack Magento performance tuning — server, application, frontend, and CDN layers. <strong>Sub-3-second load times</strong> and green Core Web Vitals scores.
+              Full-stack Magento performance tuning, server, application, frontend, and CDN layers. <strong>Sub-3-second load times</strong> and green Core Web Vitals scores.
             </p>
             <div className="mp-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -277,7 +277,7 @@ export function MagentoPerformanceContent() {
                   Source: Google, 2024. Lazy image plugins and minification alone won&apos;t fix a Magento store with unoptimised database queries, missing Varnish cache, and an undersized server.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer performance engagement optimises every layer — from server kernel to browser paint.</p>
+              <p>That&apos;s why every Wan Buffer performance engagement optimises every layer, from server kernel to browser paint.</p>
             </div>
           </div>
 
@@ -288,13 +288,13 @@ export function MagentoPerformanceContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed speed targets</div>
-                <p className="oi-closer-commit-b">Load time, LCP, INP, CLS, and PageSpeed score targets are defined before work begins. If we miss them, we keep optimising — at our cost.</p>
+                <p className="oi-closer-commit-b">Load time, LCP, INP, CLS, and PageSpeed score targets are defined before work begins. If we miss them, we keep optimising, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><ZapIcon /></div>
                 <div className="oi-closer-commit-t">Full-stack approach</div>
-                <p className="oi-closer-commit-b">Server, application, frontend, and CDN — all four layers optimised. Not just image compression or a caching plugin, but proper infrastructure-level performance engineering.</p>
+                <p className="oi-closer-commit-b">Server, application, frontend, and CDN, all four layers optimised. Not just image compression or a caching plugin, but proper infrastructure-level performance engineering.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
@@ -306,7 +306,7 @@ export function MagentoPerformanceContent() {
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who audits your store is the one who optimises and monitors it — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who audits your store is the one who optimises and monitors it, named in the contract.</p>
               </div>
             </div>
           </div>

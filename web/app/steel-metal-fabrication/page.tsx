@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { SteelMetalContent } from "@/components/services/steel-metal-content";
 
 export const metadata: Metadata = {
-  title: "Steel & Metal Fabrication ERP | Heat Tracking, BOM & Production Scheduling — Wan Buffer",
+  title: "Steel & Metal Fabrication ERP | Heat Tracking, BOM & Production Scheduling | Wan Buffer",
   description:
     "End-to-end steel and metal fabrication ERP with heat number tracking, multi-level BOM management, production scheduling, coil and plate inventory, cut optimisation, and quality traceability. For structural steel, sheet metal, CNC machining, and metal service centres.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Steel & Metal Fabrication ERP — Heat Tracking, BOM & Production Scheduling | Wan Buffer",
+    title: "Steel & Metal Fabrication ERP: Heat Tracking, BOM & Production Scheduling | Wan Buffer",
     description:
-      "Steel and metal fabrication ERP with heat number tracking, multi-level BOM, production scheduling, cut optimisation, and full traceability — for structural steel, sheet metal, and metal service centres.",
+      "Steel and metal fabrication ERP with heat number tracking, multi-level BOM, production scheduling, cut optimisation, and full traceability, for structural steel, sheet metal, and metal service centres.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/steel-metal-fabrication" },

@@ -124,7 +124,7 @@ export function CaseStudiesContent() {
       <section className="csh-hero">
         <div className="csh-hero-inner">
 
-          {/* floating tags — left column */}
+          {/* floating tags: left column */}
           <div className="csh-tags csh-tags-left">
             <span className="csh-tag">Web Application</span>
             <span className="csh-tag">Application Development</span>
@@ -165,7 +165,7 @@ export function CaseStudiesContent() {
             </a>
           </div>
 
-          {/* floating tags — right column */}
+          {/* floating tags: right column */}
           <div className="csh-tags csh-tags-right">
             <span className="csh-tag">Odoo Solutions</span>
             <span className="csh-tag">Odoo Implementation India</span>

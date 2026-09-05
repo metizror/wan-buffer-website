@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   INDIA MARKET — unique page design
+   INDIA MARKET, unique page design
    Hero split + GST compliance dashboard mock · Operations cards ·
    Alternating feature rows · Dotted process flow · Multi-state section ·
    Platforms · FAQ · Closer · Support
@@ -52,19 +52,19 @@ const GST_ITEMS = [
 
 /* ── India operations ── */
 const OPERATIONS = [
-  { icon: <ShieldIcon />, t: "GST E-Invoicing & E-Way Bill", s: "Automated IRN generation via NIC portal, QR code embedding on invoices, and e-way bill creation from delivery orders — with GSTR-1 and GSTR-3B return preparation directly from your ERP.", color: "ai" as const },
-  { icon: <WalletIcon />, t: "Razorpay & UPI Payments", s: "Official Razorpay integration for payment links, subscription billing, UPI autopay, and payment gateway checkout — with automatic reconciliation of settlements against ERP invoices.", color: "green" as const },
-  { icon: <SettingsIcon />, t: "MRP & Manufacturing", s: "Full manufacturing ERP with multi-level BOM, production scheduling, work centre routing, and quality control — configured for Indian manufacturing with excise-era cost structures and PLI scheme tracking.", color: "purple" as const },
-  { icon: <UsersIcon />, t: "India Payroll & Compliance", s: "EPF, ESI, professional tax, and income tax (TDS on salary) calculations per state — with automated monthly challans, Form 16 generation, and PF/ESI return filing integration.", color: "red" as const },
+  { icon: <ShieldIcon />, t: "GST E-Invoicing & E-Way Bill", s: "Automated IRN generation via NIC portal, QR code embedding on invoices, and e-way bill creation from delivery orders, with GSTR-1 and GSTR-3B return preparation directly from your ERP.", color: "ai" as const },
+  { icon: <WalletIcon />, t: "Razorpay & UPI Payments", s: "Official Razorpay integration for payment links, subscription billing, UPI autopay, and payment gateway checkout, with automatic reconciliation of settlements against ERP invoices.", color: "green" as const },
+  { icon: <SettingsIcon />, t: "MRP & Manufacturing", s: "Full manufacturing ERP with multi-level BOM, production scheduling, work centre routing, and quality control, configured for Indian manufacturing with excise-era cost structures and PLI scheme tracking.", color: "purple" as const },
+  { icon: <UsersIcon />, t: "India Payroll & Compliance", s: "EPF, ESI, professional tax, and income tax (TDS on salary) calculations per state, with automated monthly challans, Form 16 generation, and PF/ESI return filing integration.", color: "red" as const },
 ] as const;
 
 /* ── Features ── */
 const FEATURES = [
-  { num: "01", icon: <ShieldIcon />, t: "GST E-Invoicing & Returns", s: "Automated e-invoice generation via NIC API — IRN, QR code, and signed JSON for every B2B invoice. GSTR-1 auto-population from sales data, GSTR-3B summary preparation, and GSTR-2B reconciliation against purchase invoices. Multi-GSTIN support for businesses registered in multiple states." },
-  { num: "02", icon: <WalletIcon />, t: "Razorpay & Payment Integration", s: "Official Razorpay partner integration — payment links on invoices, subscription billing with auto-charge, UPI autopay for recurring collections, and payment gateway for eCommerce checkout. Settlement reconciliation matches Razorpay payouts to ERP invoices automatically. Paytm, PhonePe, and NEFT/RTGS also supported." },
-  { num: "03", icon: <SettingsIcon />, t: "MRP & Production for India", s: "Multi-level BOM with job-work (Section 143 of CGST) tracking, production scheduling across work centres, and quality inspection at each stage. Configured for Indian manufacturing — HSN code mapping, production incentive tracking (PLI scheme), and excise-equivalent cost allocation." },
-  { num: "04", icon: <RefreshIcon />, t: "TDS/TCS Automation", s: "Automated TDS deduction on vendor payments (Section 194C, 194J, 194H, etc.) and TCS collection on sales (Section 206C). Quarterly return preparation (26Q, 27Q, 27EQ), Form 16/16A generation, and challan reconciliation — all from within your ERP." },
-  { num: "05", icon: <UsersIcon />, t: "India Payroll — EPF, ESI & PT", s: "Salary structures per CTC with automatic EPF (12% employee + 12% employer), ESI (0.75% + 3.25%), professional tax per state, and income tax calculation. Monthly ECR file generation for PF, ESI challan preparation, and Form 16 generation at year-end." },
+  { num: "01", icon: <ShieldIcon />, t: "GST E-Invoicing & Returns", s: "Automated e-invoice generation via NIC API: IRN, QR code, and signed JSON for every B2B invoice. GSTR-1 auto-population from sales data, GSTR-3B summary preparation, and GSTR-2B reconciliation against purchase invoices. Multi-GSTIN support for businesses registered in multiple states." },
+  { num: "02", icon: <WalletIcon />, t: "Razorpay & Payment Integration", s: "Official Razorpay partner integration, payment links on invoices, subscription billing with auto-charge, UPI autopay for recurring collections, and payment gateway for eCommerce checkout. Settlement reconciliation matches Razorpay payouts to ERP invoices automatically. Paytm, PhonePe, and NEFT/RTGS also supported." },
+  { num: "03", icon: <SettingsIcon />, t: "MRP & Production for India", s: "Multi-level BOM with job-work (Section 143 of CGST) tracking, production scheduling across work centres, and quality inspection at each stage. Configured for Indian manufacturing. HSN code mapping, production incentive tracking (PLI scheme), and excise-equivalent cost allocation." },
+  { num: "04", icon: <RefreshIcon />, t: "TDS/TCS Automation", s: "Automated TDS deduction on vendor payments (Section 194C, 194J, 194H, etc.) and TCS collection on sales (Section 206C). Quarterly return preparation (26Q, 27Q, 27EQ), Form 16/16A generation, and challan reconciliation, all from within your ERP." },
+  { num: "05", icon: <UsersIcon />, t: "India Payroll: EPF, ESI & PT", s: "Salary structures per CTC with automatic EPF (12% employee + 12% employer), ESI (0.75% + 3.25%), professional tax per state, and income tax calculation. Monthly ECR file generation for PF, ESI challan preparation, and Form 16 generation at year-end." },
   { num: "06", icon: <BarChartIcon />, t: "India Business Analytics", s: "GST-ready P&L and balance sheet in Schedule III format. State-wise revenue analysis, HSN-wise sales summary, and MSME vendor payment monitoring (Section 43B(h)). Real-time dashboards for collection efficiency, GST liability, and input tax credit utilisation." },
 ] as const;
 
@@ -78,8 +78,8 @@ const PROCESS = [
 
 /* ── Multi-state locations ── */
 const STATES = [
-  { t: "Head Office — Gujarat", sub: "Manufacturing & corporate operations", gstins: 3, active: true },
-  { t: "Branch — Maharashtra", sub: "Sales & distribution hub", gstins: 2, active: true },
+  { t: "Head Office: Gujarat", sub: "Manufacturing & corporate operations", gstins: 3, active: true },
+  { t: "Branch: Maharashtra", sub: "Sales & distribution hub", gstins: 2, active: true },
   { t: "New State Expansion", sub: "Multi-state GST registration", gstins: 0, active: false },
 ] as const;
 
@@ -96,11 +96,11 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "Can you automate GST e-invoicing directly from Odoo?", a: "Yes. We configure direct NIC API integration — every B2B invoice above the threshold automatically generates an IRN, receives a signed QR code, and stores the JSON response. Credit notes and debit notes are also e-invoice enabled. Multi-GSTIN support means businesses registered in multiple states generate e-invoices under the correct GSTIN automatically." },
-  { q: "How does Razorpay integration work with the ERP?", a: "We integrate Razorpay as an official partner — payment links are generated from ERP invoices, subscription billing auto-charges customers on schedule, and UPI autopay handles recurring collections. When Razorpay settles funds to your bank, the system auto-reconciles settlements against open invoices — no manual matching required." },
+  { q: "Can you automate GST e-invoicing directly from Odoo?", a: "Yes. We configure direct NIC API integration, every B2B invoice above the threshold automatically generates an IRN, receives a signed QR code, and stores the JSON response. Credit notes and debit notes are also e-invoice enabled. Multi-GSTIN support means businesses registered in multiple states generate e-invoices under the correct GSTIN automatically." },
+  { q: "How does Razorpay integration work with the ERP?", a: "We integrate Razorpay as an official partner, payment links are generated from ERP invoices, subscription billing auto-charges customers on schedule, and UPI autopay handles recurring collections. When Razorpay settles funds to your bank, the system auto-reconciles settlements against open invoices, no manual matching required." },
   { q: "Can you handle TDS on vendor payments and TCS on sales?", a: "Yes. TDS sections (194C, 194J, 194H, 194Q, etc.) are configured per vendor category with automatic deduction at payment time. TCS on sales (206C) applies per product category. Quarterly returns (26Q, 27Q, 27EQ), Form 16A certificates, and challan preparation are automated from within the ERP." },
   { q: "Do you support Indian payroll with EPF, ESI, and professional tax?", a: "Yes. Salary structures are configured per CTC with automatic calculation of EPF (employee and employer share), ESI contributions, professional tax per state, income tax (TDS on salary per slab), and LWF where applicable. Monthly ECR files for PF, ESI challans, and year-end Form 16 generation are all automated." },
-  { q: "Can you migrate from Tally to Odoo?", a: "Yes. We have a proven Tally-to-Odoo migration methodology — chart of accounts mapping, opening balances with GST input credit, customer/vendor masters with GSTIN, inventory with HSN codes, and historical transaction data. Parallel run validates data accuracy before Tally is retired." },
+  { q: "Can you migrate from Tally to Odoo?", a: "Yes. We have a proven Tally-to-Odoo migration methodology, chart of accounts mapping, opening balances with GST input credit, customer/vendor masters with GSTIN, inventory with HSN codes, and historical transaction data. Parallel run validates data accuracy before Tally is retired." },
   { q: "How long does an India ERP implementation take?", a: "Single-entity setup with GST, Razorpay, and basic payroll takes 3–5 weeks. Full India ERP with MRP, multi-GSTIN, TDS/TCS, and e-invoicing takes 8–14 weeks. Multi-state operations with Tally migration and manufacturing takes 12–20 weeks." },
 ] as const;
 
@@ -109,7 +109,7 @@ export function IndiaMarketContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + GST dashboard right ═══ */}
+      {/* ═══ HERO: text left + GST dashboard right ═══ */}
       <section className="in-hero">
         <div className="in-hero-glow in-hero-glow-1" aria-hidden="true" />
         <div className="in-hero-glow in-hero-glow-2" aria-hidden="true" />
@@ -125,7 +125,7 @@ export function IndiaMarketContent() {
               <span className="acc">Every GSTIN.<br />Every state.<br />Compliant.</span>
             </h1>
             <p className="in-hero-sub rev">
-              GST e-invoicing, Razorpay payments, TDS/TCS automation, MRP for manufacturing, and India payroll — <strong>built into your ERP.</strong>
+              GST e-invoicing, Razorpay payments, TDS/TCS automation, MRP for manufacturing, and India payroll, <strong>built into your ERP.</strong>
             </p>
             <div className="in-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -182,7 +182,7 @@ export function IndiaMarketContent() {
         </div>
       </section>
 
-      {/* ═══ OPERATIONS — 4 cards ═══ */}
+      {/* ═══ OPERATIONS: 4 cards ═══ */}
       <section className="in-ops">
         <div className="in-ops-inner">
           <div className="in-ops-hdr rev">
@@ -201,7 +201,7 @@ export function IndiaMarketContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — alternating rows ═══ */}
+      {/* ═══ FEATURES: alternating rows ═══ */}
       <section className="in-feat" id="features">
         <div className="in-feat-inner">
           <div className="in-feat-hdr rev">
@@ -223,7 +223,7 @@ export function IndiaMarketContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="in-proc" id="process">
         <div className="in-proc-inner">
           <div className="in-proc-hdr rev">
@@ -258,7 +258,7 @@ export function IndiaMarketContent() {
         </div>
       </section>
 
-      {/* ═══ MULTI-STATE — split ═══ */}
+      {/* ═══ MULTI-STATE: split ═══ */}
       <section className="in-multi" id="multi-state">
         <div className="in-multi-inner">
           <div className="in-multi-hdr rev">
@@ -269,7 +269,7 @@ export function IndiaMarketContent() {
             <div className="in-multi-left">
               <div className="in-multi-big-n">28+</div>
               <div className="in-multi-big-l">Indian states supported from one ERP</div>
-              <p className="in-multi-big-s">Multi-GSTIN registration, state-wise professional tax, inter-state e-way bills, and branch-level P&amp;L — all orchestrated from a single system with unified GST reporting and consolidated financials.</p>
+              <p className="in-multi-big-s">Multi-GSTIN registration, state-wise professional tax, inter-state e-way bills, and branch-level P&amp;L, all orchestrated from a single system with unified GST reporting and consolidated financials.</p>
             </div>
             <div className="in-multi-right">
               {STATES.map((st) => (
@@ -331,10 +331,10 @@ export function IndiaMarketContent() {
                 <div className="oi-closer-insight-stat">67%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of Indian businesses still file GST returns from data outside their ERP.</strong>
-                  Source: ClearTax Industry Report, 2024. The result is reconciliation gaps, missed ITC, TDS errors, and audit notices — problems that multiply every filing cycle.
+                  Source: ClearTax Industry Report, 2024. The result is reconciliation gaps, missed ITC, TDS errors, and audit notices, problems that multiply every filing cycle.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer India deployment covers full GST compliance from within the ERP — not via external tools. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer India deployment covers full GST compliance from within the ERP, not via external tools. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -345,25 +345,25 @@ export function IndiaMarketContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
                 <div className="oi-closer-commit-t">GST e-invoicing &amp; returns from day one</div>
-                <p className="oi-closer-commit-b">Every B2B invoice generates an IRN automatically. GSTR-1, GSTR-3B, and GSTR-2B reconciliation run from within the ERP — no external filing tools, no data exports, no reconciliation gaps.</p>
+                <p className="oi-closer-commit-b">Every B2B invoice generates an IRN automatically. GSTR-1, GSTR-3B, and GSTR-2B reconciliation run from within the ERP, no external filing tools, no data exports, no reconciliation gaps.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed compliance targets</div>
-                <p className="oi-closer-commit-b">E-invoice success rate, GSTR filing accuracy, TDS deduction completeness, and reconciliation match rate are defined before go-live. If we miss targets, we keep iterating — at our cost.</p>
+                <p className="oi-closer-commit-b">E-invoice success rate, GSTR filing accuracy, TDS deduction completeness, and reconciliation match rate are defined before go-live. If we miss targets, we keep iterating, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><WalletIcon /></div>
                 <div className="oi-closer-commit-t">Razorpay &amp; UPI from within your ERP</div>
-                <p className="oi-closer-commit-b">Payment links, subscription billing, UPI autopay, and settlement reconciliation — all integrated. Customers pay from your invoice. Settlements match automatically. No manual bank reconciliation.</p>
+                <p className="oi-closer-commit-b">Payment links, subscription billing, UPI autopay, and settlement reconciliation, all integrated. Customers pay from your invoice. Settlements match automatically. No manual bank reconciliation.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior India ERP engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your Indian business is the one who configures GST, payroll, MRP, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your Indian business is the one who configures GST, payroll, MRP, and supports, named in the contract.</p>
               </div>
             </div>
           </div>

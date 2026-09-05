@@ -11,7 +11,7 @@ import { OdooSalesforceSyncContent } from "@/components/services/odoo-salesforce
 export const metadata: Metadata = {
   title: "Odoo ↔ Salesforce Sync | Bi-Directional CRM + ERP Bridge | Wan Buffer",
   description:
-    "Bi-directional real-time sync between Odoo ERP and Salesforce CRM. Contacts, leads, opportunities, sales orders, invoices, and products — synced automatically with conflict resolution, field mapping, and zero data loss.",
+    "Bi-directional real-time sync between Odoo ERP and Salesforce CRM. Contacts, leads, opportunities, sales orders, invoices, and products, synced automatically with conflict resolution, field mapping, and zero data loss.",
   keywords: [
     "Odoo Salesforce integration",
     "Odoo Salesforce sync",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Odoo ↔ Salesforce Sync — Bi-Directional CRM + ERP Bridge | Wan Buffer",
+    title: "Odoo ↔ Salesforce Sync: Bi-Directional CRM + ERP Bridge | Wan Buffer",
     description:
-      "Real-time bi-directional sync between Odoo and Salesforce. Contacts, leads, orders, invoices — one source of truth across CRM and ERP.",
+      "Real-time bi-directional sync between Odoo and Salesforce. Contacts, leads, orders, invoices, one source of truth across CRM and ERP.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/odoo-salesforce-sync" },

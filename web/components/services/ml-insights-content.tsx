@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   ML-POWERED INSIGHTS — unique page design
+   ML-POWERED INSIGHTS, unique page design
    Hero split + KPI tiles · Scrolling insight carousel · 3-col process
    flow · Dashboard showcase · Industry pill cloud · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -46,29 +46,29 @@ const KPI_TILES = [
   { icon: <BarChartIcon />, label: "Forecast accuracy", value: "96.2%", sub: "rolling 90-day", color: "ai" as const },
 ] as const;
 
-/* ── Insight types — carousel ── */
+/* ── Insight types: carousel ── */
 const INSIGHTS = [
-  { icon: <MonitorIcon />, t: "Live KPI Dashboards", s: "Auto-generated dashboards that update in real time from your ERP data. Revenue, margins, pipeline health, inventory turns, and cash position — always current, never stale.", stat: { n: "Real-time", l: "Data refresh" } },
-  { icon: <EyeIcon />, t: "Anomaly Alerts", s: "ML models continuously scan your operational data for outliers — unusual expense spikes, supplier delays, demand deviations, and revenue drops — and alert your team before problems escalate.", stat: { n: "3.5×", l: "Faster detection" } },
+  { icon: <MonitorIcon />, t: "Live KPI Dashboards", s: "Auto-generated dashboards that update in real time from your ERP data. Revenue, margins, pipeline health, inventory turns, and cash position, always current, never stale.", stat: { n: "Real-time", l: "Data refresh" } },
+  { icon: <EyeIcon />, t: "Anomaly Alerts", s: "ML models continuously scan your operational data for outliers, unusual expense spikes, supplier delays, demand deviations, and revenue drops, and alert your team before problems escalate.", stat: { n: "3.5×", l: "Faster detection" } },
   { icon: <TrendingUpIcon />, t: "Trend Analysis", s: "Automatically identify emerging patterns across sales cycles, customer behaviour, production output, and financial metrics. See what's changing before your competitors do.", stat: { n: "90-day", l: "Trend horizon" } },
   { icon: <TargetIcon />, t: "Goal Tracking", s: "Set department-level KPIs and let ML track progress, predict whether targets will be hit, and recommend corrective actions when trajectories drift.", stat: { n: "94%", l: "Prediction accuracy" } },
-  { icon: <SparklesIcon />, t: "Natural Language Reports", s: "AI-generated executive summaries that explain what happened, why it happened, and what to do next — delivered daily to email, Slack, or your ERP dashboard.", stat: { n: "Daily", l: "Auto-generated" } },
-  { icon: <GridIcon />, t: "Cross-System Correlation", s: "Connect data from ERP, CRM, HR, and supply chain to discover hidden correlations — how marketing spend impacts production load, or how hiring velocity affects delivery times.", stat: { n: "5+", l: "Data sources" } },
+  { icon: <SparklesIcon />, t: "Natural Language Reports", s: "AI-generated executive summaries that explain what happened, why it happened, and what to do next, delivered daily to email, Slack, or your ERP dashboard.", stat: { n: "Daily", l: "Auto-generated" } },
+  { icon: <GridIcon />, t: "Cross-System Correlation", s: "Connect data from ERP, CRM, HR, and supply chain to discover hidden correlations, how marketing spend impacts production load, or how hiring velocity affects delivery times.", stat: { n: "5+", l: "Data sources" } },
 ] as const;
 
-/* ── How ML works — 3-column process ── */
+/* ── How ML works: 3-column process ── */
 const ML_PROCESS = [
-  { icon: <DatabaseIcon />, t: "Connect & ingest", b: "We connect to your ERP, CRM, HR, and financial systems via secure APIs. Data is ingested, validated, and normalised into a unified analytics layer — no manual exports, no spreadsheets.", deliverables: ["Data pipeline", "Schema mapping", "Quality checks"] },
+  { icon: <DatabaseIcon />, t: "Connect & ingest", b: "We connect to your ERP, CRM, HR, and financial systems via secure APIs. Data is ingested, validated, and normalised into a unified analytics layer, no manual exports, no spreadsheets.", deliverables: ["Data pipeline", "Schema mapping", "Quality checks"] },
   { icon: <CpuIcon />, t: "Learn & model", b: "ML models train on your historical data to understand baselines, detect patterns, and build predictive capabilities. Models are validated against holdout data before deployment.", deliverables: ["Trained models", "Accuracy benchmarks", "Feature importance"] },
-  { icon: <RocketIcon />, t: "Surface & act", b: "Insights surface inside your existing tools — ERP dashboards, Slack alerts, email digests, and custom UIs. Actionable recommendations trigger workflows automatically.", deliverables: ["Live dashboards", "Alert pipelines", "Automation hooks"] },
+  { icon: <RocketIcon />, t: "Surface & act", b: "Insights surface inside your existing tools: ERP dashboards, Slack alerts, email digests, and custom UIs. Actionable recommendations trigger workflows automatically.", deliverables: ["Live dashboards", "Alert pipelines", "Automation hooks"] },
 ] as const;
 
 /* ── Dashboard features ── */
 const DASH_FEATURES = [
-  { icon: <RefreshIcon />, t: "Real-time sync", s: "Dashboards update as your ERP data changes — no batch jobs, no overnight refreshes." },
+  { icon: <RefreshIcon />, t: "Real-time sync", s: "Dashboards update as your ERP data changes, no batch jobs, no overnight refreshes." },
   { icon: <UsersIcon />, t: "Role-based views", s: "CFOs see financial KPIs. Ops managers see production metrics. Sales leads see pipeline health." },
   { icon: <ShieldIcon />, t: "Drill-down capable", s: "Click any metric to drill into the underlying transactions, orders, or records." },
-  { icon: <SparklesIcon />, t: "AI annotations", s: "ML automatically annotates charts with explanations — why a metric spiked, what's driving a trend." },
+  { icon: <SparklesIcon />, t: "AI annotations", s: "ML automatically annotates charts with explanations, why a metric spiked, what's driving a trend." },
 ] as const;
 
 /* ── Industries ── */
@@ -95,7 +95,7 @@ export function MlInsightsContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + KPI tile grid right ═══ */}
+      {/* ═══ HERO: text left + KPI tile grid right ═══ */}
       <section className="ml-hero">
         <div className="ml-hero-glow ml-hero-glow-1" aria-hidden="true" />
         <div className="ml-hero-glow ml-hero-glow-2" aria-hidden="true" />
@@ -110,7 +110,7 @@ export function MlInsightsContent() {
               <span className="acc">Intelligence, not reports.</span>
             </h1>
             <p className="ml-hero-sub rev">
-              Machine learning that transforms your ERP data into real-time dashboards, automated KPIs, and proactive alerts — <strong>so your team makes decisions based on intelligence, not gut feel.</strong>
+              Machine learning that transforms your ERP data into real-time dashboards, automated KPIs, and proactive alerts, <strong>so your team makes decisions based on intelligence, not gut feel.</strong>
             </p>
             <div className="ml-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -135,7 +135,7 @@ export function MlInsightsContent() {
         </div>
       </section>
 
-      {/* ═══ INSIGHT TYPES — horizontal scrolling carousel ═══ */}
+      {/* ═══ INSIGHT TYPES: horizontal scrolling carousel ═══ */}
       <section className="ml-insights" id="insights">
         <div className="ml-insights-inner">
           <div className="ml-insights-hdr rev">
@@ -143,7 +143,7 @@ export function MlInsightsContent() {
               <div className="eyebrow">Insight types</div>
               <h2>Six intelligence layers.<br /><span>Always on.</span></h2>
             </div>
-            <p>Each insight type is purpose-built for ERP data — not generic BI charts. Models learn your business rhythms, flag what matters, and surface recommendations where your team already works.</p>
+            <p>Each insight type is purpose-built for ERP data, not generic BI charts. Models learn your business rhythms, flag what matters, and surface recommendations where your team already works.</p>
           </div>
           <div className="ml-insights-scroll-wrap">
             <div className="ml-insights-scroll rev">
@@ -163,7 +163,7 @@ export function MlInsightsContent() {
         </div>
       </section>
 
-      {/* ═══ HOW ML WORKS — 3-column process flow ═══ */}
+      {/* ═══ HOW ML WORKS: 3-column process flow ═══ */}
       <section className="ml-proc" id="process">
         <div className="ml-proc-inner">
           <div className="ml-proc-hdr rev">
@@ -203,7 +203,7 @@ export function MlInsightsContent() {
         </div>
       </section>
 
-      {/* ═══ DASHBOARD SHOWCASE — full-width dark ═══ */}
+      {/* ═══ DASHBOARD SHOWCASE: full-width dark ═══ */}
       <section className="ml-dash" id="dashboards">
         <div className="ml-dash-inner">
           <div className="ml-dash-hdr rev">
@@ -222,13 +222,13 @@ export function MlInsightsContent() {
         </div>
       </section>
 
-      {/* ═══ INDUSTRIES — pill cloud ═══ */}
+      {/* ═══ INDUSTRIES: pill cloud ═══ */}
       <section className="ml-ind" id="industries">
         <div className="ml-ind-inner rev">
           <div className="ml-ind-left">
             <div className="eyebrow lt">Industries served</div>
             <h2>ML insights for<br /><span>every vertical.</span></h2>
-            <p>Domain-specific models trained on industry data patterns — not generic analytics applied blindly.</p>
+            <p>Domain-specific models trained on industry data patterns, not generic analytics applied blindly.</p>
           </div>
           <div className="ml-ind-pills">
             {INDUSTRIES.map((ind) => (
@@ -269,7 +269,7 @@ export function MlInsightsContent() {
                   Source: Gartner, 2024. The problem is dashboards built on stale data, disconnected from workflows, and lacking the ML layer that turns observation into action.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer ML engagement is anchored to four commitments — written into the contract, tracked weekly, and never compromised.</p>
+              <p>That&apos;s why every Wan Buffer ML engagement is anchored to four commitments, written into the contract, tracked weekly, and never compromised.</p>
             </div>
           </div>
 
@@ -286,7 +286,7 @@ export function MlInsightsContent() {
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed KPIs</div>
-                <p className="oi-closer-commit-b">Insight accuracy, alert relevance, and dashboard adoption rates are defined before development. If we miss targets, we keep iterating — at our cost.</p>
+                <p className="oi-closer-commit-b">Insight accuracy, alert relevance, and dashboard adoption rates are defined before development. If we miss targets, we keep iterating, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
@@ -298,7 +298,7 @@ export function MlInsightsContent() {
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The data engineers who design your ML pipelines are the ones who build, deploy, and support them — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The data engineers who design your ML pipelines are the ones who build, deploy, and support them, named in the contract.</p>
               </div>
             </div>
           </div>
@@ -341,7 +341,7 @@ export function MlInsightsContent() {
               <div className="oi-supp-icon-v2"><PhoneCallIcon /></div>
               <div className="oi-supp-label">Phone · 24 &times; 7</div>
               <a className="oi-supp-title-v2" href="tel:+919904122699">+91 99041 22699</a>
-              <p className="oi-supp-body-v2">Pipeline failures or dashboard outages. Answered by a senior data engineer — not a call centre.</p>
+              <p className="oi-supp-body-v2">Pipeline failures or dashboard outages. Answered by a senior data engineer, not a call centre.</p>
               <a className="oi-supp-cta-v2" href="tel:+919904122699">Call now <ArrowRightIcon /></a>
             </div>
             <div className="oi-supp-card">

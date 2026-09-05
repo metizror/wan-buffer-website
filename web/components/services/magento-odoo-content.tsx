@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   MAGENTO → ODOO INTEGRATION — unique page design
+   MAGENTO → ODOO INTEGRATION, unique page design
    Centered hero + sync flow · Benefit cards · Data mapping · Feature
    rows · Process steps · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -64,9 +64,9 @@ const MAPPINGS = [
 
 /* ── Integration features ── */
 const FEATURES = [
-  { num: "01", icon: <PackageIcon />, t: "Product Sync", s: "Products created or updated in Odoo automatically appear in Magento — name, description, images, attributes, categories, and variants. No manual catalogue management across two systems." },
-  { num: "02", icon: <GridIcon />, t: "Inventory Sync", s: "Stock levels update in Magento within seconds of warehouse changes in Odoo. Multi-warehouse quantities, reserved stock, and available-to-promise — all in real time." },
-  { num: "03", icon: <WalletIcon />, t: "Order Sync", s: "Magento orders flow to Odoo automatically — line items, shipping details, payment status, and customer data. No re-keying, no CSV imports, no order backlogs." },
+  { num: "01", icon: <PackageIcon />, t: "Product Sync", s: "Products created or updated in Odoo automatically appear in Magento, name, description, images, attributes, categories, and variants. No manual catalogue management across two systems." },
+  { num: "02", icon: <GridIcon />, t: "Inventory Sync", s: "Stock levels update in Magento within seconds of warehouse changes in Odoo. Multi-warehouse quantities, reserved stock, and available-to-promise, all in real time." },
+  { num: "03", icon: <WalletIcon />, t: "Order Sync", s: "Magento orders flow to Odoo automatically, line items, shipping details, payment status, and customer data. No re-keying, no CSV imports, no order backlogs." },
   { num: "04", icon: <UsersIcon />, t: "Customer Sync", s: "Customer records, addresses, and account groups sync between systems. Updates in either direction propagate automatically with conflict resolution rules." },
   { num: "05", icon: <BarChartIcon />, t: "Price & Discount Sync", s: "Pricelists, tier pricing, and promotional discounts managed in Odoo push to Magento automatically. One pricing engine, consistent across all channels." },
   { num: "06", icon: <RocketIcon />, t: "Shipment & Tracking", s: "When Odoo dispatches an order, Magento receives the tracking number and updates the customer. Delivery status syncs back for complete order lifecycle visibility." },
@@ -95,7 +95,7 @@ export function MagentoOdooContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered + sync flow ═══ */}
+      {/* ═══ HERO: centered + sync flow ═══ */}
       <section className="mo-hero">
         <div className="mo-hero-glow mo-hero-glow-1" aria-hidden="true" />
         <div className="mo-hero-glow mo-hero-glow-2" aria-hidden="true" />
@@ -109,7 +109,7 @@ export function MagentoOdooContent() {
             <span className="acc">Integration.</span>
           </h1>
           <p className="mo-hero-sub rev">
-            Real-time synchronisation between Magento 2 and Odoo ERP — products, inventory, orders, customers, and pricing. <strong>One source of truth for eCommerce and operations.</strong>
+            Real-time synchronisation between Magento 2 and Odoo ERP, products, inventory, orders, customers, and pricing. <strong>One source of truth for eCommerce and operations.</strong>
           </p>
           <div className="mo-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -144,7 +144,7 @@ export function MagentoOdooContent() {
         </div>
       </section>
 
-      {/* ═══ BENEFITS — 4 cards ═══ */}
+      {/* ═══ BENEFITS: 4 cards ═══ */}
       <section className="mo-bens">
         <div className="mo-bens-inner rev">
           {BENEFITS.map((b) => (
@@ -191,7 +191,7 @@ export function MagentoOdooContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — numbered rows ═══ */}
+      {/* ═══ FEATURES: numbered rows ═══ */}
       <section className="mo-feat" id="features">
         <div className="mo-feat-inner">
           <div className="mo-feat-hdr rev">
@@ -215,7 +215,7 @@ export function MagentoOdooContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — 4 steps with color bar ═══ */}
+      {/* ═══ PROCESS: 4 steps with color bar ═══ */}
       <section className="mo-proc" id="process">
         <div className="mo-proc-inner">
           <div className="mo-proc-hdr rev">
@@ -279,10 +279,10 @@ export function MagentoOdooContent() {
                 <div className="oi-closer-insight-stat">60%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of eCommerce-ERP integrations fail to maintain data consistency.</strong>
-                  Source: MuleSoft, 2024. The issue is integrations built for happy-path demo scenarios — they break on edge cases like partial shipments, order edits, and multi-warehouse allocation.
+                  Source: MuleSoft, 2024. The issue is integrations built for happy-path demo scenarios, they break on edge cases like partial shipments, order edits, and multi-warehouse allocation.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer integration is engineered for exceptions first — not just the demo.</p>
+              <p>That&apos;s why every Wan Buffer integration is engineered for exceptions first, not just the demo.</p>
             </div>
           </div>
 

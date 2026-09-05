@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   ZOHO BOOKS & FINANCE — unique page design
+   ZOHO BOOKS & FINANCE, unique page design
    Centered hero + ledger mockup · Finance module grid · Tax compliance
    showcase · Automation cards with stat bars · Receipt-style process ·
    FAQ · Closer · Support
@@ -41,18 +41,18 @@ import {
 
 /* ── Ledger mockup ── */
 const LEDGER_ROWS = [
-  { date: "15 Mar", desc: "Invoice #INV-4821", debit: "₹4,82,350", credit: "—", balance: "₹12,45,800" },
-  { date: "16 Mar", desc: "Vendor payment — Alpha Ltd", debit: "—", credit: "₹1,28,000", balance: "₹11,17,800" },
-  { date: "18 Mar", desc: "GST collected — Q4", debit: "₹86,823", credit: "—", balance: "₹12,04,623" },
-  { date: "20 Mar", desc: "Bank reconciliation adjustment", debit: "—", credit: "₹2,450", balance: "₹12,02,173" },
+  { date: "15 Mar", desc: "Invoice #INV-4821", debit: "₹4,82,350", credit: "-", balance: "₹12,45,800" },
+  { date: "16 Mar", desc: "Vendor payment: Alpha Ltd", debit: "-", credit: "₹1,28,000", balance: "₹11,17,800" },
+  { date: "18 Mar", desc: "GST collected: Q4", debit: "₹86,823", credit: "-", balance: "₹12,04,623" },
+  { date: "20 Mar", desc: "Bank reconciliation adjustment", debit: "-", credit: "₹2,450", balance: "₹12,02,173" },
 ] as const;
 
 /* ── Finance modules ── */
 const MODULES = [
-  { icon: <WalletIcon />, num: "01", t: "Invoicing & Billing", s: "Automated invoice generation, recurring billing, payment reminders, and multi-currency support. Invoices generate from sales orders, match to deliveries, and track payment status — all within Zoho Books." },
-  { icon: <DatabaseIcon />, num: "02", t: "Bank Reconciliation", s: "Connect bank feeds directly to Zoho Books. AI-powered matching categorises transactions automatically, flags discrepancies, and reconciles accounts daily — not monthly." },
+  { icon: <WalletIcon />, num: "01", t: "Invoicing & Billing", s: "Automated invoice generation, recurring billing, payment reminders, and multi-currency support. Invoices generate from sales orders, match to deliveries, and track payment status, all within Zoho Books." },
+  { icon: <DatabaseIcon />, num: "02", t: "Bank Reconciliation", s: "Connect bank feeds directly to Zoho Books. AI-powered matching categorises transactions automatically, flags discrepancies, and reconciles accounts daily, not monthly." },
   { icon: <ShieldIcon />, num: "03", t: "GST & VAT Compliance", s: "Automated GST e-invoicing, GSTR filing, Input Tax Credit tracking, and VAT calculations for GCC markets. Tax rules update automatically when regulations change." },
-  { icon: <BarChartIcon />, num: "04", t: "Financial Reporting", s: "Profit & loss, balance sheet, cash flow, ageing reports, and custom dashboards — generated in real time from live transactional data. Schedule and auto-distribute to stakeholders." },
+  { icon: <BarChartIcon />, num: "04", t: "Financial Reporting", s: "Profit & loss, balance sheet, cash flow, ageing reports, and custom dashboards, generated in real time from live transactional data. Schedule and auto-distribute to stakeholders." },
   { icon: <PackageIcon />, num: "05", t: "Expense Management", s: "Employee expense submissions, receipt OCR, policy-based approval routing, and automatic reimbursement posting. Expense data flows directly into your general ledger." },
   { icon: <RefreshIcon />, num: "06", t: "Multi-Entity & Multi-Currency", s: "Manage multiple companies, branches, or subsidiaries from a single Zoho Books instance. Inter-company transactions, currency conversion, and consolidated reporting built in." },
 ] as const;
@@ -69,17 +69,17 @@ const TAX_FEATURES = [
 
 /* ── Automation cards ── */
 const AUTOMATIONS = [
-  { icon: <ZapIcon />, t: "Invoice Automation", s: "Invoices generate from sales orders, apply tax rules, attach supporting documents, and email to clients — zero manual steps from order to collection.", percent: 85 },
+  { icon: <ZapIcon />, t: "Invoice Automation", s: "Invoices generate from sales orders, apply tax rules, attach supporting documents, and email to clients, zero manual steps from order to collection.", percent: 85 },
   { icon: <RefreshIcon />, t: "Reconciliation Automation", s: "Bank feeds import daily, AI matches transactions to ledger entries, and exception reports flag unmatched items for review. Monthly close drops from days to hours.", percent: 90 },
   { icon: <MailIcon />, t: "Payment Follow-Up", s: "Automated payment reminders trigger at configurable intervals. Overdue invoices escalate to collections workflows. Cash application posts automatically on receipt.", percent: 78 },
 ] as const;
 
 /* ── Process ── */
 const PROCESS = [
-  { num: "01", t: "Audit existing books", b: "We audit your current accounting setup — chart of accounts, tax configuration, bank connections, and reporting gaps." },
-  { num: "02", t: "Configure Zoho Books", b: "Chart of accounts, tax rules, invoice templates, approval workflows, and bank feed connections — configured to match your exact financial operations." },
-  { num: "03", t: "Migrate financial data", b: "Opening balances, customer/vendor records, historical transactions, and outstanding invoices — migrated with full validation and reconciliation." },
-  { num: "04", t: "Integrate systems", b: "Connect Zoho Books to CRM, Inventory, Payroll, eCommerce, and payment gateways — real-time sync, no batch jobs." },
+  { num: "01", t: "Audit existing books", b: "We audit your current accounting setup, chart of accounts, tax configuration, bank connections, and reporting gaps." },
+  { num: "02", t: "Configure Zoho Books", b: "Chart of accounts, tax rules, invoice templates, approval workflows, and bank feed connections, configured to match your exact financial operations." },
+  { num: "03", t: "Migrate financial data", b: "Opening balances, customer/vendor records, historical transactions, and outstanding invoices, migrated with full validation and reconciliation." },
+  { num: "04", t: "Integrate systems", b: "Connect Zoho Books to CRM, Inventory, Payroll, eCommerce, and payment gateways, real-time sync, no batch jobs." },
   { num: "05", t: "Train & go live", b: "Role-based training for accountants, managers, and approvers. Parallel-run validation before full switchover." },
 ] as const;
 
@@ -87,10 +87,10 @@ const PROCESS = [
 const FAQS = [
   { q: "Can Zoho Books handle Indian GST compliance?", a: "Yes. Zoho Books supports GST e-invoicing with IRN generation, automated GSTR-1/3B/9 filing, Input Tax Credit reconciliation, TDS/TCS calculations, and multi-state GST registration. Tax rules update automatically when GSTN regulations change." },
   { q: "Does Zoho Books integrate with bank accounts?", a: "Yes. Zoho Books connects directly to bank feeds via Yodlee and open banking APIs. Transactions import daily, AI auto-categorises them, and reconciliation highlights unmatched entries for review." },
-  { q: "Can you migrate data from Tally, QuickBooks, or spreadsheets?", a: "Yes. We handle full migration from Tally, QuickBooks, Xero, and spreadsheets — including chart of accounts, opening balances, customer/vendor masters, historical transactions, and outstanding invoices with full validation." },
+  { q: "Can you migrate data from Tally, QuickBooks, or spreadsheets?", a: "Yes. We handle full migration from Tally, QuickBooks, Xero, and spreadsheets, including chart of accounts, opening balances, customer/vendor masters, historical transactions, and outstanding invoices with full validation." },
   { q: "Is Zoho Books suitable for multi-entity businesses?", a: "Yes. Zoho Books supports multiple organisations from a single account. Inter-company transactions, multi-currency, and consolidated financial reporting across entities are built in." },
   { q: "What integrations does Zoho Books support?", a: "Zoho Books integrates with Zoho CRM, Zoho Inventory, Zoho People, Shopify, Razorpay, Stripe, PayPal, Google Workspace, Slack, and custom applications via API and Zoho Flow." },
-  { q: "What ongoing support do you provide after implementation?", a: "Every implementation includes 90 days of hypercare — configuration adjustments, tax rule updates, and user support. After that, we offer SLA-based annual maintenance contracts." },
+  { q: "What ongoing support do you provide after implementation?", a: "Every implementation includes 90 days of hypercare, configuration adjustments, tax rule updates, and user support. After that, we offer SLA-based annual maintenance contracts." },
 ] as const;
 
 /* ── Platforms ── */
@@ -110,7 +110,7 @@ export function ZohoBooksContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered + ledger mockup ═══ */}
+      {/* ═══ HERO: centered + ledger mockup ═══ */}
       <section className="zb-hero">
         <div className="zb-hero-glow zb-hero-glow-1" aria-hidden="true" />
         <div className="zb-hero-glow zb-hero-glow-2" aria-hidden="true" />
@@ -124,7 +124,7 @@ export function ZohoBooksContent() {
             <span className="acc">&amp; Finance.</span>
           </h1>
           <p className="zb-hero-sub rev">
-            Automated invoicing, bank reconciliation, GST/VAT compliance, and financial reporting — <strong>end-to-end accounting automation</strong> built on Zoho Books, configured for your business.
+            Automated invoicing, bank reconciliation, GST/VAT compliance, and financial reporting, <strong>end-to-end accounting automation</strong> built on Zoho Books, configured for your business.
           </p>
           <div className="zb-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -137,7 +137,7 @@ export function ZohoBooksContent() {
           {/* Ledger mockup */}
           <div className="zb-ledger rev">
             <div className="zb-ledger-bar">
-              <span className="zb-ledger-bar-title">General Ledger — March 2026</span>
+              <span className="zb-ledger-bar-title">General Ledger: March 2026</span>
             </div>
             <div className="zb-ledger-head">
               <span>Date</span><span>Description</span><span>Debit</span><span>Credit</span><span>Balance</span>
@@ -155,13 +155,13 @@ export function ZohoBooksContent() {
         </div>
       </section>
 
-      {/* ═══ MODULES — 2×3 grid ═══ */}
+      {/* ═══ MODULES: 2×3 grid ═══ */}
       <section className="zb-mods" id="services">
         <div className="zb-mods-inner">
           <div className="zb-mods-hdr rev">
             <div className="eyebrow">Finance modules</div>
             <h2>Six modules.<br /><span>Complete financial control.</span></h2>
-            <p>Every module is configured for your specific chart of accounts, tax rules, and approval hierarchies. Not a generic accounting setup — a finance system built for how your business actually operates.</p>
+            <p>Every module is configured for your specific chart of accounts, tax rules, and approval hierarchies. Not a generic accounting setup, a finance system built for how your business actually operates.</p>
           </div>
           <div className="zb-mods-grid rev">
             {MODULES.map((m) => (
@@ -176,14 +176,14 @@ export function ZohoBooksContent() {
         </div>
       </section>
 
-      {/* ═══ TAX COMPLIANCE — focused dark section ═══ */}
+      {/* ═══ TAX COMPLIANCE: focused dark section ═══ */}
       <section className="zb-tax">
         <div className="zb-tax-inner rev">
           <div className="zb-tax-left">
             <div className="zb-tax-icon-wrap"><ShieldIcon /></div>
             <div className="eyebrow lt">Tax compliance</div>
             <h2>GST, VAT &amp; TDS.<br /><span>Automated.</span></h2>
-            <p>Tax compliance isn&apos;t a feature we bolt on — it&apos;s engineered into every transaction. From GST e-invoicing in India to VAT calculations in the GCC, your books stay compliant without manual intervention.</p>
+            <p>Tax compliance isn&apos;t a feature we bolt on, it&apos;s engineered into every transaction. From GST e-invoicing in India to VAT calculations in the GCC, your books stay compliant without manual intervention.</p>
           </div>
           <div className="zb-tax-right">
             {TAX_FEATURES.map((f) => (
@@ -196,7 +196,7 @@ export function ZohoBooksContent() {
         </div>
       </section>
 
-      {/* ═══ AUTOMATION — cards with stat bars ═══ */}
+      {/* ═══ AUTOMATION: cards with stat bars ═══ */}
       <section className="zb-auto" id="automation">
         <div className="zb-auto-inner">
           <div className="zb-auto-hdr rev">
@@ -222,7 +222,7 @@ export function ZohoBooksContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — receipt-style vertical ═══ */}
+      {/* ═══ PROCESS: receipt-style vertical ═══ */}
       <section className="zb-proc" id="process">
         <div className="zb-proc-inner">
           <div className="zb-proc-hdr rev">
@@ -303,10 +303,10 @@ export function ZohoBooksContent() {
                 <div className="oi-closer-insight-stat">55%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of finance teams still close books manually each month.</strong>
-                  Source: BlackLine, 2024. The problem isn&apos;t the software — it&apos;s implementations that automate invoice creation without automating reconciliation, approvals, and reporting.
+                  Source: BlackLine, 2024. The problem isn&apos;t the software, it&apos;s implementations that automate invoice creation without automating reconciliation, approvals, and reporting.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer finance deployment automates the full cycle — from invoice to reconciliation to reporting. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer finance deployment automates the full cycle, from invoice to reconciliation to reporting. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -317,13 +317,13 @@ export function ZohoBooksContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><WalletIcon /></div>
                 <div className="oi-closer-commit-t">Full-cycle automation</div>
-                <p className="oi-closer-commit-b">Invoice creation, approval routing, payment tracking, bank reconciliation, and financial reporting — every step automated, not just the first one.</p>
+                <p className="oi-closer-commit-b">Invoice creation, approval routing, payment tracking, bank reconciliation, and financial reporting, every step automated, not just the first one.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
                 <div className="oi-closer-commit-t">Tax compliance built in</div>
-                <p className="oi-closer-commit-b">GST, VAT, TDS/TCS rules configured and tested before go-live. Tax regulation updates applied automatically — no manual rule maintenance.</p>
+                <p className="oi-closer-commit-b">GST, VAT, TDS/TCS rules configured and tested before go-live. Tax regulation updates applied automatically, no manual rule maintenance.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
@@ -335,7 +335,7 @@ export function ZohoBooksContent() {
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior finance consultants</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The consultant who audits your books is the one who configures, migrates, trains, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The consultant who audits your books is the one who configures, migrates, trains, and supports, named in the contract.</p>
               </div>
             </div>
           </div>

@@ -8,33 +8,15 @@ interface WindowWithClientRuntime extends Window {
   initHeroStatsCounters?: () => void;
 }
 
-/** Re-run scroll reveal + homepage hero counters after client-side route changes. */
+/** Re-run scroll reveal after client-side route changes (home-runtime owns first paint). */
 export function ScrollRevealInit() {
   const pathname = usePathname();
 
   useEffect(() => {
-    let cancelled = false;
-    let attempts = 0;
-
-    const run = () => {
-      if (cancelled) return;
-      const w = window as WindowWithClientRuntime;
-      if (typeof w.initScrollReveal === "function") {
-        w.initScrollReveal(document);
-        w.initHeroStatsCounters?.();
-        return;
-      }
-      if (attempts < 40) {
-        attempts += 1;
-        window.setTimeout(run, 50);
-      }
-    };
-
-    requestAnimationFrame(() => requestAnimationFrame(run));
-
-    return () => {
-      cancelled = true;
-    };
+    const w = window as WindowWithClientRuntime;
+    if (typeof w.initScrollReveal !== "function") return;
+    w.initScrollReveal(document);
+    w.initHeroStatsCounters?.();
   }, [pathname]);
 
   return null;

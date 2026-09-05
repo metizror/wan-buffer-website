@@ -108,9 +108,9 @@ export function CookiePolicyContent() {
               third-party services include, but are not limited to:
             </p>
             <ul className="pp-list">
-              <li><strong>Google AdWords</strong> — for advertising and conversion tracking</li>
-              <li><strong>Google Analytics</strong> — for website traffic analysis and performance monitoring</li>
-              <li><strong>Facebook Pixel</strong> — for social media advertising and audience insights</li>
+              <li><strong>Google AdWords</strong>, for advertising and conversion tracking</li>
+              <li><strong>Google Analytics</strong>, for website traffic analysis and performance monitoring</li>
+              <li><strong>Facebook Pixel</strong>, for social media advertising and audience insights</li>
             </ul>
             <p>
               These third-party cookies are subject to the respective privacy policies of those services.

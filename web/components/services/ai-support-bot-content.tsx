@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   AI CUSTOMER SUPPORT BOT — unique page design
+   AI CUSTOMER SUPPORT BOT, unique page design
    Hero split + support chat · Topic cards · Features grid · Metrics ·
    Channels · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -48,20 +48,20 @@ const CHAT_MSGS = [
 
 /* ── Support topics ── */
 const TOPICS = [
-  { icon: <PackageIcon />, t: "Order Tracking", s: "Real-time order status, delivery ETA, and carrier tracking — instant answers without human agents.", stat: "45%" },
+  { icon: <PackageIcon />, t: "Order Tracking", s: "Real-time order status, delivery ETA, and carrier tracking, instant answers without human agents.", stat: "45%" },
   { icon: <RefreshIcon />, t: "Returns & Exchanges", s: "Automated return initiation, pickup scheduling, refund tracking, and exchange processing.", stat: "25%" },
-  { icon: <SearchIcon />, t: "Product FAQs", s: "Size guides, material info, compatibility, availability — answers sourced from your product catalogue.", stat: "20%" },
+  { icon: <SearchIcon />, t: "Product FAQs", s: "Size guides, material info, compatibility, availability, answers sourced from your product catalogue.", stat: "20%" },
   { icon: <WalletIcon />, t: "Payment Issues", s: "Failed payment recovery, refund status, invoice downloads, and payment method changes.", stat: "10%" },
 ] as const;
 
 /* ── Features ── */
 const FEATURES = [
-  { icon: <CpuIcon />, t: "Natural Language Understanding", s: "Customers ask in their own words — not menu selections. The bot understands intent, extracts order IDs, product names, and issue types from unstructured messages." },
-  { icon: <DatabaseIcon />, t: "Live Order Data Access", s: "Bot queries your ERP and shipping APIs in real time — no cached responses. Order status, tracking, and inventory are always current." },
-  { icon: <RefreshIcon />, t: "Automated Returns Processing", s: "Bot initiates returns, checks return policy eligibility, schedules pickups, and triggers refund workflows — end to end, no agent needed." },
-  { icon: <UsersIcon />, t: "Smart Agent Handoff", s: "When the bot can't resolve an issue, it transfers the full conversation context to a human agent — no repetition, no lost information." },
+  { icon: <CpuIcon />, t: "Natural Language Understanding", s: "Customers ask in their own words, not menu selections. The bot understands intent, extracts order IDs, product names, and issue types from unstructured messages." },
+  { icon: <DatabaseIcon />, t: "Live Order Data Access", s: "Bot queries your ERP and shipping APIs in real time, no cached responses. Order status, tracking, and inventory are always current." },
+  { icon: <RefreshIcon />, t: "Automated Returns Processing", s: "Bot initiates returns, checks return policy eligibility, schedules pickups, and triggers refund workflows, end to end, no agent needed." },
+  { icon: <UsersIcon />, t: "Smart Agent Handoff", s: "When the bot can't resolve an issue, it transfers the full conversation context to a human agent, no repetition, no lost information." },
   { icon: <BarChartIcon />, t: "Conversation Analytics", s: "Track resolution rate, CSAT score, handoff rate, top topics, and response time. Identify gaps and train the bot on new patterns." },
-  { icon: <ShieldIcon />, t: "Multilingual Support", s: "Support customers in English, Hindi, Arabic, and 20+ languages. Language detection is automatic — no customer selection needed." },
+  { icon: <ShieldIcon />, t: "Multilingual Support", s: "Support customers in English, Hindi, Arabic, and 20+ languages. Language detection is automatic, no customer selection needed." },
 ] as const;
 
 /* ── Metrics ── */
@@ -83,8 +83,8 @@ const CHANNELS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "How does the bot handle order tracking?", a: "The bot extracts the order ID from the customer's message, queries your ERP and shipping carrier APIs in real time, and returns the current status, tracking link, and estimated delivery time — all within seconds." },
-  { q: "Can the bot process returns automatically?", a: "Yes. The bot checks return eligibility against your policy, initiates the return in your ERP, schedules a pickup with the carrier, and sends confirmation to the customer — fully automated for eligible returns." },
+  { q: "How does the bot handle order tracking?", a: "The bot extracts the order ID from the customer's message, queries your ERP and shipping carrier APIs in real time, and returns the current status, tracking link, and estimated delivery time, all within seconds." },
+  { q: "Can the bot process returns automatically?", a: "Yes. The bot checks return eligibility against your policy, initiates the return in your ERP, schedules a pickup with the carrier, and sends confirmation to the customer, fully automated for eligible returns." },
   { q: "What happens when the bot can't answer?", a: "Smart handoff transfers the full conversation history, customer details, and issue context to a human agent. The customer never has to repeat themselves. Handoff triggers are configurable." },
   { q: "Which platforms does the bot work on?", a: "Website widget, WhatsApp Business API, Instagram DM, Facebook Messenger, email, and Shopify Chat. We deploy to whichever channels your customers use most." },
   { q: "Does the bot support multiple languages?", a: "Yes. 20+ languages with automatic detection. The bot responds in the customer's language without requiring them to select one. Hindi, English, Arabic, French, and more." },
@@ -96,7 +96,7 @@ export function AiSupportBotContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + support chat right ═══ */}
+      {/* ═══ HERO: text left + support chat right ═══ */}
       <section className="cs-hero">
         <div className="cs-hero-glow cs-hero-glow-1" aria-hidden="true" />
         <div className="cs-hero-glow cs-hero-glow-2" aria-hidden="true" />
@@ -111,7 +111,7 @@ export function AiSupportBotContent() {
               <span className="acc">Instant. Accurate. 24/7.</span>
             </h1>
             <p className="cs-hero-sub rev">
-              Automated order tracking, returns processing, FAQ resolution, and live agent handoff — <strong>reduce support tickets by 70%</strong> while improving customer satisfaction.
+              Automated order tracking, returns processing, FAQ resolution, and live agent handoff, <strong>reduce support tickets by 70%</strong> while improving customer satisfaction.
             </p>
             <div className="cs-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -243,10 +243,10 @@ export function AiSupportBotContent() {
                 <div className="oi-closer-insight-stat">80%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of customer support chatbots frustrate users more than they help.</strong>
-                  Source: Forrester, 2024. The cause is bots that can only handle FAQ lookups — not bots connected to real order data, returns systems, and live agent handoff.
+                  Source: Forrester, 2024. The cause is bots that can only handle FAQ lookups, not bots connected to real order data, returns systems, and live agent handoff.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer support bot connects to your actual ERP and shipping data — resolving issues, not just answering questions.</p>
+              <p>That&apos;s why every Wan Buffer support bot connects to your actual ERP and shipping data, resolving issues, not just answering questions.</p>
             </div>
           </div>
 
@@ -257,25 +257,25 @@ export function AiSupportBotContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><DatabaseIcon /></div>
                 <div className="oi-closer-commit-t">Connected to real data</div>
-                <p className="oi-closer-commit-b">Bot queries live ERP and shipping APIs. Order status, tracking, and inventory are always current — not cached or pre-loaded.</p>
+                <p className="oi-closer-commit-b">Bot queries live ERP and shipping APIs. Order status, tracking, and inventory are always current, not cached or pre-loaded.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed resolution targets</div>
-                <p className="oi-closer-commit-b">Auto-resolution rate, CSAT score, and handoff rate are defined before deployment. If we miss targets, we keep improving — at our cost.</p>
+                <p className="oi-closer-commit-b">Auto-resolution rate, CSAT score, and handoff rate are defined before deployment. If we miss targets, we keep improving, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Smart agent handoff</div>
-                <p className="oi-closer-commit-b">When the bot can&apos;t help, it hands off with full context — conversation history, customer profile, and issue details. No customer repetition.</p>
+                <p className="oi-closer-commit-b">When the bot can&apos;t help, it hands off with full context, conversation history, customer profile, and issue details. No customer repetition.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><HeartIcon /></div>
                 <div className="oi-closer-commit-t">Senior AI engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who builds your bot deploys, monitors, and improves it — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who builds your bot deploys, monitors, and improves it, named in the contract.</p>
               </div>
             </div>
           </div>

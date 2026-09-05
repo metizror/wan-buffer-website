@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   AI GOVERNANCE & ETHICS — unique page design
+   AI GOVERNANCE & ETHICS, unique page design
    Centered hero + trust badge · 3-col pillar cards · Vertical rail
    framework · Compliance badge grid · Do/Don't checklist ·
    Closer · Support
@@ -47,18 +47,18 @@ const PRINCIPLES = [
 
 /* ── Pillars ── */
 const PILLARS = [
-  { icon: <EyeIcon />, num: "01", t: "Explainability & Transparency", s: "Every AI decision comes with a reasoning trail. Feature importance scores, confidence intervals, and decision paths are logged and surfaced — so stakeholders understand why the AI acted, not just what it did.", points: ["Feature importance for every prediction", "Confidence scores on all outputs", "Decision audit trails accessible to non-technical users", "Model card documentation for every deployed model"] },
+  { icon: <EyeIcon />, num: "01", t: "Explainability & Transparency", s: "Every AI decision comes with a reasoning trail. Feature importance scores, confidence intervals, and decision paths are logged and surfaced, so stakeholders understand why the AI acted, not just what it did.", points: ["Feature importance for every prediction", "Confidence scores on all outputs", "Decision audit trails accessible to non-technical users", "Model card documentation for every deployed model"] },
   { icon: <ShieldIcon />, num: "02", t: "Bias Detection & Fairness", s: "We test every model for demographic, statistical, and operational bias before deployment. Continuous monitoring catches drift post-launch. Fairness metrics are pre-agreed and tracked weekly.", points: ["Pre-deployment bias audits across protected attributes", "Fairness metrics defined before training begins", "Continuous post-deployment monitoring for distributional drift", "Automated alerts when fairness thresholds are breached"] },
   { icon: <TargetIcon />, num: "03", t: "Risk Management & Controls", s: "AI systems operate within defined boundaries. Human-in-the-loop checkpoints, confidence thresholds, and automated kill switches ensure high-risk decisions always involve human oversight.", points: ["Confidence-gated automation with human escalation", "Automated rollback triggers for anomalous outputs", "Risk classification for every AI use case", "Incident response playbooks for AI failures"] },
 ] as const;
 
 /* ── Framework sections (vertical rail) ── */
 const FRAMEWORK = [
-  { icon: <SearchIcon />, t: "Assessment & Classification", b: "Every AI use case is classified by risk level — low, medium, high, or critical — before development begins. Classification drives the governance controls applied: low-risk systems get lighter oversight, critical systems get full human-in-the-loop governance.", deliverables: ["Risk classification matrix", "Use-case registry", "Control mapping"] },
+  { icon: <SearchIcon />, t: "Assessment & Classification", b: "Every AI use case is classified by risk level, low, medium, high, or critical, before development begins. Classification drives the governance controls applied: low-risk systems get lighter oversight, critical systems get full human-in-the-loop governance.", deliverables: ["Risk classification matrix", "Use-case registry", "Control mapping"] },
   { icon: <DatabaseIcon />, t: "Data Governance & Privacy", b: "We audit every data source for quality, consent, and compliance. PII is identified, tagged, and handled according to GDPR, CCPA, and industry-specific regulations. Data lineage is tracked from source to model output.", deliverables: ["Data lineage map", "PII inventory", "Consent audit"] },
-  { icon: <CpuIcon />, t: "Model Development Standards", b: "Every model follows our development standard — version control, reproducible training, documented hyperparameters, and mandatory evaluation against holdout data. No model reaches production without passing our quality gates.", deliverables: ["Model cards", "Evaluation reports", "Version registry"] },
+  { icon: <CpuIcon />, t: "Model Development Standards", b: "Every model follows our development standard, version control, reproducible training, documented hyperparameters, and mandatory evaluation against holdout data. No model reaches production without passing our quality gates.", deliverables: ["Model cards", "Evaluation reports", "Version registry"] },
   { icon: <MonitorIcon />, t: "Monitoring & Incident Response", b: "Post-deployment, we monitor accuracy, fairness, latency, and drift continuously. Automated alerts trigger when metrics deviate from baselines. Every incident is logged, investigated, and resolved with a published root-cause analysis.", deliverables: ["Monitoring dashboard", "Alert pipelines", "Incident playbook"] },
-  { icon: <RefreshIcon />, t: "Continuous Review & Improvement", b: "Governance is not a one-time audit. We conduct quarterly reviews of all deployed AI systems — reassessing risk levels, revalidating fairness metrics, and updating controls as regulations and business requirements evolve.", deliverables: ["Quarterly review reports", "Updated risk registers", "Compliance evidence packs"] },
+  { icon: <RefreshIcon />, t: "Continuous Review & Improvement", b: "Governance is not a one-time audit. We conduct quarterly reviews of all deployed AI systems, reassessing risk levels, revalidating fairness metrics, and updating controls as regulations and business requirements evolve.", deliverables: ["Quarterly review reports", "Updated risk registers", "Compliance evidence packs"] },
 ] as const;
 
 /* ── Compliance standards ── */
@@ -89,7 +89,7 @@ const DONTS = [
   "Allow unsupervised AI actions on financial transactions",
   "Skip data consent audits for training data sources",
   "Treat governance as a one-time checkbox exercise",
-  "Rely on accuracy alone — fairness metrics matter equally",
+  "Rely on accuracy alone, fairness metrics matter equally",
 ] as const;
 
 /* ── Component ── */
@@ -97,7 +97,7 @@ export function AiGovernanceContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered with trust badge ═══ */}
+      {/* ═══ HERO: centered with trust badge ═══ */}
       <section className="ag-hero">
         <div className="ag-hero-glow ag-hero-glow-1" aria-hidden="true" />
         <div className="ag-hero-glow ag-hero-glow-2" aria-hidden="true" />
@@ -111,7 +111,7 @@ export function AiGovernanceContent() {
             <span className="acc">&amp; Ethics.</span>
           </h1>
           <p className="ag-hero-sub rev">
-            Deploy AI responsibly. Bias auditing, explainability, compliance automation, and ethical guidelines — <strong>built into every model, pipeline, and agent</strong> we deliver. Not bolted on after.
+            Deploy AI responsibly. Bias auditing, explainability, compliance automation, and ethical guidelines, <strong>built into every model, pipeline, and agent</strong> we deliver. Not bolted on after.
           </p>
           <div className="ag-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -133,7 +133,7 @@ export function AiGovernanceContent() {
         </div>
       </section>
 
-      {/* ═══ PILLARS — 3 tall column cards ═══ */}
+      {/* ═══ PILLARS: 3 tall column cards ═══ */}
       <section className="ag-pillars" id="pillars">
         <div className="ag-pillars-inner">
           <div className="ag-pillars-hdr rev">
@@ -162,13 +162,13 @@ export function AiGovernanceContent() {
         </div>
       </section>
 
-      {/* ═══ FRAMEWORK — vertical rail ═══ */}
+      {/* ═══ FRAMEWORK: vertical rail ═══ */}
       <section className="ag-fw" id="framework">
         <div className="ag-fw-inner">
           <div className="ag-fw-hdr rev">
             <div className="eyebrow lt">Governance framework</div>
             <h2>Five-stage governance<br /><span>lifecycle.</span></h2>
-            <p>Every AI system we deploy passes through this framework — from initial risk classification to continuous post-deployment review. Each stage is documented, auditable, and aligned with international standards.</p>
+            <p>Every AI system we deploy passes through this framework, from initial risk classification to continuous post-deployment review. Each stage is documented, auditable, and aligned with international standards.</p>
           </div>
           <div className="ag-fw-rail">
             {FRAMEWORK.map((f, i) => (
@@ -206,7 +206,7 @@ export function AiGovernanceContent() {
         </div>
       </section>
 
-      {/* ═══ COMPLIANCE — standard badge grid ═══ */}
+      {/* ═══ COMPLIANCE: standard badge grid ═══ */}
       <section className="ag-comp" id="compliance">
         <div className="ag-comp-inner">
           <div className="ag-comp-hdr rev">
@@ -267,10 +267,10 @@ export function AiGovernanceContent() {
                 <div className="oi-closer-insight-stat">60%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of enterprises have no formal AI governance framework.</strong>
-                  Source: MIT Sloan, 2024. Without governance, AI systems accumulate risk silently — biased decisions, compliance violations, and unexplainable outputs that erode trust and invite regulatory action.
+                  Source: MIT Sloan, 2024. Without governance, AI systems accumulate risk silently, biased decisions, compliance violations, and unexplainable outputs that erode trust and invite regulatory action.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer AI deployment includes governance by default — not as an add-on. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer AI deployment includes governance by default, not as an add-on. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -281,7 +281,7 @@ export function AiGovernanceContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><EyeIcon /></div>
                 <div className="oi-closer-commit-t">Explainability by default</div>
-                <p className="oi-closer-commit-b">Every model ships with reasoning trails, feature importance, and confidence scores. No black boxes — ever. If we can&apos;t explain it, we don&apos;t deploy it.</p>
+                <p className="oi-closer-commit-b">Every model ships with reasoning trails, feature importance, and confidence scores. No black boxes, ever. If we can&apos;t explain it, we don&apos;t deploy it.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
@@ -299,7 +299,7 @@ export function AiGovernanceContent() {
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior governance leads</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The governance specialists who design your framework are the ones who audit, monitor, and report — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The governance specialists who design your framework are the ones who audit, monitor, and report, named in the contract.</p>
               </div>
             </div>
           </div>

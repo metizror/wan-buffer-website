@@ -76,7 +76,7 @@ export const WAN_BUFFER_EVENTS: WanBufferEvent[] = [
     title: "The Plugi Success: Future-Proofing Your Email Verification Strategy",
     pageHeading: "Talk Show – The Plugi Success Event",
     excerpt:
-      "Second edition of the Plugi Success talk show—future-proofing email verification with Odoo and Plugi.",
+      "Second edition of the Plugi Success talk show: future-proofing email verification with Odoo and Plugi.",
     dateLabel: "Sat, 12 Oct 2024",
     sortDate: "2024-10-12",
     time: "11:00 am (Asia/Kolkata)",
@@ -134,7 +134,7 @@ export const WAN_BUFFER_EVENTS: WanBufferEvent[] = [
       "Odoo 17 CRM (Customer Relationship Management) Demo | Odoo 17 Enterprise Edition & Community Edition",
     pageHeading: "Odoo 17 CRM Enterprise Edition & Community Edition",
     excerpt:
-      "Live Odoo CRM demo—streamlining customer relationships ahead of Tech Expo Gujarat 2024.",
+      "Live Odoo CRM demo: streamlining customer relationships ahead of Tech Expo Gujarat 2024.",
     dateLabel: "Sat, 28 Sep 2024",
     sortDate: "2024-09-28",
     time: "11:00 am (UTC+5.5)",
@@ -256,7 +256,7 @@ export const WAN_BUFFER_EVENTS: WanBufferEvent[] = [
     title: "Meet us at PharmaTech Expo & LabTech Expo 2024 in Gandhinagar!",
     pageHeading: "Wan Buffer Services at PharmaTech Expo & LabTech Expo 2024",
     excerpt:
-      "Wan Buffer at PharmaTech & LabTech Expo 2024—pharma machinery, lab tech, and Odoo solutions.",
+      "Wan Buffer at PharmaTech & LabTech Expo 2024: pharma machinery, lab tech, and Odoo solutions.",
     dateLabel: "Thu, 8 Aug – Sat, 10 Aug 2024",
     sortDate: "2024-08-08",
     time: "10:00 am – 6:00 pm (UTC+5.5)",
@@ -321,7 +321,7 @@ export const WAN_BUFFER_EVENTS: WanBufferEvent[] = [
     title: "Odoo Marketing and Sales Workflow Automation for Efficiency and Growth",
     pageHeading: "Odoo Marketing and Sales Workflow Automation",
     excerpt:
-      "Webinar on Odoo marketing and sales workflow automation—efficiency, demos, and Q&A.",
+      "Webinar on Odoo marketing and sales workflow automation: efficiency, demos, and Q&A.",
     dateLabel: "Sat, 20 Jul 2024",
     sortDate: "2024-07-20",
     time: "11:00 am – 12:00 pm (UTC+5.5)",
@@ -382,7 +382,7 @@ export const WAN_BUFFER_EVENTS: WanBufferEvent[] = [
     title: "AI-Powered Email Marketing: with ChatGPT on Odoo",
     pageHeading: "Unlock the Future of Email Marketing with AI and Odoo",
     excerpt:
-      "Unlock AI-powered email marketing—ChatGPT and Odoo for personalised campaigns and automation.",
+      "Unlock AI-powered email marketing: ChatGPT and Odoo for personalised campaigns and automation.",
     dateLabel: "Sat, 22 Jun 2024",
     sortDate: "2024-06-22",
     time: "12:00 pm – 1:00 pm (UTC+5.5)",

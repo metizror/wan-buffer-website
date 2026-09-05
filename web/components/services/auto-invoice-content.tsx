@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   AUTOMATED INVOICE PROCESSING — unique page design
+   AUTOMATED INVOICE PROCESSING, unique page design
    Centered hero + invoice doc mockup · Step strip · Gradient-top
    capability cards · Comparison table · Dark stat row ·
    Closer · Support
@@ -60,9 +60,9 @@ const PIPELINE = [
 
 /* ── Capabilities ── */
 const CAPABILITIES = [
-  { icon: <SearchIcon />, t: "AI-Powered OCR", s: "Extract vendor name, invoice number, line items, amounts, tax, and dates from any format — PDF, scan, photo, or email attachment. No templates needed. The AI learns your vendor formats automatically.", gradient: "ai" as const },
-  { icon: <DatabaseIcon />, t: "Intelligent 3-Way Match", s: "Automatically match invoices against purchase orders and goods receipts. Discrepancies are flagged with specific mismatch details — quantity, price, or delivery date — and routed for resolution.", gradient: "purple" as const },
-  { icon: <CheckCircleIcon />, t: "Smart Approval Routing", s: "Invoices route to the right approver based on amount, department, vendor, and exception type. Approval hierarchies mirror your ERP permission model — no configuration drift.", gradient: "ai" as const },
+  { icon: <SearchIcon />, t: "AI-Powered OCR", s: "Extract vendor name, invoice number, line items, amounts, tax, and dates from any format. PDF, scan, photo, or email attachment. No templates needed. The AI learns your vendor formats automatically.", gradient: "ai" as const },
+  { icon: <DatabaseIcon />, t: "Intelligent 3-Way Match", s: "Automatically match invoices against purchase orders and goods receipts. Discrepancies are flagged with specific mismatch details, quantity, price, or delivery date, and routed for resolution.", gradient: "purple" as const },
+  { icon: <CheckCircleIcon />, t: "Smart Approval Routing", s: "Invoices route to the right approver based on amount, department, vendor, and exception type. Approval hierarchies mirror your ERP permission model, no configuration drift.", gradient: "ai" as const },
   { icon: <ShieldIcon />, t: "Fraud Detection", s: "ML models flag duplicate invoices, suspicious amounts, unusual vendors, and payment pattern anomalies before they reach approval. Every flag includes reasoning for the reviewer.", gradient: "red" as const },
   { icon: <WalletIcon />, t: "Auto Payment Scheduling", s: "Approved invoices automatically schedule for payment based on vendor terms, early-payment discounts, and cash flow optimisation rules. ERP journal entries post without manual intervention.", gradient: "purple" as const },
   { icon: <MonitorIcon />, t: "Real-Time AP Dashboard", s: "Live visibility into invoice status, approval bottlenecks, ageing analysis, and cash flow impact. Drill down from summary to individual invoice with one click.", gradient: "red" as const },
@@ -103,7 +103,7 @@ export function AutoInvoiceContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered + invoice mockup ═══ */}
+      {/* ═══ HERO: centered + invoice mockup ═══ */}
       <section className="iv-hero">
         <div className="iv-hero-glow iv-hero-glow-1" aria-hidden="true" />
         <div className="iv-hero-glow iv-hero-glow-2" aria-hidden="true" />
@@ -117,7 +117,7 @@ export function AutoInvoiceContent() {
             <span className="acc">Processing.</span>
           </h1>
           <p className="iv-hero-sub rev">
-            AI-powered OCR extracts, validates, matches, and routes invoices for approval — <strong>in seconds, not days.</strong> From email attachment to ERP journal entry, fully automated.
+            AI-powered OCR extracts, validates, matches, and routes invoices for approval, <strong>in seconds, not days.</strong> From email attachment to ERP journal entry, fully automated.
           </p>
           <div className="iv-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -162,13 +162,13 @@ export function AutoInvoiceContent() {
         </div>
       </section>
 
-      {/* ═══ CAPABILITIES — gradient-top cards ═══ */}
+      {/* ═══ CAPABILITIES: gradient-top cards ═══ */}
       <section className="iv-caps" id="capabilities">
         <div className="iv-caps-inner">
           <div className="iv-caps-hdr rev">
             <div className="eyebrow">Core capabilities</div>
             <h2>Six AI engines.<br /><span>One invoice pipeline.</span></h2>
-            <p>Every capability is purpose-built for accounts payable — not generic document processing. Models train on your vendor formats, learn your approval rules, and integrate directly with your ERP ledger.</p>
+            <p>Every capability is purpose-built for accounts payable, not generic document processing. Models train on your vendor formats, learn your approval rules, and integrate directly with your ERP ledger.</p>
           </div>
           <div className="iv-caps-grid rev">
             {CAPABILITIES.map((c) => (
@@ -182,7 +182,7 @@ export function AutoInvoiceContent() {
         </div>
       </section>
 
-      {/* ═══ BEFORE / AFTER — comparison table ═══ */}
+      {/* ═══ BEFORE / AFTER: comparison table ═══ */}
       <section className="iv-compare" id="comparison">
         <div className="iv-compare-inner">
           <div className="iv-compare-hdr rev">
@@ -206,7 +206,7 @@ export function AutoInvoiceContent() {
         </div>
       </section>
 
-      {/* ═══ RESULTS — dark stat row ═══ */}
+      {/* ═══ RESULTS: dark stat row ═══ */}
       <section className="iv-stats">
         <div className="iv-stats-inner rev">
           {STATS.map((s) => (
@@ -247,10 +247,10 @@ export function AutoInvoiceContent() {
                 <div className="oi-closer-insight-stat">62%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of invoices still require manual intervention after &quot;automation.&quot;</strong>
-                  Source: Ardent Partners, 2024. The gap is exception handling — most AP tools choke on non-standard formats, partial matches, and multi-currency invoices.
+                  Source: Ardent Partners, 2024. The gap is exception handling, most AP tools choke on non-standard formats, partial matches, and multi-currency invoices.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer AP deployment is engineered for exceptions first — not just the happy path. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer AP deployment is engineered for exceptions first, not just the happy path. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -261,25 +261,25 @@ export function AutoInvoiceContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><SearchIcon /></div>
                 <div className="oi-closer-commit-t">Template-free extraction</div>
-                <p className="oi-closer-commit-b">Our AI learns your vendor formats automatically — no manual template setup. New vendors are handled from invoice one, not after manual training.</p>
+                <p className="oi-closer-commit-b">Our AI learns your vendor formats automatically, no manual template setup. New vendors are handled from invoice one, not after manual training.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed accuracy targets</div>
-                <p className="oi-closer-commit-b">Extraction accuracy, touchless rate, and processing speed are defined before development. If we miss targets, we keep iterating — at our cost.</p>
+                <p className="oi-closer-commit-b">Extraction accuracy, touchless rate, and processing speed are defined before development. If we miss targets, we keep iterating, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
                 <div className="oi-closer-commit-t">Fraud detection built in</div>
-                <p className="oi-closer-commit-b">Duplicate detection, amount anomaly flagging, and vendor verification run on every invoice — automatically, before it reaches an approver.</p>
+                <p className="oi-closer-commit-b">Duplicate detection, amount anomaly flagging, and vendor verification run on every invoice, automatically, before it reaches an approver.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineers who design your AP pipeline are the ones who build, deploy, and support it — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineers who design your AP pipeline are the ones who build, deploy, and support it, named in the contract.</p>
               </div>
             </div>
           </div>
@@ -322,7 +322,7 @@ export function AutoInvoiceContent() {
               <div className="oi-supp-icon-v2"><PhoneCallIcon /></div>
               <div className="oi-supp-label">Phone · 24 &times; 7</div>
               <a className="oi-supp-title-v2" href="tel:+919904122699">+91 99041 22699</a>
-              <p className="oi-supp-body-v2">Pipeline failures or extraction incidents. Answered by a senior engineer — not a call centre.</p>
+              <p className="oi-supp-body-v2">Pipeline failures or extraction incidents. Answered by a senior engineer, not a call centre.</p>
               <a className="oi-supp-cta-v2" href="tel:+919904122699">Call now <ArrowRightIcon /></a>
             </div>
             <div className="oi-supp-card">

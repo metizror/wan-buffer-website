@@ -1,4 +1,4 @@
-/* Odoo training — content from odoo-training.php; layout uses shared oi-* patterns (no extra marketing sections). */
+/* Odoo training: content from odoo-training.php; layout uses shared oi-* patterns (no extra marketing sections). */
 
 import type { ReactNode } from "react";
 import Image from "next/image";

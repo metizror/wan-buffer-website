@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { RetainerModelContent } from "@/components/services/retainer-model-content";
 
 export const metadata: Metadata = {
-  title: "Retainer Model | Ongoing ERP Support, AI Optimisation & Priority SLA — Wan Buffer",
+  title: "Retainer Model | Ongoing ERP Support, AI Optimisation & Priority SLA | Wan Buffer",
   description:
     "Ongoing ERP support and AI optimisation with priority SLA, quarterly system health audits, proactive Odoo upgrade planning, and flexible monthly hours. A strategic long-term partnership for post-implementation and platform evolution.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Retainer Model — Ongoing ERP Support, AI Optimisation & Priority SLA | Wan Buffer",
+    title: "Retainer Model: Ongoing ERP Support, AI Optimisation & Priority SLA | Wan Buffer",
     description:
-      "Ongoing ERP support with priority SLA, quarterly health audits, and proactive upgrade planning — a strategic long-term partnership.",
+      "Ongoing ERP support with priority SLA, quarterly health audits, and proactive upgrade planning, a strategic long-term partnership.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/retainer-model" },

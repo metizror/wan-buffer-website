@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   STEEL & METAL FABRICATION — unique page design
+   STEEL & METAL FABRICATION, unique page design
    Hero split + heat tracker mock · Operations cards · Alternating feature
    rows · Dotted process flow · Multi-facility section ·
    Platforms · FAQ · Closer · Support
@@ -54,18 +54,18 @@ const HEAT_LOTS = [
 const OPERATIONS = [
   { icon: <ShieldIcon />, t: "Heat Traceability", s: "End-to-end heat number tracking from mill test certificate through cutting, welding, and assembly to final dispatch. Every piece traces back to its source plate, coil, or bar.", color: "ai" as const },
   { icon: <GridIcon />, t: "BOM & Nesting", s: "Multi-level fabrication BOMs with weight-based costing, cut-list generation, and nesting optimisation that minimises scrap on plates, coils, and bars.", color: "green" as const },
-  { icon: <SettingsIcon />, t: "Production Scheduling", s: "Job-shop scheduling across cutting, bending, welding, machining, and surface treatment — with real-time capacity tracking and bottleneck visibility per work centre.", color: "purple" as const },
-  { icon: <BarChartIcon />, t: "Weight & Cost Tracking", s: "Automatic weight calculation from dimensions and grade density. Real-time material cost tracking per job, per heat, and per piece — with scrap valuation built in.", color: "red" as const },
+  { icon: <SettingsIcon />, t: "Production Scheduling", s: "Job-shop scheduling across cutting, bending, welding, machining, and surface treatment, with real-time capacity tracking and bottleneck visibility per work centre.", color: "purple" as const },
+  { icon: <BarChartIcon />, t: "Weight & Cost Tracking", s: "Automatic weight calculation from dimensions and grade density. Real-time material cost tracking per job, per heat, and per piece, with scrap valuation built in.", color: "red" as const },
 ] as const;
 
 /* ── Features ── */
 const FEATURES = [
-  { num: "01", icon: <ShieldIcon />, t: "Heat Number Tracking", s: "Every plate, coil, pipe, and bar is tracked by heat number from goods receipt to final dispatch. Mill test certificates (MTCs) are linked to inventory and flow through to cut pieces, weldments, and assemblies — full traceability for EN 10204, ASME, and ISO audits." },
+  { num: "01", icon: <ShieldIcon />, t: "Heat Number Tracking", s: "Every plate, coil, pipe, and bar is tracked by heat number from goods receipt to final dispatch. Mill test certificates (MTCs) are linked to inventory and flow through to cut pieces, weldments, and assemblies, full traceability for EN 10204, ASME, and ISO audits." },
   { num: "02", icon: <GridIcon />, t: "Multi-Level Fabrication BOM", s: "Define assembly BOMs with sub-assemblies, weldments, bought-out components, and consumables. Weight-based and length-based material quantities calculate automatically from drawings. Revision control and engineering change orders built in." },
-  { num: "03", icon: <SettingsIcon />, t: "Production Scheduling & Job Tracking", s: "Drag-and-drop Gantt scheduling across cutting, bending, rolling, welding, machining, and painting work centres. Real-time progress tracking per job — from raw material issue to final assembly and dispatch." },
+  { num: "03", icon: <SettingsIcon />, t: "Production Scheduling & Job Tracking", s: "Drag-and-drop Gantt scheduling across cutting, bending, rolling, welding, machining, and painting work centres. Real-time progress tracking per job, from raw material issue to final assembly and dispatch." },
   { num: "04", icon: <PackageIcon />, t: "Coil, Plate & Bar Inventory", s: "Manage stock by heat, grade, thickness, width, length, and weight. Automatic remnant tracking after cutting operations. Multi-location inventory with inter-warehouse transfers and minimum stock alerts by grade." },
-  { num: "05", icon: <TargetIcon />, t: "Cut Optimisation & Nesting", s: "Nesting algorithms that maximise material utilisation on plates and coils. Cut-list generation from BOMs with automatic assignment of stock plates by grade and thickness — reducing scrap by up to 15%." },
-  { num: "06", icon: <EyeIcon />, t: "Quality & Inspection Management", s: "Stage-gate inspections at incoming, in-process, and final stages. Dimensional checks, weld inspection (NDT/RT/UT), surface treatment verification — all linked to heat numbers with digital sign-off and non-conformance workflows." },
+  { num: "05", icon: <TargetIcon />, t: "Cut Optimisation & Nesting", s: "Nesting algorithms that maximise material utilisation on plates and coils. Cut-list generation from BOMs with automatic assignment of stock plates by grade and thickness, reducing scrap by up to 15%." },
+  { num: "06", icon: <EyeIcon />, t: "Quality & Inspection Management", s: "Stage-gate inspections at incoming, in-process, and final stages. Dimensional checks, weld inspection (NDT/RT/UT), surface treatment verification, all linked to heat numbers with digital sign-off and non-conformance workflows." },
 ] as const;
 
 /* ── Process flow ── */
@@ -96,9 +96,9 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "Can you track heat numbers through cutting and welding operations?", a: "Yes. Every piece cut from a plate, coil, or bar inherits the original heat number and MTC. When pieces are welded into assemblies, the system maintains a full genealogy — which heats went into which weldment. This traceability is maintained through to final dispatch and is audit-ready for EN 10204, ASME, and ISO requirements." },
-  { q: "How do you handle weight-based costing for steel?", a: "Material quantities in BOMs are calculated from dimensions (length, width, thickness) and grade-specific density. Actual weight is captured at goods receipt and after cutting. Scrap from cutting operations is valued separately. The result is accurate per-job and per-piece costing based on actual material consumption — not estimates." },
-  { q: "Can you manage plate remnants and offcuts?", a: "Yes. When a plate is cut, the system automatically creates remnant inventory records with the remaining dimensions, weight, and original heat number. Remnants are prioritised in the nesting algorithm for future jobs before new plates are issued — reducing scrap and material cost." },
+  { q: "Can you track heat numbers through cutting and welding operations?", a: "Yes. Every piece cut from a plate, coil, or bar inherits the original heat number and MTC. When pieces are welded into assemblies, the system maintains a full genealogy, which heats went into which weldment. This traceability is maintained through to final dispatch and is audit-ready for EN 10204, ASME, and ISO requirements." },
+  { q: "How do you handle weight-based costing for steel?", a: "Material quantities in BOMs are calculated from dimensions (length, width, thickness) and grade-specific density. Actual weight is captured at goods receipt and after cutting. Scrap from cutting operations is valued separately. The result is accurate per-job and per-piece costing based on actual material consumption, not estimates." },
+  { q: "Can you manage plate remnants and offcuts?", a: "Yes. When a plate is cut, the system automatically creates remnant inventory records with the remaining dimensions, weight, and original heat number. Remnants are prioritised in the nesting algorithm for future jobs before new plates are issued, reducing scrap and material cost." },
   { q: "Do you support both structural steel and sheet metal fabrication?", a: "Yes. We configure for structural steel (beams, columns, trusses, plate girders), sheet metal (enclosures, ducts, tanks), pressure vessel fabrication, pipe spool fabrication, and general CNC machining. Each type gets its own routing, quality protocols, and BOM structure." },
   { q: "Can you integrate with nesting and CAD software?", a: "Yes. We integrate with nesting tools like SigmaNEST, ProNest, and Lantek, as well as CAD systems like AutoCAD, SolidWorks, and Tekla. BOM data flows from drawings into the ERP, and cut-lists flow from the ERP into nesting software." },
   { q: "How long does a steel fabrication ERP implementation take?", a: "Single-workshop setup with heat tracking and basic BOM takes 4–6 weeks. Full fabrication ERP with nesting integration, quality management, and multi-facility takes 10–16 weeks. Complex project-based fabrication with site erection tracking takes 14–22 weeks." },
@@ -109,7 +109,7 @@ export function SteelMetalContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + heat tracker right ═══ */}
+      {/* ═══ HERO: text left + heat tracker right ═══ */}
       <section className="sm-hero">
         <div className="sm-hero-glow sm-hero-glow-1" aria-hidden="true" />
         <div className="sm-hero-glow sm-hero-glow-2" aria-hidden="true" />
@@ -124,7 +124,7 @@ export function SteelMetalContent() {
               <span className="acc">Every heat. Every piece. Traced.</span>
             </h1>
             <p className="sm-hero-sub rev">
-              Heat number tracking, multi-level fabrication BOMs, production scheduling, cut optimisation, and full quality traceability — <strong>integrated into your ERP.</strong>
+              Heat number tracking, multi-level fabrication BOMs, production scheduling, cut optimisation, and full quality traceability, <strong>integrated into your ERP.</strong>
             </p>
             <div className="sm-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -137,7 +137,7 @@ export function SteelMetalContent() {
 
           {/* Heat tracker mockup */}
           <div className="sm-heats rev">
-            <div className="sm-heats-title">Heat Inventory — Live Tracker</div>
+            <div className="sm-heats-title">Heat Inventory: Live Tracker</div>
             <div className="sm-heats-grid">
               {HEAT_LOTS.map((h) => (
                 <div key={h.heat} className={`sm-heat sm-heat-${h.status}`}>
@@ -159,7 +159,7 @@ export function SteelMetalContent() {
         </div>
       </section>
 
-      {/* ═══ OPERATIONS — 4 cards ═══ */}
+      {/* ═══ OPERATIONS: 4 cards ═══ */}
       <section className="sm-ops">
         <div className="sm-ops-inner">
           <div className="sm-ops-hdr rev">
@@ -178,7 +178,7 @@ export function SteelMetalContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — alternating rows ═══ */}
+      {/* ═══ FEATURES: alternating rows ═══ */}
       <section className="sm-feat" id="features">
         <div className="sm-feat-inner">
           <div className="sm-feat-hdr rev">
@@ -200,7 +200,7 @@ export function SteelMetalContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="sm-proc" id="process">
         <div className="sm-proc-inner">
           <div className="sm-proc-hdr rev">
@@ -235,7 +235,7 @@ export function SteelMetalContent() {
         </div>
       </section>
 
-      {/* ═══ MULTI-FACILITY — split ═══ */}
+      {/* ═══ MULTI-FACILITY: split ═══ */}
       <section className="sm-multi" id="multi-facility">
         <div className="sm-multi-inner">
           <div className="sm-multi-hdr rev">
@@ -246,7 +246,7 @@ export function SteelMetalContent() {
             <div className="sm-multi-left">
               <div className="sm-multi-big-n">3+</div>
               <div className="sm-multi-big-l">Fabrication facilities managed from one ERP</div>
-              <p className="sm-multi-big-s">Inter-facility material transfers, centralised heat tracking, and site-specific production scheduling — all orchestrated from a single system with real-time visibility across every workshop, yard, and project site.</p>
+              <p className="sm-multi-big-s">Inter-facility material transfers, centralised heat tracking, and site-specific production scheduling, all orchestrated from a single system with real-time visibility across every workshop, yard, and project site.</p>
             </div>
             <div className="sm-multi-right">
               {FACILITIES.map((fac) => (
@@ -308,10 +308,10 @@ export function SteelMetalContent() {
                 <div className="oi-closer-insight-stat">68%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of fabricators still track heats on paper or spreadsheets.</strong>
-                  Source: FMA, 2024. The result is failed audits, untraceable material, scrap that cannot be valued, and zero visibility into per-job material cost — problems that compound as order complexity grows.
+                  Source: FMA, 2024. The result is failed audits, untraceable material, scrap that cannot be valued, and zero visibility into per-job material cost, problems that compound as order complexity grows.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer fabrication deployment covers the full material lifecycle — not just job costing. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer fabrication deployment covers the full material lifecycle, not just job costing. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -321,26 +321,26 @@ export function SteelMetalContent() {
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
-                <div className="oi-closer-commit-t">Full heat traceability — receipt to dispatch</div>
-                <p className="oi-closer-commit-b">Every piece in your shop traces back to its source plate, coil, or bar — with MTC, grade, and heat number linked through every cutting, welding, and assembly operation.</p>
+                <div className="oi-closer-commit-t">Full heat traceability, receipt to dispatch</div>
+                <p className="oi-closer-commit-b">Every piece in your shop traces back to its source plate, coil, or bar, with MTC, grade, and heat number linked through every cutting, welding, and assembly operation.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed scrap &amp; accuracy targets</div>
-                <p className="oi-closer-commit-b">Material utilisation rates, inventory accuracy, and production schedule adherence are defined before go-live. If we miss targets, we keep iterating — at our cost.</p>
+                <p className="oi-closer-commit-b">Material utilisation rates, inventory accuracy, and production schedule adherence are defined before go-live. If we miss targets, we keep iterating, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><GridIcon /></div>
                 <div className="oi-closer-commit-t">Weight-based costing per job &amp; per piece</div>
-                <p className="oi-closer-commit-b">No estimated weights, no flat-rate material costs. Actual weight from goods receipt flows through to cut pieces and assemblies — giving you true per-job profitability.</p>
+                <p className="oi-closer-commit-b">No estimated weights, no flat-rate material costs. Actual weight from goods receipt flows through to cut pieces and assemblies, giving you true per-job profitability.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior fabrication engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who surveys your shop is the one who configures, migrates, trains, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who surveys your shop is the one who configures, migrates, trains, and supports, named in the contract.</p>
               </div>
             </div>
           </div>

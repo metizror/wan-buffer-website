@@ -11,7 +11,7 @@ import { AutoInvoiceContent } from "@/components/services/auto-invoice-content";
 export const metadata: Metadata = {
   title: "Automated Invoice Processing | AI OCR + 3-Way Match | Wan Buffer",
   description:
-    "Automate invoice processing end to end with AI-powered OCR, intelligent data extraction, 3-way matching, and approval routing. Process invoices in seconds — not days. Integrated with Odoo, Zoho, SAP, and QuickBooks.",
+    "Automate invoice processing end to end with AI-powered OCR, intelligent data extraction, 3-way matching, and approval routing. Process invoices in seconds, not days. Integrated with Odoo, Zoho, SAP, and QuickBooks.",
   keywords: [
     "automated invoice processing",
     "AI invoice processing",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Automated Invoice Processing — AI OCR + 3-Way Match | Wan Buffer",
+    title: "Automated Invoice Processing: AI OCR + 3-Way Match | Wan Buffer",
     description:
-      "AI-powered invoice processing that extracts, validates, matches, and routes invoices for approval in seconds — not days.",
+      "AI-powered invoice processing that extracts, validates, matches, and routes invoices for approval in seconds, not days.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/automated-invoice-processing" },

@@ -135,7 +135,7 @@ function normalizeNewUrl(url: string): string {
   try {
     if (u.startsWith("http://") || u.startsWith("https://")) {
       const parsed = new URL(u);
-      // Check if it's a localhost or same-site URL — extract path only
+      // Check if it's a localhost or same-site URL, extract path only
       if (
         parsed.hostname === "localhost" ||
         parsed.hostname === "127.0.0.1" ||

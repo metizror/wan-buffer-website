@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   HIRE ERP DEVELOPERS — dedicated page
+   HIRE ERP DEVELOPERS, dedicated page
    Hero split + talent pool mock · Why hire from us · Roles available ·
    Process flow · Engagement options · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -51,20 +51,20 @@ const TALENT = [
 
 /* ── Why hire from us ── */
 const WHY_US = [
-  { icon: <ShieldIcon />, t: "Pre-Vetted & Tested", s: "Every developer passes a 4-stage vetting process — technical assessment, ERP platform certification check, live coding challenge, and cultural fit interview. Only 8% of applicants make it to our bench.", color: "ai" as const },
-  { icon: <UsersIcon />, t: "100% Dedicated to You", s: "No shared resources, no split attention. Your developer works exclusively on your projects with full-time availability during your working hours — just like an in-house hire, without the overhead.", color: "green" as const },
+  { icon: <ShieldIcon />, t: "Pre-Vetted & Tested", s: "Every developer passes a 4-stage vetting process, technical assessment, ERP platform certification check, live coding challenge, and cultural fit interview. Only 8% of applicants make it to our bench.", color: "ai" as const },
+  { icon: <UsersIcon />, t: "100% Dedicated to You", s: "No shared resources, no split attention. Your developer works exclusively on your projects with full-time availability during your working hours, just like an in-house hire, without the overhead.", color: "green" as const },
   { icon: <ClockIcon />, t: "Onboarded in 1–2 Weeks", s: "From requirement to onboarded developer in 5–10 business days. You interview, approve, and we handle contracts, infrastructure, and workspace. Your developer is productive from Day 1.", color: "purple" as const },
-  { icon: <TrendingUpIcon />, t: "Scale Month-to-Month", s: "Add or release developers with 2 weeks' notice. No annual contracts, no penalties. Start with one developer, scale to a team of 10 — the model flexes with your project needs.", color: "red" as const },
+  { icon: <TrendingUpIcon />, t: "Scale Month-to-Month", s: "Add or release developers with 2 weeks' notice. No annual contracts, no penalties. Start with one developer, scale to a team of 10, the model flexes with your project needs.", color: "red" as const },
 ] as const;
 
 /* ── Roles available ── */
 const ROLES = [
-  { num: "01", icon: <CpuIcon />, t: "Odoo Functional Consultants", s: "Business process experts who configure Odoo modules — Accounting, MRP, Inventory, Sales, Purchase, HR, and Project. They map your workflows, design solutions, train users, and own functional delivery. 4–8 years Odoo-specific experience." },
+  { num: "01", icon: <CpuIcon />, t: "Odoo Functional Consultants", s: "Business process experts who configure Odoo modules: Accounting, MRP, Inventory, Sales, Purchase, HR, and Project. They map your workflows, design solutions, train users, and own functional delivery. 4–8 years Odoo-specific experience." },
   { num: "02", icon: <CodeIcon />, t: "Odoo Technical Developers", s: "Python/OWL developers who build custom modules, write server actions, create computed fields, develop reports (QWeb), and extend Odoo core. PostgreSQL, XML views, and ORM expertise. Senior developers with 4–8 years on Odoo." },
   { num: "03", icon: <RefreshIcon />, t: "Odoo Integration Engineers", s: "REST API, XML-RPC, and webhook specialists who connect Odoo to Shopify, Magento, Salesforce, payment gateways, shipping carriers, and custom systems. Experienced with real-time sync, error handling, and retry logic." },
   { num: "04", icon: <DatabaseIcon />, t: "Salesforce Developers", s: "Apex, Lightning Web Components, Flows, and SOQL experts. CRM customisation, AppExchange integration, and Salesforce-to-ERP bidirectional sync. Certified Salesforce developers with 4–6 years experience." },
   { num: "05", icon: <SettingsIcon />, t: "Zoho CRM & One Specialists", s: "Deluge scripting, Zoho CRM customisation, Zoho Books configuration, and Zoho One cross-module automation. API integration with external systems and custom function development. 3–6 years Zoho platform experience." },
-  { num: "06", icon: <ShieldIcon />, t: "ERP QA & Automation Engineers", s: "Manual and automated testing for ERP workflows — Selenium, Cypress, and custom Odoo test frameworks. Regression testing, integration testing, UAT coordination, and test automation pipeline setup. 3–5 years ERP testing experience." },
+  { num: "06", icon: <ShieldIcon />, t: "ERP QA & Automation Engineers", s: "Manual and automated testing for ERP workflows: Selenium, Cypress, and custom Odoo test frameworks. Regression testing, integration testing, UAT coordination, and test automation pipeline setup. 3–5 years ERP testing experience." },
 ] as const;
 
 /* ── Process flow ── */
@@ -95,12 +95,12 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "How do you vet ERP developers before proposing them?", a: "Every developer goes through a 4-stage process: (1) Technical assessment — platform-specific coding test for Odoo/Salesforce/Zoho. (2) Certification verification — we confirm ERP platform certifications. (3) Live coding challenge — a real-world ERP problem solved in a timed session. (4) Cultural fit interview — communication, collaboration, and work ethic assessment. Only 8% of applicants pass all four stages." },
+  { q: "How do you vet ERP developers before proposing them?", a: "Every developer goes through a 4-stage process: (1) Technical assessment, platform-specific coding test for Odoo/Salesforce/Zoho. (2) Certification verification, we confirm ERP platform certifications. (3) Live coding challenge, a real-world ERP problem solved in a timed session. (4) Cultural fit interview, communication, collaboration, and work ethic assessment. Only 8% of applicants pass all four stages." },
   { q: "Can I interview the developers before they start?", a: "Yes. We send 2–3 pre-vetted profiles within 48 hours of receiving your requirements. You interview each candidate via video call, assess technical fit, and approve your choice. If no one fits, we send a fresh batch within 3 days. You always have the final say." },
-  { q: "What if a developer isn't the right fit after starting?", a: "If a developer isn't working out in the first 2 weeks, we replace them at no additional cost. No penalty, no gap — we have bench capacity to provide an immediate replacement. After the initial 2-week trial period, replacements require 1 week of notice." },
-  { q: "How does communication and time zone overlap work?", a: "Developers join your Slack, Jira, or any tools you use. We guarantee a minimum 4-hour daily overlap with your working hours — more if your timezone is closer to IST. Daily standups, sprint planning, and code reviews happen on your schedule." },
+  { q: "What if a developer isn't the right fit after starting?", a: "If a developer isn't working out in the first 2 weeks, we replace them at no additional cost. No penalty, no gap, we have bench capacity to provide an immediate replacement. After the initial 2-week trial period, replacements require 1 week of notice." },
+  { q: "How does communication and time zone overlap work?", a: "Developers join your Slack, Jira, or any tools you use. We guarantee a minimum 4-hour daily overlap with your working hours, more if your timezone is closer to IST. Daily standups, sprint planning, and code reviews happen on your schedule." },
   { q: "What's the difference between hiring from you vs a freelancer?", a: "Freelancers are unvetted, have split attention across clients, and disappear when better gigs come along. Our developers are pre-vetted through a 4-stage process, 100% dedicated to you, backed by our account management and bench replacement guarantee. You get freelancer flexibility with enterprise reliability." },
-  { q: "How does pricing work?", a: "Pricing is per-developer, per-month — transparent and all-inclusive. No hidden fees for project management, tools, or infrastructure. Rates vary by platform (Odoo/Salesforce/Zoho), role (functional/technical), and seniority (mid/senior/lead). Month-to-month billing with no long-term lock-ins." },
+  { q: "How does pricing work?", a: "Pricing is per-developer, per-month, transparent and all-inclusive. No hidden fees for project management, tools, or infrastructure. Rates vary by platform (Odoo/Salesforce/Zoho), role (functional/technical), and seniority (mid/senior/lead). Month-to-month billing with no long-term lock-ins." },
 ] as const;
 
 /* ── Component ── */
@@ -108,7 +108,7 @@ export function HireErpContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + talent pool right ═══ */}
+      {/* ═══ HERO: text left + talent pool right ═══ */}
       <section className="he-hero">
         <div className="he-hero-glow he-hero-glow-1" aria-hidden="true" />
         <div className="he-hero-glow he-hero-glow-2" aria-hidden="true" />
@@ -124,7 +124,7 @@ export function HireErpContent() {
               <span className="acc">Pre-vetted.<br />Dedicated.<br />Onboarded fast.</span>
             </h1>
             <p className="he-hero-sub rev">
-              Odoo, Zoho, and Salesforce engineers — pre-vetted, 100% dedicated to you, and onboarded in 1–2 weeks. <strong>Scale month-to-month.</strong>
+              Odoo, Zoho, and Salesforce engineers, pre-vetted, 100% dedicated to you, and onboarded in 1–2 weeks. <strong>Scale month-to-month.</strong>
             </p>
             <div className="he-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -181,7 +181,7 @@ export function HireErpContent() {
         </div>
       </section>
 
-      {/* ═══ WHY US — 4 cards ═══ */}
+      {/* ═══ WHY US: 4 cards ═══ */}
       <section className="he-ops">
         <div className="he-ops-inner">
           <div className="he-ops-hdr rev">
@@ -200,7 +200,7 @@ export function HireErpContent() {
         </div>
       </section>
 
-      {/* ═══ ROLES — alternating rows ═══ */}
+      {/* ═══ ROLES: alternating rows ═══ */}
       <section className="he-feat" id="roles">
         <div className="he-feat-inner">
           <div className="he-feat-hdr rev">
@@ -222,7 +222,7 @@ export function HireErpContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="he-proc" id="process">
         <div className="he-proc-inner">
           <div className="he-proc-hdr rev">
@@ -257,7 +257,7 @@ export function HireErpContent() {
         </div>
       </section>
 
-      {/* ═══ ENGAGEMENT OPTIONS — split ═══ */}
+      {/* ═══ ENGAGEMENT OPTIONS: split ═══ */}
       <section className="he-multi" id="options">
         <div className="he-multi-inner">
           <div className="he-multi-hdr rev">
@@ -268,7 +268,7 @@ export function HireErpContent() {
             <div className="he-multi-left">
               <div className="he-multi-big-n">50+</div>
               <div className="he-multi-big-l">ERP developers on our vetted bench</div>
-              <p className="he-multi-big-s">From a single Odoo developer for focused module work to a 15-person squad with tech lead, functional consultants, and QA — your hiring scales with your project, month to month.</p>
+              <p className="he-multi-big-s">From a single Odoo developer for focused module work to a 15-person squad with tech lead, functional consultants, and QA, your hiring scales with your project, month to month.</p>
             </div>
             <div className="he-multi-right">
               {OPTIONS.map((o) => (
@@ -328,11 +328,11 @@ export function HireErpContent() {
               <div className="oi-closer-insight">
                 <div className="oi-closer-insight-stat">8%<span></span></div>
                 <div className="oi-closer-insight-body">
-                  <strong>acceptance rate — only 8 out of 100 applicants make it to our bench.</strong>
+                  <strong>acceptance rate, only 8 out of 100 applicants make it to our bench.</strong>
                   That means every developer you interview has already passed technical assessments, certification checks, live coding challenges, and cultural fit screening. You hire from the top, not the pool.
                 </div>
               </div>
-              <p>Every hire comes with four guarantees — written into the agreement.</p>
+              <p>Every hire comes with four guarantees, written into the agreement.</p>
             </div>
           </div>
 
@@ -342,7 +342,7 @@ export function HireErpContent() {
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
-                <div className="oi-closer-commit-t">4-stage vetting — no exceptions</div>
+                <div className="oi-closer-commit-t">4-stage vetting, no exceptions</div>
                 <p className="oi-closer-commit-b">Technical test, certification check, live coding, and cultural fit. Every developer. No shortcuts. The same rigour whether you hire one developer or fifteen.</p>
               </div>
               <div className="oi-closer-commit">
@@ -355,12 +355,12 @@ export function HireErpContent() {
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><RefreshIcon /></div>
                 <div className="oi-closer-commit-t">Free replacement in the first 2 weeks</div>
-                <p className="oi-closer-commit-b">If a developer isn&apos;t the right fit in the first 2 weeks, we replace them at zero cost. No gap, no penalty — immediate bench replacement.</p>
+                <p className="oi-closer-commit-b">If a developer isn&apos;t the right fit in the first 2 weeks, we replace them at zero cost. No gap, no penalty, immediate bench replacement.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><TrendingUpIcon /></div>
-                <div className="oi-closer-commit-t">Month-to-month — no lock-ins ever</div>
+                <div className="oi-closer-commit-t">Month-to-month, no lock-ins ever</div>
                 <p className="oi-closer-commit-b">Add or release developers with 2 weeks&apos; notice. No annual contracts, no minimum terms, no exit penalties. We earn your renewal every month.</p>
               </div>
             </div>
@@ -412,7 +412,7 @@ export function HireErpContent() {
               <div className="oi-supp-icon-v2"><BriefcaseIcon /></div>
               <div className="oi-supp-label">Careers</div>
               <a className="oi-supp-title-v2" href="tel:+918511593381">+91 85115 93381</a>
-              <p className="oi-supp-body-v2">ERP developers — join our vetted bench and work with global clients.</p>
+              <p className="oi-supp-body-v2">ERP developers, join our vetted bench and work with global clients.</p>
               <a className="oi-supp-cta-v2" href="tel:+918511593381">Apply now <ArrowRightIcon /></a>
             </div>
           </div>

@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { FinanceServicesContent } from "@/components/services/finance-services-content";
 
 export const metadata: Metadata = {
-  title: "Finance & Services ERP | Auto-Reconcile, Fraud Detection & Lead Scoring — Wan Buffer",
+  title: "Finance & Services ERP | Auto-Reconcile, Fraud Detection & Lead Scoring | Wan Buffer",
   description:
     "End-to-end finance and professional services ERP with automated bank reconciliation, AI-powered fraud detection, predictive lead scoring, revenue recognition, and compliance-ready reporting. For financial institutions, consulting firms, and service-based businesses.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Finance & Services ERP — Auto-Reconcile, Fraud Detection & Lead Scoring | Wan Buffer",
+    title: "Finance & Services ERP: Auto-Reconcile, Fraud Detection & Lead Scoring | Wan Buffer",
     description:
-      "Finance and services ERP with automated reconciliation, AI fraud detection, predictive lead scoring, and compliance reporting — for financial institutions, consulting firms, and service businesses.",
+      "Finance and services ERP with automated reconciliation, AI fraud detection, predictive lead scoring, and compliance reporting, for financial institutions, consulting firms, and service businesses.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/finance-services" },

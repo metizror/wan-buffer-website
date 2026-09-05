@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   WORKFLOW AUTOMATION — unique page design
+   WORKFLOW AUTOMATION, unique page design
    Hero split · Before/After · Flow pipeline · Department modules ·
    Metrics dashboard · Integrations · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -60,18 +60,18 @@ const BEFORE_ITEMS = [
 ] as const;
 
 const AFTER_ITEMS = [
-  { icon: <ZapIcon />, t: "Under 5-second processing", s: "Invoices match, route, and approve in seconds — not days" },
+  { icon: <ZapIcon />, t: "Under 5-second processing", s: "Invoices match, route, and approve in seconds, not days" },
   { icon: <ShieldIcon />, t: "99.8% accuracy", s: "Automated validation against ERP master data eliminates human error" },
   { icon: <GridIcon />, t: "Connected systems", s: "ERP, CRM, HR, and accounting share real-time data automatically" },
   { icon: <MonitorIcon />, t: "Live dashboards", s: "Real-time workflow tracking with SLA alerts and exception routing" },
-  { icon: <SparklesIcon />, t: "Staff on strategic work", s: "Team focuses on analysis, negotiation, and growth — not data entry" },
+  { icon: <SparklesIcon />, t: "Staff on strategic work", s: "Team focuses on analysis, negotiation, and growth, not data entry" },
 ] as const;
 
 /* ── Pipeline steps ── */
 const PIPELINE = [
-  { num: "01", icon: <SearchIcon />, tag: "Discover", t: "Process discovery & mapping", b: "We audit every manual touchpoint — approval chains, handoffs, bottlenecks — and build a prioritised automation map.", deliverables: ["Process map", "Priority matrix"] },
-  { num: "02", icon: <SettingsIcon />, tag: "Design", t: "Automation architecture", b: "Trigger logic, decision routing, exception handling, and approval gates — designed for reliability, not complexity.", deliverables: ["Logic spec", "Integration plan"] },
-  { num: "03", icon: <CodeIcon />, tag: "Build", t: "Workflow development", b: "Purpose-built automated workflows tested against real data. No generic templates — every rule maps to your operations.", deliverables: ["Live workflows", "Test suite"] },
+  { num: "01", icon: <SearchIcon />, tag: "Discover", t: "Process discovery & mapping", b: "We audit every manual touchpoint, approval chains, handoffs, bottlenecks, and build a prioritised automation map.", deliverables: ["Process map", "Priority matrix"] },
+  { num: "02", icon: <SettingsIcon />, tag: "Design", t: "Automation architecture", b: "Trigger logic, decision routing, exception handling, and approval gates, designed for reliability, not complexity.", deliverables: ["Logic spec", "Integration plan"] },
+  { num: "03", icon: <CodeIcon />, tag: "Build", t: "Workflow development", b: "Purpose-built automated workflows tested against real data. No generic templates, every rule maps to your operations.", deliverables: ["Live workflows", "Test suite"] },
   { num: "04", icon: <CloudIcon />, tag: "Connect", t: "System integration", b: "Real-time bi-directional sync between ERP, CRM, accounting, HR, and third-party platforms via secure APIs.", deliverables: ["API connections", "Data validation"] },
   { num: "05", icon: <EyeIcon />, tag: "Validate", t: "Testing & rollout", b: "Sandbox validation with production-mirror data. Every edge case, exception path, and approval gate tested.", deliverables: ["UAT sign-off", "Rollback plan"] },
   { num: "06", icon: <RocketIcon />, tag: "Launch", t: "Go-live & optimise", b: "Department-by-department rollout with monitoring dashboards. Continuous optimisation based on real performance data.", deliverables: ["Live automation", "Dashboards"] },
@@ -79,11 +79,11 @@ const PIPELINE = [
 
 /* ── Department modules ── */
 const MODULES = [
-  { icon: <WalletIcon />, t: "Finance & Accounting", b: "Automate invoice matching, payment scheduling, expense approvals, bank reconciliation, and month-end closing — reducing close time by 70%.", ai: false, tasks: ["3-way invoice matching", "Auto-reconciliation", "Expense approval routing", "Tax compliance checks"], stat: { n: "70%", l: "Faster month-end close" } },
-  { icon: <PackageIcon />, t: "Procurement & Supply Chain", b: "Purchase requisitions auto-generate POs, vendor selection routes by policy, and stock reorder triggers when thresholds hit — zero manual intervention.", ai: true, tasks: ["Auto PO generation", "Vendor approval routing", "Reorder point triggers", "GRN matching"], stat: { n: "85%", l: "Fewer manual POs" } },
+  { icon: <WalletIcon />, t: "Finance & Accounting", b: "Automate invoice matching, payment scheduling, expense approvals, bank reconciliation, and month-end closing, reducing close time by 70%.", ai: false, tasks: ["3-way invoice matching", "Auto-reconciliation", "Expense approval routing", "Tax compliance checks"], stat: { n: "70%", l: "Faster month-end close" } },
+  { icon: <PackageIcon />, t: "Procurement & Supply Chain", b: "Purchase requisitions auto-generate POs, vendor selection routes by policy, and stock reorder triggers when thresholds hit, zero manual intervention.", ai: true, tasks: ["Auto PO generation", "Vendor approval routing", "Reorder point triggers", "GRN matching"], stat: { n: "85%", l: "Fewer manual POs" } },
   { icon: <UsersIcon />, t: "HR & Payroll", b: "Employee onboarding triggers IT, finance, and HR workflows simultaneously. Leave approvals, payroll calculations, and exit processes run automatically.", ai: false, tasks: ["Onboarding orchestration", "Leave approval chains", "Payroll auto-calculation", "Exit process automation"], stat: { n: "90%", l: "Onboarding time saved" } },
-  { icon: <BarChartIcon />, t: "Sales & CRM", b: "Lead scoring, quote generation, contract approvals, and handoff to fulfilment — all automated with AI-enhanced prioritisation and routing.", ai: true, tasks: ["AI lead scoring", "Auto quote generation", "Contract approval flow", "Sales → fulfilment handoff"], stat: { n: "3×", l: "Faster lead response" } },
-  { icon: <SettingsIcon />, t: "Operations & Manufacturing", b: "Production orders trigger from sales, quality checks gate shipments, and maintenance schedules run on predictive models — not calendars.", ai: false, tasks: ["Production order triggers", "Quality gate workflows", "Maintenance scheduling", "Shipment routing"], stat: { n: "45%", l: "Less downtime" } },
+  { icon: <BarChartIcon />, t: "Sales & CRM", b: "Lead scoring, quote generation, contract approvals, and handoff to fulfilment, all automated with AI-enhanced prioritisation and routing.", ai: true, tasks: ["AI lead scoring", "Auto quote generation", "Contract approval flow", "Sales → fulfilment handoff"], stat: { n: "3×", l: "Faster lead response" } },
+  { icon: <SettingsIcon />, t: "Operations & Manufacturing", b: "Production orders trigger from sales, quality checks gate shipments, and maintenance schedules run on predictive models, not calendars.", ai: false, tasks: ["Production order triggers", "Quality gate workflows", "Maintenance scheduling", "Shipment routing"], stat: { n: "45%", l: "Less downtime" } },
   { icon: <ShieldIcon />, t: "Compliance & Audit", b: "Every automated action logged with full audit trail. Approval hierarchies enforce segregation of duties. GDPR, SOC 2, and VAT compliance built in.", ai: true, tasks: ["Audit trail logging", "Segregation of duties", "GDPR data handling", "Regulatory reporting"], stat: { n: "100%", l: "Actions auditable" } },
 ] as const;
 
@@ -114,7 +114,7 @@ export function WorkflowAutomationContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — split layout with animated workflow nodes ═══ */}
+      {/* ═══ HERO: split layout with animated workflow nodes ═══ */}
       <section className="wa-hero">
         <div className="wa-hero-glow wa-hero-glow-1" aria-hidden="true" />
         <div className="wa-hero-glow wa-hero-glow-2" aria-hidden="true" />
@@ -208,7 +208,7 @@ export function WorkflowAutomationContent() {
         </div>
       </section>
 
-      {/* ═══ FLOW PIPELINE — horizontal scroll steps ═══ */}
+      {/* ═══ FLOW PIPELINE: horizontal scroll steps ═══ */}
       <section className="wa-pipeline" id="pipeline">
         <div className="wa-pipeline-inner">
           <div className="wa-pipeline-hdr rev">
@@ -216,7 +216,7 @@ export function WorkflowAutomationContent() {
               <div className="eyebrow lt">Methodology</div>
               <h2>Six stages to<br /><span>zero manual work.</span></h2>
             </div>
-            <p>Every stage is sign-off gated. You approve milestones, review deliverables, and control the pace. Senior automation engineers lead each phase — no juniors, no outsourcing, no handoffs.</p>
+            <p>Every stage is sign-off gated. You approve milestones, review deliverables, and control the pace. Senior automation engineers lead each phase, no juniors, no outsourcing, no handoffs.</p>
           </div>
 
           <div className="wa-pipeline-track-wrap">
@@ -272,7 +272,7 @@ export function WorkflowAutomationContent() {
               <div className="eyebrow">Automation by department</div>
               <h2>Every function.<br /><span>Fully automated.</span></h2>
             </div>
-            <p>We don&apos;t automate tasks in isolation. We redesign entire departmental workflows — connecting systems, eliminating handoffs, and delivering measurable ROI for every function in your organisation.</p>
+            <p>We don&apos;t automate tasks in isolation. We redesign entire departmental workflows, connecting systems, eliminating handoffs, and delivering measurable ROI for every function in your organisation.</p>
           </div>
 
           <div className="wa-modules-grid rev">
@@ -307,7 +307,7 @@ export function WorkflowAutomationContent() {
           <div className="wa-metrics-hdr rev">
             <div className="eyebrow lt">Proven results</div>
             <h2>Numbers that<br /><span>speak for themselves.</span></h2>
-            <p>Every deployment includes pre-agreed KPIs. These are real averages across our automation engagements — tracked, measured, and verified.</p>
+            <p>Every deployment includes pre-agreed KPIs. These are real averages across our automation engagements, tracked, measured, and verified.</p>
           </div>
 
           <div className="wa-metrics-grid rev">
@@ -340,7 +340,7 @@ export function WorkflowAutomationContent() {
         </div>
       </section>
 
-      {/* ═══ CLOSER — commitments + CTA ═══ */}
+      {/* ═══ CLOSER: commitments + CTA ═══ */}
       <section className="oi-closer" id="capabilities">
         <div className="oi-closer-inner">
 
@@ -354,10 +354,10 @@ export function WorkflowAutomationContent() {
                 <div className="oi-closer-insight-stat">70%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of automation initiatives stall after the pilot phase.</strong>
-                  Source: McKinsey, 2024. The root cause is rarely the technology — it&apos;s scope without strategy. Teams automate individual tasks instead of rethinking entire workflows, then wonder why manual effort barely drops.
+                  Source: McKinsey, 2024. The root cause is rarely the technology, it&apos;s scope without strategy. Teams automate individual tasks instead of rethinking entire workflows, then wonder why manual effort barely drops.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer automation engagement starts with process redesign, not tool selection. We commit to four guarantees — written into the contract, tracked weekly, never traded away.</p>
+              <p>That&apos;s why every Wan Buffer automation engagement starts with process redesign, not tool selection. We commit to four guarantees, written into the contract, tracked weekly, never traded away.</p>
             </div>
           </div>
 
@@ -374,7 +374,7 @@ export function WorkflowAutomationContent() {
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><CheckCircleIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed KPIs</div>
-                <p className="oi-closer-commit-b">Time saved, errors eliminated, and processing speed are defined before development. If we don&apos;t hit the numbers, we keep working — at our cost.</p>
+                <p className="oi-closer-commit-b">Time saved, errors eliminated, and processing speed are defined before development. If we don&apos;t hit the numbers, we keep working, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
@@ -386,7 +386,7 @@ export function WorkflowAutomationContent() {
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineers who design your workflows are the ones who build, test, and support them — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineers who design your workflows are the ones who build, test, and support them, named in the contract.</p>
               </div>
             </div>
           </div>
@@ -438,7 +438,7 @@ export function WorkflowAutomationContent() {
               <div className="oi-supp-icon-v2"><PhoneCallIcon /></div>
               <div className="oi-supp-label">Phone · 24 &times; 7</div>
               <a className="oi-supp-title-v2" href="tel:+919904122699">+91 99041 22699</a>
-              <p className="oi-supp-body-v2">Workflow failures or production incidents. Answered by a senior engineer — not a call centre.</p>
+              <p className="oi-supp-body-v2">Workflow failures or production incidents. Answered by a senior engineer, not a call centre.</p>
               <a className="oi-supp-cta-v2" href="tel:+919904122699">Call now <ArrowRightIcon /></a>
             </div>
 

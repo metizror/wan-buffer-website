@@ -21,8 +21,8 @@ export function HomeCaseStudy() {
               How AI Agents Cut a Fabric Mill&apos;s Lead Time by 40% While Reducing Manual Data Entry by 80%
             </h3>
             <p className="cs-desc">
-              A Gujarat textile manufacturer with 3 production lines deployed our AI Agent + Odoo MRP solution —
-              autonomous procurement agents, predictive quality checks, and real-time shop floor intelligence — going
+              A Gujarat textile manufacturer with 3 production lines deployed our AI Agent + Odoo MRP solution : 
+              autonomous procurement agents, predictive quality checks, and real-time shop floor intelligence, going
               live in 14 weeks.
             </p>
           </div>

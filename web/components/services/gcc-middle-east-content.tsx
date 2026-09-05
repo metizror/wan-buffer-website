@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   GCC & MIDDLE EAST — unique page design
+   GCC & MIDDLE EAST, unique page design
    Hero split + compliance dashboard mock · Operations cards · Alternating
    feature rows · Dotted process flow · Multi-country section ·
    Platforms · FAQ · Closer · Support
@@ -52,20 +52,20 @@ const COMPLIANCE_ITEMS = [
 
 /* ── GCC operations ── */
 const OPERATIONS = [
-  { icon: <MonitorIcon />, t: "Arabic RTL Interface", s: "Full Arabic right-to-left UI across every module — invoices, reports, customer portals, and POS screens. Bilingual English-Arabic switching for mixed-language teams with Arabic PDF generation.", color: "ai" as const },
+  { icon: <MonitorIcon />, t: "Arabic RTL Interface", s: "Full Arabic right-to-left UI across every module, invoices, reports, customer portals, and POS screens. Bilingual English-Arabic switching for mixed-language teams with Arabic PDF generation.", color: "ai" as const },
   { icon: <ShieldIcon />, t: "GCC VAT Compliance", s: "Country-specific VAT configurations for UAE FTA, Saudi ZATCA (Phase 2 e-invoicing), Bahrain NBR, and Oman Tax Authority. Automated VAT return generation, reverse charge handling, and designated zone rules.", color: "green" as const },
-  { icon: <WalletIcon />, t: "Multi-Currency Operations", s: "Six GCC currencies plus USD, EUR, and GBP — with real-time exchange rate feeds, automatic gain/loss calculations, and multi-currency bank reconciliation. Inter-company transactions across currency boundaries.", color: "purple" as const },
-  { icon: <UsersIcon />, t: "WPS Payroll & HR", s: "UAE WPS-compliant salary processing, Saudi GOSI contributions, end-of-service gratuity calculations, and labour law leave entitlements — configured per GCC country with automated SIF file generation.", color: "red" as const },
+  { icon: <WalletIcon />, t: "Multi-Currency Operations", s: "Six GCC currencies plus USD, EUR, and GBP, with real-time exchange rate feeds, automatic gain/loss calculations, and multi-currency bank reconciliation. Inter-company transactions across currency boundaries.", color: "purple" as const },
+  { icon: <UsersIcon />, t: "WPS Payroll & HR", s: "UAE WPS-compliant salary processing, Saudi GOSI contributions, end-of-service gratuity calculations, and labour law leave entitlements, configured per GCC country with automated SIF file generation.", color: "red" as const },
 ] as const;
 
 /* ── Features ── */
 const FEATURES = [
-  { num: "01", icon: <MonitorIcon />, t: "Arabic UI & Bilingual Operations", s: "Complete RTL Arabic interface across all ERP modules — not just translated labels but proper right-to-left layout for forms, reports, dashboards, and printed documents. Users switch between English and Arabic with one click. Arabic PDF invoices, delivery notes, and contracts generated with proper font rendering." },
+  { num: "01", icon: <MonitorIcon />, t: "Arabic UI & Bilingual Operations", s: "Complete RTL Arabic interface across all ERP modules, not just translated labels but proper right-to-left layout for forms, reports, dashboards, and printed documents. Users switch between English and Arabic with one click. Arabic PDF invoices, delivery notes, and contracts generated with proper font rendering." },
   { num: "02", icon: <ShieldIcon />, t: "GCC VAT & E-Invoicing", s: "UAE 5% VAT with FTA return format, Saudi 15% VAT with ZATCA Phase 2 XML e-invoicing (Fatoorah), Bahrain 10% VAT with NBR filing, Oman 5% VAT, and Qatar/Kuwait zero-rate configurations. Reverse charge mechanism, designated zone rules, and tourist refund handling included." },
-  { num: "03", icon: <WalletIcon />, t: "Multi-Currency & Exchange Rates", s: "AED, SAR, QAR, KWD, BHD, OMR plus international currencies — all active simultaneously. Central bank rate feeds update automatically. Realised and unrealised gain/loss calculations, multi-currency ageing reports, and cross-currency inter-company settlement." },
-  { num: "04", icon: <UsersIcon />, t: "WPS Payroll & Labour Compliance", s: "UAE WPS salary file generation (SIF format), Saudi GOSI social insurance, Qatar labour law compliance, and Bahrain SIO contributions. End-of-service gratuity (EOSB) per country, annual leave accrual rules, and air ticket entitlement tracking — all configured per employee nationality and contract type." },
-  { num: "05", icon: <GridIcon />, t: "Free Zone & Mainland Configurations", s: "Separate entity configurations for DMCC, JAFZA, DAFZA, SAIF Zone, and mainland operations — each with its own VAT treatment, licence requirements, and reporting. Inter-entity transactions between free zone and mainland with proper tax handling." },
-  { num: "06", icon: <BarChartIcon />, t: "GCC Regulatory Reporting", s: "Automated regulatory reports — UAE Economic Substance Regulations (ESR), Saudi Zakat returns, UBO declarations, and AML compliance reporting. Country-specific chart of accounts, financial statement formats, and audit-ready documentation." },
+  { num: "03", icon: <WalletIcon />, t: "Multi-Currency & Exchange Rates", s: "AED, SAR, QAR, KWD, BHD, OMR plus international currencies, all active simultaneously. Central bank rate feeds update automatically. Realised and unrealised gain/loss calculations, multi-currency ageing reports, and cross-currency inter-company settlement." },
+  { num: "04", icon: <UsersIcon />, t: "WPS Payroll & Labour Compliance", s: "UAE WPS salary file generation (SIF format), Saudi GOSI social insurance, Qatar labour law compliance, and Bahrain SIO contributions. End-of-service gratuity (EOSB) per country, annual leave accrual rules, and air ticket entitlement tracking, all configured per employee nationality and contract type." },
+  { num: "05", icon: <GridIcon />, t: "Free Zone & Mainland Configurations", s: "Separate entity configurations for DMCC, JAFZA, DAFZA, SAIF Zone, and mainland operations, each with its own VAT treatment, licence requirements, and reporting. Inter-entity transactions between free zone and mainland with proper tax handling." },
+  { num: "06", icon: <BarChartIcon />, t: "GCC Regulatory Reporting", s: "Automated regulatory reports: UAE Economic Substance Regulations (ESR), Saudi Zakat returns, UBO declarations, and AML compliance reporting. Country-specific chart of accounts, financial statement formats, and audit-ready documentation." },
 ] as const;
 
 /* ── Process flow ── */
@@ -96,10 +96,10 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "Can you configure Arabic RTL interface across all Odoo modules?", a: "Yes. We configure full right-to-left Arabic UI across every module — sales, purchase, accounting, inventory, HR, and POS. This includes RTL form layouts, Arabic PDF generation for invoices and contracts, bilingual customer portals, and one-click language switching for teams that operate in both English and Arabic." },
+  { q: "Can you configure Arabic RTL interface across all Odoo modules?", a: "Yes. We configure full right-to-left Arabic UI across every module, sales, purchase, accounting, inventory, HR, and POS. This includes RTL form layouts, Arabic PDF generation for invoices and contracts, bilingual customer portals, and one-click language switching for teams that operate in both English and Arabic." },
   { q: "How do you handle different VAT rates across GCC countries?", a: "Each GCC country is configured as a separate fiscal position with its own VAT rate, tax codes, and return format. UAE (5%), Saudi Arabia (15%), Bahrain (10%), Oman (5%), and Qatar/Kuwait (0%) all coexist in one system. Inter-company transactions across countries handle reverse charge and zero-rating automatically." },
-  { q: "Is Saudi ZATCA Phase 2 e-invoicing supported?", a: "Yes. We configure ZATCA Phase 2 (Fatoorah) compliance — XML e-invoice generation, QR code embedding, cryptographic stamping, and real-time reporting to the ZATCA portal. Simplified and standard tax invoices, credit notes, and debit notes all comply with the required schema." },
-  { q: "Can you handle WPS payroll for UAE employees?", a: "Yes. We configure UAE WPS-compliant payroll — salary structures per contract type, overtime calculation per labour law, leave salary computation, and automated SIF file generation for bank upload. End-of-service gratuity (EOSB) calculates per the UAE labour law based on basic salary and years of service." },
+  { q: "Is Saudi ZATCA Phase 2 e-invoicing supported?", a: "Yes. We configure ZATCA Phase 2 (Fatoorah) compliance: XML e-invoice generation, QR code embedding, cryptographic stamping, and real-time reporting to the ZATCA portal. Simplified and standard tax invoices, credit notes, and debit notes all comply with the required schema." },
+  { q: "Can you handle WPS payroll for UAE employees?", a: "Yes. We configure UAE WPS-compliant payroll, salary structures per contract type, overtime calculation per labour law, leave salary computation, and automated SIF file generation for bank upload. End-of-service gratuity (EOSB) calculates per the UAE labour law based on basic salary and years of service." },
   { q: "Do you support free zone entities with different VAT treatments?", a: "Yes. We configure separate entities for each free zone (DMCC, JAFZA, DAFZA, SAIF Zone) and mainland operations. Each entity has its own VAT registration, licence tracking, and reporting. Inter-entity transactions between free zone and mainland handle designated zone rules and VAT reverse charge automatically." },
   { q: "How long does a GCC localisation implementation take?", a: "Single-country setup with VAT, Arabic UI, and payroll takes 4–6 weeks. Multi-country GCC deployment with inter-company transactions takes 10–16 weeks. Full regional rollout across 3+ countries with ZATCA e-invoicing and multi-entity consolidation takes 14–24 weeks." },
 ] as const;
@@ -109,7 +109,7 @@ export function GccMiddleEastContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + compliance dashboard right ═══ */}
+      {/* ═══ HERO: text left + compliance dashboard right ═══ */}
       <section className="gc-hero">
         <div className="gc-hero-glow gc-hero-glow-1" aria-hidden="true" />
         <div className="gc-hero-glow gc-hero-glow-2" aria-hidden="true" />
@@ -125,7 +125,7 @@ export function GccMiddleEastContent() {
               <span className="acc">Every country.<br />Every currency.<br />Compliant.</span>
             </h1>
             <p className="gc-hero-sub rev">
-              Arabic RTL interface, GCC VAT compliance, multi-currency operations, WPS payroll, and e-invoicing — <strong>localised for your ERP.</strong>
+              Arabic RTL interface, GCC VAT compliance, multi-currency operations, WPS payroll, and e-invoicing, <strong>localised for your ERP.</strong>
             </p>
             <div className="gc-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -183,7 +183,7 @@ export function GccMiddleEastContent() {
         </div>
       </section>
 
-      {/* ═══ OPERATIONS — 4 cards ═══ */}
+      {/* ═══ OPERATIONS: 4 cards ═══ */}
       <section className="gc-ops">
         <div className="gc-ops-inner">
           <div className="gc-ops-hdr rev">
@@ -202,7 +202,7 @@ export function GccMiddleEastContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — alternating rows ═══ */}
+      {/* ═══ FEATURES: alternating rows ═══ */}
       <section className="gc-feat" id="features">
         <div className="gc-feat-inner">
           <div className="gc-feat-hdr rev">
@@ -224,7 +224,7 @@ export function GccMiddleEastContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="gc-proc" id="process">
         <div className="gc-proc-inner">
           <div className="gc-proc-hdr rev">
@@ -259,7 +259,7 @@ export function GccMiddleEastContent() {
         </div>
       </section>
 
-      {/* ═══ MULTI-COUNTRY — split ═══ */}
+      {/* ═══ MULTI-COUNTRY: split ═══ */}
       <section className="gc-multi" id="multi-country">
         <div className="gc-multi-inner">
           <div className="gc-multi-hdr rev">
@@ -270,7 +270,7 @@ export function GccMiddleEastContent() {
             <div className="gc-multi-left">
               <div className="gc-multi-big-n">6</div>
               <div className="gc-multi-big-l">GCC countries supported from one ERP</div>
-              <p className="gc-multi-big-s">UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman — all orchestrated from a single system with country-specific VAT, payroll, and compliance configurations and unified multi-currency group reporting.</p>
+              <p className="gc-multi-big-s">UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman, all orchestrated from a single system with country-specific VAT, payroll, and compliance configurations and unified multi-currency group reporting.</p>
             </div>
             <div className="gc-multi-right">
               {COUNTRIES.map((ctry) => (
@@ -332,10 +332,10 @@ export function GccMiddleEastContent() {
                 <div className="oi-closer-insight-stat">70%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of GCC businesses run ERPs not fully localised for their country.</strong>
-                  Source: Gulf Business Technology Report, 2024. The result is manual VAT calculations, non-compliant e-invoices, payroll errors, and zero Arabic UI — problems that trigger audit findings and regulatory penalties.
+                  Source: Gulf Business Technology Report, 2024. The result is manual VAT calculations, non-compliant e-invoices, payroll errors, and zero Arabic UI, problems that trigger audit findings and regulatory penalties.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer GCC deployment covers full localisation — not just language translation. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer GCC deployment covers full localisation, not just language translation. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -345,26 +345,26 @@ export function GccMiddleEastContent() {
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><MonitorIcon /></div>
-                <div className="oi-closer-commit-t">True Arabic RTL — not just translated labels</div>
-                <p className="oi-closer-commit-b">Full right-to-left layout across every screen, form, report, and PDF. Arabic font rendering, bilingual switching, and Arabic customer portals — not a translation overlay on an English UI.</p>
+                <div className="oi-closer-commit-t">True Arabic RTL, not just translated labels</div>
+                <p className="oi-closer-commit-b">Full right-to-left layout across every screen, form, report, and PDF. Arabic font rendering, bilingual switching, and Arabic customer portals, not a translation overlay on an English UI.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
                 <div className="oi-closer-commit-t">VAT &amp; e-invoicing audit-ready</div>
-                <p className="oi-closer-commit-b">Country-specific VAT configurations, automated return generation, and ZATCA Phase 2 e-invoicing — tested and validated against regulatory requirements before go-live.</p>
+                <p className="oi-closer-commit-b">Country-specific VAT configurations, automated return generation, and ZATCA Phase 2 e-invoicing, tested and validated against regulatory requirements before go-live.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><WalletIcon /></div>
                 <div className="oi-closer-commit-t">Multi-currency from day one</div>
-                <p className="oi-closer-commit-b">All GCC currencies active simultaneously with automated exchange rate feeds. Inter-company transactions, gain/loss calculations, and multi-currency bank reconciliation configured — not patched in later.</p>
+                <p className="oi-closer-commit-b">All GCC currencies active simultaneously with automated exchange rate feeds. Inter-company transactions, gain/loss calculations, and multi-currency bank reconciliation configured, not patched in later.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior GCC engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your GCC operations is the one who localises, migrates, trains, and supports — named in the contract. Arabic and English fluent.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your GCC operations is the one who localises, migrates, trains, and supports, named in the contract. Arabic and English fluent.</p>
               </div>
             </div>
           </div>

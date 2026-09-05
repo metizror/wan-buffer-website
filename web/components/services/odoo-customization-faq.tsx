@@ -21,7 +21,7 @@ const customizationFaq = [
   },
   {
     q: "What are the steps to customize an Odoo module?",
-    a: "Requirement analysis involves studying current business workflows, understanding pitfalls that limit returns and efficiency, and performing gap analysis to bridge current inefficiencies with future improvements. Wan Buffer customizes modules as per your need—through our eight-step process from requirement gathering to delivery.",
+    a: "Requirement analysis involves studying current business workflows, understanding pitfalls that limit returns and efficiency, and performing gap analysis to bridge current inefficiencies with future improvements. Wan Buffer customizes modules as per your need: through our eight-step process from requirement gathering to delivery.",
   },
 ] as const;
 

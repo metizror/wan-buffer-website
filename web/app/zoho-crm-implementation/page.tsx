@@ -11,7 +11,7 @@ import { ZohoCrmContent } from "@/components/services/zoho-crm-content";
 export const metadata: Metadata = {
   title: "Zoho CRM Implementation | Sales Pipeline & Automation | Wan Buffer",
   description:
-    "Expert Zoho CRM implementation services — sales pipeline configuration, workflow automation, third-party integration, custom module development, and data migration. End-to-end Zoho CRM setup for businesses in USA, India, UAE, and Europe.",
+    "Expert Zoho CRM implementation services, sales pipeline configuration, workflow automation, third-party integration, custom module development, and data migration. End-to-end Zoho CRM setup for businesses in USA, India, UAE, and Europe.",
   keywords: [
     "Zoho CRM implementation",
     "Zoho CRM setup",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Zoho CRM Implementation — Sales Pipeline & Automation | Wan Buffer",
+    title: "Zoho CRM Implementation: Sales Pipeline & Automation | Wan Buffer",
     description:
-      "End-to-end Zoho CRM implementation — pipeline setup, workflow automation, integrations, and migration. From first deal to full-scale CRM operations.",
+      "End-to-end Zoho CRM implementation, pipeline setup, workflow automation, integrations, and migration. From first deal to full-scale CRM operations.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/zoho-crm-implementation" },

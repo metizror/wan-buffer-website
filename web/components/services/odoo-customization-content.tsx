@@ -1,4 +1,4 @@
-/* Odoo customization & installation — service page (single methodology + supporting sections). */
+/* Odoo customization & installation, service page (single methodology + supporting sections). */
 
 import type { CSSProperties } from "react";
 
@@ -32,14 +32,14 @@ import {
 
 /* ── Data ── */
 const PHASES = [
-  { icon: <UsersIcon/>, title: "Requirement gathering", body: "We sit with your team to learn how you actually work today — the real workflows, the spreadsheets on the side, and the gaps standard Odoo leaves behind.", tag: "Gather", ai: false, outcome: "Requirements brief", duration: "2–3 days", deliverables: ["Stakeholder interviews", "Process map", "Priority list", "Open questions"] },
-  { icon: <SearchIcon/>, title: "Fit-gap analysis", body: "We compare what standard Odoo already does against what you need — so you only ever pay to build the parts that genuinely don't exist yet.", tag: "Scope", ai: false, outcome: "Gap analysis", duration: "3–5 days", deliverables: ["Fit-gap matrix", "Config vs custom split", "Scope boundaries", "Risk flags"] },
+  { icon: <UsersIcon/>, title: "Requirement gathering", body: "We sit with your team to learn how you actually work today, the real workflows, the spreadsheets on the side, and the gaps standard Odoo leaves behind.", tag: "Gather", ai: false, outcome: "Requirements brief", duration: "2–3 days", deliverables: ["Stakeholder interviews", "Process map", "Priority list", "Open questions"] },
+  { icon: <SearchIcon/>, title: "Fit-gap analysis", body: "We compare what standard Odoo already does against what you need, so you only ever pay to build the parts that genuinely don't exist yet.", tag: "Scope", ai: false, outcome: "Gap analysis", duration: "3–5 days", deliverables: ["Fit-gap matrix", "Config vs custom split", "Scope boundaries", "Risk flags"] },
   { icon: <EyeIcon/>, title: "Feasibility study", body: "Before we commit, we confirm each change can be built without slowing Odoo down, breaking features you rely on, or trapping you on an old version.", tag: "Feasibility", ai: true, outcome: "Go / no-go", duration: "3–5 days", deliverables: ["Technical assessment", "Upgrade-safety check", "Performance impact", "Recommendation"] },
-  { icon: <WalletIcon/>, title: "Estimation", body: `You get a clear, itemized estimate — cost, timeline, and approach — with no vague "it depends." Nothing moves forward until you've approved it.`, tag: "Estimate", ai: false, outcome: "Signed estimate", duration: "2–4 days", deliverables: ["Cost breakdown", "Timeline", "Resource plan", "Assumptions"] },
-  { icon: <CheckCircleIcon/>, title: "Your sign-off", body: "Nothing gets built until you've reviewed the scope and given the green light. Your approval is the start gate — and it locks scope on both sides.", tag: "Approve", ai: false, outcome: "Approved SoW", duration: "1–2 days", deliverables: ["SoW sign-off", "Locked scope", "Kickoff date", "Single point of contact"] },
-  { icon: <CodeIcon/>, title: "Development", body: "Our Odoo developers build to Odoo's own standards — native modules, not bolt-on hacks — so the work stays clean, maintainable, and upgrade-safe.", tag: "Build", ai: true, outcome: "Staging build", duration: "Scope-based", deliverables: ["Working modules", "Code to Odoo standards", "Staging build", "Progress check-ins"] },
-  { icon: <ShieldIcon/>, title: "Testing", body: "We test against your real scenarios, not just the happy path — including the edge cases that usually only surface weeks after go-live.", tag: "QA", ai: true, outcome: "Test report", duration: "3–7 weeks", deliverables: ["Functional tests", "Edge-case checks", "Integration tests", "Fix log"] },
-  { icon: <RocketIcon/>, title: "Delivery & support", body: "We ship to production with documentation your team can actually use — then stay on for support, monitoring, and improvements. Go-live is the start, not the end.", tag: "Deliver", ai: false, outcome: "Live & supported", duration: "Ongoing", deliverables: ["Production deploy", "Handover docs", "Team walkthrough", "Support window"] },
+  { icon: <WalletIcon/>, title: "Estimation", body: `You get a clear, itemized estimate, cost, timeline, and approach, with no vague "it depends." Nothing moves forward until you've approved it.`, tag: "Estimate", ai: false, outcome: "Signed estimate", duration: "2–4 days", deliverables: ["Cost breakdown", "Timeline", "Resource plan", "Assumptions"] },
+  { icon: <CheckCircleIcon/>, title: "Your sign-off", body: "Nothing gets built until you've reviewed the scope and given the green light. Your approval is the start gate, and it locks scope on both sides.", tag: "Approve", ai: false, outcome: "Approved SoW", duration: "1–2 days", deliverables: ["SoW sign-off", "Locked scope", "Kickoff date", "Single point of contact"] },
+  { icon: <CodeIcon/>, title: "Development", body: "Our Odoo developers build to Odoo's own standards, native modules, not bolt-on hacks, so the work stays clean, maintainable, and upgrade-safe.", tag: "Build", ai: true, outcome: "Staging build", duration: "Scope-based", deliverables: ["Working modules", "Code to Odoo standards", "Staging build", "Progress check-ins"] },
+  { icon: <ShieldIcon/>, title: "Testing", body: "We test against your real scenarios, not just the happy path, including the edge cases that usually only surface weeks after go-live.", tag: "QA", ai: true, outcome: "Test report", duration: "3–7 weeks", deliverables: ["Functional tests", "Edge-case checks", "Integration tests", "Fix log"] },
+  { icon: <RocketIcon/>, title: "Delivery & support", body: "We ship to production with documentation your team can actually use, then stay on for support, monitoring, and improvements. Go-live is the start, not the end.", tag: "Deliver", ai: false, outcome: "Live & supported", duration: "Ongoing", deliverables: ["Production deploy", "Handover docs", "Team walkthrough", "Support window"] },
 ] as const;
 
 const BENTO_DATA = [
@@ -80,7 +80,7 @@ export function OdooCustomizationContent() {
             <span className="ln"><span className="ai">Customization</span></span>
           </h1>
           <p className="oi-hero-lux-sub rev">
-          Out-of-the-box Odoo gets you 80% of the way. The last 20% — the part that matches how your business actually runs — is where most ERP projects stall. That's the part we build. Wan Buffer maps what standard Odoo already covers, finds the gaps, and engineers the rest around your workflows.
+          Out-of-the-box Odoo gets you 80% of the way. The last 20%, the part that matches how your business actually runs, is where most ERP projects stall. That's the part we build. Wan Buffer maps what standard Odoo already covers, finds the gaps, and engineers the rest around your workflows.
           </p>
           <div className="oi-hero-lux-cta rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -134,7 +134,7 @@ export function OdooCustomizationContent() {
               </div>
             </div>
             <div className="oi-meth-intro-r">
-              <p>No surprises, no scope creep mid-build. Every customization runs through the same eight steps — and you know exactly what you walk away with at each one.</p>
+              <p>No surprises, no scope creep mid-build. Every customization runs through the same eight steps, and you know exactly what you walk away with at each one.</p>
               <div className="oi-meth-intro-mini">
                 <div className="oi-meth-mini">
                   <div className="oi-meth-mini-row"><span className="oi-meth-mini-n">8</span><span className="oi-meth-mini-u">steps</span></div>
@@ -216,7 +216,7 @@ export function OdooCustomizationContent() {
         </div>
       </section>
 
-      {/* BENTO — magazine spread */}
+      {/* BENTO: magazine spread */}
       <section className="oi-bento-sec" id="why-us">
         <div className="oi-bento-inner">
 
@@ -227,7 +227,7 @@ export function OdooCustomizationContent() {
               <h2>Why teams choose us as their<br /><span>Odoo partner.</span></h2>
             </div>
             <div className="oi-bento-hdr-r">
-              <p>Finding the source of technical issues is something our staff can help with. We ship outstanding final products with stringent rules for writing code—and creators of the Open Human Resource Management System.</p>
+              <p>Finding the source of technical issues is something our staff can help with. We ship outstanding final products with stringent rules for writing code: and creators of the Open Human Resource Management System.</p>
               <div className="oi-bento-credit">
                 <div className="oi-bento-credit-cell">
                   <div className="oi-bento-credit-n r">254<span style={{ fontSize: ".7em" }}>+</span></div>
@@ -250,7 +250,7 @@ export function OdooCustomizationContent() {
             <div className="oi-bento-hero-icon"><CpuIcon /></div>
             <div className="oi-bento-hero-body">
               <div className="oi-bento-hero-tag">Why Wan Buffer Services</div>
-              <div className="oi-bento-hero-t">Odoo apps have contributed over 20 free modules—and UI/UX developers on every engagement.</div>
+              <div className="oi-bento-hero-t">Odoo apps have contributed over 20 free modules: and UI/UX developers on every engagement.</div>
               <p className="oi-bento-hero-b">Compatibility with all Odoo modules, technically and functionally. Service in community and enterprise editions. Skilled across any Odoo release.</p>
             </div>
             <div className="oi-bento-hero-stat">
@@ -285,7 +285,7 @@ export function OdooCustomizationContent() {
         </div>
       </section>
 
-      {/* CLOSER — manifesto + commitments + CTA */}
+      {/* CLOSER: manifesto + commitments + CTA */}
       <section className="oi-closer" id="capabilities">
         <div className="oi-closer-inner">
 
@@ -300,10 +300,10 @@ export function OdooCustomizationContent() {
                 <div className="oi-closer-insight-stat">1 in 3<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>low-cost customization breaks default Odoo behaviour.</strong>
-                  Non-expert partners may not account for all variables, weaken coding standards, and create long-term performance problems—while expert partners maintain efficiency and maintainability.
+                  Non-expert partners may not account for all variables, weaken coding standards, and create long-term performance problems: while expert partners maintain efficiency and maintainability.
                 </div>
               </div>
-              <p>That&apos;s why Wan Buffer follows an eight-step customization process—with your approval at every gate.</p>
+              <p>That&apos;s why Wan Buffer follows an eight-step customization process: with your approval at every gate.</p>
             </div>
           </div>
 
@@ -315,7 +315,7 @@ export function OdooCustomizationContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior consultants only</div>
-                <p className="oi-closer-commit-b">Average 7+ years on Odoo. No juniors and no shadow staffing — the name on the SoW is the person doing the work.</p>
+                <p className="oi-closer-commit-b">Average 7+ years on Odoo. No juniors and no shadow staffing, the name on the SoW is the person doing the work.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
@@ -327,13 +327,13 @@ export function OdooCustomizationContent() {
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
                 <div className="oi-closer-commit-t">90-day hypercare</div>
-                <p className="oi-closer-commit-b">Senior support included for 90 days post go-live. We stay until your team is genuinely independent — not billed extra.</p>
+                <p className="oi-closer-commit-b">Senior support included for 90 days post go-live. We stay until your team is genuinely independent, not billed extra.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><TrendingUpIcon /></div>
                 <div className="oi-closer-commit-t">Methodology, not theory</div>
-                <p className="oi-closer-commit-b">Eight-step methodology refined across 254+ go-lives. Each phase has acceptance criteria — and you sign off.</p>
+                <p className="oi-closer-commit-b">Eight-step methodology refined across 254+ go-lives. Each phase has acceptance criteria, and you sign off.</p>
               </div>
             </div>
           </div>
@@ -364,7 +364,7 @@ export function OdooCustomizationContent() {
           <div className="oi-supp-hdr rev">
             <div className="eyebrow lt">Odoo support</div>
             <h2>One team for <span>questions &amp; fixes.</span></h2>
-            <p>Odoo Support is a central point of contact any time you have a business question. Customer support teams are available 24/7—we are here to help you whenever and wherever.</p>
+            <p>Odoo Support is a central point of contact any time you have a business question. Customer support teams are available 24/7: we are here to help you whenever and wherever.</p>
           </div>
 
           <div className="oi-supp-grid rev">

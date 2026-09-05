@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   SHOPIFY → ODOO INTEGRATION — unique page design
+   SHOPIFY → ODOO INTEGRATION, unique page design
    Hero split + sync log · Data flow pills · Integration cards ·
    Asymmetric benefits · Process bar · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -62,15 +62,15 @@ const DATA_FLOWS = [
 
 /* ── Integration points ── */
 const INTEGRATIONS = [
-  { icon: <PackageIcon />, t: "Product & Catalogue Sync", s: "Products, variants, images, descriptions, and metafields push from Odoo to Shopify automatically. Catalogue changes in Odoo appear on your storefront within seconds — one source of truth for product data.", bullets: ["Product creation & updates", "Variant & option sync", "Image & media sync", "Category mapping"] },
-  { icon: <GridIcon />, t: "Inventory & Stock Sync", s: "Stock levels update in Shopify the moment warehouse operations change in Odoo. Multi-location inventory, reserved stock, and available-to-promise quantities — all in real time.", bullets: ["Multi-location quantities", "Reserved stock deduction", "Reorder point triggers", "Stock adjustment sync"] },
-  { icon: <WalletIcon />, t: "Order & Payment Sync", s: "Shopify orders flow to Odoo within seconds — line items, shipping address, payment method, and discount codes. No manual re-entry, no CSV imports, no order processing delays.", bullets: ["Order creation in Odoo", "Payment status sync", "Refund & cancellation handling", "Discount code mapping"] },
+  { icon: <PackageIcon />, t: "Product & Catalogue Sync", s: "Products, variants, images, descriptions, and metafields push from Odoo to Shopify automatically. Catalogue changes in Odoo appear on your storefront within seconds, one source of truth for product data.", bullets: ["Product creation & updates", "Variant & option sync", "Image & media sync", "Category mapping"] },
+  { icon: <GridIcon />, t: "Inventory & Stock Sync", s: "Stock levels update in Shopify the moment warehouse operations change in Odoo. Multi-location inventory, reserved stock, and available-to-promise quantities, all in real time.", bullets: ["Multi-location quantities", "Reserved stock deduction", "Reorder point triggers", "Stock adjustment sync"] },
+  { icon: <WalletIcon />, t: "Order & Payment Sync", s: "Shopify orders flow to Odoo within seconds, line items, shipping address, payment method, and discount codes. No manual re-entry, no CSV imports, no order processing delays.", bullets: ["Order creation in Odoo", "Payment status sync", "Refund & cancellation handling", "Discount code mapping"] },
 ] as const;
 
-/* ── Benefits — asymmetric ── */
-const HERO_BENEFIT = { n: "0", l: "Hours of manual data entry per week", sub: "Every order, product, and customer record syncs automatically — eliminating the manual re-entry that causes errors and delays." };
+/* ── Benefits: asymmetric ── */
+const HERO_BENEFIT = { n: "0", l: "Hours of manual data entry per week", sub: "Every order, product, and customer record syncs automatically, eliminating the manual re-entry that causes errors and delays." };
 const SIDE_BENEFITS = [
-  { icon: <RefreshIcon />, t: "Real-time sync", s: "Changes propagate within seconds via webhooks — not overnight batch jobs." },
+  { icon: <RefreshIcon />, t: "Real-time sync", s: "Changes propagate within seconds via webhooks, not overnight batch jobs." },
   { icon: <ShieldIcon />, t: "Zero data loss", s: "Every sync event logged. Failed records queued, retried, and escalated." },
   { icon: <EyeIcon />, t: "Full visibility", s: "Monitoring dashboard with error rates, latency, and throughput in real time." },
 ] as const;
@@ -98,7 +98,7 @@ export function ShopifyOdooContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + sync log right ═══ */}
+      {/* ═══ HERO: text left + sync log right ═══ */}
       <section className="so-hero">
         <div className="so-hero-glow so-hero-glow-1" aria-hidden="true" />
         <div className="so-hero-glow so-hero-glow-2" aria-hidden="true" />
@@ -113,7 +113,7 @@ export function ShopifyOdooContent() {
               <span className="acc">Integration.</span>
             </h1>
             <p className="so-hero-sub rev">
-              Real-time sync between Shopify and Odoo ERP — products, inventory, orders, customers, and payments. <strong>One source of truth for eCommerce and operations.</strong>
+              Real-time sync between Shopify and Odoo ERP, products, inventory, orders, customers, and payments. <strong>One source of truth for eCommerce and operations.</strong>
             </p>
             <div className="so-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -157,13 +157,13 @@ export function ShopifyOdooContent() {
         </div>
       </section>
 
-      {/* ═══ INTEGRATION POINTS — 3 cards ═══ */}
+      {/* ═══ INTEGRATION POINTS: 3 cards ═══ */}
       <section className="so-int" id="integrations">
         <div className="so-int-inner">
           <div className="so-int-hdr rev">
             <div className="eyebrow">Integration points</div>
             <h2>Three sync engines.<br /><span>Complete data flow.</span></h2>
-            <p>Each integration is built with Shopify webhooks and Odoo XML-RPC/JSON-RPC APIs — real-time, bi-directional, and engineered for high-volume eCommerce operations.</p>
+            <p>Each integration is built with Shopify webhooks and Odoo XML-RPC/JSON-RPC APIs, real-time, bi-directional, and engineered for high-volume eCommerce operations.</p>
           </div>
           <div className="so-int-grid rev">
             {INTEGRATIONS.map((intg) => (
@@ -182,7 +182,7 @@ export function ShopifyOdooContent() {
         </div>
       </section>
 
-      {/* ═══ BENEFITS — asymmetric ═══ */}
+      {/* ═══ BENEFITS: asymmetric ═══ */}
       <section className="so-bens" id="benefits">
         <div className="so-bens-inner">
           <div className="so-bens-hdr rev">
@@ -210,7 +210,7 @@ export function ShopifyOdooContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — color bar steps ═══ */}
+      {/* ═══ PROCESS: color bar steps ═══ */}
       <section className="so-proc" id="process">
         <div className="so-proc-inner">
           <div className="so-proc-hdr rev">
@@ -277,7 +277,7 @@ export function ShopifyOdooContent() {
                   Source: MuleSoft, 2024. The cause is integrations that handle simple scenarios but break on partial fulfilments, multi-location inventory, and order edits.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer integration is engineered for edge cases first — not just happy-path demos.</p>
+              <p>That&apos;s why every Wan Buffer integration is engineered for edge cases first, not just happy-path demos.</p>
             </div>
           </div>
 

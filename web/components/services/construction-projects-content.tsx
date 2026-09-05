@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   CONSTRUCTION & PROJECTS — unique page design
+   CONSTRUCTION & PROJECTS, unique page design
    Hero split + project tracker mock · Operations cards · Alternating
    feature rows · Dotted process flow · Multi-site section ·
    Platforms · FAQ · Closer · Support
@@ -42,28 +42,28 @@ import {
 
 /* ── Project tracker mockup ── */
 const PROJECTS = [
-  { code: "PRJ-041", name: "Marina Tower — Phase 2", budget: "$4.2M", spent: 68, status: "on-track" as const },
-  { code: "PRJ-042", name: "Highway Overpass — NH48", budget: "$1.8M", spent: 45, status: "on-track" as const },
-  { code: "PRJ-043", name: "Warehouse Complex — Jebel Ali", budget: "$2.6M", spent: 82, status: "at-risk" as const },
-  { code: "PRJ-044", name: "Villa Community — Phase 1", budget: "$6.1M", spent: 31, status: "on-track" as const },
-  { code: "PRJ-045", name: "Office Fit-Out — BKC", budget: "$0.9M", spent: 95, status: "closing" as const },
-  { code: "PRJ-046", name: "Metro Station — Line 3", budget: "$8.4M", spent: 12, status: "mobilising" as const },
+  { code: "PRJ-041", name: "Marina Tower: Phase 2", budget: "$4.2M", spent: 68, status: "on-track" as const },
+  { code: "PRJ-042", name: "Highway Overpass: NH48", budget: "$1.8M", spent: 45, status: "on-track" as const },
+  { code: "PRJ-043", name: "Warehouse Complex: Jebel Ali", budget: "$2.6M", spent: 82, status: "at-risk" as const },
+  { code: "PRJ-044", name: "Villa Community: Phase 1", budget: "$6.1M", spent: 31, status: "on-track" as const },
+  { code: "PRJ-045", name: "Office Fit-Out: BKC", budget: "$0.9M", spent: 95, status: "closing" as const },
+  { code: "PRJ-046", name: "Metro Station: Line 3", budget: "$8.4M", spent: 12, status: "mobilising" as const },
 ] as const;
 
 /* ── Construction operations ── */
 const OPERATIONS = [
-  { icon: <GridIcon />, t: "BOQ & Estimation", s: "Bill of quantities management with item-level costing, rate analysis, multi-level BOQ structures, and automated quantity take-offs — linked directly to procurement and budgets.", color: "ai" as const },
-  { icon: <UsersIcon />, t: "Subcontractor Management", s: "Subcontractor onboarding, work order issuance, progress measurement, retention tracking, and automated RA bill generation — with SLA monitoring and penalty calculations.", color: "green" as const },
-  { icon: <WalletIcon />, t: "Project Cost Control", s: "Real-time budget-vs-actual tracking at BOQ item level. Committed cost visibility, variation order management, and cash flow forecasting per project — catching overruns before they happen.", color: "purple" as const },
-  { icon: <BarChartIcon />, t: "Progress & Site Analytics", s: "Physical progress tracking linked to financial progress. Earned value analysis, S-curve dashboards, and milestone-based reporting — from project portfolio down to individual activity.", color: "red" as const },
+  { icon: <GridIcon />, t: "BOQ & Estimation", s: "Bill of quantities management with item-level costing, rate analysis, multi-level BOQ structures, and automated quantity take-offs, linked directly to procurement and budgets.", color: "ai" as const },
+  { icon: <UsersIcon />, t: "Subcontractor Management", s: "Subcontractor onboarding, work order issuance, progress measurement, retention tracking, and automated RA bill generation, with SLA monitoring and penalty calculations.", color: "green" as const },
+  { icon: <WalletIcon />, t: "Project Cost Control", s: "Real-time budget-vs-actual tracking at BOQ item level. Committed cost visibility, variation order management, and cash flow forecasting per project, catching overruns before they happen.", color: "purple" as const },
+  { icon: <BarChartIcon />, t: "Progress & Site Analytics", s: "Physical progress tracking linked to financial progress. Earned value analysis, S-curve dashboards, and milestone-based reporting, from project portfolio down to individual activity.", color: "red" as const },
 ] as const;
 
 /* ── Features ── */
 const FEATURES = [
-  { num: "01", icon: <GridIcon />, t: "Multi-Level BOQ Management", s: "Define bill of quantities with unlimited nesting — divisions, sub-divisions, line items, and sub-items. Rate analysis with material, labour, equipment, and overhead breakdowns. Revision control for BOQ amendments with full audit trail and client approval workflows." },
+  { num: "01", icon: <GridIcon />, t: "Multi-Level BOQ Management", s: "Define bill of quantities with unlimited nesting, divisions, sub-divisions, line items, and sub-items. Rate analysis with material, labour, equipment, and overhead breakdowns. Revision control for BOQ amendments with full audit trail and client approval workflows." },
   { num: "02", icon: <UsersIcon />, t: "Subcontractor & Vendor Management", s: "Subcontractor prequalification, work order generation from BOQ items, progress measurement sheets, retention management, and automated Running Account (RA) bill processing. Performance scorecards track quality, schedule adherence, and safety compliance per subcontractor." },
   { num: "03", icon: <WalletIcon />, t: "Project Cost Control & Budgeting", s: "Budget allocation at BOQ item level with committed cost tracking from purchase orders and subcontract work orders. Variation order management with cost impact analysis. Real-time cost-to-complete forecasting and margin visibility per project." },
-  { num: "04", icon: <PackageIcon />, t: "Material Reconciliation", s: "Track material issued to site against BOQ consumption norms. Wastage analysis per item, per project, and per subcontractor. Automatic alerts when consumption exceeds norms — preventing material pilferage and budget overruns." },
+  { num: "04", icon: <PackageIcon />, t: "Material Reconciliation", s: "Track material issued to site against BOQ consumption norms. Wastage analysis per item, per project, and per subcontractor. Automatic alerts when consumption exceeds norms, preventing material pilferage and budget overruns." },
   { num: "05", icon: <FlagIcon />, t: "Progress Billing & RA Bills", s: "Milestone-based and measurement-based billing linked to BOQ progress. Automated RA bill generation for subcontractors with retention deduction, advance recovery, and penalty calculations. Client billing with IPC (Interim Payment Certificate) generation." },
   { num: "06", icon: <BarChartIcon />, t: "Project Analytics & Earned Value", s: "Earned value management (EVM) dashboards with CPI, SPI, and EAC metrics. S-curve charts, cash flow forecasts, and resource utilisation reports. Drill from portfolio-level KPIs to individual BOQ item cost and progress." },
 ] as const;
@@ -96,10 +96,10 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "Can you manage multi-level BOQ structures with rate analysis?", a: "Yes. We configure multi-level BOQ hierarchies — divisions, sub-divisions, line items, and sub-items — with rate analysis breakdowns for material, labour, equipment, and overheads. BOQ revisions are version-controlled with approval workflows. Quantities link directly to procurement, budgets, and progress measurement." },
+  { q: "Can you manage multi-level BOQ structures with rate analysis?", a: "Yes. We configure multi-level BOQ hierarchies, divisions, sub-divisions, line items, and sub-items, with rate analysis breakdowns for material, labour, equipment, and overheads. BOQ revisions are version-controlled with approval workflows. Quantities link directly to procurement, budgets, and progress measurement." },
   { q: "How does subcontractor RA bill automation work?", a: "Subcontractor work orders are generated from BOQ items with agreed rates. Progress is measured on-site and entered against work order items. The system auto-generates Running Account bills with retention deductions, advance recovery, previous bill adjustments, and penalty calculations. Bills route through configurable approval workflows before payment processing." },
-  { q: "Can you track project costs against BOQ items in real time?", a: "Yes. Every purchase order, subcontract work order, and expense entry is tagged to a project and BOQ item. The system shows budget, committed cost, actual cost, and cost-to-complete at every level — from project portfolio down to individual BOQ line items. Variation orders are tracked separately with cost impact analysis." },
-  { q: "Do you support material reconciliation against consumption norms?", a: "Yes. Material issue to site is tracked against BOQ consumption norms (material coefficient per unit of work). The system calculates theoretical consumption vs actual issue and flags wastage per item, per project, and per subcontractor — with automatic alerts when consumption exceeds configurable thresholds." },
+  { q: "Can you track project costs against BOQ items in real time?", a: "Yes. Every purchase order, subcontract work order, and expense entry is tagged to a project and BOQ item. The system shows budget, committed cost, actual cost, and cost-to-complete at every level, from project portfolio down to individual BOQ line items. Variation orders are tracked separately with cost impact analysis." },
+  { q: "Do you support material reconciliation against consumption norms?", a: "Yes. Material issue to site is tracked against BOQ consumption norms (material coefficient per unit of work). The system calculates theoretical consumption vs actual issue and flags wastage per item, per project, and per subcontractor, with automatic alerts when consumption exceeds configurable thresholds." },
   { q: "Can you integrate with Primavera P6 or MS Project for scheduling?", a: "Yes. We integrate with Primavera P6 and Microsoft Project for schedule management. Activity-level progress from the scheduling tool syncs to the ERP for earned value calculation. Cost data from the ERP flows back to the scheduling tool for resource-loaded schedules." },
   { q: "How long does a construction ERP implementation take?", a: "Single-project setup with BOQ and cost tracking takes 4–6 weeks. Full construction ERP with subcontractor management, RA billing, and analytics takes 10–16 weeks. Multi-project organisations with JV accounting, material reconciliation, and P6 integration take 14–24 weeks." },
 ] as const;
@@ -109,7 +109,7 @@ export function ConstructionProjectsContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + project tracker right ═══ */}
+      {/* ═══ HERO: text left + project tracker right ═══ */}
       <section className="cp-hero">
         <div className="cp-hero-glow cp-hero-glow-1" aria-hidden="true" />
         <div className="cp-hero-glow cp-hero-glow-2" aria-hidden="true" />
@@ -125,7 +125,7 @@ export function ConstructionProjectsContent() {
               <span className="acc">Every site.<br />Every BOQ.<br />Controlled.</span>
             </h1>
             <p className="cp-hero-sub rev">
-              BOQ management, subcontractor tracking, project cost control, progress billing, and earned value analytics — <strong>integrated into your ERP.</strong>
+              BOQ management, subcontractor tracking, project cost control, progress billing, and earned value analytics, <strong>integrated into your ERP.</strong>
             </p>
             <div className="cp-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -186,7 +186,7 @@ export function ConstructionProjectsContent() {
         </div>
       </section>
 
-      {/* ═══ OPERATIONS — 4 cards ═══ */}
+      {/* ═══ OPERATIONS: 4 cards ═══ */}
       <section className="cp-ops">
         <div className="cp-ops-inner">
           <div className="cp-ops-hdr rev">
@@ -205,7 +205,7 @@ export function ConstructionProjectsContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — alternating rows ═══ */}
+      {/* ═══ FEATURES: alternating rows ═══ */}
       <section className="cp-feat" id="features">
         <div className="cp-feat-inner">
           <div className="cp-feat-hdr rev">
@@ -227,7 +227,7 @@ export function ConstructionProjectsContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="cp-proc" id="process">
         <div className="cp-proc-inner">
           <div className="cp-proc-hdr rev">
@@ -262,7 +262,7 @@ export function ConstructionProjectsContent() {
         </div>
       </section>
 
-      {/* ═══ MULTI-SITE — split ═══ */}
+      {/* ═══ MULTI-SITE: split ═══ */}
       <section className="cp-multi" id="multi-site">
         <div className="cp-multi-inner">
           <div className="cp-multi-hdr rev">
@@ -273,7 +273,7 @@ export function ConstructionProjectsContent() {
             <div className="cp-multi-left">
               <div className="cp-multi-big-n">12+</div>
               <div className="cp-multi-big-l">Projects managed from one ERP</div>
-              <p className="cp-multi-big-s">Head office, regional site offices, and joint venture partners — all orchestrated from a single system with real-time cost visibility, subcontractor tracking, and consolidated project analytics across every site.</p>
+              <p className="cp-multi-big-s">Head office, regional site offices, and joint venture partners, all orchestrated from a single system with real-time cost visibility, subcontractor tracking, and consolidated project analytics across every site.</p>
             </div>
             <div className="cp-multi-right">
               {SITES.map((site) => (
@@ -335,10 +335,10 @@ export function ConstructionProjectsContent() {
                 <div className="oi-closer-insight-stat">77%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of construction projects exceed their original budget.</strong>
-                  Source: McKinsey Global Institute, 2024. The result is undetected cost overruns, delayed RA billing, material pilferage, and zero visibility into project-level profitability — problems that compound across a portfolio.
+                  Source: McKinsey Global Institute, 2024. The result is undetected cost overruns, delayed RA billing, material pilferage, and zero visibility into project-level profitability, problems that compound across a portfolio.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer construction deployment covers the full project lifecycle — not just accounting. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer construction deployment covers the full project lifecycle, not just accounting. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -349,25 +349,25 @@ export function ConstructionProjectsContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><GridIcon /></div>
                 <div className="oi-closer-commit-t">BOQ-linked cost control from day one</div>
-                <p className="oi-closer-commit-b">Every cost — purchase, subcontract, labour, overhead — is tagged to a project and BOQ item. Budget, committed, actual, and forecast costs are visible in real time at every level of the BOQ hierarchy.</p>
+                <p className="oi-closer-commit-b">Every cost, purchase, subcontract, labour, overhead, is tagged to a project and BOQ item. Budget, committed, actual, and forecast costs are visible in real time at every level of the BOQ hierarchy.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed cost &amp; schedule targets</div>
-                <p className="oi-closer-commit-b">Budget variance thresholds, RA bill cycle times, and reporting accuracy are defined before go-live. If we miss targets, we keep iterating — at our cost.</p>
+                <p className="oi-closer-commit-b">Budget variance thresholds, RA bill cycle times, and reporting accuracy are defined before go-live. If we miss targets, we keep iterating, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Automated subcontractor lifecycle</div>
-                <p className="oi-closer-commit-b">From prequalification through work order, progress measurement, RA billing, retention, and final account — the entire subcontractor lifecycle is system-driven. No spreadsheets, no manual calculations.</p>
+                <p className="oi-closer-commit-b">From prequalification through work order, progress measurement, RA billing, retention, and final account, the entire subcontractor lifecycle is system-driven. No spreadsheets, no manual calculations.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><BriefcaseIcon /></div>
                 <div className="oi-closer-commit-t">Senior construction engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who surveys your projects is the one who configures, migrates, trains, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who surveys your projects is the one who configures, migrates, trains, and supports, named in the contract.</p>
               </div>
             </div>
           </div>

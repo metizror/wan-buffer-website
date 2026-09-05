@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   PREDICTIVE MAINTENANCE — unique page design
+   PREDICTIVE MAINTENANCE, unique page design
    Hero split + gauge panel · Alert feed · Side-stripe capability
    cards · Vertical step list · Asymmetric impact metrics ·
    Platforms · Closer · Support
@@ -49,21 +49,21 @@ const GAUGES = [
 
 /* ── Alert feed ── */
 const ALERTS = [
-  { time: "2 min ago", icon: <ZapIcon />, t: "Vibration anomaly detected", s: "CNC Lathe #3 — bearing wear pattern identified", level: "info" as const },
-  { time: "18 min ago", icon: <EyeIcon />, t: "Temperature threshold approaching", s: "Hydraulic Press A — coolant flow below optimum", level: "warning" as const },
-  { time: "1 hr ago", icon: <SettingsIcon />, t: "Work order auto-generated", s: "Conveyor Belt 7 — belt replacement scheduled for Monday", level: "action" as const },
-  { time: "3 hrs ago", icon: <CheckCircleIcon />, t: "Maintenance completed", s: "Compressor Unit — filter replacement verified by IoT sensor", level: "done" as const },
-  { time: "6 hrs ago", icon: <TrendingUpIcon />, t: "Model retrained", s: "All assets — prediction accuracy updated to 96.3%", level: "info" as const },
+  { time: "2 min ago", icon: <ZapIcon />, t: "Vibration anomaly detected", s: "CNC Lathe #3, bearing wear pattern identified", level: "info" as const },
+  { time: "18 min ago", icon: <EyeIcon />, t: "Temperature threshold approaching", s: "Hydraulic Press A, coolant flow below optimum", level: "warning" as const },
+  { time: "1 hr ago", icon: <SettingsIcon />, t: "Work order auto-generated", s: "Conveyor Belt 7, belt replacement scheduled for Monday", level: "action" as const },
+  { time: "3 hrs ago", icon: <CheckCircleIcon />, t: "Maintenance completed", s: "Compressor Unit, filter replacement verified by IoT sensor", level: "done" as const },
+  { time: "6 hrs ago", icon: <TrendingUpIcon />, t: "Model retrained", s: "All assets, prediction accuracy updated to 96.3%", level: "info" as const },
 ] as const;
 
 /* ── Capabilities ── */
 const CAPABILITIES = [
-  { icon: <CpuIcon />, t: "Failure Prediction", s: "ML models analyse vibration, temperature, pressure, and usage patterns to predict equipment failures days or weeks before they happen — giving your team time to plan, not react.", accent: "ai" as const },
+  { icon: <CpuIcon />, t: "Failure Prediction", s: "ML models analyse vibration, temperature, pressure, and usage patterns to predict equipment failures days or weeks before they happen, giving your team time to plan, not react.", accent: "ai" as const },
   { icon: <EyeIcon />, t: "Condition Monitoring", s: "Real-time health scores for every asset based on IoT sensor data. Dashboards show which machines are healthy, which need attention, and which are approaching failure thresholds.", accent: "amber" as const },
-  { icon: <SettingsIcon />, t: "Automated Work Orders", s: "When a failure prediction crosses the threshold, work orders generate automatically in your ERP — with the right parts, the right technician, and the right priority level assigned.", accent: "ai" as const },
+  { icon: <SettingsIcon />, t: "Automated Work Orders", s: "When a failure prediction crosses the threshold, work orders generate automatically in your ERP, with the right parts, the right technician, and the right priority level assigned.", accent: "ai" as const },
   { icon: <BarChartIcon />, t: "MTBF & Reliability Analysis", s: "Track mean time between failures, asset reliability trends, and maintenance effectiveness metrics. Models continuously improve as more failure data is collected.", accent: "amber" as const },
-  { icon: <RefreshIcon />, t: "Maintenance Scheduling", s: "Replace calendar-based maintenance with condition-based scheduling. Service only what needs servicing — reducing unnecessary maintenance costs by up to 40% while improving uptime.", accent: "ai" as const },
-  { icon: <ShieldIcon />, t: "Spare Parts Optimisation", s: "Demand predictions for spare parts based on failure forecasts. The right parts are in stock before they are needed — eliminating emergency procurement and expedited shipping costs.", accent: "amber" as const },
+  { icon: <RefreshIcon />, t: "Maintenance Scheduling", s: "Replace calendar-based maintenance with condition-based scheduling. Service only what needs servicing, reducing unnecessary maintenance costs by up to 40% while improving uptime.", accent: "ai" as const },
+  { icon: <ShieldIcon />, t: "Spare Parts Optimisation", s: "Demand predictions for spare parts based on failure forecasts. The right parts are in stock before they are needed, eliminating emergency procurement and expedited shipping costs.", accent: "amber" as const },
 ] as const;
 
 /* ── How it works ── */
@@ -75,7 +75,7 @@ const STEPS = [
 ] as const;
 
 /* ── Impact metrics ── */
-const HERO_METRIC = { n: "45%", l: "Less unplanned downtime", sub: "Average reduction across our predictive maintenance deployments — measured against pre-deployment baselines over 6 months." };
+const HERO_METRIC = { n: "45%", l: "Less unplanned downtime", sub: "Average reduction across our predictive maintenance deployments, measured against pre-deployment baselines over 6 months." };
 const SIDE_METRICS = [
   { n: "40%", l: "Maintenance cost reduction" },
   { n: "3×", l: "Asset lifespan extension" },
@@ -97,7 +97,7 @@ export function PredictiveMaintenanceContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + gauge panel right ═══ */}
+      {/* ═══ HERO: text left + gauge panel right ═══ */}
       <section className="pm-hero">
         <div className="pm-hero-glow pm-hero-glow-1" aria-hidden="true" />
         <div className="pm-hero-glow pm-hero-glow-2" aria-hidden="true" />
@@ -112,7 +112,7 @@ export function PredictiveMaintenanceContent() {
               <span className="acc">Fix it before it breaks.</span>
             </h1>
             <p className="pm-hero-sub rev">
-              AI that predicts equipment failures before they happen. Sensor data analysis, automated work orders, and condition-based scheduling — <strong>eliminating unplanned downtime.</strong>
+              AI that predicts equipment failures before they happen. Sensor data analysis, automated work orders, and condition-based scheduling, <strong>eliminating unplanned downtime.</strong>
             </p>
             <div className="pm-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -147,7 +147,7 @@ export function PredictiveMaintenanceContent() {
         </div>
       </section>
 
-      {/* ═══ ALERT FEED — scrolling notification log ═══ */}
+      {/* ═══ ALERT FEED: scrolling notification log ═══ */}
       <section className="pm-alerts">
         <div className="pm-alerts-inner">
           <div className="pm-alerts-label rev">Live maintenance intelligence</div>
@@ -168,13 +168,13 @@ export function PredictiveMaintenanceContent() {
         </div>
       </section>
 
-      {/* ═══ CAPABILITIES — side-stripe cards ═══ */}
+      {/* ═══ CAPABILITIES: side-stripe cards ═══ */}
       <section className="pm-caps" id="capabilities">
         <div className="pm-caps-inner">
           <div className="pm-caps-hdr rev">
             <div className="eyebrow">Core capabilities</div>
             <h2>Predict. Prevent.<br /><span>Perform.</span></h2>
-            <p>Every capability is engineered for manufacturing and industrial environments — trained on real sensor data, integrated with your ERP maintenance module, and continuously improving as equipment ages.</p>
+            <p>Every capability is engineered for manufacturing and industrial environments, trained on real sensor data, integrated with your ERP maintenance module, and continuously improving as equipment ages.</p>
           </div>
           <div className="pm-caps-grid rev">
             {CAPABILITIES.map((c) => (
@@ -188,7 +188,7 @@ export function PredictiveMaintenanceContent() {
         </div>
       </section>
 
-      {/* ═══ HOW IT WORKS — vertical step list ═══ */}
+      {/* ═══ HOW IT WORKS: vertical step list ═══ */}
       <section className="pm-how" id="how-it-works">
         <div className="pm-how-inner">
           <div className="pm-how-hdr rev">
@@ -234,7 +234,7 @@ export function PredictiveMaintenanceContent() {
         </div>
       </section>
 
-      {/* ═══ IMPACT — asymmetric 1+2 split ═══ */}
+      {/* ═══ IMPACT: asymmetric 1+2 split ═══ */}
       <section className="pm-impact" id="results">
         <div className="pm-impact-inner">
           <div className="pm-impact-hdr rev">
@@ -287,7 +287,7 @@ export function PredictiveMaintenanceContent() {
                 <div className="oi-closer-insight-stat">82%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of equipment failures are not prevented by scheduled maintenance.</strong>
-                  Source: ReliabilityWeb, 2024. Calendar-based maintenance services machines that don&apos;t need it and misses failures that don&apos;t follow schedules — the worst of both worlds.
+                  Source: ReliabilityWeb, 2024. Calendar-based maintenance services machines that don&apos;t need it and misses failures that don&apos;t follow schedules, the worst of both worlds.
                 </div>
               </div>
               <p>That&apos;s why every Wan Buffer predictive maintenance deployment replaces schedules with sensor intelligence. Four commitments, written into the contract.</p>
@@ -307,19 +307,19 @@ export function PredictiveMaintenanceContent() {
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed accuracy targets</div>
-                <p className="oi-closer-commit-b">Failure prediction accuracy, false positive rates, and downtime reduction are defined before deployment. If we miss targets, we keep iterating — at our cost.</p>
+                <p className="oi-closer-commit-b">Failure prediction accuracy, false positive rates, and downtime reduction are defined before deployment. If we miss targets, we keep iterating, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><SettingsIcon /></div>
                 <div className="oi-closer-commit-t">ERP-integrated work orders</div>
-                <p className="oi-closer-commit-b">Predictions trigger actual work orders in your ERP — with parts, technician assignment, and scheduling. Not just alerts that require manual follow-up.</p>
+                <p className="oi-closer-commit-b">Predictions trigger actual work orders in your ERP, with parts, technician assignment, and scheduling. Not just alerts that require manual follow-up.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineers who build your maintenance models are the ones who deploy, monitor, and support them — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineers who build your maintenance models are the ones who deploy, monitor, and support them, named in the contract.</p>
               </div>
             </div>
           </div>
@@ -362,7 +362,7 @@ export function PredictiveMaintenanceContent() {
               <div className="oi-supp-icon-v2"><PhoneCallIcon /></div>
               <div className="oi-supp-label">Phone · 24 &times; 7</div>
               <a className="oi-supp-title-v2" href="tel:+919904122699">+91 99041 22699</a>
-              <p className="oi-supp-body-v2">Sensor pipeline failures or false alert storms. Answered by a senior engineer — not a call centre.</p>
+              <p className="oi-supp-body-v2">Sensor pipeline failures or false alert storms. Answered by a senior engineer, not a call centre.</p>
               <a className="oi-supp-cta-v2" href="tel:+919904122699">Call now <ArrowRightIcon /></a>
             </div>
             <div className="oi-supp-card">

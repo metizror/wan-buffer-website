@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   FINANCE & SERVICES — unique page design
+   FINANCE & SERVICES, unique page design
    Hero split + reconciliation ledger mock · Operations cards · Alternating
    feature rows · Dotted process flow · Multi-entity section ·
    Platforms · FAQ · Closer · Support
@@ -42,29 +42,29 @@ import {
 
 /* ── Reconciliation ledger mockup ── */
 const LEDGER_ENTRIES = [
-  { ref: "TXN-80421", desc: "Wire transfer — Acme Corp", amount: "+$24,500.00", match: "matched" as const },
-  { ref: "TXN-80422", desc: "Card payment — Azure Sub", amount: "-$1,240.00", match: "matched" as const },
-  { ref: "TXN-80423", desc: "NEFT — Supplier INV-3391", amount: "-$8,750.00", match: "pending" as const },
-  { ref: "TXN-80424", desc: "ACH deposit — Client retainer", amount: "+$15,000.00", match: "matched" as const },
-  { ref: "TXN-80425", desc: "Duplicate debit — flagged", amount: "-$3,200.00", match: "flagged" as const },
-  { ref: "TXN-80426", desc: "SWIFT — EUR conversion", amount: "+$41,870.00", match: "matched" as const },
+  { ref: "TXN-80421", desc: "Wire transfer: Acme Corp", amount: "+$24,500.00", match: "matched" as const },
+  { ref: "TXN-80422", desc: "Card payment: Azure Sub", amount: "-$1,240.00", match: "matched" as const },
+  { ref: "TXN-80423", desc: "NEFT: Supplier INV-3391", amount: "-$8,750.00", match: "pending" as const },
+  { ref: "TXN-80424", desc: "ACH deposit: Client retainer", amount: "+$15,000.00", match: "matched" as const },
+  { ref: "TXN-80425", desc: "Duplicate debit, flagged", amount: "-$3,200.00", match: "flagged" as const },
+  { ref: "TXN-80426", desc: "SWIFT: EUR conversion", amount: "+$41,870.00", match: "matched" as const },
 ] as const;
 
 /* ── Finance operations ── */
 const OPERATIONS = [
-  { icon: <RefreshIcon />, t: "Auto-Reconciliation", s: "AI-powered bank reconciliation that matches transactions to invoices, payments, and journal entries automatically — handling partial payments, multi-currency conversions, and split transactions.", color: "ai" as const },
-  { icon: <ShieldIcon />, t: "Fraud Detection", s: "Machine learning models that flag anomalous transactions, duplicate payments, unusual vendor patterns, and policy violations in real time — reducing financial fraud exposure by up to 70%.", color: "green" as const },
-  { icon: <TargetIcon />, t: "Lead Scoring", s: "Predictive AI that scores prospects based on engagement signals, firmographic data, deal velocity, and conversion probability — so your sales team focuses on the deals most likely to close.", color: "purple" as const },
+  { icon: <RefreshIcon />, t: "Auto-Reconciliation", s: "AI-powered bank reconciliation that matches transactions to invoices, payments, and journal entries automatically, handling partial payments, multi-currency conversions, and split transactions.", color: "ai" as const },
+  { icon: <ShieldIcon />, t: "Fraud Detection", s: "Machine learning models that flag anomalous transactions, duplicate payments, unusual vendor patterns, and policy violations in real time, reducing financial fraud exposure by up to 70%.", color: "green" as const },
+  { icon: <TargetIcon />, t: "Lead Scoring", s: "Predictive AI that scores prospects based on engagement signals, firmographic data, deal velocity, and conversion probability, so your sales team focuses on the deals most likely to close.", color: "purple" as const },
   { icon: <BarChartIcon />, t: "Revenue Analytics", s: "Real-time dashboards for revenue recognition, cash flow forecasting, margin analysis, and DSO tracking. Drill from company-level financials to individual transaction and client-level detail.", color: "red" as const },
 ] as const;
 
 /* ── Features ── */
 const FEATURES = [
-  { num: "01", icon: <RefreshIcon />, t: "Automated Bank Reconciliation", s: "AI matches bank statement lines to ERP transactions using reference numbers, amounts, dates, and counterparty names. Handles partial payments, split transactions, and multi-currency entries. Unmatched items are flagged for review — reducing manual reconciliation time by up to 85%." },
-  { num: "02", icon: <ShieldIcon />, t: "AI Fraud Detection & AML", s: "ML models trained on your transaction data flag anomalies — duplicate invoices, unusual payment patterns, out-of-policy expenses, and potential money laundering signals. Risk scores assigned per transaction with automated escalation workflows and audit-ready investigation trails." },
-  { num: "03", icon: <TargetIcon />, t: "Predictive Lead Scoring", s: "AI analyses CRM activity, email engagement, website behaviour, firmographic data, and historical win rates to score every lead. Automated lead routing based on score thresholds — hot leads to closers, warm leads to nurture sequences, cold leads to re-engagement campaigns." },
-  { num: "04", icon: <WalletIcon />, t: "Revenue Recognition & Billing", s: "ASC 606 and IFRS 15 compliant revenue recognition across subscription, project, milestone, and usage-based billing models. Automated invoice generation, dunning sequences, and payment reminders — with multi-currency and multi-entity consolidation." },
-  { num: "05", icon: <EyeIcon />, t: "KYC & Compliance Automation", s: "Automated Know Your Customer workflows — document collection, identity verification, risk assessment, and ongoing monitoring. Configurable for RBI, FCA, SEC, and DFSA regulatory frameworks with automated reporting and audit trails." },
+  { num: "01", icon: <RefreshIcon />, t: "Automated Bank Reconciliation", s: "AI matches bank statement lines to ERP transactions using reference numbers, amounts, dates, and counterparty names. Handles partial payments, split transactions, and multi-currency entries. Unmatched items are flagged for review, reducing manual reconciliation time by up to 85%." },
+  { num: "02", icon: <ShieldIcon />, t: "AI Fraud Detection & AML", s: "ML models trained on your transaction data flag anomalies, duplicate invoices, unusual payment patterns, out-of-policy expenses, and potential money laundering signals. Risk scores assigned per transaction with automated escalation workflows and audit-ready investigation trails." },
+  { num: "03", icon: <TargetIcon />, t: "Predictive Lead Scoring", s: "AI analyses CRM activity, email engagement, website behaviour, firmographic data, and historical win rates to score every lead. Automated lead routing based on score thresholds, hot leads to closers, warm leads to nurture sequences, cold leads to re-engagement campaigns." },
+  { num: "04", icon: <WalletIcon />, t: "Revenue Recognition & Billing", s: "ASC 606 and IFRS 15 compliant revenue recognition across subscription, project, milestone, and usage-based billing models. Automated invoice generation, dunning sequences, and payment reminders, with multi-currency and multi-entity consolidation." },
+  { num: "05", icon: <EyeIcon />, t: "KYC & Compliance Automation", s: "Automated Know Your Customer workflows, document collection, identity verification, risk assessment, and ongoing monitoring. Configurable for RBI, FCA, SEC, and DFSA regulatory frameworks with automated reporting and audit trails." },
   { num: "06", icon: <BarChartIcon />, t: "Financial Analytics & Forecasting", s: "Cash flow forecasting, budget-vs-actual analysis, and scenario modelling powered by ML. Real-time P&L, balance sheet, and cash flow dashboards with drill-down from consolidated financials to individual journal entries." },
 ] as const;
 
@@ -96,11 +96,11 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "How does automated bank reconciliation handle partial payments?", a: "The AI matching engine identifies partial payments by comparing cumulative amounts against open invoices. When a bank line matches 60% of an invoice, the system creates a partial reconciliation and keeps the remaining balance open. Split payments across multiple invoices and multi-currency conversions are handled automatically — no manual journal entries required." },
-  { q: "How does AI fraud detection reduce false positives?", a: "Our ML models are trained on your specific transaction patterns — not generic rules. The system learns what is normal for your business and only flags genuine anomalies. Risk scores are assigned per transaction, so your team can prioritise high-risk items. Feedback loops (marking false positives) improve the model continuously. Clients typically see 70% fewer false positives compared to rule-based systems." },
-  { q: "Can lead scoring integrate with our existing CRM?", a: "Yes. We integrate with Odoo CRM, Salesforce, HubSpot, and Zoho CRM. Lead scores sync bidirectionally — the AI model pulls engagement data from your CRM and pushes scores back for routing and prioritisation. Sales teams see scores directly in their pipeline view." },
-  { q: "Do you support multi-entity financial consolidation?", a: "Yes. We configure inter-company transactions, elimination entries, and multi-currency consolidation across parent and subsidiary entities. Each entity maintains its own chart of accounts, tax configuration, and regulatory compliance — while consolidated reporting rolls up automatically for group-level financials." },
-  { q: "Is the system compliant with ASC 606 / IFRS 15 revenue recognition?", a: "Yes. We configure revenue recognition rules for subscription, milestone, percentage-of-completion, and usage-based models — fully compliant with ASC 606 and IFRS 15. Contract modifications, variable consideration, and multi-element arrangements are all supported with automated journal entries and disclosure reporting." },
+  { q: "How does automated bank reconciliation handle partial payments?", a: "The AI matching engine identifies partial payments by comparing cumulative amounts against open invoices. When a bank line matches 60% of an invoice, the system creates a partial reconciliation and keeps the remaining balance open. Split payments across multiple invoices and multi-currency conversions are handled automatically, no manual journal entries required." },
+  { q: "How does AI fraud detection reduce false positives?", a: "Our ML models are trained on your specific transaction patterns, not generic rules. The system learns what is normal for your business and only flags genuine anomalies. Risk scores are assigned per transaction, so your team can prioritise high-risk items. Feedback loops (marking false positives) improve the model continuously. Clients typically see 70% fewer false positives compared to rule-based systems." },
+  { q: "Can lead scoring integrate with our existing CRM?", a: "Yes. We integrate with Odoo CRM, Salesforce, HubSpot, and Zoho CRM. Lead scores sync bidirectionally, the AI model pulls engagement data from your CRM and pushes scores back for routing and prioritisation. Sales teams see scores directly in their pipeline view." },
+  { q: "Do you support multi-entity financial consolidation?", a: "Yes. We configure inter-company transactions, elimination entries, and multi-currency consolidation across parent and subsidiary entities. Each entity maintains its own chart of accounts, tax configuration, and regulatory compliance, while consolidated reporting rolls up automatically for group-level financials." },
+  { q: "Is the system compliant with ASC 606 / IFRS 15 revenue recognition?", a: "Yes. We configure revenue recognition rules for subscription, milestone, percentage-of-completion, and usage-based models, fully compliant with ASC 606 and IFRS 15. Contract modifications, variable consideration, and multi-element arrangements are all supported with automated journal entries and disclosure reporting." },
   { q: "How long does a finance ERP implementation take?", a: "Single-entity setup with reconciliation and basic analytics takes 4–6 weeks. Full finance ERP with fraud detection, lead scoring, and compliance automation takes 10–16 weeks. Multi-entity operations with consolidation and regulatory reporting take 14–24 weeks." },
 ] as const;
 
@@ -109,7 +109,7 @@ export function FinanceServicesContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + reconciliation ledger right ═══ */}
+      {/* ═══ HERO: text left + reconciliation ledger right ═══ */}
       <section className="fs-hero">
         <div className="fs-hero-glow fs-hero-glow-1" aria-hidden="true" />
         <div className="fs-hero-glow fs-hero-glow-2" aria-hidden="true" />
@@ -125,7 +125,7 @@ export function FinanceServicesContent() {
               <span className="acc">Every transaction.<br />Every risk.<br />Managed.</span>
             </h1>
             <p className="fs-hero-sub rev">
-              Automated bank reconciliation, AI fraud detection, predictive lead scoring, revenue recognition, and compliance automation — <strong>integrated into your ERP.</strong>
+              Automated bank reconciliation, AI fraud detection, predictive lead scoring, revenue recognition, and compliance automation, <strong>integrated into your ERP.</strong>
             </p>
             <div className="fs-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -180,7 +180,7 @@ export function FinanceServicesContent() {
         </div>
       </section>
 
-      {/* ═══ OPERATIONS — 4 cards ═══ */}
+      {/* ═══ OPERATIONS: 4 cards ═══ */}
       <section className="fs-ops">
         <div className="fs-ops-inner">
           <div className="fs-ops-hdr rev">
@@ -199,7 +199,7 @@ export function FinanceServicesContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — alternating rows ═══ */}
+      {/* ═══ FEATURES: alternating rows ═══ */}
       <section className="fs-feat" id="features">
         <div className="fs-feat-inner">
           <div className="fs-feat-hdr rev">
@@ -221,7 +221,7 @@ export function FinanceServicesContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="fs-proc" id="process">
         <div className="fs-proc-inner">
           <div className="fs-proc-hdr rev">
@@ -256,7 +256,7 @@ export function FinanceServicesContent() {
         </div>
       </section>
 
-      {/* ═══ MULTI-ENTITY — split ═══ */}
+      {/* ═══ MULTI-ENTITY: split ═══ */}
       <section className="fs-multi" id="multi-entity">
         <div className="fs-multi-inner">
           <div className="fs-multi-hdr rev">
@@ -267,7 +267,7 @@ export function FinanceServicesContent() {
             <div className="fs-multi-left">
               <div className="fs-multi-big-n">3+</div>
               <div className="fs-multi-big-l">Legal entities managed from one ERP</div>
-              <p className="fs-multi-big-s">Holdings, subsidiaries, and offshore entities — all orchestrated from a single system with inter-company transactions, elimination entries, multi-currency consolidation, and unified group reporting.</p>
+              <p className="fs-multi-big-s">Holdings, subsidiaries, and offshore entities, all orchestrated from a single system with inter-company transactions, elimination entries, multi-currency consolidation, and unified group reporting.</p>
             </div>
             <div className="fs-multi-right">
               {ENTITIES.map((ent) => (
@@ -329,10 +329,10 @@ export function FinanceServicesContent() {
                 <div className="oi-closer-insight-stat">62%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of finance teams still reconcile bank statements manually.</strong>
-                  Source: Deloitte CFO Survey, 2024. The result is delayed month-end close, undetected discrepancies, missed fraud signals, and zero predictive visibility into cash flow — problems that compound as transaction volume grows.
+                  Source: Deloitte CFO Survey, 2024. The result is delayed month-end close, undetected discrepancies, missed fraud signals, and zero predictive visibility into cash flow, problems that compound as transaction volume grows.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer finance deployment covers the full financial lifecycle — not just bookkeeping. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer finance deployment covers the full financial lifecycle, not just bookkeeping. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -349,19 +349,19 @@ export function FinanceServicesContent() {
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed accuracy &amp; speed targets</div>
-                <p className="oi-closer-commit-b">Reconciliation match rates, fraud detection precision, and month-end close timelines are defined before go-live. If we miss targets, we keep iterating — at our cost.</p>
+                <p className="oi-closer-commit-b">Reconciliation match rates, fraud detection precision, and month-end close timelines are defined before go-live. If we miss targets, we keep iterating, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
                 <div className="oi-closer-commit-t">AI-first fraud &amp; compliance</div>
-                <p className="oi-closer-commit-b">Every transaction is risk-scored by ML. Every compliance check is automated. No manual-only controls, no spreadsheet-based monitoring — data-driven financial governance.</p>
+                <p className="oi-closer-commit-b">Every transaction is risk-scored by ML. Every compliance check is automated. No manual-only controls, no spreadsheet-based monitoring, data-driven financial governance.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior finance engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your financial workflows is the one who configures, migrates, trains, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your financial workflows is the one who configures, migrates, trains, and supports, named in the contract.</p>
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@ export function HomeContact() {
           ERP <span className="acc">Intelligent?</span>
         </h2>
         <p className="sec-p">
-          Talk to an AI + ERP specialist — not a sales rep — within 24 hours. We'll map your biggest automation
+          Talk to an AI + ERP specialist, not a sales rep, within 24 hours. We'll map your biggest automation
           opportunities in the first call.
         </p>
         <div className="cta-promises">

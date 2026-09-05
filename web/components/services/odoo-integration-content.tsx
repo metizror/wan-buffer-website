@@ -1,4 +1,4 @@
-/* Odoo ERP integration — legacy PHP copy; layout matches /odoo/implementation (oi-* system). */
+/* Odoo ERP integration, legacy PHP copy; layout matches /odoo/implementation (oi-* system). */
 
 import Image from "next/image";
 
@@ -41,7 +41,7 @@ export function OdooIntegrationContent() {
             </span>
           </h1>
           <p className="oi-hero-lux-sub rev">
-          Your business doesn't run on Odoo alone — it runs on Odoo plus your store, your payment gateway, your shipping carriers, your accounting tool. We connect them all with <strong>reliable two-way sync,</strong> so your data lives in one place instead of being re-typed between five systems.
+          Your business doesn't run on Odoo alone, it runs on Odoo plus your store, your payment gateway, your shipping carriers, your accounting tool. We connect them all with <strong>reliable two-way sync,</strong> so your data lives in one place instead of being re-typed between five systems.
           </p>
           <div className="oi-hero-lux-cta rev">
             <a className="oi-hero-lux-primary" href="#contact">

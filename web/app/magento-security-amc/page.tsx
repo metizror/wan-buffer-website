@@ -11,7 +11,7 @@ import { MagentoSecurityContent } from "@/components/services/magento-security-c
 export const metadata: Metadata = {
   title: "Magento Security & AMC | Patches, PCI & Maintenance | Wan Buffer",
   description:
-    "Magento 2 security services and annual maintenance — security patches, PCI DSS compliance, malware scanning, SSL management, WAF configuration, and SLA-based AMC plans for Adobe Commerce stores.",
+    "Magento 2 security services and annual maintenance, security patches, PCI DSS compliance, malware scanning, SSL management, WAF configuration, and SLA-based AMC plans for Adobe Commerce stores.",
   keywords: [
     "Magento security",
     "Magento AMC",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Magento Security & AMC — Patches, PCI & Maintenance | Wan Buffer",
+    title: "Magento Security & AMC: Patches, PCI & Maintenance | Wan Buffer",
     description:
-      "Magento security — patches, PCI compliance, malware scanning, and SLA-based AMC plans. Keep your store secure and maintained.",
+      "Magento security, patches, PCI compliance, malware scanning, and SLA-based AMC plans. Keep your store secure and maintained.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/magento-security-amc" },

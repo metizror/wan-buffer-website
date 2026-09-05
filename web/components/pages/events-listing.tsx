@@ -13,7 +13,7 @@ import {
 
 interface EventsListingProps {
   events: WanBufferEvent[];
-  /** Filter options — the categories/locations actually in use, plus the built-in ones. */
+  /** Filter options: the categories/locations actually in use, plus the built-in ones. */
   categories: string[];
   locations: string[];
 }

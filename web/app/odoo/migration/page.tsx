@@ -11,7 +11,7 @@ import { OdooMigrationContent } from "@/components/services/odoo-migration-conte
 export const metadata: Metadata = {
   title: "Odoo Migration | Odoo Migration Service | Wan Buffer",
   description:
-    "Odoo migration service: upgrade safely with partner-led data transfer, app compatibility work, and rigorous testing—so reports, finance, and add-ons stay usable on new Odoo versions.",
+    "Odoo migration service: upgrade safely with partner-led data transfer, app compatibility work, and rigorous testing: so reports, finance, and add-ons stay usable on new Odoo versions.",
   keywords: [
     "Odoo migration",
     "Odoo migration service",
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
     title: "Odoo Migration Service | Wan Buffer",
     description:
-      "Migrate Odoo with care for data, custom apps, and validation—trained Odoo partners for upgrades and new-version rollouts.",
+      "Migrate Odoo with care for data, custom apps, and validation: trained Odoo partners for upgrades and new-version rollouts.",
     siteName: "Wan Buffer",
   },
 };

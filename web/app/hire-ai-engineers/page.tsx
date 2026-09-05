@@ -9,9 +9,9 @@ import { HomeWanny } from "@/components/home/wanny";
 import { HireAiContent } from "@/components/services/hire-ai-content";
 
 export const metadata: Metadata = {
-  title: "Hire AI Engineers | LangChain, GPT, ML & Python Specialists — Remote, Dedicated — Wan Buffer",
+  title: "Hire AI Engineers | LangChain, GPT, ML & Python Specialists: Remote, Dedicated | Wan Buffer",
   description:
-    "Hire pre-vetted AI and ML engineers — LangChain, OpenAI GPT, Claude, TensorFlow, and Python specialists. 100% dedicated, embedded in your workflow, onboarded in 1–2 weeks. Build AI agents, predictive models, and intelligent automation.",
+    "Hire pre-vetted AI and ML engineers: LangChain, OpenAI GPT, Claude, TensorFlow, and Python specialists. 100% dedicated, embedded in your workflow, onboarded in 1–2 weeks. Build AI agents, predictive models, and intelligent automation.",
   keywords: [
     "hire AI engineers",
     "hire ML engineers",
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Hire AI Engineers — LangChain, GPT, ML & Python Specialists | Wan Buffer",
+    title: "Hire AI Engineers: LangChain, GPT, ML & Python Specialists | Wan Buffer",
     description:
-      "Pre-vetted AI/ML engineers — LangChain, GPT, TensorFlow, and Python specialists. 100% dedicated, onboarded in 1–2 weeks.",
+      "Pre-vetted AI/ML engineers: LangChain, GPT, TensorFlow, and Python specialists. 100% dedicated, onboarded in 1–2 weeks.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/hire-ai-engineers" },

@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   INVENTORY & WMS — unique page design
+   INVENTORY & WMS, unique page design
    Hero split + bin grid mock · Operations cards · Alternating feature
    rows · Dotted process flow · Multi-warehouse section ·
    Platforms · Closer · Support
@@ -52,19 +52,19 @@ const BIN_GRID = [
 /* ── Warehouse operations ── */
 const OPERATIONS = [
   { icon: <PackageIcon />, t: "Receiving", s: "Inbound goods receipt with barcode scanning, quality inspection gates, and automatic putaway rules by product type, size, or velocity.", color: "ai" as const },
-  { icon: <SearchIcon />, t: "Picking", s: "Wave picking, batch picking, and zone picking strategies — optimised routes that minimise travel time and maximise picker productivity.", color: "green" as const },
+  { icon: <SearchIcon />, t: "Picking", s: "Wave picking, batch picking, and zone picking strategies, optimised routes that minimise travel time and maximise picker productivity.", color: "green" as const },
   { icon: <GridIcon />, t: "Packing", s: "Pack station workflows with box selection rules, weight verification, shipping label generation, and packing slip automation.", color: "purple" as const },
-  { icon: <RocketIcon />, t: "Shipping", s: "Carrier integration, rate shopping, tracking number generation, and automated customer notifications — from packed to dispatched in seconds.", color: "red" as const },
+  { icon: <RocketIcon />, t: "Shipping", s: "Carrier integration, rate shopping, tracking number generation, and automated customer notifications, from packed to dispatched in seconds.", color: "red" as const },
 ] as const;
 
 /* ── Features ── */
 const FEATURES = [
-  { num: "01", icon: <GridIcon />, t: "Bin Location Management", s: "Define zones, aisles, racks, and bins. Map your physical warehouse layout digitally. Every product has a precise home — and the system knows exactly where it is." },
+  { num: "01", icon: <GridIcon />, t: "Bin Location Management", s: "Define zones, aisles, racks, and bins. Map your physical warehouse layout digitally. Every product has a precise home, and the system knows exactly where it is." },
   { num: "02", icon: <ShieldIcon />, t: "Lot & Serial Tracking", s: "Full traceability from receipt to delivery. Track lots for batch products, serial numbers for individual items. Essential for manufacturing, pharma, and food industries." },
-  { num: "03", icon: <MonitorIcon />, t: "Barcode & Mobile Scanning", s: "Warehouse staff scan barcodes for receiving, picking, packing, and cycle counts. Mobile-first interface works on any Android/iOS device — no expensive hardware required." },
+  { num: "03", icon: <MonitorIcon />, t: "Barcode & Mobile Scanning", s: "Warehouse staff scan barcodes for receiving, picking, packing, and cycle counts. Mobile-first interface works on any Android/iOS device, no expensive hardware required." },
   { num: "04", icon: <RefreshIcon />, t: "Automated Replenishment", s: "When pick-face bins run low, the system triggers internal transfers from reserve stock automatically. Sales-driven reorder rules trigger purchase orders from suppliers." },
-  { num: "05", icon: <BarChartIcon />, t: "Inventory Valuation", s: "FIFO, LIFO, average cost, and standard cost methods — calculated in real time. Multi-currency valuation for international operations. Landed cost tracking included." },
-  { num: "06", icon: <EyeIcon />, t: "Real-Time Dashboards", s: "Stock levels, movement history, ageing analysis, dead stock reports, and warehouse KPIs — live from your ERP. Drill from summary to individual transaction." },
+  { num: "05", icon: <BarChartIcon />, t: "Inventory Valuation", s: "FIFO, LIFO, average cost, and standard cost methods, calculated in real time. Multi-currency valuation for international operations. Landed cost tracking included." },
+  { num: "06", icon: <EyeIcon />, t: "Real-Time Dashboards", s: "Stock levels, movement history, ageing analysis, dead stock reports, and warehouse KPIs, live from your ERP. Drill from summary to individual transaction." },
 ] as const;
 
 /* ── Process flow ── */
@@ -96,10 +96,10 @@ const PLATFORMS = [
 /* ── FAQ ── */
 const FAQS = [
   { q: "Can you set up multi-warehouse operations in Odoo?", a: "Yes. We configure multi-warehouse setups with inter-warehouse transfers, warehouse-specific reorder rules, and cross-dock workflows. Each warehouse gets its own bin locations, routes, and picking strategies." },
-  { q: "Do you support barcode scanning?", a: "Yes. We configure barcode-based operations for receiving, picking, packing, inventory adjustments, and cycle counts. Works with Odoo Barcode on any Android/iOS device — no specialised hardware needed." },
-  { q: "Can you integrate with shipping carriers?", a: "Yes. We integrate with Shiprocket, ShipStation, DHL, FedEx, BlueDart, and custom carrier APIs — automated label generation, tracking updates, and rate shopping." },
-  { q: "How do you handle lot and serial tracking?", a: "We configure lot tracking for batch products and serial tracking for individual items — with full traceability from supplier receipt through production to customer delivery." },
-  { q: "What inventory valuation methods do you support?", a: "FIFO, LIFO, average cost, and standard cost — configured per product category. Multi-currency valuation and landed cost tracking are included for international operations." },
+  { q: "Do you support barcode scanning?", a: "Yes. We configure barcode-based operations for receiving, picking, packing, inventory adjustments, and cycle counts. Works with Odoo Barcode on any Android/iOS device, no specialised hardware needed." },
+  { q: "Can you integrate with shipping carriers?", a: "Yes. We integrate with Shiprocket, ShipStation, DHL, FedEx, BlueDart, and custom carrier APIs, automated label generation, tracking updates, and rate shopping." },
+  { q: "How do you handle lot and serial tracking?", a: "We configure lot tracking for batch products and serial tracking for individual items, with full traceability from supplier receipt through production to customer delivery." },
+  { q: "What inventory valuation methods do you support?", a: "FIFO, LIFO, average cost, and standard cost, configured per product category. Multi-currency valuation and landed cost tracking are included for international operations." },
   { q: "How long does a WMS implementation take?", a: "Simple single-warehouse setups take 3–4 weeks. Multi-warehouse with barcode, lot tracking, and carrier integration takes 6–10 weeks. Complex 3PL or manufacturing environments take 8–12 weeks." },
 ] as const;
 
@@ -108,7 +108,7 @@ export function InventoryWmsContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + bin grid right ═══ */}
+      {/* ═══ HERO: text left + bin grid right ═══ */}
       <section className="iw-hero">
         <div className="iw-hero-glow iw-hero-glow-1" aria-hidden="true" />
         <div className="iw-hero-glow iw-hero-glow-2" aria-hidden="true" />
@@ -123,7 +123,7 @@ export function InventoryWmsContent() {
               <span className="acc">Every bin. Every SKU. Real time.</span>
             </h1>
             <p className="iw-hero-sub rev">
-              Multi-warehouse management, bin location tracking, lot &amp; serial control, barcode scanning, and pick-pack-ship workflows — <strong>integrated into your ERP.</strong>
+              Multi-warehouse management, bin location tracking, lot &amp; serial control, barcode scanning, and pick-pack-ship workflows, <strong>integrated into your ERP.</strong>
             </p>
             <div className="iw-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -136,7 +136,7 @@ export function InventoryWmsContent() {
 
           {/* Bin grid mockup */}
           <div className="iw-bins rev">
-            <div className="iw-bins-title">Warehouse A — Bin Map</div>
+            <div className="iw-bins-title">Warehouse A: Bin Map</div>
             <div className="iw-bins-grid">
               {BIN_GRID.map((b) => (
                 <div key={b.bin} className={`iw-bin iw-bin-${b.status}`}>
@@ -150,7 +150,7 @@ export function InventoryWmsContent() {
         </div>
       </section>
 
-      {/* ═══ OPERATIONS — 4 cards ═══ */}
+      {/* ═══ OPERATIONS: 4 cards ═══ */}
       <section className="iw-ops">
         <div className="iw-ops-inner">
           <div className="iw-ops-hdr rev">
@@ -169,7 +169,7 @@ export function InventoryWmsContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — alternating rows ═══ */}
+      {/* ═══ FEATURES: alternating rows ═══ */}
       <section className="iw-feat" id="features">
         <div className="iw-feat-inner">
           <div className="iw-feat-hdr rev">
@@ -191,7 +191,7 @@ export function InventoryWmsContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="iw-proc" id="process">
         <div className="iw-proc-inner">
           <div className="iw-proc-hdr rev">
@@ -226,7 +226,7 @@ export function InventoryWmsContent() {
         </div>
       </section>
 
-      {/* ═══ MULTI-WAREHOUSE — split ═══ */}
+      {/* ═══ MULTI-WAREHOUSE: split ═══ */}
       <section className="iw-multi" id="multi-warehouse">
         <div className="iw-multi-inner">
           <div className="iw-multi-hdr rev">
@@ -237,7 +237,7 @@ export function InventoryWmsContent() {
             <div className="iw-multi-left">
               <div className="iw-multi-big-n">3+</div>
               <div className="iw-multi-big-l">Warehouses managed from one ERP</div>
-              <p className="iw-multi-big-s">Inter-warehouse transfers, cross-dock workflows, and warehouse-specific reorder rules — all orchestrated from a single system with real-time visibility across every location.</p>
+              <p className="iw-multi-big-s">Inter-warehouse transfers, cross-dock workflows, and warehouse-specific reorder rules, all orchestrated from a single system with real-time visibility across every location.</p>
             </div>
             <div className="iw-multi-right">
               {LOCATIONS.map((loc) => (
@@ -299,10 +299,10 @@ export function InventoryWmsContent() {
                 <div className="oi-closer-insight-stat">34%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of warehouses still run without a WMS.</strong>
-                  Source: Statista, 2024. The result is misplaced stock, slow picking, shipping errors, and zero visibility into warehouse performance — problems that compound as order volume grows.
+                  Source: Statista, 2024. The result is misplaced stock, slow picking, shipping errors, and zero visibility into warehouse performance, problems that compound as order volume grows.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer WMS deployment covers the full warehouse lifecycle — not just stock counting. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer WMS deployment covers the full warehouse lifecycle, not just stock counting. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -313,25 +313,25 @@ export function InventoryWmsContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><GridIcon /></div>
                 <div className="oi-closer-commit-t">Physical layout mapped digitally</div>
-                <p className="oi-closer-commit-b">We map your actual warehouse — zones, aisles, racks, and bins — into the WMS. Every product has a precise digital home that matches its physical location.</p>
+                <p className="oi-closer-commit-b">We map your actual warehouse, zones, aisles, racks, and bins, into the WMS. Every product has a precise digital home that matches its physical location.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed accuracy targets</div>
-                <p className="oi-closer-commit-b">Picking accuracy, inventory accuracy, and order fulfilment speed are defined before go-live. If we miss targets, we keep iterating — at our cost.</p>
+                <p className="oi-closer-commit-b">Picking accuracy, inventory accuracy, and order fulfilment speed are defined before go-live. If we miss targets, we keep iterating, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><MonitorIcon /></div>
                 <div className="oi-closer-commit-t">Barcode-first operations</div>
-                <p className="oi-closer-commit-b">Every warehouse operation — receiving, picking, packing, counting — is barcode-driven. No manual entry, no paper-based processes, no data gaps.</p>
+                <p className="oi-closer-commit-b">Every warehouse operation, receiving, picking, packing, counting, is barcode-driven. No manual entry, no paper-based processes, no data gaps.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior WMS engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your warehouse is the one who configures, migrates, trains, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your warehouse is the one who configures, migrates, trains, and supports, named in the contract.</p>
               </div>
             </div>
           </div>

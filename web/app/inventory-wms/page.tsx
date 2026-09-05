@@ -11,7 +11,7 @@ import { InventoryWmsContent } from "@/components/services/inventory-wms-content
 export const metadata: Metadata = {
   title: "Inventory & WMS | Multi-Warehouse Management | Wan Buffer",
   description:
-    "End-to-end inventory and warehouse management — multi-warehouse operations, bin location tracking, lot & serial control, barcode scanning, pick-pack-ship workflows, and real-time stock visibility. Integrated with Odoo, Zoho, and SAP.",
+    "End-to-end inventory and warehouse management, multi-warehouse operations, bin location tracking, lot & serial control, barcode scanning, pick-pack-ship workflows, and real-time stock visibility. Integrated with Odoo, Zoho, and SAP.",
   keywords: [
     "inventory management",
     "warehouse management system",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Inventory & WMS — Multi-Warehouse Management | Wan Buffer",
+    title: "Inventory & WMS: Multi-Warehouse Management | Wan Buffer",
     description:
-      "Multi-warehouse inventory and WMS — bin locations, lot tracking, barcode scanning, and pick-pack-ship workflows integrated into your ERP.",
+      "Multi-warehouse inventory and WMS, bin locations, lot tracking, barcode scanning, and pick-pack-ship workflows integrated into your ERP.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/inventory-wms" },

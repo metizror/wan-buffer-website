@@ -11,7 +11,7 @@ import { HubListingContent } from "@/components/pages/hub-listing-content";
 export const metadata: Metadata = {
   title: "AI & Automation Services for ERP | Wan Buffer",
   description:
-    "AI agents, workflow automation, predictive analytics, chatbots, LangChain/LLM integration, RPA, and governance — built into Odoo and your operations stack.",
+    "AI agents, workflow automation, predictive analytics, chatbots, LangChain/LLM integration, RPA, and governance, built into Odoo and your operations stack.",
   alternates: { canonical: "https://wanbuffer.com/ai-services" },
 };
 
@@ -37,7 +37,7 @@ export default function AiServicesPage() {
       <HubListingContent
         eyebrow="AI & Automation"
         titleLines={["AI that runs inside", "your ERP, not beside it."]}
-        subtitle="Agents, automation, analytics, and document AI designed for manufacturing, logistics, and commerce — not generic chat wrappers."
+        subtitle="Agents, automation, analytics, and document AI designed for manufacturing, logistics, and commerce, not generic chat wrappers."
         primaryCta={{ href: "/contact-us", label: "Discuss an AI use case" }}
         secondaryCta={{ href: "/engagement", label: "Engagement models" }}
         items={ITEMS}

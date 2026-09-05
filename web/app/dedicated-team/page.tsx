@@ -9,9 +9,9 @@ import { HomeWanny } from "@/components/home/wanny";
 import { DedicatedTeamContent } from "@/components/services/dedicated-team-content";
 
 export const metadata: Metadata = {
-  title: "Dedicated Team | Offshore ERP & AI Engineering Squad — Scale Month-to-Month — Wan Buffer",
+  title: "Dedicated Team | Offshore ERP & AI Engineering Squad: Scale Month-to-Month | Wan Buffer",
   description:
-    "Your dedicated offshore ERP and AI engineering team — 2 to 15 engineers, 100% allocated to your projects, embedded in your workflows. Scale up or down month-to-month with direct Slack, Jira, and daily standups.",
+    "Your dedicated offshore ERP and AI engineering team, 2 to 15 engineers, 100% allocated to your projects, embedded in your workflows. Scale up or down month-to-month with direct Slack, Jira, and daily standups.",
   keywords: [
     "dedicated development team",
     "offshore ERP team",
@@ -38,11 +38,11 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Dedicated Team — Offshore ERP & AI Engineering Squad | Wan Buffer",
+    title: "Dedicated Team: Offshore ERP & AI Engineering Squad | Wan Buffer",
     description:
       "2–15 engineers, 100% dedicated to you. Mix of ERP, AI, and mobile engineers embedded in your workflows. Scale month-to-month.",
     siteName: "Wan Buffer",

@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { ConstructionProjectsContent } from "@/components/services/construction-projects-content";
 
 export const metadata: Metadata = {
-  title: "Construction & Projects ERP | Project ERP, BOQ & Subcontractor Management — Wan Buffer",
+  title: "Construction & Projects ERP | Project ERP, BOQ & Subcontractor Management | Wan Buffer",
   description:
     "End-to-end construction and project ERP with bill of quantities management, subcontractor tracking, project cost control, progress billing, material reconciliation, and real-time site analytics. For general contractors, real estate developers, and infrastructure companies.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Construction & Projects ERP — BOQ, Subcontractor Management & Project Cost Control | Wan Buffer",
+    title: "Construction & Projects ERP: BOQ, Subcontractor Management & Project Cost Control | Wan Buffer",
     description:
-      "Construction and project ERP with BOQ management, subcontractor tracking, progress billing, and real-time site analytics — for contractors, developers, and infrastructure companies.",
+      "Construction and project ERP with BOQ management, subcontractor tracking, progress billing, and real-time site analytics, for contractors, developers, and infrastructure companies.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/construction-projects" },

@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   RETAINER MODEL — dedicated page
+   RETAINER MODEL, dedicated page
    Hero split + SLA dashboard mock · What's included · What's covered ·
    Process flow · Plans · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -51,20 +51,20 @@ const SLA_METRICS = [
 
 /* ── What's included ── */
 const INCLUDED = [
-  { icon: <ZapIcon />, t: "Priority SLA", s: "Critical bug fixes within 4 hours, high-priority issues within 24 hours, and feature requests prioritised into the next sprint. Written SLA with escalation paths — not just a promise, a contractual commitment.", color: "ai" as const },
-  { icon: <RefreshIcon />, t: "Monthly Sprint Development", s: "A dedicated pool of hours each month for enhancements, new features, and workflow improvements. Work is planned in sprint cycles with your input on priorities — your ERP evolves continuously, not just when something breaks.", color: "green" as const },
-  { icon: <EyeIcon />, t: "Quarterly Health Audits", s: "Every quarter, our engineers audit your ERP — performance, security, data integrity, unused modules, and optimisation opportunities. You receive a written report with actionable recommendations and a prioritised improvement backlog.", color: "purple" as const },
-  { icon: <TrendingUpIcon />, t: "Proactive Upgrade Planning", s: "Odoo version upgrades, security patches, and module updates planned and roadmapped months in advance. No surprise migrations, no emergency patches — a structured upgrade path that keeps your system current and supported.", color: "red" as const },
+  { icon: <ZapIcon />, t: "Priority SLA", s: "Critical bug fixes within 4 hours, high-priority issues within 24 hours, and feature requests prioritised into the next sprint. Written SLA with escalation paths, not just a promise, a contractual commitment.", color: "ai" as const },
+  { icon: <RefreshIcon />, t: "Monthly Sprint Development", s: "A dedicated pool of hours each month for enhancements, new features, and workflow improvements. Work is planned in sprint cycles with your input on priorities, your ERP evolves continuously, not just when something breaks.", color: "green" as const },
+  { icon: <EyeIcon />, t: "Quarterly Health Audits", s: "Every quarter, our engineers audit your ERP, performance, security, data integrity, unused modules, and optimisation opportunities. You receive a written report with actionable recommendations and a prioritised improvement backlog.", color: "purple" as const },
+  { icon: <TrendingUpIcon />, t: "Proactive Upgrade Planning", s: "Odoo version upgrades, security patches, and module updates planned and roadmapped months in advance. No surprise migrations, no emergency patches, a structured upgrade path that keeps your system current and supported.", color: "red" as const },
 ] as const;
 
 /* ── What's covered ── */
 const COVERED = [
-  { num: "01", icon: <ShieldIcon />, t: "Bug Fixes & Issue Resolution", s: "Functional bugs, configuration issues, workflow failures, and data inconsistencies — investigated, root-caused, and resolved within SLA. Every fix is tested, documented, and deployed with zero downtime where possible." },
+  { num: "01", icon: <ShieldIcon />, t: "Bug Fixes & Issue Resolution", s: "Functional bugs, configuration issues, workflow failures, and data inconsistencies, investigated, root-caused, and resolved within SLA. Every fix is tested, documented, and deployed with zero downtime where possible." },
   { num: "02", icon: <SettingsIcon />, t: "Configuration & Workflow Changes", s: "Business rule updates, new approval workflows, report modifications, user role changes, and access control adjustments. The kind of day-to-day ERP evolution that keeps your system aligned with how your business actually operates." },
-  { num: "03", icon: <CodeIcon />, t: "Feature Enhancements", s: "New fields, custom reports, automation rules, integration endpoints, and module extensions — developed in monthly sprints from your prioritised backlog. Small enhancements that compound into significant operational improvements." },
+  { num: "03", icon: <CodeIcon />, t: "Feature Enhancements", s: "New fields, custom reports, automation rules, integration endpoints, and module extensions, developed in monthly sprints from your prioritised backlog. Small enhancements that compound into significant operational improvements." },
   { num: "04", icon: <DatabaseIcon />, t: "Data Management & Cleanup", s: "Duplicate merging, master data standardisation, archival policies, and data migration for new modules. Ongoing data quality monitoring to prevent the gradual decay that plagues every ERP after go-live." },
   { num: "05", icon: <CloudIcon />, t: "Infrastructure & Performance", s: "Server monitoring, performance tuning, database optimisation, backup verification, and security patch application. Your ERP infrastructure stays fast, secure, and reliable without you thinking about it." },
-  { num: "06", icon: <SparklesIcon />, t: "AI Optimisation & Automation", s: "Continuous improvement of AI models, automation rules, and intelligent workflows. New automation opportunities identified during quarterly audits and implemented in sprint cycles — your ERP gets smarter every quarter." },
+  { num: "06", icon: <SparklesIcon />, t: "AI Optimisation & Automation", s: "Continuous improvement of AI models, automation rules, and intelligent workflows. New automation opportunities identified during quarterly audits and implemented in sprint cycles, your ERP gets smarter every quarter." },
 ] as const;
 
 /* ── Process flow ── */
@@ -95,12 +95,12 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "What does the priority SLA actually guarantee?", a: "Critical bugs (system down, data corruption, payment failures) are responded to within 4 hours and resolved within 8 hours. High-priority issues (workflow failures, reporting errors) are responded to within 8 hours and resolved within 24 hours. Normal requests (config changes, minor enhancements) are queued into the next sprint. All SLA timelines are contractual — with escalation paths if breached." },
-  { q: "How does the monthly hours pool work?", a: "You purchase a fixed pool of hours per month (20, 40, or 80 hours). Hours are used for bug fixes, config changes, enhancements, and new features — prioritised by you. Unused hours roll over for one month (up to 25% of your pool). Usage is tracked transparently with detailed time logs shared weekly." },
+  { q: "What does the priority SLA actually guarantee?", a: "Critical bugs (system down, data corruption, payment failures) are responded to within 4 hours and resolved within 8 hours. High-priority issues (workflow failures, reporting errors) are responded to within 8 hours and resolved within 24 hours. Normal requests (config changes, minor enhancements) are queued into the next sprint. All SLA timelines are contractual, with escalation paths if breached." },
+  { q: "How does the monthly hours pool work?", a: "You purchase a fixed pool of hours per month (20, 40, or 80 hours). Hours are used for bug fixes, config changes, enhancements, and new features, prioritised by you. Unused hours roll over for one month (up to 25% of your pool). Usage is tracked transparently with detailed time logs shared weekly." },
   { q: "What happens during a quarterly health audit?", a: "Our senior engineer reviews your ERP across six dimensions: performance (slow queries, page load times), security (access control, API exposure), data integrity (orphaned records, duplicates), module utilisation (unused features), automation opportunities, and upgrade readiness. You receive a written report with findings, risk ratings, and a prioritised improvement plan." },
-  { q: "Can I use retainer hours for new feature development?", a: "Yes. Retainer hours can be used for any ERP work — bug fixes, config changes, new features, integrations, reports, and AI automation. You prioritise the backlog; we execute in monthly sprints. The only limitation is that large projects (40+ hours) are better scoped as a separate project-based engagement for proper milestone tracking." },
-  { q: "How does proactive Odoo upgrade planning work?", a: "We maintain a rolling upgrade roadmap for your ERP — assessing compatibility of custom modules, third-party integrations, and data structures against upcoming Odoo versions. Upgrades are planned 3–6 months in advance with test environments, regression testing, and phased rollout. No emergency weekend migrations — ever." },
-  { q: "Can I change my retainer tier?", a: "Yes. Tier changes take effect at the next billing cycle with 2 weeks' notice. You can scale up from Essential to Growth or Enterprise, or scale down if your needs reduce. There are no penalties for tier changes — the model is designed to flex with your business." },
+  { q: "Can I use retainer hours for new feature development?", a: "Yes. Retainer hours can be used for any ERP work, bug fixes, config changes, new features, integrations, reports, and AI automation. You prioritise the backlog; we execute in monthly sprints. The only limitation is that large projects (40+ hours) are better scoped as a separate project-based engagement for proper milestone tracking." },
+  { q: "How does proactive Odoo upgrade planning work?", a: "We maintain a rolling upgrade roadmap for your ERP, assessing compatibility of custom modules, third-party integrations, and data structures against upcoming Odoo versions. Upgrades are planned 3–6 months in advance with test environments, regression testing, and phased rollout. No emergency weekend migrations, ever." },
+  { q: "Can I change my retainer tier?", a: "Yes. Tier changes take effect at the next billing cycle with 2 weeks' notice. You can scale up from Essential to Growth or Enterprise, or scale down if your needs reduce. There are no penalties for tier changes, the model is designed to flex with your business." },
 ] as const;
 
 /* ── Component ── */
@@ -108,7 +108,7 @@ export function RetainerModelContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + SLA dashboard right ═══ */}
+      {/* ═══ HERO: text left + SLA dashboard right ═══ */}
       <section className="rt-hero">
         <div className="rt-hero-glow rt-hero-glow-1" aria-hidden="true" />
         <div className="rt-hero-glow rt-hero-glow-2" aria-hidden="true" />
@@ -124,7 +124,7 @@ export function RetainerModelContent() {
               <span className="acc">Always on.<br />Always improving.<br />Always covered.</span>
             </h1>
             <p className="rt-hero-sub rev">
-              Priority SLA, monthly sprint development, quarterly health audits, and proactive upgrade planning — <strong>your ERP, managed and evolving.</strong>
+              Priority SLA, monthly sprint development, quarterly health audits, and proactive upgrade planning, <strong>your ERP, managed and evolving.</strong>
             </p>
             <div className="rt-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -181,7 +181,7 @@ export function RetainerModelContent() {
         </div>
       </section>
 
-      {/* ═══ WHAT'S INCLUDED — 4 cards ═══ */}
+      {/* ═══ WHAT'S INCLUDED: 4 cards ═══ */}
       <section className="rt-ops">
         <div className="rt-ops-inner">
           <div className="rt-ops-hdr rev">
@@ -200,7 +200,7 @@ export function RetainerModelContent() {
         </div>
       </section>
 
-      {/* ═══ WHAT'S COVERED — alternating rows ═══ */}
+      {/* ═══ WHAT'S COVERED: alternating rows ═══ */}
       <section className="rt-feat" id="covered">
         <div className="rt-feat-inner">
           <div className="rt-feat-hdr rev">
@@ -222,7 +222,7 @@ export function RetainerModelContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="rt-proc" id="process">
         <div className="rt-proc-inner">
           <div className="rt-proc-hdr rev">
@@ -257,7 +257,7 @@ export function RetainerModelContent() {
         </div>
       </section>
 
-      {/* ═══ RETAINER TIERS — split ═══ */}
+      {/* ═══ RETAINER TIERS: split ═══ */}
       <section className="rt-multi" id="tiers">
         <div className="rt-multi-inner">
           <div className="rt-multi-hdr rev">
@@ -268,7 +268,7 @@ export function RetainerModelContent() {
             <div className="rt-multi-left">
               <div className="rt-multi-big-n">80h</div>
               <div className="rt-multi-big-l">Maximum monthly hours pool</div>
-              <p className="rt-multi-big-s">From 20-hour essential coverage for post-go-live stability to 80-hour enterprise managed services with AI optimisation — your retainer tier flexes with your needs, month to month.</p>
+              <p className="rt-multi-big-s">From 20-hour essential coverage for post-go-live stability to 80-hour enterprise managed services with AI optimisation, your retainer tier flexes with your needs, month to month.</p>
             </div>
             <div className="rt-multi-right">
               {TIERS.map((t) => (
@@ -329,10 +329,10 @@ export function RetainerModelContent() {
                 <div className="oi-closer-insight-stat">99.8%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>uptime delivered across all retainer clients.</strong>
-                  That&apos;s because retainer engineers know your system intimately — they catch problems before they escalate and improve your ERP continuously, not just when tickets come in.
+                  That&apos;s because retainer engineers know your system intimately, they catch problems before they escalate and improve your ERP continuously, not just when tickets come in.
                 </div>
               </div>
-              <p>Every retainer comes with four guarantees — written into the agreement.</p>
+              <p>Every retainer comes with four guarantees, written into the agreement.</p>
             </div>
           </div>
 
@@ -342,26 +342,26 @@ export function RetainerModelContent() {
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><ZapIcon /></div>
-                <div className="oi-closer-commit-t">Priority SLA — contractual, not aspirational</div>
+                <div className="oi-closer-commit-t">Priority SLA, contractual, not aspirational</div>
                 <p className="oi-closer-commit-b">Response and resolution times are written into the agreement with escalation paths. Critical bugs within 4 hours, high-priority within 24 hours. SLA breaches trigger penalty clauses.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><EyeIcon /></div>
                 <div className="oi-closer-commit-t">Quarterly audits with written reports</div>
-                <p className="oi-closer-commit-b">Every quarter, your ERP is audited for performance, security, data integrity, and optimisation opportunities. Written report with findings, risk ratings, and improvement roadmap — not just a status call.</p>
+                <p className="oi-closer-commit-b">Every quarter, your ERP is audited for performance, security, data integrity, and optimisation opportunities. Written report with findings, risk ratings, and improvement roadmap, not just a status call.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><TrendingUpIcon /></div>
-                <div className="oi-closer-commit-t">Proactive upgrades — planned, not panicked</div>
+                <div className="oi-closer-commit-t">Proactive upgrades, planned, not panicked</div>
                 <p className="oi-closer-commit-b">Odoo version upgrades, security patches, and module updates are roadmapped 3–6 months ahead. Test environments, regression testing, and phased rollout. Zero surprise migrations.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
-                <div className="oi-closer-commit-t">Dedicated engineer — knows your system</div>
-                <p className="oi-closer-commit-b">A named engineer is assigned to your retainer — someone who builds deep context in your codebase, your business logic, and your workflows. No ticket roulette, no explaining your system to a stranger every time.</p>
+                <div className="oi-closer-commit-t">Dedicated engineer, knows your system</div>
+                <p className="oi-closer-commit-b">A named engineer is assigned to your retainer, someone who builds deep context in your codebase, your business logic, and your workflows. No ticket roulette, no explaining your system to a stranger every time.</p>
               </div>
             </div>
           </div>

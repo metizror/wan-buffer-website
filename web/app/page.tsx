@@ -1,4 +1,4 @@
-import Script from "next/script";
+import dynamic from "next/dynamic";
 
 import { HomeHeader } from "@/components/home/header";
 import { HomeHero } from "@/components/home/hero";
@@ -15,38 +15,48 @@ import { HomePlatforms } from "@/components/home/platforms";
 import { HomeGlobal } from "@/components/home/global";
 import { HomeBrands } from "@/components/home/brands";
 import { HomeLeadPopup } from "@/components/home/lead-popup";
-import { HomeTestimonials } from "@/components/home/testimonials";
-import { HomeFaq } from "@/components/home/faq";
 import { HomeInsights } from "@/components/home/insights";
 import { HomeContact } from "@/components/home/contact";
 import { HomeFooter } from "@/components/home/footer";
 import { HomeWanny } from "@/components/home/wanny";
+
+const HomeTestimonials = dynamic(
+  () => import("@/components/home/testimonials").then((m) => m.HomeTestimonials),
+  { ssr: true },
+);
+const HomeFaq = dynamic(
+  () => import("@/components/home/faq").then((m) => m.HomeFaq),
+  { ssr: true },
+);
 
 export default function HomePage() {
   return (
     <>
       <HomeLeadPopup />
       <HomeHeader />
-      <HomeHero />
-      <HomeLogoBar />
-      <HomeAiStrip />
-      <HomeWhyUs />
-      <HomeAiServices />
-      <HomeIndustries />
-      <HomeCaseStudy />
-      <HomeTechStack />
-      <HomeModels />
-      <HomePhilosophy />
-      <HomePlatforms />
-      <HomeGlobal />
-      <HomeBrands />
-      <HomeTestimonials />
-      <HomeFaq />
-      <HomeInsights />
-      <HomeContact />
+      <main>
+        <HomeHero />
+        <HomeLogoBar />
+        <HomeAiStrip />
+        <HomeWhyUs />
+        <div className="cv-auto">
+          <HomeAiServices />
+          <HomeIndustries />
+          <HomeCaseStudy />
+          <HomeTechStack />
+          <HomeModels />
+          <HomePhilosophy />
+          <HomePlatforms />
+          <HomeGlobal />
+          <HomeBrands />
+          <HomeTestimonials />
+          <HomeFaq />
+          <HomeInsights />
+          <HomeContact />
+        </div>
+      </main>
       <HomeFooter />
       <HomeWanny />
-      <Script src="/home-runtime.js" strategy="afterInteractive" />
     </>
   );
 }

@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   SALESFORCE CRM SETUP — unique page design
+   SALESFORCE CRM SETUP, unique page design
    Hero split + cloud hub · Scrolling cloud cards · Numbered service
    grid · Inline step bar · Industry pills · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -49,21 +49,21 @@ const CLOUDS = [
 
 /* ── Cloud detail cards ── */
 const CLOUD_CARDS = [
-  { icon: <TrendingUpIcon />, t: "Sales Cloud", s: "Pipeline management, lead scoring, opportunity tracking, forecasting, and CPQ — configured for your B2B or B2C sales process. Every stage, field, and automation maps to how your team actually sells.", features: ["Lead & opportunity management", "Sales forecasting & pipelines", "Quote-to-cash automation", "Territory & team management"] },
-  { icon: <HeartIcon />, t: "Service Cloud", s: "Case management, service console, knowledge base, and omnichannel routing — configured for your support workflows. SLA tracking, escalation rules, and customer satisfaction metrics built in.", features: ["Case management & routing", "Service console & knowledge base", "SLA tracking & escalation", "Omnichannel support"] },
-  { icon: <MailIcon />, t: "Marketing Cloud", s: "Journey Builder, email automation, audience segmentation, and campaign analytics — connected to your CRM data. Marketing and sales share one source of truth.", features: ["Journey Builder campaigns", "Email & SMS automation", "Audience segmentation", "Campaign ROI analytics"] },
-  { icon: <UsersIcon />, t: "Experience Cloud", s: "Customer portals, partner communities, and self-service sites — branded, secure, and connected to your CRM. Reduce support tickets by letting customers help themselves.", features: ["Customer self-service portals", "Partner community sites", "Branded experiences", "CRM-connected content"] },
-  { icon: <CodeIcon />, t: "Lightning Development", s: "Custom Lightning components, Apex triggers, Visualforce pages, and AppExchange integrations — built for your specific business logic when out-of-the-box isn't enough.", features: ["Custom Lightning components", "Apex & Visualforce development", "AppExchange integrations", "Custom objects & workflows"] },
-  { icon: <SparklesIcon />, t: "Einstein Analytics", s: "AI-powered insights, predictive lead scoring, opportunity scoring, and automated activity capture — intelligence layered on top of your CRM data.", features: ["Predictive lead scoring", "Opportunity insights", "Automated activity capture", "AI-powered forecasting"] },
+  { icon: <TrendingUpIcon />, t: "Sales Cloud", s: "Pipeline management, lead scoring, opportunity tracking, forecasting, and CPQ, configured for your B2B or B2C sales process. Every stage, field, and automation maps to how your team actually sells.", features: ["Lead & opportunity management", "Sales forecasting & pipelines", "Quote-to-cash automation", "Territory & team management"] },
+  { icon: <HeartIcon />, t: "Service Cloud", s: "Case management, service console, knowledge base, and omnichannel routing, configured for your support workflows. SLA tracking, escalation rules, and customer satisfaction metrics built in.", features: ["Case management & routing", "Service console & knowledge base", "SLA tracking & escalation", "Omnichannel support"] },
+  { icon: <MailIcon />, t: "Marketing Cloud", s: "Journey Builder, email automation, audience segmentation, and campaign analytics, connected to your CRM data. Marketing and sales share one source of truth.", features: ["Journey Builder campaigns", "Email & SMS automation", "Audience segmentation", "Campaign ROI analytics"] },
+  { icon: <UsersIcon />, t: "Experience Cloud", s: "Customer portals, partner communities, and self-service sites, branded, secure, and connected to your CRM. Reduce support tickets by letting customers help themselves.", features: ["Customer self-service portals", "Partner community sites", "Branded experiences", "CRM-connected content"] },
+  { icon: <CodeIcon />, t: "Lightning Development", s: "Custom Lightning components, Apex triggers, Visualforce pages, and AppExchange integrations, built for your specific business logic when out-of-the-box isn't enough.", features: ["Custom Lightning components", "Apex & Visualforce development", "AppExchange integrations", "Custom objects & workflows"] },
+  { icon: <SparklesIcon />, t: "Einstein Analytics", s: "AI-powered insights, predictive lead scoring, opportunity scoring, and automated activity capture, intelligence layered on top of your CRM data.", features: ["Predictive lead scoring", "Opportunity insights", "Automated activity capture", "AI-powered forecasting"] },
 ] as const;
 
 /* ── Services ── */
 const SERVICES = [
-  { icon: <SettingsIcon />, num: "01", t: "CRM Configuration", s: "Objects, fields, page layouts, record types, validation rules, and permission sets — configured to match your sales process, not a generic template." },
+  { icon: <SettingsIcon />, num: "01", t: "CRM Configuration", s: "Objects, fields, page layouts, record types, validation rules, and permission sets, configured to match your sales process, not a generic template." },
   { icon: <ZapIcon />, num: "02", t: "Workflow Automation", s: "Process Builder, Flow, and Apex triggers for lead assignment, email alerts, field updates, approval processes, and cross-object automation." },
-  { icon: <RefreshIcon />, num: "03", t: "Data Migration", s: "Full migration from HubSpot, Zoho, Pipedrive, or spreadsheets — with deduplication, field mapping, relationship preservation, and validation." },
+  { icon: <RefreshIcon />, num: "03", t: "Data Migration", s: "Full migration from HubSpot, Zoho, Pipedrive, or spreadsheets, with deduplication, field mapping, relationship preservation, and validation." },
   { icon: <GridIcon />, num: "04", t: "Integration", s: "Connect Salesforce to your ERP, marketing, accounting, and communication platforms via APIs, MuleSoft, or custom middleware." },
-  { icon: <MonitorIcon />, num: "05", t: "Reports & Dashboards", s: "Custom report types, dashboard components, scheduled reports, and Einstein Analytics — real-time visibility for every stakeholder." },
+  { icon: <MonitorIcon />, num: "05", t: "Reports & Dashboards", s: "Custom report types, dashboard components, scheduled reports, and Einstein Analytics, real-time visibility for every stakeholder." },
   { icon: <UsersIcon />, num: "06", t: "Training & Adoption", s: "Role-based training for reps, managers, and admins. In-app guidance, documentation, and 30-day post-launch adoption tracking." },
 ] as const;
 
@@ -86,11 +86,11 @@ const INDUSTRIES = [
 /* ── FAQ ── */
 const FAQS = [
   { q: "How long does a Salesforce CRM setup take?", a: "Typical setups take 4–10 weeks. Simple Sales Cloud configurations can go live in 3–4 weeks. Multi-cloud deployments with custom Lightning development and complex integrations take 8–12 weeks." },
-  { q: "Can you migrate data from HubSpot, Zoho, or Pipedrive?", a: "Yes. We handle full migration including contacts, companies, deals/opportunities, activities, attachments, and custom fields — with deduplication, validation, and relationship preservation." },
+  { q: "Can you migrate data from HubSpot, Zoho, or Pipedrive?", a: "Yes. We handle full migration including contacts, companies, deals/opportunities, activities, attachments, and custom fields, with deduplication, validation, and relationship preservation." },
   { q: "Do you integrate Salesforce with ERP systems?", a: "Yes. We integrate Salesforce with Odoo, SAP, Zoho, QuickBooks, and custom ERPs via REST/SOAP APIs, MuleSoft, or Salesforce Connect. Real-time bi-directional sync, not batch exports." },
-  { q: "Which Salesforce edition do you recommend?", a: "It depends on your team size and requirements. We audit your needs and recommend the right edition — Essentials, Professional, Enterprise, or Unlimited — so you don't overpay for features you won't use." },
-  { q: "Do you build custom Lightning components?", a: "Yes. When standard functionality isn't enough, we build custom Lightning Web Components, Apex classes, and Visualforce pages — following Salesforce development best practices and security guidelines." },
-  { q: "What ongoing support do you provide?", a: "Every implementation includes 90 days of hypercare. After that, we offer SLA-based managed services — admin support, configuration changes, user management, and quarterly health checks." },
+  { q: "Which Salesforce edition do you recommend?", a: "It depends on your team size and requirements. We audit your needs and recommend the right edition. Essentials, Professional, Enterprise, or Unlimited, so you don't overpay for features you won't use." },
+  { q: "Do you build custom Lightning components?", a: "Yes. When standard functionality isn't enough, we build custom Lightning Web Components, Apex classes, and Visualforce pages, following Salesforce development best practices and security guidelines." },
+  { q: "What ongoing support do you provide?", a: "Every implementation includes 90 days of hypercare. After that, we offer SLA-based managed services, admin support, configuration changes, user management, and quarterly health checks." },
 ] as const;
 
 /* ── Component ── */
@@ -98,7 +98,7 @@ export function SalesforceCrmContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + cloud hub right ═══ */}
+      {/* ═══ HERO: text left + cloud hub right ═══ */}
       <section className="sf-hero">
         <div className="sf-hero-glow sf-hero-glow-1" aria-hidden="true" />
         <div className="sf-hero-glow sf-hero-glow-2" aria-hidden="true" />
@@ -113,7 +113,7 @@ export function SalesforceCrmContent() {
               <span className="acc">Lead to close, automated.</span>
             </h1>
             <p className="sf-hero-sub rev">
-              End-to-end Salesforce implementation — Sales Cloud, Service Cloud, Marketing Cloud, and custom Lightning development. <strong>From lead capture to closed deal, fully configured.</strong>
+              End-to-end Salesforce implementation: Sales Cloud, Service Cloud, Marketing Cloud, and custom Lightning development. <strong>From lead capture to closed deal, fully configured.</strong>
             </p>
             <div className="sf-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -144,7 +144,7 @@ export function SalesforceCrmContent() {
         </div>
       </section>
 
-      {/* ═══ CLOUD CARDS — horizontal scroll ═══ */}
+      {/* ═══ CLOUD CARDS: horizontal scroll ═══ */}
       <section className="sf-clouds" id="clouds">
         <div className="sf-clouds-inner">
           <div className="sf-clouds-hdr rev">
@@ -152,7 +152,7 @@ export function SalesforceCrmContent() {
               <div className="eyebrow">Cloud expertise</div>
               <h2>Six Salesforce clouds.<br /><span>One implementation partner.</span></h2>
             </div>
-            <p>Every cloud is configured by certified consultants who understand both the platform and your industry. No generic templates — every setup maps to your actual business process.</p>
+            <p>Every cloud is configured by certified consultants who understand both the platform and your industry. No generic templates, every setup maps to your actual business process.</p>
           </div>
           <div className="sf-clouds-scroll-wrap">
             <div className="sf-clouds-scroll rev">
@@ -173,7 +173,7 @@ export function SalesforceCrmContent() {
         </div>
       </section>
 
-      {/* ═══ SERVICES — numbered grid ═══ */}
+      {/* ═══ SERVICES: numbered grid ═══ */}
       <section className="sf-svc" id="services">
         <div className="sf-svc-inner">
           <div className="sf-svc-hdr rev">
@@ -193,7 +193,7 @@ export function SalesforceCrmContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — inline step bar ═══ */}
+      {/* ═══ PROCESS: inline step bar ═══ */}
       <section className="sf-proc" id="process">
         <div className="sf-proc-inner">
           <div className="sf-proc-hdr rev">
@@ -226,7 +226,7 @@ export function SalesforceCrmContent() {
         </div>
       </section>
 
-      {/* ═══ INDUSTRIES — pill cloud ═══ */}
+      {/* ═══ INDUSTRIES: pill cloud ═══ */}
       <section className="sf-ind">
         <div className="sf-ind-inner rev">
           <div className="sf-ind-left">
@@ -272,10 +272,10 @@ export function SalesforceCrmContent() {
                 <div className="oi-closer-insight-stat">47%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of Salesforce implementations exceed budget or timeline.</strong>
-                  Source: Nucleus Research, 2024. The root cause is starting with feature configuration instead of sales process mapping — building a CRM that matches the software, not the business.
+                  Source: Nucleus Research, 2024. The root cause is starting with feature configuration instead of sales process mapping, building a CRM that matches the software, not the business.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer Salesforce deployment starts with your sales process — not the admin console. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer Salesforce deployment starts with your sales process, not the admin console. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -286,25 +286,25 @@ export function SalesforceCrmContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Process-first configuration</div>
-                <p className="oi-closer-commit-b">We map your sales process, approval chains, and handoffs before touching Salesforce. CRM mirrors your team — stages, fields, and automations match reality.</p>
+                <p className="oi-closer-commit-b">We map your sales process, approval chains, and handoffs before touching Salesforce. CRM mirrors your team, stages, fields, and automations match reality.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><CheckCircleIcon /></div>
                 <div className="oi-closer-commit-t">Adoption KPIs tracked</div>
-                <p className="oi-closer-commit-b">Login rates, pipeline updates, and report usage are tracked weekly from day one. If adoption drops, we intervene with training — at our cost.</p>
+                <p className="oi-closer-commit-b">Login rates, pipeline updates, and report usage are tracked weekly from day one. If adoption drops, we intervene with training, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
                 <div className="oi-closer-commit-t">Clean migration guaranteed</div>
-                <p className="oi-closer-commit-b">Every record is mapped, validated, and reconciled. Relationships, attachments, and activity history are preserved — verified before and after.</p>
+                <p className="oi-closer-commit-b">Every record is mapped, validated, and reconciled. Relationships, attachments, and activity history are preserved, verified before and after.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Certified consultants only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The consultant who maps your process is the one who builds, migrates, trains, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The consultant who maps your process is the one who builds, migrates, trains, and supports, named in the contract.</p>
               </div>
             </div>
           </div>

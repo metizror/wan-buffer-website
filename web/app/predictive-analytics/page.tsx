@@ -11,7 +11,7 @@ import { PredictiveAnalyticsContent } from "@/components/services/predictive-ana
 export const metadata: Metadata = {
   title: "Predictive Analytics | AI-Powered Business Forecasting | Wan Buffer",
   description:
-    "Transform raw ERP data into accurate business forecasts with AI-powered predictive analytics. Demand forecasting, anomaly detection, churn prediction, and inventory optimisation — integrated directly into Odoo, Zoho, Salesforce, and SAP.",
+    "Transform raw ERP data into accurate business forecasts with AI-powered predictive analytics. Demand forecasting, anomaly detection, churn prediction, and inventory optimisation, integrated directly into Odoo, Zoho, Salesforce, and SAP.",
   keywords: [
     "predictive analytics",
     "AI forecasting",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Predictive Analytics — AI-Powered Business Forecasting | Wan Buffer",
+    title: "Predictive Analytics: AI-Powered Business Forecasting | Wan Buffer",
     description:
-      "Turn your ERP data into accurate forecasts. AI-powered demand prediction, anomaly detection, and churn analysis — embedded directly in your business systems.",
+      "Turn your ERP data into accurate forecasts. AI-powered demand prediction, anomaly detection, and churn analysis, embedded directly in your business systems.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/predictive-analytics" },

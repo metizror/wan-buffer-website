@@ -11,7 +11,7 @@ import { MlInsightsContent } from "@/components/services/ml-insights-content";
 export const metadata: Metadata = {
   title: "ML-Powered Insights | Real-Time Operational Intelligence | Wan Buffer",
   description:
-    "Turn your ERP data into real-time operational intelligence with machine learning. Automated dashboards, KPI monitoring, trend detection, and decision-support systems — embedded directly into Odoo, Zoho, Salesforce, and SAP.",
+    "Turn your ERP data into real-time operational intelligence with machine learning. Automated dashboards, KPI monitoring, trend detection, and decision-support systems, embedded directly into Odoo, Zoho, Salesforce, and SAP.",
   keywords: [
     "ML-powered insights",
     "machine learning analytics",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "ML-Powered Insights — Real-Time Operational Intelligence | Wan Buffer",
+    title: "ML-Powered Insights: Real-Time Operational Intelligence | Wan Buffer",
     description:
-      "Machine learning that transforms ERP data into real-time dashboards, automated KPIs, and proactive alerts — so your team makes decisions based on intelligence, not gut feel.",
+      "Machine learning that transforms ERP data into real-time dashboards, automated KPIs, and proactive alerts, so your team makes decisions based on intelligence, not gut feel.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/ml-powered-insights" },

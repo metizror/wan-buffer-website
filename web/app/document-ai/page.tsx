@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { DocumentAiContent } from "@/components/services/document-ai-content";
 
 export const metadata: Metadata = {
-  title: "Document AI | Intelligent Document Processing, OCR & Data Extraction — Wan Buffer",
+  title: "Document AI | Intelligent Document Processing, OCR & Data Extraction | Wan Buffer",
   description:
     "AI-powered document processing with intelligent OCR, automated data extraction, invoice parsing, contract analysis, and ERP auto-posting. Reduce manual data entry by 90% with Document AI integrated into your Odoo, Zoho, or SAP workflows.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Document AI — Intelligent Document Processing, OCR & Data Extraction | Wan Buffer",
+    title: "Document AI: Intelligent Document Processing, OCR & Data Extraction | Wan Buffer",
     description:
-      "AI-powered document processing with OCR, automated extraction, invoice parsing, and ERP auto-posting — reduce manual data entry by 90%.",
+      "AI-powered document processing with OCR, automated extraction, invoice parsing, and ERP auto-posting, reduce manual data entry by 90%.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/document-ai" },

@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { Logistics3plContent } from "@/components/services/logistics-3pl-content";
 
 export const metadata: Metadata = {
-  title: "Logistics & 3PL ERP | Smart WMS, Route AI & SLA Monitoring — Wan Buffer",
+  title: "Logistics & 3PL ERP | Smart WMS, Route AI & SLA Monitoring | Wan Buffer",
   description:
     "End-to-end logistics and 3PL ERP with smart warehouse management, AI-powered route optimisation, SLA monitoring, real-time shipment tracking, carrier management, and automated billing. For freight forwarders, 3PL providers, and distribution companies.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Logistics & 3PL ERP — Smart WMS, Route AI & SLA Monitoring | Wan Buffer",
+    title: "Logistics & 3PL ERP: Smart WMS, Route AI & SLA Monitoring | Wan Buffer",
     description:
-      "Logistics and 3PL ERP with smart WMS, AI route optimisation, SLA monitoring, real-time tracking, and automated billing — for freight forwarders, 3PL providers, and distribution companies.",
+      "Logistics and 3PL ERP with smart WMS, AI route optimisation, SLA monitoring, real-time tracking, and automated billing, for freight forwarders, 3PL providers, and distribution companies.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/logistics-3pl" },

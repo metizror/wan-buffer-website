@@ -840,13 +840,13 @@ export function CancellationAndRefundPolicyContent() {
               <div className="pp-location">
                 <h3 className="pp-h3">Wan Buffer Services Pvt. Ltd.</h3>
                 <ul className="pp-list">
-                  <li><strong>Website</strong> — wanbuffer.com</li>
+                  <li><strong>Website</strong>, wanbuffer.com</li>
                   <li>
-                    <strong>Email</strong> —{" "}
+                    <strong>Email</strong> : {" "}
                     <a href="mailto:sales@wanbuffer.com" className="pp-link">sales@wanbuffer.com</a>
                   </li>
                   <li>
-                    <strong>Phone</strong> —{" "}
+                    <strong>Phone</strong> : {" "}
                     <a href="tel:+919904122699" className="pp-link">+91 99041 22699</a>
                   </li>
                 </ul>
@@ -854,9 +854,9 @@ export function CancellationAndRefundPolicyContent() {
               <div className="pp-location">
                 <h3 className="pp-h3">Jigar Joshi</h3>
                 <ul className="pp-list">
-                  <li><strong>Website</strong> — jigarjoshi.in</li>
+                  <li><strong>Website</strong>, jigarjoshi.in</li>
                   <li>
-                    <strong>Email</strong> —{" "}
+                    <strong>Email</strong> : {" "}
                     <a href="mailto:jigar@wanbuffer.com" className="pp-link">jigar@wanbuffer.com</a>
                   </li>
                 </ul>

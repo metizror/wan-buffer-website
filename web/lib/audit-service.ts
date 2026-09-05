@@ -36,7 +36,7 @@ export interface LogAuditInput {
 }
 
 /**
- * Append an audit row. Resilient by design — a logging failure NEVER throws
+ * Append an audit row. Resilient by design, a logging failure NEVER throws
  * into the caller, so wrapping every write route is safe.
  */
 export async function logAudit(input: LogAuditInput): Promise<void> {

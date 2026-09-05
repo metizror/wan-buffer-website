@@ -29,12 +29,12 @@ export function HomeHero(_props: HomeHeroProps) {
               <span className="w w3">At</span> <span className="w w4">Scale.</span>
             </h1>
             <p className="hero-sub">
-              The specialist{" "}
+              We are an{" "}
               <strong style={{ color: "rgba(255,255,255,.85)", fontWeight: 600 }}>
                 Odoo AI implementation partner
               </strong>{" "}
-              for mid-market enterprises — embedding AI agents, predictive analytics, and ERP automation services
-              directly into Odoo 17 so your operations run themselves.
+              for mid-market companies. We put AI agents, forecasting, and automation inside Odoo 17 so everyday
+              operations do not sit on your team.
             </p>
             <div className="hero-caps">
               <span className="h-cap erp-c">Odoo ERP</span>
@@ -67,7 +67,7 @@ export function HomeHero(_props: HomeHeroProps) {
             </div>
             <div className="ai-indicator">
               <div className="ai-pulse" />
-              <span className="ai-ind-t">AI Capabilities Active — Agents · Automation · Analytics</span>
+              <span className="ai-ind-t">Live today: agents, automation, and analytics</span>
             </div>
             <div className="stats-grid">
               <div className="s-cell">

@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   INDUSTRIES — oi-* layout (matches /odoo/implementation), original page copy
+   INDUSTRIES, oi-* layout (matches /odoo/implementation), original page copy
 ──────────────────────────────────────────────────────────────────────── */
 
 import Link from "next/link";
@@ -141,7 +141,7 @@ export function IndustriesContent() {
         </div>
       </section>
 
-      {/* Industry verticals — original card content */}
+      {/* Industry verticals, original card content */}
       <section className="oi-bento-sec" id="verticals">
         <div className="oi-bento-inner">
           <div className="oi-bento rev">
@@ -171,7 +171,7 @@ export function IndustriesContent() {
         </div>
       </section>
 
-      {/* CTA — original banner copy */}
+      {/* CTA: original banner copy */}
       <section className="oi-closer" id="contact">
         <div className="oi-closer-inner">
           <div className="oi-closer-cta rev">
@@ -181,7 +181,7 @@ export function IndustriesContent() {
               </h4>
               <p style={{ marginTop: 16, maxWidth: 520, opacity: 0.85, lineHeight: 1.65 }}>
                 Tell us your industry and your biggest operational pain. We&apos;ll map the ERP + AI solution in a
-                free 60-minute discovery call — with real ROI benchmarks from similar clients.
+                free 60-minute discovery call, with real ROI benchmarks from similar clients.
               </p>
             </div>
             <div className="oi-closer-cta-r">

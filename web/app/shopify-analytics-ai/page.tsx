@@ -11,7 +11,7 @@ import { ShopifyAnalyticsContent } from "@/components/services/shopify-analytics
 export const metadata: Metadata = {
   title: "Shopify Analytics + AI | Demand Forecasting & LTV | Wan Buffer",
   description:
-    "AI-powered Shopify analytics — demand forecasting, customer lifetime value prediction, cohort analysis, product performance insights, and automated reporting. Turn Shopify data into revenue growth.",
+    "AI-powered Shopify analytics, demand forecasting, customer lifetime value prediction, cohort analysis, product performance insights, and automated reporting. Turn Shopify data into revenue growth.",
   keywords: [
     "Shopify analytics",
     "Shopify AI",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Shopify Analytics + AI — Demand Forecasting & LTV | Wan Buffer",
+    title: "Shopify Analytics + AI: Demand Forecasting & LTV | Wan Buffer",
     description:
-      "AI-powered Shopify analytics — demand forecasting, LTV prediction, and automated reporting that turns store data into growth.",
+      "AI-powered Shopify analytics, demand forecasting, LTV prediction, and automated reporting that turns store data into growth.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/shopify-analytics-ai" },

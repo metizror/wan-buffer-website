@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   HR & PAYROLL — unique page design
+   HR & PAYROLL, unique page design
    Hero split + payslip mock · Lifecycle strip · Module grid ·
    Payroll region cards · Stats band · Process · Platforms · FAQ ·
    Closer · Support
@@ -71,12 +71,12 @@ const LIFECYCLE = [
 
 /* ── Modules ── */
 const MODULES = [
-  { icon: <UsersIcon />, t: "Employee Management", s: "Centralised employee records — personal details, documents, contracts, reporting hierarchy, and employment history. One source of truth for every team member.", color: "ai" as const },
+  { icon: <UsersIcon />, t: "Employee Management", s: "Centralised employee records, personal details, documents, contracts, reporting hierarchy, and employment history. One source of truth for every team member.", color: "ai" as const },
   { icon: <ClockIcon />, t: "Leave Management", s: "Configurable leave types, accrual rules, carry-forward policies, and approval workflows. Employees request leave via self-service. Managers approve from mobile.", color: "green" as const },
   { icon: <MonitorIcon />, t: "Attendance & Timesheets", s: "Biometric integration, geo-fencing, mobile check-in, and timesheet tracking. Overtime calculations, shift management, and attendance regularisation built in.", color: "purple" as const },
   { icon: <WalletIcon />, t: "Payroll Processing", s: "Multi-country payroll with automatic tax calculations, statutory deductions, allowance structures, and bank file generation. Process payroll for 1,000+ employees in minutes.", color: "red" as const },
-  { icon: <ShieldIcon />, t: "Statutory Compliance", s: "PF, ESI, PT, TDS, gratuity, and labour welfare fund — calculated and deducted automatically. WPS compliance for GCC. Year-end filing and Form 16 generation included.", color: "ai" as const },
-  { icon: <BarChartIcon />, t: "Performance & Appraisals", s: "Goal setting, KRA tracking, 360-degree feedback, and appraisal cycles. Performance data feeds into increment and bonus calculations — closing the HR-payroll loop.", color: "green" as const },
+  { icon: <ShieldIcon />, t: "Statutory Compliance", s: "PF, ESI, PT, TDS, gratuity, and labour welfare fund, calculated and deducted automatically. WPS compliance for GCC. Year-end filing and Form 16 generation included.", color: "ai" as const },
+  { icon: <BarChartIcon />, t: "Performance & Appraisals", s: "Goal setting, KRA tracking, 360-degree feedback, and appraisal cycles. Performance data feeds into increment and bonus calculations, closing the HR-payroll loop.", color: "green" as const },
 ] as const;
 
 /* ── Payroll regions ── */
@@ -115,11 +115,11 @@ const PLATFORMS = [
 /* ── FAQ ── */
 const FAQS = [
   { q: "Which ERP platforms do you implement for HR & Payroll?", a: "We implement HR and payroll modules on Odoo, Zoho People, SAP SuccessFactors, BambooHR, and greytHR. Our recommendation depends on company size, payroll complexity, and existing ERP stack." },
-  { q: "Can you handle multi-country payroll?", a: "Yes. We configure payroll rules for India (PF, ESI, PT, TDS), GCC (WPS, GOSI, DEWS), and global markets — including multi-currency salary processing, cross-border transfers, and local statutory compliance." },
+  { q: "Can you handle multi-country payroll?", a: "Yes. We configure payroll rules for India (PF, ESI, PT, TDS), GCC (WPS, GOSI, DEWS), and global markets, including multi-currency salary processing, cross-border transfers, and local statutory compliance." },
   { q: "Do you integrate with biometric and attendance systems?", a: "Yes. We integrate with biometric devices, RFID scanners, and mobile geo-fencing apps. Attendance data flows directly into the ERP for shift management, overtime calculation, and payroll processing." },
-  { q: "How do you handle WPS payroll for UAE/GCC?", a: "We configure Wage Protection System (WPS) compliant payroll — SIF file generation, bank transfer formatting, MOHRE reporting, and end-of-service benefit calculations per UAE/GCC labour law." },
-  { q: "Can employees access payslips and apply for leave online?", a: "Yes. We deploy employee self-service portals — leave applications, payslip downloads, attendance regularisation, document uploads, and tax declaration — accessible from web and mobile." },
-  { q: "What ongoing support do you provide?", a: "Every implementation includes 90 days of hypercare. After that, we offer SLA-based support — payroll rule updates, statutory changes, year-end processing, and configuration adjustments." },
+  { q: "How do you handle WPS payroll for UAE/GCC?", a: "We configure Wage Protection System (WPS) compliant payroll: SIF file generation, bank transfer formatting, MOHRE reporting, and end-of-service benefit calculations per UAE/GCC labour law." },
+  { q: "Can employees access payslips and apply for leave online?", a: "Yes. We deploy employee self-service portals, leave applications, payslip downloads, attendance regularisation, document uploads, and tax declaration, accessible from web and mobile." },
+  { q: "What ongoing support do you provide?", a: "Every implementation includes 90 days of hypercare. After that, we offer SLA-based support, payroll rule updates, statutory changes, year-end processing, and configuration adjustments." },
 ] as const;
 
 /* ── Component ── */
@@ -127,7 +127,7 @@ export function HrPayrollContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + payslip right ═══ */}
+      {/* ═══ HERO: text left + payslip right ═══ */}
       <section className="hp-hero">
         <div className="hp-hero-glow hp-hero-glow-1" aria-hidden="true" />
         <div className="hp-hero-glow hp-hero-glow-2" aria-hidden="true" />
@@ -143,7 +143,7 @@ export function HrPayrollContent() {
               <span className="acc acc-2">Payroll, automated.</span>
             </h1>
             <p className="hp-hero-sub rev">
-              Leave management, attendance tracking, WPS payroll, statutory compliance, and employee self-service — <strong>end-to-end HR automation</strong> across Odoo, Zoho, SAP, and BambooHR.
+              Leave management, attendance tracking, WPS payroll, statutory compliance, and employee self-service, <strong>end-to-end HR automation</strong> across Odoo, Zoho, SAP, and BambooHR.
             </p>
             {/* stat pills */}
             <div className="hp-hero-stats rev">
@@ -247,13 +247,13 @@ export function HrPayrollContent() {
         </div>
       </section>
 
-      {/* ═══ MODULES — grid ═══ */}
+      {/* ═══ MODULES: grid ═══ */}
       <section className="hp-mods" id="modules">
         <div className="hp-mods-inner">
           <div className="hp-mods-hdr rev">
             <div className="eyebrow">Core modules</div>
             <h2>Six HR modules.<br /><span>Complete workforce management.</span></h2>
-            <p>Every module is configured for your company policies, leave rules, salary structures, and statutory requirements — not a generic template.</p>
+            <p>Every module is configured for your company policies, leave rules, salary structures, and statutory requirements, not a generic template.</p>
           </div>
           <div className="hp-mods-grid rev">
             {MODULES.map((m) => (
@@ -382,10 +382,10 @@ export function HrPayrollContent() {
                 <div className="oi-closer-insight-stat">65%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of HR teams still process payroll manually.</strong>
-                  Source: Deloitte, 2024. The issue isn&apos;t tools — it&apos;s implementations that automate leave requests but leave payroll calculation, compliance, and reporting as manual spreadsheet exercises.
+                  Source: Deloitte, 2024. The issue isn&apos;t tools, it&apos;s implementations that automate leave requests but leave payroll calculation, compliance, and reporting as manual spreadsheet exercises.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer HR deployment automates the full lifecycle — hire to retire, leave to payslip. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer HR deployment automates the full lifecycle, hire to retire, leave to payslip. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -396,13 +396,13 @@ export function HrPayrollContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Full lifecycle automation</div>
-                <p className="oi-closer-commit-b">From offer letter to exit — onboarding, leave, attendance, payroll, appraisals, and offboarding. Every handoff automated.</p>
+                <p className="oi-closer-commit-b">From offer letter to exit, onboarding, leave, attendance, payroll, appraisals, and offboarding. Every handoff automated.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
                 <div className="oi-closer-commit-t">Statutory compliance built in</div>
-                <p className="oi-closer-commit-b">PF, ESI, PT, TDS, WPS, GOSI — configured and tested before go-live. Regulation updates applied automatically.</p>
+                <p className="oi-closer-commit-b">PF, ESI, PT, TDS, WPS, GOSI, configured and tested before go-live. Regulation updates applied automatically.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
@@ -414,7 +414,7 @@ export function HrPayrollContent() {
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><HeartIcon /></div>
                 <div className="oi-closer-commit-t">Senior HR consultants only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The consultant who audits your HR is the one who configures, migrates, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The consultant who audits your HR is the one who configures, migrates, and supports, named in the contract.</p>
               </div>
             </div>
           </div>

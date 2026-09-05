@@ -1,30 +1,53 @@
-/* NAV scroll */
-window.addEventListener('scroll',()=>{ const n=document.getElementById('mainNav'); if(!n) return; n.classList.toggle('scrolled',scrollY>20) });
+/* NAV scroll: rAF-throttled */
+;(function(){
+  const n=()=>document.getElementById('mainNav');
+  let ticking=false;
+  window.addEventListener('scroll',()=>{
+    if(ticking)return;
+    ticking=true;
+    requestAnimationFrame(()=>{
+      ticking=false;
+      const el=n(); if(!el) return;
+      el.classList.toggle('scrolled',scrollY>20);
+    });
+  },{passive:true});
+})();
 
 /* Mobile nav */
 window.openNav = function openNav(){document.getElementById('mobNav')?.classList.add('open');document.body.style.overflow='hidden'};
 window.closeNav = function closeNav(){document.getElementById('mobNav')?.classList.remove('open');document.body.style.overflow=''};
 
-/* Hero canvas — particle network */
+/* Hero canvas: particle network (paused off-screen / reduced on mobile) */
 ;(function(){
   const canvas=document.getElementById('heroCanvas');
   if(!canvas)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){canvas.remove();return;}
+  /* Skip continuous canvas work on small phones, biggest TBT win for Moto G Lighthouse. */
+  if(window.matchMedia('(max-width: 700px)').matches){canvas.style.display='none';return;}
   const ctx=canvas.getContext('2d');
   if(!ctx)return;
-  let W,H,pts=[];
+  let W,H,pts=[],running=false,raf=0;
+  const N=window.matchMedia('(max-width: 1024px)').matches?28:48;
   function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight}
-  resize();window.addEventListener('resize',resize);
-  const N=60;
+  resize();
+  let resizePending=false;
+  window.addEventListener('resize',()=>{
+    if(resizePending)return;
+    resizePending=true;
+    requestAnimationFrame(()=>{resizePending=false;resize();});
+  });
   for(let i=0;i<N;i++) pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.8+.4,ai:Math.random()>.6});
   function draw(){
+    if(!running)return;
     ctx.clearRect(0,0,W,H);
-    pts.forEach(p=>{
+    for(let i=0;i<N;i++){
+      const p=pts[i];
       p.x+=p.vx;p.y+=p.vy;
       if(p.x<0||p.x>W)p.vx*=-1;
       if(p.y<0||p.y>H)p.vy*=-1;
       ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
       ctx.fillStyle=p.ai?'rgba(0,194,255,0.7)':'rgba(255,255,255,0.5)';ctx.fill();
-    });
+    }
     for(let i=0;i<N;i++) for(let j=i+1;j<N;j++){
       const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
       if(d<100){
@@ -34,9 +57,18 @@ window.closeNav = function closeNav(){document.getElementById('mobNav')?.classLi
         ctx.lineWidth=.6;ctx.stroke();
       }
     }
-    requestAnimationFrame(draw);
+    raf=requestAnimationFrame(draw);
   }
-  draw();
+  function start(){if(running||document.hidden)return;running=true;raf=requestAnimationFrame(draw);}
+  function stop(){running=false;if(raf)cancelAnimationFrame(raf);raf=0;}
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else if(canvas.isConnected)start();});
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(entries=>{
+      if(entries[0].isIntersecting) start(); else stop();
+    },{threshold:0.05}).observe(canvas);
+  } else {
+    start();
+  }
 })();
 
 /* Counter animation */
@@ -49,7 +81,7 @@ function animCount(el,target,dur){
   };requestAnimationFrame(run);
 }
 
-/* Scroll reveal — re-run via window.initScrollReveal() after Next.js client navigations */
+/* Scroll reveal: re-run via window.initScrollReveal() after Next.js client navigations */
 function initScrollReveal(root){
   const scope=root&&root.querySelectorAll?root:document;
   const ro=window.__wbScrollRevealRO||(window.__wbScrollRevealRO=new IntersectionObserver(entries=>{
@@ -81,7 +113,7 @@ const obs=(sel,cb,t=.3)=>{
   new IntersectionObserver(entries=>{if(entries[0].isIntersecting)cb(el)},{threshold:t}).observe(el);
 };
 
-/* Hero stats counters (c1–c4) — re-run via window.initHeroStatsCounters() after client navigations */
+/* Hero stats counters (c1–c4), re-run via window.initHeroStatsCounters() after client navigations */
 const HERO_STATS_SPECS=[['c1',7,1500],['c2',254,1800],['c3',84,1600],['c4',50,1400]];
 function initHeroStatsCounters(){
   const grid=document.querySelector('.stats-grid');
@@ -140,7 +172,7 @@ document.querySelectorAll('.btn-r,.btn-ai,.n-cta,.n-ai-cta,.f-btn,.m-btn,.popup-
   });
 });
 
-/* ══ POPUP — scroll trigger (~3rd homepage band: AI strip) + localStorage dismiss ══ */
+/* ══ POPUP: scroll trigger (~3rd homepage band: AI strip) + localStorage dismiss ══ */
 const LEAD_POPUP_STORAGE_KEY = 'wanbuffer_lead_popup_dismissed_v1';
 let popupShown=false;
 let popupDeferred=false;
@@ -417,34 +449,34 @@ function filterFaq(cat, btn){
 window.filterFaq = filterFaq;
 
 /* ══════════════════════════════════════════════════════
-   WANNY — Intelligent AI Pre-Sales Consultant
+   WANNY: Intelligent AI Pre-Sales Consultant
    Reads website content · Web search · Claude API
    Qualification-focused · Not scripted Q&A
 ══════════════════════════════════════════════════════ */
 
-/* ── KNOWLEDGE BASE — Wan Buffer company data ── */
+/* ── KNOWLEDGE BASE | Wan Buffer company data ── */
 const WB_KNOWLEDGE = {
   company: `Wan Buffer is an AI-and-Automation-enabled ERP Solutions Company founded 7+ years ago, serving 20+ countries.
-Primary platform: Odoo (Official Partner) — Odoo 16, 17, 18. Community + Enterprise.
+Primary platform: Odoo (Official Partner). Odoo 16, 17, 18. Community + Enterprise.
 Additional platforms: Zoho, Salesforce, Magento, Shopify. Official Razorpay payment gateway partner.
 Headquarters: India. Active markets: India, USA, Canada, Germany, UAE, Morocco.
 Stats: 254+ projects delivered, 96% on-time delivery, 84% client retention, 50+ certified engineers.`,
 
   services: `Core services:
-1. Odoo ERP Implementation — full-cycle from requirements to go-live (8-24 weeks depending on scope)
-2. AI Agents for ERP — autonomous agents inside Odoo for procurement, invoicing, inventory, HR
-3. Workflow Automation — RPA + Odoo automation rules, zero-touch process flows
-4. Predictive Analytics & ML — demand forecasting, anomaly detection, churn prediction
-5. AI Copilots & Chatbots — natural language ERP interaction using GPT-4o, Claude, RAG
-6. Intelligent Document Processing — OCR + AI for invoices, POs, contracts into Odoo
-7. ERP & AI Integration Architecture — REST API, Kafka, AWS, Docker pipelines
+1. Odoo ERP Implementation, full-cycle from requirements to go-live (8-24 weeks depending on scope)
+2. AI Agents for ERP, autonomous agents inside Odoo for procurement, invoicing, inventory, HR
+3. Workflow Automation. RPA + Odoo automation rules, zero-touch process flows
+4. Predictive Analytics & ML, demand forecasting, anomaly detection, churn prediction
+5. AI Copilots & Chatbots, natural language ERP interaction using GPT-4o, Claude, RAG
+6. Intelligent Document Processing. OCR + AI for invoices, POs, contracts into Odoo
+7. ERP & AI Integration Architecture. REST API, Kafka, AWS, Docker pipelines
 8. Platform integrations: Salesforce, HubSpot, Shopify, Magento, WooCommerce, Razorpay, Stripe, FedEx, DHL`,
 
   engagement: `4 engagement models:
-1. Project-Based — fixed scope, fixed budget, ideal for defined deliverables like Odoo implementation or specific AI module
-2. Dedicated Team — ongoing dev, full control over engineers, scale without hiring in-house
-3. Retainer — continuous improvement, priority support, quarterly AI audits, proactive monitoring
-4. AI Agent + Human Team (NEW) — autonomous AI agents handle repetitive ERP tasks, human engineers handle custom logic & strategy. 50-70% cost reduction vs fully human team.`,
+1. Project-Based, fixed scope, fixed budget, ideal for defined deliverables like Odoo implementation or specific AI module
+2. Dedicated Team, ongoing dev, full control over engineers, scale without hiring in-house
+3. Retainer, continuous improvement, priority support, quarterly AI audits, proactive monitoring
+4. AI Agent + Human Team (NEW), autonomous AI agents handle repetitive ERP tasks, human engineers handle custom logic & strategy. 50-70% cost reduction vs fully human team.`,
 
   industries: `Industries served:
 Manufacturing: MRP + AI quality control, predictive maintenance, autonomous PO generation
@@ -485,6 +517,8 @@ function scrapePageContext(){
 }
 
 const WANNY = (function(){
+  /* HomeWanny currently renders null, skip all tracking/UI work. */
+  if(!document.getElementById('wanny-trigger') && !document.getElementById('float-stack')) return null;
 
   /* ── State ── */
   let state = {
@@ -558,12 +592,12 @@ const WANNY = (function(){
   }
 
   const OPENERS = {
-    engagement_models: "I can see you're exploring our engagement models — most businesses I talk to end up between Dedicated Team and AI Agent + Human Team depending on budget. What's driving your search for a new ERP or AI solution?",
-    ai_services: "Looks like you've been reviewing our AI capabilities. Are you currently running an ERP and looking to add AI on top — or evaluating a full ERP + AI implementation from scratch?",
-    industries: "You've been browsing our industry solutions — which sector are you in? I can tell you about real results we've achieved for businesses in your vertical.",
-    platforms: "You're looking at our platform coverage — besides Odoo, we work with Zoho, Salesforce, Shopify, Magento and Razorpay. Is there a specific platform you're evaluating or integrating?",
-    deep_scroll: "You've done a thorough read of the site — I'm Wanny, Wan Buffer's AI consultant. What's the core challenge you're trying to solve? I'll give you a straight answer.",
-    general: "Hi, I'm Wanny — Wan Buffer's AI ERP consultant. I'm not a scripted bot — ask me anything about our services, platforms, or how we've solved problems for businesses like yours.",
+    engagement_models: "I can see you're exploring our engagement models, most businesses I talk to end up between Dedicated Team and AI Agent + Human Team depending on budget. What's driving your search for a new ERP or AI solution?",
+    ai_services: "Looks like you've been reviewing our AI capabilities. Are you currently running an ERP and looking to add AI on top, or evaluating a full ERP + AI implementation from scratch?",
+    industries: "You've been browsing our industry solutions, which sector are you in? I can tell you about real results we've achieved for businesses in your vertical.",
+    platforms: "You're looking at our platform coverage, besides Odoo, we work with Zoho, Salesforce, Shopify, Magento and Razorpay. Is there a specific platform you're evaluating or integrating?",
+    deep_scroll: "You've done a thorough read of the site: I'm Wanny, Wan Buffer's AI consultant. What's the core challenge you're trying to solve? I'll give you a straight answer.",
+    general: "Hi, I'm Wanny | Wan Buffer's AI ERP consultant. I'm not a scripted bot, ask me anything about our services, platforms, or how we've solved problems for businesses like yours.",
   };
 
   /* ── UI ── */
@@ -800,22 +834,22 @@ Scroll depth: ${state.scrollDepth}%
 Section currently viewing: ${currentSection || 'homepage'}
 
 == BEHAVIOUR RULES ==
-1. Answer ANY question the visitor has — do not dodge or deflect to "contact us" unless truly necessary
+1. Answer ANY question the visitor has, do not dodge or deflect to "contact us" unless truly necessary
 2. Use your knowledge base to give specific, accurate answers about Wan Buffer's services, pricing, timelines, and capabilities
-3. Be conversational and concise — under 120 words per response unless a detailed comparison or list is needed
+3. Be conversational and concise, under 120 words per response unless a detailed comparison or list is needed
 4. Naturally reference case studies when they're relevant to the question
-5. Never sound salesy or scripted — be a knowledgeable friend who happens to work at Wan Buffer
-6. When qualification score ≥ 60, naturally suggest a discovery call — but don't push if they're still researching
-7. If asked about competitors, be honest and fair — highlight what makes Wan Buffer genuinely different
+5. Never sound salesy or scripted, be a knowledgeable friend who happens to work at Wan Buffer
+6. When qualification score ≥ 60, naturally suggest a discovery call, but don't push if they're still researching
+7. If asked about competitors, be honest and fair, highlight what makes Wan Buffer genuinely different
 8. Format with **bold** for key terms when it helps readability
 9. If a question is outside your knowledge, say so honestly rather than guessing`;
   }
 
   /* ── Claude API call (no web search) ── */
-  /* ── PROXY CONFIG — set your backend URL here when ready ── */
+  /* ── PROXY CONFIG: set your backend URL here when ready ── */
   const PROXY_URL = ''; // e.g. 'https://your-domain.com/api/wanny'
 
-  /* ── Smart offline knowledge engine — conversation-aware ── */
+  /* ── Smart offline knowledge engine, conversation-aware ── */
   function smartOfflineReply(text){
     const t = text.toLowerCase();
     const q = state.qualification;
@@ -836,70 +870,70 @@ Section currently viewing: ${currentSection || 'homepage'}
 
     // ── PRINCIPLE: Answer first. Qualify second. Be honest. Sound human. ──
 
-    // ── Simple yes/no geography — answer directly ──
+    // ── Simple yes/no geography, answer directly ──
     if(/usa|united states|america|us client|do you.*(usa|us)|serve.*usa|work.*us/i.test(t)){
       const followUp = ctxDistrib ? "Are you based in the US, or are you looking to expand there?"
                      : ctxSteel ? "Are you a US-based steel business, or looking at cross-border trade?"
                      : "Are you based in the US yourself, or asking on behalf of a client?";
-      return `Yes, definitely. We work with clients across the USA — mostly mid-market businesses in manufacturing, distribution, and services. A few are headquartered in the US and use us for Odoo implementation and AI automation. ${followUp}`;
+      return `Yes, definitely. We work with clients across the USA, mostly mid-market businesses in manufacturing, distribution, and services. A few are headquartered in the US and use us for Odoo implementation and AI automation. ${followUp}`;
     }
 
-    // ── Steel + export/import — be honest, answer what we can ──
+    // ── Steel + export/import, be honest, answer what we can ──
     if(/steel.*export|steel.*import|export.*import.*steel|import.*export.*steel|steel.*trading|steel.*trade/i.test(t) ||
        (ctxSteel && /export|import|trading|trade/i.test(t))){
       state.qualification.industry = 'manufacturing';
-      return `Honest answer — I don't have a specific steel export/import case study I can point to. What we have done is Odoo implementation for steel manufacturers (inventory management, procurement, quality tracking) and for trading businesses (multi-currency, landed costs, customs documentation). The export/import piece in Odoo — duty tracking, incoterms on sales orders, multi-country tax handling — we've handled that for clients in UAE and India. If you want to talk to someone on the team who's done this specifically, I can flag you for a call. What country is the trade flowing between?`;
+      return `Honest answer: I don't have a specific steel export/import case study I can point to. What we have done is Odoo implementation for steel manufacturers (inventory management, procurement, quality tracking) and for trading businesses (multi-currency, landed costs, customs documentation). The export/import piece in Odoo, duty tracking, incoterms on sales orders, multi-country tax handling, we've handled that for clients in UAE and India. If you want to talk to someone on the team who's done this specifically, I can flag you for a call. What country is the trade flowing between?`;
     }
 
-    // ── Steel general — answer directly with honesty ──
+    // ── Steel general, answer directly with honesty ──
     if(/steel|metal.*industr|iron|alumin|copper|fabricat/i.test(t)){
       state.qualification.industry = 'manufacturing';
-      return `We've worked with metal and steel manufacturing clients — mostly on the production side: Odoo MRP, inventory management with lot/batch tracking, quality control, and procurement automation. I won't oversell it — our strongest manufacturing case study is a textile mill, not steel specifically. But the Odoo modules are the same (MRP, Inventory, Purchase, Quality), and we've handled multi-warehouse raw material tracking for heavy industry clients before. What does your operation look like — manufacturing, trading, or both?`;
+      return `We've worked with metal and steel manufacturing clients, mostly on the production side: Odoo MRP, inventory management with lot/batch tracking, quality control, and procurement automation. I won't oversell it, our strongest manufacturing case study is a textile mill, not steel specifically. But the Odoo modules are the same (MRP, Inventory, Purchase, Quality), and we've handled multi-warehouse raw material tracking for heavy industry clients before. What does your operation look like, manufacturing, trading, or both?`;
     }
 
-    // ── Distribution/wholesale — conversational, not a brochure ──
+    // ── Distribution/wholesale, conversational, not a brochure ──
     if(/distribut|wholesale|trade house/i.test(t)){
       state.qualification.industry = 'logistics';
       const usa = ctxUSA ? " We have distribution clients in the US too." : "";
-      return `Yes, distribution is a solid use case for Odoo and one we've implemented a fair bit.${usa} The things that matter most for distributors — customer-specific pricing, credit limits, multi-warehouse visibility, automated reordering — Odoo handles those well out of the box, and we tune them to how your business actually operates. What type of goods are you distributing, and roughly how many SKUs are you managing?`;
+      return `Yes, distribution is a solid use case for Odoo and one we've implemented a fair bit.${usa} The things that matter most for distributors, customer-specific pricing, credit limits, multi-warehouse visibility, automated reordering. Odoo handles those well out of the box, and we tune them to how your business actually operates. What type of goods are you distributing, and roughly how many SKUs are you managing?`;
     }
 
     // ── Export/import general ──
     if(/export|import|cross.?border|customs|duty|incoterm/i.test(t)){
       const honest = ctxSteel ? "For steel specifically, " : "";
-      return `${honest}We've handled cross-border trade scenarios in Odoo — incoterms on sales orders, landed cost tracking (freight, customs, insurance), multi-currency accounting, and country-specific tax rules. Our clients in UAE and India deal with significant import/export volumes. What's the trade corridor you're working with?`;
+      return `${honest}We've handled cross-border trade scenarios in Odoo, incoterms on sales orders, landed cost tracking (freight, customs, insurance), multi-currency accounting, and country-specific tax rules. Our clients in UAE and India deal with significant import/export volumes. What's the trade corridor you're working with?`;
     }
 
     // ── USA geography ──
     if(/usa|united states|america|us-based|north america/i.test(t)){
-      return `Yes — we serve clients in the US. Mostly mid-market businesses that want Odoo without paying enterprise SI rates. We work remotely with US clients and have done projects across manufacturing, distribution, and services. What's your situation — are you evaluating Odoo for the first time, or looking to improve an existing setup?`;
+      return `Yes, we serve clients in the US. Mostly mid-market businesses that want Odoo without paying enterprise SI rates. We work remotely with US clients and have done projects across manufacturing, distribution, and services. What's your situation, are you evaluating Odoo for the first time, or looking to improve an existing setup?`;
     }
 
     // ── Simple greetings ──
     if(/^(hi|hello|hey|yo|hiya|good\s*(morning|afternoon|evening))[\s!?.,]*$/i.test(t.trim())){
-      return `Hi — I'm Wanny. Ask me anything about Wan Buffer's ERP and AI work. I'll give you straight answers, not a sales pitch.`;
+      return `Hi. I'm Wanny. Ask me anything about Wan Buffer's ERP and AI work. I'll give you straight answers, not a sales pitch.`;
     }
 
     // ── Who are you / about Wan Buffer ──
     if(/who are you|what is wan buffer|about wan buffer|what do you do|introduce yourself/i.test(t)){
       const alreadyIntroduced = /254\+ projects|erp solutions company|gold partner/i.test(history);
-      if(alreadyIntroduced) return `Already covered the intro — happy to go deeper on anything specific. What are you trying to figure out?`;
-      return `Wan Buffer is an ERP and AI automation company — been around 7+ years, 254+ projects, clients across 20+ countries. We mainly work with Odoo (we're an Odoo Partner) but also handle Zoho, Salesforce, Shopify, Magento and Razorpay integrations. What brings you here?`;
+      if(alreadyIntroduced) return `Already covered the intro, happy to go deeper on anything specific. What are you trying to figure out?`;
+      return `Wan Buffer is an ERP and AI automation company, been around 7+ years, 254+ projects, clients across 20+ countries. We mainly work with Odoo (we're an Odoo Partner) but also handle Zoho, Salesforce, Shopify, Magento and Razorpay integrations. What brings you here?`;
     }
 
     // ── Services overview ──
     if(/service|what do you offer|capabilities|what you build|help with/i.test(t)){
-      return `Main things we do: Odoo ERP implementation (v16/17/18), AI agents that automate repetitive ERP tasks, workflow automation, predictive analytics, and integrations with platforms like Shopify, Salesforce, Razorpay. We also build custom AI — document processing, forecasting models, chatbots embedded in Odoo. What's the problem you're trying to solve?`;
+      return `Main things we do: Odoo ERP implementation (v16/17/18), AI agents that automate repetitive ERP tasks, workflow automation, predictive analytics, and integrations with platforms like Shopify, Salesforce, Razorpay. We also build custom AI, document processing, forecasting models, chatbots embedded in Odoo. What's the problem you're trying to solve?`;
     }
 
     // ── Odoo specific ──
     if(/odoo|erp implement|odoo 1[6-9]|migrat/i.test(t)){
-      return `We're an Odoo Partner — we've done implementations, custom module development, migrations from older versions, and AI integration on top of Odoo. Typical SME implementation runs 8–14 weeks. If it's complex — multi-company, lots of custom workflows, AI on top — more like 16–24 weeks. Are you starting fresh or migrating from something existing?`;
+      return `We're an Odoo Partner, we've done implementations, custom module development, migrations from older versions, and AI integration on top of Odoo. Typical SME implementation runs 8–14 weeks. If it's complex, multi-company, lots of custom workflows, AI on top, more like 16–24 weeks. Are you starting fresh or migrating from something existing?`;
     }
 
     // ── AI Agent model ──
     if(/ai agent|ai.*human|autonomous.*agent/i.test(t)){
-      return `That's our newest model — AI agents handle the repetitive ERP work (auto-purchasing, invoice processing, stock alerts) while senior engineers handle anything that needs judgment. Clients typically cut costs 50–70% compared to a fully human team. It works well when you have high-volume, predictable workflows. Does that sound like your situation?`;
+      return `That's our newest model: AI agents handle the repetitive ERP work (auto-purchasing, invoice processing, stock alerts) while senior engineers handle anything that needs judgment. Clients typically cut costs 50–70% compared to a fully human team. It works well when you have high-volume, predictable workflows. Does that sound like your situation?`;
     }
 
     // ── Engagement models ──
@@ -909,93 +943,93 @@ Section currently viewing: ${currentSection || 'homepage'}
 
     // ── Pricing ──
     if(/price|pricing|cost|how much|budget|rate|fee|quote/i.test(t)){
-      return `We don't publish fixed prices — it genuinely depends on scope. A standard Odoo SME implementation usually starts around $15k–$20k. AI work is scoped separately. If you're a larger business or need significant customisation, it'll be higher. Best way to get a real number is a quick scoping call — we give you a written proposal with clear deliverables before anything starts. Want to do that?`;
+      return `We don't publish fixed prices, it genuinely depends on scope. A standard Odoo SME implementation usually starts around $15k–$20k. AI work is scoped separately. If you're a larger business or need significant customisation, it'll be higher. Best way to get a real number is a quick scoping call, we give you a written proposal with clear deliverables before anything starts. Want to do that?`;
     }
 
     // ── Timeline ──
     if(/timeline|how long|duration|weeks|months|go.?live|delivery/i.test(t)){
-      return `Standard Odoo implementation: 8–14 weeks. Complex multi-company or AI-heavy projects: 16–24 weeks. Migrations from older Odoo versions: 6–10 weeks. Adding an AI module to existing Odoo: 3–6 weeks. We hit 96% on-time delivery across our projects — we're realistic about timelines upfront.`;
+      return `Standard Odoo implementation: 8–14 weeks. Complex multi-company or AI-heavy projects: 16–24 weeks. Migrations from older Odoo versions: 6–10 weeks. Adding an AI module to existing Odoo: 3–6 weeks. We hit 96% on-time delivery across our projects, we're realistic about timelines upfront.`;
     }
 
     // ── Manufacturing ──
     if(/manufactur|factory|plant|production|mrp/i.test(t)){
       state.qualification.industry = 'manufacturing';
-      return `Manufacturing is one of our stronger areas — Odoo MRP, shop floor tracking, predictive maintenance, quality control, autonomous purchasing. Best example: a Gujarat fabric mill where we cut lead time by 40% and reduced manual data entry by 80%, live in 14 weeks. What kind of manufacturing are you in?`;
+      return `Manufacturing is one of our stronger areas: Odoo MRP, shop floor tracking, predictive maintenance, quality control, autonomous purchasing. Best example: a Gujarat fabric mill where we cut lead time by 40% and reduced manual data entry by 80%, live in 14 weeks. What kind of manufacturing are you in?`;
     }
 
     // ── Retail/ecommerce ──
     if(/retail|ecommerce|shopify|magento|store/i.test(t)){
       state.qualification.industry = 'retail';
-      return `We do a lot of Odoo + ecommerce work — Shopify and Magento bridges to Odoo, multi-warehouse management, AI demand forecasting, loyalty programs. Are you running on an existing platform and looking to sync with Odoo, or building from scratch?`;
+      return `We do a lot of Odoo + ecommerce work. Shopify and Magento bridges to Odoo, multi-warehouse management, AI demand forecasting, loyalty programs. Are you running on an existing platform and looking to sync with Odoo, or building from scratch?`;
     }
 
     // ── Logistics/3PL ──
     if(/logistic|3pl|freight|shipping|route/i.test(t)){
       state.qualification.industry = 'logistics';
-      return `Logistics is solid for us — multi-client WMS on Odoo, AI route optimisation, SLA tracking, automated client billing. We had a Kuwait 3PL client cut overstock by 34% and stockouts by 60% with predictive replenishment. What does your operation look like?`;
+      return `Logistics is solid for us, multi-client WMS on Odoo, AI route optimisation, SLA tracking, automated client billing. We had a Kuwait 3PL client cut overstock by 34% and stockouts by 60% with predictive replenishment. What does your operation look like?`;
     }
 
     // ── Healthcare ──
     if(/health|pharma|clinic|hospital|medical/i.test(t)){
       state.qualification.industry = 'healthcare';
-      return `We've built HIPAA-aligned Odoo setups for healthcare — patient flows, pharmacy inventory, insurance billing automation. PharmaCore in Hyderabad processes 300+ invoices a day now with zero human touch. Are you in hospitals, pharma, or something else?`;
+      return `We've built HIPAA-aligned Odoo setups for healthcare, patient flows, pharmacy inventory, insurance billing automation. PharmaCore in Hyderabad processes 300+ invoices a day now with zero human touch. Are you in hospitals, pharma, or something else?`;
     }
 
     // ── Real estate ──
     if(/real.?estate|property|developer|broker|lease/i.test(t)){
       state.qualification.industry = 'realestate';
-      return `Real estate is one of our verticals — broker CRM, AI lead scoring, lease automation, occupancy forecasting. Arabian Properties in Dubai saw a 28% jump in broker conversion after we implemented AI lead scoring on their Odoo. Are you a developer, agent, or property manager?`;
+      return `Real estate is one of our verticals, broker CRM, AI lead scoring, lease automation, occupancy forecasting. Arabian Properties in Dubai saw a 28% jump in broker conversion after we implemented AI lead scoring on their Odoo. Are you a developer, agent, or property manager?`;
     }
 
     // ── Finance ──
     if(/finance|bank|accounting|fintech|reconcil/i.test(t)){
       state.qualification.industry = 'finance';
-      return `We do multi-currency Odoo accounting, VAT/GST compliance (India, UAE, Germany, Canada), AI reconciliation, and KYC automation. Mostly for professional services firms and financial businesses. What's the core problem — compliance, reconciliation, CRM, or something else?`;
+      return `We do multi-currency Odoo accounting, VAT/GST compliance (India, UAE, Germany, Canada), AI reconciliation, and KYC automation. Mostly for professional services firms and financial businesses. What's the core problem, compliance, reconciliation, CRM, or something else?`;
     }
 
     // ── Case studies ──
     if(/case study|case studies|example|proof|results|roi|success/i.test(t)){
-      return `A few real ones: Gujarat fabric mill — 40% lead time down, 80% less manual work, 14 weeks to go-live. Gulf Logistics in Kuwait — 34% less overstock, 60% fewer stockouts. PharmaCore in Hyderabad — 300+ invoices a day, fully automated. Arabian Properties in Dubai — 28% more broker conversions. Kaizen Auto Parts in Pune — 40% lead time reduction. Want details on any of these?`;
+      return `A few real ones: Gujarat fabric mill, 40% lead time down, 80% less manual work, 14 weeks to go-live. Gulf Logistics in Kuwait, 34% less overstock, 60% fewer stockouts. PharmaCore in Hyderabad, 300+ invoices a day, fully automated. Arabian Properties in Dubai, 28% more broker conversions. Kaizen Auto Parts in Pune, 40% lead time reduction. Want details on any of these?`;
     }
 
     // ── Platforms/integrations ──
     if(/zoho|salesforce|razorpay|shopify|magento|integration|connector|sync|platform/i.test(t)){
-      return `Beyond Odoo we work with Zoho (CRM, Books, Inventory), Salesforce (bidirectional sync with Odoo), Shopify and Magento (real-time inventory and order sync), and Razorpay — we're an official partner there. Also Stripe, FedEx, DHL, HubSpot, Zapier, Make, AWS. Which platform are you looking to connect?`;
+      return `Beyond Odoo we work with Zoho (CRM, Books, Inventory), Salesforce (bidirectional sync with Odoo), Shopify and Magento (real-time inventory and order sync), and Razorpay, we're an official partner there. Also Stripe, FedEx, DHL, HubSpot, Zapier, Make, AWS. Which platform are you looking to connect?`;
     }
 
     // ── Regions/compliance ──
     if(/india|uae|germany|canada|morocco|gdpr|vat|gst|compliance|region|country/i.test(t)){
-      return `We actively serve India, UAE, USA, Canada, Germany, and Morocco — with built-in compliance for each (GST e-invoicing for India, GCC VAT for UAE, GDPR for Germany, sales tax for North America). Where is your business based?`;
+      return `We actively serve India, UAE, USA, Canada, Germany, and Morocco, with built-in compliance for each (GST e-invoicing for India, GCC VAT for UAE, GDPR for Germany, sales tax for North America). Where is your business based?`;
     }
 
     // ── Support ──
     if(/support|after.?launch|post.?go.?live|maintenance|sla/i.test(t)){
-      return `Every project includes 3 months of free support after go-live. After that it's SLA-based — 4-hour response for critical issues, 1 business day for standard. Retainer clients get priority queue and quarterly reviews.`;
+      return `Every project includes 3 months of free support after go-live. After that it's SLA-based, 4-hour response for critical issues, 1 business day for standard. Retainer clients get priority queue and quarterly reviews.`;
     }
 
     // ── Security/NDA ──
     if(/security|nda|privacy|confidential|gdpr|safe|secure|data/i.test(t)){
-      return `We sign an NDA before any sensitive data is shared. Data stays on private endpoints — nothing feeds public AI models. On-premise AI is available for healthcare and finance clients. We're compliant with GDPR, UAE PDPL, and India's DPDP Act.`;
+      return `We sign an NDA before any sensitive data is shared. Data stays on private endpoints, nothing feeds public AI models. On-premise AI is available for healthcare and finance clients. We're compliant with GDPR, UAE PDPL, and India's DPDP Act.`;
     }
 
     // ── Booking ──
     if(/book|call|schedule|meet|discovery|talk to someone|speak|connect/i.test(t)){
       state.qualScore = Math.max(state.qualScore, 62);
-      return `Good idea — a 30-minute call is the fastest way to get a real answer for your situation. You'd be talking to an engineer, not a salesperson.`;
+      return `Good idea, a 30-minute call is the fastest way to get a real answer for your situation. You'd be talking to an engineer, not a salesperson.`;
     }
 
     // ── Tell me more / follow-up expansion ──
     if(/tell me more|more about|elaborate|explain|go on|what else|deeper/i.test(t)){
       if(/distribut|wholesale/i.test(lastBot)) return `For distribution the details that usually matter: how you handle customer-specific pricing (Odoo does tiered price lists and contract prices cleanly), credit limit enforcement on orders, multi-location stock visibility across warehouses, and supplier lead time tracking for automated reordering. What part of the operation is most painful right now?`;
-      if(/manufactur|mrp|production/i.test(lastBot)) return `On the manufacturing side — multi-level BOM, work centre routing, real-time OEE on shop floor tablets, computer vision quality checks, predictive maintenance from IoT sensors, subcontracting flows. What does your production process look like?`;
+      if(/manufactur|mrp|production/i.test(lastBot)) return `On the manufacturing side, multi-level BOM, work centre routing, real-time OEE on shop floor tablets, computer vision quality checks, predictive maintenance from IoT sensors, subcontracting flows. What does your production process look like?`;
       if(/inventor|stock/i.test(lastBot)) return `On inventory specifically: lot and serial tracking end-to-end, multi-step receipt/delivery flows with quality gates, demand-driven reorder rules, cycle counting without stopping operations, landed cost distribution. How many SKUs and locations are you dealing with?`;
-      return `Happy to go deeper — which part are you most interested in: technical implementation, a specific module, how we've done it for similar businesses, or timeline and cost?`;
+      return `Happy to go deeper, which part are you most interested in: technical implementation, a specific module, how we've done it for similar businesses, or timeline and cost?`;
     }
 
     // ── Yes confirmations ──
     if(/^(yes|yeah|yep|sure|ok|okay|correct|right|exactly|absolutely|definitely)[\s!.,?]*$/i.test(t.trim())){
       if(/call|book|discovery/i.test(lastBot)) return `Great. Can you share a bit about what you're trying to solve first? Even a one-liner helps the specialist prepare for the call.`;
-      if(/erp|odoo|sap|spreadsheet/i.test(lastBot) && !q.currentERP) return `Got it — which one? Odoo, SAP, Salesforce, Zoho, something else, or spreadsheets?`;
+      if(/erp|odoo|sap|spreadsheet/i.test(lastBot) && !q.currentERP) return `Got it, which one? Odoo, SAP, Salesforce, Zoho, something else, or spreadsheets?`;
       return `Understood. What would you like to know next?`;
     }
 
@@ -1003,7 +1037,7 @@ Section currently viewing: ${currentSection || 'homepage'}
     if(/^(no|nope|not really|not yet|don't|dont|haven't|havent|nah)[\s!.,?]*$/i.test(t.trim())){
       if(!q.currentERP && /erp|system/i.test(lastBot)){
         state.qualification.currentERP = 'none';
-        return `Starting clean is actually easier — no legacy migration baggage, we design the architecture right from day one. What's the main operational headache you're trying to fix?`;
+        return `Starting clean is actually easier, no legacy migration baggage, we design the architecture right from day one. What's the main operational headache you're trying to fix?`;
       }
       return `No worries. What would you like to explore instead?`;
     }
@@ -1012,26 +1046,26 @@ Section currently viewing: ${currentSection || 'homepage'}
     const wordCount = t.trim().split(/\s+/).length;
     if(wordCount <= 8 && /they|their|it|this|that|those|these|the client|your client/i.test(t)){
       // Stay on the last topic
-      if(/gulf logistic|kuwait/i.test(lastBot + prevBot)) return `Yes, Gulf Logistics is based in Kuwait — mid-size 3PL serving the GCC region. They came to us with a serious overstock problem and we solved it with predictive replenishment on Odoo. Similar situation to what you're dealing with?`;
-      if(/gujarat|fabric mill|textile/i.test(lastBot + prevBot)) return `That project is in Gujarat, India — textile manufacturer, 3 production lines. The big win was autonomous purchasing agents and real-time shop floor tracking. Similar production setup to yours?`;
-      if(/pharmacore|hyderabad/i.test(lastBot + prevBot)) return `PharmaCore is in Hyderabad, India — pharmaceutical company that needed to process hundreds of invoices daily without growing their accounts team. We built AI document processing on top of Odoo for them.`;
-      if(/arabian|dubai|real estate/i.test(lastBot + prevBot)) return `Arabian Properties is in Dubai. Real estate developer — the problem was brokers not following up on leads fast enough. We built AI lead scoring that prioritised the hottest leads automatically.`;
+      if(/gulf logistic|kuwait/i.test(lastBot + prevBot)) return `Yes, Gulf Logistics is based in Kuwait, mid-size 3PL serving the GCC region. They came to us with a serious overstock problem and we solved it with predictive replenishment on Odoo. Similar situation to what you're dealing with?`;
+      if(/gujarat|fabric mill|textile/i.test(lastBot + prevBot)) return `That project is in Gujarat, India, textile manufacturer, 3 production lines. The big win was autonomous purchasing agents and real-time shop floor tracking. Similar production setup to yours?`;
+      if(/pharmacore|hyderabad/i.test(lastBot + prevBot)) return `PharmaCore is in Hyderabad, India, pharmaceutical company that needed to process hundreds of invoices daily without growing their accounts team. We built AI document processing on top of Odoo for them.`;
+      if(/arabian|dubai|real estate/i.test(lastBot + prevBot)) return `Arabian Properties is in Dubai. Real estate developer, the problem was brokers not following up on leads fast enough. We built AI lead scoring that prioritised the hottest leads automatically.`;
       // Generic short follow-up
       if(lastBot) return `Can you be a bit more specific about what you're asking? I want to give you a useful answer rather than guess.`;
     }
 
     // ── How many / portfolio ──
     if(/how many|total|count|portfolio/i.test(t)){
-      return `254+ projects delivered over 7+ years, across 20+ countries. 84% of clients come back for more work — either new modules or AI enhancements. Anything specific you want to know about our track record?`;
+      return `254+ projects delivered over 7+ years, across 20+ countries. 84% of clients come back for more work, either new modules or AI enhancements. Anything specific you want to know about our track record?`;
     }
 
-    // ── Contextual fallback — never ask a question that's already been asked ──
+    // ── Contextual fallback, never ask a question that's already been asked ──
     const alreadyAskedIndustry = /which industry|what industry|what sector|what type of business/i.test(history);
     const alreadyAskedERP = /which erp|what erp|running an erp|using an erp/i.test(history);
 
     // Use accumulated context to give a relevant response
     if(ctxSteel && ctxDistrib){
-      return `Given what you've mentioned — steel trading and distribution — the Odoo setup we'd typically recommend covers multi-currency purchasing, landed cost tracking for imports, customer-specific pricing for your buyers, and inventory management across locations. I don't have a steel trading case study specifically, but those components are things we've built for trading businesses. What's the biggest operational gap in your current setup?`;
+      return `Given what you've mentioned, steel trading and distribution, the Odoo setup we'd typically recommend covers multi-currency purchasing, landed cost tracking for imports, customer-specific pricing for your buyers, and inventory management across locations. I don't have a steel trading case study specifically, but those components are things we've built for trading businesses. What's the biggest operational gap in your current setup?`;
     }
     if(ctxDistrib && !alreadyAskedIndustry){
       return `What type of goods does your distribution business handle? That helps me point to the most relevant work we've done.`;
@@ -1043,8 +1077,8 @@ Section currently viewing: ${currentSection || 'homepage'}
       return `Are you currently running an ERP, or managing on spreadsheets?`;
     }
 
-    // Last resort — honest, not deflecting
-    return `I want to give you a useful answer — can you say a bit more about what you're asking? I'm happy to be direct once I understand the question.`;
+    // Last resort, honest, not deflecting
+    return `I want to give you a useful answer, can you say a bit more about what you're asking? I'm happy to be direct once I understand the question.`;
   }
 
   async function respondWithClaude(text){
@@ -1126,7 +1160,7 @@ Section currently viewing: ${currentSection || 'homepage'}
   function buildBookingCard(){
     return `<div class="w-book-card">
       <div class="w-book-title">📅 Free 30-Min Discovery Call</div>
-      <div class="w-book-sub">Talk directly with an AI + ERP specialist — not a sales rep — within 24 hours.</div>
+      <div class="w-book-sub">Talk directly with an AI + ERP specialist, not a sales rep, within 24 hours.</div>
       <div class="w-book-slots">
         <span class="w-book-slot" onclick="selectSlot(this)">Mon 10:00 IST</span>
         <span class="w-book-slot" onclick="selectSlot(this)">Tue 14:00 IST</span>
@@ -1142,7 +1176,7 @@ Section currently viewing: ${currentSection || 'homepage'}
     const s = document.querySelector('.w-book-slot.selected');
     if(!s){ addBotMsg('Please select a time slot first.'); return; }
     document.getElementById('wannyChips').innerHTML='';
-    addBotMsg(`Noted — **${s.textContent}** works. Can you share your name and business email? I'll make sure a specialist reaches out within 2 hours with the calendar invite.`);
+    addBotMsg(`Noted, **${s.textContent}** works. Can you share your name and business email? I'll make sure a specialist reaches out within 2 hours with the calendar invite.`);
     showChips(['Send to contact form','I\'ll email you directly']);
   };
 

@@ -11,7 +11,7 @@ import { AiHrPayrollContent } from "@/components/services/ai-hr-payroll-content"
 export const metadata: Metadata = {
   title: "AI-Assisted HR & Payroll | Intelligent Onboarding & Automation | Wan Buffer",
   description:
-    "Automate HR and payroll operations with AI — intelligent onboarding, leave management, payroll calculation, compliance monitoring, and employee self-service. Integrated with Odoo, Zoho People, SAP SuccessFactors, and BambooHR.",
+    "Automate HR and payroll operations with AI, intelligent onboarding, leave management, payroll calculation, compliance monitoring, and employee self-service. Integrated with Odoo, Zoho People, SAP SuccessFactors, and BambooHR.",
   keywords: [
     "AI HR automation",
     "automated payroll",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "AI-Assisted HR & Payroll — Intelligent Onboarding & Automation | Wan Buffer",
+    title: "AI-Assisted HR & Payroll: Intelligent Onboarding & Automation | Wan Buffer",
     description:
-      "AI-powered HR and payroll automation — onboarding, leave management, payroll, compliance, and self-service — built into your ERP.",
+      "AI-powered HR and payroll automation, onboarding, leave management, payroll, compliance, and self-service, built into your ERP.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/ai-hr-payroll" },

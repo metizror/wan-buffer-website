@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { RealEstateContent } from "@/components/services/real-estate-content";
 
 export const metadata: Metadata = {
-  title: "Real Estate ERP | CRM, AI Lead Scoring & Lease Lifecycle — Wan Buffer",
+  title: "Real Estate ERP | CRM, AI Lead Scoring & Lease Lifecycle | Wan Buffer",
   description:
     "End-to-end real estate ERP with property CRM, AI-powered lead scoring, lease lifecycle management, unit inventory, broker commission tracking, and revenue analytics. For developers, property managers, brokerages, and commercial real estate firms.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Real Estate ERP — CRM, AI Lead Scoring & Lease Lifecycle | Wan Buffer",
+    title: "Real Estate ERP: CRM, AI Lead Scoring & Lease Lifecycle | Wan Buffer",
     description:
-      "Real estate ERP with property CRM, AI lead scoring, lease lifecycle management, and revenue analytics — for developers, property managers, and commercial real estate firms.",
+      "Real estate ERP with property CRM, AI lead scoring, lease lifecycle management, and revenue analytics, for developers, property managers, and commercial real estate firms.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/real-estate" },

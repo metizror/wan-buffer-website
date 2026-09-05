@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   ENGAGEMENT MODELS — dedicated page
+   ENGAGEMENT MODELS, dedicated page
    Hero · 4 model deep-dives · How to choose · Process flow ·
    FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -47,7 +47,7 @@ const MODELS = [
     name: "Project-Based Engagement",
     tag: null,
     tagType: null,
-    sub: "Fixed scope, fixed price, defined delivery — ERP or AI projects with clear boundaries. Ideal when you know exactly what you need and want predictable cost and timeline.",
+    sub: "Fixed scope, fixed price, defined delivery: ERP or AI projects with clear boundaries. Ideal when you know exactly what you need and want predictable cost and timeline.",
     features: [
       "Defined scope, timeline & milestones",
       "Fixed-price transparent contract",
@@ -69,17 +69,17 @@ const MODELS = [
     name: "AI Agent + Human Team",
     tag: "New Model",
     tagType: "new" as const,
-    sub: "Our most innovative model — AI agents handle repetitive execution while senior engineers focus on strategy, custom logic, and continuous improvement. 50–70% lower cost vs fully human teams.",
+    sub: "Our most innovative model: AI agents handle repetitive execution while senior engineers focus on strategy, custom logic, and continuous improvement. 50–70% lower cost vs fully human teams.",
     features: [
       "AI agents execute routine ERP tasks autonomously",
       "Senior engineers manage exceptions & custom logic",
       "50–70% lower cost vs. fully human teams",
-      "Continuous learning — agents improve over time",
+      "Continuous learning, agents improve over time",
       "Full transparency dashboard & audit logs",
       "Ideal for ongoing ERP operations & automation",
     ],
     bestFor: ["Ongoing ERP operations", "Data entry & reconciliation", "Automated testing & QA", "Repetitive workflow automation"],
-    timeline: "Ongoing — monthly",
+    timeline: "Ongoing, monthly",
     teamSize: "AI agents + 1–3 engineers",
     cta: "Explore This Model",
     href: "/ai-agent-human-team",
@@ -91,7 +91,7 @@ const MODELS = [
     name: "Dedicated Team",
     tag: "Most Popular",
     tagType: "popular" as const,
-    sub: "Your offshore ERP + AI engineering squad — fully dedicated, deeply embedded in your workflows. Scale up or down month-to-month as your needs evolve.",
+    sub: "Your offshore ERP + AI engineering squad, fully dedicated, deeply embedded in your workflows. Scale up or down month-to-month as your needs evolve.",
     features: [
       "2–15 engineers, 100% dedicated to you",
       "Mix of ERP, AI, and mobile engineers",
@@ -101,7 +101,7 @@ const MODELS = [
       "Transparent time tracking & sprint reports",
     ],
     bestFor: ["Long-term product development", "Multi-module ERP rollouts", "Continuous feature development", "Teams needing full-time bandwidth"],
-    timeline: "Ongoing — monthly",
+    timeline: "Ongoing, monthly",
     teamSize: "2–15 engineers",
     cta: "Build My Team",
     href: "/dedicated-team",
@@ -113,10 +113,10 @@ const MODELS = [
     name: "Retainer Model",
     tag: null,
     tagType: null,
-    sub: "Ongoing ERP support, AI optimisation, and managed platform evolution — a strategic long-term partnership with priority SLA and proactive system health management.",
+    sub: "Ongoing ERP support, AI optimisation, and managed platform evolution, a strategic long-term partnership with priority SLA and proactive system health management.",
     features: [
       "Monthly sprint-based development",
-      "Priority SLA — bug fixes within 24h",
+      "Priority SLA, bug fixes within 24h",
       "Quarterly AI + ERP system health audits",
       "Proactive Odoo upgrade planning",
       "Flexible hours pool each month",
@@ -133,7 +133,7 @@ const MODELS = [
 
 /* ── How to choose ── */
 const CHOOSER = [
-  { q: "I know exactly what I need — fixed scope, fixed budget", a: "Project-Based", model: "01" },
+  { q: "I know exactly what I need, fixed scope, fixed budget", a: "Project-Based", model: "01" },
   { q: "I want AI doing the repetitive work, humans on strategy", a: "AI Agent + Human Team", model: "02" },
   { q: "I need a full engineering team embedded in my workflows", a: "Dedicated Team", model: "03" },
   { q: "I need ongoing support with priority SLA", a: "Retainer Model", model: "04" },
@@ -149,12 +149,12 @@ const PROCESS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "How do I choose between Project-Based and Dedicated Team?", a: "Project-Based is ideal when you have a well-defined scope with clear deliverables — an ERP implementation, a specific module build, or a migration. Dedicated Team is better when work is ongoing, scope evolves over time, or you need consistent engineering bandwidth. If you're unsure, start with a project-based engagement and transition to a dedicated team once you see the value." },
-  { q: "How does the AI Agent + Human Team model actually work?", a: "AI agents handle repetitive ERP tasks — data entry, reconciliation, report generation, testing, and routine configurations. Senior human engineers handle strategy, custom logic, exception management, and continuous improvement. You get a transparency dashboard showing exactly what the AI agents are doing, with full audit logs. The cost is 50–70% lower than a fully human team because AI handles the volume work." },
+  { q: "How do I choose between Project-Based and Dedicated Team?", a: "Project-Based is ideal when you have a well-defined scope with clear deliverables, an ERP implementation, a specific module build, or a migration. Dedicated Team is better when work is ongoing, scope evolves over time, or you need consistent engineering bandwidth. If you're unsure, start with a project-based engagement and transition to a dedicated team once you see the value." },
+  { q: "How does the AI Agent + Human Team model actually work?", a: "AI agents handle repetitive ERP tasks, data entry, reconciliation, report generation, testing, and routine configurations. Senior human engineers handle strategy, custom logic, exception management, and continuous improvement. You get a transparency dashboard showing exactly what the AI agents are doing, with full audit logs. The cost is 50–70% lower than a fully human team because AI handles the volume work." },
   { q: "Can I switch between engagement models?", a: "Yes. Many clients start with a Project-Based engagement for their initial ERP implementation, then move to a Retainer or Dedicated Team for ongoing development. We design contracts with transition clauses so you can switch models without disruption or penalty." },
-  { q: "What's included in the 3-month post-launch support?", a: "For Project-Based engagements, the 3-month hypercare period includes bug fixes, configuration adjustments, user support, and minor enhancements — at no additional cost. After 3 months, you can transition to a Retainer for ongoing support or engage us on a per-ticket basis." },
-  { q: "How quickly can a Dedicated Team be assembled?", a: "We can have a 2–4 person team onboarded within 1–2 weeks. Larger teams (8–15 engineers) typically take 2–4 weeks to assemble, as we match specific skill requirements — ERP functional consultants, AI/ML engineers, mobile developers, and QA specialists." },
-  { q: "What happens if I need to scale my team up or down?", a: "Dedicated Team and Retainer models are designed for flexibility. You can add or remove engineers month-to-month with 2 weeks' notice. There are no long-term lock-ins — we earn your business every month. Team changes take effect at the next sprint boundary." },
+  { q: "What's included in the 3-month post-launch support?", a: "For Project-Based engagements, the 3-month hypercare period includes bug fixes, configuration adjustments, user support, and minor enhancements, at no additional cost. After 3 months, you can transition to a Retainer for ongoing support or engage us on a per-ticket basis." },
+  { q: "How quickly can a Dedicated Team be assembled?", a: "We can have a 2–4 person team onboarded within 1–2 weeks. Larger teams (8–15 engineers) typically take 2–4 weeks to assemble, as we match specific skill requirements. ERP functional consultants, AI/ML engineers, mobile developers, and QA specialists." },
+  { q: "What happens if I need to scale my team up or down?", a: "Dedicated Team and Retainer models are designed for flexibility. You can add or remove engineers month-to-month with 2 weeks' notice. There are no long-term lock-ins, we earn your business every month. Team changes take effect at the next sprint boundary." },
 ] as const;
 
 /* ── Component ── */
@@ -178,7 +178,7 @@ export function EngagementContent() {
               <span className="acc">One goal.<br />Your success.</span>
             </h1>
             <p className="eg-hero-sub rev">
-              From fixed-scope projects to our breakthrough AI Agent + Human Team hybrid — choose the partnership model that fits your challenge, timeline, and budget.
+              From fixed-scope projects to our breakthrough AI Agent + Human Team hybrid, choose the partnership model that fits your challenge, timeline, and budget.
             </p>
             <div className="eg-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -230,7 +230,7 @@ export function EngagementContent() {
         </div>
       </section>
 
-      {/* ═══ MODELS — 4 deep-dive cards ═══ */}
+      {/* ═══ MODELS: 4 deep-dive cards ═══ */}
       <section className="eg-models" id="models">
         <div className="eg-models-inner">
           <div className="eg-models-hdr rev">
@@ -287,7 +287,7 @@ export function EngagementContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="eg-proc" id="process">
         <div className="eg-proc-inner">
           <div className="eg-proc-hdr rev">
@@ -353,10 +353,10 @@ export function EngagementContent() {
                 <div className="oi-closer-insight-stat">84%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>client retention rate across all engagement models.</strong>
-                  That means 84% of clients who start with us continue working with us — because we deliver measurable outcomes, not just billable hours.
+                  That means 84% of clients who start with us continue working with us, because we deliver measurable outcomes, not just billable hours.
                 </div>
               </div>
-              <p>Every engagement model comes with four guarantees — written into the contract, not just the sales pitch.</p>
+              <p>Every engagement model comes with four guarantees, written into the contract, not just the sales pitch.</p>
             </div>
           </div>
 
@@ -367,24 +367,24 @@ export function EngagementContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed KPIs &amp; success metrics</div>
-                <p className="oi-closer-commit-b">Every engagement defines measurable outcomes before work begins — delivery milestones, performance targets, or SLA thresholds. If we miss them, we iterate at our cost.</p>
+                <p className="oi-closer-commit-b">Every engagement defines measurable outcomes before work begins, delivery milestones, performance targets, or SLA thresholds. If we miss them, we iterate at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><EyeIcon /></div>
-                <div className="oi-closer-commit-t">Full transparency — always</div>
+                <div className="oi-closer-commit-t">Full transparency, always</div>
                 <p className="oi-closer-commit-b">Time tracking, sprint reports, AI agent dashboards, and cost breakdowns are visible to you at all times. No black boxes, no surprise invoices, no hidden costs.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><RefreshIcon /></div>
                 <div className="oi-closer-commit-t">Flexible transitions between models</div>
-                <p className="oi-closer-commit-b">Start project-based, move to a dedicated team, add AI agents, or switch to a retainer — contracts include transition clauses so you can evolve without penalty.</p>
+                <p className="oi-closer-commit-b">Start project-based, move to a dedicated team, add AI agents, or switch to a retainer, contracts include transition clauses so you can evolve without penalty.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
-                <div className="oi-closer-commit-t">Senior engineers only — named in the contract</div>
+                <div className="oi-closer-commit-t">Senior engineers only, named in the contract</div>
                 <p className="oi-closer-commit-b">No juniors, no outsourcing, no bait-and-switch. The engineers proposed are the ones who do the work. Every team member is named in the agreement.</p>
               </div>
             </div>

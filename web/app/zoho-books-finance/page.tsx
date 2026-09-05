@@ -11,7 +11,7 @@ import { ZohoBooksContent } from "@/components/services/zoho-books-content";
 export const metadata: Metadata = {
   title: "Zoho Books & Finance | Accounting, Invoicing & GST | Wan Buffer",
   description:
-    "Expert Zoho Books implementation — automated invoicing, bank reconciliation, GST/VAT compliance, expense management, and financial reporting. End-to-end accounting automation for businesses in India, USA, UAE, and GCC.",
+    "Expert Zoho Books implementation, automated invoicing, bank reconciliation, GST/VAT compliance, expense management, and financial reporting. End-to-end accounting automation for businesses in India, USA, UAE, and GCC.",
   keywords: [
     "Zoho Books implementation",
     "Zoho Books setup",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Zoho Books & Finance — Accounting, Invoicing & GST | Wan Buffer",
+    title: "Zoho Books & Finance: Accounting, Invoicing & GST | Wan Buffer",
     description:
-      "End-to-end Zoho Books implementation — automated invoicing, bank reconciliation, GST/VAT compliance, and financial reporting for growing businesses.",
+      "End-to-end Zoho Books implementation, automated invoicing, bank reconciliation, GST/VAT compliance, and financial reporting for growing businesses.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/zoho-books-finance" },

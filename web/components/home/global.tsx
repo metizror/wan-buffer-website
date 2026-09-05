@@ -11,7 +11,7 @@ export function HomeGlobal() {
           </h2>
           <p className="sec-p" style={{ color: "rgba(255,255,255,.5)", margin: "14px 0 24px" }}>
             Our solutions are tailored to meet regional compliance standards, market demands, and business environments.
-            Whether you&apos;re a startup, growing enterprise, or established organisation — we help you scale in your
+            Whether you&apos;re a startup, growing enterprise, or established organisation, we help you scale in your
             local and international markets.
           </p>
           <div className="global-ctas">

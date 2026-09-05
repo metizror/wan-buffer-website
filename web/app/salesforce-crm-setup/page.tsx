@@ -11,7 +11,7 @@ import { SalesforceCrmContent } from "@/components/services/salesforce-crm-conte
 export const metadata: Metadata = {
   title: "Salesforce CRM Setup | B2B Sales & Lead Management | Wan Buffer",
   description:
-    "Expert Salesforce CRM setup and implementation — Sales Cloud, Service Cloud, Marketing Cloud, and custom Lightning development. Pipeline configuration, lead management, workflow automation, and third-party integration for B2B businesses.",
+    "Expert Salesforce CRM setup and implementation: Sales Cloud, Service Cloud, Marketing Cloud, and custom Lightning development. Pipeline configuration, lead management, workflow automation, and third-party integration for B2B businesses.",
   keywords: [
     "Salesforce CRM setup",
     "Salesforce implementation",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Salesforce CRM Setup — B2B Sales & Lead Management | Wan Buffer",
+    title: "Salesforce CRM Setup: B2B Sales & Lead Management | Wan Buffer",
     description:
-      "End-to-end Salesforce CRM setup — Sales Cloud, Service Cloud, Lightning development, and integration. From lead capture to closed deal.",
+      "End-to-end Salesforce CRM setup: Sales Cloud, Service Cloud, Lightning development, and integration. From lead capture to closed deal.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/salesforce-crm-setup" },

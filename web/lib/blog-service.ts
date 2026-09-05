@@ -235,7 +235,7 @@ export async function updateBlog(
   return result ? serializeBlog(result as unknown as BlogDocument) : null;
 }
 
-/** Soft delete — sets deletedAt so the post is hidden everywhere but recoverable. */
+/** Soft delete: sets deletedAt so the post is hidden everywhere but recoverable. */
 export async function deleteBlog(id: string): Promise<boolean> {
   const c = await col();
   if (!ObjectId.isValid(id)) return false;
@@ -256,7 +256,7 @@ export async function listDeletedBlogs(): Promise<BlogDocument[]> {
   return docs.map(serializeBlog);
 }
 
-/** Restore a soft-deleted post — clears deletedAt so it becomes visible again. */
+/** Restore a soft-deleted post, clears deletedAt so it becomes visible again. */
 export async function restoreBlog(id: string): Promise<boolean> {
   const c = await col();
   if (!ObjectId.isValid(id)) return false;
@@ -267,7 +267,7 @@ export async function restoreBlog(id: string): Promise<boolean> {
   return result.matchedCount === 1;
 }
 
-/** Hard delete — permanent removal. Reserved for a future trash module. */
+/** Hard delete: permanent removal. Reserved for a future trash module. */
 export async function hardDeleteBlog(id: string): Promise<boolean> {
   const c = await col();
   if (!ObjectId.isValid(id)) return false;

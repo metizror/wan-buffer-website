@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   AI AGENTS FOR ERP — service page
+   AI AGENTS FOR ERP, service page
    Hero luxe · Stats band · Methodology cards · Chaptered roadmap ·
    Bento · Closer · Clean support
 ──────────────────────────────────────────────────────────────────────── */
@@ -41,46 +41,46 @@ import {
 
 /* ── Data ── */
 const PHASES = [
-  { icon: <SearchIcon/>, title: "ERP audit & AI readiness assessment", body: "We map your existing ERP workflows, data quality, and process bottlenecks to identify exactly where AI agents will deliver the highest ROI — before writing a single line of code.", tag: "Discover", ai: false, outcome: "AI opportunity map", duration: "1–2 weeks", deliverables: ["Process mapping", "Data quality audit", "ROI projections", "Agent feasibility report"] },
-  { icon: <CpuIcon/>, title: "Agent architecture & design", body: "We design autonomous agent architectures tailored to your ERP — defining decision boundaries, tool access, memory systems, and human-in-the-loop checkpoints for safe, reliable automation.", tag: "Design", ai: true, outcome: "Agent blueprints", duration: "2–3 weeks", deliverables: ["Agent topology diagram", "Tool & API specs", "Guardrail definitions", "Approval workflows"] },
-  { icon: <CodeIcon/>, title: "Agent development & training", body: "Our engineers build, fine-tune, and test AI agents against your real ERP data. Each agent is purpose-built for specific tasks — procurement, invoicing, inventory, or customer service.", tag: "Build", ai: true, outcome: "Agents deployed", duration: "4–6 weeks", deliverables: ["Custom AI agents", "LLM fine-tuning", "Regression test suite", "Sprint demos"] },
-  { icon: <DatabaseIcon/>, title: "ERP integration & data pipeline", body: "Agents connect directly to your ERP via secure APIs. We build real-time data pipelines so agents always work with live, accurate information — never stale exports or CSV dumps.", tag: "Integrate", ai: false, outcome: "Live data sync", duration: "2–3 weeks", deliverables: ["API integrations", "Data pipeline setup", "Security hardening", "Latency benchmarks"] },
+  { icon: <SearchIcon/>, title: "ERP audit & AI readiness assessment", body: "We map your existing ERP workflows, data quality, and process bottlenecks to identify exactly where AI agents will deliver the highest ROI, before writing a single line of code.", tag: "Discover", ai: false, outcome: "AI opportunity map", duration: "1–2 weeks", deliverables: ["Process mapping", "Data quality audit", "ROI projections", "Agent feasibility report"] },
+  { icon: <CpuIcon/>, title: "Agent architecture & design", body: "We design autonomous agent architectures tailored to your ERP, defining decision boundaries, tool access, memory systems, and human-in-the-loop checkpoints for safe, reliable automation.", tag: "Design", ai: true, outcome: "Agent blueprints", duration: "2–3 weeks", deliverables: ["Agent topology diagram", "Tool & API specs", "Guardrail definitions", "Approval workflows"] },
+  { icon: <CodeIcon/>, title: "Agent development & training", body: "Our engineers build, fine-tune, and test AI agents against your real ERP data. Each agent is purpose-built for specific tasks, procurement, invoicing, inventory, or customer service.", tag: "Build", ai: true, outcome: "Agents deployed", duration: "4–6 weeks", deliverables: ["Custom AI agents", "LLM fine-tuning", "Regression test suite", "Sprint demos"] },
+  { icon: <DatabaseIcon/>, title: "ERP integration & data pipeline", body: "Agents connect directly to your ERP via secure APIs. We build real-time data pipelines so agents always work with live, accurate information, never stale exports or CSV dumps.", tag: "Integrate", ai: false, outcome: "Live data sync", duration: "2–3 weeks", deliverables: ["API integrations", "Data pipeline setup", "Security hardening", "Latency benchmarks"] },
   { icon: <EyeIcon/>, title: "Testing & human-in-the-loop validation", body: "Every agent action is validated in a sandbox before production. We configure approval gates, confidence thresholds, and escalation paths so your team stays in control.", tag: "Validate", ai: true, outcome: "Production-ready", duration: "1–2 weeks", deliverables: ["UAT sign-off", "Confidence calibration", "Escalation workflows", "Edge-case testing"] },
-  { icon: <RocketIcon/>, title: "Go-live & continuous learning", body: "Agents launch in production with full monitoring. Post-deployment, they learn from corrections and feedback — getting smarter and more accurate with every interaction.", tag: "Launch", ai: true, outcome: "Live & learning", duration: "1 week + 90 days hypercare", deliverables: ["Production deployment", "Monitoring dashboards", "Feedback loops", "Performance reviews"] },
+  { icon: <RocketIcon/>, title: "Go-live & continuous learning", body: "Agents launch in production with full monitoring. Post-deployment, they learn from corrections and feedback, getting smarter and more accurate with every interaction.", tag: "Launch", ai: true, outcome: "Live & learning", duration: "1 week + 90 days hypercare", deliverables: ["Production deployment", "Monitoring dashboards", "Feedback loops", "Performance reviews"] },
 ] as const;
 
 const ROADMAP_CHAPTERS = [
   { chapter: "01", tag: "Foundation", title: "Assess & Architect", desc: "Evaluate your ERP landscape, identify high-impact automation targets, and design agent architectures that align with your business goals and compliance requirements.", accent: "ai" as const,
     steps: [
-      { n: "01", icon: <TargetIcon/>, title: "Identify automation targets", body: "We pinpoint the ERP tasks where AI agents deliver the most value — repetitive, rule-heavy, and error-prone workflows that drain your team's time.", deliverable: "Opportunity matrix" },
-      { n: "02", icon: <WalletIcon/>, title: "Quantify business impact", body: "Every agent we propose comes with projected time savings, cost reduction, and accuracy improvements — backed by your real data.", deliverable: "ROI forecast" },
-      { n: "03", icon: <BarChartIcon/>, title: "Design agent architecture", body: "We define the agent's decision framework, tool integrations, memory systems, and escalation rules — engineered for reliability at scale.", deliverable: "Architecture spec" },
-      { n: "04", icon: <ShieldIcon/>, title: "Set governance guardrails", body: "Approval thresholds, audit trails, and human override controls are defined upfront — so AI agents operate within boundaries your team trusts.", deliverable: "Governance framework" },
+      { n: "01", icon: <TargetIcon/>, title: "Identify automation targets", body: "We pinpoint the ERP tasks where AI agents deliver the most value, repetitive, rule-heavy, and error-prone workflows that drain your team's time.", deliverable: "Opportunity matrix" },
+      { n: "02", icon: <WalletIcon/>, title: "Quantify business impact", body: "Every agent we propose comes with projected time savings, cost reduction, and accuracy improvements, backed by your real data.", deliverable: "ROI forecast" },
+      { n: "03", icon: <BarChartIcon/>, title: "Design agent architecture", body: "We define the agent's decision framework, tool integrations, memory systems, and escalation rules, engineered for reliability at scale.", deliverable: "Architecture spec" },
+      { n: "04", icon: <ShieldIcon/>, title: "Set governance guardrails", body: "Approval thresholds, audit trails, and human override controls are defined upfront, so AI agents operate within boundaries your team trusts.", deliverable: "Governance framework" },
     ]},
   { chapter: "02", tag: "Construction", title: "Build & Integrate", desc: "Develop purpose-built AI agents, connect them to your ERP through secure APIs, and validate every action against real business data before production.", accent: "r" as const,
     steps: [
-      { n: "05", icon: <MilestoneIcon/>, title: "Build task-specific agents", body: "Each agent is purpose-built — procurement agents handle POs, finance agents process invoices, inventory agents optimise reorder points.", deliverable: "Deployed agents" },
-      { n: "06", icon: <CloudIcon/>, title: "Connect ERP data pipelines", body: "Real-time, bi-directional data sync between your agents and ERP modules — no batch jobs, no stale data, no manual exports.", deliverable: "Live integration" },
+      { n: "05", icon: <MilestoneIcon/>, title: "Build task-specific agents", body: "Each agent is purpose-built, procurement agents handle POs, finance agents process invoices, inventory agents optimise reorder points.", deliverable: "Deployed agents" },
+      { n: "06", icon: <CloudIcon/>, title: "Connect ERP data pipelines", body: "Real-time, bi-directional data sync between your agents and ERP modules, no batch jobs, no stale data, no manual exports.", deliverable: "Live integration" },
       { n: "07", icon: <CheckCircleIcon/>, title: "Sandbox testing", body: "Agents run against production-mirror data in isolated environments. Every decision is logged, reviewed, and validated before go-live.", deliverable: "UAT sign-off" },
-      { n: "08", icon: <UsersIcon/>, title: "Team enablement", body: "Your team learns to monitor agents, handle escalations, and fine-tune behaviour — turning them into AI operations experts.", deliverable: "Trained team" },
+      { n: "08", icon: <UsersIcon/>, title: "Team enablement", body: "Your team learns to monitor agents, handle escalations, and fine-tune behaviour, turning them into AI operations experts.", deliverable: "Trained team" },
     ]},
   { chapter: "03", tag: "Operations", title: "Launch & Evolve", desc: "Deploy agents to production with full observability, then continuously improve their accuracy and expand their capabilities as your business grows.", accent: "r" as const,
     steps: [
-      { n: "09", icon: <ZapIcon/>, title: "Production deployment", body: "Controlled rollout with rollback capability. Agents go live department by department — never a risky big-bang launch.", deliverable: "Live agents" },
+      { n: "09", icon: <ZapIcon/>, title: "Production deployment", body: "Controlled rollout with rollback capability. Agents go live department by department, never a risky big-bang launch.", deliverable: "Live agents" },
       { n: "10", icon: <BookOpenIcon/>, title: "Monitor & optimise", body: "Real-time dashboards track agent accuracy, latency, and business impact. We tune continuously based on actual performance data.", deliverable: "Performance baseline" },
-      { n: "11", icon: <TrendingUpIcon/>, title: "Scale & expand", body: "Once initial agents prove ROI, we scale to new departments and workflows — each expansion faster than the last.", deliverable: "Expansion roadmap" },
+      { n: "11", icon: <TrendingUpIcon/>, title: "Scale & expand", body: "Once initial agents prove ROI, we scale to new departments and workflows, each expansion faster than the last.", deliverable: "Expansion roadmap" },
     ]},
 ] as const;
 
 const BENTO_DATA = [
-  { icon: <CpuIcon/>, t: "Purpose-built ERP agents", b: "Not generic chatbots — agents engineered for specific ERP tasks like procurement, invoicing, inventory management, and order processing.", tag: "Specialisation", size: "feature", ai: true, variant: "", stat: { n: "100%", l: "Task-specific" } },
-  { icon: <PackageIcon/>, t: "Multi-ERP compatibility", b: "Agents that work across Odoo, Zoho, Salesforce, SAP, and hybrid ERP environments — no vendor lock-in.", tag: "Platforms", size: "", ai: false, variant: "glow-red", mini: { n: "5+", l: "ERP platforms" } },
-  { icon: <RefreshIcon/>, t: "Self-improving accuracy", b: "Agents learn from corrections and feedback loops — getting more accurate with every interaction, not less.", tag: "Learning", size: "", ai: true, variant: "glow-ai", mini: { n: "99.2%", l: "Accuracy target" } },
+  { icon: <CpuIcon/>, t: "Purpose-built ERP agents", b: "Not generic chatbots, agents engineered for specific ERP tasks like procurement, invoicing, inventory management, and order processing.", tag: "Specialisation", size: "feature", ai: true, variant: "", stat: { n: "100%", l: "Task-specific" } },
+  { icon: <PackageIcon/>, t: "Multi-ERP compatibility", b: "Agents that work across Odoo, Zoho, Salesforce, SAP, and hybrid ERP environments, no vendor lock-in.", tag: "Platforms", size: "", ai: false, variant: "glow-red", mini: { n: "5+", l: "ERP platforms" } },
+  { icon: <RefreshIcon/>, t: "Self-improving accuracy", b: "Agents learn from corrections and feedback loops, getting more accurate with every interaction, not less.", tag: "Learning", size: "", ai: true, variant: "glow-ai", mini: { n: "99.2%", l: "Accuracy target" } },
   { icon: <SparklesIcon/>, t: "Enterprise-grade security", b: "SOC 2 compliant architecture, encrypted data pipelines, role-based access, and full audit trails on every agent action.", tag: "Security", size: "wide", ai: false, variant: "pattern", mini: { n: "0", l: "Data leaks" } },
-  { icon: <ClockIcon/>, t: "24/7 autonomous operation", b: "Agents work around the clock — processing invoices at midnight, updating inventory at dawn, generating reports before your team arrives.", tag: "Uptime", size: "", ai: true, variant: "glow-ai", mini: { n: "24/7", l: "Always on" } },
-  { icon: <TrophyIcon/>, t: "Measurable ROI from week one", b: "Every deployment includes pre-agreed KPIs. We track time saved, errors eliminated, and costs reduced — in writing.", tag: "Results", size: "", ai: false, variant: "glow-red", mini: { n: "40%", l: "Avg cost reduction" } },
-  { icon: <GridIcon/>, t: "All major ERP modules", b: "Agents for finance, procurement, HR, inventory, manufacturing, CRM, and project management — covering the full ERP stack.", tag: "Coverage", size: "wide", ai: false, variant: "pattern", mini: { n: "9+", l: "Modules" } },
-  { icon: <MonitorIcon/>, t: "Real-time observability", b: "Live dashboards showing agent decisions, confidence scores, escalations, and business impact — full transparency, zero black boxes.", tag: "Monitoring", size: "", ai: true, variant: "glow-ai", mini: { n: "100%", l: "Explainable" } },
+  { icon: <ClockIcon/>, t: "24/7 autonomous operation", b: "Agents work around the clock, processing invoices at midnight, updating inventory at dawn, generating reports before your team arrives.", tag: "Uptime", size: "", ai: true, variant: "glow-ai", mini: { n: "24/7", l: "Always on" } },
+  { icon: <TrophyIcon/>, t: "Measurable ROI from week one", b: "Every deployment includes pre-agreed KPIs. We track time saved, errors eliminated, and costs reduced, in writing.", tag: "Results", size: "", ai: false, variant: "glow-red", mini: { n: "40%", l: "Avg cost reduction" } },
+  { icon: <GridIcon/>, t: "All major ERP modules", b: "Agents for finance, procurement, HR, inventory, manufacturing, CRM, and project management, covering the full ERP stack.", tag: "Coverage", size: "wide", ai: false, variant: "pattern", mini: { n: "9+", l: "Modules" } },
+  { icon: <MonitorIcon/>, t: "Real-time observability", b: "Live dashboards showing agent decisions, confidence scores, escalations, and business impact, full transparency, zero black boxes.", tag: "Monitoring", size: "", ai: true, variant: "glow-ai", mini: { n: "100%", l: "Explainable" } },
 ] as const;
 
 const STATS = [
@@ -111,7 +111,7 @@ export function AiAgentsErpContent() {
             <span className="ln"><span className="ai">Your workforce, amplified.</span></span>
           </h1>
           <p className="oi-hero-lux-sub rev">
-            Purpose-built AI agents that execute ERP tasks autonomously — from invoice processing to inventory optimisation. <strong>Reduce manual work by 73%</strong> while your team focuses on decisions that matter.
+            Purpose-built AI agents that execute ERP tasks autonomously, from invoice processing to inventory optimisation. <strong>Reduce manual work by 73%</strong> while your team focuses on decisions that matter.
           </p>
           <div className="oi-hero-lux-cta rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -165,7 +165,7 @@ export function AiAgentsErpContent() {
               </div>
             </div>
             <div className="oi-meth-intro-r">
-              <p>Six structured phases take you from manual ERP operations to fully autonomous AI agents. Each phase is sign-off gated — nothing moves forward until you approve. Senior AI engineers lead every step, ensuring agents are accurate, secure, and aligned with your business rules.</p>
+              <p>Six structured phases take you from manual ERP operations to fully autonomous AI agents. Each phase is sign-off gated, nothing moves forward until you approve. Senior AI engineers lead every step, ensuring agents are accurate, secure, and aligned with your business rules.</p>
               <div className="oi-meth-intro-mini">
                 <div className="oi-meth-mini">
                   <div className="oi-meth-mini-row"><span className="oi-meth-mini-n">6</span><span className="oi-meth-mini-u">phases</span></div>
@@ -253,7 +253,7 @@ export function AiAgentsErpContent() {
               <h2>Eleven stages.<br /><span>Full transparency.</span></h2>
             </div>
             <div className="oi-rmap-hdr-r">
-              <p>Every stage in your AI agent deployment is <strong>sign-off gated</strong> — a phase only begins once you&apos;ve accepted the one before it. No scope drift, no surprise costs, no agents running unchecked. Designed for enterprises that demand <strong>accountability and control</strong>.</p>
+              <p>Every stage in your AI agent deployment is <strong>sign-off gated</strong>, a phase only begins once you&apos;ve accepted the one before it. No scope drift, no surprise costs, no agents running unchecked. Designed for enterprises that demand <strong>accountability and control</strong>.</p>
               <div className="oi-rmap-overview-row">
                 <div className="oi-rmap-overview">
                   <span className="oi-rmap-overview-dot" />
@@ -319,7 +319,7 @@ export function AiAgentsErpContent() {
         </div>
       </section>
 
-      {/* BENTO — why Wan Buffer */}
+      {/* BENTO: why Wan Buffer */}
       <section className="oi-bento-sec" id="why-us">
         <div className="oi-bento-inner">
 
@@ -351,8 +351,8 @@ export function AiAgentsErpContent() {
             <div className="oi-bento-hero-icon"><CpuIcon /></div>
             <div className="oi-bento-hero-body">
               <div className="oi-bento-hero-tag">Purpose-built AI agents</div>
-              <div className="oi-bento-hero-t">Not chatbots. Autonomous agents that execute real ERP tasks — procurement, invoicing, inventory, and beyond.</div>
-              <p className="oi-bento-hero-b">Every agent is designed for a specific ERP workflow, trained on your business data, and governed by approval rules you define. They don&apos;t just suggest — they act.</p>
+              <div className="oi-bento-hero-t">Not chatbots. Autonomous agents that execute real ERP tasks, procurement, invoicing, inventory, and beyond.</div>
+              <p className="oi-bento-hero-b">Every agent is designed for a specific ERP workflow, trained on your business data, and governed by approval rules you define. They don&apos;t just suggest, they act.</p>
             </div>
             <div className="oi-bento-hero-stat">
               <div className="oi-bento-hero-stat-n">73%</div>
@@ -385,7 +385,7 @@ export function AiAgentsErpContent() {
         </div>
       </section>
 
-      {/* CLOSER — commitments + CTA */}
+      {/* CLOSER: commitments + CTA */}
       <section className="oi-closer" id="capabilities">
         <div className="oi-closer-inner">
 
@@ -399,7 +399,7 @@ export function AiAgentsErpContent() {
                 <div className="oi-closer-insight-stat">85%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of enterprise AI projects never reach production.</strong>
-                  Source: Gartner, 2024. The reason isn&apos;t the technology — it&apos;s the approach. Generic AI bolted onto legacy systems without domain expertise, governance, or measurable outcomes.
+                  Source: Gartner, 2024. The reason isn&apos;t the technology, it&apos;s the approach. Generic AI bolted onto legacy systems without domain expertise, governance, or measurable outcomes.
                 </div>
               </div>
               <p>That&apos;s why every Wan Buffer AI agent deployment is built around four non-negotiable commitments. They&apos;re in the contract, tracked weekly, and never compromised.</p>
@@ -413,25 +413,25 @@ export function AiAgentsErpContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
                 <div className="oi-closer-commit-t">Human-in-the-loop always</div>
-                <p className="oi-closer-commit-b">Every AI agent has configurable approval gates. High-value decisions require human sign-off. You define the thresholds — we enforce them.</p>
+                <p className="oi-closer-commit-b">Every AI agent has configurable approval gates. High-value decisions require human sign-off. You define the thresholds, we enforce them.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed KPIs</div>
-                <p className="oi-closer-commit-b">Accuracy rates, time savings, and cost reductions are defined before deployment. If agents don&apos;t hit the numbers, we fix them — at our cost.</p>
+                <p className="oi-closer-commit-b">Accuracy rates, time savings, and cost reductions are defined before deployment. If agents don&apos;t hit the numbers, we fix them, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><EyeIcon /></div>
                 <div className="oi-closer-commit-t">Full explainability</div>
-                <p className="oi-closer-commit-b">No black boxes. Every agent decision comes with a reasoning trail — why it acted, what data it used, and how confident it was.</p>
+                <p className="oi-closer-commit-b">No black boxes. Every agent decision comes with a reasoning trail, why it acted, what data it used, and how confident it was.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior AI engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineers who design your agents are the ones who build, deploy, and support them — by name.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineers who design your agents are the ones who build, deploy, and support them, by name.</p>
               </div>
             </div>
           </div>
@@ -483,7 +483,7 @@ export function AiAgentsErpContent() {
               <div className="oi-supp-icon-v2"><PhoneCallIcon /></div>
               <div className="oi-supp-label">Phone · 24 &times; 7</div>
               <a className="oi-supp-title-v2" href="tel:+919904122699">+91 99041 22699</a>
-              <p className="oi-supp-body-v2">Agent malfunction or production incidents. Answered by a senior AI engineer — not a call centre.</p>
+              <p className="oi-supp-body-v2">Agent malfunction or production incidents. Answered by a senior AI engineer, not a call centre.</p>
               <a className="oi-supp-cta-v2" href="tel:+919904122699">Call now <ArrowRightIcon /></a>
             </div>
 

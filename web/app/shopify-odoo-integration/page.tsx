@@ -11,7 +11,7 @@ import { ShopifyOdooContent } from "@/components/services/shopify-odoo-content";
 export const metadata: Metadata = {
   title: "Shopify → Odoo Integration | Inventory, Orders & Customers | Wan Buffer",
   description:
-    "Real-time Shopify-to-Odoo integration — products, inventory, orders, customers, and payments synced automatically. Bi-directional API integration for unified eCommerce and ERP operations.",
+    "Real-time Shopify-to-Odoo integration, products, inventory, orders, customers, and payments synced automatically. Bi-directional API integration for unified eCommerce and ERP operations.",
   keywords: [
     "Shopify Odoo integration",
     "Shopify ERP integration",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Shopify → Odoo Integration — Inventory, Orders & Customers | Wan Buffer",
+    title: "Shopify → Odoo Integration: Inventory, Orders & Customers | Wan Buffer",
     description:
-      "Real-time Shopify-to-Odoo sync — products, inventory, orders, and customers. One source of truth for eCommerce and operations.",
+      "Real-time Shopify-to-Odoo sync, products, inventory, orders, and customers. One source of truth for eCommerce and operations.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/shopify-odoo-integration" },

@@ -11,7 +11,7 @@ import { AiGovernanceContent } from "@/components/services/ai-governance-content
 export const metadata: Metadata = {
   title: "AI Governance & Ethics | Responsible AI Deployment | Wan Buffer",
   description:
-    "Deploy AI responsibly with enterprise governance frameworks. Bias auditing, explainability, compliance automation, and ethical AI guidelines — built into every model, pipeline, and agent we deliver.",
+    "Deploy AI responsibly with enterprise governance frameworks. Bias auditing, explainability, compliance automation, and ethical AI guidelines, built into every model, pipeline, and agent we deliver.",
   keywords: [
     "AI governance",
     "AI ethics",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "AI Governance & Ethics — Responsible AI Deployment | Wan Buffer",
+    title: "AI Governance & Ethics: Responsible AI Deployment | Wan Buffer",
     description:
-      "Enterprise AI governance frameworks — bias auditing, explainability, compliance automation, and ethical guidelines built into every AI system we deploy.",
+      "Enterprise AI governance frameworks, bias auditing, explainability, compliance automation, and ethical guidelines built into every AI system we deploy.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/ai-governance" },

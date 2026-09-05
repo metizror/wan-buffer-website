@@ -11,7 +11,7 @@ import { ErpConsultingContent } from "@/components/services/erp-consulting-conte
 export const metadata: Metadata = {
   title: "ERP Consulting | Scope, Roadmap & Vendor Selection | Wan Buffer",
   description:
-    "Expert ERP consulting services — business process audit, vendor selection, implementation roadmap, change management, and ROI planning. Platform-agnostic guidance for Odoo, Zoho, Salesforce, and SAP deployments.",
+    "Expert ERP consulting services, business process audit, vendor selection, implementation roadmap, change management, and ROI planning. Platform-agnostic guidance for Odoo, Zoho, Salesforce, and SAP deployments.",
   keywords: [
     "ERP consulting",
     "ERP consulting services",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "ERP Consulting — Scope, Roadmap & Vendor Selection | Wan Buffer",
+    title: "ERP Consulting: Scope, Roadmap & Vendor Selection | Wan Buffer",
     description:
-      "Platform-agnostic ERP consulting — business audit, vendor selection, roadmap, and ROI planning before a single line of code is written.",
+      "Platform-agnostic ERP consulting, business audit, vendor selection, roadmap, and ROI planning before a single line of code is written.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/erp-consulting" },

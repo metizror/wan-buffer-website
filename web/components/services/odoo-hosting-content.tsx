@@ -1,4 +1,4 @@
-/* Odoo hosting — content aligned with wanbuffer.com/odoo/odoo-hosting.php (no extra marketing sections). */
+/* Odoo hosting: content aligned with wanbuffer.com/odoo/odoo-hosting.php (no extra marketing sections). */
 
 import type { ReactNode } from "react";
 import Image from "next/image";
@@ -115,7 +115,7 @@ export function OdooHostingContent() {
             </span>
           </h1>
           <p className="oi-hero-lux-sub rev">
-            Compare Odoo Online, Odoo.sh, managed cloud, and on-premise hosting—before implementation locks in your operating model.
+            Compare Odoo Online, Odoo.sh, managed cloud, and on-premise hosting: before implementation locks in your operating model.
           </p>
           <div className="oi-hero-lux-cta rev">
             <a className="oi-hero-lux-primary" href="#contact">

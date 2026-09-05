@@ -11,7 +11,7 @@ import { SmartInventoryContent } from "@/components/services/smart-inventory-con
 export const metadata: Metadata = {
   title: "Smart Inventory Management | AI-Driven Stock Optimisation | Wan Buffer",
   description:
-    "AI-powered inventory management that predicts demand, automates reordering, and eliminates stockouts. Real-time visibility across every warehouse, every SKU — integrated directly into Odoo, Zoho, Salesforce, and SAP.",
+    "AI-powered inventory management that predicts demand, automates reordering, and eliminates stockouts. Real-time visibility across every warehouse, every SKU, integrated directly into Odoo, Zoho, Salesforce, and SAP.",
   keywords: [
     "smart inventory management",
     "AI inventory optimisation",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Smart Inventory Management — AI-Driven Stock Optimisation | Wan Buffer",
+    title: "Smart Inventory Management: AI-Driven Stock Optimisation | Wan Buffer",
     description:
-      "AI-powered inventory that predicts demand, automates reordering, and eliminates stockouts — integrated into your ERP.",
+      "AI-powered inventory that predicts demand, automates reordering, and eliminates stockouts, integrated into your ERP.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/smart-inventory-management" },

@@ -138,7 +138,7 @@ export async function updatePortfolioItem(
   return result ? serialize(result as unknown as PortfolioItem) : null;
 }
 
-/** Soft delete — sets deletedAt so the item is hidden everywhere but recoverable. */
+/** Soft delete: sets deletedAt so the item is hidden everywhere but recoverable. */
 export async function softDeletePortfolioItem(id: string): Promise<boolean> {
   const c = await col();
   if (!ObjectId.isValid(id)) return false;
@@ -159,7 +159,7 @@ export async function listDeletedPortfolio(): Promise<PortfolioItem[]> {
   return docs.map(serialize);
 }
 
-/** Restore a soft-deleted item — clears deletedAt so it becomes visible again. */
+/** Restore a soft-deleted item, clears deletedAt so it becomes visible again. */
 export async function restorePortfolioItem(id: string): Promise<boolean> {
   const c = await col();
   if (!ObjectId.isValid(id)) return false;
@@ -170,7 +170,7 @@ export async function restorePortfolioItem(id: string): Promise<boolean> {
   return result.matchedCount === 1;
 }
 
-/** Hard delete — permanent removal from the collection. */
+/** Hard delete: permanent removal from the collection. */
 export async function hardDeletePortfolioItem(id: string): Promise<boolean> {
   const c = await col();
   if (!ObjectId.isValid(id)) return false;
@@ -381,7 +381,7 @@ export async function getPublicCaseStudyBySlug(
 }
 
 /**
- * Public work item by slug (DB only — work items are new, no static source).
+ * Public work item by slug (DB only, work items are new, no static source).
  * Only returns items flagged `nestUnderType` so they resolve at /work/{slug}.
  */
 export async function getPublicWorkBySlug(

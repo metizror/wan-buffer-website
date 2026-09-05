@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   ODOO ↔ SALESFORCE SYNC — unique page design
+   ODOO ↔ SALESFORCE SYNC, unique page design
    Centered hero + bridge diagram · Data mapping table · Architecture
    3-panel · Sync data pills · Use case grid · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -56,7 +56,7 @@ const ARCH_PANELS = [
   { t: "Salesforce CRM", sub: "Source of truth for sales", items: ["Leads & opportunities", "Accounts & contacts", "Campaigns & forecasts", "Reports & dashboards"], color: "#00A1E0" },
 ] as const;
 
-/* ── What syncs — data type pills ── */
+/* ── What syncs: data type pills ── */
 const SYNC_DATA = [
   "Contacts & Accounts", "Leads & Opportunities", "Quotations & Orders",
   "Invoices & Payments", "Products & Prices", "Delivery Status",
@@ -65,30 +65,30 @@ const SYNC_DATA = [
 
 /* ── Use cases ── */
 const USE_CASES = [
-  { icon: <TrendingUpIcon />, num: "01", t: "Sales closes in Salesforce, fulfilment runs in Odoo", s: "Sales reps manage pipeline in Salesforce. When a deal closes, the sales order, customer record, and product details sync to Odoo automatically — triggering procurement, manufacturing, and delivery without manual re-entry." },
-  { icon: <WalletIcon />, num: "02", t: "Invoices in Odoo, visibility in Salesforce", s: "Finance creates invoices in Odoo. Payment status, outstanding amounts, and credit limits sync back to Salesforce — so sales reps see customer financial health without switching systems." },
-  { icon: <PackageIcon />, num: "03", t: "Product catalogue stays in sync", s: "Add a product in Odoo with pricing, stock levels, and specs. It appears in Salesforce for quoting within seconds — no manual imports, no stale catalogues, no pricing mismatches." },
-  { icon: <UsersIcon />, num: "04", t: "One customer record, two systems", s: "Customer data entered in either system syncs to the other — address changes, contact additions, account merges. Conflict rules ensure the master record wins when both change simultaneously." },
+  { icon: <TrendingUpIcon />, num: "01", t: "Sales closes in Salesforce, fulfilment runs in Odoo", s: "Sales reps manage pipeline in Salesforce. When a deal closes, the sales order, customer record, and product details sync to Odoo automatically, triggering procurement, manufacturing, and delivery without manual re-entry." },
+  { icon: <WalletIcon />, num: "02", t: "Invoices in Odoo, visibility in Salesforce", s: "Finance creates invoices in Odoo. Payment status, outstanding amounts, and credit limits sync back to Salesforce, so sales reps see customer financial health without switching systems." },
+  { icon: <PackageIcon />, num: "03", t: "Product catalogue stays in sync", s: "Add a product in Odoo with pricing, stock levels, and specs. It appears in Salesforce for quoting within seconds, no manual imports, no stale catalogues, no pricing mismatches." },
+  { icon: <UsersIcon />, num: "04", t: "One customer record, two systems", s: "Customer data entered in either system syncs to the other, address changes, contact additions, account merges. Conflict rules ensure the master record wins when both change simultaneously." },
 ] as const;
 
 /* ── Capabilities ── */
 const CAPABILITIES = [
-  { icon: <RefreshIcon />, t: "Real-Time Bi-Directional Sync", s: "Changes in either system propagate to the other within seconds — not hours, not batch overnight. Webhooks and change-data-capture ensure near-instant synchronisation." },
-  { icon: <SettingsIcon />, t: "Configurable Field Mapping", s: "Map any Odoo field to any Salesforce field — including custom fields, related records, and computed values. Transformation rules handle data format differences automatically." },
-  { icon: <ShieldIcon />, t: "Conflict Resolution", s: "When both systems update the same record simultaneously, configurable rules decide which wins — by timestamp, by system-of-record designation, or by field-level priority." },
-  { icon: <EyeIcon />, t: "Full Audit Trail", s: "Every sync event is logged — what changed, when, which system initiated, and whether it succeeded. Error logs include full payloads for debugging." },
-  { icon: <ZapIcon />, t: "Error Handling & Retry", s: "Failed syncs are queued, retried automatically, and escalated with full context. No silent failures — every error surfaces in your monitoring dashboard." },
-  { icon: <MonitorIcon />, t: "Monitoring Dashboard", s: "Real-time visibility into sync health — records synced, errors, latency, and throughput. Alerts trigger when sync falls behind or error rates spike." },
+  { icon: <RefreshIcon />, t: "Real-Time Bi-Directional Sync", s: "Changes in either system propagate to the other within seconds, not hours, not batch overnight. Webhooks and change-data-capture ensure near-instant synchronisation." },
+  { icon: <SettingsIcon />, t: "Configurable Field Mapping", s: "Map any Odoo field to any Salesforce field, including custom fields, related records, and computed values. Transformation rules handle data format differences automatically." },
+  { icon: <ShieldIcon />, t: "Conflict Resolution", s: "When both systems update the same record simultaneously, configurable rules decide which wins, by timestamp, by system-of-record designation, or by field-level priority." },
+  { icon: <EyeIcon />, t: "Full Audit Trail", s: "Every sync event is logged, what changed, when, which system initiated, and whether it succeeded. Error logs include full payloads for debugging." },
+  { icon: <ZapIcon />, t: "Error Handling & Retry", s: "Failed syncs are queued, retried automatically, and escalated with full context. No silent failures, every error surfaces in your monitoring dashboard." },
+  { icon: <MonitorIcon />, t: "Monitoring Dashboard", s: "Real-time visibility into sync health, records synced, errors, latency, and throughput. Alerts trigger when sync falls behind or error rates spike." },
 ] as const;
 
 /* ── FAQ ── */
 const FAQS = [
   { q: "Is the sync real-time or batch?", a: "Real-time. Changes propagate via webhooks and change-data-capture within seconds. We also support scheduled batch sync for high-volume historical migrations or specific use cases where real-time isn't required." },
-  { q: "What happens when both systems update the same record?", a: "Configurable conflict resolution rules decide which update wins — by timestamp, by designated system-of-record, or by field-level priority. Conflicts are logged with full before/after data for audit." },
-  { q: "Can you sync custom fields and custom objects?", a: "Yes. The field mapping engine supports standard and custom fields, custom objects, related records, and computed values. We map your specific data model — not just standard Salesforce/Odoo fields." },
-  { q: "What if a sync fails?", a: "Failed records are automatically queued, retried with exponential backoff, and escalated to your monitoring dashboard with full error context. No silent failures — every exception is tracked and resolved." },
+  { q: "What happens when both systems update the same record?", a: "Configurable conflict resolution rules decide which update wins, by timestamp, by designated system-of-record, or by field-level priority. Conflicts are logged with full before/after data for audit." },
+  { q: "Can you sync custom fields and custom objects?", a: "Yes. The field mapping engine supports standard and custom fields, custom objects, related records, and computed values. We map your specific data model, not just standard Salesforce/Odoo fields." },
+  { q: "What if a sync fails?", a: "Failed records are automatically queued, retried with exponential backoff, and escalated to your monitoring dashboard with full error context. No silent failures, every exception is tracked and resolved." },
   { q: "How long does setup take?", a: "Typical sync implementations take 4–8 weeks. Simple contact/lead sync can go live in 2–3 weeks. Complex multi-object bidirectional sync with custom conflict rules takes 6–10 weeks." },
-  { q: "Do you support Salesforce ↔ Odoo migration (one-time transfer)?", a: "Yes. We handle full one-time data migration in either direction — with field mapping, deduplication, validation, and relationship preservation — as well as ongoing real-time sync." },
+  { q: "Do you support Salesforce ↔ Odoo migration (one-time transfer)?", a: "Yes. We handle full one-time data migration in either direction, with field mapping, deduplication, validation, and relationship preservation, as well as ongoing real-time sync." },
 ] as const;
 
 /* ── Component ── */
@@ -96,7 +96,7 @@ export function OdooSalesforceSyncContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered + bridge diagram ═══ */}
+      {/* ═══ HERO: centered + bridge diagram ═══ */}
       <section className="os-hero">
         <div className="os-hero-glow os-hero-glow-1" aria-hidden="true" />
         <div className="os-hero-glow os-hero-glow-2" aria-hidden="true" />
@@ -110,7 +110,7 @@ export function OdooSalesforceSyncContent() {
             <span className="acc">Sync.</span>
           </h1>
           <p className="os-hero-sub rev">
-            Real-time bi-directional sync between Odoo ERP and Salesforce CRM. Contacts, leads, orders, invoices, and products — <strong>one source of truth across both systems.</strong>
+            Real-time bi-directional sync between Odoo ERP and Salesforce CRM. Contacts, leads, orders, invoices, and products, <strong>one source of truth across both systems.</strong>
           </p>
           <div className="os-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -172,7 +172,7 @@ export function OdooSalesforceSyncContent() {
         </div>
       </section>
 
-      {/* ═══ ARCHITECTURE — 3-panel ═══ */}
+      {/* ═══ ARCHITECTURE: 3-panel ═══ */}
       <section className="os-arch" id="architecture">
         <div className="os-arch-inner">
           <div className="os-arch-hdr rev">
@@ -210,7 +210,7 @@ export function OdooSalesforceSyncContent() {
         </div>
       </section>
 
-      {/* ═══ CAPABILITIES — 3×2 grid ═══ */}
+      {/* ═══ CAPABILITIES: 3×2 grid ═══ */}
       <section className="os-caps" id="capabilities">
         <div className="os-caps-inner">
           <div className="os-caps-hdr rev">
@@ -229,7 +229,7 @@ export function OdooSalesforceSyncContent() {
         </div>
       </section>
 
-      {/* ═══ USE CASES — 2×2 numbered grid ═══ */}
+      {/* ═══ USE CASES: 2×2 numbered grid ═══ */}
       <section className="os-use" id="use-cases">
         <div className="os-use-inner">
           <div className="os-use-hdr rev">
@@ -295,7 +295,7 @@ export function OdooSalesforceSyncContent() {
                 <div className="oi-closer-insight-stat">60%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of system integrations fail to maintain data consistency after 90 days.</strong>
-                  Source: MuleSoft, 2024. The problem is integrations built for the happy path — no conflict resolution, no error handling, no monitoring. When edge cases hit, data diverges silently.
+                  Source: MuleSoft, 2024. The problem is integrations built for the happy path, no conflict resolution, no error handling, no monitoring. When edge cases hit, data diverges silently.
                 </div>
               </div>
               <p>That&apos;s why every Wan Buffer sync deployment is engineered for exceptions first. Four commitments, written into the contract.</p>
@@ -327,7 +327,7 @@ export function OdooSalesforceSyncContent() {
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior integration engineers</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who designs your sync architecture is the one who builds, deploys, and supports it — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who designs your sync architecture is the one who builds, deploys, and supports it, named in the contract.</p>
               </div>
             </div>
           </div>

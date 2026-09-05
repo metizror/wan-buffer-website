@@ -28,7 +28,7 @@ export const CASE_STUDY_DETAIL_MEDIA: Record<string, CaseStudyDetailMedia> = {
       { src: "/case-study/detail/textile/screenshot-3.webp", alt: "Textile ERP screenshot 3" },
     ],
     solutionsIntro:
-      "To tackle these issues, Wan Buffer Services implemented an advanced, end-to-end Odoo ERP system covering inventory, production, quality, and analytics — fully optimized for textile operations.",
+      "To tackle these issues, Wan Buffer Services implemented an advanced, end-to-end Odoo ERP system covering inventory, production, quality, and analytics, fully optimized for textile operations.",
     solutionRows: [
       {
         imageSrc: "/case-study/detail/textile/solution-1.jpg",
@@ -85,7 +85,7 @@ export const CASE_STUDY_DETAIL_MEDIA: Record<string, CaseStudyDetailMedia> = {
           {
             title: "QR / barcode for each roll",
             bullets: [
-              "Every roll is assigned a QR code displaying its details, QC results, and linked orders — accessible by scanning.",
+              "Every roll is assigned a QR code displaying its details, QC results, and linked orders, accessible by scanning.",
             ],
           },
         ],
@@ -104,14 +104,14 @@ export const CASE_STUDY_DETAIL_MEDIA: Record<string, CaseStudyDetailMedia> = {
           {
             title: "Role-based access & audit trail",
             bullets: [
-              "Each department manages its own part — QC, Dyeing, or Stores — ensuring accountability and security.",
+              "Each department manages its own part: QC, Dyeing, or Stores, ensuring accountability and security.",
             ],
           },
         ],
       },
     ],
     approachIntro:
-      "We implemented a phased and data-driven approach to transform textile inventory management using Odoo ERP — focusing equally on user adoption, accuracy, and automation.",
+      "We implemented a phased and data-driven approach to transform textile inventory management using Odoo ERP, focusing equally on user adoption, accuracy, and automation.",
     techStackLogos: [TECH.odoo, TECH.python, TECH.postgresql],
   },
   "odoo-steel-solution": {
@@ -235,7 +235,7 @@ export const CASE_STUDY_DETAIL_MEDIA: Record<string, CaseStudyDetailMedia> = {
       },
     ],
     approachIntro:
-      "We adopted a systematic approach to streamline this eCommerce retailer’s multi-channel operations using Odoo—focusing on integration, automation, and centralized visibility.",
+      "We adopted a systematic approach to streamline this eCommerce retailer’s multi-channel operations using Odoo: focusing on integration, automation, and centralized visibility.",
     techStackLogos: [TECH.odoo, TECH.python, TECH.postgresql, TECH.git],
   },
   "odoo-erp-implementation": {
@@ -301,7 +301,7 @@ export const CASE_STUDY_DETAIL_MEDIA: Record<string, CaseStudyDetailMedia> = {
       },
     ],
     approachIntro:
-      "We implemented a unified ERP solution for client by aligning their multi-channel operations into one intelligent, scalable Odoo system—bridging gaps between sales, logistics, vendors, and returns.",
+      "We implemented a unified ERP solution for client by aligning their multi-channel operations into one intelligent, scalable Odoo system: bridging gaps between sales, logistics, vendors, and returns.",
     techStackLogos: [TECH.odoo, TECH.magento, TECH.python, TECH.postgresql],
   },
   "ui-product-management-enhancements": {
@@ -319,7 +319,7 @@ export const CASE_STUDY_DETAIL_MEDIA: Record<string, CaseStudyDetailMedia> = {
         solutions: [
           {
             title: "Modern UI/UX Redesign",
-            intro: "We revamped the entire frontend interface to ensure a clean, intuitive, and responsive shopping experience. The new layout improved navigation, reduced visual clutter, and guided users smoothly from product discovery to checkout—on both desktop and mobile devices.",
+            intro: "We revamped the entire frontend interface to ensure a clean, intuitive, and responsive shopping experience. The new layout improved navigation, reduced visual clutter, and guided users smoothly from product discovery to checkout: on both desktop and mobile devices.",
             bullets: [],
           },
           {
@@ -353,7 +353,7 @@ export const CASE_STUDY_DETAIL_MEDIA: Record<string, CaseStudyDetailMedia> = {
         solutions: [
           {
             title: "Real-Time Inventory Management",
-            intro: "We implemented inventory workflows that automatically reflect stock changes in real time. This included stock level tracking, reordering rules, and warehouse synchronization—ensuring accurate availability and minimizing customer dissatisfaction from stock errors.",
+            intro: "We implemented inventory workflows that automatically reflect stock changes in real time. This included stock level tracking, reordering rules, and warehouse synchronization: ensuring accurate availability and minimizing customer dissatisfaction from stock errors.",
             bullets: [],
           },
           {

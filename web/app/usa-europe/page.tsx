@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { UsaEuropeContent } from "@/components/services/usa-europe-content";
 
 export const metadata: Metadata = {
-  title: "USA & Europe ERP | Salesforce Sync, GDPR, EU VAT & Tax Compliance — Wan Buffer",
+  title: "USA & Europe ERP | Salesforce Sync, GDPR, EU VAT & Tax Compliance | Wan Buffer",
   description:
     "USA and Europe ERP localisation with Salesforce CRM sync, GDPR compliance, EU VAT OSS, US multi-state sales tax, SOX reporting, and multi-currency operations. For businesses operating across North America and the European Union.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "USA & Europe ERP — Salesforce Sync, GDPR, EU VAT & Tax Compliance | Wan Buffer",
+    title: "USA & Europe ERP: Salesforce Sync, GDPR, EU VAT & Tax Compliance | Wan Buffer",
     description:
-      "USA and Europe ERP with Salesforce sync, GDPR, EU VAT OSS, US multi-state sales tax, and SOX compliance — for businesses operating across North America and Europe.",
+      "USA and Europe ERP with Salesforce sync, GDPR, EU VAT OSS, US multi-state sales tax, and SOX compliance, for businesses operating across North America and Europe.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/usa-europe" },

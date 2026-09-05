@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   LANGCHAIN & LLM INTEGRATION — unique page design
+   LANGCHAIN & LLM INTEGRATION, unique page design
    Centered hero + code terminal · LLM ticker · Architecture stack ·
    Offset masonry capabilities · Vertical process list · Compact use
    case grid · Closer · Support
@@ -78,11 +78,11 @@ const LAYERS = [
   { label: "LLM & Vector Layer", items: ["GPT-4 / Claude", "Embeddings", "Pinecone / Weaviate", "Fine-tuned Models", "Guardrails"], accent: "purple" as const },
 ] as const;
 
-/* ── Capabilities — offset masonry ── */
+/* ── Capabilities: offset masonry ── */
 const CAPS = [
-  { icon: <DatabaseIcon />, t: "RAG Pipelines", s: "Retrieval-Augmented Generation that grounds LLM responses in your actual business data — ERP records, documents, knowledge bases, and SOPs. No hallucinations, no generic answers.", tag: "Core", tall: true },
+  { icon: <DatabaseIcon />, t: "RAG Pipelines", s: "Retrieval-Augmented Generation that grounds LLM responses in your actual business data. ERP records, documents, knowledge bases, and SOPs. No hallucinations, no generic answers.", tag: "Core", tall: true },
   { icon: <CpuIcon />, t: "Autonomous AI Agents", s: "LangChain agents that reason, plan, and execute multi-step tasks across your ERP using tool-calling and structured outputs.", tag: "Advanced" },
-  { icon: <SearchIcon />, t: "Semantic Search", s: "Vector-powered search across your entire document corpus. Find information by meaning, not keywords — contracts, specs, emails, and manuals.", tag: "Search" },
+  { icon: <SearchIcon />, t: "Semantic Search", s: "Vector-powered search across your entire document corpus. Find information by meaning, not keywords, contracts, specs, emails, and manuals.", tag: "Search" },
   { icon: <SparklesIcon />, t: "Conversational Interfaces", s: "Natural language chatbots that query, summarise, and action ERP data. Deploy to Slack, Teams, WhatsApp, or custom UIs with full context memory.", tag: "UX", tall: true },
   { icon: <SettingsIcon />, t: "Fine-Tuning & Evaluation", s: "Domain-specific fine-tuning on your business vocabulary, product catalogue, and process rules. Rigorous eval pipelines ensure accuracy before production.", tag: "ML Ops" },
   { icon: <ShieldIcon />, t: "Guardrails & Governance", s: "Content filtering, PII redaction, output validation, and approval gates built into every chain. SOC 2 and GDPR compliance from day one.", tag: "Security" },
@@ -90,11 +90,11 @@ const CAPS = [
 
 /* ── Process steps ── */
 const PROCESS = [
-  { num: "01", icon: <SearchIcon />, t: "Discovery & data mapping", b: "We audit your data landscape — ERP schema, document repositories, APIs — and identify the highest-ROI LLM use cases for your business.", deliverables: ["Data inventory", "Use-case matrix", "Architecture proposal"] },
+  { num: "01", icon: <SearchIcon />, t: "Discovery & data mapping", b: "We audit your data landscape: ERP schema, document repositories, APIs, and identify the highest-ROI LLM use cases for your business.", deliverables: ["Data inventory", "Use-case matrix", "Architecture proposal"] },
   { num: "02", icon: <DatabaseIcon />, t: "Embedding & indexing", b: "Your business data is chunked, embedded, and indexed into vector databases. We engineer the retrieval strategy that gives your LLM accurate, up-to-date context.", deliverables: ["Vector store", "Embedding pipeline", "Retrieval benchmarks"] },
   { num: "03", icon: <CodeIcon />, t: "Chain & agent development", b: "Purpose-built LangChain chains and agents trained on your workflows. Every tool call, memory strategy, and output parser is engineered for your specific ERP operations.", deliverables: ["Custom chains", "Agent configs", "Test suite"] },
   { num: "04", icon: <CloudIcon />, t: "Integration & deployment", b: "Deploy to production with secure API connections to your ERP, monitoring dashboards, and automated fallback strategies. Role-based access controls on every endpoint.", deliverables: ["Live deployment", "API docs", "Monitoring"] },
-  { num: "05", icon: <RefreshIcon />, t: "Optimisation & scaling", b: "Continuous prompt engineering, retrieval tuning, and model evaluation. As your data grows, we scale the pipeline — adding new data sources, use cases, and LLM capabilities.", deliverables: ["Performance reports", "Expansion roadmap"] },
+  { num: "05", icon: <RefreshIcon />, t: "Optimisation & scaling", b: "Continuous prompt engineering, retrieval tuning, and model evaluation. As your data grows, we scale the pipeline, adding new data sources, use cases, and LLM capabilities.", deliverables: ["Performance reports", "Expansion roadmap"] },
 ] as const;
 
 /* ── Use case grid ── */
@@ -112,7 +112,7 @@ export function LangchainLlmContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered with code terminal ═══ */}
+      {/* ═══ HERO: centered with code terminal ═══ */}
       <section className="lc-hero">
         <div className="lc-hero-glow lc-hero-glow-1" aria-hidden="true" />
         <div className="lc-hero-glow lc-hero-glow-2" aria-hidden="true" />
@@ -127,7 +127,7 @@ export function LangchainLlmContent() {
             <span className="acc">Integration.</span>
           </h1>
           <p className="lc-hero-sub rev">
-            Build production-grade AI applications with LangChain, GPT-4, Claude, and open-source LLMs — <strong>integrated directly into your ERP and business systems.</strong> RAG pipelines, AI agents, and semantic search engineered for enterprise.
+            Build production-grade AI applications with LangChain, GPT-4, Claude, and open-source LLMs, <strong>integrated directly into your ERP and business systems.</strong> RAG pipelines, AI agents, and semantic search engineered for enterprise.
           </p>
           <div className="lc-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -148,7 +148,7 @@ export function LangchainLlmContent() {
         </div>
       </section>
 
-      {/* ═══ LLM TICKER — scrolling model badges ═══ */}
+      {/* ═══ LLM TICKER: scrolling model badges ═══ */}
       <section className="lc-ticker">
         <div className="lc-ticker-label">Supported LLMs &amp; frameworks</div>
         <div className="lc-ticker-track" aria-hidden="true">
@@ -164,13 +164,13 @@ export function LangchainLlmContent() {
         </div>
       </section>
 
-      {/* ═══ ARCHITECTURE — layered stack ═══ */}
+      {/* ═══ ARCHITECTURE: layered stack ═══ */}
       <section className="lc-arch" id="architecture">
         <div className="lc-arch-inner">
           <div className="lc-arch-hdr rev">
             <div className="eyebrow">Architecture</div>
             <h2>Three layers.<br /><span>One intelligent system.</span></h2>
-            <p>LangChain sits between your business systems and the LLM layer — orchestrating data retrieval, prompt engineering, tool calling, and response validation so your AI applications are accurate, secure, and production-ready.</p>
+            <p>LangChain sits between your business systems and the LLM layer, orchestrating data retrieval, prompt engineering, tool calling, and response validation so your AI applications are accurate, secure, and production-ready.</p>
           </div>
           <div className="lc-arch-stack rev">
             {LAYERS.map((layer, i) => (
@@ -192,7 +192,7 @@ export function LangchainLlmContent() {
         </div>
       </section>
 
-      {/* ═══ CAPABILITIES — offset masonry ═══ */}
+      {/* ═══ CAPABILITIES: offset masonry ═══ */}
       <section className="lc-caps" id="capabilities">
         <div className="lc-caps-inner">
           <div className="lc-caps-hdr rev">
@@ -212,7 +212,7 @@ export function LangchainLlmContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — vertical numbered list ═══ */}
+      {/* ═══ PROCESS: vertical numbered list ═══ */}
       <section className="lc-proc" id="process">
         <div className="lc-proc-inner">
           <div className="lc-proc-hdr rev">
@@ -254,7 +254,7 @@ export function LangchainLlmContent() {
         </div>
       </section>
 
-      {/* ═══ USE CASES — compact icon grid ═══ */}
+      {/* ═══ USE CASES: compact icon grid ═══ */}
       <section className="lc-use" id="use-cases">
         <div className="lc-use-inner">
           <div className="lc-use-hdr rev">
@@ -286,10 +286,10 @@ export function LangchainLlmContent() {
                 <div className="oi-closer-insight-stat">90%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of LLM prototypes never reach production.</strong>
-                  Source: a16z, 2024. The gap is not model capability — it&apos;s the engineering required to connect LLMs to real business data, enforce access controls, handle edge cases, and maintain accuracy over time.
+                  Source: a16z, 2024. The gap is not model capability, it&apos;s the engineering required to connect LLMs to real business data, enforce access controls, handle edge cases, and maintain accuracy over time.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer LLM engagement is built around four commitments — written into the contract and tracked weekly.</p>
+              <p>That&apos;s why every Wan Buffer LLM engagement is built around four commitments, written into the contract and tracked weekly.</p>
             </div>
           </div>
 
@@ -300,7 +300,7 @@ export function LangchainLlmContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><DatabaseIcon /></div>
                 <div className="oi-closer-commit-t">Grounded in your data</div>
-                <p className="oi-closer-commit-b">Every LLM response is grounded in your actual business data via RAG — not generic training data. Hallucination rates measured and minimised before production.</p>
+                <p className="oi-closer-commit-b">Every LLM response is grounded in your actual business data via RAG, not generic training data. Hallucination rates measured and minimised before production.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
@@ -318,7 +318,7 @@ export function LangchainLlmContent() {
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior AI engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineers who architect your LLM pipeline are the ones who build, deploy, and support it — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineers who architect your LLM pipeline are the ones who build, deploy, and support it, named in the contract.</p>
               </div>
             </div>
           </div>
@@ -361,7 +361,7 @@ export function LangchainLlmContent() {
               <div className="oi-supp-icon-v2"><PhoneCallIcon /></div>
               <div className="oi-supp-label">Phone · 24 &times; 7</div>
               <a className="oi-supp-title-v2" href="tel:+919904122699">+91 99041 22699</a>
-              <p className="oi-supp-body-v2">LLM pipeline failures or production incidents. Answered by a senior AI engineer — not a call centre.</p>
+              <p className="oi-supp-body-v2">LLM pipeline failures or production incidents. Answered by a senior AI engineer, not a call centre.</p>
               <a className="oi-supp-cta-v2" href="tel:+919904122699">Call now <ArrowRightIcon /></a>
             </div>
             <div className="oi-supp-card">

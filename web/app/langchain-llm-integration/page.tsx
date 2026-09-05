@@ -11,7 +11,7 @@ import { LangchainLlmContent } from "@/components/services/langchain-llm-content
 export const metadata: Metadata = {
   title: "LangChain & LLM Integration | Enterprise AI Development | Wan Buffer",
   description:
-    "Build production-grade AI applications with LangChain, GPT-4, Claude, Llama, and open-source LLMs — integrated directly into your ERP, CRM, and business systems. RAG pipelines, AI agents, semantic search, and conversational interfaces engineered for enterprise.",
+    "Build production-grade AI applications with LangChain, GPT-4, Claude, Llama, and open-source LLMs, integrated directly into your ERP, CRM, and business systems. RAG pipelines, AI agents, semantic search, and conversational interfaces engineered for enterprise.",
   keywords: [
     "LangChain integration",
     "LLM integration services",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "LangChain & LLM Integration — Enterprise AI Development | Wan Buffer",
+    title: "LangChain & LLM Integration: Enterprise AI Development | Wan Buffer",
     description:
-      "Production-grade LangChain and LLM integrations for enterprise. RAG pipelines, AI agents, and conversational interfaces — built on GPT-4, Claude, Llama, and more.",
+      "Production-grade LangChain and LLM integrations for enterprise. RAG pipelines, AI agents, and conversational interfaces, built on GPT-4, Claude, Llama, and more.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/langchain-llm-integration" },

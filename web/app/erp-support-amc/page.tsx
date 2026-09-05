@@ -11,7 +11,7 @@ import { ErpSupportAmcContent } from "@/components/services/erp-support-amc-cont
 export const metadata: Metadata = {
   title: "ERP Support & AMC | SLA-Based Maintenance Plans | Wan Buffer",
   description:
-    "SLA-based ERP support and annual maintenance contracts — bug fixes, configuration changes, version upgrades, performance monitoring, and 24/7 emergency support for Odoo, Zoho, Salesforce, and SAP.",
+    "SLA-based ERP support and annual maintenance contracts, bug fixes, configuration changes, version upgrades, performance monitoring, and 24/7 emergency support for Odoo, Zoho, Salesforce, and SAP.",
   keywords: [
     "ERP support",
     "ERP AMC",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "ERP Support & AMC — SLA-Based Maintenance Plans | Wan Buffer",
+    title: "ERP Support & AMC: SLA-Based Maintenance Plans | Wan Buffer",
     description:
-      "SLA-based ERP support — bug fixes, upgrades, monitoring, and 24/7 emergency response for Odoo, Zoho, Salesforce, and SAP.",
+      "SLA-based ERP support, bug fixes, upgrades, monitoring, and 24/7 emergency response for Odoo, Zoho, Salesforce, and SAP.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/erp-support-amc" },

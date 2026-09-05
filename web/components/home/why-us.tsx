@@ -12,8 +12,8 @@ export function HomeWhyUs() {
         </div>
         <div className="why-hdr-r">
           <p className="sec-p">
-            84% of our clients return for second engagements — because we combine deep Odoo expertise with genuine AI
-            and automation capabilities that drive measurable operational change.
+            84% of our clients come back for a second project. That is because we know Odoo well, and we actually ship
+            AI and automation that change how the business runs.
           </p>
           <div className="why-cta-row">
             <a className="btn-r" href="/#contact">
@@ -30,8 +30,8 @@ export function HomeWhyUs() {
           <div className="why-num">01</div>
           <div className="why-title">AI-Native, Not AI-Retrofitted</div>
           <p className="why-body">
-            We design AI capabilities into ERP architecture from day one — not bolted on afterward. Agents, automation,
-            and analytics are core to our solution design, not extras.
+            We plan AI into the ERP from day one, not as a plugin later. Agents, automation, and analytics sit in the
+            design, not in a slide deck.
           </p>
           <span className="why-stat">⚡ AI-First Architecture</span>
         </div>
@@ -60,8 +60,8 @@ export function HomeWhyUs() {
           <div className="why-num">04</div>
           <div className="why-title">Truly Global, Genuinely Local</div>
           <p className="why-body">
-            Offices in India, Kuwait and France. Teams who understand VAT in GCC, GDPR in Europe, and GST in India —
-            without needing it explained twice.
+            Offices in India, Kuwait, and France. The team already knows VAT in the GCC, GDPR in Europe, and GST in
+            India. You should not have to explain that twice.
           </p>
           <span className="why-stat">20+ Countries Served</span>
         </div>
@@ -70,8 +70,8 @@ export function HomeWhyUs() {
           <div className="why-num">05</div>
           <div className="why-title">Outcomes, Not Outputs</div>
           <p className="why-body">
-            Every engagement starts with measurable success KPIs — production throughput, invoice cycle time, stock
-            accuracy — tracked and reported throughout.
+            Every project starts with numbers we can check: throughput, invoice cycle time, stock accuracy. We track
+            those through go-live, not only at the kickoff.
           </p>
           <span className="why-stat">ROI-Driven Engagement</span>
         </div>

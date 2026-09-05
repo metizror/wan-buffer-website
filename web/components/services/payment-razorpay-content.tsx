@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   PAYMENT & RAZORPAY SETUP — unique page design
+   PAYMENT & RAZORPAY SETUP, unique page design
    Hero split + checkout mock · Payment method badges · Services grid ·
    Checkout flow · Stats · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -60,11 +60,11 @@ const GATEWAYS = [
 
 /* ── Services ── */
 const SERVICES = [
-  { icon: <WalletIcon />, num: "01", t: "Gateway Integration", s: "Razorpay, Stripe, PayPal, Cashfree, PayU, or CCAvenue — configured and tested on your Shopify, Magento, or custom store. Multiple gateways with intelligent routing for higher success rates." },
-  { icon: <SettingsIcon />, num: "02", t: "Checkout Optimisation", s: "Reduce cart abandonment with optimised checkout flows — guest checkout, address auto-fill, saved payment methods, one-click reorder, and progress indicators that keep buyers moving." },
-  { icon: <RefreshIcon />, num: "03", t: "Subscription Billing", s: "Recurring payment setup with Razorpay Subscriptions or Stripe Billing — trial periods, plan upgrades, prorated charges, and dunning management for failed renewals." },
-  { icon: <GridIcon />, num: "04", t: "Multi-Currency & Tax", s: "Accept payments in any currency with automatic conversion. Tax-inclusive pricing, GST calculation, and geo-based tax rules configured per market — India, UAE, USA, or EU." },
-  { icon: <DatabaseIcon />, num: "05", t: "ERP Reconciliation", s: "Payment data syncs to your ERP automatically — Odoo, Zoho, or QuickBooks. Invoice matching, settlement tracking, and refund reconciliation without manual bank statement imports." },
+  { icon: <WalletIcon />, num: "01", t: "Gateway Integration", s: "Razorpay, Stripe, PayPal, Cashfree, PayU, or CCAvenue, configured and tested on your Shopify, Magento, or custom store. Multiple gateways with intelligent routing for higher success rates." },
+  { icon: <SettingsIcon />, num: "02", t: "Checkout Optimisation", s: "Reduce cart abandonment with optimised checkout flows, guest checkout, address auto-fill, saved payment methods, one-click reorder, and progress indicators that keep buyers moving." },
+  { icon: <RefreshIcon />, num: "03", t: "Subscription Billing", s: "Recurring payment setup with Razorpay Subscriptions or Stripe Billing, trial periods, plan upgrades, prorated charges, and dunning management for failed renewals." },
+  { icon: <GridIcon />, num: "04", t: "Multi-Currency & Tax", s: "Accept payments in any currency with automatic conversion. Tax-inclusive pricing, GST calculation, and geo-based tax rules configured per market. India, UAE, USA, or EU." },
+  { icon: <DatabaseIcon />, num: "05", t: "ERP Reconciliation", s: "Payment data syncs to your ERP automatically: Odoo, Zoho, or QuickBooks. Invoice matching, settlement tracking, and refund reconciliation without manual bank statement imports." },
   { icon: <ShieldIcon />, num: "06", t: "Security & Compliance", s: "PCI DSS compliance, 3D Secure authentication, tokenisation, and fraud detection rules. Every transaction encrypted, every card number tokenised, every regulation met." },
 ] as const;
 
@@ -86,11 +86,11 @@ const STATS = [
 /* ── FAQ ── */
 const FAQS = [
   { q: "Which payment gateways do you support?", a: "Razorpay, Stripe, PayPal, Cashfree, PayU, CCAvenue, Shopify Payments, and UPI direct integrations. We recommend the best gateway mix based on your target markets and transaction volume." },
-  { q: "Can you set up Razorpay on Shopify?", a: "Yes. We configure Razorpay as a payment gateway on Shopify — including UPI, cards, net banking, wallets, and EMI options. Checkout customisation and webhook setup for order confirmation included." },
-  { q: "Do you handle subscription/recurring payments?", a: "Yes. We set up Razorpay Subscriptions or Stripe Billing — plan creation, trial periods, upgrades/downgrades, prorated charges, and automated dunning for failed payments." },
-  { q: "How do you reduce cart abandonment?", a: "Optimised checkout flow, guest checkout option, saved payment methods, address auto-complete, express payment (UPI/Apple Pay), and abandoned cart recovery emails — each proven to improve completion rates." },
+  { q: "Can you set up Razorpay on Shopify?", a: "Yes. We configure Razorpay as a payment gateway on Shopify, including UPI, cards, net banking, wallets, and EMI options. Checkout customisation and webhook setup for order confirmation included." },
+  { q: "Do you handle subscription/recurring payments?", a: "Yes. We set up Razorpay Subscriptions or Stripe Billing, plan creation, trial periods, upgrades/downgrades, prorated charges, and automated dunning for failed payments." },
+  { q: "How do you reduce cart abandonment?", a: "Optimised checkout flow, guest checkout option, saved payment methods, address auto-complete, express payment (UPI/Apple Pay), and abandoned cart recovery emails, each proven to improve completion rates." },
   { q: "Do you sync payments with ERP systems?", a: "Yes. Payment confirmations, refunds, and settlements sync to Odoo, Zoho, or QuickBooks in real time. Invoice matching and bank reconciliation happen automatically." },
-  { q: "Is the setup PCI compliant?", a: "Yes. All gateway integrations follow PCI DSS guidelines. Card data is tokenised by the gateway — your servers never touch raw card numbers. 3D Secure and fraud rules are configured by default." },
+  { q: "Is the setup PCI compliant?", a: "Yes. All gateway integrations follow PCI DSS guidelines. Card data is tokenised by the gateway, your servers never touch raw card numbers. 3D Secure and fraud rules are configured by default." },
 ] as const;
 
 /* ── Component ── */
@@ -98,7 +98,7 @@ export function PaymentRazorpayContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + checkout mock right ═══ */}
+      {/* ═══ HERO: text left + checkout mock right ═══ */}
       <section className="pr-hero">
         <div className="pr-hero-glow pr-hero-glow-1" aria-hidden="true" />
         <div className="pr-hero-glow pr-hero-glow-2" aria-hidden="true" />
@@ -113,7 +113,7 @@ export function PaymentRazorpayContent() {
               <span className="acc">Every payment, captured.</span>
             </h1>
             <p className="pr-hero-sub rev">
-              Payment gateway integration, checkout optimisation, subscription billing, and ERP reconciliation — <strong>for Shopify, Magento, and custom eCommerce stores.</strong>
+              Payment gateway integration, checkout optimisation, subscription billing, and ERP reconciliation, <strong>for Shopify, Magento, and custom eCommerce stores.</strong>
             </p>
             <div className="pr-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -172,7 +172,7 @@ export function PaymentRazorpayContent() {
           <div className="pr-svc-hdr rev">
             <div className="eyebrow">Payment services</div>
             <h2>Six services.<br /><span>Complete payment stack.</span></h2>
-            <p>From gateway integration to ERP reconciliation — every payment touchpoint configured, optimised, and secured.</p>
+            <p>From gateway integration to ERP reconciliation, every payment touchpoint configured, optimised, and secured.</p>
           </div>
           <div className="pr-svc-grid rev">
             {SERVICES.map((s) => (
@@ -256,7 +256,7 @@ export function PaymentRazorpayContent() {
                   Source: Baymard Institute, 2024. The top causes: forced account creation, complex checkout forms, hidden fees, and limited payment methods.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer payment integration is optimised for completion — not just connectivity.</p>
+              <p>That&apos;s why every Wan Buffer payment integration is optimised for completion, not just connectivity.</p>
             </div>
           </div>
 
@@ -267,7 +267,7 @@ export function PaymentRazorpayContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><WalletIcon /></div>
                 <div className="oi-closer-commit-t">Multiple gateway support</div>
-                <p className="oi-closer-commit-b">We configure the optimal gateway mix for your markets — UPI for India, Stripe for global, Razorpay for hybrid. Intelligent routing maximises payment success rates.</p>
+                <p className="oi-closer-commit-b">We configure the optimal gateway mix for your markets. UPI for India, Stripe for global, Razorpay for hybrid. Intelligent routing maximises payment success rates.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>

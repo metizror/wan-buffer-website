@@ -11,7 +11,7 @@ import { FinanceAccountingContent } from "@/components/services/finance-accounti
 export const metadata: Metadata = {
   title: "Finance & Accounting | Multi-Currency, GST & VAT | Wan Buffer",
   description:
-    "End-to-end ERP finance and accounting — multi-currency operations, GST e-invoicing, GCC VAT, bank reconciliation, financial consolidation, and automated reporting. Implemented on Odoo, Zoho, SAP, and QuickBooks.",
+    "End-to-end ERP finance and accounting, multi-currency operations, GST e-invoicing, GCC VAT, bank reconciliation, financial consolidation, and automated reporting. Implemented on Odoo, Zoho, SAP, and QuickBooks.",
   keywords: [
     "ERP finance accounting",
     "multi-currency ERP",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Finance & Accounting — Multi-Currency, GST & VAT | Wan Buffer",
+    title: "Finance & Accounting: Multi-Currency, GST & VAT | Wan Buffer",
     description:
-      "ERP finance & accounting — multi-currency, GST e-invoicing, GCC VAT, bank reconciliation, and financial reporting across Odoo, Zoho, and SAP.",
+      "ERP finance & accounting, multi-currency, GST e-invoicing, GCC VAT, bank reconciliation, and financial reporting across Odoo, Zoho, and SAP.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/finance-accounting" },

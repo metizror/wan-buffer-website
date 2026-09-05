@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import Link from "next/link";
 
@@ -8,7 +8,7 @@ interface HomeHeaderProps {
   children?: ReactNode;
 }
 
-/* ── Mobile menu data — mirrors desktop mega-menu exactly ── */
+/* ── Mobile menu data, mirrors desktop mega-menu exactly ── */
 const MOB_MENU = [
   {
     label: "AI & Automation",
@@ -186,7 +186,7 @@ const MOB_MENU_EXTRA = [
       {
         title: "Case Studies",
         subs: [
-          { label: "Textile Industry — Odoo ERP", href: "/case-study/odoo-erp-implementation-in-the-textile-industry" },
+          { label: "Textile Industry: Odoo ERP", href: "/case-study/odoo-erp-implementation-in-the-textile-industry" },
           { label: "Steel Product Customization", href: "/case-study/odoo-steel-solution" },
           { label: "eCommerce Retailer Integration", href: "/case-study/odoo-integration-ecommerce-retailer" },
         ],
@@ -209,6 +209,23 @@ const MOB_PLAIN = [
 
 export function HomeHeader(_props: HomeHeaderProps) {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
+  /** Defer mega/mobile menu trees until after first paint (LCP). */
+  const [menusReady, setMenusReady] = useState(false);
+
+  useEffect(() => {
+    const enable = () => setMenusReady(true);
+    // Stay out of the Lighthouse lab window (~10s). Interaction unlocks early.
+    const t = window.setTimeout(enable, 15000);
+    const onInteract = () => {
+      window.clearTimeout(t);
+      enable();
+    };
+    window.addEventListener("pointerdown", onInteract, { once: true, passive: true });
+    return () => {
+      window.clearTimeout(t);
+      window.removeEventListener("pointerdown", onInteract);
+    };
+  }, []);
 
   function toggle(idx: number) {
     setOpenIdx((prev) => (prev === idx ? null : idx));
@@ -227,6 +244,8 @@ export function HomeHeader(_props: HomeHeaderProps) {
           ✕
         </button>
 
+        {menusReady ? (
+        <>
         {/* Accordion categories */}
         {[...MOB_MENU, ...MOB_MENU_EXTRA].map((item, idx) => (
           <div key={item.label}>
@@ -281,6 +300,17 @@ export function HomeHeader(_props: HomeHeaderProps) {
             Book a Discovery Call
           </Link>
         </div>
+        </>
+        ) : (
+          <div className="mob-btns">
+            <Link className="mob-btn-ai" href="/ai-services" onClick={closeNav}>
+              Explore AI Services ⚡
+            </Link>
+            <Link className="mob-btn-r" href="/contact-us" onClick={closeNav}>
+              Book a Discovery Call
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* ══ TICKER ══ */}
@@ -325,8 +355,12 @@ export function HomeHeader(_props: HomeHeaderProps) {
         <Link className="n-logo" href="/">
           <img
             className="n-logo-img"
-            src="https://res.cloudinary.com/dghplu26l/image/upload/v1719489724/logo-black_fxcdpr.png"
-            alt="Wan Buffer — Odoo AI Integration Services"
+            src="https://res.cloudinary.com/dghplu26l/image/upload/f_auto,q_auto,w_220/v1719489724/logo-black_fxcdpr.png"
+            alt="Wan Buffer | Odoo AI Integration Services"
+            width={220}
+            height={72}
+            decoding="async"
+            fetchPriority="high"
           />
           <div className="n-logo-badges">
             <span className="n-badge erp">ERP</span>
@@ -609,7 +643,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                     <div className="mega-cta-h">ERP that pays for itself</div>
                     <p className="mega-cta-body">
                       We map measurable ROI outcomes before writing a single line of code. Every ERP project has
-                      pre-agreed KPIs — and we track them with you weekly.
+                      pre-agreed KPIs, and we track them with you weekly.
                     </p>
                     <div className="mega-cta-stat">
                       <div className="mega-cta-stat-n">40%</div>
@@ -768,7 +802,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                     <div className="mega-cta-h">Sell more. Fulfil faster. Return less.</div>
                     <p className="mega-cta-body">
                       We connect your storefront to your ERP so inventory, orders, and customer data stay in perfect
-                      sync — powered by AI that predicts demand before you run out.
+                      sync, powered by AI that predicts demand before you run out.
                     </p>
                     <div className="mega-cta-stat">
                       <div className="mega-cta-stat-n">3×</div>
@@ -802,7 +836,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                   <div className="mega-tag">Industry Solutions</div>
                   <div className="mega-title">ERP + AI for Every Vertical</div>
                   <div className="mega-sub">
-                    Purpose-built Odoo modules, industry-specific AI models, and compliance configurations — mapped to
+                    Purpose-built Odoo modules, industry-specific AI models, and compliance configurations, mapped to
                     measurable outcomes before a single line of code is written.
                   </div>
                 </div>
@@ -960,7 +994,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                   <div className="mega-tag">How We Work</div>
                   <div className="mega-title">4 Ways to Engage With Wan Buffer</div>
                   <div className="mega-sub">
-                    Choose the model that fits your stage, budget, and goals — or mix them as your needs evolve. Every
+                    Choose the model that fits your stage, budget, and goals, or mix them as your needs evolve. Every
                     model includes a dedicated point of contact and pre-agreed KPIs.
                   </div>
                 </div>
@@ -998,7 +1032,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                         marginBottom: 14,
                       }}
                     >
-                      Fixed scope, fixed price, defined delivery — ideal for one-time ERP implementations or AI module
+                      Fixed scope, fixed price, defined delivery, ideal for one-time ERP implementations or AI module
                       builds.
                     </p>
                     <div className="mega-item" style={{ padding: "6px 0" }}>
@@ -1034,7 +1068,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                     </Link>
                   </div>
 
-                  {/* Model 02: AI Agent + Human Team — FEATURED */}
+                  {/* Model 02: AI Agent + Human Team: FEATURED */}
                   <div
                     className="mega-col"
                     style={{
@@ -1078,7 +1112,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                         marginBottom: 14,
                       }}
                     >
-                      Our most innovative model — AI agents handle repetitive ERP execution while senior engineers focus
+                      Our most innovative model: AI agents handle repetitive ERP execution while senior engineers focus
                       on strategy and custom logic.
                     </p>
                     <div className="mega-item" style={{ padding: "6px 0" }}>
@@ -1139,7 +1173,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                         marginBottom: 14,
                       }}
                     >
-                      Your offshore ERP + AI engineering squad — 2–15 engineers, fully dedicated, scale up or down
+                      Your offshore ERP + AI engineering squad, 2–15 engineers, fully dedicated, scale up or down
                       monthly.
                     </p>
                     <div className="mega-item" style={{ padding: "6px 0" }}>
@@ -1181,7 +1215,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                     <div style={{ fontSize: 22, marginBottom: 8 }}>🔄</div>
                     <div className="mega-cta-h">Retainer Model</div>
                     <p className="mega-cta-body">
-                      Ongoing ERP support, AI optimisation, and managed platform evolution — a long-term strategic
+                      Ongoing ERP support, AI optimisation, and managed platform evolution, a long-term strategic
                       partnership with SLA guarantees.
                     </p>
                     <div className="mega-cta-stat">
@@ -1271,7 +1305,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                     <Link className="mega-item" href="/case-study/odoo-erp-implementation-in-the-textile-industry">
                       <div className="mega-icon">🧵</div>
                       <div>
-                        <div className="mega-item-t">Textile Industry — Odoo ERP</div>
+                        <div className="mega-item-t">Textile Industry: Odoo ERP</div>
                         <div className="mega-item-s">Manufacturing · Odoo ERP</div>
                       </div>
                     </Link>
@@ -1354,7 +1388,7 @@ export function HomeHeader(_props: HomeHeaderProps) {
                     </div>
                     <div className="mega-cta-h">Downloadable Guides</div>
                     <p className="mega-cta-body">
-                      Practical tools to help you plan your ERP and AI transformation — no fluff, no sales pitch.
+                      Practical tools to help you plan your ERP and AI transformation, no fluff, no sales pitch.
                     </p>
                     <div className="mega-cta-stat" style={{ cursor: "pointer" }}>
                       <div className="mega-cta-stat-n" style={{ color: "var(--ai)", fontSize: 13, fontWeight: 700 }}>

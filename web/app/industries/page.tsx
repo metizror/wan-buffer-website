@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { IndustriesContent } from "@/components/pages/industries-content";
 
 export const metadata: Metadata = {
-  title: "Industry ERP Solutions | Manufacturing, Logistics, Retail, Healthcare — Wan Buffer",
+  title: "Industry ERP Solutions | Manufacturing, Logistics, Retail, Healthcare | Wan Buffer",
   description:
     "Purpose-built Odoo ERP + AI solutions for manufacturing, retail, logistics, healthcare, finance, and real estate. Wan Buffer delivers industry-specific ERP configurations with pre-built AI models across 20+ countries.",
   keywords: [
@@ -26,11 +26,11 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Industry ERP Solutions | Manufacturing, Logistics, Retail, Healthcare — Wan Buffer",
+    title: "Industry ERP Solutions | Manufacturing, Logistics, Retail, Healthcare | Wan Buffer",
     description:
       "Purpose-built Odoo ERP + AI solutions for manufacturing, retail, logistics, healthcare, finance, and real estate. Wan Buffer delivers industry-specific ERP configurations with pre-built AI models across 20+ countries.",
     siteName: "Wan Buffer",

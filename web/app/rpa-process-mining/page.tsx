@@ -11,7 +11,7 @@ import { RpaProcessMiningContent } from "@/components/services/rpa-process-minin
 export const metadata: Metadata = {
   title: "RPA & Process Mining | Automate Repetitive ERP Tasks | Wan Buffer",
   description:
-    "Discover hidden inefficiencies with process mining and eliminate them with robotic process automation. End-to-end RPA for Odoo, Zoho, Salesforce, and SAP — from process discovery to bot deployment.",
+    "Discover hidden inefficiencies with process mining and eliminate them with robotic process automation. End-to-end RPA for Odoo, Zoho, Salesforce, and SAP, from process discovery to bot deployment.",
   keywords: [
     "RPA services",
     "robotic process automation",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "RPA & Process Mining — Automate Repetitive ERP Tasks | Wan Buffer",
+    title: "RPA & Process Mining: Automate Repetitive ERP Tasks | Wan Buffer",
     description:
-      "Process mining reveals what's broken. RPA fixes it. End-to-end automation for ERP tasks — from discovery to production bots.",
+      "Process mining reveals what's broken. RPA fixes it. End-to-end automation for ERP tasks, from discovery to production bots.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/rpa-process-mining" },

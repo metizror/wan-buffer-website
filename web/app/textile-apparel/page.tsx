@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { TextileApparelContent } from "@/components/services/textile-apparel-content";
 
 export const metadata: Metadata = {
-  title: "Textile & Apparel ERP | Style-Level BOM, Season Planning & AI Reorder — Wan Buffer",
+  title: "Textile & Apparel ERP | Style-Level BOM, Season Planning & AI Reorder | Wan Buffer",
   description:
     "End-to-end textile and apparel ERP with style-level BOM management, season and collection planning, AI-powered reorder, size-colour matrix inventory, fabric roll tracking, and cut-plan optimisation. For garment manufacturers, fashion brands, and textile mills.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Textile & Apparel ERP — Style-Level BOM, Season Planning & AI Reorder | Wan Buffer",
+    title: "Textile & Apparel ERP: Style-Level BOM, Season Planning & AI Reorder | Wan Buffer",
     description:
-      "Textile and apparel ERP with style-level BOM, season planning, AI reorder, size-colour matrix inventory, and cut-plan optimisation — for garment manufacturers, fashion brands, and textile mills.",
+      "Textile and apparel ERP with style-level BOM, season planning, AI reorder, size-colour matrix inventory, and cut-plan optimisation, for garment manufacturers, fashion brands, and textile mills.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/textile-apparel" },

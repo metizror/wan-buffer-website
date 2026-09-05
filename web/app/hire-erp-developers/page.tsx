@@ -9,9 +9,9 @@ import { HomeWanny } from "@/components/home/wanny";
 import { HireErpContent } from "@/components/services/hire-erp-content";
 
 export const metadata: Metadata = {
-  title: "Hire ERP Developers | Odoo, Zoho & Salesforce Engineers — Remote, Dedicated — Wan Buffer",
+  title: "Hire ERP Developers | Odoo, Zoho & Salesforce Engineers: Remote, Dedicated | Wan Buffer",
   description:
-    "Hire pre-vetted ERP developers — Odoo, Zoho, and Salesforce functional consultants and technical engineers. 100% dedicated, embedded in your workflow, onboarded in 1–2 weeks. Scale month-to-month from India.",
+    "Hire pre-vetted ERP developers: Odoo, Zoho, and Salesforce functional consultants and technical engineers. 100% dedicated, embedded in your workflow, onboarded in 1–2 weeks. Scale month-to-month from India.",
   keywords: [
     "hire ERP developers",
     "hire Odoo developers",
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Hire ERP Developers — Odoo, Zoho & Salesforce Engineers | Wan Buffer",
+    title: "Hire ERP Developers: Odoo, Zoho & Salesforce Engineers | Wan Buffer",
     description:
-      "Pre-vetted Odoo, Zoho, and Salesforce developers — 100% dedicated, onboarded in 1–2 weeks, scale month-to-month.",
+      "Pre-vetted Odoo, Zoho, and Salesforce developers, 100% dedicated, onboarded in 1–2 weeks, scale month-to-month.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/hire-erp-developers" },

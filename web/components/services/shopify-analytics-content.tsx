@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   SHOPIFY ANALYTICS + AI — unique page design
+   SHOPIFY ANALYTICS + AI, unique page design
    Centered hero + metric cards · AI capability grid · Data pipeline ·
    Use case rows · Process · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -47,12 +47,12 @@ const HERO_METRICS = [
 
 /* ── AI capabilities ── */
 const CAPABILITIES = [
-  { icon: <TrendingUpIcon />, t: "Demand Forecasting", s: "ML models predict product demand 30–90 days ahead using sales history, seasonality, and marketing calendar. Reduce stockouts and overstock with data — not guesswork." },
+  { icon: <TrendingUpIcon />, t: "Demand Forecasting", s: "ML models predict product demand 30–90 days ahead using sales history, seasonality, and marketing calendar. Reduce stockouts and overstock with data, not guesswork." },
   { icon: <UsersIcon />, t: "Customer Lifetime Value", s: "Predict which customers will return and how much they'll spend. Segment by LTV tier for targeted marketing, loyalty programs, and retention campaigns." },
-  { icon: <BarChartIcon />, t: "Cohort Analysis", s: "Track customer behaviour by acquisition cohort — repeat purchase rates, revenue per cohort, and retention curves. See which marketing channels bring the most valuable customers." },
-  { icon: <PackageIcon />, t: "Product Performance", s: "Revenue per SKU, margin analysis, sell-through rate, and dead stock identification. Know which products to promote, discount, or discontinue — backed by data." },
-  { icon: <TargetIcon />, t: "Marketing Attribution", s: "Connect ad spend to actual revenue — not just clicks. Multi-touch attribution across Google, Meta, email, and organic channels. Know your true ROAS." },
-  { icon: <SparklesIcon />, t: "AI-Generated Reports", s: "Daily and weekly executive summaries delivered to email or Slack. AI explains what changed, why it changed, and what to do next — no manual report building." },
+  { icon: <BarChartIcon />, t: "Cohort Analysis", s: "Track customer behaviour by acquisition cohort, repeat purchase rates, revenue per cohort, and retention curves. See which marketing channels bring the most valuable customers." },
+  { icon: <PackageIcon />, t: "Product Performance", s: "Revenue per SKU, margin analysis, sell-through rate, and dead stock identification. Know which products to promote, discount, or discontinue, backed by data." },
+  { icon: <TargetIcon />, t: "Marketing Attribution", s: "Connect ad spend to actual revenue, not just clicks. Multi-touch attribution across Google, Meta, email, and organic channels. Know your true ROAS." },
+  { icon: <SparklesIcon />, t: "AI-Generated Reports", s: "Daily and weekly executive summaries delivered to email or Slack. AI explains what changed, why it changed, and what to do next, no manual report building." },
 ] as const;
 
 /* ── Data pipeline ── */
@@ -64,10 +64,10 @@ const PIPELINE = [
 
 /* ── Use cases ── */
 const USE_CASES = [
-  { icon: <PackageIcon />, t: "Predict which products will sell out next month", s: "Demand models analyse sales velocity, seasonal patterns, and marketing campaigns to forecast SKU-level demand. Procurement teams get advance notice — not surprise stockouts." },
-  { icon: <UsersIcon />, t: "Identify your highest-value customer segments", s: "LTV models score every customer by predicted future spend. Marketing teams target high-LTV segments with personalised campaigns — and stop wasting budget on one-time buyers." },
-  { icon: <BarChartIcon />, t: "Know exactly which marketing channels drive revenue", s: "Multi-touch attribution connects every marketing pound to actual conversions. See which channels bring high-LTV customers — not just traffic — and reallocate spend accordingly." },
-  { icon: <SparklesIcon />, t: "Get AI-generated performance summaries daily", s: "No more spreadsheet sessions. AI analyses your store data overnight and delivers a plain-English summary — what's up, what's down, what needs attention — before your morning meeting." },
+  { icon: <PackageIcon />, t: "Predict which products will sell out next month", s: "Demand models analyse sales velocity, seasonal patterns, and marketing campaigns to forecast SKU-level demand. Procurement teams get advance notice, not surprise stockouts." },
+  { icon: <UsersIcon />, t: "Identify your highest-value customer segments", s: "LTV models score every customer by predicted future spend. Marketing teams target high-LTV segments with personalised campaigns, and stop wasting budget on one-time buyers." },
+  { icon: <BarChartIcon />, t: "Know exactly which marketing channels drive revenue", s: "Multi-touch attribution connects every marketing pound to actual conversions. See which channels bring high-LTV customers, not just traffic, and reallocate spend accordingly." },
+  { icon: <SparklesIcon />, t: "Get AI-generated performance summaries daily", s: "No more spreadsheet sessions. AI analyses your store data overnight and delivers a plain-English summary, what's up, what's down, what needs attention, before your morning meeting." },
 ] as const;
 
 /* ── Stats ── */
@@ -79,11 +79,11 @@ const STATS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "What data does the AI analyse from my Shopify store?", a: "Orders, products, customers, marketing campaigns, traffic sources, and inventory levels. We connect via the Shopify Admin API — no manual exports needed. Historical data going back as far as your store allows." },
+  { q: "What data does the AI analyse from my Shopify store?", a: "Orders, products, customers, marketing campaigns, traffic sources, and inventory levels. We connect via the Shopify Admin API, no manual exports needed. Historical data going back as far as your store allows." },
   { q: "How accurate are the demand forecasts?", a: "Typical accuracy is 88–95% depending on your product mix and sales history length. Models improve continuously as more data accumulates. We benchmark accuracy monthly and retrain when drift is detected." },
   { q: "Do I need a Shopify Plus plan for analytics?", a: "No. Our analytics solution works with Shopify Basic, Shopify, and Shopify Plus. Some advanced features (like checkout analytics) benefit from Plus, but core forecasting and LTV work on all plans." },
-  { q: "Where do I see the dashboards?", a: "We deploy dashboards on Power BI, Google Looker, Metabase, or custom web dashboards — depending on your preference. Daily email and Slack reports are included in every plan." },
-  { q: "Can you connect Shopify analytics to our ERP?", a: "Yes. Analytics insights feed directly into Odoo, Zoho, or SAP — demand forecasts trigger procurement workflows, LTV scores sync to CRM, and inventory recommendations update reorder rules automatically." },
+  { q: "Where do I see the dashboards?", a: "We deploy dashboards on Power BI, Google Looker, Metabase, or custom web dashboards, depending on your preference. Daily email and Slack reports are included in every plan." },
+  { q: "Can you connect Shopify analytics to our ERP?", a: "Yes. Analytics insights feed directly into Odoo, Zoho, or SAP, demand forecasts trigger procurement workflows, LTV scores sync to CRM, and inventory recommendations update reorder rules automatically." },
   { q: "How long does setup take?", a: "Basic analytics dashboard: 2–3 weeks. Full AI suite with demand forecasting, LTV, and attribution: 4–6 weeks. Ongoing model retraining and reporting is continuous." },
 ] as const;
 
@@ -92,7 +92,7 @@ export function ShopifyAnalyticsContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered + metric cards ═══ */}
+      {/* ═══ HERO: centered + metric cards ═══ */}
       <section className="sh-hero">
         <div className="sh-hero-glow sh-hero-glow-1" aria-hidden="true" />
         <div className="sh-hero-glow sh-hero-glow-2" aria-hidden="true" />
@@ -106,7 +106,7 @@ export function ShopifyAnalyticsContent() {
             <span className="acc">+ AI.</span>
           </h1>
           <p className="sh-hero-sub rev">
-            AI-powered demand forecasting, customer lifetime value prediction, cohort analysis, and automated reporting — <strong>turn your Shopify data into revenue growth.</strong>
+            AI-powered demand forecasting, customer lifetime value prediction, cohort analysis, and automated reporting, <strong>turn your Shopify data into revenue growth.</strong>
           </p>
           <div className="sh-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -155,7 +155,7 @@ export function ShopifyAnalyticsContent() {
           <div className="sh-caps-hdr rev">
             <div className="eyebrow">AI capabilities</div>
             <h2>Six intelligence layers.<br /><span>Always learning.</span></h2>
-            <p>Every capability is trained on your actual Shopify data — not generic eCommerce benchmarks. Models learn your store's patterns and improve with every sale.</p>
+            <p>Every capability is trained on your actual Shopify data, not generic eCommerce benchmarks. Models learn your store's patterns and improve with every sale.</p>
           </div>
           <div className="sh-caps-grid rev">
             {CAPABILITIES.map((c) => (
@@ -169,7 +169,7 @@ export function ShopifyAnalyticsContent() {
         </div>
       </section>
 
-      {/* ═══ USE CASES — rows ═══ */}
+      {/* ═══ USE CASES: rows ═══ */}
       <section className="sh-use" id="use-cases">
         <div className="sh-use-inner">
           <div className="sh-use-hdr rev">
@@ -203,7 +203,7 @@ export function ShopifyAnalyticsContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — 3 steps ═══ */}
+      {/* ═══ PROCESS: 3 steps ═══ */}
       <section className="sh-proc" id="process">
         <div className="sh-proc-inner">
           <div className="sh-proc-hdr rev">
@@ -212,7 +212,7 @@ export function ShopifyAnalyticsContent() {
           </div>
           <div className="sh-proc-steps rev">
             {[
-              { icon: <DatabaseIcon />, t: "Connect", s: "We connect to your Shopify store via API and ingest historical data — orders, products, customers, and marketing." },
+              { icon: <DatabaseIcon />, t: "Connect", s: "We connect to your Shopify store via API and ingest historical data, orders, products, customers, and marketing." },
               { icon: <CpuIcon />, t: "Analyse", s: "ML models train on your data to build demand forecasts, LTV scores, cohort analyses, and attribution models." },
               { icon: <RocketIcon />, t: "Act", s: "Insights surface in dashboards, alerts, and AI reports. Procurement, marketing, and merchandising teams make data-driven decisions." },
             ].map((s, i) => (
@@ -273,10 +273,10 @@ export function ShopifyAnalyticsContent() {
                 <div className="oi-closer-insight-stat">80%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of eCommerce decisions are still based on gut feel, not data.</strong>
-                  Source: McKinsey, 2024. The gap isn&apos;t missing data — Shopify stores generate plenty. It&apos;s the absence of ML models that turn raw data into forward-looking predictions.
+                  Source: McKinsey, 2024. The gap isn&apos;t missing data. Shopify stores generate plenty. It&apos;s the absence of ML models that turn raw data into forward-looking predictions.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer analytics deployment is predictive — not just descriptive. We build models that tell you what&apos;s coming, not just what happened.</p>
+              <p>That&apos;s why every Wan Buffer analytics deployment is predictive, not just descriptive. We build models that tell you what&apos;s coming, not just what happened.</p>
             </div>
           </div>
 
@@ -287,7 +287,7 @@ export function ShopifyAnalyticsContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><TrendingUpIcon /></div>
                 <div className="oi-closer-commit-t">Predictive, not descriptive</div>
-                <p className="oi-closer-commit-b">Demand forecasts, LTV predictions, and churn scores — not just historical charts. AI tells your team what to do next, not what already happened.</p>
+                <p className="oi-closer-commit-b">Demand forecasts, LTV predictions, and churn scores, not just historical charts. AI tells your team what to do next, not what already happened.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>

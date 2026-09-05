@@ -37,7 +37,7 @@ export async function EventsContent() {
             </span>
           </h1>
           <p className="oi-hero-lux-sub rev">
-            IT conferences, webinars, and industry events hosted or attended by Wan Buffer—USA, UK, India, UAE, Europe,
+            IT conferences, webinars, and industry events hosted or attended by Wan Buffer: USA, UK, India, UAE, Europe,
             Kuwait, France, and beyond.
           </p>
           <div className="oi-hero-lux-cta rev">
@@ -69,7 +69,7 @@ export async function EventsContent() {
       <section className="oi-host-intro-band" aria-label="About our events">
         <div className="oi-host-intro-band-inner rev">
           <p>
-            Stay up to date with Wan Buffer at cutting-edge technology events—learn about Odoo, AI-powered marketing,
+            Stay up to date with Wan Buffer at cutting-edge technology events: learn about Odoo, AI-powered marketing,
             email verification, and innovations in software development. Filter by keyword, location, or category to find
             sessions that matter to you.
           </p>
@@ -116,7 +116,7 @@ export async function EventsContent() {
               Planning an event <span>with us?</span>
             </h2>
             <p>
-              Reach out for speaking engagements, expo booths, or custom Odoo webinars—we&apos;ll help you share knowledge
+              Reach out for speaking engagements, expo booths, or custom Odoo webinars: we&apos;ll help you share knowledge
               with your audience.
             </p>
           </div>
@@ -168,7 +168,7 @@ export async function EventsContent() {
                 {events.length} events
               </a>
               <p className="oi-supp-body-v2">
-                Browse webinars, expos, and talk shows—with full detail pages on this site.
+                Browse webinars, expos, and talk shows: with full detail pages on this site.
               </p>
               <a className="oi-supp-cta-v2" href="#events-list">
                 Back to events <ArrowRightIcon />

@@ -11,8 +11,7 @@ export function HomeLeadPopup() {
               <div className="popup-badge">AI-Powered ERP</div>
               <div className="popup-left-title">Free AI + ERP Readiness Assessment</div>
               <p className="popup-left-body">
-                Discover exactly where AI can automate your ERP workflows and accelerate operations — delivered in 5
-                business days.
+                We will show you where AI can take work off your ERP, and send the write-up within 5 business days.
               </p>
             </div>
             <div className="popup-perks">
@@ -43,7 +42,7 @@ export function HomeLeadPopup() {
                 <option>Odoo Implementation</option>
                 <option>Workflow Automation</option>
                 <option>Dedicated Dev Team</option>
-                <option>Not sure — need advice</option>
+                <option>Not sure, need advice</option>
               </select>
               <button type="button" className="popup-submit" onClick={() => (window as any).submitPopup?.()}>
                 <span>Get my free assessment →</span>

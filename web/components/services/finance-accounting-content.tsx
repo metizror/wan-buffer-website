@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   FINANCE & ACCOUNTING — unique page design
+   FINANCE & ACCOUNTING, unique page design
    Centered hero + P&L card · Capability grid · Region compliance
    bands · Automation split · Process bar · Platforms · FAQ ·
    Closer · Support
@@ -51,11 +51,11 @@ const PL_ROWS = [
 /* ── Capabilities ── */
 const CAPABILITIES = [
   { icon: <WalletIcon />, num: "01", t: "Accounts Payable & Receivable", s: "Automated invoice processing, payment scheduling, ageing analysis, and dunning sequences. AP and AR workflows that reduce manual effort by 80% while eliminating payment delays." },
-  { icon: <DatabaseIcon />, num: "02", t: "Bank Reconciliation", s: "Automated bank feed imports, AI-powered transaction matching, and exception flagging. Daily reconciliation instead of monthly — closing the books in hours, not weeks." },
-  { icon: <RefreshIcon />, num: "03", t: "Multi-Currency Operations", s: "Real-time exchange rate updates, automatic gain/loss calculations, and multi-currency reporting. Handle transactions in any currency — your books stay accurate across borders." },
-  { icon: <BarChartIcon />, num: "04", t: "Financial Reporting", s: "P&L, balance sheet, cash flow, trial balance, and custom reports — generated in real time. Schedule auto-delivery to leadership. Drill from summary to individual journal entries." },
+  { icon: <DatabaseIcon />, num: "02", t: "Bank Reconciliation", s: "Automated bank feed imports, AI-powered transaction matching, and exception flagging. Daily reconciliation instead of monthly, closing the books in hours, not weeks." },
+  { icon: <RefreshIcon />, num: "03", t: "Multi-Currency Operations", s: "Real-time exchange rate updates, automatic gain/loss calculations, and multi-currency reporting. Handle transactions in any currency, your books stay accurate across borders." },
+  { icon: <BarChartIcon />, num: "04", t: "Financial Reporting", s: "P&L, balance sheet, cash flow, trial balance, and custom reports, generated in real time. Schedule auto-delivery to leadership. Drill from summary to individual journal entries." },
   { icon: <MonitorIcon />, num: "05", t: "Financial Consolidation", s: "Consolidate financials across multiple entities, subsidiaries, and currencies into a single view. Inter-company eliminations and minority interest calculations handled automatically." },
-  { icon: <ShieldIcon />, num: "06", t: "Budgeting & Cost Control", s: "Set budgets by department, project, or cost centre. Track actuals vs budget in real time. Automated alerts when spend approaches thresholds — before the budget is blown." },
+  { icon: <ShieldIcon />, num: "06", t: "Budgeting & Cost Control", s: "Set budgets by department, project, or cost centre. Track actuals vs budget in real time. Automated alerts when spend approaches thresholds, before the budget is blown." },
 ] as const;
 
 /* ── Regional compliance ── */
@@ -66,7 +66,7 @@ const REGIONS = [
 ] as const;
 
 /* ── Automation metrics ── */
-const AUTO_METRIC = { n: "70%", l: "Faster month-end close", sub: "Average reduction in month-end closing time across our finance implementations — from 12 days to under 4 days." };
+const AUTO_METRIC = { n: "70%", l: "Faster month-end close", sub: "Average reduction in month-end closing time across our finance implementations, from 12 days to under 4 days." };
 const AUTO_FEATURES = [
   { icon: <ZapIcon />, t: "Automated journal entries from sales, purchases, and inventory" },
   { icon: <RefreshIcon />, t: "Daily bank reconciliation with AI matching" },
@@ -96,10 +96,10 @@ const PLATFORMS = [
 const FAQS = [
   { q: "Which ERP platforms do you implement for finance?", a: "We implement finance modules on Odoo, Zoho Books, SAP FICO, QuickBooks, Xero, and Tally. Our recommendation depends on your organisation size, compliance requirements, and existing tech stack." },
   { q: "Can you handle multi-country, multi-currency operations?", a: "Yes. We configure multi-currency transactions, automatic exchange rate updates, gain/loss calculations, and multi-entity consolidation. Common for businesses operating across India, UAE, USA, and Europe." },
-  { q: "Do you support Indian GST e-invoicing?", a: "Yes. We configure GST e-invoicing with IRN generation, automated GSTR-1/3B/9 filing, TDS/TCS deduction, Input Tax Credit reconciliation, and multi-state GST registration — all within your ERP." },
-  { q: "How do you handle data migration from legacy accounting systems?", a: "We migrate opening balances, chart of accounts, customer/vendor masters, outstanding invoices, and historical transactions — with full validation, reconciliation, and audit trail." },
-  { q: "Can you automate month-end closing?", a: "Yes. We automate journal entries, accruals, depreciation, reconciliation, and report generation — reducing month-end close from weeks to days. Pre/post-close checklists are built into the workflow." },
-  { q: "What ongoing support do you provide?", a: "Every implementation includes 90 days of hypercare. After that, we offer SLA-based support — tax rule updates, configuration changes, year-end closing support, and quarterly health checks." },
+  { q: "Do you support Indian GST e-invoicing?", a: "Yes. We configure GST e-invoicing with IRN generation, automated GSTR-1/3B/9 filing, TDS/TCS deduction, Input Tax Credit reconciliation, and multi-state GST registration, all within your ERP." },
+  { q: "How do you handle data migration from legacy accounting systems?", a: "We migrate opening balances, chart of accounts, customer/vendor masters, outstanding invoices, and historical transactions, with full validation, reconciliation, and audit trail." },
+  { q: "Can you automate month-end closing?", a: "Yes. We automate journal entries, accruals, depreciation, reconciliation, and report generation, reducing month-end close from weeks to days. Pre/post-close checklists are built into the workflow." },
+  { q: "What ongoing support do you provide?", a: "Every implementation includes 90 days of hypercare. After that, we offer SLA-based support, tax rule updates, configuration changes, year-end closing support, and quarterly health checks." },
 ] as const;
 
 /* ── Component ── */
@@ -107,7 +107,7 @@ export function FinanceAccountingContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered + P&L card ═══ */}
+      {/* ═══ HERO: centered + P&L card ═══ */}
       <section className="fa-hero">
         <div className="fa-hero-glow fa-hero-glow-1" aria-hidden="true" />
         <div className="fa-hero-glow fa-hero-glow-2" aria-hidden="true" />
@@ -121,7 +121,7 @@ export function FinanceAccountingContent() {
             <span className="acc">Accounting.</span>
           </h1>
           <p className="fa-hero-sub rev">
-            Multi-currency operations, GST e-invoicing, GCC VAT compliance, bank reconciliation, and financial consolidation — <strong>end-to-end ERP finance</strong> across Odoo, Zoho, SAP, and QuickBooks.
+            Multi-currency operations, GST e-invoicing, GCC VAT compliance, bank reconciliation, and financial consolidation, <strong>end-to-end ERP finance</strong> across Odoo, Zoho, SAP, and QuickBooks.
           </p>
           <div className="fa-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -133,7 +133,7 @@ export function FinanceAccountingContent() {
 
           {/* P&L card */}
           <div className="fa-pl rev">
-            <div className="fa-pl-bar">Profit &amp; Loss — FY 2025–26</div>
+            <div className="fa-pl-bar">Profit &amp; Loss: FY 2025–26</div>
             {PL_ROWS.map((r) => (
               <div key={r.label} className={`fa-pl-row fa-pl-${r.type}`}>
                 <span className="fa-pl-label">{r.label}</span>
@@ -144,13 +144,13 @@ export function FinanceAccountingContent() {
         </div>
       </section>
 
-      {/* ═══ CAPABILITIES — numbered grid ═══ */}
+      {/* ═══ CAPABILITIES: numbered grid ═══ */}
       <section className="fa-caps" id="capabilities">
         <div className="fa-caps-inner">
           <div className="fa-caps-hdr rev">
             <div className="eyebrow">Core capabilities</div>
             <h2>Six finance modules.<br /><span>Complete control.</span></h2>
-            <p>Every module is configured for your chart of accounts, tax jurisdiction, and approval hierarchy — not a generic accounting setup.</p>
+            <p>Every module is configured for your chart of accounts, tax jurisdiction, and approval hierarchy, not a generic accounting setup.</p>
           </div>
           <div className="fa-caps-grid rev">
             {CAPABILITIES.map((c) => (
@@ -165,7 +165,7 @@ export function FinanceAccountingContent() {
         </div>
       </section>
 
-      {/* ═══ REGIONAL COMPLIANCE — 3 bands ═══ */}
+      {/* ═══ REGIONAL COMPLIANCE: 3 bands ═══ */}
       <section className="fa-regions" id="compliance">
         <div className="fa-regions-inner">
           <div className="fa-regions-hdr rev">
@@ -187,7 +187,7 @@ export function FinanceAccountingContent() {
         </div>
       </section>
 
-      {/* ═══ AUTOMATION — split ═══ */}
+      {/* ═══ AUTOMATION: split ═══ */}
       <section className="fa-auto" id="automation">
         <div className="fa-auto-inner">
           <div className="fa-auto-hdr rev">
@@ -293,7 +293,7 @@ export function FinanceAccountingContent() {
                   Source: BlackLine, 2024. The problem is ERP setups that automate invoice creation but leave reconciliation, accruals, and reporting as manual spreadsheet exercises.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer finance deployment automates the full cycle — from journal entry to consolidated report.</p>
+              <p>That&apos;s why every Wan Buffer finance deployment automates the full cycle, from journal entry to consolidated report.</p>
             </div>
           </div>
 
@@ -304,13 +304,13 @@ export function FinanceAccountingContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><WalletIcon /></div>
                 <div className="oi-closer-commit-t">Full-cycle automation</div>
-                <p className="oi-closer-commit-b">From journal entries through reconciliation to consolidated reporting — every step automated, not just AP and AR.</p>
+                <p className="oi-closer-commit-b">From journal entries through reconciliation to consolidated reporting, every step automated, not just AP and AR.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><ShieldIcon /></div>
                 <div className="oi-closer-commit-t">Tax compliance built in</div>
-                <p className="oi-closer-commit-b">GST, VAT, TDS, sales tax — configured and tested before go-live. Regulation updates applied automatically. Audit-ready from day one.</p>
+                <p className="oi-closer-commit-b">GST, VAT, TDS, sales tax, configured and tested before go-live. Regulation updates applied automatically. Audit-ready from day one.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
@@ -322,7 +322,7 @@ export function FinanceAccountingContent() {
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior finance consultants</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The consultant who audits your books is the one who configures, migrates, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The consultant who audits your books is the one who configures, migrates, and supports, named in the contract.</p>
               </div>
             </div>
           </div>

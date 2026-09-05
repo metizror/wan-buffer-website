@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { HealthcareContent } from "@/components/services/healthcare-content";
 
 export const metadata: Metadata = {
-  title: "Healthcare ERP | Patient Flow, Billing Automation & Scheduling AI — Wan Buffer",
+  title: "Healthcare ERP | Patient Flow, Billing Automation & Scheduling AI | Wan Buffer",
   description:
     "End-to-end healthcare ERP with patient flow management, automated billing and claims processing, AI-powered scheduling, electronic health records integration, and compliance-ready reporting. For hospitals, clinics, diagnostic centres, and multi-location healthcare groups.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Healthcare ERP — Patient Flow, Billing Automation & Scheduling AI | Wan Buffer",
+    title: "Healthcare ERP: Patient Flow, Billing Automation & Scheduling AI | Wan Buffer",
     description:
-      "Healthcare ERP with patient flow management, automated billing, AI scheduling, EHR integration, and compliance reporting — for hospitals, clinics, and diagnostic centres.",
+      "Healthcare ERP with patient flow management, automated billing, AI scheduling, EHR integration, and compliance reporting, for hospitals, clinics, and diagnostic centres.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/healthcare" },

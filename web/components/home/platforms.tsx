@@ -5,13 +5,13 @@ export function HomePlatforms() {
         <div>
           <div className="eyebrow">Multi-Platform Expertise</div>
           <h2 className="sec-h">
-            Beyond Odoo — Comprehensive <span className="acc">Platform Coverage</span>
+            Beyond Odoo: Comprehensive <span className="acc">Platform Coverage</span>
           </h2>
         </div>
         <div>
           <div className="plat-note">★ Primary Platform: Odoo ERP</div>
           <p className="sec-p" style={{ margin: 0 }}>
-            We also implement, customise, and integrate Zoho, Salesforce, Magento, Shopify, and Razorpay — giving you
+            We also implement, customise, and integrate Zoho, Salesforce, Magento, Shopify, and Razorpay, giving you
             a complete digital operations stack.
           </p>
         </div>
@@ -42,7 +42,7 @@ export function HomePlatforms() {
           </div>
           <div className="plat-name">Zoho Suite</div>
           <div className="plat-body">
-            Zoho CRM, Books, Inventory, and the full Zoho One ecosystem — implementation and integration with existing
+            Zoho CRM, Books, Inventory, and the full Zoho One ecosystem, implementation and integration with existing
             systems.
           </div>
           <div className="plat-services">
@@ -60,7 +60,7 @@ export function HomePlatforms() {
           <div className="plat-name">Razorpay</div>
           <div className="plat-body">
             As an Official Razorpay Partner, we integrate secure, scalable payment solutions into Odoo, custom apps,
-            and any web platform — supporting all major payment methods across India.
+            and any web platform, supporting all major payment methods across India.
           </div>
           <div className="plat-services">
             <span className="plat-svc">Odoo Integration</span>
@@ -107,7 +107,7 @@ export function HomePlatforms() {
           </div>
           <div className="plat-name">Salesforce</div>
           <div className="plat-body">
-            Sales Cloud, Service Cloud, and custom Salesforce development — including bi-directional Odoo ↔ Salesforce
+            Sales Cloud, Service Cloud, and custom Salesforce development, including bi-directional Odoo ↔ Salesforce
             sync.
           </div>
           <div className="plat-services">

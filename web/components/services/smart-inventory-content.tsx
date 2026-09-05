@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   SMART INVENTORY MANAGEMENT — unique page design
+   SMART INVENTORY MANAGEMENT, unique page design
    Hero split + shelf mockup · Pain-point scroll band · Full-width
    feature rows · Zigzag path methodology · Asymmetric results ·
    Platform badges · Closer · Support
@@ -58,26 +58,26 @@ const PAINS = [
   "Spreadsheet-based planning",
 ] as const;
 
-/* ── Features — full-width rows ── */
+/* ── Features: full-width rows ── */
 const FEATURES = [
-  { icon: <TrendingUpIcon />, t: "AI Demand Forecasting", s: "ML models predict demand 30–90 days ahead by analysing historical sales, seasonality, market trends, and promotional calendars. Every SKU, every warehouse, every channel — updated daily.", stat: { n: "92%", l: "Forecast accuracy" } },
+  { icon: <TrendingUpIcon />, t: "AI Demand Forecasting", s: "ML models predict demand 30–90 days ahead by analysing historical sales, seasonality, market trends, and promotional calendars. Every SKU, every warehouse, every channel, updated daily.", stat: { n: "92%", l: "Forecast accuracy" } },
   { icon: <RefreshIcon />, t: "Automated Reordering", s: "Dynamic reorder points adjust automatically based on demand predictions, supplier lead times, and carrying costs. Purchase orders generate and route for approval without manual intervention.", stat: { n: "85%", l: "Fewer manual POs" } },
-  { icon: <EyeIcon />, t: "Real-Time Stock Visibility", s: "Live dashboards showing stock levels, in-transit quantities, reserved stock, and available-to-promise — across every warehouse, every bin location, in real time.", stat: { n: "100%", l: "SKU visibility" } },
+  { icon: <EyeIcon />, t: "Real-Time Stock Visibility", s: "Live dashboards showing stock levels, in-transit quantities, reserved stock, and available-to-promise, across every warehouse, every bin location, in real time.", stat: { n: "100%", l: "SKU visibility" } },
   { icon: <GridIcon />, t: "Multi-Warehouse Orchestration", s: "Intelligent allocation across warehouses based on proximity, stock levels, and fulfilment cost. Inter-warehouse transfers trigger automatically when demand patterns shift.", stat: { n: "3+", l: "Warehouses synced" } },
-  { icon: <ShieldIcon />, t: "Safety Stock Optimisation", s: "ML calculates optimal safety stock for every SKU — balancing service level targets against carrying costs. No more blanket rules that overstock slow movers and understock fast ones.", stat: { n: "45%", l: "Less excess stock" } },
-  { icon: <BarChartIcon />, t: "Inventory Analytics & Reporting", s: "Turn rate, days-on-hand, dead stock identification, ABC/XYZ classification, and cost-of-carry analysis — automated, accurate, and updated without manual spreadsheet work.", stat: { n: "Daily", l: "Auto-reports" } },
+  { icon: <ShieldIcon />, t: "Safety Stock Optimisation", s: "ML calculates optimal safety stock for every SKU, balancing service level targets against carrying costs. No more blanket rules that overstock slow movers and understock fast ones.", stat: { n: "45%", l: "Less excess stock" } },
+  { icon: <BarChartIcon />, t: "Inventory Analytics & Reporting", s: "Turn rate, days-on-hand, dead stock identification, ABC/XYZ classification, and cost-of-carry analysis, automated, accurate, and updated without manual spreadsheet work.", stat: { n: "Daily", l: "Auto-reports" } },
 ] as const;
 
-/* ── How it works — zigzag path ── */
+/* ── How it works: zigzag path ── */
 const STEPS = [
-  { num: "01", icon: <DatabaseIcon />, t: "Connect your ERP", b: "We connect to your Odoo, Zoho, SAP, or Salesforce inventory modules via secure APIs. Historical data is ingested and validated — no manual exports required." },
+  { num: "01", icon: <DatabaseIcon />, t: "Connect your ERP", b: "We connect to your Odoo, Zoho, SAP, or Salesforce inventory modules via secure APIs. Historical data is ingested and validated, no manual exports required." },
   { num: "02", icon: <CpuIcon />, t: "Train demand models", b: "ML models train on your sales history, seasonal patterns, and supplier data. We benchmark multiple algorithms and deploy only the most accurate for your specific product mix." },
   { num: "03", icon: <SettingsIcon />, t: "Configure automation", b: "Reorder rules, safety stock formulas, and approval workflows are configured to match your procurement policies. Every rule is testable before go-live." },
-  { num: "04", icon: <RocketIcon />, t: "Go live & optimise", b: "Dashboards, alerts, and automated POs go live. Continuous monitoring ensures models stay accurate as demand patterns evolve — retraining triggers automatically." },
+  { num: "04", icon: <RocketIcon />, t: "Go live & optimise", b: "Dashboards, alerts, and automated POs go live. Continuous monitoring ensures models stay accurate as demand patterns evolve, retraining triggers automatically." },
 ] as const;
 
-/* ── Results — asymmetric ── */
-const HERO_STAT = { n: "60%", l: "Reduction in stockouts", sub: "Average across our inventory management deployments — measured, tracked, and verified against pre-agreed baselines." };
+/* ── Results: asymmetric ── */
+const HERO_STAT = { n: "60%", l: "Reduction in stockouts", sub: "Average across our inventory management deployments, measured, tracked, and verified against pre-agreed baselines." };
 const MINI_STATS = [
   { n: "45%", l: "Less excess stock" },
   { n: "85%", l: "Fewer manual POs" },
@@ -101,7 +101,7 @@ export function SmartInventoryContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + shelf mockup right ═══ */}
+      {/* ═══ HERO: text left + shelf mockup right ═══ */}
       <section className="si-hero">
         <div className="si-hero-glow si-hero-glow-1" aria-hidden="true" />
         <div className="si-hero-glow si-hero-glow-2" aria-hidden="true" />
@@ -116,7 +116,7 @@ export function SmartInventoryContent() {
               <span className="acc">Stock that thinks ahead.</span>
             </h1>
             <p className="si-hero-sub rev">
-              AI-powered inventory that predicts demand, automates reordering, and eliminates stockouts — <strong>across every warehouse, every SKU, in real time.</strong>
+              AI-powered inventory that predicts demand, automates reordering, and eliminates stockouts, <strong>across every warehouse, every SKU, in real time.</strong>
             </p>
             <div className="si-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -149,7 +149,7 @@ export function SmartInventoryContent() {
         </div>
       </section>
 
-      {/* ═══ PAIN POINTS — scrolling band ═══ */}
+      {/* ═══ PAIN POINTS: scrolling band ═══ */}
       <section className="si-pains">
         <div className="si-pains-inner rev">
           <div className="si-pains-label">Problems we solve</div>
@@ -161,7 +161,7 @@ export function SmartInventoryContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — full-width horizontal rows ═══ */}
+      {/* ═══ FEATURES: full-width horizontal rows ═══ */}
       <section className="si-feat" id="features">
         <div className="si-feat-inner">
           <div className="si-feat-hdr rev">
@@ -186,7 +186,7 @@ export function SmartInventoryContent() {
         </div>
       </section>
 
-      {/* ═══ HOW IT WORKS — zigzag path ═══ */}
+      {/* ═══ HOW IT WORKS: zigzag path ═══ */}
       <section className="si-how" id="how-it-works">
         <div className="si-how-inner">
           <div className="si-how-hdr rev">
@@ -219,7 +219,7 @@ export function SmartInventoryContent() {
         </div>
       </section>
 
-      {/* ═══ RESULTS — asymmetric split ═══ */}
+      {/* ═══ RESULTS: asymmetric split ═══ */}
       <section className="si-results" id="results">
         <div className="si-results-inner">
           <div className="si-results-hdr rev">
@@ -272,10 +272,10 @@ export function SmartInventoryContent() {
                 <div className="oi-closer-insight-stat">43%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of businesses still manage inventory with spreadsheets.</strong>
-                  Source: Wasp Barcode, 2024. The result is chronic stockouts, excess stock, and planning decisions based on last month&apos;s data — not tomorrow&apos;s demand.
+                  Source: Wasp Barcode, 2024. The result is chronic stockouts, excess stock, and planning decisions based on last month&apos;s data, not tomorrow&apos;s demand.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer inventory deployment is built around four commitments — written into the contract and tracked weekly.</p>
+              <p>That&apos;s why every Wan Buffer inventory deployment is built around four commitments, written into the contract and tracked weekly.</p>
             </div>
           </div>
 
@@ -286,13 +286,13 @@ export function SmartInventoryContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><TrendingUpIcon /></div>
                 <div className="oi-closer-commit-t">SKU-level accuracy</div>
-                <p className="oi-closer-commit-b">Demand models forecast at the individual SKU level — not broad category averages. Every product gets its own prediction based on its own demand pattern.</p>
+                <p className="oi-closer-commit-b">Demand models forecast at the individual SKU level, not broad category averages. Every product gets its own prediction based on its own demand pattern.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed KPIs</div>
-                <p className="oi-closer-commit-b">Stockout reduction, excess stock decrease, and forecast accuracy are defined before development. If we miss targets, we keep working — at our cost.</p>
+                <p className="oi-closer-commit-b">Stockout reduction, excess stock decrease, and forecast accuracy are defined before development. If we miss targets, we keep working, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
@@ -304,7 +304,7 @@ export function SmartInventoryContent() {
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineers who design your inventory system are the ones who build, deploy, and support it — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineers who design your inventory system are the ones who build, deploy, and support it, named in the contract.</p>
               </div>
             </div>
           </div>
@@ -347,7 +347,7 @@ export function SmartInventoryContent() {
               <div className="oi-supp-icon-v2"><PhoneCallIcon /></div>
               <div className="oi-supp-label">Phone · 24 &times; 7</div>
               <a className="oi-supp-title-v2" href="tel:+919904122699">+91 99041 22699</a>
-              <p className="oi-supp-body-v2">Stock sync failures or automation incidents. Answered by a senior engineer — not a call centre.</p>
+              <p className="oi-supp-body-v2">Stock sync failures or automation incidents. Answered by a senior engineer, not a call centre.</p>
               <a className="oi-supp-cta-v2" href="tel:+919904122699">Call now <ArrowRightIcon /></a>
             </div>
             <div className="oi-supp-card">

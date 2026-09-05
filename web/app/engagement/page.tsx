@@ -9,9 +9,9 @@ import { HomeWanny } from "@/components/home/wanny";
 import { EngagementContent } from "@/components/services/engagement-content";
 
 export const metadata: Metadata = {
-  title: "Engagement Models | Project-Based, AI Agent + Human Team, Dedicated Team & Retainer — Wan Buffer",
+  title: "Engagement Models | Project-Based, AI Agent + Human Team, Dedicated Team & Retainer | Wan Buffer",
   description:
-    "Four flexible engagement models — project-based delivery, AI agent + human team hybrid, dedicated offshore teams, and retainer partnerships. Choose the model that fits your ERP and AI challenge, timeline, and budget.",
+    "Four flexible engagement models, project-based delivery, AI agent + human team hybrid, dedicated offshore teams, and retainer partnerships. Choose the model that fits your ERP and AI challenge, timeline, and budget.",
   keywords: [
     "engagement models",
     "ERP engagement model",
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Engagement Models — Project-Based, AI Agent + Human Team, Dedicated Team & Retainer | Wan Buffer",
+    title: "Engagement Models: Project-Based, AI Agent + Human Team, Dedicated Team & Retainer | Wan Buffer",
     description:
-      "Four flexible engagement models for ERP and AI projects — from fixed-scope delivery to our breakthrough AI Agent + Human Team hybrid model.",
+      "Four flexible engagement models for ERP and AI projects, from fixed-scope delivery to our breakthrough AI Agent + Human Team hybrid model.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/engagement" },

@@ -7,7 +7,7 @@ export function HomeFooter() {
             <img
               className="f-logo-img"
               src="https://res.cloudinary.com/dghplu26l/image/upload/v1719489724/logo-white_eoxbqc.png"
-              alt="Wan Buffer — Odoo AI Integration Services"
+              alt="Wan Buffer | Odoo AI Integration Services"
             />
             <div className="f-logo-badges">
               <span className="f-badge erp">ERP</span>
@@ -18,9 +18,9 @@ export function HomeFooter() {
             AI-and-Automation-enabled ERP solutions company. Building intelligent enterprise systems across 20+ nations.
           </p>
           <div className="f-offs">
-            <div className="f-off">Ahmedabad, India — HQ &amp; R&amp;D</div>
-            <div className="f-off">Kuwait City — Regional Office</div>
-            <div className="f-off">Paris, France — Sales Office</div>
+            <div className="f-off">Ahmedabad, India: HQ &amp; R&amp;D</div>
+            <div className="f-off">Kuwait City: Regional Office</div>
+            <div className="f-off">Paris, France: Sales Office</div>
           </div>
         </div>
 

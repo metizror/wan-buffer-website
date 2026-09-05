@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   HIRE AI ENGINEERS — dedicated page
+   HIRE AI ENGINEERS, dedicated page
    Hero split + AI talent pool mock · Why hire from us · Roles available ·
    Process flow · Engagement options · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -51,20 +51,20 @@ const TALENT = [
 
 /* ── Why hire from us ── */
 const WHY_US = [
-  { icon: <ShieldIcon />, t: "AI-Specific Vetting", s: "Every AI engineer passes a 4-stage process — ML fundamentals assessment, framework-specific coding challenge (LangChain/TensorFlow/PyTorch), system design interview, and portfolio review of deployed AI projects. Only 6% of applicants qualify.", color: "ai" as const },
-  { icon: <UsersIcon />, t: "100% Dedicated to You", s: "No shared resources, no split attention. Your AI engineer works exclusively on your projects — building models, training pipelines, and deploying agents for your business alone.", color: "green" as const },
-  { icon: <ClockIcon />, t: "Onboarded in 1–2 Weeks", s: "From requirement to productive AI engineer in 5–10 business days. You interview, approve, and we handle everything else. Your engineer starts building from Day 1 — not ramping up for a month.", color: "purple" as const },
-  { icon: <CpuIcon />, t: "ERP + AI Integration Expertise", s: "Our AI engineers don't just build models in isolation — they integrate AI directly into ERP workflows. Predictive analytics in Odoo, AI agents for Salesforce, document AI for accounting — applied AI, not academic AI.", color: "red" as const },
+  { icon: <ShieldIcon />, t: "AI-Specific Vetting", s: "Every AI engineer passes a 4-stage process: ML fundamentals assessment, framework-specific coding challenge (LangChain/TensorFlow/PyTorch), system design interview, and portfolio review of deployed AI projects. Only 6% of applicants qualify.", color: "ai" as const },
+  { icon: <UsersIcon />, t: "100% Dedicated to You", s: "No shared resources, no split attention. Your AI engineer works exclusively on your projects, building models, training pipelines, and deploying agents for your business alone.", color: "green" as const },
+  { icon: <ClockIcon />, t: "Onboarded in 1–2 Weeks", s: "From requirement to productive AI engineer in 5–10 business days. You interview, approve, and we handle everything else. Your engineer starts building from Day 1, not ramping up for a month.", color: "purple" as const },
+  { icon: <CpuIcon />, t: "ERP + AI Integration Expertise", s: "Our AI engineers don't just build models in isolation, they integrate AI directly into ERP workflows. Predictive analytics in Odoo, AI agents for Salesforce, document AI for accounting, applied AI, not academic AI.", color: "red" as const },
 ] as const;
 
 /* ── Roles available ── */
 const ROLES = [
-  { num: "01", icon: <SparklesIcon />, t: "LangChain & AI Agent Developers", s: "Build autonomous AI agents using LangChain, LlamaIndex, and CrewAI. Multi-step reasoning, tool use, memory management, and ERP integration. These engineers build agents that execute real business tasks — not chatbot demos." },
-  { num: "02", icon: <CpuIcon />, t: "ML & Deep Learning Engineers", s: "TensorFlow, PyTorch, and Scikit-learn specialists who build predictive models — demand forecasting, anomaly detection, lead scoring, and recommendation engines. From data preparation through model training to production deployment." },
+  { num: "01", icon: <SparklesIcon />, t: "LangChain & AI Agent Developers", s: "Build autonomous AI agents using LangChain, LlamaIndex, and CrewAI. Multi-step reasoning, tool use, memory management, and ERP integration. These engineers build agents that execute real business tasks, not chatbot demos." },
+  { num: "02", icon: <CpuIcon />, t: "ML & Deep Learning Engineers", s: "TensorFlow, PyTorch, and Scikit-learn specialists who build predictive models, demand forecasting, anomaly detection, lead scoring, and recommendation engines. From data preparation through model training to production deployment." },
   { num: "03", icon: <CodeIcon />, t: "NLP & LLM Specialists", s: "GPT-4, Claude, Gemini, and open-source LLM fine-tuning. RAG pipeline development, semantic search, text classification, entity extraction, and conversational AI. Experts in prompt engineering, embedding strategies, and context window optimisation." },
   { num: "04", icon: <EyeIcon />, t: "Computer Vision Engineers", s: "OpenCV, YOLO, and TensorRT specialists for visual inspection, document OCR, defect detection, and object recognition. From model training with custom datasets to edge deployment on production hardware." },
-  { num: "05", icon: <DatabaseIcon />, t: "Data Engineers (AI Pipeline)", s: "Spark, Airflow, and dbt experts who build the data infrastructure that feeds your AI models. ETL pipelines, feature stores, data lakes, and real-time streaming — the plumbing that makes AI work at scale." },
-  { num: "06", icon: <CloudIcon />, t: "MLOps & AI Infrastructure", s: "MLflow, Weights & Biases, Docker, and Kubernetes specialists who productionise AI models. CI/CD for ML, model versioning, A/B testing, monitoring, and auto-scaling. They ensure your AI runs reliably in production — not just in notebooks." },
+  { num: "05", icon: <DatabaseIcon />, t: "Data Engineers (AI Pipeline)", s: "Spark, Airflow, and dbt experts who build the data infrastructure that feeds your AI models. ETL pipelines, feature stores, data lakes, and real-time streaming, the plumbing that makes AI work at scale." },
+  { num: "06", icon: <CloudIcon />, t: "MLOps & AI Infrastructure", s: "MLflow, Weights & Biases, Docker, and Kubernetes specialists who productionise AI models. CI/CD for ML, model versioning, A/B testing, monitoring, and auto-scaling. They ensure your AI runs reliably in production, not just in notebooks." },
 ] as const;
 
 /* ── Process flow ── */
@@ -95,12 +95,12 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "How do you vet AI engineers differently from regular developers?", a: "AI engineers go through a specialised 4-stage vetting: (1) ML fundamentals — statistics, linear algebra, and algorithm theory. (2) Framework-specific coding — build a working model or agent in LangChain/TensorFlow/PyTorch within a timed session. (3) System design — architect an end-to-end ML pipeline for a real business problem. (4) Portfolio review — we evaluate deployed AI projects, not just Kaggle notebooks. Only 6% pass all four stages." },
-  { q: "Can your AI engineers integrate with our existing ERP?", a: "Yes — that's our differentiator. Our AI engineers have direct experience integrating AI into ERP systems — predictive analytics in Odoo dashboards, AI agents that execute Salesforce workflows, document processing that auto-posts to accounting modules. They build applied AI that plugs into your business operations, not standalone models." },
-  { q: "What's the difference between an ML engineer and an AI agent developer?", a: "ML engineers build predictive models — demand forecasting, anomaly detection, classification. AI agent developers build autonomous systems using LangChain, LlamaIndex, or CrewAI — agents that reason, use tools, maintain memory, and execute multi-step business tasks. Different skill sets for different problems. We help you choose the right role." },
-  { q: "Can I hire for a short-term AI project (2–3 months)?", a: "Yes. While our model is month-to-month, many clients hire for specific AI initiatives — building a recommendation engine, deploying a document AI pipeline, or creating an AI agent for customer support. The engineer is 100% dedicated for the duration and can be released with 2 weeks' notice when the project completes." },
+  { q: "How do you vet AI engineers differently from regular developers?", a: "AI engineers go through a specialised 4-stage vetting: (1) ML fundamentals, statistics, linear algebra, and algorithm theory. (2) Framework-specific coding, build a working model or agent in LangChain/TensorFlow/PyTorch within a timed session. (3) System design, architect an end-to-end ML pipeline for a real business problem. (4) Portfolio review, we evaluate deployed AI projects, not just Kaggle notebooks. Only 6% pass all four stages." },
+  { q: "Can your AI engineers integrate with our existing ERP?", a: "Yes, that's our differentiator. Our AI engineers have direct experience integrating AI into ERP systems, predictive analytics in Odoo dashboards, AI agents that execute Salesforce workflows, document processing that auto-posts to accounting modules. They build applied AI that plugs into your business operations, not standalone models." },
+  { q: "What's the difference between an ML engineer and an AI agent developer?", a: "ML engineers build predictive models, demand forecasting, anomaly detection, classification. AI agent developers build autonomous systems using LangChain, LlamaIndex, or CrewAI, agents that reason, use tools, maintain memory, and execute multi-step business tasks. Different skill sets for different problems. We help you choose the right role." },
+  { q: "Can I hire for a short-term AI project (2–3 months)?", a: "Yes. While our model is month-to-month, many clients hire for specific AI initiatives, building a recommendation engine, deploying a document AI pipeline, or creating an AI agent for customer support. The engineer is 100% dedicated for the duration and can be released with 2 weeks' notice when the project completes." },
   { q: "What if I need an AI engineer with a very niche specialisation?", a: "Tell us the exact stack, domain, and experience level. If the skill exists on our bench, we send profiles in 48 hours. If it requires a targeted search, we extend to 1–2 weeks. Niche roles we've filled recently: reinforcement learning for supply chain, medical imaging with DICOM, and Arabic NLP for GCC clients." },
-  { q: "How does pricing compare to hiring in-house?", a: "Our AI engineers cost 40–60% less than equivalent in-house hires in the US/EU — including the cost of vetting, management overhead, and infrastructure. Month-to-month pricing means you pay only when you need capacity. No recruitment fees, no benefits overhead, no notice period costs when scaling down." },
+  { q: "How does pricing compare to hiring in-house?", a: "Our AI engineers cost 40–60% less than equivalent in-house hires in the US/EU, including the cost of vetting, management overhead, and infrastructure. Month-to-month pricing means you pay only when you need capacity. No recruitment fees, no benefits overhead, no notice period costs when scaling down." },
 ] as const;
 
 /* ── Component ── */
@@ -108,7 +108,7 @@ export function HireAiContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + AI talent pool right ═══ */}
+      {/* ═══ HERO: text left + AI talent pool right ═══ */}
       <section className="ha-hero">
         <div className="ha-hero-glow ha-hero-glow-1" aria-hidden="true" />
         <div className="ha-hero-glow ha-hero-glow-2" aria-hidden="true" />
@@ -124,7 +124,7 @@ export function HireAiContent() {
               <span className="acc">LangChain.<br />GPT. ML.<br />Deployed.</span>
             </h1>
             <p className="ha-hero-sub rev">
-              LangChain, OpenAI, TensorFlow, and Python AI specialists — pre-vetted, 100% dedicated, and onboarded in 1–2 weeks. <strong>Applied AI, not academic AI.</strong>
+              LangChain, OpenAI, TensorFlow, and Python AI specialists, pre-vetted, 100% dedicated, and onboarded in 1–2 weeks. <strong>Applied AI, not academic AI.</strong>
             </p>
             <div className="ha-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -181,7 +181,7 @@ export function HireAiContent() {
         </div>
       </section>
 
-      {/* ═══ WHY US — 4 cards ═══ */}
+      {/* ═══ WHY US: 4 cards ═══ */}
       <section className="ha-ops">
         <div className="ha-ops-inner">
           <div className="ha-ops-hdr rev">
@@ -200,7 +200,7 @@ export function HireAiContent() {
         </div>
       </section>
 
-      {/* ═══ ROLES — alternating rows ═══ */}
+      {/* ═══ ROLES: alternating rows ═══ */}
       <section className="ha-feat" id="roles">
         <div className="ha-feat-inner">
           <div className="ha-feat-hdr rev">
@@ -222,7 +222,7 @@ export function HireAiContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="ha-proc" id="process">
         <div className="ha-proc-inner">
           <div className="ha-proc-hdr rev">
@@ -257,7 +257,7 @@ export function HireAiContent() {
         </div>
       </section>
 
-      {/* ═══ ENGAGEMENT OPTIONS — split ═══ */}
+      {/* ═══ ENGAGEMENT OPTIONS: split ═══ */}
       <section className="ha-multi" id="options">
         <div className="ha-multi-inner">
           <div className="ha-multi-hdr rev">
@@ -268,7 +268,7 @@ export function HireAiContent() {
             <div className="ha-multi-left">
               <div className="ha-multi-big-n">30+</div>
               <div className="ha-multi-big-l">AI engineers on our vetted bench</div>
-              <p className="ha-multi-big-s">From a single LangChain specialist for an agent build to a 10-person AI squad with ML engineers, data engineers, and MLOps — your hiring scales with your AI ambitions, month to month.</p>
+              <p className="ha-multi-big-s">From a single LangChain specialist for an agent build to a 10-person AI squad with ML engineers, data engineers, and MLOps, your hiring scales with your AI ambitions, month to month.</p>
             </div>
             <div className="ha-multi-right">
               {OPTIONS.map((o) => (
@@ -328,11 +328,11 @@ export function HireAiContent() {
               <div className="oi-closer-insight">
                 <div className="oi-closer-insight-stat">6%<span></span></div>
                 <div className="oi-closer-insight-body">
-                  <strong>acceptance rate — only 6 out of 100 AI applicants make it to our bench.</strong>
+                  <strong>acceptance rate, only 6 out of 100 AI applicants make it to our bench.</strong>
                   That means every engineer you interview has passed ML fundamentals, framework coding challenges, system design, and deployed-project portfolio review. You hire from the top, not the hype.
                 </div>
               </div>
-              <p>Every AI hire comes with four guarantees — written into the agreement.</p>
+              <p>Every AI hire comes with four guarantees, written into the agreement.</p>
             </div>
           </div>
 
@@ -349,18 +349,18 @@ export function HireAiContent() {
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><CpuIcon /></div>
                 <div className="oi-closer-commit-t">ERP integration expertise included</div>
-                <p className="oi-closer-commit-b">Our AI engineers build models that plug into ERP workflows — not standalone notebooks. Odoo, Salesforce, and Zoho integration experience is verified during vetting.</p>
+                <p className="oi-closer-commit-b">Our AI engineers build models that plug into ERP workflows, not standalone notebooks. Odoo, Salesforce, and Zoho integration experience is verified during vetting.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><RefreshIcon /></div>
                 <div className="oi-closer-commit-t">Free replacement in the first 2 weeks</div>
-                <p className="oi-closer-commit-b">If an AI engineer isn&apos;t the right fit, we replace them at zero cost. No gap, no penalty — immediate bench replacement from our AI-specialist pool.</p>
+                <p className="oi-closer-commit-b">If an AI engineer isn&apos;t the right fit, we replace them at zero cost. No gap, no penalty, immediate bench replacement from our AI-specialist pool.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><TrendingUpIcon /></div>
-                <div className="oi-closer-commit-t">Month-to-month — no lock-ins ever</div>
+                <div className="oi-closer-commit-t">Month-to-month, no lock-ins ever</div>
                 <p className="oi-closer-commit-b">Add or release AI engineers with 2 weeks&apos; notice. No annual contracts, no minimum terms. Scale your AI capacity with your project pipeline.</p>
               </div>
             </div>
@@ -412,7 +412,7 @@ export function HireAiContent() {
               <div className="oi-supp-icon-v2"><BriefcaseIcon /></div>
               <div className="oi-supp-label">Careers</div>
               <a className="oi-supp-title-v2" href="tel:+918511593381">+91 85115 93381</a>
-              <p className="oi-supp-body-v2">AI/ML engineers — join our bench and work with global clients on production AI.</p>
+              <p className="oi-supp-body-v2">AI/ML engineers, join our bench and work with global clients on production AI.</p>
               <a className="oi-supp-cta-v2" href="tel:+918511593381">Apply now <ArrowRightIcon /></a>
             </div>
           </div>

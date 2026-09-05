@@ -5,16 +5,61 @@ import { useEffect, useState } from "react";
 
 const OXP_URL =
   "https://www.odoo.com/event/odoo-experience-2026-india-10174/page/oxp26-india-introduction";
+const WANDDY_WEBM = "https://wanddy.wanbuffer.com/buddies/wanddy.webm";
+const BAR_TEXT = "Meet us at Odoo Experience 2026 - Booth Number E1P76.";
+
+/** Single-node type reveal, avoids one DOM node + animation per letter. */
+function OxpBarTypewriter({ text }: { text: string }) {
+  const [cycle, setCycle] = useState(0);
+
+  useEffect(() => {
+    const id = window.setInterval(() => setCycle((n) => n + 1), 7200);
+    return () => window.clearInterval(id);
+  }, []);
+
+  return (
+    <span className="oxp-float-label" key={cycle} aria-hidden="true">
+      <span className="oxp-float-label-inner">{text}</span>
+    </span>
+  );
+}
 
 /**
- * Floating "upcoming event" bar, styled as a search-style pill pinned to the
- * bottom centre. Clicking it opens a short event modal. Rendered from the root
- * layout so every public page carries it; hidden on the admin panel.
+ * Bottom-centre announcement for Wan Buffer at Odoo Experience 2026.
+ * Frosted panel only. No chat, no form, no overlay.
  */
 export function HomeOxpFloat() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
+  /** Defer ~284KB webm until idle so it does not compete with LCP. */
+  const [loadBarVideo, setLoadBarVideo] = useState(false);
+  /** Full-body mascot only when the panel is wide enough to showcase it. */
+  const [showMascot, setShowMascot] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1025px)");
+    const sync = () => setShowMascot(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
+
+  useEffect(() => {
+    let idleId = 0;
+    let timeoutId = 0;
+    const enable = () => setLoadBarVideo(true);
+    if (typeof window.requestIdleCallback === "function") {
+      idleId = window.requestIdleCallback(enable, { timeout: 20000 });
+    } else {
+      timeoutId = window.setTimeout(enable, 12000);
+    }
+    return () => {
+      if (idleId && typeof window.cancelIdleCallback === "function") {
+        window.cancelIdleCallback(idleId);
+      }
+      if (timeoutId) window.clearTimeout(timeoutId);
+    };
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -25,25 +70,85 @@ export function HomeOxpFloat() {
     return () => document.removeEventListener("keydown", onKey);
   }, [open]);
 
-  // Marketing-only widget: the admin panel and its login screen are not
-  // public pages, so it has no place there.
   if (pathname?.startsWith("/admin")) return null;
-  if (dismissed) return null;
 
   return (
-    <>
-      <div id="oxp-float" className={open ? "is-open" : undefined}>
+    <div id="oxp-float">
+      {open ? (
+        <div className="oxp-widget" role="dialog" aria-labelledby="oxp-widget-title">
+          <button
+            type="button"
+            className="oxp-widget-min"
+            aria-label="Close announcement"
+            onClick={() => setOpen(false)}
+          >
+            ✕
+          </button>
+          <div className="oxp-widget-layout">
+            <div className="oxp-widget-main">
+              <h2 id="oxp-widget-title" className="oxp-widget-title">
+                Join us at Odoo Experience 2026 India
+              </h2>
+              <p className="oxp-widget-copy">
+                Wan Buffer is coming to Odoo Experience 2026 in Gandhinagar. Do drop by booth{" "}
+                <strong>E1 P76</strong>. We would love to sit down with you, talk Odoo, ERP and AI, and
+                see how we can help your team.
+              </p>
+              <p className="oxp-widget-meta">
+                Booth E1 P76
+                <br />
+                11-12 September 2026
+                <br />
+                Mahatma Mandir Convention Center, Gandhinagar
+              </p>
+              <div className="oxp-widget-actions">
+                <a className="oxp-widget-cta" href="/event/odoo-experience-2026-india">
+                  Event Details
+                </a>
+                <a className="oxp-widget-link" href={OXP_URL} target="_blank" rel="noopener noreferrer">
+                  Official OXP 2026 page
+                </a>
+              </div>
+            </div>
+            {showMascot ? (
+              <video
+                className="oxp-widget-photo"
+                src={WANDDY_WEBM}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-label="Wanddy, Wan Buffer Odoo ERP buddy"
+              />
+            ) : null}
+          </div>
+        </div>
+      ) : (
         <button
           type="button"
           className="oxp-float-bar"
           onClick={() => setOpen(true)}
           aria-haspopup="dialog"
-          aria-expanded={open}
-          aria-label="OXP 2026, Odoo Experience India — view event details"
+          aria-expanded={false}
+          aria-label={BAR_TEXT}
         >
-          <span className="oxp-float-label">
-            <strong>OXP 2026</strong> — Odoo Experience India
+          <span className="oxp-float-face-wrap" aria-hidden="true">
+            {loadBarVideo ? (
+              <video
+                className="oxp-float-face"
+                src={WANDDY_WEBM}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="none"
+              />
+            ) : (
+              <span className="oxp-float-face oxp-float-face--ph" />
+            )}
           </span>
+          <OxpBarTypewriter text={BAR_TEXT} />
           <span className="oxp-float-go" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="12" y1="19" x2="12" y2="5" />
@@ -51,55 +156,7 @@ export function HomeOxpFloat() {
             </svg>
           </span>
         </button>
-
-        <button
-          type="button"
-          className="oxp-float-close"
-          aria-label="Dismiss upcoming event banner"
-          onClick={() => setDismissed(true)}
-        >
-          ✕
-        </button>
-      </div>
-
-      {open && (
-        <div className="oxp-modal-overlay">
-          <div className="oxp-modal" role="dialog" aria-labelledby="oxp-modal-title">
-            <button type="button" className="oxp-modal-close" aria-label="Close" onClick={() => setOpen(false)}>
-              ✕
-            </button>
-
-            <span className="oxp-modal-badge">Upcoming event</span>
-            <h2 id="oxp-modal-title" className="oxp-modal-title">
-              OXP 2026 — Odoo Experience India
-            </h2>
-            <p className="oxp-modal-body">
-              Odoo Experience is Odoo&apos;s flagship gathering: product keynotes, hands-on functional and technical
-              sessions, and a partner floor where implementation teams and customers meet face to face. The India
-              edition brings that programme to the region.
-            </p>
-            <p className="oxp-modal-body">
-              We follow the sessions closely because they set the direction for the Odoo work we deliver — new modules,
-              deprecations, and AI capabilities land here first.
-            </p>
-
-            <div className="oxp-modal-meta">
-              <span>11–12 September 2026</span>
-              <span aria-hidden="true">•</span>
-              <span>Mahatma Mandir, Gandhinagar, Gujarat</span>
-            </div>
-
-            <div className="oxp-modal-actions">
-              <a className="oxp-modal-cta" href="/event/odoo-experience-2026-india">
-                Meet us at OXP 2026 <span aria-hidden="true">→</span>
-              </a>
-              <a className="oxp-modal-alt" href={OXP_URL} target="_blank" rel="noopener noreferrer">
-                Official OXP 2026 page
-              </a>
-            </div>
-          </div>
-        </div>
       )}
-    </>
+    </div>
   );
 }

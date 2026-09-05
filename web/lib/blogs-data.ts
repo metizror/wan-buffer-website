@@ -68,7 +68,7 @@ export const BLOG_POSTS: BlogPost[] = [
           heading: "Introduction",
           paragraphs: [
             "In the oil and gas supply business, everything begins with an RFQ.",
-            "It is the first interaction, the first commitment, and often the first impression a supplier makes. But behind every RFQ lies pressure — tight deadlines, multiple vendors, and high expectations.",
+            "It is the first interaction, the first commitment, and often the first impression a supplier makes. But behind every RFQ lies pressure, tight deadlines, multiple vendors, and high expectations.",
             "For many suppliers, managing RFQs is not just a task. It becomes a daily struggle.",
             "This is where RFQ Management for Oil and Gas Suppliers needs more than spreadsheets and emails. It needs structure, clarity, and a system that understands the urgency of every inquiry.",
           ],
@@ -218,7 +218,7 @@ export const BLOG_POSTS: BlogPost[] = [
         {
           heading: "Introduction",
           paragraphs: [
-            "For many oil and gas suppliers, ERP implementation begins with hope. The promise is simple—better control, improved visibility, and smoother operations.",
+            "For many oil and gas suppliers, ERP implementation begins with hope. The promise is simple: better control, improved visibility, and smoother operations.",
             "But over time, that promise often turns into frustration.",
             "Generic ERP for oil and gas suppliers rarely delivers what businesses truly need. Instead of simplifying operations, it introduces gaps, workarounds, and inefficiencies that teams must manage every day.",
             "This is not a technology failure. It is a mismatch between system design and real-world operations.",
@@ -255,7 +255,7 @@ export const BLOG_POSTS: BlogPost[] = [
         {
           heading: "The Cost of ERP Misalignment",
           paragraphs: [
-            "When ERP systems fail to align with operations, the impact is not always immediate—but it is always real.",
+            "When ERP systems fail to align with operations, the impact is not always immediate: but it is always real.",
             "Businesses experience:",
           ],
           bullets: [
@@ -361,7 +361,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "erp-systems-designed-for-fabric-manufacturers",
     title: "ERP Systems Designed for Fabric Manufacturers in India, Thailand and Vietnam",
-    excerpt: "Fabric manufacturing requires coordination across yarn procurement, dyeing, weaving, and finishing stages — a complexity that demands purpose-built ERP systems.",
+    excerpt: "Fabric manufacturing requires coordination across yarn procurement, dyeing, weaving, and finishing stages, a complexity that demands purpose-built ERP systems.",
     date: "March 16, 2026",
     sortDate: "2026-03-16",
     author: "Vaishali Rathod",
@@ -494,7 +494,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "dedicated-engineering-teams-vs-in-house-hiring",
     title: "Dedicated Engineering Teams vs In-House Hiring for ERP Projects",
-    excerpt: "Comparing staffing approaches for ERP implementations — highlighting challenges with internal hiring as project complexity increases and timelines tighten.",
+    excerpt: "Comparing staffing approaches for ERP implementations, highlighting challenges with internal hiring as project complexity increases and timelines tighten.",
     date: "March 3, 2026",
     sortDate: "2026-03-03",
     author: "Saloni Darji",
@@ -510,7 +510,7 @@ export const BLOG_POSTS: BlogPost[] = [
           paragraphs: [
             "ERP projects are complex, high-impact initiatives that require the right mix of technical expertise, functional understanding, and delivery discipline.",
             "For many companies and ERP partners, the first instinct is to build an in-house team. But as projects grow in scale and complexity, hiring internally can become slow, expensive, and difficult to manage.",
-            "That’s why many organizations are turning to dedicated engineering teams — a flexible model that expands delivery capacity without the long-term risk of traditional hiring.",
+            "That’s why many organizations are turning to dedicated engineering teams, a flexible model that expands delivery capacity without the long-term risk of traditional hiring.",
           ],
         },
         {
@@ -604,7 +604,7 @@ export const BLOG_POSTS: BlogPost[] = [
           heading: "Conclusion",
           paragraphs: [
             "Choosing between in-house hiring and dedicated engineering teams depends on project scale, timelines, and internal capabilities.",
-            "While internal teams offer long-term control, dedicated engineering teams provide flexibility, speed, and access to specialized expertise — making them an effective solution for complex ERP projects.",
+            "While internal teams offer long-term control, dedicated engineering teams provide flexibility, speed, and access to specialized expertise, making them an effective solution for complex ERP projects.",
             "Organizations that combine strategic internal leadership with scalable engineering support often achieve the best outcomes.",
           ],
         },
@@ -619,7 +619,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "why-fabric-manufacturers-are-rebuilding-erp",
     title: "Why Fabric Manufacturers Are Rebuilding ERP Before Peak Season",
-    excerpt: "Seasonal manufacturing environments require proactive ERP optimisation before demand spikes — why the smartest factories rebuild their systems ahead of peak.",
+    excerpt: "Seasonal manufacturing environments require proactive ERP optimisation before demand spikes, why the smartest factories rebuild their systems ahead of peak.",
     date: "February 16, 2026",
     sortDate: "2026-02-16",
     author: "Mit Mathukiya",
@@ -643,7 +643,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "how-odoo-becomes-a-real-3pl-erp",
     title: "How Odoo Becomes a Real 3PL ERP When It's Engineered Correctly",
-    excerpt: "Logistics doesn't run on modules, it runs on engines. Learn why default Odoo fails in production for 3PL operations — and how engineering it correctly changes everything.",
+    excerpt: "Logistics doesn't run on modules, it runs on engines. Learn why default Odoo fails in production for 3PL operations, and how engineering it correctly changes everything.",
     date: "January 20, 2026",
     sortDate: "2026-01-20",
     author: "Kush Parmar",
@@ -667,7 +667,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "the-q1-erp-execution-playbook",
     title: "The Q1 ERP Execution Playbook: How Enterprises Go Live Faster and See ROI by Q2",
-    excerpt: "When enterprises delay ERP execution to Q2, they don't just delay go-live — they lose half the value. A practical playbook for faster ERP launches.",
+    excerpt: "When enterprises delay ERP execution to Q2, they don't just delay go-live, they lose half the value. A practical playbook for faster ERP launches.",
     date: "January 2, 2026",
     sortDate: "2026-01-02",
     author: "Mit Mathukiya",
@@ -678,8 +678,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "why-q1-is-the-best-time-for-erp-transformation",
-    title: "Why Q1 Is the Best Time for ERP Transformation — And Why You Must Prepare Now",
-    excerpt: "Q1 is when organisations establish their operational roadmap. Early modernisation drives competitive advantage — here's why waiting costs more than starting.",
+    title: "Why Q1 Is the Best Time for ERP Transformation. And Why You Must Prepare Now",
+    excerpt: "Q1 is when organisations establish their operational roadmap. Early modernisation drives competitive advantage, here's why waiting costs more than starting.",
     date: "December 26, 2025",
     sortDate: "2025-12-26",
     author: "Vaishali Rathod",
@@ -691,7 +691,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "how-wan-buffer-engineers-enterprise-grade-erp",
     title: "How Wan Buffer Engineers Enterprise-Grade ERP: A Deep Dive Into Large-Scale Odoo Transformations",
-    excerpt: "ERP modernisation becomes more than an IT project — it becomes a strategic shift. A deep dive into how Wan Buffer approaches enterprise-grade Odoo deployments.",
+    excerpt: "ERP modernisation becomes more than an IT project, it becomes a strategic shift. A deep dive into how Wan Buffer approaches enterprise-grade Odoo deployments.",
     date: "December 20, 2025",
     sortDate: "2025-12-20",
     author: "Nirav Rathod",
@@ -718,7 +718,7 @@ export const BLOG_POSTS: BlogPost[] = [
           heading: "Introduction",
           paragraphs: [
             "U.S. businesses rely heavily on multiple systems to run e-commerce, logistics, and finance. When these systems are disconnected, the result is data duplication, delayed decisions, and operational chaos.",
-            "Odoo solves this through integrations — connecting platforms like Shopify, Amazon, and QuickBooks into one ecosystem. In 2025, these integrations are essential for productivity, compliance, and growth.",
+            "Odoo solves this through integrations, connecting platforms like Shopify, Amazon, and QuickBooks into one ecosystem. In 2025, these integrations are essential for productivity, compliance, and growth.",
           ],
         },
         {
@@ -767,11 +767,11 @@ export const BLOG_POSTS: BlogPost[] = [
           heading: "Additional Must-Have Integrations",
           paragraphs: ["Beyond the three core platforms, U.S. operators typically also need:"],
           bullets: [
-            "UPS, FedEx, USPS — shipping and tracking automation",
-            "Stripe, PayPal, Authorize.net — payment processing",
-            "Walmart, eBay, WooCommerce — marketplace expansion",
-            "3PL — outsourced warehouse fulfillment",
-            "EDI — big-box retailer compliance",
+            "UPS, FedEx, USPS, shipping and tracking automation",
+            "Stripe, PayPal, Authorize.net, payment processing",
+            "Walmart, eBay, WooCommerce, marketplace expansion",
+            "3PL, outsourced warehouse fulfillment",
+            "EDI, big-box retailer compliance",
           ],
         },
         {
@@ -813,7 +813,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "why-custom-odoo-modules-fail",
     title: "Why Custom Odoo Modules Fail: Lessons Every Company Should Know",
-    excerpt: "Customisation is one of Odoo's biggest strengths — but it's also where most implementations go wrong. Key lessons every company should learn before building custom modules.",
+    excerpt: "Customisation is one of Odoo's biggest strengths, but it's also where most implementations go wrong. Key lessons every company should learn before building custom modules.",
     date: "December 11, 2025",
     sortDate: "2025-12-11",
     author: "Mit Mathukiya",
@@ -825,7 +825,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "how-odoo-fixes-inventory-warehouse-challenges-us",
     title: "How Odoo Fixes Inventory & Warehouse Challenges for U.S. Businesses",
-    excerpt: "Inventory and warehouse management play a critical role in U.S. business success — especially for manufacturers, retailers, distributors, and eCommerce brands.",
+    excerpt: "Inventory and warehouse management play a critical role in U.S. business success, especially for manufacturers, retailers, distributors, and eCommerce brands.",
     date: "December 9, 2025",
     sortDate: "2025-12-09",
     author: "Nirav Rathod",
@@ -849,7 +849,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "odoo-19-new-features-explained",
     title: "Odoo 19 New Features Explained: What Businesses Should Expect in 2025",
-    excerpt: "Odoo 19 introduces powerful innovations focused on automation, intelligence, and industry readiness — shaping business efficiency for 2025 and beyond.",
+    excerpt: "Odoo 19 introduces powerful innovations focused on automation, intelligence, and industry readiness, shaping business efficiency for 2025 and beyond.",
     date: "December 2, 2025",
     sortDate: "2025-12-02",
     author: "Vaishali Rathod",
@@ -861,7 +861,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "smes-in-france-odoo-erp",
     title: "SMEs in France: How Odoo ERP Helps Navigate Complex Operations",
-    excerpt: "In France's dynamic business ecosystem, small and medium-sized enterprises are the backbone of innovation, job creation, and economic growth — and Odoo helps them scale.",
+    excerpt: "In France's dynamic business ecosystem, small and medium-sized enterprises are the backbone of innovation, job creation, and economic growth, and Odoo helps them scale.",
     date: "November 27, 2025",
     sortDate: "2025-11-27",
     author: "Nirav Rathod",
@@ -885,7 +885,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "step-by-step-setting-up-crm-pipelines-in-odoo-19",
     title: "Step-by-Step: Setting Up CRM Pipelines in Odoo 19",
-    excerpt: "Managing leads, follow-ups, and opportunities across multiple platforms can quickly become chaotic — unless you have a unified system like Odoo 19.",
+    excerpt: "Managing leads, follow-ups, and opportunities across multiple platforms can quickly become chaotic, unless you have a unified system like Odoo 19.",
     date: "November 20, 2025",
     sortDate: "2025-11-20",
     author: "Mit Mathukiya",

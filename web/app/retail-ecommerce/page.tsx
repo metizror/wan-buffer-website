@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { RetailEcommerceContent } from "@/components/services/retail-ecommerce-content";
 
 export const metadata: Metadata = {
-  title: "Retail & eCommerce ERP | Omnichannel Management & AI Demand Forecasting — Wan Buffer",
+  title: "Retail & eCommerce ERP | Omnichannel Management & AI Demand Forecasting | Wan Buffer",
   description:
     "End-to-end retail and eCommerce ERP with omnichannel order management, AI demand forecasting, unified inventory across online and offline channels, dynamic pricing, and intelligent customer segmentation. For D2C brands, multi-store retailers, and marketplace sellers.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Retail & eCommerce ERP — Omnichannel Management & AI Demand Forecasting | Wan Buffer",
+    title: "Retail & eCommerce ERP: Omnichannel Management & AI Demand Forecasting | Wan Buffer",
     description:
-      "Omnichannel ERP with AI demand forecasting, unified inventory, dynamic pricing, and intelligent customer segmentation — for D2C brands, multi-store retailers, and marketplace sellers.",
+      "Omnichannel ERP with AI demand forecasting, unified inventory, dynamic pricing, and intelligent customer segmentation, for D2C brands, multi-store retailers, and marketplace sellers.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/retail-ecommerce" },

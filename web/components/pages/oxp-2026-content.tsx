@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   ODOO EXPERIENCE 2026 INDIA — campaign landing page
+   ODOO EXPERIENCE 2026 INDIA, campaign landing page
    Hero + countdown · Intro · Highlights · Why attend · Our presence ·
    What you'll experience · Solutions · Integrations · Industries · Demos ·
    Challenges · Why us · Experts · Agenda · Details · Location · FAQ · CTA
@@ -162,7 +162,7 @@ const CHALLENGES = [
 ] as const;
 
 const WHY_US = [
-  { icon: <TargetIcon />, t: "Functional Expertise", b: "We understand business processes — not just software." },
+  { icon: <TargetIcon />, t: "Functional Expertise", b: "We understand business processes, not just software." },
   { icon: <CodeIcon />, t: "Technical Expertise", b: "Build, customize, integrate, and extend Odoo around your requirements." },
   { icon: <CpuIcon />, t: "AI-Ready Solutions", b: "Explore the next generation of intelligent business automation." },
   { icon: <TrophyIcon />, t: "Industry Experience", b: "Solutions designed around real-world business challenges." },
@@ -208,7 +208,7 @@ const AGENDA = [
 const EVENT_DETAILS = [
   { l: "Date", v: "11–12 September 2026" },
   { l: "Venue", v: "Mahatma Mandir Convention Centre, Gandhinagar, Gujarat, India" },
-  { l: "Entry", v: "Basic Pass — Free" },
+  { l: "Entry", v: "Basic Pass: Free" },
   { l: "Event highlight", v: "Odoo 20 live launch" },
   { l: "Meet", v: "Odoo partners • Experts • Developers • Business leaders • Entrepreneurs" },
 ] as const;
@@ -443,7 +443,7 @@ export function Oxp2026Content() {
               Step into our <span className="acc">Odoo experience</span>
             </h2>
             <p className="sec-p">
-              Not just a booth visit — here is what you actually walk away with after spending time at
+              Not just a booth visit, here is what you actually walk away with after spending time at
               our stand.
             </p>
           </div>

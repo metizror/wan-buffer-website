@@ -11,7 +11,7 @@ import { AiSupportBotContent } from "@/components/services/ai-support-bot-conten
 export const metadata: Metadata = {
   title: "AI Customer Support Bot | Returns, FAQs & Order Tracking | Wan Buffer",
   description:
-    "AI-powered customer support chatbot for eCommerce — automated returns processing, order tracking, FAQ resolution, and live agent handoff. Reduce support tickets by 70% while improving customer satisfaction.",
+    "AI-powered customer support chatbot for eCommerce, automated returns processing, order tracking, FAQ resolution, and live agent handoff. Reduce support tickets by 70% while improving customer satisfaction.",
   keywords: [
     "AI customer support bot",
     "eCommerce chatbot",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "AI Customer Support Bot — Returns, FAQs & Order Tracking | Wan Buffer",
+    title: "AI Customer Support Bot: Returns, FAQs & Order Tracking | Wan Buffer",
     description:
-      "AI-powered support bot — order tracking, returns, FAQs, and live agent handoff. Reduce tickets by 70% while improving CSAT.",
+      "AI-powered support bot, order tracking, returns, FAQs, and live agent handoff. Reduce tickets by 70% while improving CSAT.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/ai-customer-support-bot" },

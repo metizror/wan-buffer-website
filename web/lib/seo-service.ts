@@ -57,7 +57,7 @@ const POLICY_SLUGS = new Set([
 
 const STATIC_SKIP = new Set(["admin", "api", "contact"]);
 
-/** Paths that 301/308 elsewhere — never list these in the public sitemap. */
+/** Paths that 301/308 elsewhere, never list these in the public sitemap. */
 const REDIRECT_SLUGS = new Set([
   "/contact",
   "/events",
@@ -147,7 +147,7 @@ function getStaticSourceEntries(): SourceEntry[] {
       }
     }
   } catch {
-    // Filesystem not available — fall back to just the home route.
+    // Filesystem not available, fall back to just the home route.
   }
 
   entries.push(...NESTED_STATIC_ENTRIES);

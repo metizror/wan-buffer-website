@@ -97,7 +97,7 @@ export function CaseStudyContent({ studies }: CaseStudyContentProps) {
               Build something <span>similar?</span>
             </h2>
             <p>
-              Discuss your Odoo, ERP, or custom software project with our team — {caseStudyCount} published case
+              Discuss your Odoo, ERP, or custom software project with our team, {caseStudyCount} published case
               studies and counting.
             </p>
           </div>

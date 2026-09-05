@@ -12,7 +12,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377608/wonder-cement_hymenz.webp"
-                  alt="Wonder Cement — Odoo ERP implementation client"
+                  alt="Wonder Cement: Odoo ERP implementation client"
                   loading="lazy"
                 />
               </div>
@@ -21,7 +21,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377575/emirates_npvct2.webp"
-                  alt="Emirates — AI-powered ERP automation client"
+                  alt="Emirates: AI-powered ERP automation client"
                   loading="lazy"
                 />
               </div>
@@ -30,7 +30,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377575/ficci_nqgcsc.webp"
-                  alt="FICCI — ERP automation services client"
+                  alt="FICCI: ERP automation services client"
                   loading="lazy"
                 />
               </div>
@@ -39,7 +39,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377576/gujarat-tourism_njjjkh.webp"
-                  alt="Gujarat Tourism — Odoo implementation client India"
+                  alt="Gujarat Tourism: Odoo implementation client India"
                   loading="lazy"
                 />
               </div>
@@ -48,7 +48,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377575/acc_ichedk.webp"
-                  alt="Arabian Construction Company ACC — Odoo ERP UAE client"
+                  alt="Arabian Construction Company ACC: Odoo ERP UAE client"
                   loading="lazy"
                 />
               </div>
@@ -57,7 +57,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377577/kuwait-airways_izbgnd.webp"
-                  alt="Kuwait Airways — Odoo AI integration client Kuwait"
+                  alt="Kuwait Airways: Odoo AI integration client Kuwait"
                   loading="lazy"
                 />
               </div>
@@ -66,7 +66,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377576/doosan_weq7cz.webp"
-                  alt="Doosan — manufacturing ERP AI automation client"
+                  alt="Doosan, manufacturing ERP AI automation client"
                   loading="lazy"
                 />
               </div>
@@ -75,7 +75,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377577/ministry-of-public-work_gwvfjr.webp"
-                  alt="Ministry of Public Works — Odoo ERP implementation client"
+                  alt="Ministry of Public Works: Odoo ERP implementation client"
                   loading="lazy"
                 />
               </div>
@@ -84,7 +84,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377576/crdf_hbwvl5.webp"
-                  alt="CRDF — ERP automation services client"
+                  alt="CRDF: ERP automation services client"
                   loading="lazy"
                 />
               </div>
@@ -93,7 +93,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://leemboodi.com/cdn/shop/files/000_logo.png?height=628&pad_color=fffef7&v=1678164525&width=1200"
-                  alt="Leemboodi — Odoo e-commerce ERP integration client"
+                  alt="Leemboodi: Odoo e-commerce ERP integration client"
                   loading="lazy"
                 />
               </div>
@@ -102,18 +102,18 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://www.rcg.ae/wp-content/uploads/2020/01/RCG-Logo-New-File_1-1-1.gif"
-                  alt="RCG Real Estate — Odoo AI CRM implementation UAE"
+                  alt="RCG Real Estate: Odoo AI CRM implementation UAE"
                   loading="lazy"
                 />
               </div>
             </div>
 
-            {/* Set 2 — duplicate for seamless infinite loop */}
+            {/* Set 2: duplicate for seamless infinite loop */}
             <div className="logo-box">
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377608/wonder-cement_hymenz.webp"
-                  alt="Wonder Cement — Odoo ERP implementation client"
+                  alt="Wonder Cement: Odoo ERP implementation client"
                   loading="lazy"
                 />
               </div>
@@ -122,7 +122,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377575/emirates_npvct2.webp"
-                  alt="Emirates — AI-powered ERP automation client"
+                  alt="Emirates: AI-powered ERP automation client"
                   loading="lazy"
                 />
               </div>
@@ -131,7 +131,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377575/ficci_nqgcsc.webp"
-                  alt="FICCI — ERP automation services client"
+                  alt="FICCI: ERP automation services client"
                   loading="lazy"
                 />
               </div>
@@ -140,7 +140,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377576/gujarat-tourism_njjjkh.webp"
-                  alt="Gujarat Tourism — Odoo implementation client India"
+                  alt="Gujarat Tourism: Odoo implementation client India"
                   loading="lazy"
                 />
               </div>
@@ -149,7 +149,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377575/acc_ichedk.webp"
-                  alt="Arabian Construction Company ACC — Odoo ERP UAE client"
+                  alt="Arabian Construction Company ACC: Odoo ERP UAE client"
                   loading="lazy"
                 />
               </div>
@@ -158,7 +158,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377577/kuwait-airways_izbgnd.webp"
-                  alt="Kuwait Airways — Odoo AI integration client Kuwait"
+                  alt="Kuwait Airways: Odoo AI integration client Kuwait"
                   loading="lazy"
                 />
               </div>
@@ -167,7 +167,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377576/doosan_weq7cz.webp"
-                  alt="Doosan — manufacturing ERP AI automation client"
+                  alt="Doosan, manufacturing ERP AI automation client"
                   loading="lazy"
                 />
               </div>
@@ -176,7 +176,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377577/ministry-of-public-work_gwvfjr.webp"
-                  alt="Ministry of Public Works — Odoo ERP implementation client"
+                  alt="Ministry of Public Works: Odoo ERP implementation client"
                   loading="lazy"
                 />
               </div>
@@ -185,7 +185,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://res.cloudinary.com/dghplu26l/image/upload/v1719377576/crdf_hbwvl5.webp"
-                  alt="CRDF — ERP automation services client"
+                  alt="CRDF: ERP automation services client"
                   loading="lazy"
                 />
               </div>
@@ -194,7 +194,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://leemboodi.com/cdn/shop/files/000_logo.png?height=628&pad_color=fffef7&v=1678164525&width=1200"
-                  alt="Leemboodi — Odoo e-commerce ERP integration client"
+                  alt="Leemboodi: Odoo e-commerce ERP integration client"
                   loading="lazy"
                 />
               </div>
@@ -203,7 +203,7 @@ export function HomeLogoBar() {
               <div className="lb-inner">
                 <img
                   src="https://www.rcg.ae/wp-content/uploads/2020/01/RCG-Logo-New-File_1-1-1.gif"
-                  alt="RCG Real Estate — Odoo AI CRM implementation UAE"
+                  alt="RCG Real Estate: Odoo AI CRM implementation UAE"
                   loading="lazy"
                 />
               </div>

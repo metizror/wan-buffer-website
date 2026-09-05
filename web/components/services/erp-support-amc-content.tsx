@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   ERP SUPPORT & AMC — unique page design
+   ERP SUPPORT & AMC, unique page design
    Centered hero + SLA panel · Plan comparison cards · Service pills ·
    SLA gauge metrics · 3-step process · Platforms · FAQ ·
    Closer · Support
@@ -125,10 +125,10 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "What does an ERP AMC typically include?", a: "Bug fixes, security patches, configuration changes, user management, performance monitoring, quarterly health checks, version upgrades, and emergency support — depending on your plan tier." },
+  { q: "What does an ERP AMC typically include?", a: "Bug fixes, security patches, configuration changes, user management, performance monitoring, quarterly health checks, version upgrades, and emergency support, depending on your plan tier." },
   { q: "What are the SLA response times?", a: "Essential: < 8 hours. Professional: < 4 hours. Enterprise: < 1 hour. Critical production-down issues get immediate response on Professional and Enterprise plans." },
   { q: "Can you support ERP systems you didn't implement?", a: "Yes. We conduct a thorough audit of your existing setup, document the configuration, and onboard it to our support system. A discovery period of 2–4 weeks ensures we understand your environment before SLAs kick in." },
-  { q: "Do you handle version upgrades?", a: "Yes. Professional and Enterprise plans include annual version upgrades — full migration, testing, data validation, and rollback planning. We handle the entire upgrade lifecycle." },
+  { q: "Do you handle version upgrades?", a: "Yes. Professional and Enterprise plans include annual version upgrades, full migration, testing, data validation, and rollback planning. We handle the entire upgrade lifecycle." },
   { q: "Is there a minimum contract period?", a: "AMC contracts run annually with the option to start with a 6-month trial. Month-to-month support is available at a premium for businesses that need flexibility." },
   { q: "How do you handle emergency issues?", a: "Enterprise plan includes 24/7 phone hotline with < 1 hour response. Professional plan has extended-hours phone support. All plans include email-based emergency escalation with SLA guarantees." },
 ] as const;
@@ -138,7 +138,7 @@ export function ErpSupportAmcContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered + SLA panel ═══ */}
+      {/* ═══ HERO: centered + SLA panel ═══ */}
       <section className="sa-hero">
         <div className="sa-hero-glow sa-hero-glow-1" aria-hidden="true" />
         <div className="sa-hero-glow sa-hero-glow-2" aria-hidden="true" />
@@ -152,7 +152,7 @@ export function ErpSupportAmcContent() {
             <span className="acc">&amp; AMC.</span>
           </h1>
           <p className="sa-hero-sub rev">
-            SLA-based ERP support — bug fixes, configuration changes, version upgrades, performance monitoring, and 24/7 emergency response. <strong>Your ERP, always running.</strong>
+            SLA-based ERP support, bug fixes, configuration changes, version upgrades, performance monitoring, and 24/7 emergency response. <strong>Your ERP, always running.</strong>
           </p>
           <div className="sa-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -206,7 +206,7 @@ export function ErpSupportAmcContent() {
         </div>
       </section>
 
-      {/* ═══ WHAT'S INCLUDED — service pills ═══ */}
+      {/* ═══ WHAT'S INCLUDED: service pills ═══ */}
       <section className="sa-services">
         <div className="sa-services-inner rev">
           <div className="sa-services-label">What&apos;s included in every plan</div>
@@ -218,7 +218,7 @@ export function ErpSupportAmcContent() {
         </div>
       </section>
 
-      {/* ═══ SLA METRICS — gauge cards ═══ */}
+      {/* ═══ SLA METRICS: gauge cards ═══ */}
       <section className="sa-metrics" id="sla">
         <div className="sa-metrics-inner">
           <div className="sa-metrics-hdr rev">
@@ -245,7 +245,7 @@ export function ErpSupportAmcContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — 3 steps ═══ */}
+      {/* ═══ PROCESS: 3 steps ═══ */}
       <section className="sa-proc" id="process">
         <div className="sa-proc-inner">
           <div className="sa-proc-hdr rev">
@@ -326,7 +326,7 @@ export function ErpSupportAmcContent() {
                 <div className="oi-closer-insight-stat">40%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of ERP downtime is caused by preventable issues.</strong>
-                  Source: Panorama Consulting, 2024. The problem is support that waits for tickets instead of monitoring proactively — catching performance degradation, security gaps, and configuration drift before they cause outages.
+                  Source: Panorama Consulting, 2024. The problem is support that waits for tickets instead of monitoring proactively, catching performance degradation, security gaps, and configuration drift before they cause outages.
                 </div>
               </div>
               <p>That&apos;s why every Wan Buffer AMC includes proactive monitoring, not just reactive ticket resolution. Four commitments, written into the contract.</p>
@@ -340,25 +340,25 @@ export function ErpSupportAmcContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><MonitorIcon /></div>
                 <div className="oi-closer-commit-t">Proactive monitoring</div>
-                <p className="oi-closer-commit-b">We don&apos;t wait for tickets. Health checks, performance monitoring, and security scans run on schedule — catching issues before your team notices them.</p>
+                <p className="oi-closer-commit-b">We don&apos;t wait for tickets. Health checks, performance monitoring, and security scans run on schedule, catching issues before your team notices them.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><ClockIcon /></div>
                 <div className="oi-closer-commit-t">SLA-guaranteed response</div>
-                <p className="oi-closer-commit-b">Response times are contractual — not aspirational. Enterprise: &lt; 1 hour. Professional: &lt; 4 hours. Essential: &lt; 8 hours. Penalties apply if we miss.</p>
+                <p className="oi-closer-commit-b">Response times are contractual, not aspirational. Enterprise: &lt; 1 hour. Professional: &lt; 4 hours. Essential: &lt; 8 hours. Penalties apply if we miss.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><BarChartIcon /></div>
                 <div className="oi-closer-commit-t">Monthly reporting</div>
-                <p className="oi-closer-commit-b">Tickets resolved, response times, system health, and recommendations — delivered monthly. Full transparency into what we did and what&apos;s coming next.</p>
+                <p className="oi-closer-commit-b">Tickets resolved, response times, system health, and recommendations, delivered monthly. Full transparency into what we did and what&apos;s coming next.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer assigned to your account knows your system inside out — named in the contract, consistent across every interaction.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer assigned to your account knows your system inside out, named in the contract, consistent across every interaction.</p>
               </div>
             </div>
           </div>

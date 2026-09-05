@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   eCOMMERCE SEO & CRO — unique page design
+   eCOMMERCE SEO & CRO, unique page design
    Centered hero + dual score card · SEO vs CRO split · Audit
    checklist · Results · Tools · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -47,18 +47,18 @@ const SCORES = [
 
 /* ── SEO services ── */
 const SEO_SERVICES = [
-  { icon: <CodeIcon />, t: "Technical SEO", s: "Crawlability, indexation, site architecture, XML sitemaps, robots.txt, canonical tags, hreflang, and Core Web Vitals — the foundation search engines need." },
-  { icon: <SearchIcon />, t: "Product Page SEO", s: "Title tags, meta descriptions, H1 optimisation, image alt text, structured data, and internal linking — per product, per category, at scale." },
-  { icon: <DatabaseIcon />, t: "Schema Markup", s: "Product, BreadcrumbList, FAQPage, Review, and Organisation schema — giving Google rich snippets that increase click-through rates from search results." },
-  { icon: <MonitorIcon />, t: "GTM & Analytics Setup", s: "Google Tag Manager, GA4 eCommerce tracking, Meta Pixel, conversion events, and enhanced measurement — every click, view, and purchase tracked accurately." },
+  { icon: <CodeIcon />, t: "Technical SEO", s: "Crawlability, indexation, site architecture, XML sitemaps, robots.txt, canonical tags, hreflang, and Core Web Vitals, the foundation search engines need." },
+  { icon: <SearchIcon />, t: "Product Page SEO", s: "Title tags, meta descriptions, H1 optimisation, image alt text, structured data, and internal linking, per product, per category, at scale." },
+  { icon: <DatabaseIcon />, t: "Schema Markup", s: "Product, BreadcrumbList, FAQPage, Review, and Organisation schema, giving Google rich snippets that increase click-through rates from search results." },
+  { icon: <MonitorIcon />, t: "GTM & Analytics Setup", s: "Google Tag Manager, GA4 eCommerce tracking, Meta Pixel, conversion events, and enhanced measurement, every click, view, and purchase tracked accurately." },
 ] as const;
 
 /* ── CRO services ── */
 const CRO_SERVICES = [
   { icon: <TargetIcon />, t: "A/B Testing", s: "Test product page layouts, CTAs, checkout flows, pricing presentation, and trust signals. Statistically significant results before any permanent change." },
-  { icon: <WalletIcon />, t: "Checkout Optimisation", s: "Reduce cart abandonment with guest checkout, progress indicators, saved addresses, express payment, and trust badges — each proven to lift completion rates." },
+  { icon: <WalletIcon />, t: "Checkout Optimisation", s: "Reduce cart abandonment with guest checkout, progress indicators, saved addresses, express payment, and trust badges, each proven to lift completion rates." },
   { icon: <EyeIcon />, t: "UX & Heatmap Analysis", s: "Heatmaps, scroll maps, click tracking, and session recordings reveal where customers hesitate, get confused, or leave. Data-driven UX improvements, not opinions." },
-  { icon: <TrendingUpIcon />, t: "Landing Page Optimisation", s: "Campaign landing pages designed for conversion — clear value proposition, social proof, urgency, and a single focused CTA. Connected to your analytics for ROI measurement." },
+  { icon: <TrendingUpIcon />, t: "Landing Page Optimisation", s: "Campaign landing pages designed for conversion, clear value proposition, social proof, urgency, and a single focused CTA. Connected to your analytics for ROI measurement." },
 ] as const;
 
 /* ── Audit checklist ── */
@@ -96,7 +96,7 @@ const TOOLS = [
 /* ── FAQ ── */
 const FAQS = [
   { q: "How long does it take to see SEO results?", a: "Technical SEO improvements (indexation, speed, schema) show results within 2–4 weeks. Content and keyword-driven SEO takes 3–6 months for meaningful organic traffic growth. We set monthly milestones and track progress against them." },
-  { q: "Do you handle Shopify and Magento SEO differently?", a: "Yes. Each platform has unique SEO constraints — Shopify's URL structure, Magento's layered navigation, canonical handling, and pagination. We optimise specifically for your platform, not with generic SEO advice." },
+  { q: "Do you handle Shopify and Magento SEO differently?", a: "Yes. Each platform has unique SEO constraints: Shopify's URL structure, Magento's layered navigation, canonical handling, and pagination. We optimise specifically for your platform, not with generic SEO advice." },
   { q: "What's included in a CRO engagement?", a: "Heatmap analysis, checkout flow audit, A/B test design and implementation, landing page optimisation, and monthly conversion reports. Every change is data-backed with statistical significance." },
   { q: "How do you measure conversion rate improvement?", a: "We establish a baseline conversion rate before any changes, then track improvement through controlled A/B tests. Only statistically significant results (95%+ confidence) are declared as improvements." },
   { q: "Do you set up GA4 and GTM?", a: "Yes. We configure GA4 with full eCommerce tracking (view_item, add_to_cart, begin_checkout, purchase), GTM with conversion tags for Google Ads and Meta, and custom events for your specific funnel." },
@@ -108,7 +108,7 @@ export function EcommerceSeoContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered + dual score ═══ */}
+      {/* ═══ HERO: centered + dual score ═══ */}
       <section className="sc-hero">
         <div className="sc-hero-glow sc-hero-glow-1" aria-hidden="true" />
         <div className="sc-hero-glow sc-hero-glow-2" aria-hidden="true" />
@@ -122,7 +122,7 @@ export function EcommerceSeoContent() {
             <span className="acc">&amp; CRO.</span>
           </h1>
           <p className="sc-hero-sub rev">
-            Technical SEO, schema markup, and conversion optimisation for eCommerce — <strong>more traffic, higher conversion, better revenue.</strong>
+            Technical SEO, schema markup, and conversion optimisation for eCommerce, <strong>more traffic, higher conversion, better revenue.</strong>
           </p>
           <div className="sc-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -159,7 +159,7 @@ export function EcommerceSeoContent() {
         </div>
       </section>
 
-      {/* ═══ SEO vs CRO — dual column ═══ */}
+      {/* ═══ SEO vs CRO: dual column ═══ */}
       <section className="sc-dual" id="services">
         <div className="sc-dual-inner">
           <div className="sc-dual-hdr rev">
@@ -261,10 +261,10 @@ export function EcommerceSeoContent() {
                 <div className="oi-closer-insight-stat">68%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of online experiences begin with a search engine.</strong>
-                  Source: BrightEdge, 2024. But ranking alone doesn&apos;t drive revenue — you need the traffic to convert once it arrives. SEO without CRO is half the equation.
+                  Source: BrightEdge, 2024. But ranking alone doesn&apos;t drive revenue, you need the traffic to convert once it arrives. SEO without CRO is half the equation.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer engagement combines SEO (traffic) and CRO (conversion) into one programme — optimising the full funnel, not just rankings.</p>
+              <p>That&apos;s why every Wan Buffer engagement combines SEO (traffic) and CRO (conversion) into one programme, optimising the full funnel, not just rankings.</p>
             </div>
           </div>
 
@@ -275,7 +275,7 @@ export function EcommerceSeoContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><SearchIcon /></div>
                 <div className="oi-closer-commit-t">SEO + CRO combined</div>
-                <p className="oi-closer-commit-b">We optimise for traffic AND conversion together. Ranking for keywords that don&apos;t convert is vanity — we focus on revenue-driving queries.</p>
+                <p className="oi-closer-commit-b">We optimise for traffic AND conversion together. Ranking for keywords that don&apos;t convert is vanity, we focus on revenue-driving queries.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
@@ -287,7 +287,7 @@ export function EcommerceSeoContent() {
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><BarChartIcon /></div>
                 <div className="oi-closer-commit-t">Data-driven decisions</div>
-                <p className="oi-closer-commit-b">Every recommendation is backed by data — search console, analytics, heatmaps, and A/B tests. No guesswork, no opinions without evidence.</p>
+                <p className="oi-closer-commit-b">Every recommendation is backed by data, search console, analytics, heatmaps, and A/B tests. No guesswork, no opinions without evidence.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>

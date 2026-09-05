@@ -54,12 +54,12 @@ export function WanbufferiansTestimonials() {
     <section className="wb-discuss-sec section">
       <div className="wb-discuss-inner">
 
-        {/* Left — Let's Discuss */}
+        {/* Left: Let's Discuss */}
         <div className="wb-discuss-form-col">
           <div className="eyebrow">Get in touch</div>
           <h2 className="wb-discuss-h">Let&apos;s Discuss</h2>
           <p className="wb-discuss-desc">
-            Leave a request — our experts will analyse your current situation and help you choose an
+            Leave a request, our experts will analyse your current situation and help you choose an
             effective solution for scaling your business.
           </p>
           <form
@@ -85,7 +85,7 @@ export function WanbufferiansTestimonials() {
           </form>
         </div>
 
-        {/* Right — What Clients Say */}
+        {/* Right: What Clients Say */}
         <div className="wb-discuss-test-col">
           <div className="eyebrow">Social proof</div>
           <h2 className="wb-discuss-h">What Clients Say</h2>

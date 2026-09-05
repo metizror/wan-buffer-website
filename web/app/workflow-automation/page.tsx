@@ -11,7 +11,7 @@ import { WorkflowAutomationContent } from "@/components/services/workflow-automa
 export const metadata: Metadata = {
   title: "Workflow Automation | End-to-End Business Process Automation | Wan Buffer",
   description:
-    "Automate your business workflows end to end — procurement, finance, HR, operations, and customer service. Save 60% of manual processing time, eliminate 85% of errors, and connect every system in your stack.",
+    "Automate your business workflows end to end, procurement, finance, HR, operations, and customer service. Save 60% of manual processing time, eliminate 85% of errors, and connect every system in your stack.",
   keywords: [
     "workflow automation",
     "business process automation",
@@ -34,11 +34,11 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Workflow Automation — End-to-End Business Process Automation | Wan Buffer",
+    title: "Workflow Automation: End-to-End Business Process Automation | Wan Buffer",
     description:
       "End-to-end workflow automation that connects your ERP, CRM, and business systems. Save 60% of manual processing time and eliminate 85% of human errors.",
     siteName: "Wan Buffer",

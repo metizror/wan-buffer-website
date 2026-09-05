@@ -11,7 +11,7 @@ import { AiRecommendationsContent } from "@/components/services/ai-recommendatio
 export const metadata: Metadata = {
   title: "AI Product Recommendations | Personalisation Engine | Wan Buffer",
   description:
-    "AI-powered product recommendation engine for eCommerce — personalised suggestions, frequently bought together, trending products, and cross-sell/upsell automation. Increase average order value by 25%+.",
+    "AI-powered product recommendation engine for eCommerce, personalised suggestions, frequently bought together, trending products, and cross-sell/upsell automation. Increase average order value by 25%+.",
   keywords: [
     "AI product recommendations",
     "eCommerce personalisation",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "AI Product Recommendations — Personalisation Engine | Wan Buffer",
+    title: "AI Product Recommendations: Personalisation Engine | Wan Buffer",
     description:
-      "AI-powered product recommendations — personalised suggestions, cross-sell, and upsell automation that increase AOV and conversion rates.",
+      "AI-powered product recommendations, personalised suggestions, cross-sell, and upsell automation that increase AOV and conversion rates.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/ai-product-recommendations" },

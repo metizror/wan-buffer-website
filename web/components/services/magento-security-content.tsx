@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   MAGENTO SECURITY & AMC — unique page design
+   MAGENTO SECURITY & AMC, unique page design
    Centered hero + security scan · Threat stats · Security services
    grid · AMC plan comparison · Process · FAQ · Closer · Support
 ──────────────────────────────────────────────────────────────────────── */
@@ -60,8 +60,8 @@ const THREATS = [
 const SERVICES = [
   { icon: <ShieldIcon />, t: "Security Patch Management", s: "Every Adobe/Magento security patch tested, applied, and validated within 48 hours of release. Regression testing ensures patches don't break your customisations.", color: "red" as const },
   { icon: <EyeIcon />, t: "Vulnerability Scanning", s: "Automated weekly scans for known CVEs, SQL injection, XSS, CSRF, and Magento-specific attack vectors. Reports delivered with severity ratings and remediation steps.", color: "ai" as const },
-  { icon: <CodeIcon />, t: "Malware Detection & Removal", s: "File integrity monitoring, JavaScript injection detection, and database scanning. If malware is found, we isolate, remove, and harden the attack vector — with a full incident report.", color: "red" as const },
-  { icon: <CloudIcon />, t: "WAF & Firewall Configuration", s: "Web Application Firewall rules tuned for Magento — blocking bot attacks, brute force attempts, and known exploit patterns while allowing legitimate traffic.", color: "ai" as const },
+  { icon: <CodeIcon />, t: "Malware Detection & Removal", s: "File integrity monitoring, JavaScript injection detection, and database scanning. If malware is found, we isolate, remove, and harden the attack vector, with a full incident report.", color: "red" as const },
+  { icon: <CloudIcon />, t: "WAF & Firewall Configuration", s: "Web Application Firewall rules tuned for Magento, blocking bot attacks, brute force attempts, and known exploit patterns while allowing legitimate traffic.", color: "ai" as const },
   { icon: <SettingsIcon />, t: "PCI DSS Compliance", s: "Full PCI DSS self-assessment questionnaire support, security configuration review, and remediation for all 12 PCI requirements. Audit-ready documentation included.", color: "red" as const },
   { icon: <RefreshIcon />, t: "SSL & Certificate Management", s: "SSL certificate installation, renewal automation, HSTS configuration, mixed content resolution, and OCSP stapling. Green padlock guaranteed across every page.", color: "ai" as const },
 ] as const;
@@ -111,8 +111,8 @@ const PROCESS = [
 const FAQS = [
   { q: "How quickly do you apply Magento security patches?", a: "Within 48 hours of release. Every patch is tested on a staging environment, validated against your customisations, and deployed to production with zero downtime." },
   { q: "Do you help with PCI DSS compliance?", a: "Yes. We support PCI DSS self-assessment (SAQ A, A-EP, D), configure all 12 PCI requirements, remediate gaps, and provide audit-ready documentation." },
-  { q: "What happens if my store gets hacked?", a: "Our AMC includes incident response — we isolate the breach, remove malware, patch the vulnerability, restore from clean backups if needed, and deliver a full incident report with preventive measures." },
-  { q: "Do you provide a Web Application Firewall?", a: "Yes. We configure and manage WAF rules (Cloudflare, Sucuri, or AWS WAF) tuned specifically for Magento — blocking attacks while allowing legitimate checkout and admin traffic." },
+  { q: "What happens if my store gets hacked?", a: "Our AMC includes incident response, we isolate the breach, remove malware, patch the vulnerability, restore from clean backups if needed, and deliver a full incident report with preventive measures." },
+  { q: "Do you provide a Web Application Firewall?", a: "Yes. We configure and manage WAF rules (Cloudflare, Sucuri, or AWS WAF) tuned specifically for Magento, blocking attacks while allowing legitimate checkout and admin traffic." },
   { q: "What's the difference between Security AMC and Full AMC?", a: "Security AMC covers patches, scanning, malware removal, WAF, and PCI compliance. Full AMC adds bug fixes, performance tuning, version upgrades, module updates, and dedicated account management." },
   { q: "Can you secure a Magento store you didn't build?", a: "Yes. We conduct a thorough security audit, document the current state, remediate existing vulnerabilities, and onboard the store to our monitoring and AMC system." },
 ] as const;
@@ -122,7 +122,7 @@ export function MagentoSecurityContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — centered + security scan ═══ */}
+      {/* ═══ HERO: centered + security scan ═══ */}
       <section className="ms-hero">
         <div className="ms-hero-glow ms-hero-glow-1" aria-hidden="true" />
         <div className="ms-hero-glow ms-hero-glow-2" aria-hidden="true" />
@@ -136,7 +136,7 @@ export function MagentoSecurityContent() {
             <span className="acc">&amp; AMC.</span>
           </h1>
           <p className="ms-hero-sub rev">
-            Security patches, PCI compliance, malware scanning, WAF configuration, and SLA-based maintenance — <strong>your Magento store, always secure and maintained.</strong>
+            Security patches, PCI compliance, malware scanning, WAF configuration, and SLA-based maintenance, <strong>your Magento store, always secure and maintained.</strong>
           </p>
           <div className="ms-hero-ctas rev">
             <a className="oi-hero-lux-primary" href="#contact">
@@ -199,7 +199,7 @@ export function MagentoSecurityContent() {
         </div>
       </section>
 
-      {/* ═══ AMC PLANS — side-by-side ═══ */}
+      {/* ═══ AMC PLANS: side-by-side ═══ */}
       <section className="ms-plans" id="plans">
         <div className="ms-plans-inner">
           <div className="ms-plans-hdr rev">
@@ -295,10 +295,10 @@ export function MagentoSecurityContent() {
                 <div className="oi-closer-insight-stat">87%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of Magento stores run with unpatched security vulnerabilities.</strong>
-                  Source: Sansec, 2024. The root cause is stores without an AMC — security patches released by Adobe go unapplied for months, leaving known vulnerabilities wide open.
+                  Source: Sansec, 2024. The root cause is stores without an AMC, security patches released by Adobe go unapplied for months, leaving known vulnerabilities wide open.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer AMC includes 48-hour patch deployment and continuous vulnerability monitoring — not just annual audits.</p>
+              <p>That&apos;s why every Wan Buffer AMC includes 48-hour patch deployment and continuous vulnerability monitoring, not just annual audits.</p>
             </div>
           </div>
 
@@ -321,13 +321,13 @@ export function MagentoSecurityContent() {
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">PCI compliance maintained</div>
-                <p className="oi-closer-commit-b">All 12 PCI DSS requirements monitored and maintained continuously — not just at audit time. Compliance documentation always current.</p>
+                <p className="oi-closer-commit-b">All 12 PCI DSS requirements monitored and maintained continuously, not just at audit time. Compliance documentation always current.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior security engineers</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who audits your store is the one who patches, monitors, and responds — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who audits your store is the one who patches, monitors, and responds, named in the contract.</p>
               </div>
             </div>
           </div>

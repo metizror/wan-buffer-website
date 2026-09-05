@@ -11,7 +11,7 @@ import { MagentoDevContent } from "@/components/services/magento-dev-content";
 export const metadata: Metadata = {
   title: "Magento Development | Custom Themes & Module Development | Wan Buffer",
   description:
-    "Expert Magento 2 development services — custom theme design, module development, performance optimisation, ERP integration, and migration. High-performance eCommerce stores built for scale.",
+    "Expert Magento 2 development services, custom theme design, module development, performance optimisation, ERP integration, and migration. High-performance eCommerce stores built for scale.",
   keywords: [
     "Magento development",
     "Magento 2 development",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Magento Development — Custom Themes & Module Development | Wan Buffer",
+    title: "Magento Development: Custom Themes & Module Development | Wan Buffer",
     description:
-      "Magento 2 development — custom themes, modules, performance tuning, and ERP integration for high-performance eCommerce.",
+      "Magento 2 development, custom themes, modules, performance tuning, and ERP integration for high-performance eCommerce.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/magento-development" },

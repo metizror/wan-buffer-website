@@ -11,7 +11,7 @@ import { PaymentRazorpayContent } from "@/components/services/payment-razorpay-c
 export const metadata: Metadata = {
   title: "Payment & Razorpay Setup | Checkout Flows & Subscriptions | Wan Buffer",
   description:
-    "Expert payment gateway integration — Razorpay, Stripe, PayPal, UPI, and COD. Checkout optimisation, subscription billing, multi-currency support, and ERP reconciliation for Shopify, Magento, and custom eCommerce stores.",
+    "Expert payment gateway integration: Razorpay, Stripe, PayPal, UPI, and COD. Checkout optimisation, subscription billing, multi-currency support, and ERP reconciliation for Shopify, Magento, and custom eCommerce stores.",
   keywords: [
     "Razorpay integration",
     "payment gateway setup",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Payment & Razorpay Setup — Checkout Flows & Subscriptions | Wan Buffer",
+    title: "Payment & Razorpay Setup: Checkout Flows & Subscriptions | Wan Buffer",
     description:
-      "Payment gateway integration — Razorpay, Stripe, UPI, and more. Checkout optimisation, subscription billing, and ERP reconciliation.",
+      "Payment gateway integration: Razorpay, Stripe, UPI, and more. Checkout optimisation, subscription billing, and ERP reconciliation.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/payment-razorpay-setup" },

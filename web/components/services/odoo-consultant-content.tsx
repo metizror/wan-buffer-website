@@ -1,4 +1,4 @@
-/* Odoo consultant — content from wanbuffer.com/odoo/odoo-consultant.php (no extra sections). */
+/* Odoo consultant: content from wanbuffer.com/odoo/odoo-consultant.php (no extra sections). */
 
 import type { ReactNode } from "react";
 import Image from "next/image";
@@ -95,7 +95,7 @@ export function OdooConsultantContent() {
             </span>
           </h1>
           <p className="oi-hero-lux-sub rev">
-            Expert functional and technical consultants for design, development, implementation, and ongoing Odoo support—before you take the leap.
+            Expert functional and technical consultants for design, development, implementation, and ongoing Odoo support: before you take the leap.
           </p>
           <div className="oi-hero-lux-cta rev">
             <a className="oi-hero-lux-primary" href="#contact">

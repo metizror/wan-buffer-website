@@ -148,7 +148,7 @@ export async function updateEvent(
   return result ? serialize(result as unknown as EventDocument) : null;
 }
 
-/** Soft delete — hidden everywhere but recoverable from the trash. */
+/** Soft delete: hidden everywhere but recoverable from the trash. */
 export async function softDeleteEvent(id: string): Promise<boolean> {
   const c = await col();
   if (!ObjectId.isValid(id)) return false;
@@ -298,7 +298,7 @@ export async function getPublicEvents(): Promise<WanBufferEvent[]> {
 
 /**
  * Published event by slug. Only falls back to the static data when the slug is
- * absent from the DB entirely — an event unpublished or deleted in the admin
+ * absent from the DB entirely, an event unpublished or deleted in the admin
  * panel that also exists in the static seed must stay hidden.
  */
 export async function getPublicEventBySlug(

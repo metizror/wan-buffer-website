@@ -11,7 +11,7 @@ import { MagentoOdooContent } from "@/components/services/magento-odoo-content";
 export const metadata: Metadata = {
   title: "Magento → Odoo Integration | Real-Time Inventory & Order Sync | Wan Buffer",
   description:
-    "Connect Magento 2 to Odoo ERP with real-time synchronisation — products, inventory, orders, customers, and pricing. Bi-directional API integration with zero manual data entry.",
+    "Connect Magento 2 to Odoo ERP with real-time synchronisation, products, inventory, orders, customers, and pricing. Bi-directional API integration with zero manual data entry.",
   keywords: [
     "Magento Odoo integration",
     "Magento ERP integration",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Magento → Odoo Integration — Real-Time Inventory & Order Sync | Wan Buffer",
+    title: "Magento → Odoo Integration: Real-Time Inventory & Order Sync | Wan Buffer",
     description:
-      "Real-time Magento-to-Odoo integration — products, inventory, orders, and customers synced automatically via secure APIs.",
+      "Real-time Magento-to-Odoo integration, products, inventory, orders, and customers synced automatically via secure APIs.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/magento-odoo-integration" },

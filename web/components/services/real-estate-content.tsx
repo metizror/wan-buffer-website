@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   REAL ESTATE — unique page design
+   REAL ESTATE, unique page design
    Hero split + unit inventory mock · Operations cards · Alternating
    feature rows · Dotted process flow · Multi-property section ·
    Platforms · FAQ · Closer · Support
@@ -52,18 +52,18 @@ const UNITS = [
 
 /* ── Real estate operations ── */
 const OPERATIONS = [
-  { icon: <UsersIcon />, t: "Property CRM", s: "Unified lead management across walk-ins, digital campaigns, broker referrals, and portals — with automated follow-ups, site visit scheduling, and full pipeline visibility from enquiry to handover.", color: "ai" as const },
-  { icon: <SparklesIcon />, t: "AI Lead Scoring", s: "Machine learning models that score every lead based on engagement signals, budget match, property preference, and conversion probability — so your sales team focuses on buyers ready to close.", color: "green" as const },
-  { icon: <RefreshIcon />, t: "Lease Lifecycle", s: "End-to-end lease management from application through approval, execution, renewal, and termination — with automated rent escalation, security deposit tracking, and tenant communication workflows.", color: "purple" as const },
+  { icon: <UsersIcon />, t: "Property CRM", s: "Unified lead management across walk-ins, digital campaigns, broker referrals, and portals, with automated follow-ups, site visit scheduling, and full pipeline visibility from enquiry to handover.", color: "ai" as const },
+  { icon: <SparklesIcon />, t: "AI Lead Scoring", s: "Machine learning models that score every lead based on engagement signals, budget match, property preference, and conversion probability, so your sales team focuses on buyers ready to close.", color: "green" as const },
+  { icon: <RefreshIcon />, t: "Lease Lifecycle", s: "End-to-end lease management from application through approval, execution, renewal, and termination, with automated rent escalation, security deposit tracking, and tenant communication workflows.", color: "purple" as const },
   { icon: <BarChartIcon />, t: "Revenue Analytics", s: "Real-time dashboards for sales velocity, occupancy rates, rental yield, broker performance, and collection efficiency. Drill from portfolio level down to individual unit and tenant.", color: "red" as const },
 ] as const;
 
 /* ── Features ── */
 const FEATURES = [
-  { num: "01", icon: <UsersIcon />, t: "Property CRM & Lead Management", s: "Capture leads from websites, portals (99acres, Bayut, Zillow), walk-ins, and broker referrals into a unified pipeline. Automated follow-up sequences, site visit scheduling, document collection, and deal tracking — with full audit trail from first enquiry to unit handover." },
-  { num: "02", icon: <SparklesIcon />, t: "AI-Powered Lead Scoring", s: "ML models trained on your historical conversion data score every lead by budget fit, location preference, engagement recency, and behavioural signals. Hot leads auto-route to senior agents. Warm leads enter nurture sequences. Cold leads trigger re-engagement campaigns — maximising conversion rates." },
-  { num: "03", icon: <RefreshIcon />, t: "Lease Lifecycle Management", s: "Manage the full lease cycle — tenant application, credit check, lease drafting, execution, rent collection, escalation schedules, maintenance requests, renewal negotiation, and termination. Automated alerts for renewals 90/60/30 days before expiry with tenant portal access." },
-  { num: "04", icon: <GridIcon />, t: "Unit Inventory & Availability", s: "Real-time unit inventory across towers, floors, and configurations — with status tracking (available, reserved, sold, leased). Interactive floor plans, price lists with payment plan options, and automated booking workflows with document generation." },
+  { num: "01", icon: <UsersIcon />, t: "Property CRM & Lead Management", s: "Capture leads from websites, portals (99acres, Bayut, Zillow), walk-ins, and broker referrals into a unified pipeline. Automated follow-up sequences, site visit scheduling, document collection, and deal tracking, with full audit trail from first enquiry to unit handover." },
+  { num: "02", icon: <SparklesIcon />, t: "AI-Powered Lead Scoring", s: "ML models trained on your historical conversion data score every lead by budget fit, location preference, engagement recency, and behavioural signals. Hot leads auto-route to senior agents. Warm leads enter nurture sequences. Cold leads trigger re-engagement campaigns, maximising conversion rates." },
+  { num: "03", icon: <RefreshIcon />, t: "Lease Lifecycle Management", s: "Manage the full lease cycle, tenant application, credit check, lease drafting, execution, rent collection, escalation schedules, maintenance requests, renewal negotiation, and termination. Automated alerts for renewals 90/60/30 days before expiry with tenant portal access." },
+  { num: "04", icon: <GridIcon />, t: "Unit Inventory & Availability", s: "Real-time unit inventory across towers, floors, and configurations, with status tracking (available, reserved, sold, leased). Interactive floor plans, price lists with payment plan options, and automated booking workflows with document generation." },
   { num: "05", icon: <WalletIcon />, t: "Broker Commission & Payouts", s: "Define commission structures per project, per broker tier, and per unit type. Automated commission calculation on booking confirmation, milestone-based payouts, TDS deduction, and reconciliation. Broker portal for deal submission and payout tracking." },
   { num: "06", icon: <BarChartIcon />, t: "Collection & Revenue Analytics", s: "Payment schedule tracking per unit with automated reminders for upcoming and overdue instalments. Collection efficiency dashboards, ageing analysis, and revenue recognition by project. Cash flow forecasting for ongoing and upcoming projects." },
 ] as const;
@@ -96,11 +96,11 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "Can you manage unit inventory across multiple towers and configurations?", a: "Yes. We configure unit inventory by project, tower, floor, and unit type — with real-time status tracking (available, reserved, blocked, sold, leased). Each unit carries its own price, area, floor plan, payment schedule, and booking history. Interactive availability views and automated booking workflows are included." },
-  { q: "How does AI lead scoring improve conversion rates?", a: "Our ML models analyse your historical conversion data to identify patterns — budget match, location preference, engagement frequency, response time, and site visit behaviour. Every new lead gets a real-time score. Sales teams see scores in their pipeline view and prioritise accordingly. Clients typically see 25–40% improvement in lead-to-booking conversion rates." },
-  { q: "Can you automate the entire lease lifecycle?", a: "Yes. We configure the full cycle — tenant application, document collection, credit/background checks, lease drafting with template generation, digital execution, rent collection with automated reminders, annual escalation calculations, maintenance request handling, renewal workflows, and termination with security deposit reconciliation." },
-  { q: "Do you support broker commission tracking and payouts?", a: "Yes. Commission structures are defined per project, per broker tier, and per unit type — flat fee, percentage of sale value, or slab-based. Commissions calculate automatically on booking confirmation. Milestone-based payouts, TDS deduction, and reconciliation are handled by the system. Brokers get portal access to track their deals and payouts." },
-  { q: "Can you integrate with property portals like 99acres, Bayut, or Zillow?", a: "Yes. We integrate with major portals — leads from 99acres, Bayut, MagicBricks, Zillow, Realtor.com, and Property Finder flow directly into your CRM with source attribution. Listing sync pushes your inventory to portals automatically so availability stays current across all channels." },
+  { q: "Can you manage unit inventory across multiple towers and configurations?", a: "Yes. We configure unit inventory by project, tower, floor, and unit type, with real-time status tracking (available, reserved, blocked, sold, leased). Each unit carries its own price, area, floor plan, payment schedule, and booking history. Interactive availability views and automated booking workflows are included." },
+  { q: "How does AI lead scoring improve conversion rates?", a: "Our ML models analyse your historical conversion data to identify patterns, budget match, location preference, engagement frequency, response time, and site visit behaviour. Every new lead gets a real-time score. Sales teams see scores in their pipeline view and prioritise accordingly. Clients typically see 25–40% improvement in lead-to-booking conversion rates." },
+  { q: "Can you automate the entire lease lifecycle?", a: "Yes. We configure the full cycle, tenant application, document collection, credit/background checks, lease drafting with template generation, digital execution, rent collection with automated reminders, annual escalation calculations, maintenance request handling, renewal workflows, and termination with security deposit reconciliation." },
+  { q: "Do you support broker commission tracking and payouts?", a: "Yes. Commission structures are defined per project, per broker tier, and per unit type, flat fee, percentage of sale value, or slab-based. Commissions calculate automatically on booking confirmation. Milestone-based payouts, TDS deduction, and reconciliation are handled by the system. Brokers get portal access to track their deals and payouts." },
+  { q: "Can you integrate with property portals like 99acres, Bayut, or Zillow?", a: "Yes. We integrate with major portals, leads from 99acres, Bayut, MagicBricks, Zillow, Realtor.com, and Property Finder flow directly into your CRM with source attribution. Listing sync pushes your inventory to portals automatically so availability stays current across all channels." },
   { q: "How long does a real estate ERP implementation take?", a: "Single-project CRM with lead scoring takes 3–5 weeks. Full real estate ERP with lease lifecycle, unit inventory, and broker management takes 8–14 weeks. Multi-project portfolio with PropTech integrations and tenant portals takes 12–20 weeks." },
 ] as const;
 
@@ -109,7 +109,7 @@ export function RealEstateContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + unit inventory right ═══ */}
+      {/* ═══ HERO: text left + unit inventory right ═══ */}
       <section className="re2-hero">
         <div className="re2-hero-glow re2-hero-glow-1" aria-hidden="true" />
         <div className="re2-hero-glow re2-hero-glow-2" aria-hidden="true" />
@@ -125,7 +125,7 @@ export function RealEstateContent() {
               <span className="acc">Every lead.<br />Every unit.<br />Managed.</span>
             </h1>
             <p className="re2-hero-sub rev">
-              Property CRM, AI lead scoring, lease lifecycle management, unit inventory, and broker commission tracking — <strong>integrated into your ERP.</strong>
+              Property CRM, AI lead scoring, lease lifecycle management, unit inventory, and broker commission tracking, <strong>integrated into your ERP.</strong>
             </p>
             <div className="re2-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -183,7 +183,7 @@ export function RealEstateContent() {
         </div>
       </section>
 
-      {/* ═══ OPERATIONS — 4 cards ═══ */}
+      {/* ═══ OPERATIONS: 4 cards ═══ */}
       <section className="re2-ops">
         <div className="re2-ops-inner">
           <div className="re2-ops-hdr rev">
@@ -202,7 +202,7 @@ export function RealEstateContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — alternating rows ═══ */}
+      {/* ═══ FEATURES: alternating rows ═══ */}
       <section className="re2-feat" id="features">
         <div className="re2-feat-inner">
           <div className="re2-feat-hdr rev">
@@ -224,7 +224,7 @@ export function RealEstateContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="re2-proc" id="process">
         <div className="re2-proc-inner">
           <div className="re2-proc-hdr rev">
@@ -259,7 +259,7 @@ export function RealEstateContent() {
         </div>
       </section>
 
-      {/* ═══ MULTI-PROPERTY — split ═══ */}
+      {/* ═══ MULTI-PROPERTY: split ═══ */}
       <section className="re2-multi" id="multi-property">
         <div className="re2-multi-inner">
           <div className="re2-multi-hdr rev">
@@ -270,7 +270,7 @@ export function RealEstateContent() {
             <div className="re2-multi-left">
               <div className="re2-multi-big-n">500+</div>
               <div className="re2-multi-big-l">Units managed from one ERP</div>
-              <p className="re2-multi-big-s">Residential towers, commercial complexes, and co-living spaces — all orchestrated from a single system with unified CRM, centralised collections, and real-time occupancy and sales analytics across every property.</p>
+              <p className="re2-multi-big-s">Residential towers, commercial complexes, and co-living spaces, all orchestrated from a single system with unified CRM, centralised collections, and real-time occupancy and sales analytics across every property.</p>
             </div>
             <div className="re2-multi-right">
               {PROPERTIES.map((prop) => (
@@ -332,10 +332,10 @@ export function RealEstateContent() {
                 <div className="oi-closer-insight-stat">65%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of real estate firms still manage leads and leases on spreadsheets.</strong>
-                  Source: JLL PropTech Report, 2024. The result is lost leads, missed follow-ups, lease renewal gaps, and zero visibility into portfolio performance — problems that compound as your inventory grows.
+                  Source: JLL PropTech Report, 2024. The result is lost leads, missed follow-ups, lease renewal gaps, and zero visibility into portfolio performance, problems that compound as your inventory grows.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer real estate deployment covers the full property lifecycle — not just lead capture. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer real estate deployment covers the full property lifecycle, not just lead capture. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -345,26 +345,26 @@ export function RealEstateContent() {
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
-                <div className="oi-closer-commit-t">Unified CRM — every lead source, one pipeline</div>
-                <p className="oi-closer-commit-b">Every lead — portals, walk-ins, brokers, digital campaigns — flows into a single pipeline with automated follow-ups, site visit scheduling, and full conversion tracking. No leads lost between channels.</p>
+                <div className="oi-closer-commit-t">Unified CRM, every lead source, one pipeline</div>
+                <p className="oi-closer-commit-b">Every lead, portals, walk-ins, brokers, digital campaigns, flows into a single pipeline with automated follow-ups, site visit scheduling, and full conversion tracking. No leads lost between channels.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed conversion &amp; collection targets</div>
-                <p className="oi-closer-commit-b">Lead-to-booking conversion rates, collection efficiency, and lease renewal rates are defined before go-live. If we miss targets, we keep iterating — at our cost.</p>
+                <p className="oi-closer-commit-b">Lead-to-booking conversion rates, collection efficiency, and lease renewal rates are defined before go-live. If we miss targets, we keep iterating, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><SparklesIcon /></div>
                 <div className="oi-closer-commit-t">AI-first lead scoring &amp; automation</div>
-                <p className="oi-closer-commit-b">Every lead is ML-scored. Every follow-up is automated. Every renewal is system-triggered. No manual lead sorting, no missed follow-ups — data-driven property management.</p>
+                <p className="oi-closer-commit-b">Every lead is ML-scored. Every follow-up is automated. Every renewal is system-triggered. No manual lead sorting, no missed follow-ups, data-driven property management.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior real estate engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your operations is the one who configures, migrates, trains, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your operations is the one who configures, migrates, trains, and supports, named in the contract.</p>
               </div>
             </div>
           </div>

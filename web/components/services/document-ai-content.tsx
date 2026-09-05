@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   DOCUMENT AI — unique page design
+   DOCUMENT AI, unique page design
    Hero split + document pipeline mock · Operations cards · Alternating
    feature rows · Dotted process flow · Document types section ·
    Platforms · FAQ · Closer · Support
@@ -52,20 +52,20 @@ const PIPELINE = [
 
 /* ── Document AI operations ── */
 const OPERATIONS = [
-  { icon: <EyeIcon />, t: "Intelligent OCR", s: "AI-powered optical character recognition that reads printed text, handwriting, stamps, and signatures from scanned documents, photos, and PDFs — with 98%+ accuracy across 40+ languages.", color: "ai" as const },
-  { icon: <SparklesIcon />, t: "Smart Data Extraction", s: "ML models that identify and extract structured fields — invoice numbers, line items, amounts, dates, vendor names, and tax details — from unstructured documents without templates or rules.", color: "green" as const },
-  { icon: <GridIcon />, t: "Document Classification", s: "Automatic sorting of incoming documents by type — invoices, purchase orders, receipts, contracts, delivery notes — before extraction begins. No manual filing, no misrouted documents.", color: "purple" as const },
-  { icon: <DatabaseIcon />, t: "ERP Auto-Posting", s: "Extracted data flows directly into your ERP — vendor bills, journal entries, purchase orders, and expense reports created automatically with validation rules and approval routing.", color: "red" as const },
+  { icon: <EyeIcon />, t: "Intelligent OCR", s: "AI-powered optical character recognition that reads printed text, handwriting, stamps, and signatures from scanned documents, photos, and PDFs, with 98%+ accuracy across 40+ languages.", color: "ai" as const },
+  { icon: <SparklesIcon />, t: "Smart Data Extraction", s: "ML models that identify and extract structured fields, invoice numbers, line items, amounts, dates, vendor names, and tax details, from unstructured documents without templates or rules.", color: "green" as const },
+  { icon: <GridIcon />, t: "Document Classification", s: "Automatic sorting of incoming documents by type, invoices, purchase orders, receipts, contracts, delivery notes, before extraction begins. No manual filing, no misrouted documents.", color: "purple" as const },
+  { icon: <DatabaseIcon />, t: "ERP Auto-Posting", s: "Extracted data flows directly into your ERP, vendor bills, journal entries, purchase orders, and expense reports created automatically with validation rules and approval routing.", color: "red" as const },
 ] as const;
 
 /* ── Features ── */
 const FEATURES = [
-  { num: "01", icon: <EyeIcon />, t: "AI-Powered OCR Engine", s: "Deep-learning OCR that reads printed text, handwritten notes, rubber stamps, and signatures — from scanned PDFs, phone photos, and email attachments. Handles skewed images, low resolution, and multi-page documents. Supports 40+ languages including Arabic, Hindi, and CJK characters." },
-  { num: "02", icon: <SparklesIcon />, t: "Template-Free Data Extraction", s: "ML models trained on thousands of document layouts extract fields without predefined templates. Invoice numbers, line items with quantities and amounts, tax breakdowns, payment terms, and bank details — all identified automatically. New vendor formats are learned within 5–10 documents." },
-  { num: "03", icon: <GridIcon />, t: "Automatic Document Classification", s: "Documents uploaded via email, scanner, or portal are classified instantly — vendor invoices, purchase orders, expense receipts, contracts, delivery notes, and bank statements. Each type routes to the correct extraction model and approval workflow." },
-  { num: "04", icon: <DatabaseIcon />, t: "ERP Auto-Posting & Validation", s: "Extracted data creates ERP records automatically — vendor bills in Accounts Payable, purchase orders in Procurement, expense reports in HR. Validation rules check for duplicates, amount mismatches, and missing fields before posting. Exceptions route to human review." },
-  { num: "05", icon: <ShieldIcon />, t: "Fraud & Anomaly Detection", s: "AI flags suspicious documents — duplicate invoice numbers, altered amounts, mismatched vendor details, and unsigned contracts. Risk scores assigned per document with automated escalation. Reduces fraudulent payment exposure by up to 60%." },
-  { num: "06", icon: <BarChartIcon />, t: "Processing Analytics & Audit Trail", s: "Real-time dashboards for document volume, extraction accuracy, processing time, and exception rates. Full audit trail from original document to ERP posting — every field extraction logged with confidence score and human override history." },
+  { num: "01", icon: <EyeIcon />, t: "AI-Powered OCR Engine", s: "Deep-learning OCR that reads printed text, handwritten notes, rubber stamps, and signatures, from scanned PDFs, phone photos, and email attachments. Handles skewed images, low resolution, and multi-page documents. Supports 40+ languages including Arabic, Hindi, and CJK characters." },
+  { num: "02", icon: <SparklesIcon />, t: "Template-Free Data Extraction", s: "ML models trained on thousands of document layouts extract fields without predefined templates. Invoice numbers, line items with quantities and amounts, tax breakdowns, payment terms, and bank details, all identified automatically. New vendor formats are learned within 5–10 documents." },
+  { num: "03", icon: <GridIcon />, t: "Automatic Document Classification", s: "Documents uploaded via email, scanner, or portal are classified instantly, vendor invoices, purchase orders, expense receipts, contracts, delivery notes, and bank statements. Each type routes to the correct extraction model and approval workflow." },
+  { num: "04", icon: <DatabaseIcon />, t: "ERP Auto-Posting & Validation", s: "Extracted data creates ERP records automatically, vendor bills in Accounts Payable, purchase orders in Procurement, expense reports in HR. Validation rules check for duplicates, amount mismatches, and missing fields before posting. Exceptions route to human review." },
+  { num: "05", icon: <ShieldIcon />, t: "Fraud & Anomaly Detection", s: "AI flags suspicious documents, duplicate invoice numbers, altered amounts, mismatched vendor details, and unsigned contracts. Risk scores assigned per document with automated escalation. Reduces fraudulent payment exposure by up to 60%." },
+  { num: "06", icon: <BarChartIcon />, t: "Processing Analytics & Audit Trail", s: "Real-time dashboards for document volume, extraction accuracy, processing time, and exception rates. Full audit trail from original document to ERP posting, every field extraction logged with confidence score and human override history." },
 ] as const;
 
 /* ── Process flow ── */
@@ -96,11 +96,11 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "How accurate is the AI extraction for invoices?", a: "Our models achieve 96–99% field-level accuracy on invoices — line items, amounts, tax breakdowns, vendor names, and dates. Accuracy improves as the model processes more documents from the same vendor. For new vendor formats, the system reaches 95%+ accuracy within 5–10 sample documents." },
-  { q: "Does it work with scanned PDFs and phone photos?", a: "Yes. The OCR engine handles scanned PDFs, photos from phone cameras, email attachments, and faxes. It auto-corrects skew, adjusts for low resolution, and processes multi-page documents. Handwritten notes, rubber stamps, and signatures are also recognised — though handwriting accuracy varies by legibility." },
-  { q: "Do I need to create templates for each vendor?", a: "No. Our ML models extract fields without predefined templates. The AI learns document layouts dynamically — when a new vendor sends an invoice in a format the system hasn't seen before, it still extracts the key fields. After 5–10 documents from the same vendor, accuracy reaches near-perfect levels." },
-  { q: "How does the ERP auto-posting work?", a: "Extracted data maps to your ERP schema — vendor name to partner record, line items to product/account codes, amounts to journal entry fields. The system creates draft records (vendor bills, PO entries, expense reports) with all fields pre-filled. Validation rules check for duplicates and mismatches before auto-posting or routing to human approval." },
-  { q: "Can Document AI detect fraudulent or duplicate invoices?", a: "Yes. The system checks every extracted invoice against historical data — duplicate invoice numbers, altered amounts, mismatched vendor bank details, and unsigned documents are flagged automatically. Risk scores are assigned and high-risk items are escalated to designated approvers before any payment is processed." },
+  { q: "How accurate is the AI extraction for invoices?", a: "Our models achieve 96–99% field-level accuracy on invoices, line items, amounts, tax breakdowns, vendor names, and dates. Accuracy improves as the model processes more documents from the same vendor. For new vendor formats, the system reaches 95%+ accuracy within 5–10 sample documents." },
+  { q: "Does it work with scanned PDFs and phone photos?", a: "Yes. The OCR engine handles scanned PDFs, photos from phone cameras, email attachments, and faxes. It auto-corrects skew, adjusts for low resolution, and processes multi-page documents. Handwritten notes, rubber stamps, and signatures are also recognised, though handwriting accuracy varies by legibility." },
+  { q: "Do I need to create templates for each vendor?", a: "No. Our ML models extract fields without predefined templates. The AI learns document layouts dynamically, when a new vendor sends an invoice in a format the system hasn't seen before, it still extracts the key fields. After 5–10 documents from the same vendor, accuracy reaches near-perfect levels." },
+  { q: "How does the ERP auto-posting work?", a: "Extracted data maps to your ERP schema, vendor name to partner record, line items to product/account codes, amounts to journal entry fields. The system creates draft records (vendor bills, PO entries, expense reports) with all fields pre-filled. Validation rules check for duplicates and mismatches before auto-posting or routing to human approval." },
+  { q: "Can Document AI detect fraudulent or duplicate invoices?", a: "Yes. The system checks every extracted invoice against historical data, duplicate invoice numbers, altered amounts, mismatched vendor bank details, and unsigned documents are flagged automatically. Risk scores are assigned and high-risk items are escalated to designated approvers before any payment is processed." },
   { q: "How long does Document AI implementation take?", a: "Basic invoice processing with ERP posting takes 3–4 weeks. Full Document AI with multi-document classification, contract extraction, and fraud detection takes 8–12 weeks. Enterprise deployments with custom ML models and multi-ERP integration take 12–18 weeks." },
 ] as const;
 
@@ -109,7 +109,7 @@ export function DocumentAiContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + document pipeline right ═══ */}
+      {/* ═══ HERO: text left + document pipeline right ═══ */}
       <section className="da-hero">
         <div className="da-hero-glow da-hero-glow-1" aria-hidden="true" />
         <div className="da-hero-glow da-hero-glow-2" aria-hidden="true" />
@@ -125,7 +125,7 @@ export function DocumentAiContent() {
               <span className="acc">Every document.<br />Every field.<br />Extracted.</span>
             </h1>
             <p className="da-hero-sub rev">
-              Intelligent OCR, template-free data extraction, automatic classification, and ERP auto-posting — <strong>90% less manual data entry.</strong>
+              Intelligent OCR, template-free data extraction, automatic classification, and ERP auto-posting, <strong>90% less manual data entry.</strong>
             </p>
             <div className="da-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -188,7 +188,7 @@ export function DocumentAiContent() {
         </div>
       </section>
 
-      {/* ═══ OPERATIONS — 4 cards ═══ */}
+      {/* ═══ OPERATIONS: 4 cards ═══ */}
       <section className="da-ops">
         <div className="da-ops-inner">
           <div className="da-ops-hdr rev">
@@ -207,7 +207,7 @@ export function DocumentAiContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — alternating rows ═══ */}
+      {/* ═══ FEATURES: alternating rows ═══ */}
       <section className="da-feat" id="features">
         <div className="da-feat-inner">
           <div className="da-feat-hdr rev">
@@ -229,7 +229,7 @@ export function DocumentAiContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="da-proc" id="process">
         <div className="da-proc-inner">
           <div className="da-proc-hdr rev">
@@ -264,7 +264,7 @@ export function DocumentAiContent() {
         </div>
       </section>
 
-      {/* ═══ DOCUMENT TYPES — split ═══ */}
+      {/* ═══ DOCUMENT TYPES: split ═══ */}
       <section className="da-multi" id="doc-types">
         <div className="da-multi-inner">
           <div className="da-multi-hdr rev">
@@ -275,7 +275,7 @@ export function DocumentAiContent() {
             <div className="da-multi-left">
               <div className="da-multi-big-n">15+</div>
               <div className="da-multi-big-l">Document types processed by one system</div>
-              <p className="da-multi-big-s">Invoices, purchase orders, receipts, contracts, delivery notes, bank statements, and custom documents — all extracted, validated, and posted into your ERP from a single AI pipeline.</p>
+              <p className="da-multi-big-s">Invoices, purchase orders, receipts, contracts, delivery notes, bank statements, and custom documents, all extracted, validated, and posted into your ERP from a single AI pipeline.</p>
             </div>
             <div className="da-multi-right">
               {DOC_TYPES.map((dt) => (
@@ -339,7 +339,7 @@ export function DocumentAiContent() {
                   Source: IOFM, 2024. The result is data entry errors, processing delays, missed early-payment discounts, and staff spending hours on work that AI can do in seconds.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer Document AI deployment extracts, validates, and posts — not just OCR scans. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer Document AI deployment extracts, validates, and posts, not just OCR scans. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -349,26 +349,26 @@ export function DocumentAiContent() {
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><EyeIcon /></div>
-                <div className="oi-closer-commit-t">98%+ extraction accuracy — guaranteed</div>
+                <div className="oi-closer-commit-t">98%+ extraction accuracy, guaranteed</div>
                 <p className="oi-closer-commit-b">Field-level accuracy targets are defined per document type before go-live. If extraction accuracy falls below the agreed threshold, we retrain the model at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><DatabaseIcon /></div>
-                <div className="oi-closer-commit-t">ERP auto-posting — not just extraction</div>
-                <p className="oi-closer-commit-b">Data doesn't stop at a spreadsheet. Extracted fields create ERP records automatically — vendor bills, PO entries, expense reports — with validation and approval routing built in.</p>
+                <div className="oi-closer-commit-t">ERP auto-posting, not just extraction</div>
+                <p className="oi-closer-commit-b">Data doesn't stop at a spreadsheet. Extracted fields create ERP records automatically, vendor bills, PO entries, expense reports, with validation and approval routing built in.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><SparklesIcon /></div>
-                <div className="oi-closer-commit-t">Template-free — no setup per vendor</div>
+                <div className="oi-closer-commit-t">Template-free, no setup per vendor</div>
                 <p className="oi-closer-commit-b">ML models learn document layouts dynamically. No templates to create, no rules to maintain, no format-specific configurations. New vendors work from day one.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior AI engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who builds your extraction models is the one who trains, tunes, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who builds your extraction models is the one who trains, tunes, and supports, named in the contract.</p>
               </div>
             </div>
           </div>

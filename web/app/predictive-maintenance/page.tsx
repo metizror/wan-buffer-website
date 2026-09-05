@@ -11,7 +11,7 @@ import { PredictiveMaintenanceContent } from "@/components/services/predictive-m
 export const metadata: Metadata = {
   title: "Predictive Maintenance | AI-Triggered Work Orders | Wan Buffer",
   description:
-    "Forecast equipment failures before they happen with AI-powered predictive maintenance. Sensor data analysis, failure prediction, automated work orders, and maintenance scheduling — integrated into Odoo, SAP, and your ERP.",
+    "Forecast equipment failures before they happen with AI-powered predictive maintenance. Sensor data analysis, failure prediction, automated work orders, and maintenance scheduling, integrated into Odoo, SAP, and your ERP.",
   keywords: [
     "predictive maintenance",
     "AI maintenance",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "Predictive Maintenance — AI-Triggered Work Orders | Wan Buffer",
+    title: "Predictive Maintenance: AI-Triggered Work Orders | Wan Buffer",
     description:
-      "AI that predicts equipment failures before they happen. Sensor data analysis, automated work orders, and maintenance scheduling — eliminating unplanned downtime.",
+      "AI that predicts equipment failures before they happen. Sensor data analysis, automated work orders, and maintenance scheduling, eliminating unplanned downtime.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/predictive-maintenance" },

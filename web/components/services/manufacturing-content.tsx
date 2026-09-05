@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────
-   MANUFACTURING — unique page design
+   MANUFACTURING, unique page design
    Hero split + production dashboard mock · Operations cards · Alternating
    feature rows · Dotted process flow · Multi-plant section ·
    Platforms · FAQ · Closer · Support
@@ -53,18 +53,18 @@ const PROD_LINES = [
 /* ── Manufacturing operations ── */
 const OPERATIONS = [
   { icon: <SettingsIcon />, t: "Production Planning", s: "Master production scheduling with AI-driven demand forecasting, capacity planning, and automated work order generation across multiple work centres.", color: "ai" as const },
-  { icon: <ShieldIcon />, t: "Quality Control", s: "AI-powered quality gates at every stage — incoming inspection, in-process checks, and final QC with automated defect detection and hold protocols.", color: "green" as const },
+  { icon: <ShieldIcon />, t: "Quality Control", s: "AI-powered quality gates at every stage, incoming inspection, in-process checks, and final QC with automated defect detection and hold protocols.", color: "green" as const },
   { icon: <CpuIcon />, t: "Predictive Maintenance", s: "Machine learning models that analyse sensor data, vibration patterns, and cycle counts to predict equipment failures before they cause downtime.", color: "purple" as const },
-  { icon: <ZapIcon />, t: "Autonomous Procurement", s: "AI agents that monitor stock levels, lead times, and production schedules — triggering purchase orders automatically when materials need replenishment.", color: "red" as const },
+  { icon: <ZapIcon />, t: "Autonomous Procurement", s: "AI agents that monitor stock levels, lead times, and production schedules, triggering purchase orders automatically when materials need replenishment.", color: "red" as const },
 ] as const;
 
 /* ── Features ── */
 const FEATURES = [
-  { num: "01", icon: <GridIcon />, t: "Multi-Level BOM Management", s: "Define complex bills of materials with unlimited nesting — sub-assemblies, by-products, co-products, and phantom BOMs. Version control and engineering change orders built in." },
+  { num: "01", icon: <GridIcon />, t: "Multi-Level BOM Management", s: "Define complex bills of materials with unlimited nesting, sub-assemblies, by-products, co-products, and phantom BOMs. Version control and engineering change orders built in." },
   { num: "02", icon: <SettingsIcon />, t: "Work Centre Routing", s: "Configure production routes across work centres with operation sequencing, time studies, and capacity constraints. Real-time shop floor visibility shows exactly where every order stands." },
   { num: "03", icon: <SparklesIcon />, t: "AI Quality Gates", s: "Machine vision and statistical process control powered by AI. Automated pass/fail decisions at each production stage, with full traceability from raw material to finished goods." },
-  { num: "04", icon: <TrendingUpIcon />, t: "Predictive Maintenance", s: "IoT sensor integration with ML models that forecast equipment degradation. Automated work orders triggered before failure — reducing unplanned downtime by up to 45%." },
-  { num: "05", icon: <RefreshIcon />, t: "Autonomous Procurement Agents", s: "AI agents that analyse production schedules, current stock, supplier lead times, and price trends — generating purchase orders autonomously with approval workflows." },
+  { num: "04", icon: <TrendingUpIcon />, t: "Predictive Maintenance", s: "IoT sensor integration with ML models that forecast equipment degradation. Automated work orders triggered before failure, reducing unplanned downtime by up to 45%." },
+  { num: "05", icon: <RefreshIcon />, t: "Autonomous Procurement Agents", s: "AI agents that analyse production schedules, current stock, supplier lead times, and price trends, generating purchase orders autonomously with approval workflows." },
   { num: "06", icon: <BarChartIcon />, t: "Shop Floor Intelligence", s: "Real-time OEE dashboards, production analytics, cycle time tracking, and AI-powered bottleneck detection. Drill from plant-level KPIs to individual machine performance." },
 ] as const;
 
@@ -96,11 +96,11 @@ const PLATFORMS = [
 
 /* ── FAQ ── */
 const FAQS = [
-  { q: "Can you set up multi-level BOMs with sub-assemblies in Odoo?", a: "Yes. We configure multi-level bills of materials with unlimited nesting — sub-assemblies, phantom BOMs, by-products, and co-products. Each BOM level supports version control, engineering change orders, and cost roll-ups across the full product structure." },
+  { q: "Can you set up multi-level BOMs with sub-assemblies in Odoo?", a: "Yes. We configure multi-level bills of materials with unlimited nesting, sub-assemblies, phantom BOMs, by-products, and co-products. Each BOM level supports version control, engineering change orders, and cost roll-ups across the full product structure." },
   { q: "How does AI quality control work on the shop floor?", a: "We integrate AI models that perform visual inspection, statistical process control, and dimensional analysis at each production stage. Defects are flagged in real time with automated hold protocols. Every inspection result is traced back to the raw material lot, operator, and machine." },
-  { q: "What does predictive maintenance require from our machines?", a: "IoT sensors capture vibration, temperature, pressure, and cycle count data from your equipment. Our ML models analyse this data to predict failures 2–4 weeks before they happen. Works with any machine that can be fitted with standard sensors — no proprietary hardware needed." },
+  { q: "What does predictive maintenance require from our machines?", a: "IoT sensors capture vibration, temperature, pressure, and cycle count data from your equipment. Our ML models analyse this data to predict failures 2–4 weeks before they happen. Works with any machine that can be fitted with standard sensors, no proprietary hardware needed." },
   { q: "Can you handle both discrete and process manufacturing?", a: "Yes. We configure discrete manufacturing with work orders and routing, and process manufacturing with batch recipes, yield tracking, and co-product/by-product management. Mixed-mode environments are fully supported." },
-  { q: "How do autonomous procurement agents work?", a: "AI agents continuously monitor production schedules, current inventory, supplier lead times, and price trends. When materials need replenishment, the agent generates a purchase order with the optimal quantity and supplier — routed through your existing approval workflow." },
+  { q: "How do autonomous procurement agents work?", a: "AI agents continuously monitor production schedules, current inventory, supplier lead times, and price trends. When materials need replenishment, the agent generates a purchase order with the optimal quantity and supplier, routed through your existing approval workflow." },
   { q: "How long does a manufacturing ERP implementation take?", a: "Basic MRP setup takes 4–6 weeks. Full manufacturing ERP with quality gates, predictive maintenance, and AI agents takes 10–16 weeks. Complex multi-plant environments with IoT integration take 12–20 weeks." },
 ] as const;
 
@@ -109,7 +109,7 @@ export function ManufacturingContent() {
   return (
     <main className="svc-page">
 
-      {/* ═══ HERO — text left + production dashboard right ═══ */}
+      {/* ═══ HERO: text left + production dashboard right ═══ */}
       <section className="mf-hero">
         <div className="mf-hero-glow mf-hero-glow-1" aria-hidden="true" />
         <div className="mf-hero-glow mf-hero-glow-2" aria-hidden="true" />
@@ -124,7 +124,7 @@ export function ManufacturingContent() {
               <span className="acc">AI on the shop floor.</span>
             </h1>
             <p className="mf-hero-sub rev">
-              Multi-level BOM management, work centre routing, AI quality gates, predictive maintenance, and autonomous procurement — <strong>integrated into your ERP.</strong>
+              Multi-level BOM management, work centre routing, AI quality gates, predictive maintenance, and autonomous procurement, <strong>integrated into your ERP.</strong>
             </p>
             <div className="mf-hero-ctas rev">
               <a className="oi-hero-lux-primary" href="#contact">
@@ -137,7 +137,7 @@ export function ManufacturingContent() {
 
           {/* Production dashboard mockup */}
           <div className="mf-dash rev">
-            <div className="mf-dash-title">Production Lines — Live Status</div>
+            <div className="mf-dash-title">Production Lines: Live Status</div>
             <div className="mf-dash-grid">
               {PROD_LINES.map((l) => (
                 <div key={l.line} className={`mf-line mf-line-${l.status}`}>
@@ -159,7 +159,7 @@ export function ManufacturingContent() {
         </div>
       </section>
 
-      {/* ═══ OPERATIONS — 4 cards ═══ */}
+      {/* ═══ OPERATIONS: 4 cards ═══ */}
       <section className="mf-ops">
         <div className="mf-ops-inner">
           <div className="mf-ops-hdr rev">
@@ -178,7 +178,7 @@ export function ManufacturingContent() {
         </div>
       </section>
 
-      {/* ═══ FEATURES — alternating rows ═══ */}
+      {/* ═══ FEATURES: alternating rows ═══ */}
       <section className="mf-feat" id="features">
         <div className="mf-feat-inner">
           <div className="mf-feat-hdr rev">
@@ -200,7 +200,7 @@ export function ManufacturingContent() {
         </div>
       </section>
 
-      {/* ═══ PROCESS — dotted flow ═══ */}
+      {/* ═══ PROCESS: dotted flow ═══ */}
       <section className="mf-proc" id="process">
         <div className="mf-proc-inner">
           <div className="mf-proc-hdr rev">
@@ -238,7 +238,7 @@ export function ManufacturingContent() {
         </div>
       </section>
 
-      {/* ═══ MULTI-PLANT — split ═══ */}
+      {/* ═══ MULTI-PLANT: split ═══ */}
       <section className="mf-multi" id="multi-plant">
         <div className="mf-multi-inner">
           <div className="mf-multi-hdr rev">
@@ -249,7 +249,7 @@ export function ManufacturingContent() {
             <div className="mf-multi-left">
               <div className="mf-multi-big-n">3+</div>
               <div className="mf-multi-big-l">Production facilities managed from one ERP</div>
-              <p className="mf-multi-big-s">Inter-plant transfers, centralised BOM management, and plant-specific routing — all orchestrated from a single system with real-time production visibility across every location.</p>
+              <p className="mf-multi-big-s">Inter-plant transfers, centralised BOM management, and plant-specific routing, all orchestrated from a single system with real-time production visibility across every location.</p>
             </div>
             <div className="mf-multi-right">
               {PLANTS.map((plant) => (
@@ -311,10 +311,10 @@ export function ManufacturingContent() {
                 <div className="oi-closer-insight-stat">72%<span></span></div>
                 <div className="oi-closer-insight-body">
                   <strong>of manufacturers still rely on manual quality checks.</strong>
-                  Source: Deloitte, 2024. The result is undetected defects, production waste, unplanned downtime, and zero visibility into equipment health — problems that compound as production scales.
+                  Source: Deloitte, 2024. The result is undetected defects, production waste, unplanned downtime, and zero visibility into equipment health, problems that compound as production scales.
                 </div>
               </div>
-              <p>That&apos;s why every Wan Buffer manufacturing deployment covers the full production lifecycle — not just order tracking. Four commitments, written into the contract.</p>
+              <p>That&apos;s why every Wan Buffer manufacturing deployment covers the full production lifecycle, not just order tracking. Four commitments, written into the contract.</p>
             </div>
           </div>
 
@@ -325,25 +325,25 @@ export function ManufacturingContent() {
                 <div className="oi-closer-commit-num">01</div>
                 <div className="oi-closer-commit-icon"><GridIcon /></div>
                 <div className="oi-closer-commit-t">Production flow mapped digitally</div>
-                <p className="oi-closer-commit-b">We map your actual production — work centres, routing, BOMs, and quality checkpoints — into the MRP. Every product has a precise digital production blueprint that mirrors your shop floor.</p>
+                <p className="oi-closer-commit-b">We map your actual production, work centres, routing, BOMs, and quality checkpoints, into the MRP. Every product has a precise digital production blueprint that mirrors your shop floor.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">02</div>
                 <div className="oi-closer-commit-icon"><TargetIcon /></div>
                 <div className="oi-closer-commit-t">Pre-agreed OEE targets</div>
-                <p className="oi-closer-commit-b">Overall Equipment Effectiveness, defect rates, and production cycle times are defined before go-live. If we miss targets, we keep iterating — at our cost.</p>
+                <p className="oi-closer-commit-b">Overall Equipment Effectiveness, defect rates, and production cycle times are defined before go-live. If we miss targets, we keep iterating, at our cost.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">03</div>
                 <div className="oi-closer-commit-icon"><CpuIcon /></div>
                 <div className="oi-closer-commit-t">AI-first quality &amp; maintenance</div>
-                <p className="oi-closer-commit-b">Every quality checkpoint is AI-powered. Every critical machine is sensor-monitored. No manual-only inspection, no reactive maintenance — data-driven decisions at every stage.</p>
+                <p className="oi-closer-commit-b">Every quality checkpoint is AI-powered. Every critical machine is sensor-monitored. No manual-only inspection, no reactive maintenance, data-driven decisions at every stage.</p>
               </div>
               <div className="oi-closer-commit">
                 <div className="oi-closer-commit-num">04</div>
                 <div className="oi-closer-commit-icon"><UsersIcon /></div>
                 <div className="oi-closer-commit-t">Senior manufacturing engineers only</div>
-                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your production is the one who configures, migrates, trains, and supports — named in the contract.</p>
+                <p className="oi-closer-commit-b">No juniors, no outsourcing. The engineer who maps your production is the one who configures, migrates, trains, and supports, named in the contract.</p>
               </div>
             </div>
           </div>

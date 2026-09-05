@@ -11,7 +11,7 @@ import { AiChatbotsContent } from "@/components/services/ai-chatbots-content";
 export const metadata: Metadata = {
   title: "AI Chatbots & Copilots | Natural Language ERP Interaction | Wan Buffer",
   description:
-    "Deploy AI chatbots and copilots that let your team interact with ERP systems using natural language. Query data, trigger workflows, generate reports, and get instant answers — directly inside Odoo, Zoho, Salesforce, and SAP.",
+    "Deploy AI chatbots and copilots that let your team interact with ERP systems using natural language. Query data, trigger workflows, generate reports, and get instant answers, directly inside Odoo, Zoho, Salesforce, and SAP.",
   keywords: [
     "AI chatbots for ERP",
     "ERP copilot",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "AI Chatbots & Copilots — Natural Language ERP Interaction | Wan Buffer",
+    title: "AI Chatbots & Copilots: Natural Language ERP Interaction | Wan Buffer",
     description:
-      "AI chatbots and copilots that turn natural language into ERP actions. Query data, trigger workflows, and generate reports — no clicks, no menus, just conversation.",
+      "AI chatbots and copilots that turn natural language into ERP actions. Query data, trigger workflows, and generate reports, no clicks, no menus, just conversation.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/ai-chatbots" },

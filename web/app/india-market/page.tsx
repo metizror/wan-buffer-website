@@ -9,7 +9,7 @@ import { HomeWanny } from "@/components/home/wanny";
 import { IndiaMarketContent } from "@/components/services/india-market-content";
 
 export const metadata: Metadata = {
-  title: "India Market ERP | GST E-Invoicing, Razorpay & MRP/Manufacturing — Wan Buffer",
+  title: "India Market ERP | GST E-Invoicing, Razorpay & MRP/Manufacturing | Wan Buffer",
   description:
     "India-ready ERP with GST e-invoicing, e-way bill automation, Razorpay payment integration, TDS/TCS compliance, MRP and manufacturing modules, and UPI payment collection. For Indian manufacturers, traders, and service businesses across all states.",
   keywords: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Buffer — Odoo AI Integration & ERP Automation",
+        alt: "Wan Buffer | Odoo AI Integration & ERP Automation",
       },
     ],
     type: "website",
-    title: "India Market ERP — GST E-Invoicing, Razorpay & MRP/Manufacturing | Wan Buffer",
+    title: "India Market ERP: GST E-Invoicing, Razorpay & MRP/Manufacturing | Wan Buffer",
     description:
-      "India-ready ERP with GST e-invoicing, Razorpay, TDS/TCS, MRP, and payroll compliance — for manufacturers, traders, and service businesses across India.",
+      "India-ready ERP with GST e-invoicing, Razorpay, TDS/TCS, MRP, and payroll compliance, for manufacturers, traders, and service businesses across India.",
     siteName: "Wan Buffer",
   },
   alternates: { canonical: "https://wanbuffer.com/india-market" },
