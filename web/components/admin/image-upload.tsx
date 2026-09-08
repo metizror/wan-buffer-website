@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { IMAGE_ACCEPT, uploadImage } from "@/lib/upload-client";
 
 interface ImageUploadProps {
   label: string;
@@ -26,17 +27,9 @@ export function ImageUpload({
     setError("");
     setUploading(true);
     try {
-      const fd = new FormData();
-      fd.append("file", file);
-      const res = await fetch("/api/upload", { method: "POST", body: fd });
-      const data = await res.json();
-      if (!res.ok) {
-        setError(data.error || "Upload failed");
-        return;
-      }
-      onChange(data.url);
-    } catch {
-      setError("Upload failed");
+      onChange(await uploadImage(file));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Upload failed");
     } finally {
       setUploading(false);
       if (inputRef.current) inputRef.current.value = "";
@@ -61,7 +54,7 @@ export function ImageUpload({
           <input
             ref={inputRef}
             type="file"
-            accept="image/*"
+            accept={IMAGE_ACCEPT}
             hidden
             onChange={(e) => {
               const f = e.target.files?.[0];

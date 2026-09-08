@@ -4,13 +4,12 @@ import path from "node:path";
 
 const MAX_BYTES = 8 * 1024 * 1024; // 8 MB
 
+// SVG is deliberately absent: it can carry <script>, and anything served from
+// /uploads runs on our own origin.
 const ALLOWED: Record<string, string> = {
   "image/jpeg": "jpg",
   "image/png": "png",
   "image/webp": "webp",
-  "image/gif": "gif",
-  "image/svg+xml": "svg",
-  "image/avif": "avif",
 };
 
 export interface SavedUpload {
@@ -39,7 +38,7 @@ export async function saveUploadedImage(file: File): Promise<SavedUpload> {
   const ext = ALLOWED[file.type];
   if (!ext) {
     throw new Error(
-      "Unsupported file type. Allowed: JPG, PNG, WebP, GIF, SVG, AVIF."
+      "Unsupported file type. Allowed: JPG, JPEG, PNG, WebP."
     );
   }
   if (file.size > MAX_BYTES) {

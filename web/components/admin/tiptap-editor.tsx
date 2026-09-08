@@ -6,20 +6,11 @@ import Image from "@tiptap/extension-image";
 import Link from "@tiptap/extension-link";
 import Placeholder from "@tiptap/extension-placeholder";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { IMAGE_ACCEPT, uploadImage } from "@/lib/upload-client";
 
 interface TipTapEditorProps {
   value: string;
   onChange: (html: string) => void;
-}
-
-/** POST a picked file to the upload API and return its saved, site-relative URL. */
-async function uploadImage(file: File): Promise<string> {
-  const fd = new FormData();
-  fd.append("file", file);
-  const res = await fetch("/api/upload", { method: "POST", body: fd });
-  const data = await res.json();
-  if (!res.ok) throw new Error(data.error || "Upload failed");
-  return data.url as string;
 }
 
 export function TipTapEditor({ value, onChange }: TipTapEditorProps) {
@@ -197,7 +188,7 @@ export function TipTapEditor({ value, onChange }: TipTapEditorProps) {
               <input
                 ref={fileRef}
                 type="file"
-                accept="image/*"
+                accept={IMAGE_ACCEPT}
                 hidden
                 onChange={(e) => {
                   const f = e.target.files?.[0];
