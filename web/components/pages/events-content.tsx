@@ -86,15 +86,10 @@ export async function EventsContent() {
             <h2 className="oi-evt-promo-title">Odoo Community Days India 2025</h2>
             <p className="oi-evt-promo-dates">13 – 14 August 2025</p>
           </div>
-          <a
-            href="https://wanbuffer.com/odoo-community-day/"
-            className="oi-evt-promo-cta"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="/event/odoo-experience-2026-india" className="oi-evt-promo-cta">
             Learn more
             <ArrowRightIcon />
-          </a>
+          </Link>
         </div>
       </section>
 

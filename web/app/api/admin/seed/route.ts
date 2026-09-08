@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { BLOG_POSTS, type BlogSection } from "@/lib/blogs-data";
 import { getDb } from "@/lib/mongodb";
-import { createAdmin } from "@/lib/admin-service";
+import { verifySession } from "@/lib/dal";
+import { logAudit } from "@/lib/audit-service";
 import { ensureIndexes } from "@/lib/blog-service";
 
 function sectionsToHtml(sections: BlogSection[]): string {
@@ -19,7 +20,19 @@ function sectionsToHtml(sections: BlogSection[]): string {
     .join("");
 }
 
+/**
+ * One-off import of the static seed in `lib/blogs-data` into Mongo.
+ *
+ * Admin-only: it writes to the blogs collection, so it is guarded like every
+ * other route under /api/admin. It no longer provisions an admin account —
+ * reaching this handler already requires one.
+ */
 export async function POST() {
+  const session = await verifySession();
+  if (!session) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   try {
     const db = await getDb();
     const blogsCol = db.collection("blogs");
@@ -56,17 +69,22 @@ export async function POST() {
     await blogsCol.insertMany(docs);
     await ensureIndexes();
 
-    // Create default admin user
-    const defaultPassword = process.env.ADMIN_DEFAULT_PASSWORD || "admin@123";
-    await createAdmin("Admin", "admin@wanbuffer.com", defaultPassword);
+    await logAudit({
+      userId: session.userId,
+      userEmail: session.email,
+      action: "bulk",
+      entityType: "blog",
+      entityId: "",
+      entityName: `Seeded ${docs.length} blogs`,
+    });
 
     return NextResponse.json({
       success: true,
       blogsInserted: docs.length,
-      message: "Seeded successfully. Default admin: email=admin@wanbuffer.com",
+      message: `Seeded ${docs.length} blogs.`,
     });
   } catch (err) {
-    const message = err instanceof Error ? err.message : "Seed failed";
-    return NextResponse.json({ error: message }, { status: 500 });
+    console.error("Blog seed failed:", err);
+    return NextResponse.json({ error: "Seed failed" }, { status: 500 });
   }
 }
