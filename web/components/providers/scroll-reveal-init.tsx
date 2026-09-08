@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 interface WindowWithClientRuntime extends Window {
   initScrollReveal?: (root?: ParentNode | Document | null) => void;
   initHeroStatsCounters?: () => void;
+  initHomeSections?: () => void;
   initHeroCanvas?: () => void;
 }
 
@@ -21,6 +22,10 @@ export function ScrollRevealInit() {
     if (typeof w.initScrollReveal !== "function") return;
     w.initScrollReveal(document);
     w.initHeroStatsCounters?.();
+    // Tech-stack pills, the record counters and the philosophy quote are hidden
+    // until their observers fire; those observers were bound to the DOM this
+    // navigation just replaced.
+    w.initHomeSections?.();
     // The hero <canvas> is a fresh element after every navigation back to `/`,
     // so its particle network has to be re-attached or it renders blank.
     w.initHeroCanvas?.();

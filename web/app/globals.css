@@ -20,3 +20,15 @@ html.no-reveal .rev {
   opacity: 1 !important;
   transform: none !important;
 }
+
+/* Same failsafe for the home sections that hide themselves outside `.rev`:
+   the tech-stack pills and the philosophy quote lines are only made visible by
+   home-runtime.js, so without this they stay blank if it never arrives. */
+html.no-reveal .ts-pill {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+html.no-reveal .phil-quote .ph-inner {
+  transform: none !important;
+}

@@ -891,6 +891,7 @@ select.fi option{background:var(--navy2)}
 .f-btn:hover::before{transform:scaleX(1)}
 .f-btn span{position:relative;z-index:1}
 .f-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(232,57,42,.3)}
+footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.05);padding:clamp(52px,7vw,80px) var(--pad)}
 .f-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:clamp(24px,4vw,48px);padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:32px}
 .f-logo-w{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .f-logo-img{height:clamp(48px,4vw,64px);width:auto;display:block}

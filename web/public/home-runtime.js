@@ -123,10 +123,38 @@ initScrollReveal(document);
 /* Reveal is live: disarm the blank-page failsafe armed in app/layout.tsx. */
 clearTimeout(window.__wbRevealFailsafe);
 
-/* Observer helper */
+/* Observer helper.
+
+   `isIntersecting` at a single threshold is too fragile for the sections below:
+   a fling scroll can carry a short band clean past the viewport between two
+   frames, and the callbacks here are what makes the content visible at all
+   (.ts-pill and .phil-quote are authored hidden), so a missed frame leaves a
+   permanently blank section. So fire on any of: the element reaching the fold,
+   the requested ratio, or the element having already gone by above. Binding is
+   idempotent per element, which lets initHomeSections() re-bind after a client
+   navigation replaces the DOM. */
 const obs=(sel,cb,t=.3)=>{
-  const el=document.querySelector(sel);if(!el)return;
-  new IntersectionObserver(entries=>{if(entries[0].isIntersecting)cb(el)},{threshold:t}).observe(el);
+  const el=document.querySelector(sel);if(!el||el.__wbObs)return;
+  el.__wbObs=1;
+  let done=false;
+  const reached=r=>r.bottom<=0||(r.bottom>0&&r.top<window.innerHeight*.9);
+  const check=()=>{if(reached(el.getBoundingClientRect()))fire()};
+  const fire=()=>{
+    if(done)return;done=true;
+    io.disconnect();window.removeEventListener('scroll',check);
+    cb(el);
+  };
+  const io=new IntersectionObserver(entries=>{
+    const e=entries[entries.length-1];
+    if(e.intersectionRatio>=t||reached(e.boundingClientRect))fire();
+  },{threshold:[0,.1,.25,.5,.75,1]});
+  io.observe(el);
+  /* An anchor jump, a restored scroll position, or a fling can move the page
+     far enough in one frame that the ratio never leaves 0 and the observer is
+     never called at all. The scroll listener catches that; it unbinds itself
+     the moment the section fires. */
+  window.addEventListener('scroll',check,{passive:true});
+  check();
 };
 
 /* Hero stats counters (c1–c4), re-run via window.initHeroStatsCounters() after client navigations */
@@ -150,21 +178,28 @@ function initHeroStatsCounters(){
 }
 window.initHeroStatsCounters=initHeroStatsCounters;
 initHeroStatsCounters();
-obs('#recStats',el=>{
-  animCount(document.getElementById('r1'),254,1800);
-  animCount(document.getElementById('r2'),20,1200);
-  animCount(document.getElementById('r3'),96,1500);
-  animCount(document.getElementById('r4'),50,1400);
-  el.querySelectorAll('.rec-stat').forEach((s,i)=>setTimeout(()=>s.classList.add('filled'),i*250));
-});
+/* Home sections whose content is hidden until observed, re-run via
+   window.initHomeSections() after client navigations (obs() no-ops on an
+   element it already watches, so re-running is safe). */
+function initHomeSections(){
+  obs('#recStats',el=>{
+    animCount(document.getElementById('r1'),254,1800);
+    animCount(document.getElementById('r2'),20,1200);
+    animCount(document.getElementById('r3'),96,1500);
+    animCount(document.getElementById('r4'),50,1400);
+    el.querySelectorAll('.rec-stat').forEach((s,i)=>setTimeout(()=>s.classList.add('filled'),i*250));
+  });
 
-/* Tech pills wave */
-obs('#tsGrid',el=>{
-  el.querySelectorAll('.ts-pill').forEach((p,i)=>setTimeout(()=>p.classList.add('popped'),i*40));
-});
+  /* Tech pills wave */
+  obs('#tsGrid',el=>{
+    el.querySelectorAll('.ts-pill').forEach((p,i)=>setTimeout(()=>p.classList.add('popped'),i*40));
+  });
 
-/* Philosophy reveal */
-obs('#philQuote',el=>el.classList.add('revealed'),.4);
+  /* Philosophy reveal */
+  obs('#philQuote',el=>el.classList.add('revealed'),.4);
+}
+window.initHomeSections=initHomeSections;
+initHomeSections();
 
 /* 3D card tilt */
 ['mc0','mc1','mc2','mc3'].forEach(id=>{
