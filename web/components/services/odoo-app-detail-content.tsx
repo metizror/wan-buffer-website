@@ -108,7 +108,7 @@ export function OdooAppDetailContent({ app }: OdooAppDetailContentProps) {
                   </li>
                   <li>
                     <CheckIcon />
-                    <span>99 days free support included</span>
+                    <span>90 days free support included</span>
                   </li>
                   <li>
                     <CheckIcon />

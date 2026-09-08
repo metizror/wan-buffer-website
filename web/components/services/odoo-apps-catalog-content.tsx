@@ -29,7 +29,7 @@ const WHY_POINTS = [
   },
   {
     title: "Supported after purchase",
-    body: "Every module includes 99 days of free support from Wan Buffer. If you need help with installation, configuration, or a bug fix, you can reach our team directly.",
+    body: "Every module includes 90 days of free support from Wan Buffer. If you need help with installation, configuration, or a bug fix, you can reach our team directly.",
   },
   {
     title: "Ready for multiple environments",
@@ -84,12 +84,12 @@ export function OdooAppsCatalogContent() {
               <p className="oi-hero-lux-sub">
                 Browse modules for sales, inventory, accounting, and productivity. Each listing
                 includes screenshots, setup notes, and{" "}
-                <strong>99 days of free support</strong> on the Odoo Apps Store.
+                <strong>90 days of free support</strong> on the Odoo Apps Store.
               </p>
 
               <div className="oa-hero-pills">
                 <span className="oa-hero-pill">{apps.length} published apps</span>
-                <span className="oa-hero-pill">99-day free support</span>
+                <span className="oa-hero-pill">90-day free support</span>
                 <span className="oa-hero-pill">Odoo 17, 18, and 19</span>
               </div>
 
@@ -156,7 +156,7 @@ export function OdooAppsCatalogContent() {
                       {item}
                     </span>
                   ))}
-                  {featuredApp.versions.slice(0, 2).map((item) => (
+                  {featuredApp.versions.map((item) => (
                     <span key={item} className="oa-version-tag">
                       v{item}
                     </span>
