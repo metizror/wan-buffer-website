@@ -5,14 +5,30 @@ import StarterKit from "@tiptap/starter-kit";
 import Image from "@tiptap/extension-image";
 import Link from "@tiptap/extension-link";
 import Placeholder from "@tiptap/extension-placeholder";
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface TipTapEditorProps {
   value: string;
   onChange: (html: string) => void;
 }
 
+/** POST a picked file to the upload API and return its saved, site-relative URL. */
+async function uploadImage(file: File): Promise<string> {
+  const fd = new FormData();
+  fd.append("file", file);
+  const res = await fetch("/api/upload", { method: "POST", body: fd });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || "Upload failed");
+  return data.url as string;
+}
+
 export function TipTapEditor({ value, onChange }: TipTapEditorProps) {
+  const fileRef = useRef<HTMLInputElement>(null);
+  const [imgOpen, setImgOpen] = useState(false);
+  const [imgUrl, setImgUrl] = useState("");
+  const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState("");
+
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
@@ -34,13 +50,64 @@ export function TipTapEditor({ value, onChange }: TipTapEditorProps) {
     }
   }, [value, editor]);
 
-  const addImage = useCallback(() => {
+  const insertImage = useCallback(
+    (src: string) => {
+      editor?.chain().focus().setImage({ src }).run();
+    },
+    [editor]
+  );
+
+  /** Upload to the server first so the post never points at a temporary blob. */
+  const handleFile = useCallback(
+    async (file: File) => {
+      setError("");
+      setUploading(true);
+      try {
+        insertImage(await uploadImage(file));
+        setImgOpen(false);
+        setImgUrl("");
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Upload failed");
+      } finally {
+        setUploading(false);
+        if (fileRef.current) fileRef.current.value = "";
+      }
+    },
+    [insertImage]
+  );
+
+  // Pasting or dragging an image file in should save it to the server too,
+  // otherwise the editor would embed a browser-local blob: URL.
+  useEffect(() => {
     if (!editor) return;
-    const url = window.prompt("Enter image URL:");
-    if (url) {
-      editor.chain().focus().setImage({ src: url }).run();
+    const dom = editor.view.dom;
+
+    function imageFrom(list: FileList | null | undefined) {
+      const files = list ? Array.from(list) : [];
+      return files.find((f) => f.type.startsWith("image/"));
     }
-  }, [editor]);
+
+    function onPaste(e: ClipboardEvent) {
+      const file = imageFrom(e.clipboardData?.files);
+      if (!file) return;
+      e.preventDefault();
+      void handleFile(file);
+    }
+
+    function onDrop(e: DragEvent) {
+      const file = imageFrom(e.dataTransfer?.files);
+      if (!file) return;
+      e.preventDefault();
+      void handleFile(file);
+    }
+
+    dom.addEventListener("paste", onPaste);
+    dom.addEventListener("drop", onDrop);
+    return () => {
+      dom.removeEventListener("paste", onPaste);
+      dom.removeEventListener("drop", onDrop);
+    };
+  }, [editor, handleFile]);
 
   const addLink = useCallback(() => {
     if (!editor) return;
@@ -111,9 +178,76 @@ export function TipTapEditor({ value, onChange }: TipTapEditorProps) {
         >
           Link
         </button>
-        <button type="button" onClick={addImage}>
-          Image
-        </button>
+
+        <div className="adm-editor-imgmenu">
+          <button
+            type="button"
+            onClick={() => {
+              setError("");
+              setImgOpen((o) => !o);
+            }}
+            className={imgOpen ? "is-active" : ""}
+            aria-expanded={imgOpen}
+          >
+            Image
+          </button>
+
+          {imgOpen && (
+            <div className="adm-editor-imgpop">
+              <input
+                ref={fileRef}
+                type="file"
+                accept="image/*"
+                hidden
+                onChange={(e) => {
+                  const f = e.target.files?.[0];
+                  if (f) void handleFile(f);
+                }}
+              />
+              <button
+                type="button"
+                className="adm-btn adm-btn-secondary adm-btn-sm"
+                onClick={() => fileRef.current?.click()}
+                disabled={uploading}
+              >
+                {uploading ? "Uploading..." : "Upload image"}
+              </button>
+
+              <input
+                type="text"
+                value={imgUrl}
+                onChange={(e) => setImgUrl(e.target.value)}
+                placeholder="or paste an image URL"
+                onKeyDown={(e) => {
+                  if (e.key !== "Enter") return;
+                  e.preventDefault();
+                  if (!imgUrl.trim()) return;
+                  insertImage(imgUrl.trim());
+                  setImgUrl("");
+                  setImgOpen(false);
+                }}
+              />
+              <button
+                type="button"
+                className="adm-btn adm-btn-sm"
+                disabled={!imgUrl.trim() || uploading}
+                onClick={() => {
+                  insertImage(imgUrl.trim());
+                  setImgUrl("");
+                  setImgOpen(false);
+                }}
+              >
+                Insert link
+              </button>
+
+              <p className="adm-editor-imghint">
+                Uploads are saved on the server under /uploads. You can also
+                paste or drag an image straight into the editor.
+              </p>
+              {error && <p className="adm-field-error">{error}</p>}
+            </div>
+          )}
+        </div>
       </div>
       <div className="adm-editor-content">
         <EditorContent editor={editor} />
