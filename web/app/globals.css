@@ -10,3 +10,13 @@
   content-visibility: auto;
   contain-intrinsic-size: 1px 720px;
 }
+
+/* Reveal-on-scroll failsafe. `html.js .rev` starts at opacity:0 and only becomes
+   visible once home-runtime.js adds `.go`. If that script never loads, show the
+   content instead of leaving the page blank. The timer is armed in app/layout.tsx
+   and cleared by the runtime itself. !important is needed to beat the same rule
+   in the site-full.css that non-home pages append at runtime. */
+html.no-reveal .rev {
+  opacity: 1 !important;
+  transform: none !important;
+}

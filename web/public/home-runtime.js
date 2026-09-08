@@ -18,7 +18,11 @@ window.openNav = function openNav(){document.getElementById('mobNav')?.classList
 window.closeNav = function closeNav(){document.getElementById('mobNav')?.classList.remove('open');document.body.style.overflow=''};
 
 /* Hero canvas: particle network (paused off-screen / reduced on mobile) */
-;(function(){
+/* Re-runnable: a client-side navigation back to `/` mounts a brand new <canvas>,
+   so this has to be callable again rather than a one-shot IIFE. Each call tears
+   down the previous instance so navigations cannot stack up rAF loops. */
+window.initHeroCanvas=function(){
+  if(window.__wbHeroCanvasTeardown){window.__wbHeroCanvasTeardown();window.__wbHeroCanvasTeardown=null;}
   const canvas=document.getElementById('heroCanvas');
   if(!canvas)return;
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){canvas.remove();return;}
@@ -31,11 +35,16 @@ window.closeNav = function closeNav(){document.getElementById('mobNav')?.classLi
   function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight}
   resize();
   let resizePending=false;
-  window.addEventListener('resize',()=>{
+  function scheduleResize(){
     if(resizePending)return;
     resizePending=true;
     requestAnimationFrame(()=>{resizePending=false;resize();});
-  });
+  }
+  /* The hero box settles after the webfonts land, well after this script runs.
+     Watch the element itself so the bitmap never stays at a stale size and gets
+     stretched by CSS; this covers window resizes too. */
+  const ro='ResizeObserver' in window?new ResizeObserver(scheduleResize):null;
+  if(ro)ro.observe(canvas);else window.addEventListener('resize',scheduleResize);
   for(let i=0;i<N;i++) pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.8+.4,ai:Math.random()>.6});
   function draw(){
     if(!running)return;
@@ -61,15 +70,20 @@ window.closeNav = function closeNav(){document.getElementById('mobNav')?.classLi
   }
   function start(){if(running||document.hidden)return;running=true;raf=requestAnimationFrame(draw);}
   function stop(){running=false;if(raf)cancelAnimationFrame(raf);raf=0;}
-  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else if(canvas.isConnected)start();});
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(entries=>{
-      if(entries[0].isIntersecting) start(); else stop();
-    },{threshold:0.05}).observe(canvas);
-  } else {
-    start();
-  }
-})();
+  function onVisibility(){if(document.hidden)stop();else if(canvas.isConnected)start();}
+  document.addEventListener('visibilitychange',onVisibility);
+  const io='IntersectionObserver' in window?new IntersectionObserver(entries=>{
+    if(entries[0].isIntersecting) start(); else stop();
+  },{threshold:0.05}):null;
+  if(io)io.observe(canvas);else start();
+  window.__wbHeroCanvasTeardown=function(){
+    stop();
+    if(ro)ro.disconnect();else window.removeEventListener('resize',scheduleResize);
+    if(io)io.disconnect();
+    document.removeEventListener('visibilitychange',onVisibility);
+  };
+};
+window.initHeroCanvas();
 
 /* Counter animation */
 function animCount(el,target,dur){
@@ -106,6 +120,8 @@ function initScrollReveal(root){
 }
 window.initScrollReveal=initScrollReveal;
 initScrollReveal(document);
+/* Reveal is live: disarm the blank-page failsafe armed in app/layout.tsx. */
+clearTimeout(window.__wbRevealFailsafe);
 
 /* Observer helper */
 const obs=(sel,cb,t=.3)=>{
@@ -186,7 +202,9 @@ function persistLeadPopupDismissed(){
 
 function openPopup(){
   if(popupShown || hasLeadPopupDismissed()) return;
-  if(typeof WANNY !== 'undefined' && WANNY._isOpen && WANNY._isOpen()){
+  /* WANNY is null whenever the chat widget is absent from the page, and
+     `typeof null` is 'object' — so check the value, not just its typeof. */
+  if(WANNY && typeof WANNY._isOpen === 'function' && WANNY._isOpen()){
     popupDeferred = true;
     return;
   }
@@ -1184,7 +1202,7 @@ Section currently viewing: ${currentSection || 'homepage'}
 })();
 
 
-window.openWanny = function(){ if (typeof WANNY !== 'undefined' && WANNY.open) WANNY.open(); };
+window.openWanny = function(){ if (WANNY && typeof WANNY.open === 'function') WANNY.open(); };
 
 ;(function(){
   var stack = document.getElementById('float-stack');

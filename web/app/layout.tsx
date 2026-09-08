@@ -4,6 +4,7 @@ import { Montserrat, Poppins } from "next/font/google";
 
 import { HomeOxpFloat } from "@/components/home/oxp-float";
 import { ScrollRevealInit } from "@/components/providers/scroll-reveal-init";
+import { SiteFullCss } from "@/components/providers/site-full-css";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -60,41 +61,44 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `if(location.pathname!=='/'){var l=document.createElement('link');l.rel='stylesheet';l.href='/site-full.css';document.head.appendChild(l);}`,
+            __html: `if(location.pathname!=='/'){var l=document.createElement('link');l.id='site-full-css';l.rel='stylesheet';l.href='/site-full.css';document.head.appendChild(l);}`,
           }}
         />
         <style dangerouslySetInnerHTML={{ __html: `section.hero{background:#0B1627;color:#fff;position:relative;overflow:hidden}section.hero .hero-h1{font-family:var(--font-montserrat),system-ui,sans-serif;font-weight:800;font-size:clamp(42px,11vw,58px);line-height:1.05;margin:0 0 16px;color:#fff}section.hero .hero-sub{font-family:var(--font-poppins),system-ui,sans-serif;font-weight:400;font-size:13px;line-height:1.45;color:rgba(255,255,255,.7);margin:0 0 20px}` }} />
       </head>
       <body suppressHydrationWarning>
         <Script id="js-class" strategy="beforeInteractive">
-          {`document.documentElement.classList.add('js');`}
+          {`document.documentElement.classList.add('js');window.__wbRevealFailsafe=setTimeout(function(){document.documentElement.classList.add('no-reveal')},4000);`}
         </Script>
-        {/* Defer analytics + home-runtime until idle/interaction, keeps TBT low for LCP. */}
-        <Script id="defer-heavy" strategy="afterInteractive">{`
+        {/* The site's own runtime: mobile nav, scroll reveal, hero counters, FAQ
+            accordions. It owns the `.go` class that reveals every `.rev`
+            element, so it cannot be deferred behind analytics — a visitor would
+            stare at an empty page until it arrived. globals.css `.no-reveal`
+            covers the case where it fails to load at all. */}
+        <Script id="home-runtime" src="/home-runtime.js" strategy="afterInteractive" />
+        {/* Analytics only. Nothing rendered or clickable depends on it, so it
+            waits for an idle moment (or the first interaction, whichever wins). */}
+        <Script id="defer-analytics" strategy="afterInteractive">{`
           (function () {
-            function loadHeavy() {
-              if (window.__wbHeavyLoaded) return;
-              window.__wbHeavyLoaded = 1;
-              var r = document.createElement('script');
-              r.src = '/home-runtime.js';
-              r.async = true;
-              document.body.appendChild(r);
+            function load() {
+              if (window.__wbAnalyticsLoaded) return;
+              window.__wbAnalyticsLoaded = 1;
               var a = document.createElement('script');
               a.src = 'https://d2mvefebd70kbz.cloudfront.net/scripts/01a0139a-1594-715e-9e44-1eb5858732ec.js';
               a.async = true;
               document.body.appendChild(a);
             }
-            // Interaction only for 12s, avoid requestIdleCallback during Lighthouse lab window.
-            var t = setTimeout(loadHeavy, 12000);
-            function kick() {
-              clearTimeout(t);
-              loadHeavy();
+            if (window.requestIdleCallback) {
+              requestIdleCallback(load, { timeout: 3000 });
+            } else {
+              setTimeout(load, 3000);
             }
             ['pointerdown', 'keydown', 'touchstart'].forEach(function (e) {
-              window.addEventListener(e, kick, { once: true, passive: true });
+              window.addEventListener(e, load, { once: true, passive: true });
             });
           })();
         `}</Script>
+        <SiteFullCss />
         <ScrollRevealInit />
         {children}
         <HomeOxpFloat />
