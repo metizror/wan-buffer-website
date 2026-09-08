@@ -17,7 +17,7 @@ import { ArrowRightIcon, CheckIcon } from "./odoo-service-icons";
 const STATS = [
   // Derived so the headline count cannot drift as apps are added to the catalog.
   { n: String(getAllOdooApps().length), l: "Odoo apps published", g: false },
-  { n: "99", l: "Days free support", g: true },
+  { n: "90", l: "Days free support", g: true },
   { n: "254+", l: "Happy customers", g: false },
   { n: "17 / 18 / 19", l: "Odoo versions supported", g: false },
 ] as const;

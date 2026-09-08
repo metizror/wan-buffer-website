@@ -64,11 +64,40 @@ export const EVENT_CATEGORIES: EventCategory[] = [
 export const EVENT_LOCATIONS: EventLocation[] = [
   "Online",
   "Helipad Exhibition Centre, Gandhinagar, Gujarat, India",
+  "Mahatma Mandir Convention Centre, Gandhinagar, Gujarat, India",
 ];
 
 export function eventPath(slug: string): string {
   return `/event/${slug}`;
 }
+
+/**
+ * Odoo Experience 2026 India has its own hand-built landing page at
+ * `app/event/odoo-experience-2026-india/page.tsx`, which wins over `[slug]`, so
+ * this record exists only to render the card in the /event listing. It is
+ * pinned into the list by `EventsContent` so the card shows even when the Mongo
+ * events collection is populated and the static seed below is not used.
+ */
+export const OXP_2026_INDIA_EVENT: WanBufferEvent = {
+  slug: "odoo-experience-2026-india",
+  title: "Odoo Experience 2026 India",
+  pageHeading: "Odoo Experience 2026 India",
+  excerpt:
+    "Meet Wan Buffer at Odoo Experience 2026 India — two days of talks, master classes, exhibitions, and the live Odoo 20 launch.",
+  dateLabel: "Fri, 11 Sep – Sat, 12 Sep 2026",
+  sortDate: "2026-09-11",
+  time: "9:00 am – 6:00 pm (Asia/Kolkata)",
+  location: "Mahatma Mandir Convention Centre, Gandhinagar, Gujarat, India",
+  categories: ["Odoo", "Events"],
+  imageSrc: "/event/odoo-experience-2026-india.png",
+  imageW: 1200,
+  imageH: 630,
+  priceLabel: "Free",
+  introParagraphs: [
+    "Odoo Experience 2026 India brings the Odoo community together for two days of talks, master classes, exhibitions, live demonstrations, and the launch of Odoo 20.",
+    "Wan Buffer will be there to discuss your requirements and show how Odoo implementation, customization, integrations, AI, and automation can fit your business.",
+  ],
+};
 
 export const WAN_BUFFER_EVENTS: WanBufferEvent[] = [
   {

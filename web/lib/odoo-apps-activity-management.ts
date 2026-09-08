@@ -42,7 +42,7 @@ export const ACTIVITY_MANAGEMENT_APP: OdooApp = {
       },
     ],
     trustStats: [
-      { value: "99", label: "Days free support" },
+      { value: "90", label: "Days free support" },
       { value: "50+", label: "Custom apps delivered" },
       { value: "254+", label: "Happy customers" },
       { value: "7+", label: "Years of experience" },

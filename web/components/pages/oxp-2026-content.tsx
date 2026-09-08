@@ -5,6 +5,7 @@
    Challenges · Why us · Experts · Agenda · Details · Location · FAQ · CTA
 ──────────────────────────────────────────────────────────────────────── */
 
+import Image from "next/image";
 import Link from "next/link";
 
 import { Oxp2026Countdown } from "./oxp-2026-countdown";
@@ -43,6 +44,10 @@ export const OXP_EVENT_URL =
 
 const VENUE_MAP_URL =
   "https://www.google.com/maps/search/?api=1&query=Mahatma+Mandir+Convention+Centre+Gandhinagar+Gujarat";
+
+/** Keyless Google Maps embed; `output=embed` needs no API key or billing account. */
+const VENUE_MAP_EMBED_URL =
+  "https://www.google.com/maps?q=Mahatma+Mandir+Convention+Centre+Gandhinagar+Gujarat&output=embed";
 
 /* ── Data ── */
 
@@ -169,15 +174,26 @@ const WHY_US = [
   { icon: <HeartIcon />, t: "Long-Term Partnership", b: "From implementation to optimization and ongoing support, we're here for the journey." },
 ] as const;
 
-/**
- * Team line-up. Names and photos are supplied by marketing before launch; until
- * then each card leads with the role, which is what visitors book time against.
- */
+/** Team line-up available for one-to-one meetings at the booth. */
 const EXPERTS = [
-  { role: "Odoo Functional Expert", b: "Process mapping, fit-gap, and configuration decisions." },
-  { role: "Odoo Technical Expert", b: "Custom modules, performance, upgrades, and code reviews." },
-  { role: "AI & Automation Expert", b: "Document AI, agents, and workflow automation on top of Odoo." },
-  { role: "Integration Specialist", b: "eCommerce, messaging, finance, and third-party API integrations." },
+  {
+    name: "Jigar Joshi",
+    role: "Co-Founder and CEO",
+    photo: "/expert/wanbuffer-expert1.jpeg",
+    b: "Odoo strategy, digital transformation roadmaps, and long-term delivery partnerships.",
+  },
+  {
+    name: "Jelam Davda",
+    role: "Co-Founder and CFO",
+    photo: "/expert/wanbuffer-expert2.jpeg",
+    b: "Finance and accounting processes in Odoo, costing, budgeting, and engagement models.",
+  },
+  {
+    name: "Dezal Hadiya",
+    role: "Product Engineering and ERP Consultant",
+    photo: "/expert/wanbuffer-expert3.jpeg",
+    b: "Implementation, customization, integrations, and AI automation across the Odoo stack.",
+  },
 ] as const;
 
 const AGENDA = [
@@ -658,11 +674,18 @@ export function Oxp2026Content() {
           </div>
           <div className="oxp26-team-grid rev">
             {EXPERTS.map((item) => (
-              <article key={item.role} className="oxp26-team-card">
-                <span className="oxp26-team-avatar" aria-hidden="true">
-                  <UsersIcon />
+              <article key={item.name} className="oxp26-team-card">
+                <span className="oxp26-team-photo">
+                  <Image
+                    src={item.photo}
+                    alt={`${item.name}, ${item.role} at Wan Buffer`}
+                    width={330}
+                    height={330}
+                    sizes="132px"
+                  />
                 </span>
-                <h3>{item.role}</h3>
+                <h3>{item.name}</h3>
+                <p className="oxp26-team-role">{item.role}</p>
                 <p>{item.b}</p>
               </article>
             ))}
@@ -746,7 +769,7 @@ export function Oxp2026Content() {
           <div className="oxp26-head rev">
             <div className="eyebrow">Location</div>
             <h2 className="sec-h">
-              Find us at <span className="acc">Odoo Experience 2026</span>
+              How to <span className="acc">reach us</span>
             </h2>
           </div>
           <div className="oxp26-location-card rev">
@@ -765,11 +788,14 @@ export function Oxp2026Content() {
                 <ArrowRightIcon />
               </a>
             </div>
-            <div className="oxp26-location-visual" aria-hidden="true">
-              <span className="oxp26-location-pin">
-                <TargetIcon />
-              </span>
-              <span className="oxp26-location-visual-l">Gandhinagar, Gujarat</span>
+            <div className="oxp26-location-map">
+              <iframe
+                src={VENUE_MAP_EMBED_URL}
+                title="Map of Mahatma Mandir Convention Centre, Gandhinagar"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>

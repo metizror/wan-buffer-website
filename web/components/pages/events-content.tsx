@@ -7,6 +7,8 @@ import {
   getEventLocations,
 } from "@/lib/events-service";
 
+import { OXP_2026_INDIA_EVENT } from "@/lib/events-data";
+
 import { EventsListing } from "./events-listing";
 
 export async function EventsContent() {
@@ -15,6 +17,13 @@ export async function EventsContent() {
     getEventCategories(),
     getEventLocations(),
   ]);
+
+  // Odoo Experience 2026 India lives as its own hand-built page, not as an
+  // events record, so nothing in Mongo produces a card for it. Pin it into the
+  // list unless someone has since created a real record with the same slug.
+  const listedEvents = events.some((e) => e.slug === OXP_2026_INDIA_EVENT.slug)
+    ? events
+    : [OXP_2026_INDIA_EVENT, ...events];
 
   return (
     <main className="svc-page">
@@ -79,12 +88,12 @@ export async function EventsContent() {
         </div>
       </section>
 
-      <section className="oi-evt-promo rev" aria-label="Odoo Community Days">
+      <section className="oi-evt-promo rev" aria-label="Odoo Experience 2026 India">
         <div className="oi-evt-promo-inner">
           <div>
             <p className="oi-evt-promo-eyebrow">Featured</p>
-            <h2 className="oi-evt-promo-title">Odoo Community Days India 2025</h2>
-            <p className="oi-evt-promo-dates">13 – 14 August 2025</p>
+            <h2 className="oi-evt-promo-title">Odoo Experience 2026 India</h2>
+            <p className="oi-evt-promo-dates">11 – 12 September 2026</p>
           </div>
           <Link href="/event/odoo-experience-2026-india" className="oi-evt-promo-cta">
             Learn more
@@ -96,7 +105,7 @@ export async function EventsContent() {
       <section className="oi-evt-list section alt" id="events-list" aria-label="Event listings">
         <div className="oi-evt-list-inner">
           <EventsListing
-            events={events}
+            events={listedEvents}
             categories={categories}
             locations={locations}
           />
