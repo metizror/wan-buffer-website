@@ -181,6 +181,7 @@ const EXPERTS = [
     role: "Co-Founder and CEO",
     photo: "/expert/wanbuffer-expert1.jpeg",
     b: "Odoo strategy, digital transformation roadmaps, and long-term delivery partnerships.",
+    booking: "https://calendar.app.google/zCzh3nqgEwZaLWRz5",
   },
   {
     name: "Jelam Davda",
@@ -193,6 +194,8 @@ const EXPERTS = [
     role: "Product Engineering and ERP Consultant",
     photo: "/expert/wanbuffer-expert3.jpeg",
     b: "Implementation, customization, integrations, and AI automation across the Odoo stack.",
+    booking:
+      "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ04mhkxlIcxgodqEBEOnnvUPLaDO0Mhm-CqITlAbye-UUxr60G6jqVPsauD6CG6XNjTLBdEt8oq",
   },
 ] as const;
 
@@ -687,6 +690,17 @@ export function Oxp2026Content() {
                 <h3>{item.name}</h3>
                 <p className="oxp26-team-role">{item.role}</p>
                 <p>{item.b}</p>
+                {"booking" in item && (
+                  <a
+                    className="oxp26-team-book"
+                    href={item.booking}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Book a Meeting
+                    <ArrowRightIcon />
+                  </a>
+                )}
               </article>
             ))}
           </div>
