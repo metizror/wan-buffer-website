@@ -33,6 +33,7 @@ export function HomeLeadPopup() {
                 <input className="pfi" type="text" placeholder="Company *" id="pCompany" />
               </div>
               <input className="pfi" type="email" placeholder="Business Email *" id="pEmail" />
+              <input className="pfi" type="tel" inputMode="tel" autoComplete="tel" placeholder="Mobile Number *" id="pPhone" />
               <select className="pfi" id="pService" defaultValue="">
                 <option value="" disabled>
                   Primary interest

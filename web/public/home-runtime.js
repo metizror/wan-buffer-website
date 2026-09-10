@@ -261,21 +261,37 @@ function submitPopup(){
   const nameEl=document.getElementById('pName');
   const companyEl=document.getElementById('pCompany');
   const emailEl=document.getElementById('pEmail');
+  const phoneEl=document.getElementById('pPhone');
   const svcEl=document.getElementById('pService');
-  const n=nameEl?.value.trim(), co=companyEl?.value.trim(), e=emailEl?.value.trim();
+  const btn=document.querySelector('.popup-submit');
+  const n=nameEl?.value.trim(), co=companyEl?.value.trim(), e=emailEl?.value.trim(), ph=phoneEl?.value.trim();
   const okSvc=svcEl && svcEl.value;
   let bad=false;
-  [nameEl,companyEl,emailEl].forEach(f=>{
+  [nameEl,companyEl,emailEl,phoneEl].forEach(f=>{
     if(!f) return;
     if(!f.value.trim()){ f.style.borderColor='var(--red)'; bad=true; setTimeout(()=>{f.style.borderColor=''},1500); }
   });
   if(!okSvc && svcEl){ svcEl.style.borderColor='var(--red)'; bad=true; setTimeout(()=>{svcEl.style.borderColor=''},1500); }
-  if(bad || !n || !co || !e) return;
+  if(bad || !n || !co || !e || !ph) return;
+  if(btn?.disabled) return;
 
-  persistLeadPopupDismissed();
-  document.getElementById('popupMain').style.display='none';
-  document.getElementById('popupSuccess').classList.add('show');
-  setTimeout(()=>closePopup(),3200);
+  const parts=n.split(/\s+/);
+  const payload={source:'lead-popup',firstName:parts[0],lastName:parts.slice(1).join(' '),email:e,mobile:ph,company:co,service:svcEl.value,page:location.pathname};
+  if(btn){ btn.disabled=true; btn.dataset.label=btn.innerHTML; btn.innerHTML='<span>Sending...</span>'; }
+  fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+    .then(async r=>{ const j=await r.json().catch(()=>({})); if(!r.ok) throw new Error(j.error||'Request failed'); })
+    .then(()=>{
+      persistLeadPopupDismissed();
+      document.getElementById('popupMain').style.display='none';
+      document.getElementById('popupSuccess').classList.add('show');
+      setTimeout(()=>closePopup(),3200);
+    })
+    .catch(err=>{
+      let msg=document.getElementById('popupError');
+      if(!msg){ msg=document.createElement('p'); msg.id='popupError'; msg.className='form-msg err'; btn?.insertAdjacentElement('afterend',msg); }
+      msg.textContent=err.message||"We couldn't send your request. Please try again.";
+    })
+    .finally(()=>{ if(btn){ btn.disabled=false; btn.innerHTML=btn.dataset.label; } });
 }
 document.getElementById('leadPopup')?.addEventListener('click',function(e){if(e.target===this)closePopup()});
 document.addEventListener('keydown',e=>{

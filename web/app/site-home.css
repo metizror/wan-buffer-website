@@ -891,6 +891,10 @@ select.fi option{background:var(--navy2)}
 .f-btn:hover::before{transform:scaleX(1)}
 .f-btn span{position:relative;z-index:1}
 .f-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(232,57,42,.3)}
+.fi-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}
+.form-msg{font-family:var(--B);font-size:13px;line-height:1.5;margin-top:12px;padding:10px 14px;border-radius:3px}
+.form-msg.ok{color:#9be7b4;background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.25)}
+.form-msg.err{color:#ffb4ad;background:rgba(232,57,42,.1);border:1px solid rgba(232,57,42,.35)}
 footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.05);padding:clamp(52px,7vw,80px) var(--pad)}
 .f-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:clamp(24px,4vw,48px);padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:32px}
 .f-logo-w{display:flex;align-items:center;gap:10px;margin-bottom:14px}
