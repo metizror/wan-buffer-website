@@ -1,4 +1,6 @@
 const REACHO_API_URL = process.env.REACHO_API_URL ?? "https://reacho.live/api/v1/leads";
+// TODO: move to the server .env (REACHO_API_KEY) and rotate this key in Reacho.
+const REACHO_API_KEY_FALLBACK = "rho_live_nAiSJq77DvVNOdZCz1_11L-dR_h-ygjf";
 
 export type ReachoLead = {
   waId: string;
@@ -8,7 +10,7 @@ export type ReachoLead = {
 };
 
 export async function createReachoLead(lead: ReachoLead): Promise<void> {
-  const apiKey = process.env.REACHO_API_KEY;
+  const apiKey = process.env.REACHO_API_KEY || REACHO_API_KEY_FALLBACK;
   if (!apiKey) {
     throw new Error("REACHO_API_KEY is not configured");
   }
