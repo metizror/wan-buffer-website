@@ -2640,6 +2640,18 @@ html.js .oi-evt-empty{opacity:1;transform:none}
 .oi-evt-aside-cta:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,194,255,.3)}
 .oi-evt-back{font-family:var(--H);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--txtb);text-decoration:none;transition:color .2s}
 .oi-evt-back:hover{color:var(--ai)}
+.oi-evt-cal{font-family:var(--B)}
+.oi-evt-cal-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:12px}
+.oi-evt-cal-month{font-family:var(--H);font-size:13px;font-weight:800;letter-spacing:.04em;color:var(--txt)}
+.oi-evt-cal-range{font-size:12px;font-weight:600;color:var(--ai)}
+.oi-evt-cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px 0}
+.oi-evt-cal-wd{font-family:var(--H);font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--txtm);text-align:center;padding-bottom:6px}
+.oi-evt-cal-day{display:flex;align-items:center;justify-content:center;height:32px;font-size:13px;color:var(--txtb);border-radius:0}
+.oi-evt-cal-day.on{background:rgba(216,28,85,.12);color:var(--red);font-weight:700}
+.oi-evt-cal-day.on.first{border-radius:16px 0 0 16px}
+.oi-evt-cal-day.on.last{border-radius:0 16px 16px 0}
+.oi-evt-cal-day.on.first.last{border-radius:16px}
+.oi-evt-cal-day.on.first,.oi-evt-cal-day.on.last{background:var(--red);color:var(--white)}
 
 .oi-evt-card-title a{color:inherit;text-decoration:none}
 .oi-evt-card-title a:hover{color:var(--ai)}

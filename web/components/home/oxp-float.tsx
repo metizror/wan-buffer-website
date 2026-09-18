@@ -3,10 +3,9 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const OXP_URL =
-  "https://www.odoo.com/event/odoo-experience-2026-india-10174/page/oxp26-india-introduction";
+const EVENT_URL = "https://www.terrapinn.com/exhibition/seamless-middle-east/";
 const WANDDY_WEBM = "https://wanddy.wanbuffer.com/buddies/wanddy.webm";
-const BAR_TEXT = "Meet us at Odoo Experience 2026 - Booth Number E1P76.";
+const BAR_TEXT = "Meet us at Seamless Middle East 2026, Dubai - Stand SE10.";
 
 /** Single-node type reveal, avoids one DOM node + animation per letter. */
 function OxpBarTypewriter({ text }: { text: string }) {
@@ -25,7 +24,7 @@ function OxpBarTypewriter({ text }: { text: string }) {
 }
 
 /**
- * Bottom-centre announcement for Wan Buffer at Odoo Experience 2026.
+ * Bottom-centre announcement for Wan Buffer at Seamless Middle East 2026.
  * Frosted panel only. No chat, no form, no overlay.
  */
 export function HomeOxpFloat() {
@@ -87,26 +86,26 @@ export function HomeOxpFloat() {
           <div className="oxp-widget-layout">
             <div className="oxp-widget-main">
               <h2 id="oxp-widget-title" className="oxp-widget-title">
-                Join us at Odoo Experience 2026 India
+                Join us at Seamless Middle East 2026
               </h2>
               <p className="oxp-widget-copy">
-                Wan Buffer is coming to Odoo Experience 2026 in Gandhinagar. Do drop by booth{" "}
-                <strong>E1 P76</strong>. We would love to sit down with you, talk Odoo, ERP and AI, and
-                see how we can help your team.
+                Wan Buffer is coming to Seamless Digital Commerce Expo 2026 in Dubai. Do drop by stand{" "}
+                <strong>SE10</strong>. We would love to sit down with you, talk CRM, automation, Odoo and
+                AI, and see how we can help your team.
               </p>
               <p className="oxp-widget-meta">
-                Booth E1 P76
+                Stand SE10
                 <br />
-                11-12 September 2026
+                22-24 September 2026
                 <br />
-                Mahatma Mandir Convention Center, Gandhinagar
+                Dubai World Trade Centre, Dubai
               </p>
               <div className="oxp-widget-actions">
-                <a className="oxp-widget-cta" href="/event/odoo-experience-2026-india">
+                <a className="oxp-widget-cta" href="/event/seamless-digital-commerce-expo-2026">
                   Event Details
                 </a>
-                <a className="oxp-widget-link" href={OXP_URL} target="_blank" rel="noopener noreferrer">
-                  Official OXP 2026 page
+                <a className="oxp-widget-link" href={EVENT_URL} target="_blank" rel="noopener noreferrer">
+                  Official Seamless page
                 </a>
               </div>
             </div>

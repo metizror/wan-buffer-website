@@ -561,6 +561,7 @@ export interface EventDocument {
   dateLabel: string;
   /** ISO date (YYYY-MM-DD) used for sorting. */
   sortDate: string;
+  endDate?: string;
   time: string;
   location: string;
   categories: string[];

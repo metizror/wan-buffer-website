@@ -7,7 +7,7 @@ import {
   getEventLocations,
 } from "@/lib/events-service";
 
-import { OXP_2026_INDIA_EVENT } from "@/lib/events-data";
+import { OXP_2026_INDIA_EVENT, SEAMLESS_2026_EVENT } from "@/lib/events-data";
 
 import { EventsListing } from "./events-listing";
 
@@ -19,11 +19,17 @@ export async function EventsContent() {
   ]);
 
   // Odoo Experience 2026 India lives as its own hand-built page, not as an
-  // events record, so nothing in Mongo produces a card for it. Pin it into the
-  // list unless someone has since created a real record with the same slug.
-  const listedEvents = events.some((e) => e.slug === OXP_2026_INDIA_EVENT.slug)
-    ? events
-    : [OXP_2026_INDIA_EVENT, ...events];
+  // events record, so nothing in Mongo produces a card for it. The Seamless expo
+  // is a static record that may not have been seeded yet. Pin both into the list
+  // unless someone has since created a real record with the same slug.
+  const pinned = [SEAMLESS_2026_EVENT, OXP_2026_INDIA_EVENT].filter(
+    (p) => !events.some((e) => e.slug === p.slug)
+  );
+  // Keep newest-first regardless of whether the pinned records came from the
+  // static fallback or were inserted here.
+  const listedEvents = [...pinned, ...events].sort((a, b) =>
+    b.sortDate.localeCompare(a.sortDate)
+  );
 
   return (
     <main className="svc-page">

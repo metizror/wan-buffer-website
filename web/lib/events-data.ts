@@ -31,6 +31,8 @@ export interface WanBufferEvent {
   excerpt: string;
   dateLabel: string;
   sortDate: string;
+  /** Last day of a multi-day event (ISO date). Enables the calendar on the detail page. */
+  endDate?: string;
   time?: string;
   location: EventLocation;
   categories: EventCategory[];
@@ -59,12 +61,14 @@ export const EVENT_CATEGORIES: EventCategory[] = [
   "Odoo",
   "Odoo CRM",
   "PharmaTech Expo",
+  "Seamless Middle East",
 ];
 
 export const EVENT_LOCATIONS: EventLocation[] = [
   "Online",
   "Helipad Exhibition Centre, Gandhinagar, Gujarat, India",
   "Mahatma Mandir Convention Centre, Gandhinagar, Gujarat, India",
+  "Dubai World Trade Centre, Dubai, UAE",
 ];
 
 export function eventPath(slug: string): string {
@@ -99,7 +103,83 @@ export const OXP_2026_INDIA_EVENT: WanBufferEvent = {
   ],
 };
 
+/**
+ * Seamless Digital Commerce Expo 2026 (Seamless Middle East, Dubai). Pinned into
+ * the /event listing by `EventsContent` alongside OXP so the card shows even when
+ * the Mongo events collection is populated; the detail page falls back to this
+ * record via `getPublicEventBySlug` until the seed is re-run.
+ */
+export const SEAMLESS_2026_EVENT: WanBufferEvent = {
+  slug: "seamless-digital-commerce-expo-2026",
+  title: "Seamless Digital Commerce Expo 2026",
+  pageHeading: "Seamless Digital Commerce Expo 2026",
+  excerpt:
+    "Meet Wan Buffer at Seamless Middle East 2026, Dubai World Trade Centre, Stand SE10 — three days of digital commerce, payments, and AI-powered business automation.",
+  dateLabel: "Tue, 22 Sep – Thu, 24 Sep 2026",
+  sortDate: "2026-09-22",
+  endDate: "2026-09-24",
+  time: "10:00 am – 6:00 pm (Asia/Dubai)",
+  location: "Dubai World Trade Centre, Dubai, UAE",
+  categories: ["Seamless Middle East", "Events"],
+  imageSrc: "/event/seamless-digital-commerce-expo-2026.gif",
+  imageW: 1344,
+  imageH: 756,
+  priceLabel: "Free",
+  introParagraphs: [
+    "Seamless Middle East is the region’s largest digital commerce, payments, fintech, and retail technology expo, bringing together thousands of decision-makers at the Dubai World Trade Centre from 22 to 24 September 2026.",
+    "Wan Buffer will be at Stand SE10 to show how an AI-powered business platform captures, nurtures, and converts leads, and how Odoo implementation, custom integrations, and automation can fit your business.",
+  ],
+  highlightsHeading: "What we will be showing",
+  highlights: [
+    {
+      title: "CRM & Sales Pipeline",
+      description:
+        "Track every lead from first touch to closed deal with pipelines, follow-ups, and reporting your team will actually use.",
+    },
+    {
+      title: "Email & WhatsApp Automation",
+      description:
+        "Nurture leads automatically with campaigns, drip sequences, and WhatsApp conversations that stay connected to your CRM.",
+    },
+    {
+      title: "Proposals, Tasks & Projects",
+      description:
+        "Build proposals in minutes and keep delivery on track with task and project management tied to the same customer record.",
+    },
+    {
+      title: "HRMS, ATS & Operations",
+      description:
+        "Hiring, attendance, visitor management, and asset tracking on one platform instead of five disconnected tools.",
+    },
+    {
+      title: "AI assistant",
+      description:
+        "See how an AI assistant summarises conversations, drafts replies, and surfaces the next best action across your data.",
+    },
+  ],
+  sections: [
+    {
+      heading: "Who should visit",
+      bullets: [
+        "Software & IT companies",
+        "Manufacturing",
+        "BPO and shared services",
+        "Pharmacy and healthcare distribution",
+        "Accounting and professional services",
+      ],
+    },
+    {
+      heading: "Find us at the expo",
+      paragraphs: [
+        "Dubai World Trade Centre, Stand SE10. Drop by any day from 22 to 24 September 2026 for a live walkthrough, or contact us in advance and we will hold a slot for you.",
+      ],
+    },
+  ],
+  closingParagraphs: ["Three days. One platform. Infinite possibilities."],
+};
+
 export const WAN_BUFFER_EVENTS: WanBufferEvent[] = [
+  SEAMLESS_2026_EVENT,
   {
     slug: "the-plugi-success-future-proofing-your-email-verification-strategy",
     title: "The Plugi Success: Future-Proofing Your Email Verification Strategy",

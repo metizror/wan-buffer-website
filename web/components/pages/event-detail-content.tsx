@@ -4,9 +4,10 @@ import Link from "next/link";
 import { ArrowRightIcon, CheckIcon, MailIcon, PhoneCallIcon } from "@/components/services/odoo-service-icons";
 import type { WanBufferEvent } from "@/lib/events-data";
 
+import { EventCalendar } from "./event-calendar";
+
 function locationLabel(location: WanBufferEvent["location"]): string {
-  if (location === "Online") return "Online";
-  return "Helipad Exhibition Centre, Gandhinagar, Gujarat, India";
+  return location || "Online";
 }
 
 interface EventDetailContentProps {
@@ -182,6 +183,12 @@ export function EventDetailContent({ event }: EventDetailContentProps) {
           </article>
 
           <aside className="oi-evt-detail-aside rev">
+            {event.endDate ? (
+              <div className="oi-evt-aside-card">
+                <h2 className="oi-evt-aside-title">Event dates</h2>
+                <EventCalendar event={event} />
+              </div>
+            ) : null}
             <div className="oi-evt-aside-card">
               <h2 className="oi-evt-aside-title">Event details</h2>
               <dl className="oi-evt-aside-dl">
