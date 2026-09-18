@@ -20,7 +20,7 @@ export function EventDetailContent({ event }: EventDetailContentProps) {
       <section className="oi-evt-detail-hero" aria-labelledby="oi-evt-detail-title">
         <div className="oi-evt-detail-hero-bg" aria-hidden="true" />
         <div className="oi-evt-detail-hero-inner">
-          <div className="oi-evt-detail-hero-grid rev">
+          <div className={`oi-evt-detail-hero-grid rev${event.hideHeroImage ? " no-media" : ""}`}>
             <div className="oi-evt-detail-hero-copy">
               <div className="oi-evt-detail-tags">
                 {event.categories.map((cat) => (
@@ -54,17 +54,19 @@ export function EventDetailContent({ event }: EventDetailContentProps) {
                 </li>
               </ul>
             </div>
-            <div className="oi-evt-detail-hero-media">
-              <Image
-                src={event.imageSrc}
-                alt={event.title}
-                width={event.imageW}
-                height={event.imageH}
-                className="oi-evt-detail-hero-img"
-                sizes="(max-width: 900px) 100vw, 480px"
-                priority
-              />
-            </div>
+            {event.hideHeroImage ? null : (
+              <div className="oi-evt-detail-hero-media">
+                <Image
+                  src={event.imageSrc}
+                  alt={event.title}
+                  width={event.imageW}
+                  height={event.imageH}
+                  className="oi-evt-detail-hero-img"
+                  sizes="(max-width: 900px) 100vw, 480px"
+                  priority
+                />
+              </div>
+            )}
           </div>
         </div>
       </section>

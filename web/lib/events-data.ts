@@ -39,6 +39,8 @@ export interface WanBufferEvent {
   imageSrc: string;
   imageW: number;
   imageH: number;
+  /** Skip the image beside the detail-page hero copy (the card still uses imageSrc). */
+  hideHeroImage?: boolean;
   priceLabel: string;
   introParagraphs: string[];
   hosts?: EventHost[];
@@ -124,6 +126,7 @@ export const SEAMLESS_2026_EVENT: WanBufferEvent = {
   imageSrc: "/event/seamless-digital-commerce-expo-2026.gif",
   imageW: 1344,
   imageH: 756,
+  hideHeroImage: true,
   priceLabel: "Free",
   introParagraphs: [
     "Seamless Middle East is the region’s largest digital commerce, payments, fintech, and retail technology expo, bringing together thousands of decision-makers at the Dubai World Trade Centre from 22 to 24 September 2026.",

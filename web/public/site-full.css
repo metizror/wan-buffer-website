@@ -2599,6 +2599,7 @@ html.js .oi-evt-empty{opacity:1;transform:none}
 .oi-evt-detail-hero-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse at 50% 0%,#000 20%,transparent 75%);pointer-events:none}
 .oi-evt-detail-hero-inner{position:relative;z-index:1;max-width:1180px;margin:0 auto}
 .oi-evt-detail-hero-grid{display:grid;grid-template-columns:1fr minmax(280px,420px);gap:clamp(28px,4vw,48px);align-items:start}
+.oi-evt-detail-hero-grid.no-media{grid-template-columns:minmax(0,820px)}
 .oi-evt-detail-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
 .oi-evt-detail-title{font-family:var(--H);font-size:clamp(28px,4vw,44px);font-weight:700;line-height:1.12;letter-spacing:-.03em;color:var(--white);margin:0 0 14px}
 .oi-evt-detail-lead{font-family:var(--B);font-size:clamp(14px,1.45vw,16px);font-weight:300;line-height:1.7;color:rgba(255,255,255,.58);margin:0 0 22px;max-width:640px}
