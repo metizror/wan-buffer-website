@@ -257,6 +257,96 @@ export function EventDetailContent({ event }: EventDetailContentProps) {
         </div>
       </section>
 
+      {event.showcase ? (
+        <section className="oi-evt-show" aria-labelledby="evt-showcase-title">
+          <div className="oi-evt-show-inner">
+            <div className="oi-evt-show-intro rev">
+              <div className="eyebrow lt">{event.showcase.eyebrow}</div>
+              <div className="oi-evt-show-brand">
+                {event.showcase.icon ? (
+                  <Image src={event.showcase.icon} alt="" width={84} height={84} className="oi-evt-show-icon" />
+                ) : null}
+                <h2 id="evt-showcase-title" className="oi-evt-show-title">
+                  {event.showcase.name}
+                </h2>
+              </div>
+              <p className="oi-evt-show-tagline">{event.showcase.tagline}</p>
+              <p className="oi-evt-show-desc">{event.showcase.description}</p>
+              <div className="oi-evt-show-actions">
+                <a
+                  className="oi-evt-show-cta"
+                  href={event.showcase.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {event.showcase.urlLabel}
+                  <ArrowRightIcon />
+                </a>
+                <Link className="oi-evt-show-cta ghost" href="/contact-us">
+                  Book a demo at the stand
+                </Link>
+              </div>
+            </div>
+            <ul className="oi-evt-show-points rev">
+              {event.showcase.points.map((point) => (
+                <li key={point.title} className="oi-evt-show-point">
+                  <span className="oi-evt-show-check">
+                    <CheckIcon />
+                  </span>
+                  <div>
+                    <h3>{point.title}</h3>
+                    <p>{point.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
+
+      {event.experts && event.experts.length > 0 ? (
+        <section className="oi-evt-team section" aria-labelledby="evt-team-title">
+          <div className="oi-evt-team-inner">
+            <div className="oi-evt-team-hdr rev">
+              <div className="eyebrow">Meet our expert</div>
+              <h2 id="evt-team-title" className="sec-h">
+                Talk to us <span className="ai">at the stand</span>
+              </h2>
+              <p>Book a one-to-one slot during the expo or walk in at Stand SE05.</p>
+            </div>
+            <div className="oi-evt-team-grid rev">
+              {event.experts.map((expert) => (
+                <article key={expert.name} className="oi-evt-team-card">
+                  <span className="oi-evt-team-photo">
+                    <Image
+                      src={expert.photo}
+                      alt={`${expert.name}, ${expert.role} at Wan Buffer`}
+                      width={330}
+                      height={330}
+                      sizes="160px"
+                    />
+                  </span>
+                  <h3>{expert.name}</h3>
+                  <p className="oi-evt-team-role">{expert.role}</p>
+                  <p className="oi-evt-team-bio">{expert.bio}</p>
+                  {expert.booking ? (
+                    <a
+                      className="oi-evt-team-book"
+                      href={expert.booking}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Book a Meeting
+                      <ArrowRightIcon />
+                    </a>
+                  ) : null}
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section className="oi-supp" id="contact">
         <div className="oi-supp-inner">
           <div className="oi-supp-hdr rev">

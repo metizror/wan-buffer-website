@@ -31,6 +31,32 @@ export interface EventVenueMap {
   label: string;
 }
 
+export interface EventShowcasePoint {
+  title: string;
+  description: string;
+}
+
+/** Product spotlight ("What we are presenting") rendered on the detail page. */
+export interface EventShowcase {
+  eyebrow: string;
+  name: string;
+  tagline: string;
+  description: string;
+  icon?: string;
+  points: EventShowcasePoint[];
+  url: string;
+  urlLabel: string;
+}
+
+/** Team member available at the event for one-to-one meetings. */
+export interface EventExpert {
+  name: string;
+  role: string;
+  photo: string;
+  bio: string;
+  booking?: string;
+}
+
 export interface EventHeroBadge {
   /** First headline line, white. */
   headline: string;
@@ -59,6 +85,8 @@ export interface WanBufferEvent {
   /** Lanyard-style booth badge shown in the detail hero instead of the image. */
   heroBadge?: EventHeroBadge;
   venueMap?: EventVenueMap;
+  showcase?: EventShowcase;
+  experts?: EventExpert[];
   priceLabel: string;
   introParagraphs: string[];
   hosts?: EventHost[];
@@ -157,7 +185,7 @@ export const SEAMLESS_2026_EVENT: WanBufferEvent = {
   priceLabel: "Free",
   introParagraphs: [
     "Seamless Middle East is the region’s largest digital commerce, payments, fintech, and retail technology expo, bringing together thousands of decision-makers at the Dubai World Trade Centre from 22 to 24 September 2026.",
-    "Wan Buffer will be at Stand SE05 to show how an AI-powered business platform captures, nurtures, and converts leads, and how Odoo implementation, custom integrations, and automation can fit your business.",
+    "Wan Buffer will be at Stand SE05 presenting ReachO, our WhatsApp business platform, alongside live demos of how an AI-powered business platform captures, nurtures, and converts leads, and how Odoo implementation, custom integrations, and automation can fit your business.",
   ],
   highlightsHeading: "What we will be showing",
   highlights: [
@@ -206,6 +234,43 @@ export const SEAMLESS_2026_EVENT: WanBufferEvent = {
     },
   ],
   closingParagraphs: ["Three days. One platform. Infinite possibilities."],
+  showcase: {
+    eyebrow: "What we are presenting",
+    name: "ReachO",
+    tagline: "Turn every WhatsApp chat into a customer.",
+    description:
+      "ReachO is Wan Buffer's WhatsApp business platform, built on the official WhatsApp Cloud API. Broadcasts, no-code automations, a shared team inbox, and an AI agent that sells inside the chat, with native sync to Odoo, Shopify, Salesforce, and Zoho. See it live at Stand SE05.",
+    icon: "/odoo-apps/reacho-integration/icon.png",
+    points: [
+      {
+        title: "Shared team inbox",
+        description: "One WhatsApp number, your whole team. Assign, tag, and reply together without losing a conversation.",
+      },
+      {
+        title: "Broadcasts & automations",
+        description: "Send campaigns to thousands of contacts and let no-code flows handle follow-ups, reminders, and abandoned carts.",
+      },
+      {
+        title: "ReachO AI agent",
+        description: "Answers in seconds, qualifies leads, shares product cards, and takes payment links, all inside the same thread.",
+      },
+      {
+        title: "Odoo & commerce sync",
+        description: "Contacts, orders, and conversations flow into Odoo CRM and your storefront in real time.",
+      },
+    ],
+    url: "https://reacho.live/",
+    urlLabel: "Explore ReachO",
+  },
+  experts: [
+    {
+      name: "Jigar Joshi",
+      role: "Co-Founder and CEO",
+      photo: "/expert/wanbuffer-expert1.jpeg",
+      bio: "Odoo strategy, WhatsApp-led growth with ReachO, digital transformation roadmaps, and long-term delivery partnerships.",
+      booking: "https://calendar.app.google/zCzh3nqgEwZaLWRz5",
+    },
+  ],
 };
 
 export const WAN_BUFFER_EVENTS: WanBufferEvent[] = [
