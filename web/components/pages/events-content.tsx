@@ -94,14 +94,14 @@ export async function EventsContent() {
         </div>
       </section>
 
-      <section className="oi-evt-promo rev" aria-label="Odoo Experience 2026 India">
+      <section className="oi-evt-promo rev" aria-label={SEAMLESS_2026_EVENT.title}>
         <div className="oi-evt-promo-inner">
           <div>
             <p className="oi-evt-promo-eyebrow">Featured</p>
-            <h2 className="oi-evt-promo-title">Odoo Experience 2026 India</h2>
-            <p className="oi-evt-promo-dates">11 – 12 September 2026</p>
+            <h2 className="oi-evt-promo-title">{SEAMLESS_2026_EVENT.title}</h2>
+            <p className="oi-evt-promo-dates">22 – 24 September 2026 · Dubai World Trade Centre</p>
           </div>
-          <Link href="/event/odoo-experience-2026-india" className="oi-evt-promo-cta">
+          <Link href={`/event/${SEAMLESS_2026_EVENT.slug}`} className="oi-evt-promo-cta">
             Learn more
             <ArrowRightIcon />
           </Link>
