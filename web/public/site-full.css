@@ -2600,6 +2600,25 @@ html.js .oi-evt-empty{opacity:1;transform:none}
 .oi-evt-detail-hero-inner{position:relative;z-index:1;max-width:1180px;margin:0 auto}
 .oi-evt-detail-hero-grid{display:grid;grid-template-columns:1fr minmax(280px,420px);gap:clamp(28px,4vw,48px);align-items:start}
 .oi-evt-detail-hero-grid.no-media{grid-template-columns:minmax(0,820px)}
+.oi-evt-badge-wrap{display:flex;flex-direction:column;align-items:center;justify-self:center;width:min(100%,340px);margin-top:calc(-1 * clamp(100px,12vw,130px));animation:oi-evt-badge-swing 6s ease-in-out infinite;transform-origin:top center}
+@keyframes oi-evt-badge-swing{0%,100%{transform:rotate(-1.2deg)}50%{transform:rotate(1.2deg)}}
+.oi-evt-badge-strap{display:flex;align-items:flex-end;justify-content:center;width:34px;height:clamp(110px,13vw,150px);background:linear-gradient(90deg,var(--red-dk) 0%,var(--red) 45%,var(--red-lt) 50%,var(--red) 55%,var(--red-dk) 100%);border-radius:0 0 4px 4px;box-shadow:0 8px 24px rgba(0,0,0,.35);padding-bottom:18px}
+.oi-evt-badge-strap span{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--H);font-size:10px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--white);opacity:.95;white-space:nowrap}
+.oi-evt-badge-clip{position:relative;display:flex;flex-direction:column;align-items:center;margin-top:-2px;z-index:2}
+.oi-evt-badge-ring{width:22px;height:22px;border-radius:50%;border:5px solid #cfd6df;background:transparent;box-shadow:inset 0 1px 2px rgba(0,0,0,.4),0 2px 4px rgba(0,0,0,.4)}
+.oi-evt-badge-hook{width:10px;height:34px;margin-top:-4px;border-radius:5px 5px 6px 6px;background:linear-gradient(90deg,#8e97a3,#e6eaef 45%,#9aa3ae);box-shadow:0 2px 4px rgba(0,0,0,.45)}
+.oi-evt-badge-card{position:relative;width:min(100%,300px);margin-top:-16px;padding:38px 26px 24px;border-radius:14px;background:linear-gradient(160deg,var(--navy3) 0%,var(--navy) 100%);border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(0,0,0,.3);overflow:hidden}
+.oi-evt-badge-card::before{content:'';position:absolute;inset:0;background:radial-gradient(60% 45% at 100% 100%,var(--ai-glow),transparent 70%),radial-gradient(50% 40% at 0% 0%,rgba(216,28,85,.22),transparent 70%);pointer-events:none}
+.oi-evt-badge-card::after{content:'';position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--red),var(--ai));}
+.oi-evt-badge-slot{display:block;width:48px;height:8px;margin:0 auto 30px;border-radius:4px;background:var(--navy);box-shadow:inset 0 1px 3px rgba(0,0,0,.8),0 1px 0 rgba(255,255,255,.08)}
+.oi-evt-badge-headline{position:relative;margin:0 0 42px;font-family:var(--H);font-size:clamp(21px,2.2vw,26px);font-weight:700;line-height:1.2;letter-spacing:-.02em;color:var(--white)}
+.oi-evt-badge-headline span{display:block;color:var(--ai);margin-top:6px}
+.oi-evt-badge-foot{position:relative;display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+.oi-evt-badge-logo{display:block;width:auto;height:34px}
+.oi-evt-badge-booth{text-align:right}
+.oi-evt-badge-booth span{display:block;font-family:var(--H);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:2px}
+.oi-evt-badge-booth strong{display:block;font-family:var(--H);font-size:30px;font-weight:800;line-height:1;letter-spacing:.02em;color:var(--red-lt)}
+@media(prefers-reduced-motion:reduce){.oi-evt-badge-wrap{animation:none}}
 .oi-evt-detail-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
 .oi-evt-detail-title{font-family:var(--H);font-size:clamp(28px,4vw,44px);font-weight:700;line-height:1.12;letter-spacing:-.03em;color:var(--white);margin:0 0 14px}
 .oi-evt-detail-lead{font-family:var(--B);font-size:clamp(14px,1.45vw,16px);font-weight:300;line-height:1.7;color:rgba(255,255,255,.58);margin:0 0 22px;max-width:640px}
@@ -2660,6 +2679,8 @@ html.js .oi-evt-empty{opacity:1;transform:none}
 @media(max-width:1024px){
   .oi-evt-detail-hero-grid{grid-template-columns:1fr}
   .oi-evt-detail-hero-media{max-width:520px}
+  .oi-evt-badge-wrap{margin-top:8px}
+  .oi-evt-badge-strap{height:70px}
   .oi-evt-detail-layout{grid-template-columns:1fr}
   .oi-evt-detail-aside{position:static}
 }

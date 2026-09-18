@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const EVENT_URL = "https://www.terrapinn.com/exhibition/seamless-middle-east/";
 const WANDDY_WEBM = "https://wanddy.wanbuffer.com/buddies/wanddy.webm";
-const BAR_TEXT = "Meet us at Seamless Middle East 2026, Dubai - Stand SE10.";
+const BAR_TEXT = "Meet us at Seamless Middle East 2026, Dubai - Stand SE05.";
 
 /** Single-node type reveal, avoids one DOM node + animation per letter. */
 function OxpBarTypewriter({ text }: { text: string }) {
@@ -90,11 +90,11 @@ export function HomeOxpFloat() {
               </h2>
               <p className="oxp-widget-copy">
                 Wan Buffer is coming to Seamless Digital Commerce Expo 2026 in Dubai. Do drop by stand{" "}
-                <strong>SE10</strong>. We would love to sit down with you, talk CRM, automation, Odoo and
+                <strong>SE05</strong>. We would love to sit down with you, talk CRM, automation, Odoo and
                 AI, and see how we can help your team.
               </p>
               <p className="oxp-widget-meta">
-                Stand SE10
+                Stand SE05
                 <br />
                 22-24 September 2026
                 <br />

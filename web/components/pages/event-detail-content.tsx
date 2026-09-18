@@ -5,6 +5,7 @@ import { ArrowRightIcon, CheckIcon, MailIcon, PhoneCallIcon } from "@/components
 import type { WanBufferEvent } from "@/lib/events-data";
 
 import { EventCalendar } from "./event-calendar";
+import { EventHeroBadge } from "./event-hero-badge";
 
 function locationLabel(location: WanBufferEvent["location"]): string {
   return location || "Online";
@@ -20,7 +21,9 @@ export function EventDetailContent({ event }: EventDetailContentProps) {
       <section className="oi-evt-detail-hero" aria-labelledby="oi-evt-detail-title">
         <div className="oi-evt-detail-hero-bg" aria-hidden="true" />
         <div className="oi-evt-detail-hero-inner">
-          <div className={`oi-evt-detail-hero-grid rev${event.hideHeroImage ? " no-media" : ""}`}>
+          <div className={`oi-evt-detail-hero-grid rev${
+              event.hideHeroImage && !event.heroBadge ? " no-media" : ""
+            }`}>
             <div className="oi-evt-detail-hero-copy">
               <div className="oi-evt-detail-tags">
                 {event.categories.map((cat) => (
@@ -54,7 +57,9 @@ export function EventDetailContent({ event }: EventDetailContentProps) {
                 </li>
               </ul>
             </div>
-            {event.hideHeroImage ? null : (
+            {event.heroBadge ? (
+              <EventHeroBadge badge={event.heroBadge} />
+            ) : event.hideHeroImage ? null : (
               <div className="oi-evt-detail-hero-media">
                 <Image
                   src={event.imageSrc}

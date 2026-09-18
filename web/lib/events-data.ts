@@ -24,6 +24,14 @@ export interface EventContentSection {
   bullets?: string[];
 }
 
+export interface EventHeroBadge {
+  /** First headline line, white. */
+  headline: string;
+  /** Second headline line, accent colour. */
+  tagline: string;
+  booth: string;
+}
+
 export interface WanBufferEvent {
   slug: string;
   title: string;
@@ -41,6 +49,8 @@ export interface WanBufferEvent {
   imageH: number;
   /** Skip the image beside the detail-page hero copy (the card still uses imageSrc). */
   hideHeroImage?: boolean;
+  /** Lanyard-style booth badge shown in the detail hero instead of the image. */
+  heroBadge?: EventHeroBadge;
   priceLabel: string;
   introParagraphs: string[];
   hosts?: EventHost[];
@@ -116,21 +126,26 @@ export const SEAMLESS_2026_EVENT: WanBufferEvent = {
   title: "Seamless Digital Commerce Expo 2026",
   pageHeading: "Seamless Digital Commerce Expo 2026",
   excerpt:
-    "Meet Wan Buffer at Seamless Middle East 2026, Dubai World Trade Centre, Stand SE10 — three days of digital commerce, payments, and AI-powered business automation.",
+    "Meet Wan Buffer at Seamless Middle East 2026, Dubai World Trade Centre, Stand SE05 — three days of digital commerce, payments, and AI-powered business automation.",
   dateLabel: "Tue, 22 Sep – Thu, 24 Sep 2026",
   sortDate: "2026-09-22",
   endDate: "2026-09-24",
   time: "10:00 am – 6:00 pm (Asia/Dubai)",
   location: "Dubai World Trade Centre, Dubai, UAE",
   categories: ["Seamless Middle East", "Events"],
-  imageSrc: "/event/seamless-digital-commerce-expo-2026.gif",
-  imageW: 1344,
-  imageH: 756,
+  imageSrc: "/event/seamless-digital-commerce-expo-2026.jpg",
+  imageW: 1500,
+  imageH: 770,
   hideHeroImage: true,
+  heroBadge: {
+    headline: "Turn leads into revenue,",
+    tagline: "more efficiently!",
+    booth: "SE05",
+  },
   priceLabel: "Free",
   introParagraphs: [
     "Seamless Middle East is the region’s largest digital commerce, payments, fintech, and retail technology expo, bringing together thousands of decision-makers at the Dubai World Trade Centre from 22 to 24 September 2026.",
-    "Wan Buffer will be at Stand SE10 to show how an AI-powered business platform captures, nurtures, and converts leads, and how Odoo implementation, custom integrations, and automation can fit your business.",
+    "Wan Buffer will be at Stand SE05 to show how an AI-powered business platform captures, nurtures, and converts leads, and how Odoo implementation, custom integrations, and automation can fit your business.",
   ],
   highlightsHeading: "What we will be showing",
   highlights: [
@@ -174,7 +189,7 @@ export const SEAMLESS_2026_EVENT: WanBufferEvent = {
     {
       heading: "Find us at the expo",
       paragraphs: [
-        "Dubai World Trade Centre, Stand SE10. Drop by any day from 22 to 24 September 2026 for a live walkthrough, or contact us in advance and we will hold a slot for you.",
+        "Dubai World Trade Centre, Stand SE05. Drop by any day from 22 to 24 September 2026 for a live walkthrough, or contact us in advance and we will hold a slot for you.",
       ],
     },
   ],
