@@ -227,6 +227,29 @@ export function EventDetailContent({ event }: EventDetailContentProps) {
                 <ArrowRightIcon />
               </Link>
             </div>
+            {event.venueMap ? (
+              <div className="oi-evt-aside-card oi-evt-map-card">
+                <h2 className="oi-evt-aside-title">Venue map</h2>
+                <div className="oi-evt-map">
+                  <iframe
+                    src={`https://www.google.com/maps?q=${encodeURIComponent(event.venueMap.query)}&output=embed`}
+                    title={event.venueMap.label}
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+                <a
+                  className="oi-evt-aside-cta oi-evt-map-cta"
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.venueMap.query)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open in Google Maps
+                  <ArrowRightIcon />
+                </a>
+              </div>
+            ) : null}
             <Link className="oi-evt-back" href="/event">
               ← All events
             </Link>

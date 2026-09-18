@@ -24,6 +24,13 @@ export interface EventContentSection {
   bullets?: string[];
 }
 
+export interface EventVenueMap {
+  /** Free-text place query passed to Google Maps (search + embed). */
+  query: string;
+  /** Accessible title for the embedded map. */
+  label: string;
+}
+
 export interface EventHeroBadge {
   /** First headline line, white. */
   headline: string;
@@ -51,6 +58,7 @@ export interface WanBufferEvent {
   hideHeroImage?: boolean;
   /** Lanyard-style booth badge shown in the detail hero instead of the image. */
   heroBadge?: EventHeroBadge;
+  venueMap?: EventVenueMap;
   priceLabel: string;
   introParagraphs: string[];
   hosts?: EventHost[];
@@ -141,6 +149,10 @@ export const SEAMLESS_2026_EVENT: WanBufferEvent = {
     headline: "Turn leads into revenue,",
     tagline: "more efficiently!",
     booth: "SE05",
+  },
+  venueMap: {
+    query: "Dubai World Trade Centre, Sheikh Zayed Road, Dubai, UAE",
+    label: "Map of Dubai World Trade Centre, Dubai",
   },
   priceLabel: "Free",
   introParagraphs: [

@@ -19,7 +19,9 @@ export function EventHeroBadge({ badge }: EventHeroBadgeProps) {
         <span>Wan Buffer</span>
       </div>
       <div className="oi-evt-badge-clip" aria-hidden="true">
+        <span className="oi-evt-badge-crimp" />
         <span className="oi-evt-badge-ring" />
+        <span className="oi-evt-badge-swivel" />
         <span className="oi-evt-badge-hook" />
       </div>
       <div className="oi-evt-badge-card">
