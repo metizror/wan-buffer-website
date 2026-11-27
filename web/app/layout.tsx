@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Montserrat, Poppins } from "next/font/google";
 
-import { HomeOxpFloat } from "@/components/home/oxp-float";
+// Seamless announcement bar hidden for now; restore this import and the <HomeOxpFloat /> below to show it again.
+// import { HomeOxpFloat } from "@/components/home/oxp-float";
 import { ScrollRevealInit } from "@/components/providers/scroll-reveal-init";
 import { SiteFullCss } from "@/components/providers/site-full-css";
 import "./globals.css";
@@ -101,7 +102,7 @@ export default function RootLayout({
         <SiteFullCss />
         <ScrollRevealInit />
         {children}
-        <HomeOxpFloat />
+        {/* <HomeOxpFloat /> */}
       </body>
     </html>
   );
